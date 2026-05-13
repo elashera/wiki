@@ -124,7 +124,7 @@ Each `.md` file inside the module folders must be a complete article following t
 |--------|--------|-------|
 | 01 — Redes e Internet | ✅ **complete** | 21 artículos (~7,400 líneas): modelo OSI, TCP/IP, HTTP/HTTPS/REST, DNS profundo, routing/subnetting, firewalls/proxies/load balancers, SSL/TLS, Cloudflare completo, VPS, Cloud providers, mensajería |
 | 02 — Infraestructura y Contenedores | ✅ **complete** | 7 artículos (~6,770 líneas): Docker fundamentos, networking, volumes, Docker Compose, Kubernetes, CI/CD, Monitoring/Observabilidad |
-| 03 — Sistemas Distribuidos | pending | |
+|| 03 — Sistemas Distribuidos | ✅ **complete** | 5 artículos (~2,060 líneas): consensus (Paxos/Raft), message queues (RabbitMQ/Kafka), distributed caching (Redis Cluster), event-driven/CQRS/Saga, idempotency/retry/circuit breakers |
 | 04 — Sistemas Operativos | pending | |
 | 05 — Programación y Software Engineering | pending | |
 | 06 — Bases de Datos | pending | |
