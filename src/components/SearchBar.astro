@@ -1,0 +1,164 @@
+---
+export interface SearchItem {
+  title: string;
+  description: string;
+  slug: string;
+}
+
+interface Props {
+  lang: 'es' | 'en';
+  searchResults: SearchItem[];
+  isOpen: boolean;
+}
+
+const { lang, searchResults, isOpen } = Astro.props;
+const { buildSearchIndex } = await import('../search-index.js');
+
+const allItems: SearchItem[] = buildSearchIndex().map(item => ({
+  title: item.title,
+  description: item.description,
+  slug: item.slug,
+}));
+---
+
+<div class="searchbar">
+  <div class="searchbar-container">
+    <button
+      class="searchbar-toggle"
+      aria-label="Search articles"
+      id="searchToggle"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+      <span class="searchbar-shortcut">⌘K</span>
+    </button>
+
+    <div class="searchbar-dropdown" id="searchDropdown" hidden>
+      <div class="searchbar-input-wrapper">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder={lang === 'es' ? 'Buscar artículos...' : 'Search articles...'}
+          autocomplete="off"
+        />
+      </div>
+
+      <div id="searchResults" class="search-results">
+        {searchResults.length > 0 ? (
+          <ul>
+            {searchResults.map((item, i) => (
+              <li key={i}>
+                <a href={`/${lang}${item.slug}`} class="search-result-link">
+                  <span class="search-result-title">{item.title}</span>
+                  <span class="search-result-desc">{item.description}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="search-no-results">
+            {lang === 'es' ? 'Sin resultados' : 'No results found'}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const allItems: SearchItem[] = {allItems};
+
+  const toggle = document.getElementById('searchToggle') as HTMLElement;
+  const dropdown = document.getElementById('searchDropdown') as HTMLElement;
+  const input = document.getElementById('searchInput') as HTMLInputElement;
+  const resultsContainer = document.getElementById('searchResults') as HTMLElement;
+
+  function openSearch() {
+    dropdown.hidden = false;
+    toggle.classList.add('open');
+    input.value = '';
+    renderResults(allItems);
+    setTimeout(() => input.focus(), 50);
+  }
+
+  function closeSearch() {
+    dropdown.hidden = true;
+    toggle.classList.remove('open');
+  }
+
+  function renderResults(results: SearchItem[]) {
+    if (!resultsContainer) return;
+
+    if (results.length === 0) {
+      resultsContainer.innerHTML = `<div class="search-no-results">${input.placeholder === 'Buscar artículos...' ? 'Sin resultados' : 'No results found'}</div>`;
+      return;
+    }
+
+    resultsContainer.innerHTML = `
+      <ul>
+        ${results.map((item, i) => `
+          <li>
+            <a href="/${lang}${item.slug}" class="search-result-link">
+              <span class="search-result-title">${item.title}</span>
+              <span class="search-result-desc">${item.description}</span>
+            </a>
+          </li>
+        `).join('')}
+      </ul>
+    `;
+  }
+
+  function filterResults(query: string) {
+    if (!query.trim()) {
+      renderResults(allItems);
+      return;
+    }
+
+    const lower = query.toLowerCase();
+    const filtered = allItems.filter(item =>
+      item.title.toLowerCase().includes(lower) ||
+      item.description.toLowerCase().includes(lower)
+    );
+    renderResults(filtered);
+  }
+
+  toggle.addEventListener('click', () => {
+    if (dropdown.hidden) {
+      openSearch();
+    } else {
+      closeSearch();
+    }
+  });
+
+  input?.addEventListener('input', (e) => {
+    filterResults((e.target as HTMLInputElement).value);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target as Node) && !toggle.contains(e.target as Node)) {
+      closeSearch();
+    }
+  });
+
+  // Keyboard shortcut
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape') {
+      closeSearch();
+    }
+  });
+
+  // Expose functions globally for Astro SSR updates
+  window.__openSearch = openSearch;
+  window.__closeSearch = closeSearch;
+</script>

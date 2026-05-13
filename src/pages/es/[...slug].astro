@@ -1,0 +1,35 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import MarkdownRenderer from '../../components/MarkdownRenderer.astro';
+import * as fs from 'fs';
+import * as path from 'path';
+
+export function getStaticPaths() {
+  const contentDir = path.resolve('src/content/docs/es');
+  const entries = fs.readdirSync(contentDir, { withFileTypes: true });
+  const paths: { params: { slug: string[] } }[] = [];
+
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      const modulePath = path.resolve(contentDir, entry.name);
+      const files = fs.readdirSync(modulePath, { withFileTypes: true });
+      for (const file of files) {
+        if (file.name.endsWith('.md')) {
+          paths.push({ params: { slug: [entry.name, file.name.replace('.md', '')] } });
+        }
+      }
+    }
+  }
+
+  return paths;
+}
+
+const { slug } = Astro.params;
+const slugArr = Array.isArray(slug) ? slug : [slug];
+const filePath = `es/${slugArr.join('/')}.md`;
+const currentSlug = `/${slugArr.join('/')}`;
+---
+
+<AppLayout lang="es" currentSlug={currentSlug}>
+  <MarkdownRenderer filePath={filePath} />
+</AppLayout>

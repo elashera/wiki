@@ -1,0 +1,33 @@
+---
+interface Props {
+  lang: 'es' | 'en';
+  isEn: boolean;
+}
+
+const { lang, isEn } = Astro.props;
+---
+
+<button
+  class="lang-switcher"
+  onClick={() => {
+    // Get the current path and switch the language segment
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split('/').filter(Boolean);
+
+    if (segments[0] === 'en' || segments[0] === 'es') {
+      const langIndex = segments.indexOf(lang === 'es' ? 'en' : 'es');
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === 'es' ? 'en' : 'es';
+      }
+    }
+
+    const newPath = '/' + segments.join('/');
+    window.location.href = newPath;
+  }}
+  title={isEn ? 'Cambiar a Español' : 'Switch to English'}
+>
+  <span class="lang-switcher-label">{isEn ? 'EN' : 'ES'}</span>
+  <span class="lang-switcher-separator">/</span>
+  <span class="lang-switcher-label">{isEn ? 'ES' : 'EN'}</span>
+</button>

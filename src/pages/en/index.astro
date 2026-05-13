@@ -1,0 +1,11 @@
+---
+import AppLayout from '../../layouts/AppLayout.astro';
+import MarkdownRenderer from '../../components/MarkdownRenderer.astro';
+
+const title = 'AI Engineer Wiki — English';
+const description = 'Bilingual technical guide on systems fundamentals and artificial intelligence.';
+---
+
+<AppLayout lang="en" frontmatter={{ title, description }}>
+  <MarkdownRenderer filePath="en/index.md" />
+</AppLayout>

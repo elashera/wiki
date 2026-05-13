@@ -1,0 +1,66 @@
+---
+import * as fs from 'fs';
+import * as path from 'path';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrettyCode from 'rehype-pretty-code';
+
+interface Props {
+  filePath: string;
+}
+
+const { filePath } = Astro.props;
+
+const fullPath = path.resolve('src/content/docs', filePath);
+const rawContent = fs.readFileSync(fullPath, 'utf-8');
+
+// Parse frontmatter
+let content = rawContent;
+let title = 'AI Engineer Wiki';
+let description = '';
+
+const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
+const match = rawContent.match(frontmatterRegex);
+if (match) {
+  const fm = match[1];
+  content = match[2];
+  const titleMatch = fm.match(/title:\s*"([^"]+)"/);
+  const descMatch = fm.match(/description:\s*"([^"]+)"/);
+  if (titleMatch) title = titleMatch[1];
+  if (descMatch) description = descMatch[1];
+}
+
+// Render markdown to HTML — rehype plugins MUST come before rehypeStringify
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype, { allowDangerousHtml: true })
+  .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, [{
+    behavior: 'append',
+    properties: { ariaLabel: 'Link to section', class: 'anchor-link' },
+  }])
+  .use(rehypePrettyCode, {
+    theme: { light: 'github-light', dark: 'github-dark' },
+    keepBackground: false,
+    onVisitLine(node: any) {
+      if (node.children.length === 0) {
+        node.children = [{ type: 'text', value: ' ' }];
+      }
+    },
+  })
+  .use(rehypeStringify, { allowDangerousHtml: true });
+
+const result = await processor.process(content);
+const rendered = result.toString();
+---
+
+<div class="article-content">
+  <h1 class="article-title">{title}</h1>
+  <div class="article-body" set:html={rendered} />
+</div>

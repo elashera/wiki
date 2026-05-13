@@ -1,0 +1,136 @@
+// Navigation data for sidebar
+// This file defines the complete structure of the wiki's navigation.
+// It is used by the Sidebar component and by the search index.
+
+export interface NavItem {
+  id: string;
+  title: string;
+  description: string;
+  slug: string;
+}
+
+export interface NavSection {
+  title: string;
+  items: NavItem[];
+}
+
+export const getNavigation = (): NavSection[] => [
+  {
+    title: 'Fundamentos',
+    items: [
+      {
+        id: 'mod-1',
+        title: 'Redes e Internet',
+        description: 'Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers',
+        slug: '/01-redes-internet',
+      },
+      {
+        id: 'mod-2',
+        title: 'Infraestructura y Contenedores',
+        description: 'Docker, Kubernetes, CI/CD pipelines, Monitoring',
+        slug: '/02-infra-contenedores',
+      },
+      {
+        id: 'mod-3',
+        title: 'Sistemas Distribuidos',
+        description: 'Consensus, message queues, distributed caching, event-driven architecture',
+        slug: '/03-sistemas-distribuidos',
+      },
+      {
+        id: 'mod-4',
+        title: 'Sistemas Operativos',
+        description: 'Linux internals, kernel, filesystems, memory, networking, syscalls',
+        slug: '/04-sistemas-operativos',
+      },
+      {
+        id: 'mod-5',
+        title: 'Programación y Software Engineering',
+        description: 'Python avanzado, patrones de diseño, testing, Git, debugging',
+        slug: '/05-programacion',
+      },
+      {
+        id: 'mod-6',
+        title: 'Bases de Datos',
+        description: 'PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding',
+        slug: '/06-bases-datos',
+      },
+    ],
+  },
+  {
+    title: 'Inteligencia Artificial',
+    items: [
+      {
+        id: 'mod-7',
+        title: 'Machine Learning Fundamentals',
+        description: 'Supervised learning, neural networks, loss functions, optimizers',
+        slug: '/07-ml-fundamentos',
+      },
+      {
+        id: 'mod-8',
+        title: 'Deep Learning',
+        description: 'CNNs, RNNs, Transformers, PyTorch, GPU computing',
+        slug: '/08-deep-learning',
+      },
+      {
+        id: 'mod-9',
+        title: 'LLMs — Arquitectura y Funcionamiento',
+        description: 'Tokenization, decoder-only architecture, attention, KV cache',
+        slug: '/09-llm-arquitectura',
+      },
+      {
+        id: 'mod-10',
+        title: 'LLMs — Entrenamiento',
+        description: 'Pre-training, distributed training, RLHF, alignment',
+        slug: '/10-llm-entrenamiento',
+      },
+      {
+        id: 'mod-11',
+        title: 'LLMs — Evaluación y Benchmarking',
+        description: 'MMLU, LM-Eval, hallucination, red teaming',
+        slug: '/11-llm-evaluacion',
+      },
+      {
+        id: 'mod-12',
+        title: 'RAG y Bases de Datos Vectoriales',
+        description: 'Vector embeddings, vector databases, RAG architecture',
+        slug: '/12-rag-bases-vectoriales',
+      },
+      {
+        id: 'mod-13',
+        title: 'Fine-Tuning',
+        description: 'LoRA, QLoRA, PEFT, instruction tuning',
+        slug: '/13-fine-tuning',
+      },
+      {
+        id: 'mod-14',
+        title: 'Agentes IA',
+        description: 'Tool use, ReAct, agentic frameworks, multi-agent',
+        slug: '/14-agentes-ia',
+      },
+      {
+        id: 'mod-15',
+        title: 'Seguridad en IA',
+        description: 'Prompt injection, jailbreaking, guardrails, PII',
+        slug: '/15-seguridad-ia',
+      },
+      {
+        id: 'mod-16',
+        title: 'Cloud e Infraestructura IA',
+        description: 'GPU cloud, serverless inference, Terraform, cost optimization',
+        slug: '/16-cloud-ia',
+      },
+      {
+        id: 'mod-17',
+        title: 'MLOps y Producción',
+        description: 'Model serving, monitoring, CI/CD for ML',
+        slug: '/17-mlops',
+      },
+      {
+        id: 'mod-18',
+        title: 'Multimodal y Visión por Computador',
+        description: 'ViT, CLIP, diffusion models, multimodal LLMs',
+        slug: '/18-multimodal',
+      },
+    ],
+  },
+];

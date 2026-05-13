@@ -1,0 +1,74 @@
+---
+import type { NavSection } from '../navigation';
+
+interface Props {
+  lang: 'es' | 'en';
+  currentSlug?: string;
+}
+
+const { lang, currentSlug } = Astro.props;
+const { getNavigation } = await import('../navigation.js');
+
+const navSections: NavSection[] = getNavigation();
+
+// Check if current module belongs to Fundamentos or IA
+const isFundamentos = navSections[0].items.some(
+  (item) => currentSlug?.startsWith(item.slug)
+);
+const isIA = navSections[1].items.some(
+  (item) => currentSlug?.startsWith(item.slug)
+);
+
+function moduleClass(item: { slug: string }, isActive?: boolean, isOpen?: boolean) {
+  const parts = ['nav-module'];
+  if (isActive) parts.push('active');
+  if (isOpen) parts.push('nav-module-open');
+  return parts.join(' ');
+}
+---
+
+<div class="layout-sidebar">
+  <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+    <button class="sidebar-toggle" aria-label="Toggle navigation">
+      <span class="hamburger-icon"><span></span><span></span><span></span></span>
+    </button>
+
+    <!-- Fundamentos section -->
+    <div class="nav-section">
+      <h3 class="nav-section-title">{navSections[0].title}</h3>
+      <ul class="nav-list">
+        {navSections[0].items.map((item) => {
+          const isActive = currentSlug?.startsWith(item.slug);
+          const isModuleOpen = isFundamentos && currentSlug?.startsWith(item.slug);
+          return (
+            <li class="nav-item-group">
+              <a href={`/${lang}${item.slug}`} class:list={[moduleClass(item, isActive, isModuleOpen)]}>
+                <span class="nav-module-icon">▸</span>
+                <span class="nav-module-title">{item.title}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+
+    <!-- IA section -->
+    <div class="nav-section">
+      <h3 class="nav-section-title">{navSections[1].title}</h3>
+      <ul class="nav-list">
+        {navSections[1].items.map((item) => {
+          const isActive = currentSlug?.startsWith(item.slug);
+          const isModuleOpen = isIA && currentSlug?.startsWith(item.slug);
+          return (
+            <li class="nav-item-group">
+              <a href={`/${lang}${item.slug}`} class:list={[moduleClass(item, isActive, isModuleOpen)]}>
+                <span class="nav-module-icon">▸</span>
+                <span class="nav-module-title">{item.title}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  </nav>
+</div>

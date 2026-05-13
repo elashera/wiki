@@ -1,0 +1,28 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import type { Props as LanguageSwitcherProps } from './LanguageSwitcher.astro';
+
+interface Props {
+  lang: 'es' | 'en';
+  isEn: boolean;
+}
+
+const { lang, isEn } = Astro.props;
+---
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <a href={`/${lang}`} class="navbar-brand">
+      <span class="navbar-logo">📚</span>
+      <span class="navbar-title">AI Engineer Wiki</span>
+    </a>
+
+    <nav class="navbar-links" aria-label="Top navigation">
+      <a href={`/${lang}/index`} class="navbar-link">{isEn ? 'Home' : 'Inicio'}</a>
+    </nav>
+
+    <div class="navbar-right">
+      <LanguageSwitcher lang={lang} isEn={isEn} />
+    </div>
+  </div>
+</header>
