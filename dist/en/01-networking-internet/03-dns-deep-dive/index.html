@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC</h1> <div class="article-body"><h1 id="dns-deep-dive-resolution-cache-ttl-record-types-dnssec"><a aria-hidden="true" tabindex="-1" href="#dns-deep-dive-resolution-cache-ttl-record-types-dnssec"><span class="icon icon-link"></span></a>DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC</h1>
+<blockquote>
+<p>[!tip] DNS in a nutshell
+DNS (Domain Name System) is the phonebook of the Internet. It translates human-readable domain names (like <code>example.com</code>) into machine-readable IP addresses (like <code>93.184.216.34</code>). This article covers every aspect of DNS.</p>
+</blockquote>
+<h2 id="why-dns"><a aria-hidden="true" tabindex="-1" href="#why-dns"><span class="icon icon-link"></span></a>Why DNS?</h2>
+<p>Humans are bad at remembering IP addresses. Imagine if every website you visited required you to type:</p>
+<pre><code>Go to 142.250.185.206 for Google
+Go to 151.101.1.140 for Reddit
+Go to 52.84.150.11 for Amazon
+</code></pre>
+<p>DNS saves us from this by providing a <strong>hierarchical, distributed name resolution system</strong>.</p>
+<h3 id="how-dns-fits-into-the-osi-model"><a aria-hidden="true" tabindex="-1" href="#how-dns-fits-into-the-osi-model"><span class="icon icon-link"></span></a>How DNS fits into the OSI model</h3>
+<p>DNS operates at the <strong>Application layer</strong> (Layer 7 of OSI, Layer 4 of TCP/IP), but it sits above HTTP, FTP, and SMTP — meaning DNS must resolve <strong>before</strong> those protocols can connect.</p>
+<pre><code>┌─────────────────────────────────────────┐
+│  Application Layer: HTTP, DNS, SMTP, SSH │
+│  ┌─────────────────────────────────────┐│
+│  │  Transport Layer: TCP, UDP           ││
+│  │  ┌─────────────────────────────────┐││
+│  │  │  Internet Layer: IP             │││
+│  │  │  ┌─────────────────────────────┐│││
+│  │  │  │  Link Layer: Ethernet, WiFi ││││
+│  │  │  └─────────────────────────────┘│││
+│  │  └─────────────────────────────────┘││
+│  └─────────────────────────────────────┘│
+└─────────────────────────────────────────┘
+</code></pre>
+<h2 id="dns-architecture-a-distributed-database"><a aria-hidden="true" tabindex="-1" href="#dns-architecture-a-distributed-database"><span class="icon icon-link"></span></a>DNS architecture: A distributed database</h2>
+<p>DNS is not a single server. It is a <strong>hierarchical, distributed database</strong> spanning the globe:</p>
+<pre><code>                    ┌──────────────┐
+                    │  Root DNS    │  (.)
+                    │  13 servers  │
+                    └──────┬───────┘
+                           │ .com, .org, .net, etc.
+                    ┌──────┴───────┐
+                    │  TLD DNS     │
+                    │  (.com)      │
+                    └──────┬───────┘
+                           │ example.com, test.com, etc.
+                    ┌──────┴───────┐
+                    │ Authority    │
+                    │ DNS for      │
+                    │ example.com  │
+                    └──────┬───────┘
+                           │ A, AAAA, MX, TXT records
+                    ┌──────┴───────┐
+                    │   IP ADDRESSES
+                    └──────────────┘
+</code></pre>
+<h3 id="the-hierarchy-explained"><a aria-hidden="true" tabindex="-1" href="#the-hierarchy-explained"><span class="icon icon-link"></span></a>The hierarchy explained</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Examples</th>
+<th>Managed by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Root</strong></td>
+<td><code>.</code></td>
+<td>(no subdomain)</td>
+<td>13 logical servers (A–M), operated by various orgs</td>
+</tr>
+<tr>
+<td><strong>TLD</strong></td>
+<td>Top-Level Domain</td>
+<td><code>.com</code>, <code>.org</code>, <code>.net</code>, <code>.io</code>, <code>.uk</code></td>
+<td>Registries (Verisign for <code>.com</code>, Nominet for <code>.uk</code>)</td>
+</tr>
+<tr>
+<td><strong>Second-level</strong></td>
+<td>Domain name</td>
+<td><code>example.com</code>, <code>google.com</code></td>
+<td>Domain registrars (GoDaddy, Cloudflare, Namecheap)</td>
+</tr>
+<tr>
+<td><strong>Hostname</strong></td>
+<td>Subdomain</td>
+<td><code>www.example.com</code>, <code>api.example.com</code></td>
+<td>Domain owner / DNS provider</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dns-resolution-step-by-step"><a aria-hidden="true" tabindex="-1" href="#dns-resolution-step-by-step"><span class="icon icon-link"></span></a>DNS resolution: Step by step</h2>
+<p>When you type <code>www.example.com</code> in your browser, the DNS resolution process involves multiple caches:</p>
+<h3 id="the-resolution-chain"><a aria-hidden="true" tabindex="-1" href="#the-resolution-chain"><span class="icon icon-link"></span></a>The resolution chain</h3>
+<pre><code>Browser Cache → OS Cache → ISP/Resolver Cache → Root → TLD → Authoritative → IP
+    (ms)         (ms)          (ms)           (ms)   (ms)     (ms)          (ms)
+     │            │             │              │      │        │             │
+   Hit?        Hit?         Hit?           No     No       No           Return IP
+  Skip rest    Skip rest    Skip rest      query  query   query &#x26; cache
+</code></pre>
+<h4 id="step-1-browser-cache"><a aria-hidden="true" tabindex="-1" href="#step-1-browser-cache"><span class="icon icon-link"></span></a>Step 1: Browser cache</h4>
+<p>Browsers cache DNS results to avoid repeated lookups. Chrome's cache can be inspected at <code>chrome://dns-cache</code>.</p>
+<h4 id="step-2-os-level-dns-cache"><a aria-hidden="true" tabindex="-1" href="#step-2-os-level-dns-cache"><span class="icon icon-link"></span></a>Step 2: OS-level DNS cache</h4>
+<p>Operating systems maintain their own DNS caches:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux (systemd-resolved)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemd-resolve</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --statistics</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemd-resolve</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --lookup</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># macOS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dscacheutil</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -q</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> host</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Windows</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ipconfig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /displaydns</span></span></code></pre></figure>
+<h4 id="step-3-recursive-resolver-cache"><a aria-hidden="true" tabindex="-1" href="#step-3-recursive-resolver-cache"><span class="icon icon-link"></span></a>Step 3: Recursive resolver cache</h4>
+<p>Your ISP's recursive resolver caches results for all its users. This is often the biggest DNS cache in the chain. Public resolvers like Cloudflare (1.1.1.1) and Google (8.8.8.8) have massive caches.</p>
+<h4 id="step-4-root-dns-query"><a aria-hidden="true" tabindex="-1" href="#step-4-root-dns-query"><span class="icon icon-link"></span></a>Step 4: Root DNS query</h4>
+<p>The recursive resolver queries one of the 13 root server IP addresses:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Query a root server for .com TLD</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @a.root-servers.net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> NS</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Output:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;&#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">>></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> DiG</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1.19.6</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;&#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">>></span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> @a.root-servers.net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> NS</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">;; ANSWER SECTION:</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.           360000  IN      NS      a.gtld-servers.net.</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.           360000  IN      NS      b.gtld-servers.net.</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">... (34 total NS records for root, covering all TLDs)</span></span></code></pre></figure>
+<h4 id="step-5-tld-dns-query"><a aria-hidden="true" tabindex="-1" href="#step-5-tld-dns-query"><span class="icon icon-link"></span></a>Step 5: TLD DNS query</h4>
+<p>The resolver queries the <code>.com</code> TLD servers:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @a0.com.afilias-nst.info.COM.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> NS</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Returns the authoritative nameservers for example.com:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">example.com.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    172800</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   IN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   NS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   ns1.example.com.</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">example.com.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    172800</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   IN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   NS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   ns2.example.com.</span></span></code></pre></figure>
+<h4 id="step-6-authoritative-dns-query"><a aria-hidden="true" tabindex="-1" href="#step-6-authoritative-dns-query"><span class="icon icon-link"></span></a>Step 6: Authoritative DNS query</h4>
+<p>The resolver queries the authoritative nameserver for <code>example.com</code>:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @ns1.example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> A</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Returns:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">example.com.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    300</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    IN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    A</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    93.184.216.34</span></span></code></pre></figure>
+<h2 id="dns-record-types"><a aria-hidden="true" tabindex="-1" href="#dns-record-types"><span class="icon icon-link"></span></a>DNS record types</h2>
+<p>DNS supports many record types. Here are the most common ones:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>IPv4 address</td>
+<td><code>www → 93.184.216.34</code></td>
+</tr>
+<tr>
+<td><strong>AAAA</strong></td>
+<td>IPv6 address</td>
+<td><code>www → 2606:2800:220:1:248:1893:25c8:1946</code></td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>Canonical name (alias)</td>
+<td><code>blog → example.com</code></td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>Mail exchange server</td>
+<td><code>mail.example.com</code> with priority 10</td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td>Text records (SPF, DKIM, verification)</td>
+<td><code>v=spf1 include:_spf.google.com ~all</code></td>
+</tr>
+<tr>
+<td><strong>NS</strong></td>
+<td>Name server delegation</td>
+<td><code>ns1.example.com</code></td>
+</tr>
+<tr>
+<td><strong>SOA</strong></td>
+<td>Start of Authority (zone metadata)</td>
+<td><code>ns1.example.com admin.example.com ...</code></td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Service location</td>
+<td><code>_sip._tcp.example.com → sip.example.com:5060</code></td>
+</tr>
+<tr>
+<td><strong>PTR</strong></td>
+<td>Reverse DNS (IP → hostname)</td>
+<td><code>34.216.184.93.in-addr.arpa → example.com</code></td>
+</tr>
+<tr>
+<td><strong>CAA</strong></td>
+<td>Certificate Authority Authorization</td>
+<td><code>0 issue "letsencrypt.org"</code></td>
+</tr>
+<tr>
+<td><strong>CAA</strong></td>
+<td>TLSA</td>
+<td>For DANE/TLSA certificate authentication</td>
+</tr>
+<tr>
+<td><strong>DS</strong></td>
+<td>Delegation Signer (DNSSEC)</td>
+<td>Links child zone to parent</td>
+</tr>
+<tr>
+<td><strong>NAPTR</strong></td>
+<td>NAPTR (for SIP/ENUM)</td>
+<td>Service discovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cname-a-and-aaaa-together"><a aria-hidden="true" tabindex="-1" href="#cname-a-and-aaaa-together"><span class="icon icon-link"></span></a>CNAME, A, and AAAA together</h3>
+<p>A domain can have multiple record types pointing to the same name:</p>
+<pre><code>; www.example.com points to example.com via CNAME
+www     CNAME   example.com       300
+
+; The root domain has an A record
+@       A       93.184.216.34     300
+
+; And an AAAA record for IPv6
+@       AAAA    2606:2800:220:1:248:1893:25c8:1946  300
+</code></pre>
+<blockquote>
+<p>[!tip] CNAME at the root
+A CNAME record cannot coexist with other records at the same name (RFC 1034). This means <code>example.com</code> (the root) generally cannot be a CNAME. Cloudflare's CNAME flattening and ALIAS/ANAME records work around this.</p>
+</blockquote>
+<h3 id="mx-records-and-priority"><a aria-hidden="true" tabindex="-1" href="#mx-records-and-priority"><span class="icon icon-link"></span></a>MX records and priority</h3>
+<p>MX records have a priority value. Lower numbers = higher priority:</p>
+<pre><code>; If mail.example.com (priority 10) is down, try backup (priority 20)
+@   MX  10   mail.example.com.
+@   MX  20   backup-mail.example.com.
+@   MX  30   tertiary-mail.example.com.
+</code></pre>
+<h2 id="ttl-time-to-live"><a aria-hidden="true" tabindex="-1" href="#ttl-time-to-live"><span class="icon icon-link"></span></a>TTL (Time To Live)</h2>
+<p>TTL tells caches how long to keep a DNS record before querying again:</p>
+<pre><code>; TTL of 300 seconds (5 minutes)
+www     A       93.184.216.34     300
+
+; TTL of 86400 seconds (24 hours)
+@       A       93.184.216.34     86400
+</code></pre>
+<h3 id="ttl-best-practices"><a aria-hidden="true" tabindex="-1" href="#ttl-best-practices"><span class="icon icon-link"></span></a>TTL best practices</h3>
+<table>
+<thead>
+<tr>
+<th>Record type</th>
+<th>Recommended TTL</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A / AAAA</strong></td>
+<td>300–3600 seconds</td>
+<td>Fast enough for migrations, reduces DNS load</td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>300–3600 seconds</td>
+<td>Same as A records</td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>3600–86400 seconds</td>
+<td>Email servers change rarely</td>
+</tr>
+<tr>
+<td><strong>TXT (SPF/DKIM)</strong></td>
+<td>3600+ seconds</td>
+<td>Very stable records</td>
+</tr>
+<tr>
+<td><strong>Before migration</strong></td>
+<td>Lower TTL (60–300)</td>
+<td>Reduces propagation delay</td>
+</tr>
+<tr>
+<td><strong>After migration</strong></td>
+<td>Raise TTL</td>
+<td>Reduces DNS query volume</td>
+</tr>
+</tbody>
+</table>
+<h3 id="propagation-delay"><a aria-hidden="true" tabindex="-1" href="#propagation-delay"><span class="icon icon-link"></span></a>Propagation delay</h3>
+<p>When you change a DNS record, it does not update everywhere instantly. The delay is determined by the <strong>lowest TTL</strong> among all caches:</p>
+<pre><code>Before migration: TTL = 86400 (24 hours)
+Change: A record from 1.2.3.4 to 5.6.7.8
+
+New clients: get updated immediately (from authoritative)
+Old cached: still serve 1.2.3.4 for up to 24 hours
+
+Solution: Lower TTL to 300 seconds a few days before the migration
+Then change the record → most caches update within 5 minutes
+Then after migration: Raise TTL back to 3600+
+</code></pre>
+<h2 id="dnssec-dns-security-extensions"><a aria-hidden="true" tabindex="-1" href="#dnssec-dns-security-extensions"><span class="icon icon-link"></span></a>DNSSEC (DNS Security Extensions)</h2>
+<p>DNS was designed without security in mind. <strong>DNSSEC</strong> adds cryptographic signatures to DNS records, preventing cache poisoning and man-in-the-middle attacks.</p>
+<h3 id="how-dnssec-works"><a aria-hidden="true" tabindex="-1" href="#how-dnssec-works"><span class="icon icon-link"></span></a>How DNSSEC works</h3>
+<pre><code>Zone: example.com
+Records:
+  www A 93.184.216.34
+  www RRSIG A &#x3C;signature>
+
+Resolver:
+  1. Gets the A record
+  2. Gets the RRSIG (signature) for the A record
+  3. Verifies the signature using the DNSKEY
+  3. DNSKEY is verified by the DS record in the parent zone
+  4. Parent's DS is verified by... root DNSSEC key (trust anchor)
+
+Result: If the signature is valid, the record is authentic.
+        If not, the resolver returns SERVFAIL.
+</code></pre>
+<h3 id="dnssec-key-hierarchy"><a aria-hidden="true" tabindex="-1" href="#dnssec-key-hierarchy"><span class="icon icon-link"></span></a>DNSSEC key hierarchy</h3>
+<pre><code>┌──────────────────┐
+│  Root Zone Key   │  (Trust Anchor)
+│  KSK + ZSK       │
+└────────┬─────────┘
+         │ DS record (Delegation Signer)
+┌────────┴─────────┐
+│  TLD Zone (.com) │
+│  KSK + ZSK       │
+└────────┬─────────┘
+         │ DS record
+┌────────┴─────────┐
+│  example.com     │
+│  KSK + ZSK       │
+│  Signs: A, AAAA,  │
+│  CNAME, MX, TXT   │
+└──────────────────┘
+</code></pre>
+<p><strong>KSK (Key Signing Key):</strong> Signs the DNSKEY record. Long-lived, very secure.
+<strong>ZSK (Zone Signing Key):</strong> Signs all other records in the zone. Rotated frequently.</p>
+<h3 id="what-dnssec-protects-against"><a aria-hidden="true" tabindex="-1" href="#what-dnssec-protects-against"><span class="icon icon-link"></span></a>What DNSSEC protects against</h3>
+<table>
+<thead>
+<tr>
+<th>Attack</th>
+<th>Protected?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache poisoning (fake DNS responses)</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Man-in-the-middle DNS spoofing</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>DDoS against DNS servers</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Privacy (who is querying)</td>
+<td>❌ No (DNSSEC does not encrypt queries)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!note] DNSSEC vs DNS over HTTPS
+DNSSEC authenticates data but does not encrypt queries. DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) encrypt queries but do not authenticate responses. They are complementary, not competing technologies.</p>
+</blockquote>
+<h3 id="dnssec-chain-of-trust"><a aria-hidden="true" tabindex="-1" href="#dnssec-chain-of-trust"><span class="icon icon-link"></span></a>DNSSEC chain of trust</h3>
+<pre><code>Root DNS key (trust anchor, hardcoded in resolver software)
+    │
+    ▼ DS record ──→ Verisign KSK for .com
+    │
+    ▼ DS record ──→ example.com KSK
+    │
+    ▼ RRSIG ─────→ All example.com records are signed
+</code></pre>
+<h2 id="dns-query-protocols-udp-vs-tcp"><a aria-hidden="true" tabindex="-1" href="#dns-query-protocols-udp-vs-tcp"><span class="icon icon-link"></span></a>DNS query protocols: UDP vs TCP</h2>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Port</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UDP</strong></td>
+<td>53</td>
+<td>Standard DNS queries (most common, &#x3C; 512 bytes)</td>
+</tr>
+<tr>
+<td><strong>TCP</strong></td>
+<td>53</td>
+<td>DNS responses > 512 bytes, zone transfers</td>
+</tr>
+<tr>
+<td><strong>DoT (DNS over TLS)</strong></td>
+<td>853</td>
+<td>Encrypted DNS over TCP</td>
+</tr>
+<tr>
+<td><strong>DoH (DNS over HTTPS)</strong></td>
+<td>443</td>
+<td>Encrypted DNS over HTTP/HTTPS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] When DNS uses TCP
+TCP is used when:</p>
+<ol>
+<li>The response exceeds 512 bytes (EDNS0 can increase this, but some resolvers still fall back to TCP)</li>
+<li>The client explicitly requests TCP (QR bit set in the header)</li>
+<li>A zone transfer is requested (AXFR/IXFR)</li>
+</ol>
+</blockquote>
+<h2 id="zone-transfers"><a aria-hidden="true" tabindex="-1" href="#zone-transfers"><span class="icon icon-link"></span></a>Zone transfers</h2>
+<p>A <strong>zone transfer</strong> copies a DNS zone from a primary nameserver to a secondary nameserver for redundancy:</p>
+<pre><code>Primary NS (ns1.example.com)    Secondary NS (ns2.example.com)
+        │                               │
+        │── AXFR (full zone transfer)──→│
+        │   or                          │
+        │── IXFR (incremental transfer)→│
+</code></pre>
+<ul>
+<li><strong>AXFR</strong>: Transfers the entire zone (expensive, rarely used)</li>
+<li><strong>IXFR</strong>: Transfers only the changes since the last transfer (efficient)</li>
+</ul>
+<blockquote>
+<p>[!caution] Never expose zone transfers to the public
+Zone transfers reveal all your DNS records. Configure them with <code>allow-transfer</code> ACLs restricting to secondary nameserver IPs only.</p>
+</blockquote>
+<pre><code>// BIND configuration example
+acl "secondaries" {
+    192.0.2.2;      // ns2.example.com
+};
+
+zone "example.com" {
+    type master;
+    allow-transfer { "secondaries"; };
+    // ...
+};
+</code></pre>
+<h2 id="practical-dns-tools"><a aria-hidden="true" tabindex="-1" href="#practical-dns-tools"><span class="icon icon-link"></span></a>Practical DNS tools</h2>
+<h3 id="dig-domain-information-groper"><a aria-hidden="true" tabindex="-1" href="#dig-domain-information-groper"><span class="icon icon-link"></span></a>dig (Domain Information Groper)</h3>
+<p>The most powerful DNS tool:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Basic query</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> A</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># With specific nameserver</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @1.1.1.1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> A</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Full trace from root</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +trace</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Query all record types</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ANY</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check TXT records (for SPF, DKIM)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TXT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Query for a specific record type</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MX</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check for DNSSEC</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +dnssec</span></span></code></pre></figure>
+<h3 id="nslookup"><a aria-hidden="true" tabindex="-1" href="#nslookup"><span class="icon icon-link"></span></a>nslookup</h3>
+<p>A simpler, interactive DNS tool:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nslookup</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> set type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">MX</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> example.com</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> set type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">CNAME</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> www.example.com</span></span></code></pre></figure>
+<h3 id="host"><a aria-hidden="true" tabindex="-1" href="#host"><span class="icon icon-link"></span></a>host</h3>
+<p>A simple command-line tool:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Resolve a domain</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># example.com has address 93.184.216.34</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Reverse lookup</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">host</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 93.184.216.34</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 34.216.184.93.in-addr.arpa domain name pointer example.com.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># MX records</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">host</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MX</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># example.com mail is handled by 10 mail.example.com.</span></span></code></pre></figure>
+<h3 id="dig-vs-nslookup-vs-host"><a aria-hidden="true" tabindex="-1" href="#dig-vs-nslookup-vs-host"><span class="icon icon-link"></span></a>dig vs nslookup vs host</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Best for</th>
+<th>Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dig</strong></td>
+<td>Detailed DNS analysis, debugging</td>
+<td>UDP/TCP</td>
+</tr>
+<tr>
+<td><strong>nslookup</strong></td>
+<td>Quick queries, interactive mode</td>
+<td>UDP/TCP</td>
+</tr>
+<tr>
+<td><strong>host</strong></td>
+<td>Simple resolution tasks</td>
+<td>UDP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-dns-issues-and-troubleshooting"><a aria-hidden="true" tabindex="-1" href="#common-dns-issues-and-troubleshooting"><span class="icon icon-link"></span></a>Common DNS issues and troubleshooting</h2>
+<h3 id="dns-not-resolving"><a aria-hidden="true" tabindex="-1" href="#dns-not-resolving"><span class="icon icon-link"></span></a>DNS not resolving</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Check if your resolver is working</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> google.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @8.8.8.8</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Check your /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Check DNS cache (systemd-resolved)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemd-resolve</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --statistics</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Flush the cache</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemd-resolve</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --flush-caches</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # systemd-resolved</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> kill</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -HUP</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/run/nscd.pid</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nscd</span></span></code></pre></figure>
+<h3 id="dns-propagation-issues"><a aria-hidden="true" tabindex="-1" href="#dns-propagation-issues"><span class="icon icon-link"></span></a>DNS propagation issues</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check what different resolvers see</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @8.8.8.8</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Google DNS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @1.1.1.1</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Cloudflare DNS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @208.67.222.222</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # OpenDNS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @ns1.example.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Your authoritative</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># If they differ → some caches still have the old record</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solution: Wait for TTL to expire, or lower TTL next time</span></span></code></pre></figure>
+<h3 id="dns-spoofing-detection"><a aria-hidden="true" tabindex="-1" href="#dns-spoofing-detection"><span class="icon icon-link"></span></a>DNS spoofing detection</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check if DNSSEC validation is working</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +dnssec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> A</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Look for "flags: ad" in the answer (authenticated data)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check for inconsistency across resolvers</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> resolver </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8.8.8.8</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 1.1.1.208.67.222.222</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">do</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "=== </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$resolver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ==="</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +short</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$resolver</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">done</span></span></code></pre></figure>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL to page journey</td>
+<td>[[02-url-to-page-journey]]</td>
+</tr>
+<tr>
+<td>HTTPS and TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Cloudflare DNS</td>
+<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>[[05-http-deep-dive]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>DNS is a <strong>hierarchical, distributed database</strong> spanning root, TLD, and authoritative levels.</li>
+<li>Resolution passes through multiple caches: browser → OS → resolver → root → TLD → authoritative.</li>
+<li><strong>TTL</strong> controls how long records are cached; lower TTL means faster updates but more queries.</li>
+<li><strong>DNSSEC</strong> adds cryptographic signatures to prevent cache poisoning, but does not encrypt queries.</li>
+<li>Common record types: <strong>A</strong> (IPv4), <strong>AAAA</strong> (IPv6), <strong>CNAME</strong> (alias), <strong>MX</strong> (email), <strong>TXT</strong> (verification), <strong>NS</strong> (delegation).</li>
+<li>UDP is the default for DNS; TCP is used for large responses and zone transfers.</li>
+<li>Tools like <strong>dig</strong>, <strong>nslookup</strong>, and <strong>host</strong> are essential for DNS troubleshooting.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+DNS is one of the oldest and most critical Internet protocols. It is decentralized by design — no single entity controls it. Understanding DNS gives you visibility into how the Internet actually routes your requests.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

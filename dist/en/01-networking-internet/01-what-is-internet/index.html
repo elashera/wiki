@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">What Is the Internet?</h1> <div class="article-body"><h1 id="what-is-the-internet"><a aria-hidden="true" tabindex="-1" href="#what-is-the-internet"><span class="icon icon-link"></span></a>What Is the Internet?</h1>
+<blockquote>
+<p>[!tip] To get started
+Think of the Internet as a global road network connecting cities (computers). Each city has addresses (IPs), there are delivery trucks (packets), and traffic protocols (TCP/IP) that ensure cargo reaches its destination.</p>
+</blockquote>
+<h2 id="what-is-the-internet-in-technical-terms"><a aria-hidden="true" tabindex="-1" href="#what-is-the-internet-in-technical-terms"><span class="icon icon-link"></span></a>What is the Internet in technical terms?</h2>
+<p>The Internet is <strong>a global network of interconnected networks</strong> that uses the TCP/IP protocol suite to communicate. It is not a cable, not a cloud — it is a physical infrastructure formed by:</p>
+<ul>
+<li><strong>Millions of devices</strong> (servers, routers, switches, computers, mobile phones)</li>
+<li><strong>Undersea and terrestrial fiber-optic cables</strong> (yes, the vast majority of traffic travels under the ocean)</li>
+<li><strong>Data centers</strong> around the world</li>
+<li><strong>Internet Service Providers (ISPs)</strong> that connect their customers to the rest of the network</li>
+</ul>
+<h3 id="the-network-of-networks"><a aria-hidden="true" tabindex="-1" href="#the-network-of-networks"><span class="icon icon-link"></span></a>The network of networks</h3>
+<p>Each network (of a company, a university, an ISP) connects to others through <strong>Internet Exchange Points (IXPs)</strong>. This is fundamental: the Internet is not owned by anyone. It is the result of thousands of independent networks that decided to communicate using the same rules.</p>
+<pre><code>Your ISP (Comcast/AT&#x26;T/Verizon)
+       │
+       ▼
+┌─────────────────────┐
+│    ISP Backbone      │──────┐
+│  (100G fiber optics) │      │
+└─────────────────────┘      │
+       │                      │
+       ▼                      ▼
+┌─────────────────────┐  ┌─────────────────────┐
+│      IXP             │  │    Edge Router      │
+│ (exchange point)     │  │ (your home router)  │
+└─────────────────────┘  └─────────────────────┘
+       │                            │
+       ▼                            ▼
+Data Centers (CDNs, clouds)     Your home router
+                                (192.168.1.1)
+</code></pre>
+<h3 id="the-main-actors"><a aria-hidden="true" tabindex="-1" href="#the-main-actors"><span class="icon icon-link"></span></a>The main actors</h3>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>What they do</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISP (Internet Service Provider)</strong></td>
+<td>Sells Internet access to users and businesses</td>
+<td>Comcast, AT&#x26;T, BT, Telmex</td>
+</tr>
+<tr>
+<td><strong>IXP (Internet Exchange Point)</strong></td>
+<td>Physical point where networks connect to each other</td>
+<td>AMS-IX (Amsterdam), DE-CIX (Frankfurt), MEX-IX (Mexico City)</td>
+</tr>
+<tr>
+<td><strong>Tier 1 ISP</strong></td>
+<td>Networks covering entire continents, no transit payments</td>
+<td>AT&#x26;T, NTT, Deutsche Telekom, Telmex</td>
+</tr>
+<tr>
+<td><strong>CDN (Content Delivery Network)</strong></td>
+<td>Distributed network of servers for content caching</td>
+<td>Cloudflare, Akamai, Fastly, AWS CloudFront</td>
+</tr>
+<tr>
+<td><strong>Data Center</strong></td>
+<td>Facilities with servers, electrical and network redundancy</td>
+<td>AWS, Google Cloud, Azure, Equinix</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] How many cables are under the sea?
+There are more than <strong>1.3 million kilometers</strong> of undersea cables. If lined up end to end, they would circle the Earth 30 times. Internet traffic crosses oceans via these cables, not satellites.</p>
+</blockquote>
+<h2 id="the-client-server-model"><a aria-hidden="true" tabindex="-1" href="#the-client-server-model"><span class="icon icon-link"></span></a>The client-server model</h2>
+<p>Most interactions on the Internet follow the <strong>client-server</strong> model:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What they do</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client</strong></td>
+<td>Initiates the connection, requests information</td>
+<td>Your browser (Chrome, Firefox), curl, a mobile app</td>
+</tr>
+<tr>
+<td><strong>Server</strong></td>
+<td>Listens for connections, responds with data</td>
+<td>A web server (Nginx, Apache, Caddy)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-concrete-example"><a aria-hidden="true" tabindex="-1" href="#a-concrete-example"><span class="icon icon-link"></span></a>A concrete example</h3>
+<p>When you type <code>https://google.com</code> in your browser:</p>
+<ol>
+<li>Your browser (client) sends a request</li>
+<li>That request travels through your network → your ISP → the Internet → Google's server</li>
+<li>Google's server responds with the HTML of the page</li>
+<li>Your browser receives the HTML and renders it</li>
+</ol>
+<p>But this is a massive oversimplification. What happens between steps 2 and 3 is the topic of the next article: [[02-url-to-page-journey]].</p>
+<h3 id="client-server-vs-p2p"><a aria-hidden="true" tabindex="-1" href="#client-server-vs-p2p"><span class="icon icon-link"></span></a>Client-server vs P2P</h3>
+<p>The client-server model is not the only one:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client-server</strong></td>
+<td>One server responds to many clients</td>
+<td>Web, email, APIs</td>
+</tr>
+<tr>
+<td><strong>P2P (peer-to-peer)</strong></td>
+<td>Participants are both clients and servers</td>
+<td>BitTorrent, Bitcoin, WebRTC</td>
+</tr>
+<tr>
+<td><strong>Pub/Sub (publish/subscribe)</strong></td>
+<td>One publisher sends, multiple subscribers receive</td>
+<td>MQTT, Redis pub/sub, Kafka</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!note] P2P in practice
+While BitTorrent and Bitcoin are P2P, most of the Internet is still client-server. Online video games also use this model: your console connects to a centralized game server.</p>
+</blockquote>
+<h2 id="the-tcpip-model"><a aria-hidden="true" tabindex="-1" href="#the-tcpip-model"><span class="icon icon-link"></span></a>The TCP/IP model</h2>
+<p>For all of this to work, devices need <strong>a common language</strong>. TCP/IP is that language: a set of protocols that defines how data is sent and received.</p>
+<h3 id="why-tcpip-and-not-something-else"><a aria-hidden="true" tabindex="-1" href="#why-tcpip-and-not-something-else"><span class="icon icon-link"></span></a>Why TCP/IP and not something else?</h3>
+<p>Imagine two people from different countries trying to talk. If each speaks a different language, there is no communication. TCP/IP is the "common language" that every Internet device understands. It was designed in the 1970s by <strong>Vint Cerf and Bob Kahn</strong>, and has survived decades of technology because it is:</p>
+<ul>
+<li><strong>Simple</strong>: Well-defined protocols, easy to implement</li>
+<li><strong>Extensible</strong>: New protocols added without breaking existing ones</li>
+<li><strong>Scalable</strong>: Works from a smartphone to a supercomputer</li>
+</ul>
+<h3 id="tcpip-layers-simplified"><a aria-hidden="true" tabindex="-1" href="#tcpip-layers-simplified"><span class="icon icon-link"></span></a>TCP/IP layers (simplified)</h3>
+<p>Think of TCP/IP as a chain of wrapping layers:</p>
+<pre><code>┌─────────────────────────────────┐
+│  Application Layer (HTTP, DNS)  │ ← Your "get /home" request
+│  ┌─────────────────────────────┐│
+│  │  Transport Layer (TCP)      │ ← "Split into pieces, order them, resend if lost"
+│  │  ┌─────────────────────────┐│
+│  │  │  Internet Layer (IP)    │ ← "Add destination address, find the route"
+│  │  │  ┌─────────────────────┐│
+│  │  │  │ Link Layer          │ ← "Put it on the cable/WiFi"
+│  │  │  │ (Ethernet, WiFi)    ││
+│  │  │  └─────────────────────┘│
+│  │  └─────────────────────────┘│
+│  └─────────────────────────────┘│
+└─────────────────────────────────┘
+</code></pre>
+<p>Each layer <strong>encapsulates</strong> the information from the layer above:</p>
+<pre><code>Your message: "GET / HTTP/1.1"
+  ↓ [Application layer adds HTTP]
+GET / HTTP/1.1
+  ↓ [Transport layer adds TCP]
+[TCP header: src port, dst port, seq, ack] + "GET / HTTP/1.1"
+  ↓ [Internet layer adds IP]
+[IP header: src IP, dst IP] + [TCP header + data]
+  ↓ [Link layer adds Ethernet]
+[Ethernet header: src MAC, dst MAC] + [IP header + TCP + data]
+  ↓ [Sent over cable/WiFi]
+</code></pre>
+<h4 id="application-layer"><a aria-hidden="true" tabindex="-1" href="#application-layer"><span class="icon icon-link"></span></a>Application Layer</h4>
+<p>This is where HTTP, DNS, FTP, SMTP, SSH, and WebSocket live. It is the layer you interact with directly. Each application protocol defines its own message format and semantics.</p>
+<p><strong>Main protocols:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Port</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>80</td>
+<td>Web transfer</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>Encrypted HTTP (HTTP over TLS)</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>Name resolution</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>Email sending</td>
+</tr>
+<tr>
+<td>IMAP/POP3</td>
+<td>143/993 / 110/995</td>
+<td>Email receiving</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>Secure remote access</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+<td>File transfer</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>443 (or 80)</td>
+<td>Real-time bidirectional communication</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Your browser uses multiple protocols simultaneously
+When you visit a web page, your browser uses:</p>
+<ol>
+<li><strong>DNS</strong> (port 53, UDP) to resolve the domain</li>
+<li><strong>TCP</strong> (port 443) to establish the connection</li>
+<li><strong>TLS</strong> (port 443) to encrypt</li>
+<li><strong>HTTP</strong> (port 443) to request the page</li>
+<li><strong>WebSocket</strong> (optional) for real-time updates</li>
+</ol>
+</blockquote>
+<h4 id="transport-layer-tcp-vs-udp"><a aria-hidden="true" tabindex="-1" href="#transport-layer-tcp-vs-udp"><span class="icon icon-link"></span></a>Transport Layer (TCP vs UDP)</h4>
+<p>This layer decides <strong>how</strong> data is sent:</p>
+<table>
+<thead>
+<tr>
+<th>Characteristic</th>
+<th>TCP (Transmission Control Protocol)</th>
+<th>UDP (User Datagram Protocol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Guarantees everything arrives (resends lost data)</td>
+<td>Best-effort (may lose packets)</td>
+</tr>
+<tr>
+<td><strong>Order</strong></td>
+<td>Data arrives in order</td>
+<td>No order guarantee</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Slower (acknowledgment overhead)</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td><strong>Connection</strong></td>
+<td>Connection-oriented (handshake)</td>
+<td>Connectionless</td>
+</tr>
+<tr>
+<td><strong>Flow control</strong></td>
+<td>Yes (window size)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Congestion control</strong></td>
+<td>Yes (slow start, congestion avoidance)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Typical use</strong></td>
+<td>Web (HTTP), email, FTP</td>
+<td>Streaming, video games, DNS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why does HTTP use TCP?</strong> Because you need all images, all HTML, all CSS to arrive complete and in order. If one byte of an image is lost, the image is corrupted. TCP guarantees that won't happen.</p>
+<p><strong>Why does DNS use UDP?</strong> A DNS query is very small (a few dozen bytes). If it is lost, the client resends. It is faster. However, if the response exceeds 512 bytes, DNS uses TCP.</p>
+<p><strong>Why does video streaming often use UDP?</strong> If a video frame is lost, it does not matter — the next frame arrives in its place. What matters is speed and smoothness, not perfection.</p>
+<blockquote>
+<p>[!tip] Mnemonic rule</p>
+<ul>
+<li>If data <strong>must arrive complete</strong> (web page, email, file) → TCP</li>
+<li>If <strong>speed</strong> matters more than perfection (live video, voice, DNS) → UDP</li>
+</ul>
+</blockquote>
+<h4 id="internet-layer-ip"><a aria-hidden="true" tabindex="-1" href="#internet-layer-ip"><span class="icon icon-link"></span></a>Internet Layer (IP)</h4>
+<p>IP (Internet Protocol) is responsible for:</p>
+<ul>
+<li><strong>Addressing</strong>: Each device has a unique IP address in its network</li>
+<li><strong>Routing</strong>: Finding the most efficient path between source and destination</li>
+</ul>
+<p>Your device has a private IP (e.g., 192.168.1.5) within your local network, and your router has a public IP that is visible on the Internet. The connection between the two is <strong>NAT</strong>, which you can read about in [[13-nat]].</p>
+<p><strong>IPv4 vs IPv6:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Size</strong></td>
+<td>32 bits (4 bytes)</td>
+<td>128 bits (16 bytes)</td>
+</tr>
+<tr>
+<td><strong>Format</strong></td>
+<td>192.168.1.1</td>
+<td>2001:0db8:85a3::8a2e:370:7334</td>
+</tr>
+<tr>
+<td><strong>Addresses</strong></td>
+<td>~4.3 billion</td>
+<td>~3.4 × 10³⁸</td>
+</tr>
+<tr>
+<td><strong>Header</strong></td>
+<td>20-60 bytes</td>
+<td>40 bytes fixed</td>
+</tr>
+<tr>
+<td><strong>Auto-configuration</strong></td>
+<td>Requires DHCP</td>
+<td>SLAAC (no DHCP needed)</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>IPsec optional</td>
+<td>IPsec built-in</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] IPv4 address exhaustion
+IPv4 addresses were officially exhausted in 2011. NAT allowed us to extend them, but IPv6 is the definitive solution. Every device can have its own public IP without needing NAT.</p>
+</blockquote>
+<h4 id="link-layer"><a aria-hidden="true" tabindex="-1" href="#link-layer"><span class="icon icon-link"></span></a>Link Layer</h4>
+<p>Ethernet, WiFi, Bluetooth. This is the layer closest to your hardware. Here, <strong>MAC addresses</strong> (physical network card addresses) are defined.</p>
+<p><strong>What is a MAC address?</strong> It is a unique address assigned by the manufacturer of your network card. It consists of 6 pairs of hexadigits: <code>00:1A:2B:3C:4D:5E</code>. It does not change (unless you spoof it), unlike an IP address that can change every time you connect to a network.</p>
+<h3 id="what-you-need-to-understand-about-tcpip"><a aria-hidden="true" tabindex="-1" href="#what-you-need-to-understand-about-tcpip"><span class="icon icon-link"></span></a>What you need to understand about TCP/IP</h3>
+<ul>
+<li><strong>Data travels fragmented</strong>: No HTTP request is sent as one giant block. It is split into <strong>packets</strong> of ~1500 bytes (MTU — Maximum Transmission Unit).</li>
+<li><strong>Each packet carries</strong>: The destination address, a sequence number, checksums (to verify integrity), and other metadata.</li>
+<li><strong>Routers only look at the Internet layer</strong>: Internet routers only see source and destination IPs. They do not know what the packet contains (HTTP, DNS, whatever).</li>
+<li><strong>TCP reassembles at destination</strong>: The server (or client) reorders packets by sequence number and reconstructs the original message.</li>
+<li><strong>Switches work at the Link layer, routers at the Internet layer</strong>: This distinction is fundamental to understanding networking.</li>
+</ul>
+<h3 id="the-osi-model-7-layers-vs-tcpip-4-layers"><a aria-hidden="true" tabindex="-1" href="#the-osi-model-7-layers-vs-tcpip-4-layers"><span class="icon icon-link"></span></a>The OSI model: 7 layers vs TCP/IP: 4 layers</h3>
+<p>There is another networking model you will see in textbooks: the <strong>OSI model</strong> (Open Systems Interconnection), which has 7 layers. TCP/IP is more practical with 4. Both models describe the same thing, but with different levels of detail:</p>
+<table>
+<thead>
+<tr>
+<th>OSI Model (7 layers)</th>
+<th>TCP/IP Model (4 layers)</th>
+<th>Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7. Application</td>
+<td>4. Application</td>
+<td>HTTP, DNS, SMTP, SSH</td>
+</tr>
+<tr>
+<td>6. Presentation</td>
+<td></td>
+<td>SSL/TLS, JPEG, GIF</td>
+</tr>
+<tr>
+<td>5. Session</td>
+<td></td>
+<td>NetBIOS, RPC</td>
+</tr>
+<tr>
+<td>4. Transport</td>
+<td>3. Transport</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td>3. Network</td>
+<td>2. Internet</td>
+<td>IP, ICMP, ARP</td>
+</tr>
+<tr>
+<td>2. Data Link</td>
+<td>1. Network Access</td>
+<td>Ethernet, WiFi, ARP</td>
+</tr>
+<tr>
+<td>1. Physical</td>
+<td></td>
+<td>Cables, hubs, fiber</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Which one to use?
+In practice, TCP/IP is the model actually used. OSI is useful for understanding concepts and diagnostics (when something fails, you can identify which layer it is). We will cover the OSI model in detail in [[15-osi-model-tcpip]].</p>
+</blockquote>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Next article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What happens after typing a URL?</td>
+<td>[[02-url-to-page-journey]] — The full journey</td>
+</tr>
+<tr>
+<td>What is that IP address?</td>
+<td>[[03-dns-deep-dive]] — DNS, [[12-ports]] — Ports and IPs</td>
+</tr>
+<tr>
+<td>How does data travel?</td>
+<td>[[14-servers-processes]] — Servers and processes</td>
+</tr>
+<tr>
+<td>What is a web server?</td>
+<td>[[14-servers-processes]] — A server is a process listening on a port</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>The Internet is a <strong>network of networks</strong>, not a single entity.</li>
+<li>It works because everyone uses <strong>TCP/IP</strong>, a globally agreed set of rules.</li>
+<li>The <strong>client-server</strong> model is the most common form of interaction: a client requests, a server responds.</li>
+<li>Data travels <strong>fragmented in packets</strong> through multiple routers.</li>
+<li>TCP guarantees reliability (everything arrives), UDP prioritizes speed.</li>
+<li>Each TCP/IP layer has a specific function: application (data), transport (reliability), internet (routing), link (hardware).</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+The Internet is not magic. It is a chain of processes, each with a specific job, connected by protocols that everyone understands. If you understand what each piece does, you understand the Internet.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

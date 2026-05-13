@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl</h1> <div class="article-body"><h1 id="servers-and-processes-what-is-a-process-pid-daemon-zombie-what-happens-under-curl"><a aria-hidden="true" tabindex="-1" href="#servers-and-processes-what-is-a-process-pid-daemon-zombie-what-happens-under-curl"><span class="icon icon-link"></span></a>Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl</h1>
+<blockquote>
+<p>[!tip] Servers in a nutshell
+A <strong>server</strong> is simply a <strong>process</strong> (or set of processes) that <strong>listens on a port</strong> and responds to requests. It is not magic — it is just software. This article covers the operating system concepts that power every server.</p>
+</blockquote>
+<h2 id="what-is-a-process"><a aria-hidden="true" tabindex="-1" href="#what-is-a-process"><span class="icon icon-link"></span></a>What is a process?</h2>
+<p>A <strong>process</strong> is a program in execution. Every running program on your system is a process.</p>
+<h3 id="process-attributes"><a aria-hidden="true" tabindex="-1" href="#process-attributes"><span class="icon icon-link"></span></a>Process attributes</h3>
+<p>Each process has:</p>
+<ul>
+<li>A <strong>PID</strong> (Process ID) — a unique number assigned by the OS</li>
+<li>Its own memory space (heap, stack, data segments)</li>
+<li>One or more <strong>threads</strong> of execution</li>
+<li>Open file descriptors (including network sockets)</li>
+<li>A <strong>state</strong> (running, sleeping, zombie, etc.)</li>
+<li><strong>Resources</strong> allocated (CPU time, memory, disk I/O)</li>
+</ul>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># View all running processes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> aux</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Example output:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">USER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       PID</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> %CPU</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> %MEM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    VSZ</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   RSS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TTY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">      STAT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> START</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   TIME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> COMMAND</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">         1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 169392</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 13104</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ?</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        Ss</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   08:00</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   0:02</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /sbin/init</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">www-data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  1234</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 524288</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 52428</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ?</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        S</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    08:01</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   0:15</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> worker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> process</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">emilio</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    5678</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  2.5</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  4.2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2097152</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 680000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ?</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">      Sl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   08:02</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   1:30</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> server.js</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      9012</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 412345</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 18000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ?</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        Ss</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   08:00</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   0:01</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /usr/lib/postgresql/16/bin/postgres</span></span></code></pre></figure>
+<h3 id="process-states"><a aria-hidden="true" tabindex="-1" href="#process-states"><span class="icon icon-link"></span></a>Process states</h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Meaning</th>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Running</strong></td>
+<td>Executing or ready to execute</td>
+<td>R</td>
+<td>In the run queue or on a CPU</td>
+</tr>
+<tr>
+<td><strong>Sleeping (Interruptible)</strong></td>
+<td>Waiting for an event (I/O, signal)</td>
+<td>S</td>
+<td>Can be woken by a signal</td>
+</tr>
+<tr>
+<td><strong>Sleeping (Uninterruptible)</strong></td>
+<td>Waiting for I/O (disk)</td>
+<td>D</td>
+<td>Cannot be killed or interrupted</td>
+</tr>
+<tr>
+<td><strong>Zombie</strong></td>
+<td>Terminated but not reaped by parent</td>
+<td>Z</td>
+<td>Entry remains in process table</td>
+</tr>
+<tr>
+<td><strong>Stopped</strong></td>
+<td>Suspended (Ctrl+Z, debugger)</td>
+<td>T</td>
+<td>Waiting to be resumed</td>
+</tr>
+<tr>
+<td><strong>Dead</strong></td>
+<td>Being destroyed</td>
+<td>X</td>
+<td>Transient, disappears quickly</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Process lifecycle:
+
+  Fork → Exec → Run → ... → Exit → Zombie → Reap
+  (parent creates)  (child runs)   (child calls exit())  (parent calls wait())
+</code></pre>
+<h3 id="zombie-processes"><a aria-hidden="true" tabindex="-1" href="#zombie-processes"><span class="icon icon-link"></span></a>Zombie processes</h3>
+<p>A <strong>zombie</strong> is a process that has finished executing but whose entry still exists in the process table because the parent has not called <code>wait()</code> to read its exit status:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Find zombie processes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> aux</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Z</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Example output:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">USER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       PID</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> %CPU</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> %MEM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    VSZ</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   RSS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TTY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">      STAT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> START</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   TIME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> COMMAND</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">emilio</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    5679</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">     0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ?</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        Z</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    08:02</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   0:00</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [defunct]</span></span></code></pre></figure>
+<p>You cannot kill a zombie directly. You must kill its parent process so it calls <code>wait()</code>, or wait for the parent to exit (then init adopts the zombie and reaps it).</p>
+<h2 id="what-is-a-daemon"><a aria-hidden="true" tabindex="-1" href="#what-is-a-daemon"><span class="icon icon-link"></span></a>What is a daemon?</h2>
+<p>A <strong>daemon</strong> is a background process that runs without user interaction. In Linux, daemons typically end in <code>d</code>:</p>
+<pre><code>Common daemons:
+  sshd     → SSH server daemon
+  nginx    → Nginx web server (not daemon suffix, but a daemon)
+  postgres → PostgreSQL database server
+  cron     → Cron job scheduler
+  systemd  → System and service manager
+  dockerd  → Docker daemon
+  redis-server → Redis server
+</code></pre>
+<h3 id="starting-a-daemon"><a aria-hidden="true" tabindex="-1" href="#starting-a-daemon"><span class="icon icon-link"></span></a>Starting a daemon</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Systemd (modern Linux)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Start on boot</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Check status</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Process tree</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Shows the unit file, including ExecStart, User, Group, etc.</span></span></code></pre></figure>
+<pre><code>Systemd process hierarchy:
+
+systemd (PID 1)
+├── nginx (master process, root)
+│   ├── nginx (worker process, www-data)
+│   │   └── nginx (worker process, www-data)
+│   │       └── worker threads...
+│   ├── nginx (worker process, www-data)
+│   └── nginx (worker process, www-data)
+├── postgres (main, postgres)
+│   └── postgres (wal writer, postgres)
+│       └── postgres (autovacuum launcher, postgres)
+└── sshd (root)
+    └── sshd (user session, user)
+</code></pre>
+<h2 id="what-is-a-server"><a aria-hidden="true" tabindex="-1" href="#what-is-a-server"><span class="icon icon-link"></span></a>What is a server?</h2>
+<p>A <strong>server</strong> is a process that:</p>
+<ol>
+<li><strong>Opens a socket</strong> on a specific port</li>
+<li><strong>Listens</strong> for incoming connections</li>
+<li><strong>Accepts</strong> incoming connections</li>
+<li><strong>Reads</strong> the request data</li>
+<li><strong>Processes</strong> the request</li>
+<li><strong>Writes</strong> the response data</li>
+<li><strong>Closes</strong> the connection (or keeps it alive)</li>
+</ol>
+<h3 id="a-minimal-server-in-python"><a aria-hidden="true" tabindex="-1" href="#a-minimal-server-in-python"><span class="icon icon-link"></span></a>A minimal server in Python</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> socket</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Create a TCP socket</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">server_socket </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> socket.socket(socket.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">AF_INET</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, socket.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">SOCK_STREAM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bind to an address and port</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">server_socket.bind((</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'0.0.0.0'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8080</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Listen for connections (backlog = 5)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">server_socket.listen(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Server listening on port 8080..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">while</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Accept a connection (blocks until a client connects)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    client_socket, client_address </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> server_socket.accept()</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Connection from </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">client_address</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Read the request</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    request </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> client_socket.recv(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">4096</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).decode()</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Simple response</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    response </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "HTTP/1.1 200 OK</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\r\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Content-Type: text/plain</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\r\n\r\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">Hello, World!"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Send the response</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    client_socket.sendall(response.encode())</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Close the connection</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    client_socket.close()</span></span></code></pre></figure>
+<h3 id="what-happens-under-the-hood-when-you-run-curl"><a aria-hidden="true" tabindex="-1" href="#what-happens-under-the-hood-when-you-run-curl"><span class="icon icon-link"></span></a>What happens under the hood when you run <code>curl</code></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># You type:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://example.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Behind the scenes:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. DNS resolution → find IP address for example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Create TCP socket → socket()</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. TCP 3-way handshake → connect()</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. TLS handshake (for https://) → SSL_connect()</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 5. Send HTTP request → write()</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 6. Receive HTTP response → read()</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 7. Print response to stdout</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 8. Close socket → close()</span></span></code></pre></figure>
+<h3 id="the-curl-source-flow"><a aria-hidden="true" tabindex="-1" href="#the-curl-source-flow"><span class="icon icon-link"></span></a>The curl source flow</h3>
+<pre><code>curl main()
+  │
+  ├── Curl_resolv()          → DNS lookup
+  ├── Curl_connect()         → TCP connect (3-way handshake)
+  ├── ssl_connect()          → TLS handshake (if HTTPS)
+  ├── Curl_send()            → HTTP request
+  ├── Curl_read()            → HTTP response headers + body
+  ├── Curl_write()           → Output to stdout
+  └── Curl_done()            → Cleanup, close sockets
+</code></pre>
+<h2 id="sockets"><a aria-hidden="true" tabindex="-1" href="#sockets"><span class="icon icon-link"></span></a>Sockets</h2>
+<p>A <strong>socket</strong> is an endpoint for network communication. It is identified by an IP address and a port.</p>
+<h3 id="socket-types"><a aria-hidden="true" tabindex="-1" href="#socket-types"><span class="icon icon-link"></span></a>Socket types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stream (SOCK_STREAM)</strong></td>
+<td>TCP, reliable, ordered</td>
+<td>Web servers, SSH</td>
+</tr>
+<tr>
+<td><strong>Datagram (SOCK_DGRAM)</strong></td>
+<td>UDP, unreliable, unordered</td>
+<td>DNS, video streaming</td>
+</tr>
+<tr>
+<td><strong>Raw (SOCK_RAW)</strong></td>
+<td>Direct IP access</td>
+<td>Ping, custom protocols</td>
+</tr>
+</tbody>
+</table>
+<h3 id="socket-lifecycle"><a aria-hidden="true" tabindex="-1" href="#socket-lifecycle"><span class="icon icon-link"></span></a>Socket lifecycle</h3>
+<pre><code>Server:
+  1. socket()     → Create socket
+  2. bind()       → Bind to address and port
+  3. listen()     → Listen for connections
+  4. accept()     → Wait for incoming connection
+  5. read/write() → Communicate with client
+  6. close()      → Close connection
+
+Client:
+  1. socket()     → Create socket
+  2. connect()    → Connect to server
+  3. write()      → Send data
+  4. read()       → Receive data
+  5. close()      → Close connection
+</code></pre>
+<h3 id="socket-file-descriptors"><a aria-hidden="true" tabindex="-1" href="#socket-file-descriptors"><span class="icon icon-link"></span></a>Socket file descriptors</h3>
+<p>Every socket is represented as a file descriptor in the OS:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># View open sockets</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ss</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># State  Recv-Q Send-Q Local Address:Port  Peer Address:Port  Process</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN 0      128    0.0.0.0:22           0.0.0.0:*          users:(("sshd",pid=567,fd=3))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN 0      511    0.0.0.0:80           0.0.0.0:*          users:(("nginx",pid=1234,fd=6))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN 0      511    0.0.0.0:443          0.0.0.0:*          users:(("nginx",pid=1234,fd=7))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN 0      80     127.0.0.1:3306       0.0.0.0:*          users:(("mysqld",pid=890,fd=20))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># View a process's open file descriptors</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ls</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -la</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /proc/1234/fd</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 0 -> /dev/null</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 1 -> /dev/null</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 2 -> /dev/null</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 3 -> socket:[12345]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 4 -> socket:[12346]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># lrwx------ 1 root root 64 May 13 08:01 5 -> socket:[12347]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3, 4, 5 are socket file descriptors</span></span></code></pre></figure>
+<h2 id="concurrency-models"><a aria-hidden="true" tabindex="-1" href="#concurrency-models"><span class="icon icon-link"></span></a>Concurrency models</h2>
+<p>Servers must handle multiple connections simultaneously. There are three main concurrency models:</p>
+<h3 id="1-forking-one-process-per-connection"><a aria-hidden="true" tabindex="-1" href="#1-forking-one-process-per-connection"><span class="icon icon-link"></span></a>1. Forking (one process per connection)</h3>
+<p>Each connection is handled by a new process:</p>
+<pre><code>Parent process (listening)
+  ├── Fork → Child 1 handles connection 1
+  ├── Fork → Child 2 handles connection 2
+  ├── Fork → Child 3 handles connection 3
+  └── Fork → Child N handles connection N
+
+Pros: Isolation — a crash in one process does not affect others
+Cons: High overhead — each fork creates a new process (memory, CPU)
+
+Used by: Nginx (pre-forked workers), Apache (prefork MPM)
+</code></pre>
+<h3 id="2-threading-one-thread-per-connection"><a aria-hidden="true" tabindex="-1" href="#2-threading-one-thread-per-connection"><span class="icon icon-link"></span></a>2. Threading (one thread per connection)</h3>
+<p>Each connection is handled by a new thread within the same process:</p>
+<pre><code>Main process
+  ├── Thread 1 handles connection 1
+  ├── Thread 2 handles connection 2
+  ├── Thread 3 handles connection 3
+  └── Thread N handles connection N
+
+Pros: Threads share memory (no need to serialize/deserialize data)
+Cons: Shared memory means a crash can affect all threads; race conditions
+
+Used by: Apache (worker MPM), Python threading module, Java servlet containers
+</code></pre>
+<h3 id="3-event-loop-single-thread-non-blocking-io"><a aria-hidden="true" tabindex="-1" href="#3-event-loop-single-thread-non-blocking-io"><span class="icon icon-link"></span></a>3. Event loop (single thread, non-blocking I/O)</h3>
+<p>A single thread handles all connections using non-blocking I/O and an event loop:</p>
+<pre><code>Event Loop (single thread)
+  │
+  ├── Connection 1: reading request → waiting for data (registered in event loop)
+  ├── Connection 2: processing request → CPU bound
+  ├── Connection 3: writing response → waiting for network (registered in event loop)
+  ├── Connection 4: reading request → waiting for data
+  └── ... thousands more connections handled by the same thread
+
+Pros: Extremely efficient — one process, one thread handles thousands of connections
+Cons: CPU-bound tasks block all connections; no parallelism on multi-core
+
+Used by: Node.js, Nginx (worker model), Redis, Python asyncio, Go (goroutines)
+</code></pre>
+<h3 id="concurrency-model-comparison"><a aria-hidden="true" tabindex="-1" href="#concurrency-model-comparison"><span class="icon icon-link"></span></a>Concurrency model comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Process overhead</th>
+<th>Memory usage</th>
+<th>Concurrency</th>
+<th>Complexity</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Forking</strong></td>
+<td>High</td>
+<td>High (copy on write)</td>
+<td>Medium</td>
+<td>Low</td>
+<td>C, Nginx, Apache</td>
+</tr>
+<tr>
+<td><strong>Threading</strong></td>
+<td>Low (shared process)</td>
+<td>Medium</td>
+<td>High</td>
+<td>Medium</td>
+<td>Java, Python (GIL-limited)</td>
+</tr>
+<tr>
+<td><strong>Event loop</strong></td>
+<td>Very low</td>
+<td>Low</td>
+<td>Very high</td>
+<td>High</td>
+<td>Node.js, Go, Redis</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Go goroutines
+Go uses a hybrid approach: lightweight threads (goroutines) managed by the Go runtime. Thousands of goroutines can run on a single OS thread, with automatic scheduling. This combines the efficiency of event loops with the simplicity of threading.</p>
+</blockquote>
+<h2 id="signals"><a aria-hidden="true" tabindex="-1" href="#signals"><span class="icon icon-link"></span></a>Signals</h2>
+<p>Processes receive <strong>signals</strong> from the OS to control their behavior:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Number</th>
+<th>Default action</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SIGINT</strong></td>
+<td>2</td>
+<td>Terminate</td>
+<td>Interrupt (Ctrl+C)</td>
+</tr>
+<tr>
+<td><strong>SIGTERM</strong></td>
+<td>15</td>
+<td>Terminate</td>
+<td>Graceful shutdown</td>
+</tr>
+<tr>
+<td><strong>SIGKILL</strong></td>
+<td>9</td>
+<td>Terminate</td>
+<td>Force kill (cannot be caught)</td>
+</tr>
+<tr>
+<td><strong>SIGHUP</strong></td>
+<td>1</td>
+<td>Terminate</td>
+<td>Hangup (reload config)</td>
+</tr>
+<tr>
+<td><strong>SIGUSR1</strong></td>
+<td>10</td>
+<td>Terminate</td>
+<td>User-defined (log rotation)</td>
+</tr>
+<tr>
+<td><strong>SIGUSR2</strong></td>
+<td>12</td>
+<td>Terminate</td>
+<td>User-defined (graceful reload)</td>
+</tr>
+</tbody>
+</table>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Send signals to processes</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">kill</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -SIGTERM</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1234</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Graceful shutdown</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">kill</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -SIGHUP</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1234</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # Reload configuration (Nginx, PostgreSQL)</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">kill</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -SIGUSR1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1234</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Rotate logs (many daemons)</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">kill</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -9</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1234</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Force kill (last resort)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Example: Reload Nginx configuration</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> reload</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Sends SIGHUP to the master process</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Master process reads new config, spawns new workers, gracefully shuts down old workers</span></span></code></pre></figure>
+<h2 id="server-process-management"><a aria-hidden="true" tabindex="-1" href="#server-process-management"><span class="icon icon-link"></span></a>Server process management</h2>
+<h3 id="pm2-nodejs-process-manager"><a aria-hidden="true" tabindex="-1" href="#pm2-nodejs-process-manager"><span class="icon icon-link"></span></a>PM2 (Node.js process manager)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Install</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> pm2</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Start an application</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> server.js</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "my-app"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Common commands</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                    # List all processes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">             # View logs</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Restart</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">             # Stop</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> delete</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">           # Delete from PM2</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> startup</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                 # Auto-start on boot</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> save</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                    # Save process list</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> monit</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                   # Monitor processes</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configuration</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">pm2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> server.js</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "my-app"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --instances</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --exec-mode</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cluster</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># → Starts 4 instances (one per CPU core) in cluster mode</span></span></code></pre></figure>
+<h3 id="systemd-linux-service-manager"><a aria-hidden="true" tabindex="-1" href="#systemd-linux-service-manager"><span class="icon icon-link"></span></a>Systemd (Linux service manager)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="ini" data-theme="github-light github-dark"><code data-language="ini" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># /etc/systemd/system/myapp.service</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Unit]</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=My Web Application</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">After</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=network.target postgresql.service</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Service]</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=simple</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">User</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=www-data</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Group</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=www-data</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WorkingDirectory</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/var/www/myapp</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ExecStart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/usr/bin/node server.js</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=on-failure</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RestartSec</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=5</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">NODE_ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=production</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">Environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">PORT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Security hardening</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">NoNewPrivileges</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=true</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ProtectSystem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=strict</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ProtectHome</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=true</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ReadWritePaths</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=/var/www/myapp</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">[Install]</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WantedBy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=multi-user.target</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Enable and start</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Follow logs</span></span></code></pre></figure>
+<h3 id="docker-container-as-a-server"><a aria-hidden="true" tabindex="-1" href="#docker-container-as-a-server"><span class="icon icon-link"></span></a>Docker container as a server</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Dockerfile</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package*.json ./</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm ci --only=production</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">EXPOSE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 3000</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Build and run</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Docker manages the process lifecycle, networking, and resource limits</span></span></code></pre></figure>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is Internet</td>
+<td>[[01-what-is-internet]]</td>
+</tr>
+<tr>
+<td>URL to page journey</td>
+<td>[[02-url-to-page-journey]]</td>
+</tr>
+<tr>
+<td>VPS configuration</td>
+<td>[[20-vps]]</td>
+</tr>
+<tr>
+<td>Cloudflare as reverse proxy</td>
+<td>[[04-cloudflare-intro]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>A <strong>process</strong> is a running program with a unique PID, its own memory, and file descriptors.</li>
+<li><strong>Zombie processes</strong> are finished processes whose parents have not reaped them.</li>
+<li>A <strong>daemon</strong> is a background service that runs without user interaction.</li>
+<li>A <strong>server</strong> is a process that opens a socket, listens for connections, and responds to requests.</li>
+<li>The three <strong>concurrency models</strong> are forking (one process per connection), threading (one thread per connection), and event loops (single thread, non-blocking I/O).</li>
+<li><strong>Signals</strong> control processes: SIGTERM for graceful shutdown, SIGHUP for config reload, SIGKILL for force kill.</li>
+<li>Process management tools: <strong>PM2</strong> (Node.js), <strong>Systemd</strong> (Linux services), <strong>Docker</strong> (containers).</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Every web server, API, database, and messaging system is just a process that opens a socket and listens on a port. Understanding processes, sockets, signals, and concurrency models gives you the power to debug, optimize, and architect any server application.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

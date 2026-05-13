@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">¿Cómo navegar? Del URL a la página renderizada</h1> <div class="article-body"><h1 id="cómo-navegar-de-url-a-página"><a aria-hidden="true" tabindex="-1" href="#cómo-navegar-de-url-a-página"><span class="icon icon-link"></span></a>¿Cómo navegar? De URL a página</h1>
+<blockquote>
+<p>[!tip] El viaje completo
+Cuando escribes <code>https://www.ejemplo.com:8443/index.html</code> y presionas Enter, ocurre una cadena de <strong>más de 30 pasos</strong>. Este artículo los explica todos, uno por uno.</p>
+</blockquote>
+<h2 id="la-url-descompuesta"><a aria-hidden="true" tabindex="-1" href="#la-url-descompuesta"><span class="icon icon-link"></span></a>La URL descompuesta</h2>
+<pre><code>https://www.ejemplo.com:8443/index.html
+│     │             │     │     │
+│     │             │     │     └─ Ruta (path)
+│     │             │     └─────── Puerto (port) — opcional, default 443 si HTTPS
+│     │             └───────────── Dominio (hostname)
+│     └─────────────────────────── Protocolo (scheme)
+└────────────────────────────────── La URL completa
+</code></pre>
+<p>Cada parte tiene un trabajo específico en el viaje:</p>
+<table>
+<thead>
+<tr>
+<th>Parte</th>
+<th>Qué hace</th>
+<th>¿Necesaria?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>https://</code></td>
+<td>Protocolo — decide si la conexión es segura</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>www.ejemplo.com</code></td>
+<td>Dominio — qué servidor quieres</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>:8443</code></td>
+<td>Puerto — qué "puerta" del servidor</td>
+<td>No (usa default: 80 HTTP, 443 HTTPS)</td>
+</tr>
+<tr>
+<td><code>/index.html</code></td>
+<td>Ruta — qué recurso dentro del servidor</td>
+<td>No (por default <code>/</code>)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!important] Default de puertos</p>
+<ul>
+<li>HTTP → puerto 80 (si escribes <code>http://ejemplo.com</code> va al 80)</li>
+<li>HTTPS → puerto 443 (si escribes <code>https://ejemplo.com</code> va al 443)</li>
+<li>Si usas otro puerto (ej. :8080), tienes que escribirlo explícitamente</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="el-viaje-paso-a-paso"><a aria-hidden="true" tabindex="-1" href="#el-viaje-paso-a-paso"><span class="icon icon-link"></span></a>El viaje paso a paso</h2>
+<h3 id="paso-1-el-navegador-analiza-la-url"><a aria-hidden="true" tabindex="-1" href="#paso-1-el-navegador-analiza-la-url"><span class="icon icon-link"></span></a>Paso 1: El navegador analiza la URL</h3>
+<p>Tu navegador parsea la URL y extrae:</p>
+<ul>
+<li>Protocolo: <code>https</code></li>
+<li>Host: <code>www.ejemplo.com</code></li>
+<li>Puerto: <code>8443</code></li>
+<li>Path: <code>/index.html</code></li>
+</ul>
+<p>También verifica si la URL tiene sentido. Si escribes <code>htp://</code>, te dará un error porque no reconoce el protocolo.</p>
+<h3 id="paso-2-el-navegador-consulta-su-caché"><a aria-hidden="true" tabindex="-1" href="#paso-2-el-navegador-consulta-su-caché"><span class="icon icon-link"></span></a>Paso 2: El navegador consulta su caché</h3>
+<p>Antes de hacer <strong>cualquier</strong> petición de red, el navegador consulta varias cachés internas:</p>
+<pre><code>¿Tengo esta página en caché?
+    │
+    ├── ¿Está en el histórico de navegación? (para el botón "atrás")
+    ├── ¿Tengo el HTML en memory cache? (recarga con F5)
+    ├── ¿Tengo el HTML en disk cache? (recarga con Ctrl+Shift+R)
+    └── ¿Tengo el DNS en caché? (para consultas futuras)
+</code></pre>
+<p>Si todo está en caché y es reciente, se salta todos los pasos siguientes y muestra la página al instante.</p>
+<h3 id="paso-3-dns-lookup-resolución-de-nombre"><a aria-hidden="true" tabindex="-1" href="#paso-3-dns-lookup-resolución-de-nombre"><span class="icon icon-link"></span></a>Paso 3: DNS Lookup (Resolución de nombre)</h3>
+<p>El navegador <strong>no sabe</strong> qué es <code>www.ejemplo.com</code>. Solo entiende números (direcciones IP). Necesita un <strong>traductor</strong>: el DNS.</p>
+<h4 id="cómo-funciona-la-resolución-dns"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona-la-resolución-dns"><span class="icon icon-link"></span></a>Cómo funciona la resolución DNS</h4>
+<p>El navegador consulta <strong>su propia caché DNS primero</strong>, luego el sistema operativo:</p>
+<pre><code>1. ¿Está en el DNS cache del navegador?
+       ├── SÍ → Usar esa IP. Listo.
+       └── NO → Continuar...
+              │
+              ▼
+2. ¿Está en el DNS cache del sistema operativo?
+       ├── SÍ → Usar esa IP. Listo.
+       └── NO → Continuar...
+              │
+              ▼
+3. ¿Dónde está el resolver DNS?
+       ├── Router de casa (DNS del ISP, ej. 192.168.1.1)
+       ├── DNS público (ej. 1.1.1.1 de Cloudflare, 8.8.8.8 de Google)
+       └── Configurado manualmente (en /etc/resolv.conf en Linux)
+              │
+              ▼
+4. El resolver pregunta al DNS
+       ├── ¿Tiene esta IP en su caché? → Respuesta rápida ✓
+       └── NO → Hacer consulta recursiva al sistema DNS global
+                ├── Root DNS server (.com)
+                ├── TLD DNS server (ejemplo.com)
+                └── Authoritative DNS server (www.ejemplo.com)
+</code></pre>
+<blockquote>
+<p>[!note] DNS recursivo vs iterativo</p>
+<ul>
+<li><strong>Recursive</strong>: El resolver (tu DNS, ej. 1.1.1.1) hace <strong>todo</strong> el trabajo. Tú solo esperas la respuesta. Es lo que hacen los clientes DNS normalmente.</li>
+<li><strong>Iterativo</strong>: Cada servidor te dice "ve a preguntar a otro". Es lo que hacen los servidores entre ellos.</li>
+</ul>
+</blockquote>
+<h4 id="los-servidores-raíz"><a aria-hidden="true" tabindex="-1" href="#los-servidores-raíz"><span class="icon icon-link"></span></a>Los servidores raíz</h4>
+<p>Hay solo <strong>13 grupos de servidores raíz</strong> en el mundo (identificados por letras A-M). Cada grupo tiene cientos de servidores físicos repartidos por el mundo (anycast).</p>
+<pre><code>¿Quién tiene la IP de ejemplo.com?
+    │
+    ▼
+Root DNS Server (A-M)
+    │ → "No sé la de ejemplo.com, pero los servers .com están aquí: ..."
+    ▼
+TLD Server (.com)
+    │ → "No sé la de www, pero el authoritative de ejemplo.com está aquí: ..."
+    ▼
+Authoritative DNS Server de ejemplo.com
+    │ → "www.ejemplo.com tiene la IP 93.184.216.34"
+</code></pre>
+<p><strong>TTL (Time To Live)</strong>: Cada respuesta DNS tiene un TTL, por ejemplo 300 segundos (5 minutos). Esto significa:</p>
+<ul>
+<li>El resolver guarda esa IP en caché durante 5 minutos</li>
+<li>Cualquier otra persona que pregunte por <code>ejemplo.com</code> en esos 5 min recibe la misma IP guardada</li>
+<li>Después de 5 minutos, el resolver olvida la IP y vuelve a consultar</li>
+</ul>
+<blockquote>
+<p>[!tip] TTL bajo vs TTL alto</p>
+<ul>
+<li><strong>TTL bajo</strong> (ej. 60s): Útil cuando cambias de servidor frecuentemente. La propagación es rápida.</li>
+<li><strong>TTL alto</strong> (ej. 86400 = 24h): Mejora el rendimiento del DNS porque los resolvers cachéan más tiempo.</li>
+</ul>
+</blockquote>
+<h3 id="paso-4-dns-cache-del-navegador"><a aria-hidden="true" tabindex="-1" href="#paso-4-dns-cache-del-navegador"><span class="icon icon-link"></span></a>Paso 4: DNS cache del navegador</h3>
+<p>Si el DNS cache del sistema operativo tampoco tenía la IP, ahora el resolver devuelve la respuesta y <strong>el navegador la guarda en su propia caché</strong> para consultas futuras al mismo dominio.</p>
+<h3 id="paso-5-creación-de-la-conexión-tcp-tcp-handshake"><a aria-hidden="true" tabindex="-1" href="#paso-5-creación-de-la-conexión-tcp-tcp-handshake"><span class="icon icon-link"></span></a>Paso 5: Creación de la conexión TCP (TCP Handshake)</h3>
+<p>Ahora que tenemos la IP (ej. <code>93.184.216.34</code>), necesitamos establecer una conexión. Como usamos HTTPS, en realidad hacemos TLS sobre TCP, pero primero viene el handshake de TCP:</p>
+<pre><code>Cliente                          Servidor
+   │                                │
+   │───── SYN ──────────────────────→ │  "Hola, quiero conectar"
+   │                                │
+   │←──── SYN-ACK ───────────────────│  "Te oí, yo también quiero"
+   │                                │
+   │───── ACK ──────────────────────→ │  "Perfecto, conexión establecida"
+</code></pre>
+<p>Esto se llama <strong>TCP three-way handshake</strong> y son 3 rondas de ida y vuelta (RTT). Después de esto, el canal TCP está listo.</p>
+<blockquote>
+<p>[!note] ¿Por qué hace falta el handshake?
+Porque Internet es inherentemente no confiable. Los paquetes pueden perderse. El handshake garantiza que:</p>
+<ol>
+<li>El cliente puede enviar datos</li>
+<li>El servidor puede recibir datos</li>
+<li>Ambos están de acuerdo en los números de secuencia iniciales</li>
+</ol>
+</blockquote>
+<h4 id="números-de-secuencia-y-ventana-de-transmisión"><a aria-hidden="true" tabindex="-1" href="#números-de-secuencia-y-ventana-de-transmisión"><span class="icon icon-link"></span></a>Números de secuencia y ventana de transmisión</h4>
+<p>Cada extremo del handshake genera un <strong>número de secuencia inicial (ISN)</strong> aleatorio. Este número sirve para:</p>
+<ul>
+<li>Ordenar los paquetes que llegan</li>
+<li>Detectar paquetes duplicados</li>
+<li>Calcular la <strong>ventana de transmisión</strong> (cuántos bytes puede enviar sin confirmación)</li>
+</ul>
+<p>El tamaño de ventana se ajusta dinámicamente (congestion window) para evitar saturar la red.</p>
+<h3 id="paso-6-tls-handshake-si-es-https"><a aria-hidden="true" tabindex="-1" href="#paso-6-tls-handshake-si-es-https"><span class="icon icon-link"></span></a>Paso 6: TLS Handshake (si es HTTPS)</h3>
+<p>Esto es <strong>más complejo</strong> que el TCP handshake. Aquí es donde se negocia la seguridad.</p>
+<pre><code>Cliente                          Servidor
+   │                                │
+   │─── ClientHello ──────────────→ │  "Hola, soporto TLS 1.3, estos son mis cipher suites"
+   │                                │
+   │←── ServerHello ────────────────│  "OK, TLS 1.3. Usamos cipher suite X. Aquí mi certificado"
+   │                                │
+   │←── Certificate ────────────────│  "Mi certificado firmado por una CA de confianza"
+   │                                │
+   │←── ServerKeyExchange ──────────│  "Aquí mis parámetros criptográficos"
+   │                                │
+   │─── ClientKeyExchange ──────────→ │  "Generé una clave pública. Aquí está"
+   │                                │
+   │←── ServerFinished ─────────────│  "Verifica mi hash para confirmar que soy yo"
+   │                                │
+   │─── ClientFinished ────────────→ │  "Y aquí el mío"
+   │                                │
+   │══════ Canal cifrado listo ══════│
+</code></pre>
+<blockquote>
+<p>[!tip] TLS 1.2 vs TLS 1.3</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>TLS 1.2</th>
+<th>TLS 1.3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RTT del handshake</td>
+<td>2 rondas (3 pasos)</td>
+<td>1 ronda (1-0 RTT)</td>
+</tr>
+<tr>
+<td>Cipher suites</td>
+<td>~300 opciones</td>
+<td>~10 opciones (solo las seguras)</td>
+</tr>
+<tr>
+<td>Forward secrecy</td>
+<td>Opcional (con DHE)</td>
+<td>Obligatorio (con ECDHE)</td>
+</tr>
+<tr>
+<td>Compressión</td>
+<td>Permitida</td>
+<td>Deshabilitada (ataque CRIME)</td>
+</tr>
+<tr>
+<td>Resumption</td>
+<td>Session ID, session tickets</td>
+<td>PSK (Pre-Shared Keys)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Para más detalles sobre TLS, ve [[07-https-tls]].</p>
+<h3 id="paso-7-la-petición-http"><a aria-hidden="true" tabindex="-1" href="#paso-7-la-petición-http"><span class="icon icon-link"></span></a>Paso 7: La petición HTTP</h3>
+<p>Ahora que el canal seguro está establecido, el navegador envía la petición HTTP:</p>
+<pre><code>GET /index.html HTTP/2
+Host: www.ejemplo.com
+User-Agent: Mozilla/5.0 ...
+Accept: text/html
+Accept-Encoding: gzip, br
+Accept-Language: es-ES
+Cookie: session=abc123
+</code></pre>
+<p>Para más detalles, ve [[05-http-profundo]].</p>
+<h3 id="paso-8-el-servidor-procesa-la-petición"><a aria-hidden="true" tabindex="-1" href="#paso-8-el-servidor-procesa-la-petición"><span class="icon icon-link"></span></a>Paso 8: El servidor procesa la petición</h3>
+<p>El servidor web (Nginx, Apache, etc.) recibe la petición y:</p>
+<ol>
+<li>Parsea la petición</li>
+<li>Busca el archivo <code>index.html</code> en su directorio de documentos</li>
+<li>Si no existe, verifica si hay un <code>index.html</code> en un subdirectorio</li>
+<li>Lee el archivo del disco</li>
+<li>Aplica cualquier procesamiento (SSR, rewriting, proxy a otro servicio)</li>
+<li>Envía la respuesta</li>
+</ol>
+<h3 id="paso-9-la-respuesta-http"><a aria-hidden="true" tabindex="-1" href="#paso-9-la-respuesta-http"><span class="icon icon-link"></span></a>Paso 9: La respuesta HTTP</h3>
+<p>El servidor responde:</p>
+<pre><code>HTTP/2 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 4567
+Cache-Control: public, max-age=3600
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: DENY
+ETag: "abc123-4567"
+
+&#x3C;!DOCTYPE html>
+&#x3C;html>
+&#x3C;head>...&#x3C;/head>
+&#x3C;body>&#x3C;h1>¡Hola!&#x3C;/h1>&#x3C;/body>
+&#x3C;/html>
+</code></pre>
+<p>Para más detalles sobre status codes, ve [[06-status-codes]].</p>
+<h3 id="paso-10-el-navegador-renderiza-la-página"><a aria-hidden="true" tabindex="-1" href="#paso-10-el-navegador-renderiza-la-página"><span class="icon icon-link"></span></a>Paso 10: El navegador renderiza la página</h3>
+<p>El navegador recibe el HTML y:</p>
+<ol>
+<li><strong>Parsing HTML → DOM tree</strong>: El navegador lee el HTML carácter por carácter y construye un árbol de objetos (DOM — Document Object Model). Cada etiqueta HTML se convierte en un nodo del árbol.</li>
+</ol>
+<pre><code>&#x3C;html>
+  &#x3C;head>
+    &#x3C;title>Mi página&#x3C;/title>
+  &#x3C;/head>
+  &#x3C;body>
+    &#x3C;h1>¡Hola!&#x3C;/h1>
+    &#x3C;p>Bienvenido&#x3C;/p>
+  &#x3C;/body>
+&#x3C;/html>
+
+DOM Tree:
+&#x3C;html>
+├── &#x3C;head>
+│   └── &#x3C;title> → "Mi página"
+└── &#x3C;body>
+    ├── &#x3C;h1> → "¡Hola!"
+    └── &#x3C;p> → "Bienvenido"
+</code></pre>
+<ol start="2">
+<li>
+<p><strong>Parsing CSS → CSSOM</strong>: Si encuentra <code>&#x3C;link></code> o <code>&#x3C;style></code>, descarga y parsea CSS para construir el <strong>CSS Object Model</strong> (CSSOM).</p>
+</li>
+<li>
+<p><strong>Render Tree</strong>: Combina DOM + CSSOM. Solo incluye los elementos que son visibles (los que no tienen <code>display: none</code> se excluyen).</p>
+</li>
+<li>
+<p><strong>Layout (Reflow)</strong>: Calcula la posición y tamaño exactos de cada elemento en la pantalla.</p>
+</li>
+<li>
+<p><strong>Paint</strong>: Pinta los píxeles en pantalla. Cada elemento se "pinta" por capas.</p>
+</li>
+<li>
+<p><strong>Composite</strong>: Combina todas las capas en la pantalla final.</p>
+</li>
+<li>
+<p><strong>JavaScript</strong>: Si encuentra <code>&#x3C;script></code>, lo descarga y ejecuta (bloquea el parsing a menos que tenga <code>async</code> o <code>defer</code>).</p>
+</li>
+</ol>
+<h3 id="paso-11-peticiones-de-recursos-adicionales"><a aria-hidden="true" tabindex="-1" href="#paso-11-peticiones-de-recursos-adicionales"><span class="icon icon-link"></span></a>Paso 11: Peticiones de recursos adicionales</h3>
+<p>El HTML suele hacer referencia a otros recursos: CSS, JavaScript, imágenes, fuentes. El navegador los descarga en <strong>paralelo</strong> (varias conexiones simultáneas):</p>
+<pre><code>GET /css/style.css         HTTP/2 → 200 (15KB)
+GET /js/app.js             HTTP/2 → 200 (120KB)
+GET /images/hero.jpg       HTTP/2 → 200 (200KB)
+GET /fonts/roboto.woff2    HTTP/2 → 200 (45KB)
+</code></pre>
+<blockquote>
+<p>[!note] HTTP/2 multiplexación
+Con HTTP/1.1, estas peticiones se hacían en serie (una tras otra) o con conexiones paralelas limitadas (6 por dominio). Con HTTP/2, todas van por <strong>una sola conexión</strong> pero multiplexadas (intercaladas), así que no hay head-of-line blocking.</p>
+</blockquote>
+<h3 id="paso-12-fin"><a aria-hidden="true" tabindex="-1" href="#paso-12-fin"><span class="icon icon-link"></span></a>Paso 12: Fin</h3>
+<p>La página está completamente renderizada. El usuario la puede ver e interactuar.</p>
+<hr>
+<h2 id="resumen-del-flujo-completo"><a aria-hidden="true" tabindex="-1" href="#resumen-del-flujo-completo"><span class="icon icon-link"></span></a>Resumen del flujo completo</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────────┐
+│ 1. Usuario escribe URL en el navegador                               │
+│    https://www.ejemplo.com:8443/index.html                          │
+├─────────────────────────────────────────────────────────────────────┤
+│ 2. Navegador consulta su caché                                       │
+├─────────────────────────────────────────────────────────────────────┤
+│ 3. DNS lookup → traduce dominio a IP                                │
+│    www.ejemplo.com → 93.184.216.34 (ver [[03-dns-profundo]])        │
+├─────────────────────────────────────────────────────────────────────┤
+│ 4. TCP handshake (3-way) → establece conexión                       │
+├─────────────────────────────────────────────────────────────────────┤
+│ 5. TLS handshake → establece canal cifrado                          │
+│    (ver [[07-https-tls]])                                           │
+├─────────────────────────────────────────────────────────────────────┤
+│ 6. Envía petición HTTP con headers y cookies                        │
+│    (ver [[05-http-profundo]], [[09-cookies-sesiones]])              │
+├─────────────────────────────────────────────────────────────────────┤
+│ 7. Servidor procesa y responde con HTTP                             │
+│    (ver [[06-status-codes]])                                        │
+├─────────────────────────────────────────────────────────────────────┤
+│ 8. Navegador descarga recursos adicionales (CSS, JS, imágenes)      │
+├─────────────────────────────────────────────────────────────────────┤
+│ 9. Navegador renderiza la página (DOM + CSSOM → Render → Paint)    │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="timeline-real"><a aria-hidden="true" tabindex="-1" href="#timeline-real"><span class="icon icon-link"></span></a>Timeline real</h3>
+<p>En la práctica, todo este proceso (escribiendo a mano, sin caché) toma entre <strong>200ms y 2 segundos</strong> dependiendo de:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS en caché</td>
+<td>-100ms si está en caché del navegador</td>
+</tr>
+<tr>
+<td>TCP/SSL caché</td>
+<td>-50ms si la conexión ya existe</td>
+</tr>
+<tr>
+<td>CDN caché</td>
+<td>-500ms si el contenido está en el edge</td>
+</tr>
+<tr>
+<td>Servidor local rápido</td>
+<td>-200ms si el servidor está en la misma red</td>
+</tr>
+<tr>
+<td>Contenido en caché del navegador</td>
+<td>-100ms si usa 304 Not Modified</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS</td>
+<td>[[03-dns-profundo]]</td>
+</tr>
+<tr>
+<td>HTTP / Headers</td>
+<td>[[05-http-profundo]]</td>
+</tr>
+<tr>
+<td>Status codes</td>
+<td>[[06-status-codes]]</td>
+</tr>
+<tr>
+<td>TLS / HTTPS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Cookies / Sesiones</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+<tr>
+<td>Puertos</td>
+<td>[[12-puertos]]</td>
+</tr>
+<tr>
+<td>Servidores</td>
+<td>[[14-servidores-procesos]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Una URL tiene 4 partes: protocolo, dominio, puerto (opcional), ruta</li>
+<li>El navegador consulta cachés antes de hacer cualquier cosa</li>
+<li>DNS traduce nombres a IPs (puede tardar 20-200ms)</li>
+<li>TCP handshake necesita 3 rondas</li>
+<li>TLS handshake necesita varios pasos (negociación, certificado, claves)</li>
+<li>La petición HTTP lleva headers, cookies, método y path</li>
+<li>El servidor responde con status code + headers + body</li>
+<li>El navegador renderiza (DOM → CSSOM → Render Tree → Layout → Paint) y descarga recursos adicionales en paralelo</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Todo este proceso (escribiendo a mano) toma entre 200ms y 2 segundos dependiendo de la velocidad de red y la caché. Si todo está en caché, puede ser instantáneo. Por eso las buenas prácticas de caché son tan importantes en el rendimiento web.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

@@ -1,0 +1,970 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers</h1> <div class="article-body"><h1 id="cloudflare-completo-cdn-dns-waf-ddos-ssltls-y-workers"><a aria-hidden="true" tabindex="-1" href="#cloudflare-completo-cdn-dns-waf-ddos-ssltls-y-workers"><span class="icon icon-link"></span></a>Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers</h1>
+<blockquote>
+<p>[!tip] Cloudflare en una frase
+Cloudflare es <strong>mucho más que un CDN</strong>: es una plataforma completa de seguridad y rendimiento que opera en el edge de Internet con más de 300 data centers en 120+ ciudades. Este artículo lo cubre TODO.</p>
+</blockquote>
+<h2 id="qué-es-cloudflare"><a aria-hidden="true" tabindex="-1" href="#qué-es-cloudflare"><span class="icon icon-link"></span></a>¿Qué es Cloudflare?</h2>
+<p>Cloudflare es un proxy inverso global que se posiciona entre tus usuarios y tu servidor origin. Todo el tráfico pasa por Cloudflare antes de llegar a tu servidor.</p>
+<h3 id="la-red-de-cloudflare"><a aria-hidden="true" tabindex="-1" href="#la-red-de-cloudflare"><span class="icon icon-link"></span></a>La red de Cloudflare</h3>
+<pre><code>                         Cloudflare Edge Network
+              ┌─────────────────────────────────────────┐
+              │                                         │
+    Buenos Aires │    Miami      │    Frankfurt          │
+    Santiago    │    Newark     │    Ámsterdam          │
+    Ciudad de México│  Dallas  │    Londres           │
+              │                                         │
+    ───────────┴──────────────────────────────────────────┘
+              │
+              ▼
+    Tu Servidor Origin (único punto de exposición)
+</code></pre>
+<p>Cloudflare opera en <strong>más de 300 ciudades</strong>, con una capacidad de red de <strong>22+ Tbps</strong> (picos de más de 71.1 Tbps durante ataques DDoS masivos).</p>
+<h3 id="lo-que-cloudflare-hace-por-ti"><a aria-hidden="true" tabindex="-1" href="#lo-que-cloudflare-hace-por-ti"><span class="icon icon-link"></span></a>Lo que Cloudflare hace por ti</h3>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Qué hace</th>
+<th>Plan Free</th>
+<th>Plan Pro</th>
+<th>Enterprise</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CDN</strong></td>
+<td>Caché global de contenido</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Resolución de nombres rápida</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>SSL/TLS</strong></td>
+<td>Certificados automáticos</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>DDoS Protection</strong></td>
+<td>Absorbe ataques volumétricos</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>WAF</strong></td>
+<td>Firewall de aplicaciones web</td>
+<td>✓</td>
+<td>✓+</td>
+<td>✓+</td>
+</tr>
+<tr>
+<td><strong>Rate Limiting</strong></td>
+<td>Limita peticiones</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Bot Management</strong></td>
+<td>Detecta bots</td>
+<td>Básico</td>
+<td>Avanzado</td>
+<td>Completo</td>
+</tr>
+<tr>
+<td><strong>Argo Smart Routing</strong></td>
+<td>Ruteo inteligente</td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Workers</strong></td>
+<td>Edge computing</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Stream</strong></td>
+<td>Video hosting</td>
+<td>✗</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td><strong>Image Optimizer</strong></td>
+<td>Optimización de imágenes</td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-cdn-content-delivery-network"><a aria-hidden="true" tabindex="-1" href="#1-cdn-content-delivery-network"><span class="icon icon-link"></span></a>1. CDN (Content Delivery Network)</h2>
+<h3 id="cómo-funciona-el-caché-de-cloudflare"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona-el-caché-de-cloudflare"><span class="icon icon-link"></span></a>Cómo funciona el caché de Cloudflare</h3>
+<pre><code>Usuario (Buenos Aires)
+       │
+       │ HTTPS (20ms)
+       ▼
+Cloudflare Edge (Santiago)
+       │
+       ├── ¿Tiene caché válida? → Sirve directamente ✓ (20ms total)
+       │
+       └── ¿No tiene caché? → Pide al origin
+              │
+              │ HTTP (80ms)
+              ▼
+         Tu Servidor Origin (Frankfurt)
+              │
+              │ Guarda en caché (TTL: 2 horas)
+              │
+              ▼
+         Devuelve al usuario y guarda copia en Edge
+</code></pre>
+<h3 id="qué-se-cachea-y-qué-no"><a aria-hidden="true" tabindex="-1" href="#qué-se-cachea-y-qué-no"><span class="icon icon-link"></span></a>Qué se cachea y qué no</h3>
+<table>
+<thead>
+<tr>
+<th>Se cachea</th>
+<th>NO se cachea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Archivos estáticos (CSS, JS, imágenes, fuentes)</td>
+<td>Páginas con <code>Cache-Control: private</code></td>
+</tr>
+<tr>
+<td>HTML con <code>Cache-Control: public</code></td>
+<td>Respuestas con cookies de sesión</td>
+</tr>
+<tr>
+<td>Contenido con <code>max-age</code> explícito</td>
+<td>Respuestas con <code>Vary: cookie</code></td>
+</tr>
+<tr>
+<td>Assets con hash en el nombre</td>
+<td>Páginas dinámicas (login, dashboard)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-de-caché-con-headers"><a aria-hidden="true" tabindex="-1" href="#control-de-caché-con-headers"><span class="icon icon-link"></span></a>Control de caché con headers</h3>
+<pre><code># En tu servidor origin, envía estos headers:
+Cache-Control: public, max-age=3600          ← Cachear 1 hora
+Cache-Control: public, max-age=31536000, immutable  ← Cachear 1 año (assets con hash)
+Cache-Control: no-store                      ← Nunca cachear
+Cache-Control: no-cache                      ← Cachear pero validar con ETag
+Cache-Control: private, max-age=3600         ← Solo caché del navegador (no de CDN)
+</code></pre>
+<blockquote>
+<p>[!tip] Immutable es clave para assets
+Los archivos con hash en el nombre (ej: <code>app.a1b2c3.js</code>) nunca cambian. Con <code>immutable</code>, Cloudflare y el navegador no los validan nunca — solo los sirven desde caché. Esto elimina peticiones de validación (If-None-Match / If-Modified-Since).</p>
+</blockquote>
+<h3 id="niveles-de-caché"><a aria-hidden="true" tabindex="-1" href="#niveles-de-caché"><span class="icon icon-link"></span></a>Niveles de caché</h3>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Descripción</th>
+<th>Plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Caché normal en edge</td>
+<td>Todos</td>
+</tr>
+<tr>
+<td><strong>Cache Reserve</strong></td>
+<td>Caché en disco si el edge está lleno</td>
+<td>Business+</td>
+</tr>
+<tr>
+<td><strong>Super Cache</strong></td>
+<td>Caché de solo lectura para contenido estático</td>
+<td>Enterprise</td>
+</tr>
+<tr>
+<td><strong>Bypass</strong></td>
+<td>Saltar caché para URLs específicas</td>
+<td>Todos (Page Rules)</td>
+</tr>
+<tr>
+<td><strong>No Query</strong></td>
+<td>Ignorar query params al verificar caché</td>
+<td>Pro+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Cache Reserve
+Cuando el edge de Cloudflare se queda sin memoria para caché (ocurre en sitios muy grandes con muchos URLs diferentes), Cloudflare puede leer desde un disco permanente (Cache Reserve). Es más lento que memoria pero evita caché misses costosos al origin.</p>
+</blockquote>
+<h3 id="page-rules-para-controlar-caché"><a aria-hidden="true" tabindex="-1" href="#page-rules-para-controlar-caché"><span class="icon icon-link"></span></a>Page Rules para controlar caché</h3>
+<pre><code># Regla 1: Caché largo para assets estáticos
+*.ejemplo.com/assets/*
+→ Cache Level: Cache Everything
+→ Edge Cache TTL: 1 month
+
+# Regla 2: Bypass caché para la API
+api.ejemplo.com/api/*
+→ Cache Level: Bypass
+→ Browser Cache TTL: 0
+
+# Regla 3: Forzar HTTPS
+*.ejemplo.com/*
+→ Always Use HTTPS: On
+→ Automatic HTTPS Rewrites: On
+
+# Regla 4: Redirección
+*.ejemplo.com/http/*
+→ Forwarding URL: https://ejemplo.com/$2 (301)
+</code></pre>
+<h2 id="2-dns"><a aria-hidden="true" tabindex="-1" href="#2-dns"><span class="icon icon-link"></span></a>2. DNS</h2>
+<h3 id="dns-de-cloudflare"><a aria-hidden="true" tabindex="-1" href="#dns-de-cloudflare"><span class="icon icon-link"></span></a>DNS de Cloudflare</h3>
+<p>Cloudflare opera los DNS más rápidos del mundo con <strong>1.1.1.1</strong> y <strong>1.0.0.1</strong>.</p>
+<h3 id="registros-dns-que-soporta"><a aria-hidden="true" tabindex="-1" href="#registros-dns-que-soporta"><span class="icon icon-link"></span></a>Registros DNS que soporta</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>IPv4</td>
+<td><code>@ → 192.0.2.1</code></td>
+</tr>
+<tr>
+<td><strong>AAAA</strong></td>
+<td>IPv6</td>
+<td><code>@ → 2001:db8::1</code></td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>Alias</td>
+<td><code>www → example.com</code></td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>Email</td>
+<td><code>@ → mail.example.com (10)</code></td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td>Texto arbitrario</td>
+<td><code>@ → v=spf1 include:_spf.google.com ~all</code></td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Servicio</td>
+<td><code>_sip._tcp → sip.example.com (5060)</code></td>
+</tr>
+<tr>
+<td><strong>CAA</strong></td>
+<td>Control de CAs</td>
+<td><code>@ → 0 issue "letsencrypt.org"</code></td>
+</tr>
+<tr>
+<td><strong>NS</strong></td>
+<td>Nameservers</td>
+<td><code>@ → ns1.cloudflare.com</code></td>
+</tr>
+<tr>
+<td><strong>TLSA</strong></td>
+<td>TLS Authentication</td>
+<td>Para DANE</td>
+</tr>
+<tr>
+<td><strong>URL/FWD</strong></td>
+<td>Forwarding</td>
+<td><code>blog → https://medium.com/...</code></td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Servicio con prioridad</td>
+<td>VoIP, XMPP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proxy-dns-proxied-vs-dns-only"><a aria-hidden="true" tabindex="-1" href="#proxy-dns-proxied-vs-dns-only"><span class="icon icon-link"></span></a>Proxy DNS: Proxied vs DNS only</h3>
+<pre><code>Proxied (naranja ☁️):
+  Usuario → Cloudflare (CDN+WAF+DDoS) → Tu Servidor
+  Beneficios: CDN, WAF, DDoS protection, SSL
+  Limitaciones: Solo puertos 80, 443, 2052, 2082, 2086, 2095
+
+DNS only (gris ☁️):
+  Usuario → Cloudflare DNS → Tu Servidor (directo)
+  Beneficios: Puerto arbitrario, sin costo de edge
+  Limitaciones: Sin CDN, sin WAF, sin protección DDoS
+</code></pre>
+<h3 id="dnssec"><a aria-hidden="true" tabindex="-1" href="#dnssec"><span class="icon icon-link"></span></a>DNSSEC</h3>
+<p>Cloudflare soporta DNSSEC para prevenir DNS spoofing/poisoning:</p>
+<pre><code>En la zona DNS:
+  DNSSEC Enabled: On
+
+Cloudflare genera y firma:
+  DS Record (debes copiarlo en tu registrar)
+  │
+  Root → TLD → Your Zone → Records (firmados)
+</code></pre>
+<h3 id="dns-over-https-y-dns-over-tls"><a aria-hidden="true" tabindex="-1" href="#dns-over-https-y-dns-over-tls"><span class="icon icon-link"></span></a>DNS-over-HTTPS y DNS-over-TLS</h3>
+<p>Cloudflare soporta consultas DNS cifradas:</p>
+<pre><code>DNS tradicional (texto plano):
+  Cliente → DNS:53 → Resolver
+
+DNS-over-HTTPS (DoH):
+  Cliente → HTTPS:443 → 1.1.1.1/dns-query
+
+DNS-over-TLS (DoT):
+  Cliente → TLS:853 → 1.1.1.1
+</code></pre>
+<blockquote>
+<p>[!tip] 1.1.1.1
+Puedes configurar tu sistema para usar 1.1.1.1 como DNS:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nameserver</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1.1.1.1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nameserver</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1.0.0.1</span></span></code></pre></figure>
+</blockquote>
+<h2 id="3-protección-ssltls"><a aria-hidden="true" tabindex="-1" href="#3-protección-ssltls"><span class="icon icon-link"></span></a>3. Protección SSL/TLS</h2>
+<h3 id="modos-ssltls-de-cloudflare"><a aria-hidden="true" tabindex="-1" href="#modos-ssltls-de-cloudflare"><span class="icon icon-link"></span></a>Modos SSL/TLS de Cloudflare</h3>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Cliente ↔ Cloudflare</th>
+<th>Cloudflare ↔ Origin</th>
+<th>Cuándo usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Off</strong></td>
+<td>Sin HTTPS</td>
+<td>Sin HTTPS</td>
+<td>Solo pruebas locales</td>
+</tr>
+<tr>
+<td><strong>Flexible</strong></td>
+<td>HTTPS</td>
+<td>HTTP</td>
+<td>Origin sin SSL (⚠️ inseguro)</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>HTTPS</td>
+<td>HTTPS (CF auto-cert)</td>
+<td>Origin con certificado auto-emitido</td>
+</tr>
+<tr>
+<td><strong>Full (strict)</strong></td>
+<td>HTTPS</td>
+<td>HTTPS (válido)</td>
+<td><strong>RECOMENDADO</strong> para producción</td>
+</tr>
+<tr>
+<td><strong>Strict</strong></td>
+<td>HTTPS</td>
+<td>HTTPS (solo válido)</td>
+<td>Máxima seguridad</td>
+</tr>
+</tbody>
+</table>
+<h3 id="certificados"><a aria-hidden="true" tabindex="-1" href="#certificados"><span class="icon icon-link"></span></a>Certificados</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Emisor</th>
+<th>Validación</th>
+<th>Duración</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Universal SSL</strong></td>
+<td>Let's Encrypt (Cloudflare)</td>
+<td>DV</td>
+<td>90 días (auto-renovable)</td>
+</tr>
+<tr>
+<td><strong>Origin Certificate</strong></td>
+<td>Cloudflare (CA propia)</td>
+<td>DV</td>
+<td>15 años (solo Cloudflare→Origin)</td>
+</tr>
+<tr>
+<td><strong>Advanced Certificate</strong></td>
+<td>DigiCert</td>
+<td>DV/OV/EV</td>
+<td>1 año (Enterprise)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advanced-tls-features"><a aria-hidden="true" tabindex="-1" href="#advanced-tls-features"><span class="icon icon-link"></span></a>Advanced TLS Features</h3>
+<pre><code># OCSP Stapling (verificación rápida de certificados)
+TLS 1.3:
+  Server → Client: Certificate + OCSP Staple
+  El cliente verifica sin contactar a la CA
+
+# Early Data (0-RTT)
+  Cliente reenvía datos en el primer mensaje de TLS 1.3
+  Vulnerable a replay attacks — usar con precaución
+
+# ECH (Encrypted Client Hello)
+  El SNI viaja cifrado en lugar de en texto plano
+  Previene que ISPs/servidores sepan qué dominio visitas
+</code></pre>
+<h2 id="4-waf-web-application-firewall"><a aria-hidden="true" tabindex="-1" href="#4-waf-web-application-firewall"><span class="icon icon-link"></span></a>4. WAF (Web Application Firewall)</h2>
+<h3 id="security-rules"><a aria-hidden="true" tabindex="-1" href="#security-rules"><span class="icon icon-link"></span></a>Security Rules</h3>
+<p>Cloudflare filtra tráfico malicioso antes de que llegue a tu servidor.</p>
+<h4 id="ruleset-cloudflare-managed-rules"><a aria-hidden="true" tabindex="-1" href="#ruleset-cloudflare-managed-rules"><span class="icon icon-link"></span></a>Ruleset: Cloudflare Managed Rules</h4>
+<p>Reglas predefinidas por Cloudflare que protegen contra las amenazas más comunes:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">ruleset</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Cloudflare Managed Rules"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">rules</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Block common web attacks (SQL injection, XSS)"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    action</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"block"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    expression</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"(http.payload contains </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">&#x3C;script></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">) OR (http.request.uri.query contains </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">1=1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">)"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Block PHP backdoors"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    action</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"block"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    expression</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http.request.uri.path matches </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\\</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.(php|asp|aspx)</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">description</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Block directory traversal"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    action</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"block"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    expression</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http.request.uri.path contains </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">../</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span></code></pre></figure>
+<h4 id="custom-waf-rules"><a aria-hidden="true" tabindex="-1" href="#custom-waf-rules"><span class="icon icon-link"></span></a>Custom WAF Rules</h4>
+<p>Reglas personalizadas escritas por ti:</p>
+<pre><code># Bloquear acceso a paths sensibles
+(http.request.uri.path matches "^/wp-admin" OR
+ http.request.uri.path matches "^/phpmyadmin" OR
+ http.request.uri.path matches "^/\.env" OR
+ http.request.uri.path matches "^/wp-login\.php")
+→ Action: Block
+
+# Bloquear scans
+(http.user_agent contains "sqlmap" OR
+ http.user_agent contains "nikto" OR
+ http.user_agent contains "nmap" OR
+ http.user_agent contains "masscan")
+→ Action: Block
+
+# Rate limiting en login
+(http.request.uri.path matches "^/api/login$" AND
+ http.request.method == "POST")
+→ Rate Limit: 5 requests per minute per IP
+→ Action: Managed Challenge (JS Challenge)
+</code></pre>
+<h4 id="ruleset-builder-expresiones"><a aria-hidden="true" tabindex="-1" href="#ruleset-builder-expresiones"><span class="icon icon-link"></span></a>Ruleset Builder (expresiones)</h4>
+<p>Cloudflare usa un lenguaje de expresiones basado en JSON:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "filter"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "expression"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http.request.uri.path matches </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">^/api/(login|register)</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> and http.request.method == </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">POST</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "description"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Rate limit login y register endpoints"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "action"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"rate_limit"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "rate_limit"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "period"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">60</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "quantity"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "match"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      "headers"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">          "match_type"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"ip"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">          "value"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"http.source_ip"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="bot-management"><a aria-hidden="true" tabindex="-1" href="#bot-management"><span class="icon icon-link"></span></a>Bot Management</h3>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Funcionalidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free</strong></td>
+<td>Basic bots (scrapers conocidos)</td>
+</tr>
+<tr>
+<td><strong>Pro</strong></td>
+<td>Bot Fight Mode (JavaScript challenge)</td>
+</tr>
+<tr>
+<td><strong>Business</strong></td>
+<td>Bot fights + Bot signatures</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>Full bot management (behavioral analysis, JS fingerprints)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bot-types"><a aria-hidden="true" tabindex="-1" href="#bot-types"><span class="icon icon-link"></span></a>Bot types</h4>
+<table>
+<thead>
+<tr>
+<th>Bot type</th>
+<th>Descripción</th>
+<th>Mitigación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Good bots</strong></td>
+<td>Googlebot, Bingbot, etc.</td>
+<td>Allowlist</td>
+</tr>
+<tr>
+<td><strong>Abusive bots</strong></td>
+<td>Scrapers, credential stuffing</td>
+<td>JS challenge, Block</td>
+</tr>
+<tr>
+<td><strong>Bad bots</strong></td>
+<td>Malware, DDoz, scanners</td>
+<td>Block</td>
+</tr>
+<tr>
+<td><strong>Spam bots</strong></td>
+<td>Comment spam, form spam</td>
+<td>CAPTCHA, Block</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rate-limiting"><a aria-hidden="true" tabindex="-1" href="#rate-limiting"><span class="icon icon-link"></span></a>Rate Limiting</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejemplo: Rate limiting en endpoints sensibles</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">rate_limit</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Login rate limit"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  match</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">headers</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"X-Forwarded-For"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          operator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"ip"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">http</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">method</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"POST"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          path</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/api/login"</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  threshold</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  period</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">60</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  response</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    status_code</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">429</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    body</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Too many login attempts. Try again in 60 seconds."</span></span></code></pre></figure>
+<h2 id="5-protección-ddos"><a aria-hidden="true" tabindex="-1" href="#5-protección-ddos"><span class="icon icon-link"></span></a>5. Protección DDoS</h2>
+<h3 id="cloudflare-absorbe-ataques-ddos"><a aria-hidden="true" tabindex="-1" href="#cloudflare-absorbe-ataques-ddos"><span class="icon icon-link"></span></a>Cloudflare absorbe ataques DDoS</h3>
+<p>Cloudflare tiene una de las redes más grandes del mundo para absorber ataques DDoS.</p>
+<h3 id="tipos-de-ataque-y-mitigación"><a aria-hidden="true" tabindex="-1" href="#tipos-de-ataque-y-mitigación"><span class="icon icon-link"></span></a>Tipos de ataque y mitigación</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo de ataque</th>
+<th>Descripción</th>
+<th>Mitigación en Cloudflare</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volumétrico</strong></td>
+<td>Inunda la red con tráfico (Gbps)</td>
+<td>Su red de 22+ Tbps absorbe el tráfico</td>
+</tr>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td>Explota debilidades en TCP/IP (SYN flood, UDP flood)</td>
+<td>Completa el handshake por ti</td>
+</tr>
+<tr>
+<td><strong>HTTP Flood</strong></td>
+<td>Satura la capa de aplicación con peticiones</td>
+<td>Caché, JS challenge, rate limiting</td>
+</tr>
+<tr>
+<td><strong>Slowloris</strong></td>
+<td>Abre muchas conexiones lentas para saturar</td>
+<td>Timeout automático de conexiones</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cómo-funciona-la-protección"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona-la-protección"><span class="icon icon-link"></span></a>¿Cómo funciona la protección?</h3>
+<pre><code>Ataque: 100 Gbps desde 10,000 bots
+       │
+       ▼
+┌──────────────────────────────────────────┐
+│  Cloudflare Edge (22+ Tbps capacity)     │
+│                                          │
+│  1. Los packets llegan a cualquier Edge   │
+│  2. Anycast routing distribuye el tráfico │
+│  3. Análisis en tiempo real de cada packet│
+│  4. Bloquea packets maliciosos            │
+│  5. Cachea respuestas legítimas           │
+│  6. Rate limita IPs sospechosas           │
+│  7. JS challenge para nuevos visitantes   │
+│  8. Solo el tráfico legítimo llega al     │
+│     origin (normalmente &#x3C; 1% del ataque) │
+└──────────────────────────────────────────┘
+       │
+       ▼
+Tu servidor: recibe solo ~50 Mbps legítimos
+</code></pre>
+<blockquote>
+<p>[!tip] Anycast routing
+Cloudflare usa <strong>Anycast</strong>: la misma IP (104.16.0.0/12) se anuncia desde TODOS sus data centers. Un packet llega siempre al data center más cercano, lo que distribuye automáticamente el tráfico de ataque.</p>
+</blockquote>
+<h2 id="6-cloudflare-workers"><a aria-hidden="true" tabindex="-1" href="#6-cloudflare-workers"><span class="icon icon-link"></span></a>6. Cloudflare Workers</h2>
+<p><strong>Cloudflare Workers</strong> es una plataforma de <strong>edge computing</strong> que te permite ejecutar código JavaScript/WASM en los data centers de Cloudflare, cerca de tus usuarios.</p>
+<h3 id="características"><a aria-hidden="true" tabindex="-1" href="#características"><span class="icon icon-link"></span></a>Características</h3>
+<pre><code>Tu código se ejecuta en el Edge de Cloudflare (300+ ciudades)
+  ↓
+Latencia &#x3C; 50ms para cualquier usuario en el mundo
+  ↓
+Sin servidores que gestionar, sin cold starts, sin scaling
+</code></pre>
+<h3 id="qué-puedes-hacer-con-workers"><a aria-hidden="true" tabindex="-1" href="#qué-puedes-hacer-con-workers"><span class="icon icon-link"></span></a>¿Qué puedes hacer con Workers?</h3>
+<table>
+<thead>
+<tr>
+<th>Caso de uso</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API proxy</strong></td>
+<td>Reenviar peticiones a tu backend</td>
+</tr>
+<tr>
+<td><strong>Authentication</strong></td>
+<td>Validar tokens en el edge</td>
+</tr>
+<tr>
+<td><strong>A/B testing</strong></td>
+<td>Servir versiones diferentes de tu app</td>
+</tr>
+<tr>
+<td><strong>Redirects</strong></td>
+<td>Redirigir por país, idioma, dispositivo</td>
+</tr>
+<tr>
+<td><strong>Headers manipulation</strong></td>
+<td>Añadir/modificar headers en el edge</td>
+</tr>
+<tr>
+<td><strong>Cache control</strong></td>
+<td>Lógica de caché personalizada</td>
+</tr>
+<tr>
+<td><strong>Bot protection</strong></td>
+<td>Validar requests con lógica personalizada</td>
+</tr>
+<tr>
+<td><strong>Image manipulation</strong></td>
+<td>Redimensionar imágenes en el edge</td>
+</tr>
+<tr>
+<td><strong>Edge functions</strong></td>
+<td>Ejecutar lógica antes de llegar al origin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-worker-de-authentication"><a aria-hidden="true" tabindex="-1" href="#ejemplo-worker-de-authentication"><span class="icon icon-link"></span></a>Ejemplo: Worker de authentication</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Worker que valida tokens JWT en el edge</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  async</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fetch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">request</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> url</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> URL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(request.url);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // Validar token solo en rutas de API</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (url.pathname.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">startsWith</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/api/'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)) {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> request.headers.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Authorization'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">token </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">||</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> !</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">validateJwt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(token)) {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Response</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Unauthorized'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, { status: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">401</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // Proxy al origin si pasa la validación</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fetch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'https://your-origin.com'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> +</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> url.pathname);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></figure>
+<h3 id="edge-kv-y-durable-objects"><a aria-hidden="true" tabindex="-1" href="#edge-kv-y-durable-objects"><span class="icon icon-link"></span></a>Edge kv y Durable Objects</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Edge KV: base de datos distribuida en el edge</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> { getKV } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '@cloudflare/kv-asset-handler'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Durable Objects: estado persistente en el edge</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Útil para chat, sesiones, contadores</span></span></code></pre></figure>
+<h3 id="durable-objects-vs-edge-kv"><a aria-hidden="true" tabindex="-1" href="#durable-objects-vs-edge-kv"><span class="icon icon-link"></span></a>Durable Objects vs Edge KV</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Edge KV</th>
+<th>Durable Objects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Key-value cache (sin transaction)</td>
+<td>Base de datos con estado</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>~5ms lectura</td>
+<td>~1ms lectura</td>
+</tr>
+<tr>
+<td><strong>Consistencia</strong></td>
+<td>Eventual</td>
+<td>Fuerte</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Configuración, caché</td>
+<td>Sesiones, chat, contadores</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-argo-smart-routing"><a aria-hidden="true" tabindex="-1" href="#7-argo-smart-routing"><span class="icon icon-link"></span></a>7. Argo Smart Routing</h2>
+<p>Argo Smart Routing optimiza la ruta de tu tráfico a través de la red de Cloudflare:</p>
+<pre><code>Sin Argo:
+  Usuario → Edge local → Internet pública (ruta aleatoria) → Origin
+
+Con Argo Smart Routing:
+  Usuario → Edge local → Red privada de Cloudflare (ruta óptima) → Origin
+
+Beneficios:
+  - Reduce latencia en 15-30% en rutas internacionales
+  - Evita congestión de Internet pública
+  - SLA de 99.99% de disponibilidad
+</code></pre>
+<h2 id="8-cloudflare-stream-y-pages"><a aria-hidden="true" tabindex="-1" href="#8-cloudflare-stream-y-pages"><span class="icon icon-link"></span></a>8. Cloudflare Stream y Pages</h2>
+<h3 id="cloudflare-stream"><a aria-hidden="true" tabindex="-1" href="#cloudflare-stream"><span class="icon icon-link"></span></a>Cloudflare Stream</h3>
+<p>Hosting de video optimizado:</p>
+<pre><code>Subes video → Cloudflare lo transcibe (varios codecs/resoluciones)
+  ↓
+Reproductor integrado con adaptive bitrate
+  ↓
+CDN global para distribución
+  ↓
+Webhooks para notificaciones
+</code></pre>
+<h3 id="cloudflare-pages"><a aria-hidden="true" tabindex="-1" href="#cloudflare-pages"><span class="icon icon-link"></span></a>Cloudflare Pages</h3>
+<p>Hosting estático/SSR con CI/CD integrado:</p>
+<pre><code>Push a GitHub → Cloudflare detecta el push
+  ↓
+Build automático (npm run build)
+  ↓
+Deploy a Cloudflare Edge
+  ↓
+URL: https://your-app.pages.dev
+  ↓
+Preview deployments para PRs
+</code></pre>
+<h2 id="10-planes-y-precios"><a aria-hidden="true" tabindex="-1" href="#10-planes-y-precios"><span class="icon icon-link"></span></a>10. Planes y precios</h2>
+<h3 id="planes"><a aria-hidden="true" tabindex="-1" href="#planes"><span class="icon icon-link"></span></a>Planes</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Free</th>
+<th>Pro ($20)</th>
+<th>Business ($200)</th>
+<th>Enterprise (custom)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Banda ancha</strong></td>
+<td>Ilimitada</td>
+<td>Ilimitada</td>
+<td>Ilimitada</td>
+<td>Ilimitada</td>
+</tr>
+<tr>
+<td><strong>Zonas DNS</strong></td>
+<td>1</td>
+<td>5</td>
+<td>5</td>
+<td>Ilimitadas</td>
+</tr>
+<tr>
+<td><strong>Workers</strong></td>
+<td>100k req/día</td>
+<td>10M req/mes</td>
+<td>10M req/mes</td>
+<td>10M req/mes</td>
+</tr>
+<tr>
+<td><strong>WAF</strong></td>
+<td>Basic</td>
+<td>Advanced</td>
+<td>Custom</td>
+<td>Custom</td>
+</tr>
+<tr>
+<td><strong>Bot Management</strong></td>
+<td>Basic</td>
+<td>Bot Fight</td>
+<td>Signatures</td>
+<td>Full</td>
+</tr>
+<tr>
+<td><strong>Rate Limiting</strong></td>
+<td>1 rule</td>
+<td>5 rules</td>
+<td>25 rules</td>
+<td>Ilimitadas</td>
+</tr>
+<tr>
+<td><strong>SSL</strong></td>
+<td>Universal</td>
+<td>Advanced</td>
+<td>Advanced</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Community</td>
+<td>Email</td>
+<td>Chat+Email</td>
+<td>24/7+SLA</td>
+</tr>
+<tr>
+<td><strong>Custom SSL</strong></td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td><strong>Page Rules</strong></td>
+<td>3</td>
+<td>25</td>
+<td>50</td>
+<td>Ilimitadas</td>
+</tr>
+<tr>
+<td><strong>Cache Reserve</strong></td>
+<td>✗</td>
+<td>✗</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reglas-de-seguridad"><a aria-hidden="true" tabindex="-1" href="#reglas-de-seguridad"><span class="icon icon-link"></span></a>Reglas de seguridad</h3>
+<pre><code># Lista de reglas recomendadas para cualquier sitio en producción:
+
+# 1. Bloquear paths sensibles
+Block: path contains "/wp-admin" OR path contains "/phpmyadmin" OR path contains "/.env"
+
+# 2. Rate limit en login
+Rate limit: /api/login → 5 req/min per IP → Managed Challenge
+
+# 3. Rate limit en API
+Rate limit: /api/* → 100 req/min per IP → Return 429
+
+# 4. Bot fight mode (Pro+)
+Enable Bot Fight Mode
+
+# 5. Block countries no relevantes (si aplica)
+Block: country is CN, RU (solo si no esperas tráfico de esos países)
+
+# 6. SSL/TLS → Full (strict)
+Full (strict) con certificado válido en origin
+</code></pre>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Cloudflare es una plataforma completa: CDN, DNS, WAF, DDoS, SSL, Workers</li>
+<li>El proxy (naranja) activa todas las protecciones; DNS only (gris) no</li>
+<li>Full (strict) es el modo SSL recomendado para producción</li>
+<li>WAF protege contra SQL injection, XSS, directory traversal, etc.</li>
+<li>Rate limiting protege contra brute-force y API abuse</li>
+<li>Workers permite edge computing con JavaScript/WASM</li>
+<li>Argo Smart Routing optimiza rutas internacionales</li>
+<li>Pages es hosting estático/SSR con CI/CD integrado</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Cloudflare no es un producto, es un ecosistema. Desde el plan free puedes obtener CDN, SSL y protección DDoS. Planes superiores añaden WAF avanzado, cache reserve, y más. Workers y Pages te dan edge computing y CI/CD. Para producción seria, combina: Full strict SSL, WAF con reglas custom, rate limiting, y Workers para lógica de edge.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS en general</td>
+<td>[[03-dns-profundo]]</td>
+</tr>
+<tr>
+<td>SSL/TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Certificados</td>
+<td>[[08-lets-encrypt]]</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>[[05-http-profundo]]</td>
+</tr>
+<tr>
+<td>Firewalls</td>
+<td>[[17-firewalls-proxies-loadbalancers]]</td>
+</tr>
+<tr>
+<td>WAF</td>
+<td>Este artículo (WAF de Cloudflare)</td>
+</tr>
+<tr>
+<td>Workers</td>
+<td>Este artículo (Workers section)</td>
+</tr>
+<tr>
+<td>VPS</td>
+<td>[[20-vps]] (configurar servidor origin)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

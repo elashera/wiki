@@ -1,0 +1,571 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral</h1> <div class="article-body"><h1 id="ports-localhost-loopback-ipv4-vs-ipv6-well-known-vs-ephemeral"><a aria-hidden="true" tabindex="-1" href="#ports-localhost-loopback-ipv4-vs-ipv6-well-known-vs-ephemeral"><span class="icon icon-link"></span></a>Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral</h1>
+<blockquote>
+<p>[!tip] Ports in a nutshell
+A port is a number that identifies a specific service running on a machine. Ports work together with IP addresses to deliver data to the correct application. This article covers ports, loopback, IPv4, IPv6, and the port number ranges.</p>
+</blockquote>
+<h2 id="what-is-a-port"><a aria-hidden="true" tabindex="-1" href="#what-is-a-port"><span class="icon icon-link"></span></a>What is a port?</h2>
+<p>A <strong>port</strong> is a 16-bit number (0–65535) that identifies a specific service or application on a networked device. Combined with an IP address, it forms an <strong>endpoint</strong> for network communication.</p>
+<h3 id="the-mailing-analogy"><a aria-hidden="true" tabindex="-1" href="#the-mailing-analogy"><span class="icon icon-link"></span></a>The mailing analogy</h3>
+<pre><code>IP address = Street address of a building
+Port       = Apartment number inside the building
+
+Package → 123 Main Street (IP) → Apartment 4B (Port)
+</code></pre>
+<h3 id="socket-address"><a aria-hidden="true" tabindex="-1" href="#socket-address"><span class="icon icon-link"></span></a>Socket address</h3>
+<pre><code>Socket = IP Address + Port Number
+
+Examples:
+  192.168.1.10:80       → HTTP server
+  192.168.1.10:443      → HTTPS server
+  192.168.1.10:3306     → MySQL database
+  127.0.0.1:5432        → PostgreSQL (localhost)
+  [::1]:6379            → Redis (localhost IPv6)
+</code></pre>
+<h3 id="how-ports-work-in-a-request"><a aria-hidden="true" tabindex="-1" href="#how-ports-work-in-a-request"><span class="icon icon-link"></span></a>How ports work in a request</h3>
+<pre><code>Browser requests: https://example.com:443/api/data
+
+Client → Server:
+  Destination IP:   93.184.216.34 (resolved from DNS)
+  Destination Port: 443 (HTTPS)
+  Protocol:         TCP
+
+Server receives the packet on port 443 → delivers it to the web server process
+listening on that port.
+</code></pre>
+<h2 id="port-number-ranges"><a aria-hidden="true" tabindex="-1" href="#port-number-ranges"><span class="icon icon-link"></span></a>Port number ranges</h2>
+<p>Ports are divided into three ranges:</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Number</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>0</td>
+<td>Reserved</td>
+<td>System use only (not for applications)</td>
+</tr>
+<tr>
+<td><strong>1–1023</strong></td>
+<td>1023</td>
+<td>Well-Known Ports</td>
+<td>Assigned by IANA (HTTP=80, HTTPS=443, etc.)</td>
+</tr>
+<tr>
+<td><strong>1024–49151</strong></td>
+<td>48128</td>
+<td>Registered Ports</td>
+<td>Registered for specific applications</td>
+</tr>
+<tr>
+<td><strong>49152–65535</strong></td>
+<td>16384</td>
+<td>Ephemeral (Dynamic) Ports</td>
+<td>Temporary, assigned by OS for client connections</td>
+</tr>
+</tbody>
+</table>
+<h3 id="well-known-ports-some-of-the-most-common"><a aria-hidden="true" tabindex="-1" href="#well-known-ports-some-of-the-most-common"><span class="icon icon-link"></span></a>Well-Known Ports (some of the most common)</h3>
+<table>
+<thead>
+<tr>
+<th>Port</th>
+<th>Protocol</th>
+<th>Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>TCP</td>
+<td>FTP data transfer</td>
+</tr>
+<tr>
+<td>21</td>
+<td>TCP</td>
+<td>FTP control</td>
+</tr>
+<tr>
+<td>22</td>
+<td>TCP</td>
+<td>SSH</td>
+</tr>
+<tr>
+<td>23</td>
+<td>TCP</td>
+<td>Telnet (insecure!)</td>
+</tr>
+<tr>
+<td>25</td>
+<td>TCP</td>
+<td>SMTP (email sending)</td>
+</tr>
+<tr>
+<td>53</td>
+<td>UDP/TCP</td>
+<td>DNS</td>
+</tr>
+<tr>
+<td>80</td>
+<td>TCP</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>110</td>
+<td>TCP</td>
+<td>POP3 (email receiving)</td>
+</tr>
+<tr>
+<td>123</td>
+<td>UDP</td>
+<td>NTP (time synchronization)</td>
+</tr>
+<tr>
+<td>143</td>
+<td>TCP</td>
+<td>IMAP (email receiving)</td>
+</tr>
+<tr>
+<td>443</td>
+<td>TCP</td>
+<td>HTTPS</td>
+</tr>
+<tr>
+<td>465</td>
+<td>TCP</td>
+<td>SMTPS (encrypted SMTP)</td>
+</tr>
+<tr>
+<td>587</td>
+<td>TCP</td>
+<td>SMTP (submission, STARTTLS)</td>
+</tr>
+<tr>
+<td>993</td>
+<td>TCP</td>
+<td>IMAPS (encrypted IMAP)</td>
+</tr>
+<tr>
+<td>995</td>
+<td>TCP</td>
+<td>POP3S (encrypted POP3)</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>TCP</td>
+<td>MySQL</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>TCP</td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>TCP</td>
+<td>Redis</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>TCP</td>
+<td>HTTP (alternative)</td>
+</tr>
+<tr>
+<td>8443</td>
+<td>TCP</td>
+<td>HTTPS (alternative)</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>TCP</td>
+<td>MongoDB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ephemeral-ports"><a aria-hidden="true" tabindex="-1" href="#ephemeral-ports"><span class="icon icon-link"></span></a>Ephemeral Ports</h3>
+<p>When a client makes a connection, the OS assigns an ephemeral port:</p>
+<pre><code>Client: 192.168.1.5 → Server: 93.184.216.34
+Client port (ephemeral): 54321 → Server port (well-known): 443
+
+The return traffic:
+Server: 93.184.216.34:443 → Client: 192.168.1.5:54321
+
+The OS uses the ephemeral port to know which application should receive the response.
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># See ephemeral port range on Linux</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /proc/sys/net/ipv4/ip_local_port_range</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Output: 32768   60999</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># See a process listening on a port</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> lsof</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> :80</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nginx   1234 root    6u  IPv4  12345      0t0  TCP *:http (LISTEN)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># See all listening ports</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> netstat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Active Internet connections (only servers)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      567/sshd</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      890/mysqld</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      1234/nginx</span></span></code></pre></figure>
+<h2 id="localhost-and-loopback"><a aria-hidden="true" tabindex="-1" href="#localhost-and-loopback"><span class="icon icon-link"></span></a>Localhost and Loopback</h2>
+<p><strong>Loopback</strong> is a virtual network interface that allows a machine to communicate with itself. The loopback address is <code>127.0.0.1</code> for IPv4 and <code>::1</code> for IPv6.</p>
+<h3 id="loopback-interfaces"><a aria-hidden="true" tabindex="-1" href="#loopback-interfaces"><span class="icon icon-link"></span></a>Loopback interfaces</h3>
+<pre><code>IPv4 loopback:  127.0.0.0/8  (any address in 127.x.x.x)
+IPv6 loopback:  ::1          (single address)
+
+The most common:
+  127.0.0.1  → IPv4 loopback
+  ::1        → IPv6 loopback
+  localhost  → Hostname that resolves to 127.0.0.1 (or ::1)
+</code></pre>
+<h3 id="why-use-loopback"><a aria-hidden="true" tabindex="-1" href="#why-use-loopback"><span class="icon icon-link"></span></a>Why use loopback?</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Start a web server on localhost</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Only accessible from the same machine</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">python3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http.server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8000</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Serving at http://localhost:8000/</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Or specifically on 127.0.0.1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">python3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http.server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -b</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 127.0.0.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Try to access from another machine → connection refused!</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Only this machine can reach it.</span></span></code></pre></figure>
+<h3 id="differences-between-0000-127001-and-a-specific-ip"><a aria-hidden="true" tabindex="-1" href="#differences-between-0000-127001-and-a-specific-ip"><span class="icon icon-link"></span></a>Differences between 0.0.0.0, 127.0.0.1, and a specific IP</h3>
+<table>
+<thead>
+<tr>
+<th>Binding address</th>
+<th>Accessible from</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.0.0.0</code></td>
+<td>All interfaces</td>
+<td>Listens on every network interface (external + internal)</td>
+</tr>
+<tr>
+<td><code>127.0.0.1</code></td>
+<td>Only local machine</td>
+<td>Listens only on loopback interface</td>
+</tr>
+<tr>
+<td><code>192.168.1.10</code></td>
+<td>Same network</td>
+<td>Listens only on that specific interface</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Server binds to 0.0.0.0:3000:
+  ┌─────────────────────────────────────┐
+  │  Server on 0.0.0.0:3000             │
+  │                                     │
+  │  127.0.0.1:3000  ← Local access     │
+  │  192.168.1.10:3000  ← LAN access    │
+  │  203.0.113.5:3000  ← External access│
+  └─────────────────────────────────────┘
+
+Server binds to 127.0.0.1:3000:
+  ┌─────────────────────────────────────┐
+  │  Server on 127.0.0.1:3000           │
+  │                                     │
+  │  127.0.0.1:3000  ← Local access     │
+  │  192.168.1.10:3000  ← NOT accessible│
+  │  203.0.113.5:3000  ← NOT accessible │
+  └─────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>[!caution] Never bind databases and internal services to 0.0.0.0
+Always bind databases (MySQL, PostgreSQL, Redis) to 127.0.0.1 or a specific internal IP. Binding to 0.0.0.0 exposes them to the entire network.</p>
+</blockquote>
+<h3 id="hostname-resolution"><a aria-hidden="true" tabindex="-1" href="#hostname-resolution"><span class="icon icon-link"></span></a>Hostname resolution</h3>
+<pre><code># localhost resolves to 127.0.0.1 on most systems
+# Check /etc/hosts (Linux/macOS) or C:\Windows\System32\drivers\etc\hosts (Windows)
+
+cat /etc/hosts
+# 127.0.0.1   localhost
+# ::1         localhost ip6-localhost ip6-loopback
+</code></pre>
+<h2 id="ipv4-vs-ipv6"><a aria-hidden="true" tabindex="-1" href="#ipv4-vs-ipv6"><span class="icon icon-link"></span></a>IPv4 vs IPv6</h2>
+<h3 id="ipv4"><a aria-hidden="true" tabindex="-1" href="#ipv4"><span class="icon icon-link"></span></a>IPv4</h3>
+<p>IPv4 uses <strong>32-bit</strong> addresses, giving ~4.3 billion unique addresses:</p>
+<pre><code>Format:  four octets separated by dots
+Example: 192.168.1.1
+
+Binary:  11000000.10101000.00000001.00000001
+
+Range:   0.0.0.0 to 255.255.255.255
+</code></pre>
+<p><strong>Private (reserved) IPv4 ranges</strong> (not routable on the Internet):</p>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Size</th>
+<th>CIDR</th>
+<th>Common use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.0.0.0 – 10.255.255.255</td>
+<td>16,777,216</td>
+<td>10.0.0.0/8</td>
+<td>Large networks</td>
+</tr>
+<tr>
+<td>172.16.0.0 – 172.31.255.255</td>
+<td>1,048,576</td>
+<td>172.16.0.0/12</td>
+<td>Medium networks</td>
+</tr>
+<tr>
+<td>192.168.0.0 – 192.168.255.255</td>
+<td>65,536</td>
+<td>192.168.0.0/16</td>
+<td>Home/office networks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ipv6"><a aria-hidden="true" tabindex="-1" href="#ipv6"><span class="icon icon-link"></span></a>IPv6</h3>
+<p>IPv6 uses <strong>128-bit</strong> addresses, giving ~3.4 × 10³⁸ unique addresses:</p>
+<pre><code>Format: eight groups of four hex digits, separated by colons
+Example: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+Compressed: 2001:db8:85a3::8a2e:370:7334
+
+Zero groups can be compressed to ::
+Only one :: per address (cannot compress in two places)
+Leading zeros in each group can be omitted
+</code></pre>
+<p><strong>IPv6 address types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Prefix</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unspecified</strong></td>
+<td><code>::</code></td>
+<td>All zeros, "no address"</td>
+<td><code>::</code></td>
+</tr>
+<tr>
+<td><strong>Loopback</strong></td>
+<td><code>::1</code></td>
+<td>Same as 127.0.0.1</td>
+<td><code>::1</code></td>
+</tr>
+<tr>
+<td><strong>Unique Local</strong></td>
+<td><code>fd00::/8</code></td>
+<td>Private addresses (IPv6 equivalent of 10.0.0.0/8)</td>
+<td><code>fd00::1</code></td>
+</tr>
+<tr>
+<td><strong>Link-Local</strong></td>
+<td><code>fe80::/10</code></td>
+<td>Only on local network segment</td>
+<td><code>fe80::1%eth0</code></td>
+</tr>
+<tr>
+<td><strong>Global Unicast</strong></td>
+<td><code>2000::/3</code></td>
+<td>Public addresses (routable on Internet)</td>
+<td><code>2001:db8::1</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ipv4-vs-ipv6-comparison"><a aria-hidden="true" tabindex="-1" href="#ipv4-vs-ipv6-comparison"><span class="icon icon-link"></span></a>IPv4 vs IPv6 comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Address size</strong></td>
+<td>32 bits (4 bytes)</td>
+<td>128 bits (16 bytes)</td>
+</tr>
+<tr>
+<td><strong>Address format</strong></td>
+<td>Dotted decimal (192.168.1.1)</td>
+<td>Hex groups (2001:db8::1)</td>
+</tr>
+<tr>
+<td><strong>Address space</strong></td>
+<td>~4.3 billion</td>
+<td>~3.4 × 10³⁸</td>
+</tr>
+<tr>
+<td><strong>Header size</strong></td>
+<td>20–60 bytes (variable)</td>
+<td>40 bytes (fixed)</td>
+</tr>
+<tr>
+<td><strong>Auto-configuration</strong></td>
+<td>DHCP required</td>
+<td>SLAAC (Stateless Address Auto-Configuration)</td>
+</tr>
+<tr>
+<td><strong>NAT</strong></td>
+<td>Required (addresses exhausted)</td>
+<td>Not needed (plenty of addresses)</td>
+</tr>
+<tr>
+<td><strong>IPsec</strong></td>
+<td>Optional</td>
+<td>Built-in</td>
+</tr>
+<tr>
+<td><strong>Checksum</strong></td>
+<td>Yes (header only)</td>
+<td>No (relied on higher layers)</td>
+</tr>
+<tr>
+<td><strong>Fragmentation</strong></td>
+<td>Routers can fragment</td>
+<td>Only source can fragment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-ipv6-addresses-are-assigned"><a aria-hidden="true" tabindex="-1" href="#how-ipv6-addresses-are-assigned"><span class="icon icon-link"></span></a>How IPv6 addresses are assigned</h3>
+<pre><code># SLAAC (Stateless Address Auto-Configuration):
+# Router advertises a prefix, device appends its own interface identifier
+Router Advertisement: "Network prefix is 2001:db8:1::/64"
+Device: "I'll use 2001:db8:1::1" (or generates its own via EUI-64)
+
+# DHCPv6 (Stateful):
+# Router advertises: "Use DHCP for address configuration"
+# Device requests an address from DHCP server
+</code></pre>
+<h3 id="dual-stack-ipv4--ipv6"><a aria-hidden="true" tabindex="-1" href="#dual-stack-ipv4--ipv6"><span class="icon icon-link"></span></a>Dual-stack (IPv4 + IPv6)</h3>
+<p>Most systems run both protocols simultaneously:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check addresses on Linux</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> addr</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> show</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># eth0:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   inet 192.168.1.10/24 brd 192.168.1.255 scope global eth0  ← IPv4</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   inet6 2001:db8::1/64 scope global                        ← IPv6</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   inet6 fe80::1%eth0/64 scope link                         ← IPv6 link-local</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check DNS resolution</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> A</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # IPv4 address</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> AAAA</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # IPv6 address</span></span></code></pre></figure>
+<h2 id="port-mapping-nat-port-forwarding"><a aria-hidden="true" tabindex="-1" href="#port-mapping-nat-port-forwarding"><span class="icon icon-link"></span></a>Port mapping (NAT port forwarding)</h2>
+<p>Port forwarding allows external devices to reach a service on an internal network:</p>
+<pre><code>Internet
+   │
+   ▼
+┌──────────────────────────────────────┐
+│  Router (Public IP: 203.0.113.5)     │
+│                                      │
+│  Port 80  → 192.168.1.10:80 (Nginx) │
+│  Port 22  → 192.168.1.10:22 (SSH)   │
+│  Port 3000 → 192.168.1.20:3000 (App)│
+└──────────────────────────────────────┘
+   │
+   ▼
+┌──────────────────────────────────────┐
+│  Internal Network                    │
+│  192.168.1.10 (Web Server)           │
+│  192.168.1.20 (App Server)           │
+│  192.168.1.30 (Database)             │
+└──────────────────────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux: iptables port forwarding</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PREROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DNAT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --to-destination</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.10:80</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MASQUERADE</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux: nftables</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nft</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rule</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> prerouting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dnat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.10:80</span></span></code></pre></figure>
+<blockquote>
+<p>[!warning] Exposing services to the Internet
+Port forwarding opens a hole in your firewall. Always use:</p>
+<ol>
+<li>Strong authentication (SSH keys, not passwords)</li>
+<li>Firewall rules (allow only necessary ports)</li>
+<li>VPN for administrative access (SSH)</li>
+<li>Reverse proxy (Cloudflare) for web services</li>
+</ol>
+</blockquote>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP/IP model</td>
+<td>[[01-what-is-internet]]</td>
+</tr>
+<tr>
+<td>NAT</td>
+<td>[[13-nat]]</td>
+</tr>
+<tr>
+<td>Routing and subnetting</td>
+<td>[[16-routing-subnetting]]</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>[[03-dns-deep-dive]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>Ports</strong> are 16-bit numbers (0–65535) that identify specific services on a machine.</li>
+<li><strong>Well-known ports</strong> (0–1023) are assigned by IANA for standard services.</li>
+<li><strong>Ephemeral ports</strong> (49152–65535) are assigned by the OS for outgoing client connections.</li>
+<li><strong>Loopback</strong> (127.0.0.1 / ::1) allows a machine to communicate with itself.</li>
+<li><strong>0.0.0.0</strong> binds to all interfaces; <strong>127.0.0.1</strong> binds only to loopback.</li>
+<li><strong>IPv4</strong> uses 32-bit addresses (~4.3 billion); <strong>IPv6</strong> uses 128-bit addresses (~3.4 × 10³⁸).</li>
+<li>Private IPv4 ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) are not routable on the Internet.</li>
+<li><strong>Port forwarding</strong> allows external access to internal services but requires careful security configuration.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Ports are the bridge between IP addresses and applications. Understanding ports, loopback, and the difference between IPv4 and IPv6 is essential for network debugging, server configuration, and understanding how services communicate on a network.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

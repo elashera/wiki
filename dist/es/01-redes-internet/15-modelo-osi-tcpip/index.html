@@ -1,0 +1,577 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Modelo OSI y TCP/IP: capas y protocolos</h1> <div class="article-body"><h1 id="modelo-osi-y-tcpip"><a aria-hidden="true" tabindex="-1" href="#modelo-osi-y-tcpip"><span class="icon icon-link"></span></a>Modelo OSI y TCP/IP</h1>
+<blockquote>
+<p>[!tip] OSI en una frase
+El modelo OSI es un marco conceptual de <strong>7 capas</strong> que describe cómo se comunican los sistemas. Cada capa tiene una responsabilidad específica y se comunica con las capas adyacentes.</p>
+</blockquote>
+<h2 id="qué-es-el-modelo-osi"><a aria-hidden="true" tabindex="-1" href="#qué-es-el-modelo-osi"><span class="icon icon-link"></span></a>¿Qué es el modelo OSI?</h2>
+<p>El modelo <strong>OSI</strong> (Open Systems Interconnection) fue creado por la ISO en 1984 como un estándar para entender la comunicación de redes. Divide la comunicación en <strong>7 capas</strong>, cada una con responsabilidades bien definidas.</p>
+<p>No es el modelo que se implementa en la práctica (TCP/IP es el modelo real), pero es fundamental para entender conceptos de red y diagnosticar problemas.</p>
+<h3 id="las-7-capas"><a aria-hidden="true" tabindex="-1" href="#las-7-capas"><span class="icon icon-link"></span></a>Las 7 capas</h3>
+<pre><code>┌────────────────────────────────────────────┐
+│  7. Aplicación    (HTTP, DNS, SMTP, FTP)   │ ← Lo que el usuario ve
+│  6. Presentación  (SSL/TLS, cifrado)       │ ← Cómo se ven los datos
+│  5. Sesión        (manejo de sesiones)     │ ← Cómo se conversa
+│  4. Transporte    (TCP, UDP)               │ ← Cómo se envían los datos
+│  3. Red           (IP, routing)            │ ← Cómo llegan los datos
+│  2. Enlace        (Ethernet, WiFi, MAC)    │ ← Cómo se mueven en el cable
+│  1. Física        (cables, fibra, WiFi)    │ ← Los bits físicos
+└────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>[!tip] Mnemotécnico
+De abajo hacia arriba: <strong>"Todos Se Programan En Red Con Aplicaciones"</strong></p>
+<ol>
+<li><strong>A</strong>plicación → 2. <strong>S</strong>esión → 3. <strong>P</strong>resentación → 4. <strong>E</strong>nlace → 5. <strong>R</strong>ed → 6. <strong>C</strong>apa de <strong>T</strong>ransporte → 7. <strong>A</strong>plicación</li>
+</ol>
+<p>De arriba hacia abajo: <strong>"A</strong>l <strong>S</strong>ubir <strong>P</strong>or <strong>E</strong>stos <strong>R</strong>ampos, <strong>C</strong>aen <strong>A</strong>l <strong>I</strong>nfierno"</p>
+</blockquote>
+<h2 id="capa-7-aplicación"><a aria-hidden="true" tabindex="-1" href="#capa-7-aplicación"><span class="icon icon-link"></span></a>Capa 7: Aplicación</h2>
+<p>La capa de aplicación es la que <strong>interactúa directamente con el software del usuario</strong>. Aquí es donde viven los protocolos que conocemos: HTTP, DNS, SMTP, FTP, SSH, WebSocket.</p>
+<p><strong>Responsabilidad:</strong> Proveer servicios de red directamente a las aplicaciones.</p>
+<p><strong>Protocolos:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Puerto</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>80</td>
+<td>Transferencia web</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>HTTP cifrado</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>Resolución de nombres</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>Envío de email</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>993</td>
+<td>Recepción de email</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>Acceso remoto seguro</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+<td>Transferencia de archivos</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>443/80</td>
+<td>Comunicación bidireccional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong> Cuando escribes una URL en tu navegador, la capa de aplicación (HTTP) genera la petición <code>GET / HTTP/1.1</code>.</p>
+<h2 id="capa-6-presentación"><a aria-hidden="true" tabindex="-1" href="#capa-6-presentación"><span class="icon icon-link"></span></a>Capa 6: Presentación</h2>
+<p>La capa de presentación se encarga del <strong>formato y la representación de los datos</strong>: cifrado, compresión, conversión de formato.</p>
+<p><strong>Responsabilidad:</strong> Traducir datos entre el formato que usa la aplicación y el formato que se envía por la red.</p>
+<p><strong>Funciones:</strong></p>
+<ul>
+<li><strong>Cifrado/Descifrado</strong>: TLS/SSL opera aquí (aunque en la práctica se considera parte de la capa de aplicación en TCP/IP)</li>
+<li><strong>Compresión</strong>: gzip, brotli</li>
+<li><strong>Conversión de formato</strong>: ASCII ↔ EBCDIC, JPEG, PNG, UTF-8 ↔ UTF-16</li>
+</ul>
+<p><strong>Ejemplo:</strong> Cuando tu navegador recibe una respuesta comprimida con gzip, la capa de presentación (del navegador) la descomprime antes de mostrarla.</p>
+<h2 id="capa-5-sesión"><a aria-hidden="true" tabindex="-1" href="#capa-5-sesión"><span class="icon icon-link"></span></a>Capa 5: Sesión</h2>
+<p>La capa de sesión <strong>gestiona las sesiones</strong> de comunicación entre aplicaciones: establecimiento, mantenimiento y terminación.</p>
+<p><strong>Responsabilidad:</strong> Controlar la conversación entre dos aplicaciones.</p>
+<p><strong>Funciones:</strong></p>
+<ul>
+<li><strong>Establecer sesión</strong>: Handshake inicial</li>
+<li><strong>Sincronización</strong>: Puntos de control para reanudar tras fallos</li>
+<li><strong>Terminar sesión</strong>: Cierre ordenado</li>
+</ul>
+<p><strong>Ejemplo:</strong> En HTTP, cada petición es independiente (stateless), pero en SSH o una conexión WebSocket, la sesión se mantiene activa durante toda la interacción.</p>
+<h2 id="capa-4-transporte"><a aria-hidden="true" tabindex="-1" href="#capa-4-transporte"><span class="icon icon-link"></span></a>Capa 4: Transporte</h2>
+<p>La capa de transporte se encarga de la <strong>comunicación extremo a extremo</strong> entre aplicaciones. Decide cómo enviar los datos: con fiabilidad (TCP) o sin ella (UDP).</p>
+<p><strong>Responsabilidad:</strong> Transferir datos entre el origen y el destino de forma fiable o rápida, según el protocolo.</p>
+<h3 id="tcp-transmission-control-protocol"><a aria-hidden="true" tabindex="-1" href="#tcp-transmission-control-protocol"><span class="icon icon-link"></span></a>TCP (Transmission Control Protocol)</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conexión</strong></td>
+<td>Orientado a conexión (handshake 3-way)</td>
+</tr>
+<tr>
+<td><strong>Fiabilidad</strong></td>
+<td>Garantiza que todo llegue (ACK, retransmisión)</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>Los datos llegan en orden</td>
+</tr>
+<tr>
+<td><strong>Control de flujo</strong></td>
+<td>Window size — ajusta velocidad según capacidad del receptor</td>
+</tr>
+<tr>
+<td><strong>Control de congestión</strong></td>
+<td>Slow start, congestion avoidance, fast retransmit</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>Mayor (header de 20-60 bytes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Funcionamiento interno de TCP:</strong></p>
+<pre><code>1. Three-way handshake:
+   SYN → SYN-ACK → ACK
+
+2. Transferencia de datos con números de secuencia:
+   SEQ:100, LEN:100 → (100-199)
+   SEQ:200, LEN:50  → (200-249)
+   ACK:300          → "He recibido hasta el 299"
+
+3. Control de flujo (window size):
+   "Puedo enviar 65535 bytes sin ACK"
+   "El receptor me pide reducir a 16384 bytes"
+
+4. Control de congestión:
+   Slow start: 1 → 2 → 4 → 8 → 16 packets por RTT
+   Congestion avoidance: incrementa de 1 en 1
+   Fast retransmit: 3 ACKs duplicados = retransmitir sin esperar timeout
+   Slow down: reducir cwnd a la mitad
+
+5. Four-way teardown:
+   FIN → ACK → FIN → ACK
+</code></pre>
+<h3 id="udp-user-datagram-protocol"><a aria-hidden="true" tabindex="-1" href="#udp-user-datagram-protocol"><span class="icon icon-link"></span></a>UDP (User Datagram Protocol)</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conexión</strong></td>
+<td>Sin conexión</td>
+</tr>
+<tr>
+<td><strong>Fiabilidad</strong></td>
+<td>Best-effort (puede perder paquetes)</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>No garantiza orden</td>
+</tr>
+<tr>
+<td><strong>Control de flujo</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Control de congestión</strong></td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>Menor (header de solo 8 bytes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Uso típico de UDP:</strong></p>
+<ul>
+<li><strong>DNS</strong>: Consultas pequeñas, si se pierde se reenvía</li>
+<li><strong>Streaming de video/audio</strong>: Prioriza velocidad sobre fiabilidad</li>
+<li><strong>Videojuegos online</strong>: La latencia importa más que los packets perdidos</li>
+<li><strong>DHCP</strong>: Los clientes aún no tienen IP, no pueden usar TCP</li>
+</ul>
+<h2 id="capa-3-red"><a aria-hidden="true" tabindex="-1" href="#capa-3-red"><span class="icon icon-link"></span></a>Capa 3: Red</h2>
+<p>La capa de red se encarga del <strong>enrutamiento</strong> de paquetes a través de múltiples redes. El protocolo principal es <strong>IP</strong> (Internet Protocol).</p>
+<p><strong>Responsabilidad:</strong> Encontrar la mejor ruta entre origen y destino, incluso si pasa por múltiples redes.</p>
+<h3 id="protocolos-de-la-capa-de-red"><a aria-hidden="true" tabindex="-1" href="#protocolos-de-la-capa-de-red"><span class="icon icon-link"></span></a>Protocolos de la capa de red</h3>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IPv4</strong></td>
+<td>Direccionamiento y enrutamiento (32 bits)</td>
+</tr>
+<tr>
+<td><strong>IPv6</strong></td>
+<td>Direccionamiento y enrutamiento (128 bits)</td>
+</tr>
+<tr>
+<td><strong>ICMP</strong></td>
+<td>Diagnóstico (ping, traceroute)</td>
+</tr>
+<tr>
+<td><strong>ARP</strong></td>
+<td>Resuelve IP → MAC en la misma red local</td>
+</tr>
+<tr>
+<td><strong>OSPF, BGP</strong></td>
+<td>Protocolos de enrutamiento entre routers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="el-packet-ip"><a aria-hidden="true" tabindex="-1" href="#el-packet-ip"><span class="icon icon-link"></span></a>El packet IP</h3>
+<pre><code>┌────────────────────────────────────────────────────┐
+│                    IP Header (20-60 bytes)           │
+├────────────┬────────────┬────────────┬─────────────┤
+│ Version    │ IHL        │ TTL        │ Protocol    │
+│ (4 bits)   │ (4 bits)   │ (8 bits)   │ (8 bits)    │
+├────────────┼────────────┼────────────┼─────────────┤
+│ Source IP  │ Dest IP    │            │             │
+│ (32 bits)  │ (32 bits)  │            │             │
+├────────────┴────────────┴────────────┴─────────────┤
+│                   Payload                          │
+│              (TCP segment / UDP datagram)          │
+└────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Campos clave del header IP:</strong></p>
+<ul>
+<li><strong>Version</strong>: IPv4 (4) o IPv6 (6)</li>
+<li><strong>TTL (Time To Live)</strong>: Número máximo de hops. Se decrementa en cada router. Si llega a 0, el packet se descarta. Previene loops infinitos.</li>
+<li><strong>Protocol</strong>: Indica qué protocolo de capa 4 contiene el payload (6 = TCP, 17 = UDP)</li>
+<li><strong>TOS/DSCP</strong>: Quality of Service — prioridad del packet</li>
+<li><strong>Fragmentation</strong>: Los routers pueden fragmentar packets si exceden el MTU</li>
+</ul>
+<h3 id="enrutamiento"><a aria-hidden="true" tabindex="-1" href="#enrutamiento"><span class="icon icon-link"></span></a>Enrutamiento</h3>
+<pre><code>Tu PC (192.168.1.5) → Router (192.168.1.1) → ISP → Internet → Servidor (93.184.216.34)
+</code></pre>
+<p>Cada router consulta su <strong>tabla de enrutamiento</strong> para decidir hacia dónde enviar el packet:</p>
+<pre><code>Tabla de enrutamiento del router:
+┌──────────────────┬──────────────────┬──────────────┐
+│ Destination      │ Next Hop         │ Interface    │
+├──────────────────┼──────────────────┼──────────────┤
+│ 192.168.1.0/24   │ Directo          │ eth0         │
+│ 0.0.0.0/0        │ 85.23.45.1       │ eth1         │ ← Default route
+│ 10.0.0.0/8       │ 192.168.1.100    │ eth0         │
+└──────────────────┴──────────────────┴──────────────┘
+</code></pre>
+<blockquote>
+<p>[!tip] Default route (0.0.0.0/0)
+La ruta por defecto (0.0.0.0/0) se usa cuando no hay una ruta específica para el destino. Es la "ruta por defecto" que tu router usa para enviar tráfico a Internet.</p>
+</blockquote>
+<h3 id="arp-address-resolution-protocol"><a aria-hidden="true" tabindex="-1" href="#arp-address-resolution-protocol"><span class="icon icon-link"></span></a>ARP (Address Resolution Protocol)</h3>
+<p>ARP resuelve una <strong>IP → MAC address</strong> en la misma red local:</p>
+<pre><code>1. Tu PC necesita enviar un packet a 192.168.1.1 (router)
+2. Tu PC pregunta a toda la red: "¿Quién es 192.168.1.1? Dime tu MAC"
+   (ARP Request — broadcast)
+3. El router responde: "Soy yo, mi MAC es AA:BB:CC:DD:EE:FF"
+   (ARP Response — unicast)
+4. Tu PC guarda la respuesta en su cache ARP
+</code></pre>
+<blockquote>
+<p>[!warning] ARP spoofing
+ARP no tiene autenticación. Un atacante puede responder falsamente y decir "soy el router" (Man-in-the-Middle). Por eso ARP no debe usarse en redes que se conectan a Internet sin protección.</p>
+</blockquote>
+<h3 id="icmp-internet-control-message-protocol"><a aria-hidden="true" tabindex="-1" href="#icmp-internet-control-message-protocol"><span class="icon icon-link"></span></a>ICMP (Internet Control Message Protocol)</h3>
+<p>ICMP se usa para <strong>diagnóstico y reporting</strong> de errores:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ping: envía ICMP Echo Request y espera Echo Reply</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ping</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.8.8</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># PING 8.8.8.8 (8.8.8.8): 56 data bytes</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 64 bytes from 8.8.8.8: icmp_seq=0 ttl=115 time=12.345 ms</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Traceroute: usa ICMP Time Exceeded para ver cada hop</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">traceroute</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> google.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1  192.168.1.1     1.2 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2  10.0.0.1       15.3 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3  85.23.45.1     25.6 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4  93.184.216.34  45.8 ms</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># mtr: combina ping + traceroute en tiempo real</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">mtr</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> google.com</span></span></code></pre></figure>
+<h2 id="capa-2-enlace-de-datos"><a aria-hidden="true" tabindex="-1" href="#capa-2-enlace-de-datos"><span class="icon icon-link"></span></a>Capa 2: Enlace de datos</h2>
+<p>La capa de enlace se encarga de la <strong>comunicación entre dos dispositivos directamente conectados</strong> (mismo segmento de red). Usa <strong>MAC addresses</strong> para direccionamiento.</p>
+<p><strong>Responsabilidad:</strong> Transferir frames entre dos nodos adyacentes, detectar y opcionalmente corregir errores.</p>
+<h3 id="ethernet"><a aria-hidden="true" tabindex="-1" href="#ethernet"><span class="icon icon-link"></span></a>Ethernet</h3>
+<p>El estándar más común para redes cableadas:</p>
+<pre><code>┌─────────────────────────────────────────────────────────┐
+│                   Ethernet Frame                         │
+├────────────┬────────────┬────────────┬──────────────────┤
+│ Preamble   │ Dest MAC   │ Src MAC    │ Type/Length      │
+│ (8 bytes)  │ (6 bytes)  │ (6 bytes)  │ (2 bytes)        │
+├────────────┼────────────┼────────────┼──────────────────┤
+│                                          Payload (46-1500) │
+│                                          + FCS (4 bytes) │
+└────────────┴────────────┴────────────┴──────────────────┘
+</code></pre>
+<p><strong>Campos clave:</strong></p>
+<ul>
+<li><strong>Dest MAC</strong>: Dirección MAC de destino (6 bytes = 48 bits)</li>
+<li><strong>Src MAC</strong>: Dirección MAC de origen</li>
+<li><strong>Type</strong>: 0x0800 = IPv4, 0x86DD = IPv6, 0x8100 = VLAN tagged</li>
+<li><strong>FCS</strong>: Frame Check Sequence — detección de errores (CRC)</li>
+</ul>
+<h3 id="wifi-ieee-80211"><a aria-hidden="true" tabindex="-1" href="#wifi-ieee-80211"><span class="icon icon-link"></span></a>WiFi (IEEE 802.11)</h3>
+<p>WiFi es esencialmente Ethernet inalámbrico. Usa las mismas direcciones MAC pero con mecanismos adicionales:</p>
+<ul>
+<li><strong>CSMA/CA</strong>: Acceso múltiple con detección de portadora y evitación de colisiones</li>
+<li><strong>Handshakes de asociación</strong>: 4-way handshake para conexión segura (WPA2/WPA3)</li>
+<li><strong>Beacon frames</strong>: Los access points broadcastean su existencia</li>
+</ul>
+<h3 id="mac-address"><a aria-hidden="true" tabindex="-1" href="#mac-address"><span class="icon icon-link"></span></a>MAC Address</h3>
+<p>Una MAC address es una dirección única de 48 bits (6 bytes = 12 hexadecimales):</p>
+<pre><code>AA:BB:CC:DD:EE:FF
+│  │  │  │  │  │
+│  │  │  │  │  └─ Identificador único del dispositivo
+│  │  │  └─────── Identificador único del dispositivo
+│  │  └────────── Identificador único del dispositivo
+│  └───────────── OUI (Organizationally Unique Identifier) — fabricante
+└───────────────── OUI — fabricante
+
+Ejemplo:
+00:1A:2B:3C:4D:5E
+  │  │  │
+  │  │  └─ Fabricante: Cisco (OUI 00:1A:2B)
+  └─────── Identificador asignado por Cisco
+</code></pre>
+<blockquote>
+<p>[!tip] MAC address spoofing
+Puedes cambiar tu MAC address en Linux:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> link</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> address</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> AA:BB:CC:DD:EE:FF</span></span></code></pre></figure>
+<p>Sin embargo, esto solo afecta a la red local. Internet no conoce tu MAC.</p>
+</blockquote>
+<h2 id="capa-1-física"><a aria-hidden="true" tabindex="-1" href="#capa-1-física"><span class="icon icon-link"></span></a>Capa 1: Física</h2>
+<p>La capa física define cómo se transmiten los <strong>bits</strong> a través del medio físico: cables de cobre, fibra óptica, ondas de radio.</p>
+<p><strong>Responsabilidad:</strong> Transmitir bits crudos a través del medio físico.</p>
+<p><strong>Medios:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Medio</th>
+<th>Velocidad</th>
+<th>Distancia</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cobre (Cat5e/Cat6)</strong></td>
+<td>1-10 Gbps</td>
+<td>100m</td>
+<td>Ethernet tradicional</td>
+</tr>
+<tr>
+<td><strong>Fibra óptica</strong></td>
+<td>10-400 Gbps</td>
+<td>Km</td>
+<td>Luz a través de vidrio</td>
+</tr>
+<tr>
+<td><strong>WiFi (802.11ac/ax)</strong></td>
+<td>1-10 Gbps</td>
+<td>~50m</td>
+<td>Radiofrecuencia</td>
+</tr>
+<tr>
+<td><strong>Coaxial</strong></td>
+<td>1-10 Gbps</td>
+<td>500m</td>
+<td>Cable de TV/internet</td>
+</tr>
+<tr>
+<td><strong>Radio (5G/LTE)</strong></td>
+<td>100 Mbps - 1 Gbps</td>
+<td>Km</td>
+<td>Telecom</td>
+</tr>
+</tbody>
+</table>
+<h2 id="encapsulación-cómo-se-construye-un-packet"><a aria-hidden="true" tabindex="-1" href="#encapsulación-cómo-se-construye-un-packet"><span class="icon icon-link"></span></a>Encapsulación: cómo se construye un packet</h2>
+<p>Cuando envías una petición HTTP, los datos pasan por cada capa y cada una añade su header:</p>
+<pre><code>1. Tu aplicación genera datos HTTP:
+   "GET / HTTP/1.1\r\nHost: ejemplo.com\r\n\r\n"
+
+2. Capa de Transporte (TCP) añade header TCP:
+   [TCP header] + "GET / HTTP/1.1..."
+   El TCP asigna: src port (random), dst port (80), seq number, ACK
+
+3. Capa de Red (IP) añade header IP:
+   [IP header] + [TCP header] + "GET / HTTP/1.1..."
+   El IP asigna: src IP, dst IP, TTL
+
+4. Capa de Enlace (Ethernet) añade header y trailer:
+   [Ethernet header] + [IP header] + [TCP header] + datos + [FCS]
+   El Ethernet asigna: src MAC, dst MAC
+   El FCS calcula CRC para detección de errores
+
+5. Capa Física: convierte todo a bits (0s y 1s) y los envía por el cable
+</code></pre>
+<h3 id="tamaño-típico-de-headers"><a aria-hidden="true" tabindex="-1" href="#tamaño-típico-de-headers"><span class="icon icon-link"></span></a>Tamaño típico de headers</h3>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Header size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ethernet</td>
+<td>14 bytes + 4 bytes FCS</td>
+</tr>
+<tr>
+<td>IP (v4)</td>
+<td>20-60 bytes</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>20-60 bytes</td>
+</tr>
+<tr>
+<td><strong>Total overhead</strong></td>
+<td>~38-82 bytes por packet</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] MTU (Maximum Transmission Unit)
+El MTU máximo de Ethernet es <strong>1500 bytes</strong> (incluye header IP). Esto significa que el payload útil (datos) es máximo 1460 bytes (1500 - 20 bytes header IP).
+Si los datos exceden 1460 bytes, se fragmentan en múltiples packets.</p>
+</blockquote>
+<h2 id="tcpip-el-modelo-real"><a aria-hidden="true" tabindex="-1" href="#tcpip-el-modelo-real"><span class="icon icon-link"></span></a>TCP/IP: el modelo real</h2>
+<p>TCP/IP es el modelo que <strong>realmente se usa</strong> en Internet. Es más simple que OSI con solo 4 capas:</p>
+<table>
+<thead>
+<tr>
+<th>Modelo OSI (7 capas)</th>
+<th>Modelo TCP/IP (4 capas)</th>
+<th>Protocolos clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7. Aplicación</td>
+<td>4. Aplicación</td>
+<td>HTTP, DNS, SMTP, SSH, FTP, WebSocket</td>
+</tr>
+<tr>
+<td>6. Presentación</td>
+<td></td>
+<td>SSL/TLS, TLS, gzip</td>
+</tr>
+<tr>
+<td>5. Sesión</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. Transporte</td>
+<td>3. Transporte</td>
+<td>TCP, UDP, SCTP</td>
+</tr>
+<tr>
+<td>3. Red</td>
+<td>2. Internet</td>
+<td>IP, ICMP, ARP, IGMP</td>
+</tr>
+<tr>
+<td>2. Enlace de datos</td>
+<td>1. Acceso a red</td>
+<td>Ethernet, WiFi, PPP, ARP</td>
+</tr>
+<tr>
+<td>1. Física</td>
+<td></td>
+<td>Cables, fibra, radio</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] ¿Por qué dos modelos?</p>
+<ul>
+<li><strong>OSI</strong> es un modelo teórico de referencia — útil para entender y diagnosticar problemas</li>
+<li><strong>TCP/IP</strong> es el modelo implementado — es lo que realmente funciona en Internet</li>
+</ul>
+</blockquote>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>OSI tiene 7 capas, cada una con responsabilidades específicas</li>
+<li>TCP/IP tiene 4 capas y es el modelo real de Internet</li>
+<li>Capa 7 (Aplicación): HTTP, DNS, SMTP — lo que el usuario ve</li>
+<li>Capa 4 (Transporte): TCP (fiable) vs UDP (rápido)</li>
+<li>Capa 3 (Red): IP enrutamiento, ARP resolución, ICMP diagnóstico</li>
+<li>Capa 2 (Enlace): Ethernet, WiFi, MAC addresses</li>
+<li>Capa 1 (Física): cables, fibra, radio — bits crudos</li>
+<li>Los datos se encapsulan en cada capa: cada una añade su header</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Las capas de red son como una cadena de embalaje: cada capa envuelve los datos de la capa superior con su propio header. Para enviar un email, el SMTP (capa 7) envuelve el texto con un header TCP (capa 4), que envuelve el payload con un header IP (capa 3), que envuelve todo con un header Ethernet (capa 2).</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TCP vs UDP</td>
+<td>[[01-que-es-internet]] (capa de transporte)</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>[[16-routing-subnetting]] (routing, subnetting, CIDR)</td>
+</tr>
+<tr>
+<td>Firewalls</td>
+<td>[[17-firewalls-proxies-loadbalancers]]</td>
+</tr>
+<tr>
+<td>ARP</td>
+<td>[[12-puertos]] (MAC addresses)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

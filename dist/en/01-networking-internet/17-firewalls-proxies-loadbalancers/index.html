@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms</h1> <div class="article-body"><h1 id="firewalls-proxies-load-balancers-stateful-stateless-waf-reverse-proxy-load-balancing-algorithms"><a aria-hidden="true" tabindex="-1" href="#firewalls-proxies-load-balancers-stateful-stateless-waf-reverse-proxy-load-balancing-algorithms"><span class="icon icon-link"></span></a>Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms</h1>
+<blockquote>
+<p>[!tip] In a nutshell
+A <strong>firewall</strong> filters traffic by rules, a <strong>proxy</strong> acts as an intermediary, and a <strong>load balancer</strong> distributes traffic across multiple servers. They are complementary tools used together in modern architectures.</p>
+</blockquote>
+<h2 id="firewalls"><a aria-hidden="true" tabindex="-1" href="#firewalls"><span class="icon icon-link"></span></a>Firewalls</h2>
+<p>A firewall is a system that <strong>filters network traffic</strong> based on defined rules. It can be hardware, software, or a combination of both.</p>
+<h3 id="types-of-firewalls"><a aria-hidden="true" tabindex="-1" href="#types-of-firewalls"><span class="icon icon-link"></span></a>Types of firewalls</h3>
+<h4 id="stateless-firewall-packet-filtering"><a aria-hidden="true" tabindex="-1" href="#stateless-firewall-packet-filtering"><span class="icon icon-link"></span></a>Stateless firewall (packet filtering)</h4>
+<p>Reviews each packet individually without connection context:</p>
+<pre><code>Rule: Allow all TCP traffic to port 80
+Packet 1: SYN → 80 → ✓ Allowed
+Packet 2: ACK → 80 → ✓ Allowed
+Packet 3: SYN → 443 → ✗ Blocked
+
+Problem: Cannot distinguish between legitimate and illegitimate packets within the same rule
+</code></pre>
+<p><strong>Pros:</strong> Fast, simple.
+<strong>Cons:</strong> No context for existing connections.</p>
+<h4 id="stateful-firewall-connection-tracking"><a aria-hidden="true" tabindex="-1" href="#stateful-firewall-connection-tracking"><span class="icon icon-link"></span></a>Stateful firewall (connection tracking)</h4>
+<p>Tracks the state of each connection and makes decisions based on context:</p>
+<pre><code>Connection state table:
+  TCP 192.168.1.5:54321 → 93.184.216.34:80 → ESTABLISHED
+  TCP 192.168.1.6:54322 → 93.184.216.34:443 → ESTABLISHED
+
+Rule: Allow return traffic for established connections
+Packet from 93.184.216.34:80 → ✓ Allowed (in ESTABLISHED state)
+Packet from 93.184.216.34:80 → ✗ Blocked (no prior connection)
+</code></pre>
+<p><strong>Pros:</strong> Much more secure — blocks traffic that doesn't match a legitimate connection.
+<strong>Cons:</strong> More CPU usage, more complex.</p>
+<h4 id="application-layer-firewall-l7"><a aria-hidden="true" tabindex="-1" href="#application-layer-firewall-l7"><span class="icon icon-link"></span></a>Application-layer firewall (L7)</h4>
+<p>Inspects the content of packets at the application layer:</p>
+<pre><code>Rule: Block requests containing SQL injection patterns
+GET /users?id=1' OR '1'='1 → ✗ Blocked
+GET /users?id=42 → ✓ Allowed
+
+Rule: Block requests with known attack signatures
+POST /login Body: {"username": "&#x3C;script>alert(1)&#x3C;/script>"} → ✗ Blocked
+</code></pre>
+<h3 id="iptables-linux-firewall"><a aria-hidden="true" tabindex="-1" href="#iptables-linux-firewall"><span class="icon icon-link"></span></a>iptables (Linux firewall)</h3>
+<p><code>iptables</code> is the standard Linux firewall tool:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># View current rules</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -L</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Allow SSH from any IP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 22</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Allow HTTP and HTTPS from anywhere</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Allow return traffic for established connections</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> conntrack</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --ctstate</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ESTABLISHED,RELATED</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Drop all other incoming traffic</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DROP</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Allow outgoing traffic</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> OUTPUT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># NAT for outgoing traffic</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MASQUERADE</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Modern Linux uses nftables or firewall-d
+<code>iptables</code> is deprecated in favor of <code>nftables</code>. Most distributions provide <code>firewalld</code> or <code>ufw</code> as frontends.</p>
+</blockquote>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># UFW (Uncomplicated Firewall) - Ubuntu</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 22/tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Allow SSH</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 80/tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Allow HTTP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 443/tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # Allow HTTPS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Enable the firewall</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check status</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> verbose</span></span></code></pre></figure>
+<h3 id="cloud-firewall-security-groups--nacls"><a aria-hidden="true" tabindex="-1" href="#cloud-firewall-security-groups--nacls"><span class="icon icon-link"></span></a>Cloud firewall (Security Groups / NACLs)</h3>
+<p>Cloud providers offer firewall-like features:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>AWS</th>
+<th>GCP</th>
+<th>Azure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ingress rules</strong></td>
+<td>Security Groups</td>
+<td>Firewall rules</td>
+<td>NSG</td>
+</tr>
+<tr>
+<td><strong>Egress rules</strong></td>
+<td>Security Groups</td>
+<td>Firewall rules</td>
+<td>NSG</td>
+</tr>
+<tr>
+<td><strong>Stateful</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Level</strong></td>
+<td>Instance/ENI level</td>
+<td>VPC level</td>
+<td>Subnet/VNet level</td>
+</tr>
+<tr>
+<td><strong>WAF</strong></td>
+<td>AWS WAF</td>
+<td>Cloud Armor</td>
+<td>Application Gateway WAF</td>
+</tr>
+</tbody>
+</table>
+<pre><code>AWS Security Group (stateful, at instance level):
+
+Inbound:
+  Type    Protocol  Port  Source      Action
+  ──────────────────────────────────────────────
+  HTTP    TCP       80    0.0.0.0/0   Allow
+  HTTPS   TCP       443   0.0.0.0/0   Allow
+  SSH     TCP       22    10.0.0.0/8    Allow (only from VPN)
+  All     All       All   0.0.0.0/0   Deny (implicit)
+
+Outbound:
+  All traffic allowed by default (can restrict)
+</code></pre>
+<h2 id="waf-web-application-firewall"><a aria-hidden="true" tabindex="-1" href="#waf-web-application-firewall"><span class="icon icon-link"></span></a>WAF (Web Application Firewall)</h2>
+<p>A WAF filters <strong>HTTP/HTTPS traffic</strong> based on application-layer rules. It sits in front of web servers and blocks malicious requests.</p>
+<h3 id="waf-rules-types"><a aria-hidden="true" tabindex="-1" href="#waf-rules-types"><span class="icon icon-link"></span></a>WAF rules types</h3>
+<table>
+<thead>
+<tr>
+<th>Rule Type</th>
+<th>What it blocks</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SQL Injection</strong></td>
+<td>SQL injection attacks</td>
+<td><code>' OR 1=1--</code></td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Cross-site scripting</td>
+<td><code>&#x3C;script>alert(1)&#x3C;/script></code></td>
+</tr>
+<tr>
+<td><strong>Path traversal</strong></td>
+<td>Directory traversal</td>
+<td><code>../../etc/passwd</code></td>
+</tr>
+<tr>
+<td><strong>Command injection</strong></td>
+<td>OS command injection</td>
+<td><code>; rm -rf /</code></td>
+</tr>
+<tr>
+<td><strong>Rate limiting</strong></td>
+<td>Too many requests</td>
+<td>> 100 req/min per IP</td>
+</tr>
+<tr>
+<td><strong>Geo blocking</strong></td>
+<td>Requests from specific countries</td>
+<td>Block all traffic from Country X</td>
+</tr>
+<tr>
+<td><strong>Custom rules</strong></td>
+<td>Custom patterns</td>
+<td>Block <code>/wp-admin</code>, <code>/phpmyadmin</code></td>
+</tr>
+<tr>
+<td><strong>Bot management</strong></td>
+<td>Malicious bots</td>
+<td>Block scrapers, credential stuffing</td>
+</tr>
+</tbody>
+</table>
+<h3 id="waf-deployment-models"><a aria-hidden="true" tabindex="-1" href="#waf-deployment-models"><span class="icon icon-link"></span></a>WAF deployment models</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud-based</strong></td>
+<td>WAF hosted by a provider</td>
+<td>Cloudflare WAF, AWS WAF</td>
+</tr>
+<tr>
+<td><strong>Hardware</strong></td>
+<td>Physical appliance</td>
+<td>F5 BIG-IP ASM, Imperva</td>
+</tr>
+<tr>
+<td><strong>Software</strong></td>
+<td>Self-hosted software</td>
+<td>ModSecurity, OWASP Core Rule Set</td>
+</tr>
+<tr>
+<td><strong>SaaS</strong></td>
+<td>Software-as-a-Service</td>
+<td>ModSecurity Cloud</td>
+</tr>
+</tbody>
+</table>
+<h3 id="owasp-core-rule-set-crs"><a aria-hidden="true" tabindex="-1" href="#owasp-core-rule-set-crs"><span class="icon icon-link"></span></a>OWASP Core Rule Set (CRS)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="apache" data-theme="github-light github-dark"><code data-language="apache" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ModSecurity example rules</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">SecRule REQUEST_URI "@contains /wp-admin" "id:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1001</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,phase:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,deny,status:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">403</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,msg:'Block WordPress admin'"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">SecRule ARGS "@rx (\d+ OR </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)" "id:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1002</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,phase:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,deny,status:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">403</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,msg:'SQL Injection attempt'"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">SecRule ARGS "@rx (&#x3C;script|javascript:)" "id:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1003</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,phase:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,deny,status:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">403</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,msg:'XSS attempt'"</span></span></code></pre></figure>
+<h2 id="proxies"><a aria-hidden="true" tabindex="-1" href="#proxies"><span class="icon icon-link"></span></a>Proxies</h2>
+<p>A <strong>proxy</strong> is an intermediary that sits between clients and servers.</p>
+<h3 id="forward-proxy"><a aria-hidden="true" tabindex="-1" href="#forward-proxy"><span class="icon icon-link"></span></a>Forward proxy</h3>
+<p>Acts on behalf of clients (used within an organization or by individual users):</p>
+<pre><code>Client → Forward Proxy → Internet → Server
+    (encrypts)  (filters)  (anonymous)  (sees proxy)
+
+Use cases:
+  - Corporate proxy: Filter and monitor employee traffic
+  - VPN proxy: Route traffic through a different location
+  - Caching proxy: Cache frequently accessed content
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configure curl to use a forward proxy</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> http_proxy</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://proxy.corporate.com:8080</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> https_proxy</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://proxy.corporate.com:8080</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Traffic goes through proxy.corporate.com:8080</span></span></code></pre></figure>
+<h3 id="reverse-proxy"><a aria-hidden="true" tabindex="-1" href="#reverse-proxy"><span class="icon icon-link"></span></a>Reverse proxy</h3>
+<p>Acts on behalf of servers (sits in front of web servers):</p>
+<pre><code>Internet → Reverse Proxy → Internal Server(s)
+    (filters)  (routes)     (sees proxy)
+
+Use cases:
+  - SSL termination: Decrypt HTTPS traffic
+  - Load balancing: Distribute traffic across multiple servers
+  - Caching: Serve cached content
+  - WAF: Filter malicious requests
+  - Compression: Compress responses
+</code></pre>
+<pre><code>                    Reverse Proxy (Nginx)
+                    ┌─────────────────────┐
+                    │                     │
+  Internet ────────→│  SSL Termination    │
+                    │  Load Balancing     │──→ Server 1 (app.example.com)
+                    │  Caching            │──→ Server 2 (api.example.com)
+                    │  Compression        │──→ Server 3 (static.example.com)
+                    │  WAF                │
+                    └─────────────────────┘
+</code></pre>
+<h3 id="nginx-as-reverse-proxy"><a aria-hidden="true" tabindex="-1" href="#nginx-as-reverse-proxy"><span class="icon icon-link"></span></a>Nginx as reverse proxy</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/app.example.com/fullchain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/app.example.com/privkey.pem;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://127.0.0.1:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-For $proxy_add_x_forwarded_for;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-Proto $scheme;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Timeouts</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_connect_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">60s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_read_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">60s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_send_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">60s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h2 id="load-balancers"><a aria-hidden="true" tabindex="-1" href="#load-balancers"><span class="icon icon-link"></span></a>Load Balancers</h2>
+<p>A <strong>load balancer</strong> distributes incoming traffic across multiple servers to ensure no single server is overwhelmed.</p>
+<h3 id="layer-4-vs-layer-7-load-balancing"><a aria-hidden="true" tabindex="-1" href="#layer-4-vs-layer-7-load-balancing"><span class="icon icon-link"></span></a>Layer 4 vs Layer 7 load balancing</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>L4 (Transport)</th>
+<th>L7 (Application)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Works at</strong></td>
+<td>TCP/UDP level</td>
+<td>HTTP/HTTPS level</td>
+</tr>
+<tr>
+<td><strong>Routing based on</strong></td>
+<td>IP + Port</td>
+<td>URL path, headers, cookies</td>
+</tr>
+<tr>
+<td><strong>SSL termination</strong></td>
+<td>Passthrough</td>
+<td>Decrypt and re-encrypt</td>
+</tr>
+<tr>
+<td><strong>Content inspection</strong></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Faster (less processing)</td>
+<td>Slower (more processing)</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>TCP services (SSH, game servers)</td>
+<td>Web traffic, APIs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="load-balancing-algorithms"><a aria-hidden="true" tabindex="-1" href="#load-balancing-algorithms"><span class="icon icon-link"></span></a>Load balancing algorithms</h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Description</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Round Robin</strong></td>
+<td>Distribute equally in order</td>
+<td>Equal-capacity servers</td>
+</tr>
+<tr>
+<td><strong>Least Connections</strong></td>
+<td>Send to server with fewest active connections</td>
+<td>Varying request lengths</td>
+</tr>
+<tr>
+<td><strong>Least Response Time</strong></td>
+<td>Send to fastest server</td>
+<td>Variable response times</td>
+</tr>
+<tr>
+<td><strong>IP Hash</strong></td>
+<td>Hash of client IP determines server</td>
+<td>Session persistence</td>
+</tr>
+<tr>
+<td><strong>Random</strong></td>
+<td>Random server selection</td>
+<td>Simple scenarios</td>
+</tr>
+<tr>
+<td><strong>Weighted Round Robin</strong></td>
+<td>Servers get traffic proportional to weight</td>
+<td>Mixed-capacity servers</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Round Robin:
+  Server 1, Server 2, Server 3, Server 1, Server 2, Server 3...
+
+Least Connections:
+  Server 1: 5 active connections
+  Server 2: 15 active connections
+  Server 3: 8 active connections
+  → New request → Server 1 (fewest connections)
+
+Weighted Round Robin:
+  Server 1 (weight 3): ──┐
+  Server 2 (weight 1): ──┼── 1,1,1,2,3,3,3,1,1,1,2...
+  Server 3 (weight 2): ──┘
+  → Server 1 gets 3x traffic, Server 2 gets 1x, Server 3 gets 2x
+</code></pre>
+<h3 id="load-balancer-in-practice-nginx-upstream"><a aria-hidden="true" tabindex="-1" href="#load-balancer-in-practice-nginx-upstream"><span class="icon icon-link"></span></a>Load balancer in practice (Nginx upstream)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">upstream</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> web_servers </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    least_conn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Use least connections algorithm</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 192.168.1.10:3000 </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">weight</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    server 192.168.1.11:3000 </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">weight</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    server 192.168.1.12:3000 backup;  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Only used if primary servers are down</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://web_servers;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="health-checks"><a aria-hidden="true" tabindex="-1" href="#health-checks"><span class="icon icon-link"></span></a>Health checks</h3>
+<p>Load balancers perform health checks to detect and remove unhealthy servers:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">upstream</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> web_servers </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 192.168.1.10:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 192.168.1.11:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 192.168.1.12:3000;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Health check (requires nginx plus or open source module)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Health checks every 5 seconds, mark as down after 3 failures</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># AWS ALB health check configuration</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Path: /health</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Port: 8080</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Interval: 30 seconds</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Healthy threshold: 3</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Unhealthy threshold: 2</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Timeout: 5 seconds</span></span></code></pre></figure>
+<h2 id="comparison-firewall-vs-proxy-vs-load-balancer"><a aria-hidden="true" tabindex="-1" href="#comparison-firewall-vs-proxy-vs-load-balancer"><span class="icon icon-link"></span></a>Comparison: Firewall vs Proxy vs Load Balancer</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Firewall</th>
+<th>Proxy</th>
+<th>Load Balancer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Primary function</strong></td>
+<td>Filter traffic</td>
+<td>Intermediary</td>
+<td>Distribute traffic</td>
+</tr>
+<tr>
+<td><strong>Direction</strong></td>
+<td>Inbound/Outbound</td>
+<td>Client→Server or Server→Client</td>
+<td>Server→Server</td>
+</tr>
+<tr>
+<td><strong>Level</strong></td>
+<td>L3/L4 or L7</td>
+<td>L4 or L7</td>
+<td>L4 or L7</td>
+</tr>
+<tr>
+<td><strong>SSL termination</strong></td>
+<td>No</td>
+<td>Yes (reverse proxy)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Caching</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes (sometimes)</td>
+</tr>
+<tr>
+<td><strong>Load distribution</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Best used with</strong></td>
+<td>Everything</td>
+<td>Web servers</td>
+<td>Web servers, APIs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloudflare WAF</td>
+<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+</tr>
+<tr>
+<td>Reverse proxy</td>
+<td>[[14-servers-processes]]</td>
+</tr>
+<tr>
+<td>Ports and networking</td>
+<td>[[12-ports]], [[13-nat]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>Firewalls</strong> filter traffic by rules: stateless (no context), stateful (connection tracking), and application-layer (content inspection).</li>
+<li><strong>WAF</strong> specifically filters HTTP traffic to block web application attacks (SQL injection, XSS, etc.).</li>
+<li><strong>Forward proxies</strong> act on behalf of clients; <strong>reverse proxies</strong> act on behalf of servers.</li>
+<li><strong>Load balancers</strong> distribute traffic across servers to improve availability and performance.</li>
+<li><strong>L4 load balancing</strong> routes by IP/port; <strong>L7 load balancing</strong> routes by HTTP headers, paths, and cookies.</li>
+<li>Health checks are essential to remove unhealthy servers from the pool.</li>
+<li>Use firewalls for security, proxies for intermediary functions, and load balancers for distribution.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Firewalls, proxies, and load balancers are complementary tools. A typical modern stack uses all three: a firewall for network security, a reverse proxy for SSL termination and caching, and a load balancer for distributing traffic across multiple application servers.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

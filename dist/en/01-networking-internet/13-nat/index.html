@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding</h1> <div class="article-body"><h1 id="nat-network-address-translation--snat-dnat-masquerading-port-forwarding"><a aria-hidden="true" tabindex="-1" href="#nat-network-address-translation--snat-dnat-masquerading-port-forwarding"><span class="icon icon-link"></span></a>NAT: Network Address Translation — SNAT, DNAT, Masquerading, Port Forwarding</h1>
+<blockquote>
+<p>[!tip] NAT in a nutshell
+NAT (Network Address Translation) allows multiple devices on a private network to share a single public IP address. It translates between private IP addresses (192.168.x.x) and public IP addresses, enabling devices to communicate with the Internet while remaining hidden.</p>
+</blockquote>
+<h2 id="what-is-nat"><a aria-hidden="true" tabindex="-1" href="#what-is-nat"><span class="icon icon-link"></span></a>What is NAT?</h2>
+<p><strong>NAT (Network Address Translation)</strong> is a technique that modifies IP address information in packet headers while in transit. It allows devices with private IP addresses to communicate with the Internet using a single public IP address.</p>
+<h3 id="why-nat-exists"><a aria-hidden="true" tabindex="-1" href="#why-nat-exists"><span class="icon icon-link"></span></a>Why NAT exists</h3>
+<pre><code>Problem: IPv4 addresses are limited (~4.3 billion)
+Solution: Use private addresses internally, translate to public addresses at the gateway
+
+Private addresses (not routable on the Internet):
+  10.0.0.0/8        → Large organizations
+  172.16.0.0/12     → Medium organizations
+  192.168.0.0/16    → Home networks
+
+Public addresses (routable on the Internet):
+  Assigned by ISPs to routers/gateways
+</code></pre>
+<h3 id="your-home-router-is-a-nat-device"><a aria-hidden="true" tabindex="-1" href="#your-home-router-is-a-nat-device"><span class="icon icon-link"></span></a>Your home router IS a NAT device</h3>
+<pre><code>Your home network:
+┌─────────────────────────────────────┐
+│  Router (Public IP: 203.0.113.5)    │  ← NAT gateway
+│                                     │
+│  LAN: 192.168.1.1                   │
+│                                     │
+│  Device 1: 192.168.1.5 (your PC)    │
+│  Device 2: 192.168.1.6 (your phone) │
+│  Device 3: 192.168.1.7 (your TV)    │
+│                                     │
+│  All three share the public IP      │
+│  203.0.113.5                        │
+└─────────────────────────────────────┘
+
+When your PC sends a request to Google:
+  Source: 192.168.1.5:54321 → Google: 142.250.185.206:443
+  Router translates: 203.0.113.5:12345 → Google: 142.250.185.206:443
+
+When Google responds:
+  Google → Router: 142.250.185.206:443 → 203.0.113.5:12345
+  Router translates back: 142.250.185.206:443 → 192.168.1.5:54321
+</code></pre>
+<h2 id="types-of-nat"><a aria-hidden="true" tabindex="-1" href="#types-of-nat"><span class="icon icon-link"></span></a>Types of NAT</h2>
+<h3 id="snat-source-nat"><a aria-hidden="true" tabindex="-1" href="#snat-source-nat"><span class="icon icon-link"></span></a>SNAT (Source NAT)</h3>
+<p>SNAT changes the <strong>source IP address</strong> of outgoing packets. This is the most common type — it is what your home router does.</p>
+<pre><code>Inside network          NAT gateway         Internet
+                          (Public: 203.0.113.5)
+   192.168.1.5:54321 ──→ │                  │
+   192.168.1.6:54322 ──→ │  SNAT:           │
+   192.168.1.7:54323 ──→ │  src IP:         │
+                          │  203.0.113.5     │──→ 142.250.185.206:443
+                          │  src port:       │
+                          │  12345           │
+
+Google sees: 203.0.113.5:12345 → 142.250.185.206:443
+Google doesn't know about 192.168.1.5, .6, .7
+
+Return traffic:
+  142.250.185.206:443 → 203.0.113.5:12345
+  NAT translates:     → 192.168.1.5:54321
+</code></pre>
+<h3 id="dnat-destination-nat"><a aria-hidden="true" tabindex="-1" href="#dnat-destination-nat"><span class="icon icon-link"></span></a>DNAT (Destination NAT)</h3>
+<p>DNAT changes the <strong>destination IP address</strong> of incoming packets. This is used for port forwarding and load balancing.</p>
+<pre><code>Internet                    NAT gateway            Inside network
+                            (Public: 203.0.113.5)
+                              │
+    Web request:              │  DNAT: dst IP:
+    ─────────────→ 203.0.113.5:80 │  192.168.1.10:80
+                              │
+                              ▼
+                          192.168.1.10:80 (Web server)
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># iptables DNAT example</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PREROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DNAT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --to-destination</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.10:80</span></span></code></pre></figure>
+<h3 id="pat-port-address-translation--nat-overload"><a aria-hidden="true" tabindex="-1" href="#pat-port-address-translation--nat-overload"><span class="icon icon-link"></span></a>PAT (Port Address Translation) / NAT Overload</h3>
+<p>PAT is a form of SNAT that also translates <strong>port numbers</strong>, allowing many private IPs to share one public IP simultaneously.</p>
+<pre><code>Multiple devices → Same public IP, different ports:
+
+  192.168.1.5:54321  → 203.0.113.5:1024  → external server A
+  192.168.1.5:54322  → 203.0.113.5:1025  → external server B
+  192.168.1.6:54323  → 203.0.113.5:1024  → external server A  ← Same port as above!
+  192.168.1.6:54324  → 203.0.113.5:1026  → external server C
+</code></pre>
+<h2 id="nat-types-compared"><a aria-hidden="true" tabindex="-1" href="#nat-types-compared"><span class="icon icon-link"></span></a>NAT types compared</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>What it changes</th>
+<th>Direction</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SNAT</strong></td>
+<td>Source IP (and optionally port)</td>
+<td>Outgoing</td>
+<td>Home router, many-to-one</td>
+</tr>
+<tr>
+<td><strong>DNAT</strong></td>
+<td>Destination IP (and optionally port)</td>
+<td>Incoming</td>
+<td>Port forwarding, load balancing</td>
+</tr>
+<tr>
+<td><strong>PAT</strong></td>
+<td>Source IP + Source port</td>
+<td>Outgoing</td>
+<td>Multiple devices sharing one IP</td>
+</tr>
+<tr>
+<td><strong>Masquerade</strong></td>
+<td>Source IP to interface IP</td>
+<td>Outgoing</td>
+<td>Dynamic public IPs (DSL, mobile)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="masquerading"><a aria-hidden="true" tabindex="-1" href="#masquerading"><span class="icon icon-link"></span></a>Masquerading</h2>
+<p><strong>Masquerading</strong> is a special form of SNAT that automatically uses the IP address of the outgoing network interface. This is useful when the public IP address changes (e.g., DSL lines, mobile connections).</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># iptables masquerade (Linux)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MASQUERADE</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># This is equivalent to:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># sudo iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to-source &#x3C;dynamic-IP></span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># But MASQUERADE adapts automatically when the IP changes.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nftables equivalent</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nft</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rule</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postrouting</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> oifname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> masquerade</span></span></code></pre></figure>
+<h3 id="masquerade-vs-snat"><a aria-hidden="true" tabindex="-1" href="#masquerade-vs-snat"><span class="icon icon-link"></span></a>Masquerade vs SNAT</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>SNAT</th>
+<th>MASQUERADE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IP address</strong></td>
+<td>Static, must be specified</td>
+<td>Dynamic, reads from interface</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Slightly faster (cached IP)</td>
+<td>Slightly slower (reads IP each time)</td>
+</tr>
+<tr>
+<td><strong>Use when</strong></td>
+<td>Public IP is static</td>
+<td>Public IP is dynamic (DHCP, PPPoE)</td>
+</tr>
+<tr>
+<td><strong>Typical use</strong></td>
+<td>Data center servers</td>
+<td>Home routers, mobile gateways</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] In modern data centers, the difference is negligible. Use SNAT for static IPs and MASQUERADE for dynamic ones.</p>
+</blockquote>
+<h2 id="port-forwarding"><a aria-hidden="true" tabindex="-1" href="#port-forwarding"><span class="icon icon-link"></span></a>Port Forwarding</h2>
+<p>Port forwarding is a form of DNAT that maps a specific port on the public IP to a specific internal IP and port.</p>
+<h3 id="how-port-forwarding-works"><a aria-hidden="true" tabindex="-1" href="#how-port-forwarding-works"><span class="icon icon-link"></span></a>How port forwarding works</h3>
+<pre><code>Internet:
+  Request → 203.0.113.5:80
+
+Router port forwarding rule:
+  Port 80  → 192.168.1.10:80 (web server)
+  Port 22  → 192.168.1.10:22 (SSH)
+  Port 3000 → 192.168.1.20:3000 (Node.js app)
+
+Inside network:
+  192.168.1.10 → Nginx (port 80)
+  192.168.1.20 → Node.js app (port 3000)
+  192.168.1.30 → Database (port 5432, NOT forwarded!)
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># iptables port forwarding</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PREROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DNAT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --to-destination</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.10:80</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PREROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 22</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DNAT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --to-destination</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.10:22</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Don't forget to enable forwarding!</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sysctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> net.ipv4.ip_forward=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Persist: echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># And allow the traffic through the filter table</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> FORWARD</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.10</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> FORWARD</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.10</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 22</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span></code></pre></figure>
+<h3 id="nginx-reverse-proxy-application-level-forwarding"><a aria-hidden="true" tabindex="-1" href="#nginx-reverse-proxy-application-level-forwarding"><span class="icon icon-link"></span></a>Nginx reverse proxy (application-level forwarding)</h3>
+<p>Instead of port forwarding at the network level, you can use Nginx as a reverse proxy:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Single public IP, multiple services on one port (443)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/app.example.com/fullchain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/app.example.com/privkey.pem;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://192.168.1.20:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">api.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/api.example.com/fullchain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/api.example.com/privkey.pem;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://192.168.1.21:8080;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Reverse proxy vs port forwarding</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Port Forwarding (DNAT)</th>
+<th>Reverse Proxy (Nginx)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level</strong></td>
+<td>Network (L4)</td>
+<td>Application (L7)</td>
+</tr>
+<tr>
+<td><strong>Routing by</strong></td>
+<td>Port number</td>
+<td>Domain name + path</td>
+</tr>
+<tr>
+<td><strong>SSL/TLS</strong></td>
+<td>Not terminated at proxy</td>
+<td>Terminated at proxy</td>
+</tr>
+<tr>
+<td><strong>Multiple services</strong></td>
+<td>Need different ports</td>
+<td>Same port, different domains</td>
+</tr>
+<tr>
+<td><strong>Recommended for</strong></td>
+<td>SSH, databases (with VPN)</td>
+<td>Web services, APIs</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h2 id="nat-traversal"><a aria-hidden="true" tabindex="-1" href="#nat-traversal"><span class="icon icon-link"></span></a>NAT Traversal</h2>
+<h3 id="the-problem"><a aria-hidden="true" tabindex="-1" href="#the-problem"><span class="icon icon-link"></span></a>The problem</h3>
+<p>Since NAT hides internal devices, external devices cannot initiate connections to them:</p>
+<pre><code>  Client (Public IP) ──→ Server (Public IP, 443)  ✓ Easy (outgoing connection)
+  Client (Public IP) ──→ Internal Server (192.168.1.10, 80)  ✗ Blocked (no port forwarding)
+</code></pre>
+<h3 id="nat-hole-punching"><a aria-hidden="true" tabindex="-1" href="#nat-hole-punching"><span class="icon icon-link"></span></a>NAT hole punching</h3>
+<p>For peer-to-peer communication through NAT:</p>
+<pre><code>  Client A (behind NAT A)    Client B (behind NAT B)
+  
+  1. Both connect to a public signaling server
+  2. Signaling server learns A's public IP:port and B's public IP:port
+  3. Signaling server tells A about B and B about A
+  4. A and B try to connect directly to each other's public IPs
+  5. If NATs allow it → direct P2P connection established!
+</code></pre>
+<h3 id="stun-turn-and-ice"><a aria-hidden="true" tabindex="-1" href="#stun-turn-and-ice"><span class="icon icon-link"></span></a>STUN, TURN, and ICE</h3>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Purpose</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STUN</strong></td>
+<td>Learn public IP and port</td>
+<td>WebRTC, video calls</td>
+</tr>
+<tr>
+<td><strong>TURN</strong></td>
+<td>Relay traffic when direct connection fails</td>
+<td>When NAT blocks direct P2P</td>
+</tr>
+<tr>
+<td><strong>ICE</strong></td>
+<td>Framework that tries STUN first, falls back to TURN</td>
+<td>WebRTC connection establishment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nat-in-cloud-environments"><a aria-hidden="true" tabindex="-1" href="#nat-in-cloud-environments"><span class="icon icon-link"></span></a>NAT in cloud environments</h2>
+<h3 id="aws-vpc-and-nat"><a aria-hidden="true" tabindex="-1" href="#aws-vpc-and-nat"><span class="icon icon-link"></span></a>AWS VPC and NAT</h3>
+<pre><code>Public Subnet                    Private Subnet
+┌─────────────────────┐         ┌─────────────────────┐
+│ EC2 Instance        │         │ EC2 Instance (DB)   │
+│ Public IP           │         │ Private IP          │
+│ NAT Gateway ──────→ Internet  │                     │
+│ (manages outgoing   │         │ ← No direct access  │
+│  traffic only)      │         │  from Internet      │
+└─────────────────────┘         └─────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># AWS NAT Instance (alternative to NAT Gateway)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Run on an EC2 instance with two network interfaces</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MASQUERADE</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sysctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> net.ipv4.ip_forward=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># AWS NAT Gateway (managed service, recommended)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># AWS manages the NAT. You just configure the route tables.</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Private subnet route table:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   0.0.0.0/0 → NAT Gateway (nat-xxxxx)</span></span></code></pre></figure>
+<h3 id="cloudflare-as-nat-for-your-origin"><a aria-hidden="true" tabindex="-1" href="#cloudflare-as-nat-for-your-origin"><span class="icon icon-link"></span></a>Cloudflare as NAT for your origin</h3>
+<p>Cloudflare effectively acts as a NAT:</p>
+<pre><code>Internet → Cloudflare (198.51.100.1) → Your Origin (192.168.1.10)
+
+Cloudflare:
+  Listens on public IPs: 198.51.100.1
+  Forwards traffic to: 192.168.1.10 (your private origin)
+  Origin IP is hidden from the Internet
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verify your origin IP is hidden</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -I</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://yourdomain.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Server: cloudflare</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cloudflare's IP is visible, not yours</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Use CF-Connecting-IP header to get the real client IP</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cloudflare adds this header to forwarded requests</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># X-Forwarded-For contains the original client IP</span></span></code></pre></figure>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPv4 vs IPv6</td>
+<td>[[12-ports]]</td>
+</tr>
+<tr>
+<td>Routing</td>
+<td>[[16-routing-subnetting]]</td>
+</tr>
+<tr>
+<td>Cloudflare</td>
+<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+</tr>
+<tr>
+<td>Ports</td>
+<td>[[12-ports]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>NAT</strong> translates between private and public IP addresses, enabling multiple devices to share one public IP.</li>
+<li><strong>SNAT</strong> modifies the source IP (outgoing traffic). <strong>DNAT</strong> modifies the destination IP (incoming traffic).</li>
+<li><strong>PAT</strong> (Port Address Translation) also translates source ports, allowing many-to-one mapping.</li>
+<li><strong>Masquerading</strong> is SNAT with a dynamic IP — useful for changing public IPs (DSL, mobile).</li>
+<li><strong>Port forwarding</strong> (DNAT) maps external ports to internal services.</li>
+<li><strong>Reverse proxy</strong> (Nginx) is preferred over port forwarding for web services — it routes by domain name, not just port.</li>
+<li><strong>Cloudflare</strong> acts as a reverse proxy + NAT, hiding your origin IP from the Internet.</li>
+<li>Always use a firewall to control what traffic reaches your internal services.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+NAT is the reason your home network works. It is also why external devices cannot reach your internal services without port forwarding. Understanding NAT is essential for network debugging, server configuration, and understanding cloud networking.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

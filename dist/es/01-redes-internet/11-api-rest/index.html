@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">APIs REST: principios, recursos y HATEOAS</h1> <div class="article-body"><h1 id="rest-todo-sobre-apis-rest"><a aria-hidden="true" tabindex="-1" href="#rest-todo-sobre-apis-rest"><span class="icon icon-link"></span></a>REST: Todo sobre APIs REST</h1>
+<blockquote>
+<p>[!tip] REST en una frase
+REST es un <strong>estilo de arquitectura</strong> para diseñar APIs web que usan HTTP como protocolo, con recursos identificables por URLs, métodos HTTP semánticos y respuestas en formato JSON.</p>
+</blockquote>
+<h2 id="qué-es-rest"><a aria-hidden="true" tabindex="-1" href="#qué-es-rest"><span class="icon icon-link"></span></a>¿Qué es REST?</h2>
+<p>REST (Representational State Transfer) es un conjunto de <strong>principios</strong> (no un protocolo) propuesto por Roy Fielding en 2000. Define cómo diseñar servicios web que sean:</p>
+<ul>
+<li><strong>Escalables</strong>: El servidor puede manejar miles de peticiones sin colapsar</li>
+<li><strong>Stateless</strong>: Cada petición contiene toda la información necesaria</li>
+<li><strong>Interoperable</strong>: Cualquier cliente (navegador, móvil, IoT) puede hablar con cualquier servidor</li>
+<li><strong>Capas</strong>: Se pueden interponer proxies y caches entre cliente y servidor</li>
+</ul>
+<h3 id="los-6-principios-de-rest"><a aria-hidden="true" tabindex="-1" href="#los-6-principios-de-rest"><span class="icon icon-link"></span></a>Los 6 principios de REST</h3>
+<table>
+<thead>
+<tr>
+<th>Principio</th>
+<th>Descripción</th>
+<th>¿Importante?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Cliente-servidor</strong></td>
+<td>Separación clara entre interfaz y datos</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td><strong>2. Stateless</strong></td>
+<td>Cada petición es independiente</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td><strong>3. Cacheable</strong></td>
+<td>Las respuestas pueden cachearse</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td><strong>4. Interfaz uniforme</strong></td>
+<td>4 restricciones: recursos, representación, auto-descripción, HATEOAS</td>
+<td>✅✅ Siempre</td>
+</tr>
+<tr>
+<td><strong>5. Capas</strong></td>
+<td>Arquitectura en capas (proxy, load balancer)</td>
+<td>✅ Siempre</td>
+</tr>
+<tr>
+<td><strong>6. Código bajo demanda</strong></td>
+<td>Opcional: el servidor puede enviar código ejecutable</td>
+<td>❌ Raro de usar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rest-es-un-estilo-no-una-norma"><a aria-hidden="true" tabindex="-1" href="#rest-es-un-estilo-no-una-norma"><span class="icon icon-link"></span></a>REST es un estilo, no una norma</h3>
+<blockquote>
+<p>[!warning] "REST" es mal usado
+Muchas APIs que se llaman "REST" no son realmente RESTful. Lo común hoy en día es una API HTTP con JSON que usa métodos y status codes correctamente. Eso es lo que vamos a cubrir.</p>
+</blockquote>
+<p><strong>De lo que NO trata REST:</strong></p>
+<ul>
+<li>No es un protocolo</li>
+<li>No requiere XML (aunque se podía)</li>
+<li>No requiere HATEOAS</li>
+<li>No requiere verbos custom</li>
+</ul>
+<h2 id="recursos-y-urls"><a aria-hidden="true" tabindex="-1" href="#recursos-y-urls"><span class="icon icon-link"></span></a>Recursos y URLs</h2>
+<p>En REST, <strong>todo es un recurso</strong>. Un recurso es cualquier cosa que quieras exponer: usuarios, productos, artículos, etc.</p>
+<h3 id="principio-de-urls"><a aria-hidden="true" tabindex="-1" href="#principio-de-urls"><span class="icon icon-link"></span></a>Principio de URLs</h3>
+<pre><code># Colección → GET /recursos (lista todos)
+GET    /users        → Lista todos los usuarios (200)
+POST   /users        → Crea un usuario (201)
+
+# Recurso individual → GET /recursos/:id
+GET    /users/42     → Obtiene el usuario con ID 42 (200)
+PUT    /users/42     → Reemplaza el usuario 42 (200)
+PATCH  /users/42     │ Actualiza parcialmente el usuario 42 (200)
+DELETE /users/42     │ Elimina el usuario 42 (204)
+
+# Recursos anidados → /padre/:id/hijo
+GET    /users/42/posts     → Posts del usuario 42
+POST   /users/42/posts     → Crea un post para el usuario 42
+GET    /users/42/posts/7   → El post 7 del usuario 42
+
+# Filtrado, paginación, ordenación
+GET    /users?role=admin&#x26;status=active
+GET    /users?page=2&#x26;limit=20
+GET    /users?sort=-created_at    # - para descendente
+</code></pre>
+<blockquote>
+<p>[!tip] URLs deben ser sustantivos, no verbos</p>
+<pre><code></code></pre>
+</blockquote>
+<h1 id="malo-verbos-en-la-url"><a aria-hidden="true" tabindex="-1" href="#malo-verbos-en-la-url"><span class="icon icon-link"></span></a>MALO: verbos en la URL</h1>
+<p>GET /getUsers
+POST /createUser
+DELETE /deleteUser/42</p>
+<h1 id="bueno-recursos--métodos-http"><a aria-hidden="true" tabindex="-1" href="#bueno-recursos--métodos-http"><span class="icon icon-link"></span></a>BUENO: recursos + métodos HTTP</h1>
+<p>GET    /users
+POST   /users
+DELETE /users/42</p>
+<pre><code>
+### Recursos vs acciones
+
+</code></pre>
+<h1 id="malo-acción-en-la-url"><a aria-hidden="true" tabindex="-1" href="#malo-acción-en-la-url"><span class="icon icon-link"></span></a>MALO: acción en la URL</h1>
+<p>POST /users/42/disable
+POST /users/42/enable</p>
+<h1 id="bueno-patch-con-campo-de-estado"><a aria-hidden="true" tabindex="-1" href="#bueno-patch-con-campo-de-estado"><span class="icon icon-link"></span></a>BUENO: PATCH con campo de estado</h1>
+<p>PATCH /users/42
+{ "status": "disabled" }</p>
+<h1 id="malo-acción-en-la-url-1"><a aria-hidden="true" tabindex="-1" href="#malo-acción-en-la-url-1"><span class="icon icon-link"></span></a>MALO: acción en la URL</h1>
+<p>POST /posts/7/comments</p>
+<h1 id="bueno-recurso-anidado"><a aria-hidden="true" tabindex="-1" href="#bueno-recurso-anidado"><span class="icon icon-link"></span></a>BUENO: recurso anidado</h1>
+<p>POST /posts/7/comments</p>
+<pre><code>
+> [!caution] Anidación profunda
+> ```
+# MALO: 3 niveles de anidación
+GET /users/42/posts/7/comments/15/replies
+
+# BUENO: máximo 1-2 niveles, o IDs directos
+GET /comments/15/replies
+GET /replies?comment_id=15
+</code></pre>
+<h2 id="métodos-http-semánticos"><a aria-hidden="true" tabindex="-1" href="#métodos-http-semánticos"><span class="icon icon-link"></span></a>Métodos HTTP semánticos</h2>
+<p>Cada método tiene un significado específico. Úsalos correctamente:</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Usar para</th>
+<th>Idempotente</th>
+<th>Seguro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GET</strong></td>
+<td>Leer recursos</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>POST</strong></td>
+<td>Crear recursos, ejecutar acciones</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>PUT</strong></td>
+<td>Reemplazar recurso completo</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong></td>
+<td>Actualización parcial</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td><strong>DELETE</strong></td>
+<td>Eliminar recurso</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-para-acciones"><a aria-hidden="true" tabindex="-1" href="#post-para-acciones"><span class="icon icon-link"></span></a>POST para acciones</h3>
+<p>POST no es solo para crear recursos. Úsalo para acciones que no encajan en CRUD:</p>
+<pre><code># Acciones que no son CRUD
+POST /users/42/reset-password
+POST /sessions          → Login (crea una sesión)
+POST /payments/process  → Procesar pago
+POST /export/pdf        → Generar PDF
+
+# Pero si la acción es un recurso en sí mismo, usa POST al recurso:
+POST /payments          → Crea un nuevo pago
+</code></pre>
+<blockquote>
+<p>[!tip] ¿Cuándo crear un recurso vs ejecutar una acción?
+Si la acción tiene un ID, tiene historial, o puedes listar múltiples, es un recurso:</p>
+<ul>
+<li>"Hacer un pago" → <code>POST /payments</code> (sí, es recurso)</li>
+<li>"Resetear password" → <code>POST /users/42/reset-password</code> (no es recurso, no se puede listar)</li>
+<li>"Publicar un post" → <code>POST /posts</code> (sí, es recurso)</li>
+<li>"Hacer logout" → <code>POST /sessions/current</code> (debatible — muchos lo tratan como recurso)</li>
+</ul>
+</blockquote>
+<h2 id="respuestas-json"><a aria-hidden="true" tabindex="-1" href="#respuestas-json"><span class="icon icon-link"></span></a>Respuestas JSON</h2>
+<p>Las APIs modernas devuelven <strong>JSON</strong> como formato principal:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "id"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">42</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "name"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Carlos"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "email"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"carlos@email.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "role"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"admin"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "created_at"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"2024-01-15T10:00:00Z"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "updated_at"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"2024-01-20T15:30:00Z"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="listas-con-paginación"><a aria-hidden="true" tabindex="-1" href="#listas-con-paginación"><span class="icon icon-link"></span></a>Listas con paginación</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "data"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"id"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">42</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Carlos"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"id"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">43</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Ana"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        { </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"id"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">44</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">"name"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Luis"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ],</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "pagination"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "page"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "limit"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">20</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "total"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">156</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "total_pages"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "has_next"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "has_prev"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="errores-estandarizados"><a aria-hidden="true" tabindex="-1" href="#errores-estandarizados"><span class="icon icon-link"></span></a>Errores estandarizados</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    "error"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "code"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"USER_NOT_FOUND"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "message"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"User with id 999 not found"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        "status"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">404</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Estructura de error consistente
+Usa siempre la misma estructura para errores. Así el frontend puede manejarlos unificados:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""> </span></code></pre></figure>
+</blockquote>
+<p>{
+"error": {
+"code": "STRING_CODE",
+"message": "Descripción legible para el usuario",
+"details": { /* campos con errores de validación */ },
+"status": 400
+}
+}</p>
+<pre><code>
+## HATEOAS (Hypermedia as the Engine of Application State)
+
+HATEOAS es el principio más controvertido de REST. Significa que las respuestas del servidor incluyen **links** que el cliente puede seguir:
+
+```json
+{
+    "id": 42,
+    "name": "Carlos",
+    "email": "carlos@email.com",
+    "links": {
+        "self": "/users/42",
+        "posts": "/users/42/posts",
+        "comments": "/users/42/comments",
+        "update": {
+            "method": "PATCH",
+            "href": "/users/42"
+        },
+        "delete": {
+            "method": "DELETE",
+            "href": "/users/42"
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>[!note] HATEOAS en la práctica
+HATEOAS es <strong>muy poco usado</strong> en APIs REST modernas. La razón:</p>
+<ul>
+<li>Agrega complejidad al servidor (generar links dinámicamente)</li>
+<li>Agrega complejidad al cliente (necesita entender la estructura de links)</li>
+<li>La mayoría de APIs usan OpenAPI/Swagger para documentación en lugar de HATEOAS</li>
+</ul>
+<p><strong>Veredicto</strong>: No lo uses a menos que tengas un motivo específico. Las APIs REST modernas casi nunca lo implementan.</p>
+</blockquote>
+<h2 id="graphql-vs-rest-vs-rpc"><a aria-hidden="true" tabindex="-1" href="#graphql-vs-rest-vs-rpc"><span class="icon icon-link"></span></a>GraphQL vs REST vs RPC</h2>
+<h3 id="comparación"><a aria-hidden="true" tabindex="-1" href="#comparación"><span class="icon icon-link"></span></a>Comparación</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>REST</th>
+<th>GraphQL</th>
+<th>RPC (gRPC, JSON-RPC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>Varios (<code>/users</code>, <code>/posts</code>)</td>
+<td>Uno (<code>/graphql</code>)</td>
+<td>Varios o uno</td>
+</tr>
+<tr>
+<td><strong>Datos</strong></td>
+<td>Datos fijos por endpoint</td>
+<td>Cliente pide exactamente lo que necesita</td>
+<td>Datos fijos</td>
+</tr>
+<tr>
+<td><strong>Overfetching</strong></td>
+<td>Posible (recibe todos los campos)</td>
+<td>No (piden solo lo necesario)</td>
+<td>Depende</td>
+</tr>
+<tr>
+<td><strong>Underfetching</strong></td>
+<td>Posible (necesita múltiples llamadas)</td>
+<td>No (todo en una llamada)</td>
+<td>Depende</td>
+</tr>
+<tr>
+<td><strong>Type system</strong></td>
+<td>Ninguno (OpenAPI opcional)</td>
+<td>Schema fuerte</td>
+<td>Protocol buffers / strong typing</td>
+</tr>
+<tr>
+<td><strong>Caching</strong></td>
+<td>HTTP cache nativo</td>
+<td>Necesita caché a nivel cliente</td>
+<td>No (cada llamada es nueva)</td>
+</tr>
+<tr>
+<td><strong>Learning curve</strong></td>
+<td>Baja</td>
+<td>Media-Alta</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Herramientas</strong></td>
+<td>HTTP + JSON</td>
+<td>GraphQL playground</td>
+<td>gRPC tools, etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cuándo-usar-cada-uno"><a aria-hidden="true" tabindex="-1" href="#cuándo-usar-cada-uno"><span class="icon icon-link"></span></a>¿Cuándo usar cada uno?</h3>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Recomendación</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>API pública</strong></td>
+<td>REST</td>
+<td>Simple, estandarizado, cachéable</td>
+</tr>
+<tr>
+<td><strong>App móvil</strong></td>
+<td>REST o GraphQL</td>
+<td>REST si la API es simple, GraphQL si necesitas flexibilidad</td>
+</tr>
+<tr>
+<td><strong>Dashboard interno</strong></td>
+<td>GraphQL</td>
+<td>Equipo pequeño, muchos tipos de datos diferentes</td>
+</tr>
+<tr>
+<td><strong>Microservicios</strong></td>
+<td>gRPC</td>
+<td>Alta performance, strong typing</td>
+</tr>
+<tr>
+<td><strong>Pocos endpoints</strong></td>
+<td>REST</td>
+<td>Simple, rápido de implementar</td>
+</tr>
+<tr>
+<td><strong>Muchas variantes de datos</strong></td>
+<td>GraphQL</td>
+<td>Un endpoint, datos flexibles</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] REST y GraphQL no son mutuamente excluyentes
+Muchos proyectos usan ambos: REST para la API pública, GraphQL para el dashboard interno. O viceversa.</p>
+</blockquote>
+<h2 id="versionado-de-apis"><a aria-hidden="true" tabindex="-1" href="#versionado-de-apis"><span class="icon icon-link"></span></a>Versionado de APIs</h2>
+<pre><code># Versionado en la URL (más común)
+/api/v1/users
+/api/v2/users
+
+# Versionado en header
+Accept: application/vnd.ejemplo.v1+json
+
+# Versionado en query param
+/users?version=1
+</code></pre>
+<blockquote>
+<p>[!tip] Versionado en URL es lo más práctico</p>
+<ul>
+<li><code>GET /api/v1/users</code> → fácil de debuggear, fácil de entender</li>
+<li><code>Accept: application/vnd.ejemplo.v1+json</code> → más REST puro pero más complejo</li>
+<li><strong>Nunca hagas breaking changes</strong> en la misma versión</li>
+</ul>
+</blockquote>
+<h2 id="documentación-de-apis"><a aria-hidden="true" tabindex="-1" href="#documentación-de-apis"><span class="icon icon-link"></span></a>Documentación de APIs</h2>
+<pre><code># OpenAPI / Swagger (REST)
+https://editor.swagger.io/
+Genera documentación interactiva desde un archivo YAML/JSON
+
+# GraphQL
+GraphQL tiene introspection integrada
+http://localhost:4000/graphql → Playground automático
+
+# Postman Collections
+Colecciones de peticiones que se pueden ejecutar directamente
+</code></pre>
+<h2 id="errores-comunes-en-apis-rest"><a aria-hidden="true" tabindex="-1" href="#errores-comunes-en-apis-rest"><span class="icon icon-link"></span></a>Errores comunes en APIs REST</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Correcto</th>
+<th>Incorrecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verbos en URLs</strong></td>
+<td><code>DELETE /users/42</code></td>
+<td><code>DELETE /users/42/delete</code></td>
+</tr>
+<tr>
+<td><strong>Colecciones en singular</strong></td>
+<td><code>GET /users</code></td>
+<td><code>GET /user</code></td>
+</tr>
+<tr>
+<td><strong>No usar 404</strong></td>
+<td><code>GET /users/999 → 404</code></td>
+<td><code>GET /users/999 → 200 { "null" }</code></td>
+</tr>
+<tr>
+<td><strong>No usar 405</strong></td>
+<td><code>POST /users/42 → 405</code></td>
+<td><code>POST /users/42 → 200 con mensaje de error</code></td>
+</tr>
+<tr>
+<td><strong>JSON dentro de array innecesario</strong></td>
+<td><code>{ "data": [...] }</code></td>
+<td><code>[{...}, {...}]</code> (sin wrapper)</td>
+</tr>
+<tr>
+<td><strong>Campos camelCase vs snake_case</strong></td>
+<td><code>user_id</code> o <code>userId</code> (consistente)</td>
+<td>Mezclar ambos</td>
+</tr>
+<tr>
+<td><strong>Fechas sin ISO 8601</strong></td>
+<td><code>"2024-01-15T10:00:00Z"</code></td>
+<td><code>"15/01/2024"</code> o timestamp</td>
+</tr>
+<tr>
+<td><strong>No paginar listas largas</strong></td>
+<td><code>?page=1&#x26;limit=20</code></td>
+<td><code>GET /users → [10000 elementos]</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>REST se basa en recursos identificados por URLs + métodos HTTP semánticos</li>
+<li>GET=Leer, POST=Crear, PUT=Reemplazar, PATCH=Actualizar, DELETE=Eliminar</li>
+<li>Las URLs son sustantivos, no verbos</li>
+<li>Las respuestas son JSON con estructura consistente</li>
+<li>HATEOAS es un principio REST pero casi nunca se usa en la práctica</li>
+<li>Versionado en URL (<code>/api/v1/</code>) es el enfoque más práctico</li>
+<li>OpenAPI/Swagger es el estándar para documentación de APIs REST</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+REST no es una norma estricta, es un conjunto de principios. Las APIs modernas que llaman "REST" suelen ser APIs HTTP con JSON que siguen los principios básicos (recursos + métodos + status codes) sin llegar a ser "puros" REST.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP métodos y headers</td>
+<td>[[05-http-profundo]]</td>
+</tr>
+<tr>
+<td>Status codes</td>
+<td>[[06-status-codes]]</td>
+</tr>
+<tr>
+<td>Autenticación (JWT, tokens)</td>
+<td>[[10-autenticacion-api-keys-tokens]]</td>
+</tr>
+<tr>
+<td>Cookies/Sesiones</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

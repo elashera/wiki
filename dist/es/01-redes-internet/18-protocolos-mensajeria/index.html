@@ -1,0 +1,562 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Protocolos de mensajería: AMQP, MQTT y WebSockets</h1> <div class="article-body"><h1 id="protocolos-de-mensajería-amqp-mqtt-y-websockets"><a aria-hidden="true" tabindex="-1" href="#protocolos-de-mensajería-amqp-mqtt-y-websockets"><span class="icon icon-link"></span></a>Protocolos de mensajería: AMQP, MQTT y WebSockets</h1>
+<blockquote>
+<p>[!tip] Mensajería en una frase
+Los protocolos de mensajería permiten que aplicaciones se comuniquen de forma <strong>asíncrona</strong>, desacoplada y confiable — sin que emisor y receptor necesiten estar conectados al mismo tiempo.</p>
+</blockquote>
+<h2 id="qué-es-la-mensajería"><a aria-hidden="true" tabindex="-1" href="#qué-es-la-mensajería"><span class="icon icon-link"></span></a>¿Qué es la mensajería?</h2>
+<p>Los protocolos de mensajería son sistemas de comunicación entre aplicaciones que permiten:</p>
+<ul>
+<li><strong>Comunicación asíncrona</strong>: El emisor envía y sigue trabajando, el receptor procesa cuando puede</li>
+<li><strong>Desacoplamiento</strong>: El emisor no necesita saber quién es el receptor</li>
+<li><strong>Tolerancia a fallos</strong>: Los mensajes se almacenan hasta que puedan ser procesados</li>
+<li><strong>Escalabilidad</strong>: Múltiples consumidores pueden leer de la misma cola</li>
+</ul>
+<h3 id="tipos-de-mensajería"><a aria-hidden="true" tabindex="-1" href="#tipos-de-mensajería"><span class="icon icon-link"></span></a>Tipos de mensajería</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Point-to-Point</strong> (Queuing)</td>
+<td>Un mensaje va a un solo consumidor</td>
+<td>RabbitMQ queues</td>
+</tr>
+<tr>
+<td><strong>Publish/Subscribe</strong> (Pub/Sub)</td>
+<td>Un mensaje va a todos los suscriptores</td>
+<td>MQTT topics, Kafka</td>
+</tr>
+</tbody>
+</table>
+<h2 id="amqp-advanced-message-queuing-protocol"><a aria-hidden="true" tabindex="-1" href="#amqp-advanced-message-queuing-protocol"><span class="icon icon-link"></span></a>AMQP (Advanced Message Queuing Protocol)</h2>
+<p><strong>AMQP</strong> es un protocolo de mensajería orientado a colas. El estándar de la industria, y <strong>RabbitMQ</strong> es la implementación más popular.</p>
+<h3 id="conceptos-clave-de-amqp"><a aria-hidden="true" tabindex="-1" href="#conceptos-clave-de-amqp"><span class="icon icon-link"></span></a>Conceptos clave de AMQP</h3>
+<pre><code>Producer → Exchange → Queue(s) → Consumer
+              │
+              ├─ Direct Exchange: routing key exact match
+              ├─ Topic Exchange: pattern matching
+              ├─ Fanout Exchange: broadcast a todos
+              └─ Headers Exchange: match por headers
+</code></pre>
+<p><strong>Componentes:</strong></p>
+<ul>
+<li><strong>Producer</strong>: Envía mensajes a un exchange</li>
+<li><strong>Exchange</strong>: Recibe mensajes del producer y los enrouta a queues</li>
+<li><strong>Queue</strong>: Almacena mensajes hasta que un consumer los lee</li>
+<li><strong>Consumer</strong>: Recibe mensajes de una queue</li>
+<li><strong>Binding</strong>: Regla que conecta un exchange a una queue</li>
+</ul>
+<h3 id="tipos-de-exchange"><a aria-hidden="true" tabindex="-1" href="#tipos-de-exchange"><span class="icon icon-link"></span></a>Tipos de Exchange</h3>
+<table>
+<thead>
+<tr>
+<th>Exchange</th>
+<th>Enrutamiento</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct</strong></td>
+<td>Routing key exact match</td>
+<td>Colas específicas</td>
+</tr>
+<tr>
+<td><strong>Topic</strong></td>
+<td>Pattern matching con wildcards (<code>*</code> = 1 palabra, <code>#</code> = 0+ palabras)</td>
+<td>Enrutamiento flexible</td>
+</tr>
+<tr>
+<td><strong>Fanout</strong></td>
+<td>Broadcast a todas las queues</td>
+<td>Notificaciones</td>
+</tr>
+<tr>
+<td><strong>Headers</strong></td>
+<td>Match por headers del mensaje</td>
+<td>Casos especiales</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-con-rabbitmq"><a aria-hidden="true" tabindex="-1" href="#ejemplo-con-rabbitmq"><span class="icon icon-link"></span></a>Ejemplo con RabbitMQ</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Producer</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> amqp</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'amqplib'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> publish</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> connection</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> amqp.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">connect</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'amqp://localhost'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> channel</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> connection.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">createChannel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> exchange</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'orders'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> message</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'New order #12345'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">assertExchange</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(exchange, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'direct'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, { durable: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sendToExchange</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(exchange, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'order.created'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Buffer.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(message));</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Mensaje enviado'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> connection.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">close</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Consumer</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> consume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> connection</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> amqp.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">connect</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'amqp://localhost'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> channel</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> connection.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">createChannel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> queue</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'order-processor'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">assertQueue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(queue, { durable: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bindQueue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(queue, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'orders'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'order.created'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">consume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(queue, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">msg</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Mensaje recibido:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, msg.content.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ack</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(msg);  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Confirmar procesamiento</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Durable queues
+Una queue <strong>durable</strong> sobrevive a reinicios del broker. Si RabbitMQ se reinicia, los mensajes en queues durables se mantienen. Sin embargo, los mensajes individuales no son durables por defecto — necesitas marcar cada mensaje como <code>persistent</code>.</p>
+</blockquote>
+<h3 id="amqp-vs-otros-protocolos"><a aria-hidden="true" tabindex="-1" href="#amqp-vs-otros-protocolos"><span class="icon icon-link"></span></a>AMQP vs otros protocolos</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>AMQP</th>
+<th>MQTT</th>
+<th>HTTP</th>
+<th>WebSocket</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orientado a</strong></td>
+<td>Colas</td>
+<td>Topics</td>
+<td>Request/Response</td>
+<td>Conexión bidireccional</td>
+</tr>
+<tr>
+<td><strong>Garantía de entrega</strong></td>
+<td>Alta (ACK, persistencia)</td>
+<td>Media (QoS 0-2)</td>
+<td>Baja</td>
+<td>Media</td>
+</tr>
+<tr>
+<td><strong>Latencia</strong></td>
+<td>Media</td>
+<td>Baja</td>
+<td>Alta</td>
+<td>Baja</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>Alto</td>
+<td>Bajo</td>
+<td>Medio</td>
+<td>Medio</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Microservicios, backend</td>
+<td>IoT, móvil</td>
+<td>Web, APIs</td>
+<td>Tiempo real, chat</td>
+</tr>
+<tr>
+<td><strong>Broker</strong></td>
+<td>RabbitMQ, Apache Qpid</td>
+<td>Mosquitto, EMQX</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mqtt-message-queuing-telemetry-transport"><a aria-hidden="true" tabindex="-1" href="#mqtt-message-queuing-telemetry-transport"><span class="icon icon-link"></span></a>MQTT (Message Queuing Telemetry Transport)</h2>
+<p><strong>MQTT</strong> es un protocolo ligero de publish/subscribe diseñado para dispositivos con recursos limitados (IoT, móvil, redes lentas).</p>
+<h3 id="conceptos-clave-de-mqtt"><a aria-hidden="true" tabindex="-1" href="#conceptos-clave-de-mqtt"><span class="icon icon-link"></span></a>Conceptos clave de MQTT</h3>
+<pre><code>Publish → Topic → Broker → Subscribe → Topics
+</code></pre>
+<p><strong>Componentes:</strong></p>
+<ul>
+<li><strong>Broker</strong>: Centraliza la mensajería. Recibe mensajes y los distribuye a suscriptores.</li>
+<li><strong>Publisher</strong>: Envía mensajes a un topic</li>
+<li><strong>Subscriber</strong>: Recibe mensajes de topics que le interesan</li>
+<li><strong>Topic</strong>: Ruta jerárquica del mensaje (ej: <code>casa/salon/temp</code>)</li>
+</ul>
+<h3 id="qos-quality-of-service-de-mqtt"><a aria-hidden="true" tabindex="-1" href="#qos-quality-of-service-de-mqtt"><span class="icon icon-link"></span></a>QoS (Quality of Service) de MQTT</h3>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Garantía</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>QoS 0</strong></td>
+<td>At most once</td>
+<td>Enviar y olvidar. Puede perderse.</td>
+</tr>
+<tr>
+<td><strong>QoS 1</strong></td>
+<td>At least once</td>
+<td>Al menos una entrega. Puede haber duplicados.</td>
+</tr>
+<tr>
+<td><strong>QoS 2</strong></td>
+<td>Exactly once</td>
+<td>Entrega exacta. Más overhead (4 pasos).</td>
+</tr>
+</tbody>
+</table>
+<pre><code>QoS 0 (At most once):
+Publisher → Broker → Subscriber
+(Sin confirmación)
+
+QoS 1 (At least once):
+Publisher → Broker → Subscriber → PUBACK
+(Si no llega PUBACK, reenvía)
+
+QoS 2 (Exactly once):
+Publisher → Broker → PUBREC → Publisher → PUBREL → Broker → PUBCOMP
+(4 pasos para garantizar entrega exacta)
+</code></pre>
+<h3 id="tópicos-y-wildcards"><a aria-hidden="true" tabindex="-1" href="#tópicos-y-wildcards"><span class="icon icon-link"></span></a>Tópicos y wildcards</h3>
+<pre><code>casa/cocina/temp    → Temperatura de cocina
+casa/cocina/hum     → Humedad de cocina
+casa/ */temp        → Todos los topics /temp de primer nivel
+casa/#              → Todo lo que empiece con casa/
+</code></pre>
+<h3 id="retained-messages-y-last-will"><a aria-hidden="true" tabindex="-1" href="#retained-messages-y-last-will"><span class="icon icon-link"></span></a>Retained messages y Last Will</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Retained message: el broker recuerda el último mensaje de un topic</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Para que nuevos suscriptores lo reciban al suscribirse</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Last Will (Will Message): si un dispositivo se desconecta inesperadamente,</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// el broker publica automáticamente un mensaje</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    "topic"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"casa/salon/online"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    "message"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"offline"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    "qos"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    "retain"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] MQTT vs AMQP</p>
+<ul>
+<li><strong>MQTT</strong>: Ligero (header de 2 bytes), ideal para IoT y redes lentas. Pub/sub nativo.</li>
+<li><strong>AMQP</strong>: Más pesado, más funcionalidades (colas, exchanges, routing complejo). Ideal para microservicios backend.</li>
+</ul>
+</blockquote>
+<h2 id="websockets"><a aria-hidden="true" tabindex="-1" href="#websockets"><span class="icon icon-link"></span></a>WebSockets</h2>
+<p><strong>WebSockets</strong> es un protocolo de comunicación <strong>bidireccional y persistente</strong> sobre TCP. A diferencia de HTTP (request/response), los dos lados pueden enviar datos en cualquier momento.</p>
+<h3 id="cómo-funciona"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona"><span class="icon icon-link"></span></a>Cómo funciona</h3>
+<pre><code>Handshake HTTP → Upgrade a WebSocket → Conexión persistente bidireccional
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Servidor (Node.js + ws)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> WebSocket</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'ws'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> wss</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> WebSocket.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ port: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8080</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">wss.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'connection'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">ws</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Nuevo cliente conectado'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'message'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Mensaje recibido:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, data.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        // Reenviar a todos los demás clientes</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        wss.clients.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">forEach</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">client</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (client </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ws </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x26;&#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> client.readyState </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> WebSocket.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">OPEN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                client.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">send</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">toString</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">());</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'close'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Cliente desconectado'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Cliente (browser)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> ws</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> WebSocket</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'ws://localhost:8080'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">onopen</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Conectado'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">send</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Hola desde el cliente'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">onmessage</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">event</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Mensaje del servidor:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, event.data);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">onclose</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Desconectado'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></figure>
+<h3 id="handshake-websocket"><a aria-hidden="true" tabindex="-1" href="#handshake-websocket"><span class="icon icon-link"></span></a>Handshake WebSocket</h3>
+<pre><code>Cliente:
+  GET /ws HTTP/1.1
+  Host: localhost:8080
+  Upgrade: websocket
+  Connection: Upgrade
+  Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
+  Sec-WebSocket-Version: 13
+
+Servidor:
+  HTTP/1.1 101 Switching Protocols
+  Upgrade: websocket
+  Connection: Upgrade
+  Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+</code></pre>
+<blockquote>
+<p>[!note] El handshake usa HTTP
+El upgrade a WebSocket se hace sobre HTTP. Si el servidor no soporta WebSocket, responde con un error HTTP normal y la conexión se cierra.</p>
+</blockquote>
+<h3 id="websockets-vs-http-polling"><a aria-hidden="true" tabindex="-1" href="#websockets-vs-http-polling"><span class="icon icon-link"></span></a>WebSockets vs HTTP polling</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP Polling</th>
+<th>HTTP Long Polling</th>
+<th>WebSockets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Latencia</strong></td>
+<td>Alta (intervalo de polling)</td>
+<td>Media (cuando hay datos)</td>
+<td>Baja (inmediato)</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>Alto (headers HTTP en cada request)</td>
+<td>Medio</td>
+<td>Bajo (una vez, luego frames binarios)</td>
+</tr>
+<tr>
+<td><strong>Conexiones</strong></td>
+<td>Múltiples conexiones cortas</td>
+<td>Múltiples conexiones largas</td>
+<td>Una conexión persistente</td>
+</tr>
+<tr>
+<td><strong>Bidireccional</strong></td>
+<td>No (cliente siempre inicia)</td>
+<td>No</td>
+<td>Sí</td>
+</tr>
+</tbody>
+</table>
+<h3 id="limitaciones-de-websockets"><a aria-hidden="true" tabindex="-1" href="#limitaciones-de-websockets"><span class="icon icon-link"></span></a>Limitaciones de WebSockets</h3>
+<ul>
+<li><strong>No hay semántica de mensajería</strong>: Los frames son binarios/texto sin estructura (a diferencia de AMQP/MQTT)</li>
+<li><strong>No hay QoS</strong>: No hay garantía de entrega ni reconexión automática</li>
+<li><strong>No hay persistence</strong>: Si el servidor cae, los mensajes se pierden (necesitas un broker externo)</li>
+<li><strong>Firewalls</strong>: La mayoría permiten WebSockets (puerto 80/443), pero algunos los bloquean</li>
+</ul>
+<blockquote>
+<p>[!tip] Solución práctica
+Para producción, combina WebSockets con un broker como Redis Pub/Sub, Kafka, o RabbitMQ para tener mensajería fiable. O usa frameworks como Socket.IO que manejan reconexión, fallback a polling, y rooms.</p>
+</blockquote>
+<h2 id="kafka"><a aria-hidden="true" tabindex="-1" href="#kafka"><span class="icon icon-link"></span></a>Kafka</h2>
+<p><strong>Apache Kafka</strong> es un sistema de streaming distribuido que funciona como un <strong>log inmutable</strong>:</p>
+<pre><code>Producer → Topic → Partition 0 → [msg1][msg2][msg3]...
+                     Partition 1 → [msg4][msg5][msg6]...
+
+Consumer → Topic → Leee mensajes en orden → Procesa
+</code></pre>
+<h3 id="conceptos-clave"><a aria-hidden="true" tabindex="-1" href="#conceptos-clave"><span class="icon icon-link"></span></a>Conceptos clave</h3>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Topic</strong></td>
+<td>Categoría donde se publican los mensajes</td>
+</tr>
+<tr>
+<td><strong>Partition</strong></td>
+<td>Cada topic se divide en particiones (para paralelismo)</td>
+</tr>
+<tr>
+<td><strong>Offset</strong></td>
+<td>Número secuencial dentro de cada partición</td>
+</tr>
+<tr>
+<td><strong>Producer</strong></td>
+<td>Envía mensajes a un topic</td>
+</tr>
+<tr>
+<td><strong>Consumer Group</strong></td>
+<td>Grupo de consumidores que leen un topic (cada mensaje va a un solo consumer del grupo)</td>
+</tr>
+<tr>
+<td><strong>Broker</strong></td>
+<td>Servidor que almacena los mensajes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="diferencia-con-amqpmqtt"><a aria-hidden="true" tabindex="-1" href="#diferencia-con-amqpmqtt"><span class="icon icon-link"></span></a>Diferencia con AMQP/MQTT</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Kafka</th>
+<th>RabbitMQ (AMQP)</th>
+<th>MQTT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Persistencia</strong></td>
+<td>Días/semanas (configurable)</td>
+<td>Hasta que se consuma</td>
+<td>No (por defecto)</td>
+</tr>
+<tr>
+<td><strong>Consumo</strong></td>
+<td>Retrospectivo (puedes leer mensajes viejos)</td>
+<td>Una vez consumido, se borra</td>
+<td>Publicar y olvidar</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>Ordenado por partición</td>
+<td>Ordenado por queue</td>
+<td>No garantizado</td>
+</tr>
+<tr>
+<td>** throughput**</td>
+<td>Muy alto (millones de msgs/seg)</td>
+<td>Medio</td>
+<td>Bajo-Medio</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Log, analytics, streaming</td>
+<td>Microservicios, tasks</td>
+<td>IoT, chat</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparación-final"><a aria-hidden="true" tabindex="-1" href="#comparación-final"><span class="icon icon-link"></span></a>Comparación final</h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>AMQP</th>
+<th>MQTT</th>
+<th>WebSocket</th>
+<th>Kafka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>Point-to-Point</td>
+<td>Pub/Sub</td>
+<td>Bidireccional</td>
+<td>Streaming</td>
+</tr>
+<tr>
+<td><strong>Overhead</strong></td>
+<td>Alto</td>
+<td>Bajo</td>
+<td>Medio</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>Queue</td>
+<td>Topic</td>
+<td>Connection</td>
+<td>Partition</td>
+</tr>
+<tr>
+<td><strong>QoS</strong></td>
+<td>Alta</td>
+<td>Media</td>
+<td>Baja</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Persistencia</strong></td>
+<td>Sí (configurable)</td>
+<td>No</td>
+<td>No</td>
+<td>Sí (días)</td>
+</tr>
+<tr>
+<td><strong>Ideal para</strong></td>
+<td>Microservicios</td>
+<td>IoT, móvil</td>
+<td>Tiempo real</td>
+<td>Analytics, logs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li><strong>AMQP</strong> (RabbitMQ): Colas con routing complejo, ideal para microservicios backend</li>
+<li><strong>MQTT</strong>: Ligero, pub/sub, ideal para IoT y dispositivos con recursos limitados</li>
+<li><strong>WebSockets</strong>: Conexión bidireccional persistente, ideal para tiempo real en browsers</li>
+<li><strong>Kafka</strong>: Streaming distribuido con persistencia, ideal para analytics y logs</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+No hay un protocolo "mejor" — cada uno tiene su caso de uso ideal. AMQP para mensajería fiable entre servicios, MQTT para IoT, WebSockets para tiempo real en browsers, y Kafka para streams de datos a gran escala.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APIs REST</td>
+<td>[[11-api-rest]] (cuándo usar REST vs mensajería asíncrona)</td>
+</tr>
+<tr>
+<td>HTTP/2</td>
+<td>[[05-http-profundo]] (cuándo usar HTTP/2 vs WebSockets)</td>
+</tr>
+<tr>
+<td>Cloudflare Workers</td>
+<td>[[19-cloudflare-completo]] (edge computing con eventos)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

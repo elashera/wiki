@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0</h1> <div class="article-body"><h1 id="autenticación-basic-auth-bearer-tokens-api-keys-oauth-20"><a aria-hidden="true" tabindex="-1" href="#autenticación-basic-auth-bearer-tokens-api-keys-oauth-20"><span class="icon icon-link"></span></a>Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0</h1>
+<blockquote>
+<p>[!tip] Autenticación en una frase
+La autenticación responde a la pregunta <strong>"¿quién eres?"</strong>. Hay múltiples formas de demostrarlo: contraseña, token, API key, certificado, biometría...</p>
+</blockquote>
+<h2 id="diferencia-autenticación-vs-autorización"><a aria-hidden="true" tabindex="-1" href="#diferencia-autenticación-vs-autorización"><span class="icon icon-link"></span></a>Diferencia: Autenticación vs Autorización</h2>
+<pre><code>Autenticación → ¿Quién eres?
+Autorización  → ¿Qué puedes hacer?
+</code></pre>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Autenticación</th>
+<th>Autorización</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pregunta</strong></td>
+<td>¿Quién eres?</td>
+<td>¿Qué puedes hacer?</td>
+</tr>
+<tr>
+<td><strong>Ejemplo</strong></td>
+<td>Login con password, token JWT</td>
+<td>Permiso para acceder a /admin</td>
+</tr>
+<tr>
+<td><strong>Cuándo</strong></td>
+<td>Primero</td>
+<td>Después</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Confusión común
+Muchos desarrolladores confunden 401 con 403:</p>
+<ul>
+<li><strong>401 Unauthorized</strong> → No estás autenticado (no demostraste quién eres)</li>
+<li><strong>403 Forbidden</strong> → Estás autenticado pero no tienes permiso (autorización falla)</li>
+</ul>
+</blockquote>
+<h2 id="tipos-de-autenticación"><a aria-hidden="true" tabindex="-1" href="#tipos-de-autenticación"><span class="icon icon-link"></span></a>Tipos de autenticación</h2>
+<h3 id="1-basic-auth"><a aria-hidden="true" tabindex="-1" href="#1-basic-auth"><span class="icon icon-link"></span></a>1. Basic Auth</h3>
+<p>El método más simple: envía <code>usuario:contraseña</code> codificado en base64 en cada petición.</p>
+<pre><code>Authorization: Basic [YOUR_BASE64_CREDENTIALS]
+# Y2FybG9zOm1pcGFzc3dvcmQxMjM= = "carlos:mipassword123" en base64
+</code></pre>
+<blockquote>
+<p>[!warning] Basic Auth solo sobre HTTPS
+Base64 no es cifrado — cualquiera que intercepte la petición puede leer las credenciales. <strong>NUNCA uses Basic Auth sin HTTPS.</strong></p>
+</blockquote>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Con curl</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> carlos:mipassword123</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.ejemplo.com/users</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Equivale a:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Authorization: Basic [BASE64_CREDENTIALS]"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.ejemplo.com/users</span></span></code></pre></figure>
+<p><strong>Estado</strong>: En desuso para APIs modernas. Solo para herramientas internas o APIs legacy.</p>
+<h3 id="2-bearer-tokens-jwt-opaque-tokens"><a aria-hidden="true" tabindex="-1" href="#2-bearer-tokens-jwt-opaque-tokens"><span class="icon icon-link"></span></a>2. Bearer Tokens (JWT, opaque tokens)</h3>
+<p>El método más común en APIs modernas. El cliente envía un token en el header:</p>
+<pre><code>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre>
+<h4 id="jwt-ver-09-cookies-sesiones"><a aria-hidden="true" tabindex="-1" href="#jwt-ver-09-cookies-sesiones"><span class="icon icon-link"></span></a>JWT (ver [[09-cookies-sesiones]])</h4>
+<p>Token autocontenido con firma criptográfica. El servidor puede validar el token sin consultar una base de datos.</p>
+<h4 id="opaque-token"><a aria-hidden="true" tabindex="-1" href="#opaque-token"><span class="icon icon-link"></span></a>Opaque Token</h4>
+<p>Token que es solo un string aleatorio. El servidor necesita consultar una base de datos para saber qué usuario representa.</p>
+<pre><code># Ejemplo: Opaque token
+Authorization: Bearer a1b2c3d4e5f6g7h8i9j0
+
+# El servidor consulta:
+SELECT user_id, role, expires_at FROM tokens WHERE token = 'a1b2c3d4e5f6g7h8i9j0'
+</code></pre>
+<h3 id="3-api-keys"><a aria-hidden="true" tabindex="-1" href="#3-api-keys"><span class="icon icon-link"></span></a>3. API Keys</h3>
+<p>Una clave secreta larga que identifica a un cliente (usuario o servicio).</p>
+<pre><code>X-API-Key: [TU_API_KEY_AQUI]
+Authorization: Bearer [TU_TOKEN_AQUI]
+</code></pre>
+<h4 id="api-key-vs-token"><a aria-hidden="true" tabindex="-1" href="#api-key-vs-token"><span class="icon icon-link"></span></a>API Key vs Token</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>API Key</th>
+<th>Token (JWT/OPAQUE)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identifica</strong></td>
+<td>Cliente / API consumer</td>
+<td>Usuario / Sesión</td>
+</tr>
+<tr>
+<td><strong>Expira</strong></td>
+<td>Rara vez (rotar manualmente)</td>
+<td>Siempre (minutos/horas/días)</td>
+</tr>
+<tr>
+<td><strong>Ámbito</strong></td>
+<td>Suele ser fijo</td>
+<td>Puede tener scopes/permissions</td>
+</tr>
+<tr>
+<td><strong>Revocación</strong></td>
+<td>Rotar la key</td>
+<td>Invalidar el token</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Servicios, integraciones, SaaS</td>
+<td>Usuarios finales, sesiones</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Best practices para API Keys</p>
+<ol>
+<li><strong>Nunca las expongas en el frontend</strong> (JS del navegador). Úsalas solo en backend.</li>
+<li><strong>Rótalas regularmente</strong> (cada 3-6 meses)</li>
+<li><strong>Usa scopes/permissions</strong> si tu proveedor lo soporta</li>
+<li><strong>Almacénalas en variables de entorno</strong>, nunca en código</li>
+<li><strong>Loggea el uso</strong> para detección de abuso</li>
+</ol>
+</blockquote>
+<h3 id="4-oauth-20--openid-connect"><a aria-hidden="true" tabindex="-1" href="#4-oauth-20--openid-connect"><span class="icon icon-link"></span></a>4. OAuth 2.0 / OpenID Connect</h3>
+<p>OAuth 2.0 es un <strong>protocolo de autorización</strong> que permite que una aplicación acceda a recursos de un usuario en nombre suyo, sin compartir sus credenciales.</p>
+<h4 id="el-flujo-de-oauth-20-authorization-code--pkce"><a aria-hidden="true" tabindex="-1" href="#el-flujo-de-oauth-20-authorization-code--pkce"><span class="icon icon-link"></span></a>El flujo de OAuth 2.0 (Authorization Code + PKCE)</h4>
+<pre><code>1. Usuario hace click en "Login with Google"
+   ↓
+2. Redirige a Google:
+   https://accounts.google.com/o/oauth2/v2/auth?
+     client_id=TU_CLIENT_ID&#x26;
+     redirect_uri=https://app.ejemplo.com/callback&#x26;
+     response_type=code&#x26;
+     scope=openid+email+profile&#x26;
+     state=random_state_token&#x26;
+     code_challenge=BASE64(SHA256(code_verifier))
+
+3. Usuario hace login en Google y autoriza tu app
+   ↓
+4. Google redirige de vuelta con un code:
+   https://app.ejemplo.com/callback?code=AUTORIZATION_CODE&#x26;state=random_state_token
+
+5. Tu servidor intercambia el code por tokens:
+   POST https://oauth2.googleapis.com/token
+   Content-Type: application/x-www-form-urlencoded
+   grant_type=authorization_code&#x26;
+   code=AUTORIZATION_CODE&#x26;
+   redirect_uri=https://app.ejemplo.com/callback&#x26;
+   client_id=TU_CLIENT_ID&#x26;
+   client_secret=TU_CLIENT_SECRET&#x26;
+   code_verifier=ORIGINAL_CODE_VERIFIER
+
+6. Google responde con:
+   {
+     "access_token": "[ACCESS_TOKEN]",
+     "expires_in": 3599,
+     "refresh_token": "[REFRESH_TOKEN]",
+     "id_token": "[ID_TOKEN]"
+   }
+
+7. Tu servidor usa el access_token para llamar a la API de Google
+8. Tu servidor extrae los datos del usuario del id_token
+</code></pre>
+<blockquote>
+<p>[!tip] ¿Por qué Authorization Code + PKCE?</p>
+<ul>
+<li><strong>Authorization Code</strong>: El code se intercambia en el <strong>backend</strong> (donde es seguro guardar el client_secret). El code solo tiene vida útil muy corta.</li>
+<li><strong>PKCE</strong> (Proof Key for Code Exchange): Previene ataques de interceptación del code en aplicaciones públicas (SPAs, móviles). El <code>code_verifier</code> se usa para verificar que el cliente que recibe el code es el mismo que lo pidió.</li>
+</ul>
+</blockquote>
+<h4 id="oauth-20-flujos-disponibles"><a aria-hidden="true" tabindex="-1" href="#oauth-20-flujos-disponibles"><span class="icon icon-link"></span></a>OAuth 2.0: Flujos disponibles</h4>
+<table>
+<thead>
+<tr>
+<th>Flujo</th>
+<th>Uso</th>
+<th>Seguridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authorization Code + PKCE</strong></td>
+<td>SPAs, móviles, apps de servidor</td>
+<td>✅✅ Máxima</td>
+</tr>
+<tr>
+<td><strong>Authorization Code</strong></td>
+<td>Apps de servidor (backend)</td>
+<td>✅ Alta</td>
+</tr>
+<tr>
+<td><strong>Implicit</strong></td>
+<td><del>En desuso</del> — No usar</td>
+<td>❌ Inseguro</td>
+</tr>
+<tr>
+<td><strong>Client Credentials</strong></td>
+<td>Servicio a servicio (sin usuario)</td>
+<td>✅ Alta</td>
+</tr>
+<tr>
+<td><strong>Device Code</strong></td>
+<td>Dispositivos sin teclado (TV, consolas)</td>
+<td>✅ Media</td>
+</tr>
+</tbody>
+</table>
+<h4 id="openid-connect-oidc"><a aria-hidden="true" tabindex="-1" href="#openid-connect-oidc"><span class="icon icon-link"></span></a>OpenID Connect (OIDC)</h4>
+<p>OIDC es una capa sobre OAuth 2.0 que añade <strong>autenticación</strong>. OAuth 2.0 solo autoriza; OIDC dice quién eres.</p>
+<pre><code>OAuth 2.0 → "Puedes acceder a estos recursos del usuario"
+OIDC      → "Este usuario es Carlos con email carlos@email.com"
+
+OIDC añade:
+- id_token (JWT que contiene claims del usuario)
+- /userinfo endpoint (para obtener más datos del usuario)
+- Standardized claims (sub, name, email, email_verified, etc.)
+</code></pre>
+<h3 id="5-mfa--2fa-multi-factor-authentication"><a aria-hidden="true" tabindex="-1" href="#5-mfa--2fa-multi-factor-authentication"><span class="icon icon-link"></span></a>5. MFA / 2FA (Multi-Factor Authentication)</h3>
+<p>MFA requiere <strong>dos o más factores</strong> de autenticación:</p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Algo que sabes</strong></td>
+<td>Password, PIN</td>
+</tr>
+<tr>
+<td><strong>Algo que tienes</strong></td>
+<td>Teléfono (OTP app), token hardware (YubiKey)</td>
+</tr>
+<tr>
+<td><strong>Algo que eres</strong></td>
+<td>Huella digital, Face ID, retina</td>
+</tr>
+</tbody>
+</table>
+<h4 id="mfa-común-en-la-práctica"><a aria-hidden="true" tabindex="-1" href="#mfa-común-en-la-práctica"><span class="icon icon-link"></span></a>MFA común en la práctica</h4>
+<pre><code># TOTP (Time-based One-Time Password) - Google Authenticator, Authy
+# Código de 6 dígitos que cambia cada 30 segundos
+123456
+
+# WebAuthn / FIDO2 - YubiKey, Face ID, Touch ID
+# Usan criptografía de clave pública, no Phishing-resistant
+
+# SMS 2FA
+# Código enviado por SMS
+# ⚠️ Vulnerable a SIM swapping
+
+# Email 2FA
+# Código enviado por email
+# ⚠️ Menos seguro que SMS
+</code></pre>
+<h3 id="6-certificados-mutuos-mtls"><a aria-hidden="true" tabindex="-1" href="#6-certificados-mutuos-mtls"><span class="icon icon-link"></span></a>6. Certificados mutuos (mTLS)</h3>
+<p>Ambas partes verifican certificados TLS. Se usa en:</p>
+<ul>
+<li>Comunicación entre microservicios</li>
+<li>API interna</li>
+<li>IoT</li>
+</ul>
+<pre><code>Cliente → Servidor: ClientHello + Client Certificate
+Servidor → Cliente: ServerHello + Server Certificate
+Ambos verifican: ¿El certificado está firmado por una CA de confianza?
+</code></pre>
+<h2 id="cuándo-usar-qué"><a aria-hidden="true" tabindex="-1" href="#cuándo-usar-qué"><span class="icon icon-link"></span></a>Cuándo usar qué</h2>
+<table>
+<thead>
+<tr>
+<th>Escenario</th>
+<th>Recomendación</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Web app tradicional</strong> (servidor renderiza HTML)</td>
+<td>Sessiones + cookies</td>
+<td>Más seguro, más simple</td>
+</tr>
+<tr>
+<td><strong>SPA</strong> (React/Vue/Angular)</td>
+<td>JWT + HttpOnly cookie</td>
+<td>Stateless, CSRF protection con SameSite</td>
+</tr>
+<tr>
+<td><strong>API REST</strong> (frontend móvil o web)</td>
+<td>JWT bearer token</td>
+<td>Stateless, fácil de escalar</td>
+</tr>
+<tr>
+<td><strong>Servicio a servicio</strong></td>
+<td>API Key o mTLS</td>
+<td>No hay usuario, solo servicios</td>
+</tr>
+<tr>
+<td><strong>Login con Google/GitHub</strong></td>
+<td>OAuth 2.0 + OIDC</td>
+<td>No gestiones contraseñas tú</td>
+</tr>
+<tr>
+<td><strong>Máxima seguridad</strong></td>
+<td>Password + TOTP/WebAuthn</td>
+<td>MFA obligatorio para cuentas sensibles</td>
+</tr>
+</tbody>
+</table>
+<h2 id="seguridad-de-autenticación"><a aria-hidden="true" tabindex="-1" href="#seguridad-de-autenticación"><span class="icon icon-link"></span></a>Seguridad de autenticación</h2>
+<h3 id="passwords"><a aria-hidden="true" tabindex="-1" href="#passwords"><span class="icon icon-link"></span></a>Passwords</h3>
+<p><strong>NUNCA almacenes passwords en texto plano.</strong></p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// MALO: texto plano</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">db.users.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ password: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mipassword123"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> })</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// MALO: MD5/SHA1 (demasiado rápido, vulnerable a rainbow tables)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">db.users.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ password: </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sha256</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mipassword123"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) })</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// BIEN: bcrypt (con salt y work factor)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">db.users.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ password: bcrypt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">hash</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mipassword123"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">12</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) })</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// $2b$12$WApznUPhDubN0oeveSXHrOuE9/.lZdF.5DEdRZSJPjYRUfQfOekLe</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Algoritmos recomendados para passwords</p>
+<ol>
+<li><strong>Argon2</strong> (ganador de Password Hashing Competition) — mejor resistencia a GPU attacks</li>
+<li><strong>bcrypt</strong> — ampliamente soportado, seguro si usas work factor >= 12</li>
+<li><strong>scrypt</strong> — bueno, menos soportado</li>
+</ol>
+<p>NUNCA uses MD5, SHA1, SHA256 directamente para passwords. Son demasiado rápidos.</p>
+</blockquote>
+<h3 id="rate-limiting-para-login"><a aria-hidden="true" tabindex="-1" href="#rate-limiting-para-login"><span class="icon icon-link"></span></a>Rate Limiting para login</h3>
+<pre><code># Protección contra brute-force
+POST /api/login
+→ 429 Too Many Requests (después de 5 intentos fallidos en 5 minutos)
+Retry-After: 300
+
+# Protección contra credential stuffing
+POST /api/login
+→ 401 Unauthorized (con mensaje genérico: "Credenciales inválidas")
+   ← NO decir "el email no existe" o "el password es incorrecto"
+</code></pre>
+<h3 id="best-practices"><a aria-hidden="true" tabindex="-1" href="#best-practices"><span class="icon icon-link"></span></a>Best practices</h3>
+<ol>
+<li><strong>HTTPS siempre</strong> — sin HTTPS, cualquier auth es insegura</li>
+<li><strong>Passwords con bcrypt/Argon2</strong> — nunca en texto plano ni hash simple</li>
+<li><strong>MFA para cuentas sensibles</strong> — TOTP o WebAuthn</li>
+<li><strong>Tokens con TTL corto</strong> — access tokens 15min, refresh tokens 7-30 días</li>
+<li><strong>Headers seguros</strong> — HttpOnly, Secure, SameSite para cookies</li>
+<li><strong>No expongas mensajes de error específicos</strong> — "Credenciales inválidas" en vez de "El password es incorrecto"</li>
+<li><strong>Rate limiting en login</strong> — protege contra brute-force y credential stuffing</li>
+<li><strong>Rotación de API keys</strong> — cada 3-6 meses</li>
+<li><strong>Loggear intentos de auth fallidos</strong> — para detección de ataques</li>
+</ol>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Autenticación = "¿quién eres?", Autorización = "¿qué puedes hacer?"</li>
+<li>Basic Auth: simple, pero obsoleto (solo sobre HTTPS)</li>
+<li>Bearer Tokens (JWT): stateless, ideal para APIs</li>
+<li>API Keys: para servicios, no para usuarios finales</li>
+<li>OAuth 2.0 + OIDC: para login con proveedores (Google, GitHub, etc.)</li>
+<li>MFA: dos factores de verificación para mayor seguridad</li>
+<li>NUNCA almacenes passwords en texto plano o con hash simple</li>
+<li>Rate limiting es esencial en endpoints de login</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+La autenticación perfecta no existe. Cada método tiene trade-offs entre seguridad, usabilidad y complejidad. Elige según tu caso de uso y nunca te quedes con lo obsoleto.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookies y sesiones</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+<tr>
+<td>JWT</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+<tr>
+<td>HTTP headers</td>
+<td>[[05-http-profundo]]</td>
+</tr>
+<tr>
+<td>Status codes (401, 403)</td>
+<td>[[06-status-codes]]</td>
+</tr>
+<tr>
+<td>HTTPS/TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

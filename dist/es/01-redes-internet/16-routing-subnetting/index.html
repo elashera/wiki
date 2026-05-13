@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Routing, subnetting y CIDR</h1> <div class="article-body"><h1 id="routing-subnetting-y-cidr"><a aria-hidden="true" tabindex="-1" href="#routing-subnetting-y-cidr"><span class="icon icon-link"></span></a>Routing, subnetting y CIDR</h1>
+<blockquote>
+<p>[!tip] Routing en una frase
+<strong>Routing</strong> es el proceso de decidir hacia dónde enviar un packet de red. Cada router consulta su tabla de enrutamiento y elige la mejor ruta hacia el destino.</p>
+</blockquote>
+<h2 id="qué-es-routing"><a aria-hidden="true" tabindex="-1" href="#qué-es-routing"><span class="icon icon-link"></span></a>¿Qué es routing?</h2>
+<p>El <strong>enrutamiento</strong> es el proceso de seleccionar la ruta que siguen los packets a través de una red. Cuando un packet necesita ir de tu PC a un servidor en otro continente, pasa por múltiples routers, cada uno tomando una decisión sobre a dónde enviar el packet a continuación.</p>
+<h3 id="el-packet-ip-y-la-tabla-de-enrutamiento"><a aria-hidden="true" tabindex="-1" href="#el-packet-ip-y-la-tabla-de-enrutamiento"><span class="icon icon-link"></span></a>El packet IP y la tabla de enrutamiento</h3>
+<p>Cada router mantiene una <strong>tabla de enrutamiento</strong> que le dice hacia dónde enviar cada destino:</p>
+<pre><code>Tabla de enrutamiento típica:
+┌──────────────────┬──────────────────┬──────────────┬──────────┐
+│ Destination      │ Next Hop         │ Interface    │ Metric   │
+├──────────────────┼──────────────────┼──────────────┼──────────┤
+│ 192.168.1.0/24   │ Directo          │ eth0         │ 0        │
+│ 0.0.0.0/0        │ 10.0.0.1         │ eth1         │ 100      │ ← Default route
+│ 10.0.0.0/8       │ 192.168.1.100    │ eth0         │ 20       │
+│ 172.16.0.0/12    │ 10.0.0.5         │ eth1         │ 30       │
+└──────────────────┴──────────────────┴──────────────┴──────────┘
+</code></pre>
+<p><strong>Campos:</strong></p>
+<ul>
+<li><strong>Destination</strong>: La red de destino (en formato CIDR)</li>
+<li><strong>Next Hop</strong>: El siguiente router hacia el destino (o "Directo" si está en la red local)</li>
+<li><strong>Interface</strong>: La interfaz de red por donde enviar</li>
+<li><strong>Metric</strong>: Costo de la ruta (menor = mejor)</li>
+</ul>
+<h3 id="longest-prefix-match"><a aria-hidden="true" tabindex="-1" href="#longest-prefix-match"><span class="icon icon-link"></span></a>Longest Prefix Match</h3>
+<p>Cuando un packet llega a un router, el router busca la ruta con la coincidencia <strong>más larga</strong> (más específica):</p>
+<pre><code>Packet con destino: 172.16.5.10
+Tabla del router:
+  172.16.0.0/12  → Next Hop A
+  172.16.5.0/24  → Next Hop B
+  0.0.0.0/0      → Default
+
+El router busca la coincidencia más larga:
+  172.16.5.0/24 → 24 bits coinciden → MÁS ESPECÍFICO → Usa Next Hop B
+</code></pre>
+<h2 id="subnetting"><a aria-hidden="true" tabindex="-1" href="#subnetting"><span class="icon icon-link"></span></a>Subnetting</h2>
+<p><strong>Subnetting</strong> es el proceso de dividir una red grande en subredes más pequeñas. Esto permite:</p>
+<ul>
+<li>Mejor organización (departamentos, edificios, funciones)</li>
+<li>Menor tráfico broadcast</li>
+<li>Mejor seguridad (segmentación)</li>
+<li>Uso más eficiente de IPs</li>
+</ul>
+<h3 id="máscaras-de-red"><a aria-hidden="true" tabindex="-1" href="#máscaras-de-red"><span class="icon icon-link"></span></a>Máscaras de red</h3>
+<p>Una <strong>máscara de subred</strong> indica qué parte de una IP es la red y qué parte es el host:</p>
+<pre><code>IP:          192.168.1.50
+Máscara:     255.255.255.0
+Binario:     11111111.11111111.11111111.00000000
+             │││││││││││││││││││││││││││││││││││││││││││││
+             │└───────────────│ └───────── Host (50)
+             │
+             └──────────────── Red (192.168.1)
+</code></pre>
+<p>La máscara 255.255.255.0 = <code>/24</code> (24 bits para la red, 8 bits para hosts = 254 hosts utilizables).</p>
+<h3 id="ejemplo-de-subnetting"><a aria-hidden="true" tabindex="-1" href="#ejemplo-de-subnetting"><span class="icon icon-link"></span></a>Ejemplo de subnetting</h3>
+<p>Imagina que tienes la red <code>192.168.1.0/24</code> (254 hosts) y la necesitas dividir en 4 subredes:</p>
+<pre><code>Subred 1: 192.168.1.0/26  → 64 hosts  → 192.168.1.1 - 192.168.1.62
+Subred 2: 192.168.1.64/26 → 64 hosts  → 192.168.1.65 - 192.168.1.126
+Subred 3: 192.168.1.128/26→ 64 hosts  → 192.168.1.129 - 192.168.1.190
+Subred 4: 192.168.1.192/26→ 64 hosts  → 192.168.1.193 - 192.168.1.254
+</code></pre>
+<p>Para dividir en 4 subredes, necesitamos 2 bits extra (2² = 4), así que pasamos de /24 a /26.</p>
+<h3 id="cálculo-de-hosts-utilizables"><a aria-hidden="true" tabindex="-1" href="#cálculo-de-hosts-utilizables"><span class="icon icon-link"></span></a>Cálculo de hosts utilizables</h3>
+<table>
+<thead>
+<tr>
+<th>Máscara</th>
+<th>CIDR</th>
+<th>Total IPs</th>
+<th>Hosts utilizables</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>255.255.255.252</td>
+<td>/30</td>
+<td>4</td>
+<td>2</td>
+<td>.3</td>
+</tr>
+<tr>
+<td>255.255.255.248</td>
+<td>/29</td>
+<td>8</td>
+<td>6</td>
+<td>.7</td>
+</tr>
+<tr>
+<td>255.255.255.240</td>
+<td>/28</td>
+<td>16</td>
+<td>14</td>
+<td>.15</td>
+</tr>
+<tr>
+<td>255.255.255.224</td>
+<td>/27</td>
+<td>32</td>
+<td>30</td>
+<td>.31</td>
+</tr>
+<tr>
+<td>255.255.255.192</td>
+<td>/26</td>
+<td>64</td>
+<td>62</td>
+<td>.63</td>
+</tr>
+<tr>
+<td>255.255.255.128</td>
+<td>/25</td>
+<td>128</td>
+<td>126</td>
+<td>.127</td>
+</tr>
+<tr>
+<td>255.255.255.0</td>
+<td>/24</td>
+<td>256</td>
+<td>254</td>
+<td>.255</td>
+</tr>
+<tr>
+<td>255.255.0.0</td>
+<td>/16</td>
+<td>65536</td>
+<td>65534</td>
+<td>.255.255</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Fórmula rápida
+Hosts utilizables = 2^(32 - CIDR) - 2
+Los -2 son para la dirección de red (primera) y la de broadcast (última).</p>
+<p>Ejemplo: /24 → 2^(32-24) - 2 = 2^8 - 2 = 256 - 2 = 254 hosts</p>
+</blockquote>
+<h2 id="cidr-classless-inter-domain-routing"><a aria-hidden="true" tabindex="-1" href="#cidr-classless-inter-domain-routing"><span class="icon icon-link"></span></a>CIDR (Classless Inter-Domain Routing)</h2>
+<p><strong>CIDR</strong> reemplazó el antiguo sistema de clases (A, B, C) que era rígido e ineficiente. Con CIDR, puedes crear subredes de cualquier tamaño.</p>
+<h3 id="formato-cidr"><a aria-hidden="true" tabindex="-1" href="#formato-cidr"><span class="icon icon-link"></span></a>Formato CIDR</h3>
+<pre><code>192.168.1.0/24  → 256 IPs (192.168.1.0 a 192.168.1.255)
+10.0.0.0/8      → 16,777,216 IPs
+172.16.0.0/12   → 1,048,576 IPs
+192.168.0.0/16  → 65,536 IPs
+</code></pre>
+<h3 id="comparación-clases-vs-cidr"><a aria-hidden="true" tabindex="-1" href="#comparación-clases-vs-cidr"><span class="icon icon-link"></span></a>Comparación: Clases vs CIDR</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Clases (obsoleto)</th>
+<th>CIDR (moderno)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Clase A</strong></td>
+<td>10.0.0.0/8 (16M IPs)</td>
+<td>10.0.0.0/24 (256 IPs) — flexible</td>
+</tr>
+<tr>
+<td><strong>Clase B</strong></td>
+<td>172.16.0.0/16 (65K IPs)</td>
+<td>172.16.0.0/20 (4096 IPs)</td>
+</tr>
+<tr>
+<td><strong>Clase C</strong></td>
+<td>192.168.0.0/24 (256 IPs)</td>
+<td>192.168.0.0/27 (32 IPs)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="route-summarization-sumarización"><a aria-hidden="true" tabindex="-1" href="#route-summarization-sumarización"><span class="icon icon-link"></span></a>Route Summarization (Sumarización)</h3>
+<p>Route summarization agrupa múltiples subredes en un solo route:</p>
+<pre><code>Tenemos estas subredes:
+  192.168.1.0/24
+  192.168.2.0/24
+  192.168.3.0/24
+  192.168.4.0/24
+
+Podemos sumarizarlas en:
+  192.168.0.0/22
+  (cubre de 192.168.0.0 a 192.168.3.255 — 1024 IPs)
+</code></pre>
+<p>Esto reduce el tamaño de las tablas de enrutamiento y es fundamental para la escalabilidad de Internet (los routers de borde de Internet solo tienen ~1M de routes, no ~1 billones).</p>
+<h2 id="route-types"><a aria-hidden="true" tabindex="-1" href="#route-types"><span class="icon icon-link"></span></a>Route types</h2>
+<h3 id="static-routes"><a aria-hidden="true" tabindex="-1" href="#static-routes"><span class="icon icon-link"></span></a>Static routes</h3>
+<p>Configuradas manualmente por un administrador:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> route</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 10.0.0.0/8</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> via</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dev</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cisco</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> route</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 10.0.0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 255.0.0.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.1</span></span></code></pre></figure>
+<p><strong>Ventaja:</strong> Simple, predecible, sin overhead de CPU.
+<strong>Desventaja:</strong> No se adapta a cambios de topología, requiere intervención manual.</p>
+<h3 id="dynamic-routes"><a aria-hidden="true" tabindex="-1" href="#dynamic-routes"><span class="icon icon-link"></span></a>Dynamic routes</h3>
+<p>Protocolos de enrutamiento que descubren rutas automáticamente:</p>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Tipo</th>
+<th>Uso</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OSPF</strong></td>
+<td>Interior (IGP)</td>
+<td>Redes internas</td>
+<td>Basado en enlaces (link-state), converge rápido</td>
+</tr>
+<tr>
+<td><strong>BGP</strong></td>
+<td>Exterior (EGP)</td>
+<td>Internet</td>
+<td>Basado en políticas, escala a Internet global</td>
+</tr>
+<tr>
+<td><strong>EIGRP</strong></td>
+<td>Interior (IGP)</td>
+<td>Cisco-only</td>
+<td>Mejorado de RIP, converge rápido</td>
+</tr>
+<tr>
+<td><strong>RIP</strong></td>
+<td>Interior (IGP)</td>
+<td>Redes pequeñas</td>
+<td>Obsoleto, basado en hops</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ospf-open-shortest-path-first"><a aria-hidden="true" tabindex="-1" href="#ospf-open-shortest-path-first"><span class="icon icon-link"></span></a>OSPF (Open Shortest Path First)</h4>
+<p>OSPF es el protocolo de enrutamiento interior más usado:</p>
+<pre><code>Topología:
+  R1 —— R2 —— R3
+   │             │
+  R4 —— R5 —— R6
+
+OSPF funciona así:
+1. Cada router descubre sus vecinos por multicast
+2. Cada router envía su LSAs (Link State Advertisements)
+3. Todos los routers construyen la misma base de datos topológica (SPF tree)
+4. Cada router calcula el camino más corto (Dijkstra)
+5. Se actualizan las tablas de enrutamiento
+</code></pre>
+<h4 id="bgp-border-gateway-protocol"><a aria-hidden="true" tabindex="-1" href="#bgp-border-gateway-protocol"><span class="icon icon-link"></span></a>BGP (Border Gateway Protocol)</h4>
+<p>BGP es el protocolo que hace funcionar Internet. Es el <strong>único</strong> protocolo de enrutamiento que se usa entre ISPs:</p>
+<pre><code>ISP A (AS 64500) —— Peer ——— ISP B (AS 64501)
+     │                                      │
+  Tu empresa                    Otro ISP
+  (AS 64500)                     (AS 64502)
+
+BGP es un protocolo de "ruta-vector":
+- Cada route tiene una lista de ASes por los que pasa
+- Los routers eligen rutas basándose en políticas, no solo métricas
+- BGP escala a ~1M+ routes en la tabla global de Internet
+</code></pre>
+<h2 id="route-metrics"><a aria-hidden="true" tabindex="-1" href="#route-metrics"><span class="icon icon-link"></span></a>Route metrics</h2>
+<p>Los protocolos de enrutamiento dinámico usan diferentes métricas para elegir la mejor ruta:</p>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Métrica</th>
+<th>Qué mide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RIP</strong></td>
+<td>Hop count</td>
+<td>Número de routers que atraviesa</td>
+</tr>
+<tr>
+<td><strong>OSPF</strong></td>
+<td>Costo (basado en bandwidth)</td>
+<td>Ancho de banda de la enlace</td>
+</tr>
+<tr>
+<td><strong>EIGRP</strong></td>
+<td>Composite metric</td>
+<td>Bandwidth + delay + load + reliability</td>
+</tr>
+<tr>
+<td><strong>BGP</strong></td>
+<td>Múltiples atributos</td>
+<td>AS path, local preference, MED, etc.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ipv6-subnetting"><a aria-hidden="true" tabindex="-1" href="#ipv6-subnetting"><span class="icon icon-link"></span></a>IPv6 subnetting</h2>
+<p>El subnetting en IPv6 es más simple porque se usa <strong>solo /64</strong> para la mayoría de redes:</p>
+<pre><code>Tu asignación: 2001:db8:abcd:0012::/48
+
+Subredes disponibles (/64):
+  2001:db8:abcd:0001::/64  → Red 1 (64 hosts, en realidad 2^64)
+  2001:db8:abcd:0002::/64  → Red 2
+  2001:db8:abcd:0003::/64  → Red 3
+  2001:db8:abcd:0004::/64  → Red 4
+  ...
+  2001:db8:abcd:ffff::/64  → Red 65536
+</code></pre>
+<p>En IPv6, cada subred /64 tiene 2⁶⁴ direcciones. No necesitas preocuparte por el "tamaño" de la subred — siempre es /64.</p>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Routing es el proceso de decidir hacia dónde enviar cada packet</li>
+<li>La tabla de enrutamiento conecta destinos con next hops y interfaces</li>
+<li>Longest prefix match: el router elige la coincidencia más específica</li>
+<li>Subnetting divide una red grande en subredes más pequeñas</li>
+<li>CIDR (/24, /16, /8) es el formato moderno para especificar redes</li>
+<li>Route summarización agrupa múltiples subredes en un solo route</li>
+<li>OSPF para enrutamiento interior, BGP para enrutamiento entre ISPs</li>
+<li>IPv6 usa /64 como estándar para todas las subredes</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Routing es la inteligencia de Internet. Cada router toma una decisión local (mi tabla de enrutamiento) que, colectivamente, crea la ruta global de un packet desde el origen hasta el destino.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modelo OSI</td>
+<td>[[15-modelo-osi-tcpip]] (capa de red)</td>
+</tr>
+<tr>
+<td>NAT</td>
+<td>[[13-nat-red]] (cómo NAT interactúa con routing)</td>
+</tr>
+<tr>
+<td>Firewalls</td>
+<td>[[17-firewalls-proxies-loadbalancers]] (firewalls que filtran routes)</td>
+</tr>
+<tr>
+<td>Puertos</td>
+<td>[[12-puertos]] (dirección IP + puerto = destino completo)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

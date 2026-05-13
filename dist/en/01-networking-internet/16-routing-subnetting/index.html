@@ -1,0 +1,488 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization</h1> <div class="article-body"><h1 id="routing-subnetting-cidr-packet-routing-subnet-masks-vlsm-route-summarization"><a aria-hidden="true" tabindex="-1" href="#routing-subnetting-cidr-packet-routing-subnet-masks-vlsm-route-summarization"><span class="icon icon-link"></span></a>Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization</h1>
+<blockquote>
+<p>[!tip] Routing in a nutshell
+<strong>Routing</strong> is the process of deciding where to send a network packet. Each router consults its routing table and chooses the best path to the destination. <strong>Subnetting</strong> is dividing a large network into smaller subnets. <strong>CIDR</strong> is the notation used to describe these networks. This article covers all three in depth.</p>
+</blockquote>
+<h2 id="what-is-routing"><a aria-hidden="true" tabindex="-1" href="#what-is-routing"><span class="icon icon-link"></span></a>What is routing?</h2>
+<p><strong>Routing</strong> is the process of selecting paths for traffic on a network. When a packet needs to go from your PC to a server on another continent, it passes through multiple routers, each making a decision about where to send the packet next.</p>
+<h3 id="the-ip-packet-and-the-routing-table"><a aria-hidden="true" tabindex="-1" href="#the-ip-packet-and-the-routing-table"><span class="icon icon-link"></span></a>The IP packet and the routing table</h3>
+<p>Each router maintains a <strong>routing table</strong> that tells it where to send each destination:</p>
+<pre><code>Typical routing table:
+┌──────────────────┬──────────────────┬──────────────┬──────────┐
+│ Destination      │ Next Hop         │ Interface    │ Metric   │
+├──────────────────┼──────────────────┼──────────────┼──────────┤
+│ 192.168.1.0/24   │ Direct           │ eth0         │ 0        │
+│ 0.0.0.0/0        │ 10.0.0.1         │ eth1         │ 100      │ ← Default route
+│ 10.0.0.0/8       │ 192.168.1.100    │ eth0         │ 20       │
+│ 172.16.0.0/12    │ 10.0.0.5         │ eth1         │ 30       │
+└──────────────────┴──────────────────┴──────────────┴──────────┘
+</code></pre>
+<p><strong>Fields:</strong></p>
+<ul>
+<li><strong>Destination</strong>: The network destination (in CIDR format)</li>
+<li><strong>Next Hop</strong>: The next router to forward to (or "Direct" if on the local network)</li>
+<li><strong>Interface</strong>: The network interface to send through</li>
+<li><strong>Metric</strong>: The cost of the route (lower = better)</li>
+</ul>
+<h3 id="longest-prefix-match"><a aria-hidden="true" tabindex="-1" href="#longest-prefix-match"><span class="icon icon-link"></span></a>Longest Prefix Match</h3>
+<p>When a packet arrives at a router, the router looks for the <strong>longest matching prefix</strong> (most specific):</p>
+<pre><code>Packet with destination: 172.16.5.10
+Router's table:
+  172.16.0.0/12  → Next Hop A
+  172.16.5.0/24  → Next Hop B
+  0.0.0.0/0      → Default
+
+The router finds the longest match:
+  172.16.5.0/24 → 24 bits match → MOST SPECIFIC → Use Next Hop B
+</code></pre>
+<blockquote>
+<p>[!tip] Why longest prefix?
+A more specific route (longer prefix) is always better than a less specific one. A /24 subnet is more specific than a /12 supernetwork, which is more specific than the default route.</p>
+</blockquote>
+<h2 id="cidr-classless-inter-domain-routing"><a aria-hidden="true" tabindex="-1" href="#cidr-classless-inter-domain-routing"><span class="icon icon-link"></span></a>CIDR (Classless Inter-Domain Routing)</h2>
+<p>CIDR is the notation used to describe IP networks and their size:</p>
+<pre><code>Format:  IP_address/prefix_length
+Example: 192.168.1.0/24
+
+The /24 means the first 24 bits are the network portion, the remaining 8 bits are for hosts.
+</code></pre>
+<h3 id="understanding-cidr-notation"><a aria-hidden="true" tabindex="-1" href="#understanding-cidr-notation"><span class="icon icon-link"></span></a>Understanding CIDR notation</h3>
+<pre><code>192.168.1.0/24:
+  Network:  192.168.1.0    (first 24 bits)
+  Host:     0.0.0.0 - 255.255.255.255  (last 8 bits)
+  Total IPs: 2^(32-24) = 2^8 = 256
+  Usable:    256 - 2 = 254 (network + broadcast addresses reserved)
+  Range:     192.168.1.1 - 192.168.1.254
+
+10.0.0.0/8:
+  Network:  10.0.0.0       (first 8 bits)
+  Host:     0.0.0.0 - 255.255.255.255  (last 24 bits)
+  Total IPs: 2^(32-8) = 2^24 = 16,777,216
+  Usable:    16,777,214
+
+172.16.0.0/12:
+  Network:  172.16.0.0     (first 12 bits)
+  Host:     0.0.0.0 - 15.255.255.255  (last 20 bits)
+  Total IPs: 2^(32-12) = 2^20 = 1,048,576
+  Usable:    1,048,574
+</code></pre>
+<h3 id="cidr-to-subnet-mask-conversion"><a aria-hidden="true" tabindex="-1" href="#cidr-to-subnet-mask-conversion"><span class="icon icon-link"></span></a>CIDR to subnet mask conversion</h3>
+<table>
+<thead>
+<tr>
+<th>CIDR</th>
+<th>Subnet Mask</th>
+<th>Wildcard Mask</th>
+<th>Host bits</th>
+<th>Usable hosts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/8</td>
+<td>255.0.0.0</td>
+<td>0.255.255.255</td>
+<td>24</td>
+<td>16,777,214</td>
+</tr>
+<tr>
+<td>/12</td>
+<td>255.240.0.0</td>
+<td>0.15.255.255</td>
+<td>20</td>
+<td>1,048,574</td>
+</tr>
+<tr>
+<td>/16</td>
+<td>255.255.0.0</td>
+<td>0.0.255.255</td>
+<td>16</td>
+<td>65,534</td>
+</tr>
+<tr>
+<td>/20</td>
+<td>255.255.240.0</td>
+<td>0.0.15.255</td>
+<td>12</td>
+<td>4,094</td>
+</tr>
+<tr>
+<td>/24</td>
+<td>255.255.255.0</td>
+<td>0.0.0.255</td>
+<td>8</td>
+<td>254</td>
+</tr>
+<tr>
+<td>/26</td>
+<td>255.255.255.192</td>
+<td>0.0.0.63</td>
+<td>6</td>
+<td>62</td>
+</tr>
+<tr>
+<td>/27</td>
+<td>255.255.255.224</td>
+<td>0.0.0.31</td>
+<td>5</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/28</td>
+<td>255.255.255.240</td>
+<td>0.0.0.15</td>
+<td>4</td>
+<td>14</td>
+</tr>
+<tr>
+<td>/30</td>
+<td>255.255.255.252</td>
+<td>0.0.0.3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>/32</td>
+<td>255.255.255.255</td>
+<td>0.0.0.0</td>
+<td>0</td>
+<td>1 (single host)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="binary-calculation"><a aria-hidden="true" tabindex="-1" href="#binary-calculation"><span class="icon icon-link"></span></a>Binary calculation</h3>
+<pre><code>CIDR /26 subnet mask:
+11111111.11111111.11111111.11000000
+= 255.255.255.192
+
+CIDR /28 subnet mask:
+11111111.11111111.11111111.11110000
+= 255.255.255.240
+
+Wildcard mask = bitwise NOT of subnet mask:
+  /24:  255.255.255.0 → 0.0.0.255
+  /26:  255.255.255.192 → 0.0.0.63
+  /28:  255.255.255.240 → 0.0.0.15
+</code></pre>
+<h2 id="subnetting-dividing-networks"><a aria-hidden="true" tabindex="-1" href="#subnetting-dividing-networks"><span class="icon icon-link"></span></a>Subnetting: Dividing networks</h2>
+<p><strong>Subnetting</strong> is the process of dividing a large network into smaller sub-networks (subnets).</p>
+<h3 id="why-subnet"><a aria-hidden="true" tabindex="-1" href="#why-subnet"><span class="icon icon-link"></span></a>Why subnet?</h3>
+<table>
+<thead>
+<tr>
+<th>Reason</th>
+<th>Benefit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security</strong></td>
+<td>Isolate departments, limit broadcast domains</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Reduce broadcast traffic, improve efficiency</td>
+</tr>
+<tr>
+<td><strong>Organization</strong></td>
+<td>Logical grouping (HR, Engineering, IoT)</td>
+</tr>
+<tr>
+<td><strong>Address management</strong></td>
+<td>Use IP space efficiently</td>
+</tr>
+</tbody>
+</table>
+<h3 id="subnetting-example"><a aria-hidden="true" tabindex="-1" href="#subnetting-example"><span class="icon icon-link"></span></a>Subnetting example</h3>
+<p>Starting with: <code>192.168.1.0/24</code> (254 usable hosts)</p>
+<p>Need to create subnets for:</p>
+<ul>
+<li>Engineering: 50 hosts</li>
+<li>HR: 10 hosts</li>
+<li>IoT devices: 5 hosts</li>
+<li>Point-to-point links: 2 hosts each</li>
+</ul>
+<pre><code>Solution using VLSM (Variable Length Subnet Masking):
+
+1. Engineering: Need 50 hosts → /26 (62 usable hosts)
+   192.168.1.0/26
+   Range: 192.168.1.1 - 192.168.1.62
+   Broadcast: 192.168.1.63
+
+2. HR: Need 10 hosts → /28 (14 usable hosts)
+   192.168.1.64/28
+   Range: 192.168.1.65 - 192.168.1.78
+   Broadcast: 192.168.1.79
+
+3. IoT: Need 5 hosts → /29 (6 usable hosts)
+   192.168.1.80/29
+   Range: 192.168.1.81 - 192.168.1.86
+   Broadcast: 192.168.1.87
+
+4. Link to ISP: Need 2 hosts → /30 (2 usable hosts)
+   192.168.1.88/30
+   Range: 192.168.1.89 - 192.168.1.90
+   Broadcast: 192.168.1.91
+
+Remaining: 192.168.1.92/30 to 192.168.1.255/32 available for future use
+</code></pre>
+<h3 id="vlsm-variable-length-subnet-masking"><a aria-hidden="true" tabindex="-1" href="#vlsm-variable-length-subnet-masking"><span class="icon icon-link"></span></a>VLSM (Variable Length Subnet Masking)</h3>
+<p>VLSM allows different subnets within the same network to have different sizes:</p>
+<pre><code>Traditional (fixed-length):
+  192.168.1.0/26  → 62 hosts each → All 4 subnets get 62 hosts
+  → HR uses 10 of 62 → 52 wasted IPs!
+
+VLSM:
+  192.168.1.0/26  → Engineering: 62 hosts (50 used, 12 wasted)
+  192.168.1.64/28 → HR: 14 hosts (10 used, 4 wasted)
+  192.168.1.80/29 → IoT: 6 hosts (5 used, 1 wasted)
+  → Efficient use of IP addresses
+</code></pre>
+<blockquote>
+<p>[!tip] VLSM is mandatory with CIDR
+Classful networking (fixed subnet sizes) is obsolete. CIDR + VLSM allow efficient IP address allocation.</p>
+</blockquote>
+<h3 id="supernetting-route-aggregation"><a aria-hidden="true" tabindex="-1" href="#supernetting-route-aggregation"><span class="icon icon-link"></span></a>Supernetting (Route Aggregation)</h3>
+<p>Combining multiple smaller networks into a single larger route:</p>
+<pre><code>Four /24 networks:
+  192.168.1.0/24
+  192.168.2.0/24
+  192.168.3.0/24
+  192.168.4.0/24
+
+Can be aggregated to:
+  192.168.0.0/22
+
+Router only needs ONE route entry instead of four!
+</code></pre>
+<pre><code>Binary comparison:
+  192.168.1.0  = 11000000.10101000.00000001.00000000
+  192.168.2.0  = 11000000.10101000.00000010.00000000
+  192.168.3.0  = 11000000.10101000.00000011.00000000
+  192.168.4.0  = 11000000.10101000.00000100.00000000
+
+Common prefix: 11000000.10101000.000000  (22 bits)
+Result: 192.168.0.0/22
+</code></pre>
+<h2 id="route-types"><a aria-hidden="true" tabindex="-1" href="#route-types"><span class="icon icon-link"></span></a>Route types</h2>
+<h3 id="static-routes"><a aria-hidden="true" tabindex="-1" href="#static-routes"><span class="icon icon-link"></span></a>Static routes</h3>
+<p>Manually configured by the network administrator:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux: Add a static route</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> route</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 10.0.0.0/8</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> via</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> route</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> default</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> via</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Nginx: Show routing table</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> route</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> show</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># default via 192.168.1.1 dev eth1 proto dhcp metric 100</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 10.0.0.0/8 via 192.168.1.1 dev eth0 proto static metric 20</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.10 metric 100</span></span></code></pre></figure>
+<p><strong>Pros:</strong> Simple, predictable, no overhead
+<strong>Cons:</strong> Must be manually updated, doesn't adapt to failures</p>
+<h3 id="dynamic-routes-routing-protocols"><a aria-hidden="true" tabindex="-1" href="#dynamic-routes-routing-protocols"><span class="icon icon-link"></span></a>Dynamic routes (routing protocols)</h3>
+<h4 id="ospf-open-shortest-path-first"><a aria-hidden="true" tabindex="-1" href="#ospf-open-shortest-path-first"><span class="icon icon-link"></span></a>OSPF (Open Shortest Path First)</h4>
+<p>Link-state routing protocol used within a single organization (Interior Gateway Protocol):</p>
+<pre><code>Router 1 ─── Router 2 ─── Router 3
+    │              │              │
+    └──────────────┴──────────────┘
+
+OSPF:
+1. All routers discover neighbors
+2. Each router builds a map of the entire network (link-state database)
+3. Each router runs Dijkstra's algorithm to calculate shortest paths
+4. Each router builds its own routing table
+5. If a link fails, routers recalculate
+
+Key features:
+  - Convergence: All routers eventually have the same view
+  - Fast convergence: Routes update quickly when topology changes
+  - Uses SPF (Shortest Path First) algorithm
+  - Area-based: Hierarchical (Area 0 = backbone)
+  - Metric: Cost based on bandwidth
+</code></pre>
+<h4 id="bgp-border-gateway-protocol"><a aria-hidden="true" tabindex="-1" href="#bgp-border-gateway-protocol"><span class="icon icon-link"></span></a>BGP (Border Gateway Protocol)</h4>
+<p>Path-vector routing protocol used between organizations (Exterior Gateway Protocol). BGP is what makes the Internet work:</p>
+<pre><code>AS 64500 (MyCompany)  ────  AS 1299 (Telia)  ────  AS 3356 (Level3)
+       │                         │                         │
+       └─────────────────────────┴─────────────────────────┘
+
+BGP:
+1. Each AS announces its IP prefixes to neighbors
+2. BGP peers exchange routing information
+3. Route selection based on multiple attributes:
+   - AS Path length (shorter is better)
+   - Local Preference (higher is better)
+   - MED (lower is better)
+   - Origin type (IGP > EGP > Incomplete)
+4. No shortest-path algorithm — policy-based routing
+5. Convergence can take minutes, not seconds
+
+Key features:
+  - Policy-based (not just shortest path)
+  - Path vector (not link-state)
+  - Handles thousands of routes per peer
+  - Uses TCP (port 179) for reliable communication
+  - The protocol that actually runs the Internet
+</code></pre>
+<h3 id="default-route"><a aria-hidden="true" tabindex="-1" href="#default-route"><span class="icon icon-link"></span></a>Default route</h3>
+<p>The default route (0.0.0.0/0) is used when no more specific route matches:</p>
+<pre><code>Packet destination: 8.8.8.8
+
+Routing table:
+  10.0.0.0/8     → 192.168.1.100 (no match)
+  172.16.0.0/12  → 10.0.0.5 (no match)
+  0.0.0.0/0      → 192.168.1.1 (MATCH!)
+
+→ Forward to gateway 192.168.1.1
+</code></pre>
+<h2 id="practical-subnetting-calculations"><a aria-hidden="true" tabindex="-1" href="#practical-subnetting-calculations"><span class="icon icon-link"></span></a>Practical subnetting calculations</h2>
+<h3 id="how-to-calculate-subnet-information"><a aria-hidden="true" tabindex="-1" href="#how-to-calculate-subnet-information"><span class="icon icon-link"></span></a>How to calculate subnet information</h3>
+<p>Given: <code>192.168.10.50/27</code></p>
+<pre><code>Step 1: Determine network address
+  /27 = 255.255.255.224
+  IP:   11000000.10101000.00001010.00110010
+  Mask: 11111111.11111111.11111111.11100000
+  AND:  11000000.10101000.00001010.00100000
+  = 192.168.10.32 (Network address)
+
+Step 2: Determine broadcast address
+  Network: 11000000.10101000.00001010.00100000
+  Host all 1s: 11000000.10101000.00001010.00111111
+  = 192.168.10.63 (Broadcast address)
+
+Step 3: Usable range
+  First host:  192.168.10.33
+  Last host:   192.168.10.62
+
+Step 4: Number of hosts
+  Host bits: 32 - 27 = 5
+  Total IPs: 2^5 = 32
+  Usable: 32 - 2 = 30
+</code></pre>
+<h3 id="quick-reference-table"><a aria-hidden="true" tabindex="-1" href="#quick-reference-table"><span class="icon icon-link"></span></a>Quick reference table</h3>
+<table>
+<thead>
+<tr>
+<th>Subnet</th>
+<th>Network</th>
+<th>First Host</th>
+<th>Last Host</th>
+<th>Broadcast</th>
+<th>Usable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0/25</td>
+<td>.0</td>
+<td>.1</td>
+<td>.126</td>
+<td>.127</td>
+<td>126</td>
+</tr>
+<tr>
+<td>192.168.1.128/25</td>
+<td>.128</td>
+<td>.129</td>
+<td>.254</td>
+<td>.255</td>
+<td>126</td>
+</tr>
+<tr>
+<td>10.0.0.0/26</td>
+<td>.0</td>
+<td>.1</td>
+<td>.62</td>
+<td>.63</td>
+<td>62</td>
+</tr>
+<tr>
+<td>10.0.0.64/26</td>
+<td>.64</td>
+<td>.65</td>
+<td>.126</td>
+<td>.127</td>
+<td>62</td>
+</tr>
+<tr>
+<td>10.0.0.128/26</td>
+<td>.128</td>
+<td>.129</td>
+<td>.190</td>
+<td>.191</td>
+<td>62</td>
+</tr>
+<tr>
+<td>10.0.0.192/26</td>
+<td>.192</td>
+<td>.193</td>
+<td>.254</td>
+<td>.255</td>
+<td>62</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is Internet</td>
+<td>[[01-what-is-internet]]</td>
+</tr>
+<tr>
+<td>Ports</td>
+<td>[[12-ports]]</td>
+</tr>
+<tr>
+<td>NAT</td>
+<td>[[13-nat]]</td>
+</tr>
+<tr>
+<td>OSI Model</td>
+<td>[[15-osi-model-tcpip]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>Routing</strong> is how packets find their way across networks; each router uses a routing table to make forwarding decisions.</li>
+<li><strong>CIDR</strong> notation (/prefix) describes networks and their size — the prefix is the number of bits in the network portion.</li>
+<li><strong>Subnetting</strong> divides a large network into smaller subnets for security, organization, and efficiency.</li>
+<li><strong>VLSM</strong> allows subnets of different sizes within the same address space.</li>
+<li><strong>Route summarization</strong> combines multiple routes into a single entry, reducing routing table size.</li>
+<li><strong>OSPF</strong> is for internal routing (within an organization); <strong>BGP</strong> is for external routing (between organizations, i.e., the Internet).</li>
+<li>Always choose the right subnet size to avoid wasting IP addresses.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Routing and subnetting are fundamental networking skills. Whether you're designing a home network, configuring a cloud VPS, or troubleshooting connectivity, understanding CIDR, subnet masks, and longest prefix match is essential.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

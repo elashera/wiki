@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Códigos de estado HTTP</h1> <div class="article-body"><h1 id="códigos-de-estado-http"><a aria-hidden="true" tabindex="-1" href="#códigos-de-estado-http"><span class="icon icon-link"></span></a>Códigos de estado HTTP</h1>
+<blockquote>
+<p>[!tip] Status codes en una frase
+Los códigos de estado son la <strong>respuesta numérica</strong> del servidor a tu petición. Dicen si todo fue bien, mal, redirigido, o si el cliente hizo algo mal.</p>
+</blockquote>
+<h2 id="qué-son-los-códigos-de-estado"><a aria-hidden="true" tabindex="-1" href="#qué-son-los-códigos-de-estado"><span class="icon icon-link"></span></a>¿Qué son los códigos de estado?</h2>
+<p>Cuando envías una petición HTTP, el servidor responde con un <strong>número de 3 dígitos</strong> que indica el resultado. Se dividen en 5 grupos:</p>
+<table>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>Significado</th>
+<th>Ejemplos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1xx</strong></td>
+<td>Información</td>
+<td>100, 101</td>
+</tr>
+<tr>
+<td><strong>2xx</strong></td>
+<td>Éxito</td>
+<td>200, 201, 204</td>
+</tr>
+<tr>
+<td><strong>3xx</strong></td>
+<td>Redirección</td>
+<td>301, 302, 304</td>
+</tr>
+<tr>
+<td><strong>4xx</strong></td>
+<td>Error del cliente</td>
+<td>400, 401, 403, 404, 405, 409, 422, 429</td>
+</tr>
+<tr>
+<td><strong>5xx</strong></td>
+<td>Error del servidor</td>
+<td>500, 502, 503, 504</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1xx--informaciónales"><a aria-hidden="true" tabindex="-1" href="#1xx--informaciónales"><span class="icon icon-link"></span></a>1xx — Informaciónales</h2>
+<p>Indican que la petición se recibió y se está procesando. Raro de usar en APIs modernas.</p>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>100</strong></td>
+<td>Continue</td>
+<td>"Sigue, estoy listo para el body" (usado en uploads grandes)</td>
+</tr>
+<tr>
+<td><strong>101</strong></td>
+<td>Switching Protocols</td>
+<td>"Cambiamos de protocolo" (ej. HTTP → WebSocket)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2xx--éxito"><a aria-hidden="true" tabindex="-1" href="#2xx--éxito"><span class="icon icon-link"></span></a>2xx — Éxito</h2>
+<p>Significa que la petición se recibió, comprendió y aceptó correctamente.</p>
+<h3 id="200-ok"><a aria-hidden="true" tabindex="-1" href="#200-ok"><span class="icon icon-link"></span></a>200 OK</h3>
+<p><strong>El más común.</strong> Significa que la petición fue procesada correctamente.</p>
+<pre><code>GET /api/users/42 HTTP/1.1
+→ 200 OK
+Content-Type: application/json
+
+{"id": 42, "name": "Carlos", "email": "carlos@email.com"}
+</code></pre>
+<blockquote>
+<p>[!tip] 200 no significa siempre lo mismo</p>
+<ul>
+<li>Para GET: "Aquí están los datos"</li>
+<li>Para POST: "La acción se ejecutó correctamente"</li>
+<li>Para PUT/PATCH: "Los datos se actualizaron"</li>
+<li>Para DELETE: "Se eliminó"</li>
+</ul>
+</blockquote>
+<h3 id="201-created"><a aria-hidden="true" tabindex="-1" href="#201-created"><span class="icon icon-link"></span></a>201 Created</h3>
+<p>Se usó en POST para crear un recurso. Siempre va acompañado de un header <code>Location</code> que apunta al nuevo recurso.</p>
+<pre><code>POST /api/users HTTP/1.1
+Content-Type: application/json
+{"name": "Ana", "email": "ana@email.com"}
+
+→ 201 Created
+Location: /api/users/43
+Content-Type: application/json
+
+{"id": 43, "name": "Ana", "email": "ana@email.com"}
+</code></pre>
+<h3 id="204-no-content"><a aria-hidden="true" tabindex="-1" href="#204-no-content"><span class="icon icon-link"></span></a>204 No Content</h3>
+<p>La petición fue exitosa pero no hay contenido para devolver. Común en DELETE:</p>
+<pre><code>DELETE /api/users/42 HTTP/1.1
+→ 204 No Content
+(Sin body)
+</code></pre>
+<h3 id="otros-2xx"><a aria-hidden="true" tabindex="-1" href="#otros-2xx"><span class="icon icon-link"></span></a>Otros 2xx</h3>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Nombre</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>202</strong></td>
+<td>Accepted</td>
+<td>La petición se aceptó pero se está procesando asincrónicamente</td>
+</tr>
+<tr>
+<td><strong>206</strong></td>
+<td>Partial Content</td>
+<td>Se devolvió parte del contenido (usado en range requests para streaming/video)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3xx--redirección"><a aria-hidden="true" tabindex="-1" href="#3xx--redirección"><span class="icon icon-link"></span></a>3xx — Redirección</h2>
+<p>Significa que el recurso está en otra ubicación. El cliente debe hacer una nueva petición a la URL indicada.</p>
+<h3 id="301-moved-permanently"><a aria-hidden="true" tabindex="-1" href="#301-moved-permanently"><span class="icon icon-link"></span></a>301 Moved Permanently</h3>
+<p>El recurso se movió <strong>permanentemente</strong> a otra URL. Los navegadores y SEO lo procesan así:</p>
+<pre><code>GET /old-page HTTP/1.1
+→ 301 Moved Permanently
+Location: /new-page
+
+# El navegador:
+# 1. Saca a /old-page del caché
+# 2. Actualiza sus favoritos/histórico a /new-page
+# 3. Para futuras peticiones, va directo a /new-page
+</code></pre>
+<p><strong>SEO</strong>: Los buscadores transfieren el "link juice" (autoridad) de la URL antigua a la nueva.
+<strong>Cache</strong>: Los navegadores cachéan la redirección permanentemente.</p>
+<h3 id="302-found-antes-moved-temporarily"><a aria-hidden="true" tabindex="-1" href="#302-found-antes-moved-temporarily"><span class="icon icon-link"></span></a>302 Found (antes "Moved Temporarily")</h3>
+<p>El recurso está temporalmente en otra URL:</p>
+<pre><code>GET /maintenance HTTP/1.1
+→ 302 Found
+Location: /under-maintenance.html
+</code></pre>
+<p><strong>Diferencia clave con 301:</strong></p>
+<ul>
+<li><strong>301</strong>: Redirección permanente. Los clientes cachéan la redirección.</li>
+<li><strong>302</strong>: Redirección temporal. Los clientes NO cachéan la redirección.</li>
+</ul>
+<h3 id="303-see-other"><a aria-hidden="true" tabindex="-1" href="#303-see-other"><span class="icon icon-link"></span></a>303 See Other</h3>
+<p>Similar a 302, pero obliga al cliente a usar GET para la redirección (incluso si la original fue POST).</p>
+<h3 id="304-not-modified"><a aria-hidden="true" tabindex="-1" href="#304-not-modified"><span class="icon icon-link"></span></a>304 Not Modified</h3>
+<p>Significa "tu caché sigue siendo válida, no necesitas descargarlo de nuevo". Es una de las optimizaciones más importantes en rendimiento web.</p>
+<pre><code>GET /css/style.css HTTP/1.1
+If-None-Match: "abc123"
+
+→ 304 Not Modified
+(No body, sin descargar el CSS de nuevo)
+</code></pre>
+<p><strong>Cómo funciona:</strong></p>
+<ol>
+<li>Primera vez: servidor envía el archivo con <code>ETag: "abc123"</code></li>
+<li>Cliente guarda el archivo y el ETag en caché</li>
+<li>Cliente vuelve a pedir el archivo con <code>If-None-Match: "abc123"</code></li>
+<li>Si no cambió, servidor responde 304 (sin body)</li>
+<li>Cliente usa la versión en caché</li>
+</ol>
+<blockquote>
+<p>[!tip] 304 es crítico para el rendimiento
+Un 304 tarda ~50ms (solo headers). Un 200 con un CSS de 50KB tarda ~200ms. Ahorra ~150ms por recurso redirigido.</p>
+</blockquote>
+<h3 id="307-temporary-redirect"><a aria-hidden="true" tabindex="-1" href="#307-temporary-redirect"><span class="icon icon-link"></span></a>307 Temporary Redirect</h3>
+<p>Igual que 302 pero <strong>preserva el método HTTP</strong> (POST sigue siendo POST, no se convierte en GET).</p>
+<h3 id="308-permanent-redirect"><a aria-hidden="true" tabindex="-1" href="#308-permanent-redirect"><span class="icon icon-link"></span></a>308 Permanent Redirect</h3>
+<p>Igual que 301 pero <strong>preserva el método HTTP</strong>.</p>
+<h3 id="resumen-de-redirecciones"><a aria-hidden="true" tabindex="-1" href="#resumen-de-redirecciones"><span class="icon icon-link"></span></a>Resumen de redirecciones</h3>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Permanente</th>
+<th>Preserva método</th>
+<th>Usar cuando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>301</strong></td>
+<td>Sí</td>
+<td>No (GET solo)</td>
+<td>Redirección permanente de páginas</td>
+</tr>
+<tr>
+<td><strong>302</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Redirección temporal</td>
+</tr>
+<tr>
+<td><strong>303</strong></td>
+<td>No</td>
+<td>Fuerza GET</td>
+<td>Después de POST, mostrar resultado</td>
+</tr>
+<tr>
+<td><strong>307</strong></td>
+<td>No</td>
+<td>Sí</td>
+<td>Redirección temporal con mismo método</td>
+</tr>
+<tr>
+<td><strong>308</strong></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Redirección permanente con mismo método</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4xx--errores-del-cliente"><a aria-hidden="true" tabindex="-1" href="#4xx--errores-del-cliente"><span class="icon icon-link"></span></a>4xx — Errores del cliente</h2>
+<p>Significa que <strong>el cliente envió algo mal</strong>. El problema está en la petición, no en el servidor.</p>
+<h3 id="400-bad-request"><a aria-hidden="true" tabindex="-1" href="#400-bad-request"><span class="icon icon-link"></span></a>400 Bad Request</h3>
+<p>El servidor no puede entender la petición. Generalmente por formato inválido:</p>
+<pre><code>POST /api/users HTTP/1.1
+Content-Type: application/json
+
+{ nombre: "Carlos" }    ← JSON inválido (sin comillas en la key)
+
+→ 400 Bad Request
+{ "error": "Invalid JSON: Expected property name" }
+</code></pre>
+<h3 id="401-unauthorized"><a aria-hidden="true" tabindex="-1" href="#401-unauthorized"><span class="icon icon-link"></span></a>401 Unauthorized</h3>
+<p><strong>"No estás autenticado"</strong> (o "tus credenciales son inválidas"). Significa que necesitas identificarte.</p>
+<blockquote>
+<p>[!warning] No confundir con 403</p>
+<ul>
+<li><strong>401</strong>: "No sé quién eres" (falta o inválida la autenticación)</li>
+<li><strong>403</strong>: "Te reconozco pero no tienes permiso" (falta autorización)</li>
+</ul>
+</blockquote>
+<pre><code>GET /api/admin HTTP/1.1
+→ 401 Unauthorized
+WWW-Authenticate: Bearer realm="api"
+</code></pre>
+<h3 id="403-forbidden"><a aria-hidden="true" tabindex="-1" href="#403-forbidden"><span class="icon icon-link"></span></a>403 Forbidden</h3>
+<p><strong>"Te reconozco pero no puedes hacer esto"</strong>. Estás autenticado pero no tienes permiso para acceder a ese recurso.</p>
+<pre><code>GET /api/admin HTTP/1.1
+Authorization: Bearer eyJ... (token válido)
+
+→ 403 Forbidden
+{ "error": "Insufficient permissions" }
+</code></pre>
+<h3 id="404-not-found"><a aria-hidden="true" tabindex="-1" href="#404-not-found"><span class="icon icon-link"></span></a>404 Not Found</h3>
+<p><strong>El recurso que pides no existe.</strong> Es el error más conocido de Internet.</p>
+<pre><code>GET /api/users/99999 HTTP/1.1
+→ 404 Not Found
+{ "error": "User not found" }
+</code></pre>
+<blockquote>
+<p>[!tip] 404 vs 410 Gone</p>
+<ul>
+<li><strong>404</strong>: "No encuentro este recurso" (puede ser temporal o permanente)</li>
+<li><strong>410</strong>: "Este recurso existía pero lo eliminé permanentemente" (los buscadores lo quitan del índice)</li>
+</ul>
+</blockquote>
+<h3 id="405-method-not-allowed"><a aria-hidden="true" tabindex="-1" href="#405-method-not-allowed"><span class="icon icon-link"></span></a>405 Method Not Allowed</h3>
+<p>El recurso existe pero el método que usas no está permitido:</p>
+<pre><code>GET /api/users/42 HTTP/1.1
+→ 405 Method Not Allowed
+Allow: GET, PUT, DELETE
+</code></pre>
+<h3 id="409-conflict"><a aria-hidden="true" tabindex="-1" href="#409-conflict"><span class="icon icon-link"></span></a>409 Conflict</h3>
+<p>Hay un conflicto con el estado actual del recurso:</p>
+<pre><code># Crear usuario con email duplicado:
+POST /api/users HTTP/1.1
+{"email": "carlos@email.com"}
+
+→ 409 Conflict
+{ "error": "Email already registered" }
+</code></pre>
+<h3 id="422-unprocessable-entity"><a aria-hidden="true" tabindex="-1" href="#422-unprocessable-entity"><span class="icon icon-link"></span></a>422 Unprocessable Entity</h3>
+<p>La petición tiene formato correcto pero el <strong>contenido no es válido</strong>. Más específico que 400:</p>
+<pre><code>POST /api/users HTTP/1.1
+Content-Type: application/json
+{"name": "", "email": "invalid-email", "age": -5}
+
+→ 422 Unprocessable Entity
+{
+  "errors": {
+    "name": "No puede estar vacío",
+    "email": "Formato de email inválido",
+    "age": "Debe ser un número positivo"
+  }
+}
+</code></pre>
+<blockquote>
+<p>[!tip] 422 es ideal para validación de formularios
+Si tu API recibe un JSON válido pero con datos inválidos, devuelve 422 con los errores por campo.</p>
+</blockquote>
+<h3 id="429-too-many-requests"><a aria-hidden="true" tabindex="-1" href="#429-too-many-requests"><span class="icon icon-link"></span></a>429 Too Many Requests</h3>
+<p>Has hecho demasiadas peticiones. Rate limiting:</p>
+<pre><code>POST /api/login HTTP/1.1
+→ 429 Too Many Requests
+Retry-After: 60
+{ "error": "Too many login attempts. Try again in 60 seconds" }
+</code></pre>
+<h2 id="5xx--errores-del-servidor"><a aria-hidden="true" tabindex="-1" href="#5xx--errores-del-servidor"><span class="icon icon-link"></span></a>5xx — Errores del servidor</h2>
+<p>Significa que <strong>algo salió mal en el servidor</strong>. El problema es del servidor, no del cliente.</p>
+<h3 id="500-internal-server-error"><a aria-hidden="true" tabindex="-1" href="#500-internal-server-error"><span class="icon icon-link"></span></a>500 Internal Server Error</h3>
+<p>Error genérico del servidor. Algo no salió como se esperaba pero no se categorizó mejor.</p>
+<pre><code>GET /api/users HTTP/1.1
+→ 500 Internal Server Error
+{ "error": "An unexpected error occurred" }
+</code></pre>
+<blockquote>
+<p>[!warning] Nunca devuelvas 500 con detalles técnicos al cliente
+En producción, 500 debe devolver un mensaje genérico. Los detalles del error van en los logs del servidor, NO en la respuesta al cliente.</p>
+</blockquote>
+<h3 id="502-bad-gateway"><a aria-hidden="true" tabindex="-1" href="#502-bad-gateway"><span class="icon icon-link"></span></a>502 Bad Gateway</h3>
+<p>El servidor actuaba como proxy/gateway y recibió una respuesta inválida de otro servidor upstream:</p>
+<pre><code># Ejemplo común: Nginx → Node.js
+Nginx (proxy)          Node.js (upstream)
+   │                        │
+   │─── Request ───────────→│
+   │                        │  (Node.js se cuelga o responde mal)
+   │←── Bad Response ───────│
+   │←── 502 Bad Gateway ────│  (al cliente)
+</code></pre>
+<p><strong>Causas comunes:</strong></p>
+<ul>
+<li>El upstream server se cayó o no responde</li>
+<li>El upstream server respondió con un formato que el proxy no entiende</li>
+<li>Timeout: el upstream tardó demasiado en responder</li>
+</ul>
+<h3 id="503-service-unavailable"><a aria-hidden="true" tabindex="-1" href="#503-service-unavailable"><span class="icon icon-link"></span></a>503 Service Unavailable</h3>
+<p>El servidor no puede manejar la petición porque está <strong>sobrecargado o en mantenimiento</strong>:</p>
+<pre><code>GET /api/users HTTP/1.1
+→ 503 Service Unavailable
+Retry-After: 30
+{ "error": "Service temporarily unavailable. Please try again in 30 seconds" }
+</code></pre>
+<p><strong>Causas comunes:</strong></p>
+<ul>
+<li>Mantenimiento planificado</li>
+<li>Pico de tráfico (server overloaded)</li>
+<li>Base de datos no responde</li>
+<li>Dependencia externa (API de otro servicio) caída</li>
+</ul>
+<h3 id="504-gateway-timeout"><a aria-hidden="true" tabindex="-1" href="#504-gateway-timeout"><span class="icon icon-link"></span></a>504 Gateway Timeout</h3>
+<p>El servidor actuaba como proxy y no recibió respuesta del upstream a tiempo:</p>
+<pre><code>Nginx (proxy)          Node.js (upstream)
+   │                        │
+   │─── Request ───────────→│
+   │                        │  (Node.js tarda 30s, timeout de Nginx es 10s)
+   │←── 504 Gateway Timeout ──│  (al cliente)
+</code></pre>
+<h2 id="resumen-visual"><a aria-hidden="true" tabindex="-1" href="#resumen-visual"><span class="icon icon-link"></span></a>Resumen visual</h2>
+<pre><code>1xx ── Información (100, 101)
+2xx ── Éxito (200, 201, 204)
+3xx ── Redirección (301, 302, 304, 307, 308)
+4xx ── Error del cliente (400, 401, 403, 404, 405, 409, 422, 429)
+5xx ── Error del servidor (500, 502, 503, 504)
+</code></pre>
+<h2 id="errores-más-comunes-en-apis-rest"><a aria-hidden="true" tabindex="-1" href="#errores-más-comunes-en-apis-rest"><span class="icon icon-link"></span></a>Errores más comunes en APIs REST</h2>
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>Código correcto</th>
+<th>Mensaje</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datos faltantes en el body</td>
+<td>400 Bad Request</td>
+<td>"Missing required field: email"</td>
+</tr>
+<tr>
+<td>Datos mal formateados</td>
+<td>400 Bad Request</td>
+<td>"Invalid JSON: Expected string"</td>
+</tr>
+<tr>
+<td>Validación de campos</td>
+<td>422 Unprocessable Entity</td>
+<td>{ "errors": { "email": "Invalid format" } }</td>
+</tr>
+<tr>
+<td>Sin autenticación</td>
+<td>401 Unauthorized</td>
+<td>"Authentication required"</td>
+</tr>
+<tr>
+<td>Token inválido/expirado</td>
+<td>401 Unauthorized</td>
+<td>"Invalid or expired token"</td>
+</tr>
+<tr>
+<td>Sin permisos</td>
+<td>403 Forbidden</td>
+<td>"Insufficient permissions"</td>
+</tr>
+<tr>
+<td>Recurso no existe</td>
+<td>404 Not Found</td>
+<td>"User not found"</td>
+</tr>
+<tr>
+<td>Método no permitido</td>
+<td>405 Method Not Allowed</td>
+<td>"Method not allowed"</td>
+</tr>
+<tr>
+<td>Recurso duplicado</td>
+<td>409 Conflict</td>
+<td>"Email already exists"</td>
+</tr>
+<tr>
+<td>Rate limiting</td>
+<td>429 Too Many Requests</td>
+<td>"Too many requests, retry in 60s"</td>
+</tr>
+<tr>
+<td>Error interno</td>
+<td>500 Internal Server Error</td>
+<td>"An unexpected error occurred"</td>
+</tr>
+<tr>
+<td>Proxy sin respuesta válida</td>
+<td>502 Bad Gateway</td>
+<td>"Bad gateway"</td>
+</tr>
+<tr>
+<td>Servidor sobrecargado</td>
+<td>503 Service Unavailable</td>
+<td>"Service temporarily unavailable"</td>
+</tr>
+<tr>
+<td>Timeout del proxy</td>
+<td>504 Gateway Timeout</td>
+<td>"Gateway timeout"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>1xx: información (raros), 2xx: éxito, 3xx: redirección, 4xx: error del cliente, 5xx: error del servidor</li>
+<li>301 vs 302: permanente vs temporal (caché)</li>
+<li>304: caché válida (sin body) — optimización clave de rendimiento</li>
+<li>401 vs 403: no autenticado vs no autorizado</li>
+<li>422: validación de datos con errores detallados por campo</li>
+<li>502: upstream no responde; 503: servidor sobrecargado; 504: timeout del proxy</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Los status codes son el lenguaje que usa el servidor para decirle al cliente "qué pasó con tu petición". Usarlos correctamente es fundamental para una buena API design.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP métodos y headers</td>
+<td>[[05-http-profundo]]</td>
+</tr>
+<tr>
+<td>Autenticación (401/403)</td>
+<td>[[10-autenticacion-api-keys-tokens]]</td>
+</tr>
+<tr>
+<td>Cookies/Sesiones (304, cookies)</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>[[11-api-rest]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

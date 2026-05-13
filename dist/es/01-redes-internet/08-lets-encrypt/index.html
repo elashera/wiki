@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Let&#39;s Encrypt y Certbot: certificados gratuitos</h1> <div class="article-body"><h1 id="lets-encrypt-y-certbot-certificados-gratuitos"><a aria-hidden="true" tabindex="-1" href="#lets-encrypt-y-certbot-certificados-gratuitos"><span class="icon icon-link"></span></a>Let's Encrypt y Certbot: certificados gratuitos</h1>
+<blockquote>
+<p>[!tip] Let's Encrypt en una frase
+Let's Encrypt es una <strong>Autoridad de Certificación gratuita y automatizada</strong> que emite certificados TLS/SSL válidos para cualquier dominio. Antes de Let's Encrypt, los certificados costaban $50-500/año. Ahora son gratis y se renuevan solos.</p>
+</blockquote>
+<h2 id="qué-es-lets-encrypt"><a aria-hidden="true" tabindex="-1" href="#qué-es-lets-encrypt"><span class="icon icon-link"></span></a>¿Qué es Let's Encrypt?</h2>
+<p>Let's Encrypt es una CA (Certificate Authority) sin ánimo de lucro, lanzada en 2015 por <strong>Electronic Frontier Foundation (EFF)</strong>, Mozilla, Akamai y otros.</p>
+<h3 id="por-qué-fue-revolucionario"><a aria-hidden="true" tabindex="-1" href="#por-qué-fue-revolucionario"><span class="icon icon-link"></span></a>¿Por qué fue revolucionario?</h3>
+<table>
+<thead>
+<tr>
+<th>Antes de Let's Encrypt</th>
+<th>Después de Let's Encrypt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Certificado gratis → solo DV básico, 1 año</td>
+<td>Certificado gratis → DV, 90 días (renovable automáticamente)</td>
+</tr>
+<tr>
+<td>Certificado profesional → $100-500/año</td>
+<td>Certificado profesional → $0/año</td>
+</tr>
+<tr>
+<td>Setup manual y complicado</td>
+<td>Automatizado con ACME protocol</td>
+</tr>
+<tr>
+<td>Pocos sitios con HTTPS</td>
+<td>Más del 80% de la web con HTTPS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tipos-de-certificados-que-emite"><a aria-hidden="true" tabindex="-1" href="#tipos-de-certificados-que-emite"><span class="icon icon-link"></span></a>Tipos de certificados que emite</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Validación</th>
+<th>Subdominios</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DV</strong> (Domain Validated)</td>
+<td>HTTP-01, DNS-01 o TLS-ALPN-01</td>
+<td>Hasta 100 por pedido</td>
+<td>Para cualquier sitio web</td>
+</tr>
+<tr>
+<td><strong>Wildcard</strong></td>
+<td>Solo DNS-01</td>
+<td><code>*.ejemplo.com</code></td>
+<td>Cualquier subdominio</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Let's Encrypt NO emite OV o EV certificates
+Solo emite DV (Domain Validated). Para OV/EV, usa DigiCert, Sectigo, etc. (o Cloudflare Origin Certificate para tráfico interno).</p>
+</blockquote>
+<h2 id="el-protocolo-acme"><a aria-hidden="true" tabindex="-1" href="#el-protocolo-acme"><span class="icon icon-link"></span></a>El protocolo ACME</h2>
+<p>ACME (Automatic Certificate Management Environment) es el protocolo que automatiza la obtención y renovación de certificados.</p>
+<h3 id="cómo-funciona-acme"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona-acme"><span class="icon icon-link"></span></a>Cómo funciona ACME</h3>
+<pre><code>1. Cliente (Certbot) genera un par de claves (privada + pública)
+2. Cliente se registra con Let's Encrypt (proporciona un email)
+3. Cliente demuestra que controla el dominio:
+   - HTTP-01: Let's Encrypt visita tu web y busca un archivo específico
+   - DNS-01: Let's Encrypt busca un registro TXT específico en DNS
+   - TLS-ALPN-01: Let's Encrypt conecta a tu servidor y verifica un certificado temporal
+4. Let's Encrypt emite el certificado
+5. Certificado se guarda en /etc/letsencrypt/live/tudominio.com/
+6. Cada 90 días, el proceso se repite (automático con cron)
+</code></pre>
+<h3 id="métodos-de-validación"><a aria-hidden="true" tabindex="-1" href="#métodos-de-validación"><span class="icon icon-link"></span></a>Métodos de validación</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Cómo funciona</th>
+<th>Cuándo usar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP-01</strong></td>
+<td>Let's Encrypt visita <code>http://tudominio.com/.well-known/acme-challenge/&#x3C;token></code></td>
+<td>Servidor web accesible por HTTP (puerto 80)</td>
+</tr>
+<tr>
+<td><strong>DNS-01</strong></td>
+<td>Creas un registro TXT <code>_acme-challenge.tudominio.com</code> con el valor</td>
+<td>Sin servidor web, o detrás de un proxy/CDN</td>
+</tr>
+<tr>
+<td><strong>TLS-ALPN-01</strong></td>
+<td>Let's Encrypt conecta a <code>https://tudominio.com:443</code> con un certificado temporal</td>
+<td>Servidor HTTPS accesible</td>
+</tr>
+</tbody>
+</table>
+<h4 id="http-01-en-detalle"><a aria-hidden="true" tabindex="-1" href="#http-01-en-detalle"><span class="icon icon-link"></span></a>HTTP-01 en detalle</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Certbot genera un token único</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Token:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> abc123def456</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Certbot escribe el token en tu servidor web</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Archivo: /var/www/acme/.well-known/acme-challenge/abc123def456</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Contenido: abc123def456.pKd7F8aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Let's Encrypt visita:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://tudominio.com/.well-known/acme-challenge/abc123def456</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Si la respuesta coincide → certificado emitido ✓</span></span></code></pre></figure>
+<h4 id="dns-01-en-detalle"><a aria-hidden="true" tabindex="-1" href="#dns-01-en-detalle"><span class="icon icon-link"></span></a>DNS-01 en detalle</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Certbot genera un token único y un key authorization</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Token:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> abc123def456</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Key</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Auth:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [KEY_AUTHORIZATION_STRING]</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Base64</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> SHA256</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> hash</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> del</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> key</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> auth:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> hash123</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Creas un registro TXT en DNS:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># _acme-challenge.tudominio.com → "hash123"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Let's Encrypt consulta DNS:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> _acme-challenge.tudominio.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TXT</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Si el registro coincide → certificado emitido ✓</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] DNS-01 para wildcard
+Solo el método DNS-01 permite obtener certificados wildcard (<code>*.ejemplo.com</code>), porque necesitas modificar registros DNS, no servir archivos en un servidor web.</p>
+</blockquote>
+<h2 id="certbot-la-herramienta-oficial"><a aria-hidden="true" tabindex="-1" href="#certbot-la-herramienta-oficial"><span class="icon icon-link"></span></a>Certbot: La herramienta oficial</h2>
+<p>Certbot es la herramienta oficial de Let's Encrypt para obtener y gestionar certificados.</p>
+<h3 id="instalación"><a aria-hidden="true" tabindex="-1" href="#instalación"><span class="icon icon-link"></span></a>Instalación</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En Ubuntu/Debian</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En otras distros:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># https://certbot.eff.org/instructions</span></span></code></pre></figure>
+<h3 id="obtener-un-certificado-http-01"><a aria-hidden="true" tabindex="-1" href="#obtener-un-certificado-http-01"><span class="icon icon-link"></span></a>Obtener un certificado (HTTP-01)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Modo automático (funciona con Nginx y Apache):</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.ejemplo.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Con Caddy, Certbot se integra automáticamente</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En Caddyfile:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tls {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     email admin@ejemplo.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Modo manual:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --manual</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.ejemplo.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Te pedirá crear un registro DNS TXT manualmente</span></span></code></pre></figure>
+<h3 id="obtener-un-certificado-wildcard-dns-01"><a aria-hidden="true" tabindex="-1" href="#obtener-un-certificado-wildcard-dns-01"><span class="icon icon-link"></span></a>Obtener un certificado wildcard (DNS-01)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Con Cloudflare DNS plugin</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns-cloudflare</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns-cloudflare-credentials</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /root/.secrets/cloudflare.ini</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '*.ejemplo.com'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 'ejemplo.com'</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El archivo cloudflare.ini:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># dns_cloudflare_api_key = TU_API_KEY</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># dns_cloudflare_email = tu@email.com</span></span></code></pre></figure>
+<h3 id="estructura-de-archivos-generados"><a aria-hidden="true" tabindex="-1" href="#estructura-de-archivos-generados"><span class="icon icon-link"></span></a>Estructura de archivos generados</h3>
+<pre><code>/etc/letsencrypt/live/ejemplo.com/
+├── cert.pem        ← Certificado del dominio
+├── chain.pem       ← Certificado intermedio (Let's Encrypt)
+├── fullchain.pem   ← cert.pem + chain.pem (lo que usa el servidor)
+└── privkey.pem     ← Clave privada del dominio (¡NUNCA compartir!)
+
+/etc/letsencrypt/archive/ejemplo.com/
+├── cert1.pem       ← Versión 1 del certificado
+├── cert2.pem       ← Versión 2 (cuando se renueva)
+├── privkey1.pem
+└── privkey2.pem
+
+/etc/letsencrypt/renewal/ejemplo.com.conf
+← Configuración de renovación
+</code></pre>
+<blockquote>
+<p>[!tip] fullchain.pem vs cert.pem</p>
+<ul>
+<li><strong>fullchain.pem</strong>: cert + intermediate CA. Es lo que debes configurar en tu servidor web (Nginx, Caddy, etc.)</li>
+<li><strong>cert.pem</strong>: solo el certificado del dominio</li>
+<li>Si usas solo cert.pem, algunos clientes pueden rechazarlo porque les falta la cadena de confianza</li>
+</ul>
+</blockquote>
+<h3 id="renovación-automática"><a aria-hidden="true" tabindex="-1" href="#renovación-automática"><span class="icon icon-link"></span></a>Renovación automática</h3>
+<p>Los certificados de Let's Encrypt duran <strong>90 días</strong>. Certbot configura un cron job para renovar automáticamente:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Test de renovación (no lo hace realmente, solo simula)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dry-run</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Renovación real (la hace certbot automáticamente via cron/systemd timer)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver el estado del renewal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot.timer</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Post-hook para recargar el servidor
+Para que el servidor web recargue los certificados después de la renovación:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En /etc/letsencrypt/cli.ini</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">post_hook</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> reload</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O en el comando:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --post-hook</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "systemctl reload nginx"</span></span></code></pre></figure>
+</blockquote>
+<h2 id="configuración-en-nginx"><a aria-hidden="true" tabindex="-1" href="#configuración-en-nginx"><span class="icon icon-link"></span></a>Configuración en Nginx</h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ejemplo.com www.ejemplo.com;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Redirigir todo HTTP a HTTPS</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> https://$host$request_uri;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl http2;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ejemplo.com www.ejemplo.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Certificados de Let's Encrypt</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/ejemplo.com/fullchain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/ejemplo.com/privkey.pem;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Configuración SSL robusta</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_protocols </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">TLSv1.2 TLSv1.3;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_ciphers </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_prefer_server_ciphers </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_cache </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">shared:SSL:10m;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_tickets </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # HSTS</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Strict-Transport-Security </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"max-age=63072000; includeSubDomains; preload"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> always;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Seguridad</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Frame-Options SAMEORIGIN always;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Content-Type-Options nosniff always;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-XSS-Protection </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1; mode=block"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> always;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://localhost:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-For $proxy_add_x_forwarded_for;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-Proto $scheme;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] ¿Por qué listen 80 aparte?
+El bloque en el puerto 80 no sirve contenido — solo redirige a HTTPS. Esto es necesario para la validación HTTP-01 de Let's Encrypt (necesita servir archivos en el puerto 80) y para que los navegadores se redirijan automáticamente.</p>
+</blockquote>
+<h2 id="configuración-en-caddy"><a aria-hidden="true" tabindex="-1" href="#configuración-en-caddy"><span class="icon icon-link"></span></a>Configuración en Caddy</h2>
+<p>Caddy es <strong>más simple que Nginx</strong> para TLS porque lo hace automáticamente:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="caddyfile" data-theme="github-light github-dark"><code data-language="caddyfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># Caddyfile — ¡Así de simple!</span></span>
+<span data-line=""><span># Caddy obtiene y renueva certificados automáticamente</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>ejemplo.com {</span></span>
+<span data-line=""><span>    reverse_proxy localhost:3000</span></span>
+<span data-line=""><span>}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>www.ejemplo.com {</span></span>
+<span data-line=""><span>    redir https://ejemplo.com{uri}</span></span>
+<span data-line=""><span>}</span></span></code></pre></figure>
+<h3 id="qué-hace-caddy-automáticamente"><a aria-hidden="true" tabindex="-1" href="#qué-hace-caddy-automáticamente"><span class="icon icon-link"></span></a>¿Qué hace Caddy automáticamente?</h3>
+<ol>
+<li>Detecta que no hay certificado para <code>ejemplo.com</code></li>
+<li>Genera una clave privada</li>
+<li>Solicita un certificado a Let's Encrypt (HTTP-01 challenge)</li>
+<li>Instala el certificado y lo configura</li>
+<li>Programa renovación automática antes de que expire (renueva a los ~60 días)</li>
+<li>Si necesitas un email de contacto: <code>tls admin@ejemplo.com</code></li>
+</ol>
+<blockquote>
+<p>[!tip] Caddy vs Nginx para TLS</p>
+<ul>
+<li><strong>Caddy</strong>: TLS automático, sin configuración. Ideal para proyectos personales y equipos pequeños.</li>
+<li><strong>Nginx</strong>: Requiere configuración manual (o Certbot). Más control, más flexibilidad, más complejidad.</li>
+</ul>
+</blockquote>
+<h2 id="cloudflare-y-lets-encrypt"><a aria-hidden="true" tabindex="-1" href="#cloudflare-y-lets-encrypt"><span class="icon icon-link"></span></a>Cloudflare y Let's Encrypt</h2>
+<p>Cuando usas Cloudflare, hay dos certificados involucrados:</p>
+<pre><code>Usuario ──(HTTPS, cert de Cloudflare)──→ Cloudflare ──(HTTPS, cert de LE o CF)──→ Servidor Origin
+</code></pre>
+<h3 id="opciones"><a aria-hidden="true" tabindex="-1" href="#opciones"><span class="icon icon-link"></span></a>Opciones</h3>
+<table>
+<thead>
+<tr>
+<th>Configuración</th>
+<th>Cloudflare → Origin</th>
+<th>Usuario → Cloudflare</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Flexible</strong></td>
+<td>HTTP</td>
+<td>HTTPS</td>
+<td>⚠️ No recomendado: tráfico CF→Origin NO cifrado</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>HTTPS (CF auto-cert)</td>
+<td>HTTPS (LE)</td>
+<td>✅ Básico seguro</td>
+</tr>
+<tr>
+<td><strong>Full Strict</strong></td>
+<td>HTTPS (LE/DigiCert)</td>
+<td>HTTPS (LE)</td>
+<td>✅✅ Recomendado</td>
+</tr>
+<tr>
+<td><strong>Extended</strong></td>
+<td>HTTPS (self-signed)</td>
+<td>HTTPS (LE)</td>
+<td>✅ Para origins con self-signed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modo-full-strict-con-lets-encrypt"><a aria-hidden="true" tabindex="-1" href="#modo-full-strict-con-lets-encrypt"><span class="icon icon-link"></span></a>Modo Full Strict con Let's Encrypt</h3>
+<ol>
+<li>Obtén un certificado de Let's Encrypt en tu servidor</li>
+<li>En Cloudflare, SSL/TLS → Overview → <strong>Full (strict)</strong></li>
+<li>Cloudflare verifica que tu servidor tiene un certificado válido</li>
+<li>Si usas un certificado autofirmado → usa <strong>Extended</strong> en su lugar</li>
+</ol>
+<h2 id="seguridad-ssltls-chequeos"><a aria-hidden="true" tabindex="-1" href="#seguridad-ssltls-chequeos"><span class="icon icon-link"></span></a>Seguridad SSL/TLS: chequeos</h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar la configuración SSL de un dominio</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> s_client</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com:443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -servername</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar certificados y cadena</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> s_client</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com:443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -servername</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -showcerts</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Herramientas online para testing:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># https://www.ssllabs.com/ssltest/ — da una grade (A+ a F)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Herramientas CLI para testing:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">testssl.sh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nmap</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --script</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssl-enum-ciphers</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 443</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span></span></code></pre></figure>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Let's Encrypt emite certificados DV gratuitos automatizados con ACME</li>
+<li>Certbot es la herramienta oficial para obtener y renovar certificados</li>
+<li>HTTP-01 valida sirviendo un archivo en el dominio; DNS-01 valida con un registro TXT</li>
+<li>Los certificados duran 90 días, renovación automática via cron</li>
+<li>Configura <code>fullchain.pem</code> + <code>privkey.pem</code> en el servidor</li>
+<li>Caddy automatiza todo; Nginx requiere configuración manual</li>
+<li>Con Cloudflare, usa Full (strict) para máxima seguridad</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+No hay excusa para no usar HTTPS. Let's Encrypt + Certbot o Caddy hacen que sea automático, gratuito y sin fricción.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS/HTTPS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>DNS y Cloudflare</td>
+<td>[[04-cloudflare-intro]] (DNS-01 challenge, SSL modes)</td>
+</tr>
+<tr>
+<td>DNS registros</td>
+<td>[[03-dns-profundo]] (CAA, TXT para DNS-01)</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>[[14-servidores-procesos]] (configuración del servidor)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

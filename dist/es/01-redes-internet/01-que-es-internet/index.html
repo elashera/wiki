@@ -1,0 +1,478 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">¿Qué es Internet?</h1> <div class="article-body"><h1 id="qué-es-internet"><a aria-hidden="true" tabindex="-1" href="#qué-es-internet"><span class="icon icon-link"></span></a>¿Qué es Internet?</h1>
+<blockquote>
+<p>[!tip] Para empezar
+Piensa en Internet como una red de carreteras que conecta ciudades (ordenadores). Cada ciudad tiene direcciones (IPs), hay camiones de reparto (paquetes), y protocolos de tráfico (TCP/IP) que garantizan que la mercancía llegue a su destino.</p>
+</blockquote>
+<h2 id="qué-es-internet-en-términos-técnicos"><a aria-hidden="true" tabindex="-1" href="#qué-es-internet-en-términos-técnicos"><span class="icon icon-link"></span></a>¿Qué es Internet en términos técnicos?</h2>
+<p>Internet es <strong>una red global de redes interconectadas</strong> que utiliza el protocolo TCP/IP para comunicarse. No es un cable, no es una nube, es una infraestructura física formada por:</p>
+<ul>
+<li><strong>Millones de dispositivos</strong> (servidores, routers, switches, ordenadores, móviles)</li>
+<li><strong>Cables de fibra óptica submarinos y terrestres</strong> (sí, la mayor parte del tráfico viaja por cables bajo el mar)</li>
+<li><strong>Centros de datos</strong> por todo el mundo</li>
+<li><strong>Proveedores de Internet (ISP)</strong> que conectan a sus clientes con el resto de la red</li>
+</ul>
+<h3 id="la-red-de-redes"><a aria-hidden="true" tabindex="-1" href="#la-red-de-redes"><span class="icon icon-link"></span></a>La red de redes</h3>
+<p>Cada red (de una empresa, de una universidad, de un ISP) se conecta con otras a través de <strong>puntos de intercambio de Internet (IXP — Internet Exchange Points)</strong>. Esto es fundamental: Internet no es propiedad de nadie, es el resultado de miles de redes independientes que decidieron comunicarse entre sí usando las mismas reglas.</p>
+<pre><code>Tu ISP (Movistar/Orange/Vodafone)
+       │
+       ▼
+┌─────────────────────┐
+│    Backbone ISP      │──────┐
+│  (fibra óptica 100G) │      │
+└─────────────────────┘      │
+       │                      │
+       ▼                      ▼
+┌─────────────────────┐  ┌─────────────────────┐
+│     IXP local         │  │    Router de borde    │
+│ (punto de intercambio)│  │ (tu router de casa)   │
+└─────────────────────┘  └─────────────────────┘
+       │                            │
+       ▼                            ▼
+Centros de datos            Tu router doméstico
+(CDN, clouds)               (192.168.1.1)
+</code></pre>
+<h3 id="los-actores-principales"><a aria-hidden="true" tabindex="-1" href="#los-actores-principales"><span class="icon icon-link"></span></a>Los actores principales</h3>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Qué hace</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISP (Internet Service Provider)</strong></td>
+<td>Vende acceso a Internet a usuarios y empresas</td>
+<td>Movistar, Orange, Vodafone, Telmex</td>
+</tr>
+<tr>
+<td><strong>IXP (Internet Exchange Point)</strong></td>
+<td>Punto físico donde las redes se conectan entre sí</td>
+<td>AMS-IX (Ámsterdam), DE-CIX (Frankfurt), MEX-IX (México)</td>
+</tr>
+<tr>
+<td><strong>Tier 1 ISP</strong></td>
+<td>Redes que cubren continentes enteros y no pagan por transitación</td>
+<td>AT&#x26;T, NTT, Deutsche Telekom, Telmex</td>
+</tr>
+<tr>
+<td><strong>CDN (Content Delivery Network)</strong></td>
+<td>Red distribuida de servidores para caché de contenido</td>
+<td>Cloudflare, Akamai, Fastly, AWS CloudFront</td>
+</tr>
+<tr>
+<td><strong>Data Center</strong></td>
+<td>Instalaciones con servidores, redundancia eléctrica y de red</td>
+<td>AWS, Google Cloud, Azure, Equinix</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] ¿Cuántos cables hay bajo el mar?
+Existen más de <strong>1.3 millones de kilómetros</strong> de cables submarinos. Si los pusieras en fila, darían la vuelta al mundo 30 veces. El tráfico de Internet cruza los océanos por estos cables, no por satélites.</p>
+</blockquote>
+<h2 id="el-modelo-cliente-servidor"><a aria-hidden="true" tabindex="-1" href="#el-modelo-cliente-servidor"><span class="icon icon-link"></span></a>El modelo cliente-servidor</h2>
+<p>La mayoría de las interacciones en Internet siguen el modelo <strong>cliente-servidor</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>Qué hace</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cliente</strong></td>
+<td>Inicia la conexión, pide información</td>
+<td>Tu navegador (Chrome, Firefox), curl, un app móvil</td>
+</tr>
+<tr>
+<td><strong>Servidor</strong></td>
+<td>Escucha conexiones, responde con datos</td>
+<td>Un servidor web (Nginx, Apache, Caddy)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="un-ejemplo-concreto"><a aria-hidden="true" tabindex="-1" href="#un-ejemplo-concreto"><span class="icon icon-link"></span></a>Un ejemplo concreto</h3>
+<p>Cuando escribes <code>https://google.com</code> en tu navegador:</p>
+<ol>
+<li>Tu navegador (cliente) envía una petición</li>
+<li>Esa petición viaja por tu red → tu ISP → Internet → el servidor de Google</li>
+<li>El servidor de Google responde con el HTML de la página</li>
+<li>Tu navegador recibe el HTML y lo muestra</li>
+</ol>
+<p>Pero esto es una simplificación enorme. En la práctica, lo que ocurre entre el punto 2 y 3 es el tema del siguiente artículo: [[02-como-navegar-de-url-a-pagina]].</p>
+<h3 id="cliente-servidor-vs-p2p"><a aria-hidden="true" tabindex="-1" href="#cliente-servidor-vs-p2p"><span class="icon icon-link"></span></a>Cliente-servidor vs P2P</h3>
+<p>El modelo cliente-servidor no es el único:</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cliente-servidor</strong></td>
+<td>Un servidor responde a muchos clientes</td>
+<td>Web, email, APIs</td>
+</tr>
+<tr>
+<td><strong>P2P (peer-to-peer)</strong></td>
+<td>Los participantes son clientes y servidores</td>
+<td>BitTorrent, Bitcoin, WebRTC</td>
+</tr>
+<tr>
+<td><strong>Pub/Sub (publicar/suscribir)</strong></td>
+<td>Un emisor publica, varios suscriptores reciben</td>
+<td>MQTT, Redis pub/sub, Kafka</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!note] P2P en la práctica
+Aunque BitTorrent y Bitcoin son P2P, la mayor parte de Internet sigue siendo cliente-servidor. Los videojuegos online también usan este modelo: tu consola se conecta a un servidor centralizado del juego.</p>
+</blockquote>
+<h2 id="el-modelo-tcpip"><a aria-hidden="true" tabindex="-1" href="#el-modelo-tcpip"><span class="icon icon-link"></span></a>El modelo TCP/IP</h2>
+<p>Para que todo esto funcione, los dispositivos necesitan <strong>un lenguaje común</strong>. TCP/IP es ese lenguaje: un conjunto de protocolos que define cómo se envían y reciben los datos.</p>
+<h3 id="por-qué-tcpip-y-no-algo-más"><a aria-hidden="true" tabindex="-1" href="#por-qué-tcpip-y-no-algo-más"><span class="icon icon-link"></span></a>¿Por qué TCP/IP y no algo más?</h3>
+<p>Imagina que dos personas de países distintos quieren hablar. Si cada uno habla un idioma diferente, no hay comunicación. TCP/IP es el "idioma común" que todos los dispositivos de Internet entienden. Fue diseñado en los años 70 por <strong>Vint Cerf y Bob Kahn</strong>, y ha sobrevivido a décadas de tecnología porque es:</p>
+<ul>
+<li><strong>Simple</strong>: Protocolos bien definidos y fáciles de implementar</li>
+<li><strong>Extensible</strong>: Nuevos protocolos se añaden sin romper los existentes</li>
+<li><strong>Escalable</strong>: Funciona desde un smartphone hasta un supercomputador</li>
+</ul>
+<h3 id="capas-del-modelo-tcpip-simplificado"><a aria-hidden="true" tabindex="-1" href="#capas-del-modelo-tcpip-simplificado"><span class="icon icon-link"></span></a>Capas del modelo TCP/IP (simplificado)</h3>
+<p>Piensa en TCP/IP como una cadena de embalaje:</p>
+<pre><code>┌─────────────────────────────────┐
+│  Capa de Aplicación (HTTP, DNS) │ ← Tu petición "get /home"
+│  ┌─────────────────────────────┐│
+│  │  Capa de Transporte (TCP)   │ ← "Dividir en trozos, ordenarlos, reenviar si falta algo"
+│  │  ┌─────────────────────────┐│
+│  │  │  Capa de Internet (IP)  │ ← "Poner dirección de destino, buscar la ruta"
+│  │  │  ┌─────────────────────┐│
+│  │  │  │  Capa de Enlace      │ ← "Poner en el cable/WiFi"
+│  │  │  │  (Ethernet, WiFi)   ││
+│  │  │  └─────────────────────┘│
+│  │  └─────────────────────────┘│
+│  └─────────────────────────────┘│
+└─────────────────────────────────┘
+</code></pre>
+<p>Cada capa <strong>encapsula</strong> la información de la capa superior:</p>
+<pre><code>Tu mensaje: "GET / HTTP/1.1"
+  ↓ [Capa de Aplicación añade HTTP]
+GET / HTTP/1.1
+  ↓ [Capa de Transporte añade TCP]
+[TCP header: src port, dst port, seq, ack] + "GET / HTTP/1.1"
+  ↓ [Capa de Internet añade IP]
+[IP header: src IP, dst IP] + [TCP header + datos]
+  ↓ [Capa de Enlace añade Ethernet]
+[Ethernet header: src MAC, dst MAC] + [IP header + TCP + datos]
+  ↓ [Se envía por el cable/WiFi]
+</code></pre>
+<h4 id="capa-de-aplicación"><a aria-hidden="true" tabindex="-1" href="#capa-de-aplicación"><span class="icon icon-link"></span></a>Capa de Aplicación</h4>
+<p>Aquí es donde viven HTTP, DNS, FTP, SMTP, SSH, WebSocket. Es la capa que tú usas directamente. Cada protocolo de aplicación define su propio formato de mensaje y semántica.</p>
+<p><strong>Protocolos principales:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Puerto</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>80</td>
+<td>Transferencia web</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>HTTP cifrado (HTTP sobre TLS)</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>Resolución de nombres</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>Envío de email</td>
+</tr>
+<tr>
+<td>IMAP/POP3</td>
+<td>143/993 / 110/995</td>
+<td>Recepción de email</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>Acceso remoto seguro</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+<td>Transferencia de archivos</td>
+</tr>
+<tr>
+<td>WebSocket</td>
+<td>443 (o 80)</td>
+<td>Comunicación bidireccional en tiempo real</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Tu navegador usa múltiples protocolos simultáneamente
+Cuando visitas una página web, tu navegador usa:</p>
+<ol>
+<li><strong>DNS</strong> (puerto 53, UDP) para resolver el dominio</li>
+<li><strong>TCP</strong> (puerto 443) para establecer la conexión</li>
+<li><strong>TLS</strong> (puerto 443) para cifrar</li>
+<li><strong>HTTP</strong> (puerto 443) para pedir la página</li>
+<li><strong>WebSocket</strong> (opcional) para actualizaciones en tiempo real</li>
+</ol>
+</blockquote>
+<h4 id="capa-de-transporte-tcp-vs-udp"><a aria-hidden="true" tabindex="-1" href="#capa-de-transporte-tcp-vs-udp"><span class="icon icon-link"></span></a>Capa de Transporte (TCP vs UDP)</h4>
+<p>Esta capa decide <strong>cómo</strong> se envían los datos:</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>TCP (Transmission Control Protocol)</th>
+<th>UDP (User Datagram Protocol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fiabilidad</strong></td>
+<td>Garantiza que todo llegue (reenvía lo perdido)</td>
+<td>Best-effort (puede perder paquetes)</td>
+</tr>
+<tr>
+<td><strong>Orden</strong></td>
+<td>Los datos llegan en orden</td>
+<td>No garantiza orden</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Más lento (overhead de confirmaciones)</td>
+<td>Más rápido</td>
+</tr>
+<tr>
+<td><strong>Conexión</strong></td>
+<td>Orientado a conexión (handshake)</td>
+<td>Sin conexión</td>
+</tr>
+<tr>
+<td><strong>Control de flujo</strong></td>
+<td>Sí (window size)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Control de congestión</strong></td>
+<td>Sí (slow start, congestion avoidance)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Web (HTTP), email, FTP</td>
+<td>Streaming, videojuegos, DNS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>¿Por qué HTTP usa TCP?</strong> Porque necesitas que todas las imágenes, todo el HTML, todo el CSS llegue completo y en orden. Si se pierde un byte de una imagen, la imagen se corrompe. TCP garantiza que no pase.</p>
+<p><strong>¿Por qué DNS usa UDP?</strong> Una pregunta de DNS es muy pequeña (unas pocas decenas de bytes). Si se pierde, el cliente reenvía la consulta. Es más rápido. Sin embargo, si la respuesta supera los 512 bytes, DNS usa TCP.</p>
+<p><strong>¿Por qué el streaming de video usa UDP (a menudo)?</strong> Si se pierde un frame de video, no importa — el siguiente frame llega en su lugar. Lo que importa es la velocidad y la fluidez, no la perfección.</p>
+<blockquote>
+<p>[!tip] Regla mnemotécnica</p>
+<ul>
+<li>Si el dato <strong>tiene que llegar completo</strong> (página web, email, archivo) → TCP</li>
+<li>Si es más importante la <strong>velocidad</strong> que la perfección (video en directo, voz, DNS) → UDP</li>
+</ul>
+</blockquote>
+<h4 id="capa-de-internet-ip"><a aria-hidden="true" tabindex="-1" href="#capa-de-internet-ip"><span class="icon icon-link"></span></a>Capa de Internet (IP)</h4>
+<p>IP (Internet Protocol) se encarga de:</p>
+<ul>
+<li><strong>Direccionamiento</strong>: Cada dispositivo tiene una dirección IP única en su red</li>
+<li><strong>Enrutamiento</strong>: Encontrar el camino más eficiente entre origen y destino</li>
+</ul>
+<p>Tu dispositivo tiene una IP privada (192.168.1.5, por ejemplo) dentro de tu red local, y tu router tiene una IP pública que es la que se ve en Internet. La conexión entre ambas es <strong>NAT</strong>, sobre lo que puedes leer en [[13-nat-red]].</p>
+<p><strong>IPv4 vs IPv6:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tamaño</strong></td>
+<td>32 bits (4 bytes)</td>
+<td>128 bits (16 bytes)</td>
+</tr>
+<tr>
+<td><strong>Formato</strong></td>
+<td>192.168.1.1</td>
+<td>2001:0db8:85a3::8a2e:370:7334</td>
+</tr>
+<tr>
+<td><strong>Direcciones</strong></td>
+<td>~4.3 mil millones</td>
+<td>~3.4 × 10³⁸</td>
+</tr>
+<tr>
+<td><strong>Cabecera</strong></td>
+<td>20-60 bytes</td>
+<td>40 bytes fijos</td>
+</tr>
+<tr>
+<td><strong>Autoconfiguración</strong></td>
+<td>Requiere DHCP</td>
+<td>SLAAC (sin DHCP)</td>
+</tr>
+<tr>
+<td><strong>Seguridad</strong></td>
+<td>IPsec opcional</td>
+<td>IPsec integrado</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Agotamiento de IPv4
+Las direcciones IPv4 se agotaron oficialmente en 2011. Con NAT pudimos延长时间, pero IPv6 es la solución definitiva. Cada dispositivo puede tener su propia IP pública sin necesidad de NAT.</p>
+</blockquote>
+<h4 id="capa-de-enlace"><a aria-hidden="true" tabindex="-1" href="#capa-de-enlace"><span class="icon icon-link"></span></a>Capa de Enlace</h4>
+<p>Ethernet, WiFi, Bluetooth. Es la capa física más cercana a tu hardware. Aquí se definen los <strong>MAC addresses</strong> (direcciones físicas de las tarjetas de red).</p>
+<p><strong>¿Qué es un MAC address?</strong> Es una dirección única asignada al fabricante de tu tarjeta de red. Tiene 6 pares de hexadecimales: <code>00:1A:2B:3C:4D:5E</code>. No cambia (a menos que lo spoofees), a diferencia de la IP que puede cambiar cada vez que te conectas a una red.</p>
+<h3 id="lo-que-necesitas-entender-de-tcpip"><a aria-hidden="true" tabindex="-1" href="#lo-que-necesitas-entender-de-tcpip"><span class="icon icon-link"></span></a>Lo que necesitas entender de TCP/IP</h3>
+<ul>
+<li><strong>Los datos viajan fragmentados</strong>: Ninguna petición HTTP se envía como un bloque gigante. Se divide en <strong>packets</strong> de ~1500 bytes (MTU — Maximum Transmission Unit).</li>
+<li><strong>Cada packet lleva</strong>: la dirección de destino, un número de secuencia, checksums (para verificar integridad) y más metadatos.</li>
+<li><strong>Los routers solo miran la capa de Internet</strong>: Los routers de Internet solo ven las direcciones IP de origen y destino. No saben qué contiene el paquete (HTTP, DNS, lo que sea).</li>
+<li><strong>TCP reensambla en destino</strong>: El servidor (o cliente) reordena los packets según el número de secuencia y reconstituye el mensaje original.</li>
+<li><strong>Los switches trabajan en la capa de Enlace</strong>, los routers en la capa de Internet: Esta distinción es fundamental para entender la red.</li>
+</ul>
+<h3 id="el-modelo-osi-7-capas-vs-tcpip-4-capas"><a aria-hidden="true" tabindex="-1" href="#el-modelo-osi-7-capas-vs-tcpip-4-capas"><span class="icon icon-link"></span></a>El modelo OSI: 7 capas vs TCP/IP: 4 capas</h3>
+<p>Existe otro modelo de red que verás en los libros: el <strong>modelo OSI</strong> (Open Systems Interconnection), que tiene 7 capas. TCP/IP es más práctico con 4. Ambos modelos describen lo mismo, pero con diferente nivel de detalle:</p>
+<table>
+<thead>
+<tr>
+<th>Modelo OSI (7 capas)</th>
+<th>Modelo TCP/IP (4 capas)</th>
+<th>Protocolos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7. Aplicación</td>
+<td>4. Aplicación</td>
+<td>HTTP, DNS, SMTP, SSH</td>
+</tr>
+<tr>
+<td>6. Presentación</td>
+<td></td>
+<td>SSL/TLS, JPEG, GIF</td>
+</tr>
+<tr>
+<td>5. Sesión</td>
+<td></td>
+<td>NetBIOS, RPC</td>
+</tr>
+<tr>
+<td>4. Transporte</td>
+<td>3. Transporte</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td>3. Red</td>
+<td>2. Internet</td>
+<td>IP, ICMP, ARP</td>
+</tr>
+<tr>
+<td>2. Enlace de datos</td>
+<td>1. Acceso a red</td>
+<td>Ethernet, WiFi, ARP</td>
+</tr>
+<tr>
+<td>1. Física</td>
+<td></td>
+<td>Cables, hubs, fibra</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] ¿Cuál usar?
+En la práctica, TCP/IP es el modelo real que se usa. OSI es útil para entender conceptos y para diagnóstico (cuando algo falla, puedes identificar en qué capa). Veremos el modelo OSI en detalle en [[15-modelo-osi-tcpip]].</p>
+</blockquote>
+<h2 id="conexexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Artículo siguiente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>¿Qué pasa después de escribir una URL?</td>
+<td>[[02-como-navegar-de-url-a-pagina]] — El viaje completo</td>
+</tr>
+<tr>
+<td>¿Qué es esa dirección IP?</td>
+<td>[[03-dns-profundo]] — DNS, [[12-puertos]] — Puertos e IPs</td>
+</tr>
+<tr>
+<td>¿Cómo viajan los datos?</td>
+<td>[[14-servidores-procesos]] — Servidores y procesos</td>
+</tr>
+<tr>
+<td>¿Qué es un servidor web?</td>
+<td>[[14-servidores-procesos]] — Un servidor es un proceso que escucha en un puerto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Internet es una <strong>red de redes</strong>, no es una entidad única.</li>
+<li>Funciona porque todos usan <strong>TCP/IP</strong>, un conjunto de reglas acordado globalmente.</li>
+<li>El modelo <strong>cliente-servidor</strong> es la forma más común de interacción: un cliente pide, un servidor responde.</li>
+<li>Los datos viajan <strong>fragmentados en packets</strong> a través de múltiples routers.</li>
+<li>TCP garantiza fiabilidad (todo llega), UDP prioriza velocidad.</li>
+<li>Cada capa de TCP/IP tiene una función específica: aplicación (datos), transporte (fiabilidad), internet (enrutamiento), enlace (hardware).</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Internet no es mágica. Es una cadena de procesos cada uno con un trabajo específico, conectados por protocolos que todos entienden. Si entiendes qué hace cada pieza, entiendes Internet.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

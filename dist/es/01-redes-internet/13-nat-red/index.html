@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">NAT: Network Address Translation</h1> <div class="article-body"><h1 id="nat-network-address-translation"><a aria-hidden="true" tabindex="-1" href="#nat-network-address-translation"><span class="icon icon-link"></span></a>NAT: Network Address Translation</h1>
+<blockquote>
+<p>[!tip] NAT en una frase
+NAT es el mecanismo que permite que <strong>múltiples dispositivos en tu red local</strong> compartan <strong>una sola IP pública</strong>, traduciéndolos automáticamente.</p>
+</blockquote>
+<h2 id="el-problema-pocas-ips-públicas-muchos-dispositivos"><a aria-hidden="true" tabindex="-1" href="#el-problema-pocas-ips-públicas-muchos-dispositivos"><span class="icon icon-link"></span></a>El problema: pocas IPs públicas, muchos dispositivos</h2>
+<p>Cada dispositivo que se conecta a Internet necesita una IP pública. Pero las IPv4 se agotaron en 2011. La solución: NAT.</p>
+<pre><code>Tu red local (192.168.1.x — IPs privadas)
+┌─────────────────────────────────────────┐
+│  Laptop (192.168.1.5)  ──┐              │
+│  Teléfono (192.168.1.6)  ──┤             │
+│  Smart TV (192.168.1.7)   ──┤             │
+│  Servidor NAS (192.168.1.8) ──→ Router ──→ IP pública: 85.23.45.67 (una sola!)
+│  Consola (192.168.1.9)   ──┘             │
+└─────────────────────────────────────────┘
+</code></pre>
+<h2 id="cómo-funciona-nat"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona-nat"><span class="icon icon-link"></span></a>¿Cómo funciona NAT?</h2>
+<h3 id="snat-source-nat--el-más-común"><a aria-hidden="true" tabindex="-1" href="#snat-source-nat--el-más-común"><span class="icon icon-link"></span></a>SNAT (Source NAT) — El más común</h3>
+<p>Cuando tu laptop hace una petición a Internet:</p>
+<pre><code>Dentro de tu red:
+  Origen: 192.168.1.5:54321
+  Destino: 93.184.216.34:80
+
+Fuera de tu red (en el router):
+  Origen: 85.23.45.67:12345    (¡cambia el origen!)
+  Destino: 93.184.216.34:80
+
+Respuesta:
+  Destino: 85.23.45.67:12345   (el servidor responde a la IP pública)
+  Origen: 93.184.216.34:80
+
+Router traduce de vuelta:
+  Destino: 192.168.1.5:54321
+</code></pre>
+<p>El router mantiene una <strong>tabla de traducción</strong>:</p>
+<pre><code>┌─────────────┬─────────────┬─────────────┬─────────────┐
+│ Internal IP │ Internal PT │ External IP │ External PT │
+├─────────────┼─────────────┼─────────────┼─────────────┤
+│ 192.168.1.5 │ 54321       │ 85.23.45.67 │ 12345       │
+│ 192.168.1.6 │ 54322       │ 85.23.45.67 │ 12346       │
+│ 192.168.1.7 │ 54323       │ 85.23.45.67 │ 12347       │
+└─────────────┴─────────────┴─────────────┴─────────────┘
+</code></pre>
+<blockquote>
+<p>[!tip] Cada conexión tiene un puerto diferente
+Si dos dispositivos acceden al mismo servidor, el router les asigna puertos externos diferentes para poder distinguir las respuestas.</p>
+</blockquote>
+<h3 id="dnat-destination-nat--port-forwarding"><a aria-hidden="true" tabindex="-1" href="#dnat-destination-nat--port-forwarding"><span class="icon icon-link"></span></a>DNAT (Destination NAT) — Port forwarding</h3>
+<p>Cuando alguien desde Internet quiere acceder a un servicio en tu red:</p>
+<pre><code>Alguien en Internet:
+  Origen: 123.45.67.89:54321
+  Destino: 85.23.45.67:8080
+
+Router traduce:
+  Origen: 123.45.67.89:54321
+  Destino: 192.168.1.100:3000
+
+Resultado: La petición llega a tu servidor en localhost:3000
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En el router (iptables):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Redirigir puerto 8080 del router al puerto 3000 del servidor interno</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PREROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8080</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DNAT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --to-destination</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.100:3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Y permitir el tráfico:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> FORWARD</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tcp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.100</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dport</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ACCEPT</span></span></code></pre></figure>
+<blockquote>
+<p>[!warning] Port forwarding expone tu red al Internet
+Cuando haces port forwarding, estás abriendo una puerta desde Internet directamente a tu servidor interno. Esto es un riesgo de seguridad. <strong>NUNCA</strong> expongas servicios directamente a Internet sin un firewall o reverse proxy.</p>
+</blockquote>
+<h2 id="masquerading-nat-dinámico"><a aria-hidden="true" tabindex="-1" href="#masquerading-nat-dinámico"><span class="icon icon-link"></span></a>Masquerading (NAT dinámico)</h2>
+<p>Masquerading es una forma de SNAT donde el router usa su propia IP como origen:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En Linux (iptables):</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTROUTING</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.0/24</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> eth0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -j</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MASQUERADE</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ← Todo el tráfico de la red 192.168.1.0/24 que salga por eth0</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#    se mascarea con la IP de eth0</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] ¿Diferencia entre SNAT y Masquerade?</p>
+<ul>
+<li><strong>SNAT</strong>: IP fija (útil si tu IP pública es estática)</li>
+<li><strong>Masquerade</strong>: IP dinámica (útil si tu IP cambia, como en conexión móvil)</li>
+<li>En la práctica, masquerade es más común porque la mayoría de conexiones domésticas tienen IP dinámica</li>
+</ul>
+</blockquote>
+<h2 id="nat-y-docker"><a aria-hidden="true" tabindex="-1" href="#nat-y-docker"><span class="icon icon-link"></span></a>NAT y Docker</h2>
+<h3 id="el-problema-contenedores-detrás-de-nat"><a aria-hidden="true" tabindex="-1" href="#el-problema-contenedores-detrás-de-nat"><span class="icon icon-link"></span></a>El problema: contenedores detrás de NAT</h3>
+<pre><code>Tu máquina (192.168.1.5)
+├── Docker container (172.17.0.2)
+│   └── App en puerto 3000
+├── Docker container (172.17.0.3)
+│   └── PostgreSQL en puerto 5432
+
+# ¿Cómo accedes desde tu máquina?
+curl http://localhost:3000     → Connection refused (si no mapeaste el puerto)
+curl http://localhost:5432     → Connection refused
+
+# ¿Por qué?
+# El contenedor está en 172.17.0.2 (red interna de Docker)
+# Tu máquina no sabe cómo llegar allí
+</code></pre>
+<h3 id="solución--p-port-mapping--dnat"><a aria-hidden="true" tabindex="-1" href="#solución--p-port-mapping--dnat"><span class="icon icon-link"></span></a>Solución: <code>-p</code> (port mapping) = DNAT</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Docker hace DNAT automáticamente:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto 3000 del host → Puerto 3000 del contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Es como hacer port forwarding pero automático</span></span></code></pre></figure>
+<h3 id="red-interna-de-docker"><a aria-hidden="true" tabindex="-1" href="#red-interna-de-docker"><span class="icon icon-link"></span></a>Red interna de Docker</h3>
+<pre><code>Docker usa una red bridge: 172.17.0.0/16
+
+Contenedor A (172.17.0.2) ──┐
+                            ├── Red bridge de Docker
+Contenedor B (172.17.0.3) ──┘
+                            │
+                            │ NAT hacia tu red local
+                            │
+                       192.168.1.5 (tu máquina)
+</code></pre>
+<blockquote>
+<p>[!tip] Puertos entre contenedores</p>
+<ul>
+<li><strong>Entre contenedores</strong>: Se comunican por la red interna de Docker (sin NAT, sin <code>-p</code>). Usa el nombre del servicio como hostname.</li>
+<li><strong>Del host al contenedor</strong>: Necesitas <code>-p</code> (DNAT). El contenedor NO es accesible desde el host por defecto.</li>
+<li><strong>Del Internet al contenedor</strong>: Necesitas <code>-p</code> + firewall abierto.</li>
+</ul>
+</blockquote>
+<h2 id="nat-y-bases-de-datos"><a aria-hidden="true" tabindex="-1" href="#nat-y-bases-de-datos"><span class="icon icon-link"></span></a>NAT y bases de datos</h2>
+<h3 id="por-qué-no-expones-la-base-de-datos-a-internet"><a aria-hidden="true" tabindex="-1" href="#por-qué-no-expones-la-base-de-datos-a-internet"><span class="icon icon-link"></span></a>¿Por qué NO expones la base de datos a Internet?</h3>
+<pre><code># INCORRECTO: Base de datos accesible desde Internet
+docker run -p 5432:5432 postgres:16
+# Cualquiera en Internet puede intentar conectar a tu PostgreSQL
+
+# CORRECTO: Base de datos solo accesible desde otros contenedores
+docker run postgres:16  # Sin -p
+# Solo accesible desde otros contenedores en la misma red Docker
+</code></pre>
+<h3 id="pattern-común-en-docker-compose"><a aria-hidden="true" tabindex="-1" href="#pattern-común-en-docker-compose"><span class="icon icon-link"></span></a>Pattern común en Docker Compose</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Frontend accesible desde Internet (a través de reverse proxy)</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  web</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./frontend</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"80:80"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"443:443"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Backend accesible desde el frontend (red interna)</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./backend</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    expose</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"3000"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Solo dentro de Docker, no al host</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # NUNCA uses ports: aquí</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Base de datos solo accesible desde el backend</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">pgdata:/var/lib/postgresql/data</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Sin ports, sin expose — solo volumen de datos</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  pgdata</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span></code></pre></figure>
+<h2 id="nat-traversal-cuando-las-cosas-se-complican"><a aria-hidden="true" tabindex="-1" href="#nat-traversal-cuando-las-cosas-se-complican"><span class="icon icon-link"></span></a>NAT Traversal (cuando las cosas se complican)</h2>
+<h3 id="el-problema-p2p-detrás-de-nat"><a aria-hidden="true" tabindex="-1" href="#el-problema-p2p-detrás-de-nat"><span class="icon icon-link"></span></a>El problema: P2P detrás de NAT</h3>
+<p>Cuando dos dispositivos detrás de NAT quieren comunicarse directamente (P2P):</p>
+<pre><code>Dispositivo A (NAT)          Dispositivo B (NAT)
+192.168.1.5:54321 ──→ 85.23.45.67:12345    192.168.2.10:12345 ──→ 91.123.45.67:54321
+                           (NAT table)                       (NAT table)
+
+A no conoce B, B no conoce A. ¿Cómo se conectan?
+</code></pre>
+<h3 id="soluciones"><a aria-hidden="true" tabindex="-1" href="#soluciones"><span class="icon icon-link"></span></a>Soluciones</h3>
+<table>
+<thead>
+<tr>
+<th>Técnica</th>
+<th>Descripción</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>STUN</strong></td>
+<td>Descubre tu IP pública y mapeo de puertos</td>
+<td>WebRTC, VoIP</td>
+</tr>
+<tr>
+<td><strong>TURN</strong></td>
+<td>Reenvía todo el tráfico a través de un servidor</td>
+<td>Cuando P2P directo no funciona</td>
+</tr>
+<tr>
+<td><strong>ICE</strong></td>
+<td>Combina STUN + TURN para la mejor ruta</td>
+<td>WebRTC</td>
+</tr>
+<tr>
+<td><strong>UPnP / NAT-PMP</strong></td>
+<td>Permite que aplicaciones abran puertos automáticamente</td>
+<td>Raro hoy en día (seguridad)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>NAT permite que múltiples dispositivos compartan una IP pública</li>
+<li>SNAT traduce direcciones de origen (todos los dispositivos salientes)</li>
+<li>DNAT traduce direcciones de destino (port forwarding, acceso entrante)</li>
+<li>Docker usa NAT por defecto — necesitas <code>-p</code> para exponer contenedores</li>
+<li>Nunca expongas bases de datos directamente a Internet</li>
+<li>IPv6 elimina la necesidad de NAT (cada dispositivo tiene IP pública)</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+NAT es un "parche" para la escasez de IPv4. Funciona bien para la mayoría de casos, pero rompe la conectividad P2P directa. IPv6 lo resolverá eventualmente.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Puertos y localhost</td>
+<td>[[12-puertos]]</td>
+</tr>
+<tr>
+<td>Servidores y procesos</td>
+<td>[[14-servidores-procesos]]</td>
+</tr>
+<tr>
+<td>Reverse proxy</td>
+<td>[[14-servidores-procesos]] (Nginx/Caddy como proxy)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

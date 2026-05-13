@@ -1,0 +1,644 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0</h1> <div class="article-body"><h1 id="authentication-basic-auth-bearer-tokens-api-keys-oauth-20"><a aria-hidden="true" tabindex="-1" href="#authentication-basic-auth-bearer-tokens-api-keys-oauth-20"><span class="icon icon-link"></span></a>Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0</h1>
+<blockquote>
+<p>[!tip] Authentication in a nutshell
+Authentication is verifying that someone is who they claim to be. HTTP provides several mechanisms: Basic Auth, Bearer tokens, API keys, and the OAuth 2.0 framework. Each has different security properties and use cases.</p>
+</blockquote>
+<h2 id="what-is-authentication"><a aria-hidden="true" tabindex="-1" href="#what-is-authentication"><span class="icon icon-link"></span></a>What is Authentication?</h2>
+<p>Authentication is the process of <strong>verifying identity</strong>. It answers the question: "Are you who you claim to be?"</p>
+<pre><code>Authentication (AuthN)  → "Are you John?"
+Authorization (AuthZ)   → "Can John access /admin?"
+</code></pre>
+<h2 id="http-authentication-header"><a aria-hidden="true" tabindex="-1" href="#http-authentication-header"><span class="icon icon-link"></span></a>HTTP Authentication Header</h2>
+<p>HTTP has a standard way to send credentials in requests:</p>
+<pre><code>Authorization: &#x3C;type> &#x3C;credentials>
+</code></pre>
+<p>The type and format depend on the authentication method.</p>
+<h2 id="http-basic-authentication"><a aria-hidden="true" tabindex="-1" href="#http-basic-authentication"><span class="icon icon-link"></span></a>HTTP Basic Authentication</h2>
+<p>Basic Auth is the simplest form of HTTP authentication. Credentials are sent as base64-encoded username and password.</p>
+<h3 id="how-basic-auth-works"><a aria-hidden="true" tabindex="-1" href="#how-basic-auth-works"><span class="icon icon-link"></span></a>How Basic Auth works</h3>
+<pre><code># Server requires authentication
+GET /api/data HTTP/1.1
+Host: api.example.com
+
+# Response: 401 Unauthorized
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm="api"
+
+# Client sends credentials
+GET /api/data HTTP/1.1
+Host: api.example.com
+Authorization: Basic &#x3C;base64-encoded-credentials>
+# "am9objpzZWNyZXQxMjM=" = base64("john:secret123")
+
+# Server validates and responds
+HTTP/1.1 200 OK
+</code></pre>
+<h3 id="basic-auth-in-curl"><a aria-hidden="true" tabindex="-1" href="#basic-auth-in-curl"><span class="icon icon-link"></span></a>Basic Auth in curl</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># With username and password</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> john:secret123</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.example.com/data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Equivalent to:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Authorization: Basic &#x3C;base64-encoded-credentials>"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.example.com/data</span></span></code></pre></figure>
+<h3 id="basic-auth-security"><a aria-hidden="true" tabindex="-1" href="#basic-auth-security"><span class="icon icon-link"></span></a>Basic Auth security</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Basic Auth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confidentiality</strong></td>
+<td>❌ Only base64-encoded (NOT encrypted). Credentials are visible in network traffic.</td>
+</tr>
+<tr>
+<td><strong>Requires HTTPS</strong></td>
+<td>Mandatory. Without HTTPS, credentials travel in plaintext.</td>
+</tr>
+<tr>
+<td><strong>Password storage</strong></td>
+<td>Server must store plaintext or reversible-encrypted passwords.</td>
+</tr>
+<tr>
+<td><strong>Session management</strong></td>
+<td>No session — every request sends credentials.</td>
+</tr>
+<tr>
+<td><strong>Rotation</strong></td>
+<td>Impossible without re-sending credentials.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Basic Auth is almost always the wrong choice
+Basic Auth sends credentials with every request. It is not designed for modern API authentication. Use it only for simple internal tools or when absolutely required by legacy systems. It MUST be used over HTTPS only.</p>
+</blockquote>
+<h2 id="bearer-tokens-token-based-authentication"><a aria-hidden="true" tabindex="-1" href="#bearer-tokens-token-based-authentication"><span class="icon icon-link"></span></a>Bearer Tokens (Token-based authentication)</h2>
+<p>Bearer tokens are the modern standard for API authentication. Any holder of the token (the "bearer") can use it.</p>
+<h3 id="how-bearer-tokens-work"><a aria-hidden="true" tabindex="-1" href="#how-bearer-tokens-work"><span class="icon icon-link"></span></a>How Bearer Tokens work</h3>
+<pre><code># Client sends token
+GET /api/data HTTP/1.1
+Host: api.example.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+# Server validates token signature and extracts user data
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{ "id": 123, "name": "John" }
+</code></pre>
+<h3 id="bearer-token-vs-basic-auth"><a aria-hidden="true" tabindex="-1" href="#bearer-token-vs-basic-auth"><span class="icon icon-link"></span></a>Bearer token vs Basic Auth</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Basic Auth</th>
+<th>Bearer Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Credentials sent</strong></td>
+<td>Username + password (base64)</td>
+<td>Token (opaque string or JWT)</td>
+</tr>
+<tr>
+<td><strong>Per-request</strong></td>
+<td>Yes, every request</td>
+<td>Yes, every request</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>No (requires password change)</td>
+<td>Yes (revoke the token)</td>
+</tr>
+<tr>
+<td><strong>Scoped</strong></td>
+<td>No (full access)</td>
+<td>Yes (scopes/permissions)</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>In application code or URL</td>
+<td>In cookie, localStorage, or env variable</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Legacy systems, admin panels</td>
+<td>Modern APIs, SPAs, mobile apps</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bearer-token-security-best-practices"><a aria-hidden="true" tabindex="-1" href="#bearer-token-security-best-practices"><span class="icon icon-link"></span></a>Bearer token security best practices</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Good: Store tokens in httpOnly cookies</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cookie</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'token'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, accessToken, {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  httpOnly: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  secure: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  sameSite: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'strict'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  maxAge: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">15</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 60</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1000</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 15 minutes</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Good: Use HTTPS only</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Bad: Never send tokens over plain HTTP</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Bad: Never log tokens</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Auth header:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, req.headers.authorization); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// BAD!</span></span></code></pre></figure>
+<h3 id="where-to-store-tokens"><a aria-hidden="true" tabindex="-1" href="#where-to-store-tokens"><span class="icon icon-link"></span></a>Where to store tokens</h3>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>httpOnly Cookie</strong></td>
+<td>Protected from XSS, CSRF with SameSite</td>
+<td>Not accessible to JS</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>Not persisted, XSS-protected</td>
+<td>Lost on page refresh</td>
+</tr>
+<tr>
+<td><strong>localStorage</strong></td>
+<td>Accessible to JS, persists</td>
+<td>Vulnerable to XSS</td>
+</tr>
+<tr>
+<td><strong>sessionStorage</strong></td>
+<td>Accessible to JS, per-tab</td>
+<td>Lost on tab close</td>
+</tr>
+<tr>
+<td><strong>Secure element</strong></td>
+<td>Hardware-protected</td>
+<td>Platform-dependent</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Best practice: httpOnly + Secure + SameSite cookies
+Store the Bearer token in an httpOnly cookie. This protects against XSS (JavaScript cannot read it) and works seamlessly with CSRF protection via SameSite.</p>
+</blockquote>
+<h2 id="api-keys"><a aria-hidden="true" tabindex="-1" href="#api-keys"><span class="icon icon-link"></span></a>API Keys</h2>
+<p>API keys are simple strings used to identify the caller. They are commonly used for server-to-server authentication.</p>
+<h3 id="how-api-keys-work"><a aria-hidden="true" tabindex="-1" href="#how-api-keys-work"><span class="icon icon-link"></span></a>How API keys work</h3>
+<pre><code># Using an API key in the header
+GET /api/data HTTP/1.1
+Host: api.example.com
+X-API-Key: &#x3C;your-api-key-here>
+
+# Or in the query string (less common, less secure)
+GET /api/data?api_key=&#x3C;your-api-key-here>
+
+# Or in the body for POST/PUT requests
+POST /api/data
+Content-Type: application/json
+X-API-Key: &#x3C;your-api-key-here>
+{"name": "John"}
+</code></pre>
+<h3 id="api-key-security-properties"><a aria-hidden="true" tabindex="-1" href="#api-key-security-properties"><span class="icon icon-link"></span></a>API key security properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identification</strong></td>
+<td>API key identifies WHO is making the request</td>
+</tr>
+<tr>
+<td><strong>Not authentication</strong></td>
+<td>API keys identify but do not prove identity (no challenge/response)</td>
+</tr>
+<tr>
+<td><strong>No expiration by default</strong></td>
+<td>Keys are valid forever unless rotated manually</td>
+</tr>
+<tr>
+<td><strong>Scoped</strong></td>
+<td>Can have permissions (read-only, write, admin)</td>
+</tr>
+<tr>
+<td><strong>Revocable</strong></td>
+<td>Can be revoked by the key owner</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-key-best-practices"><a aria-hidden="true" tabindex="-1" href="#api-key-best-practices"><span class="icon icon-link"></span></a>API key best practices</h3>
+<pre><code># GOOD: Rotate keys regularly
+# GOOD: Use different keys for development, staging, production
+# GOOD: Store keys in environment variables or secrets managers
+# GOOD: Use short-lived keys for sensitive operations
+# GOOD: Log which key was used for audit trails
+
+# BAD: Commit API keys to version control
+# BAD: Send API keys in URL query strings (they appear in logs)
+# BAD: Share API keys via email or chat
+# BAD: Use the same key for all environments
+</code></pre>
+<h3 id="api-key-vs-bearer-token"><a aria-hidden="true" tabindex="-1" href="#api-key-vs-bearer-token"><span class="icon icon-link"></span></a>API key vs Bearer token</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>API Key</th>
+<th>Bearer Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Identity</strong></td>
+<td>Identifies the caller (e.g., "this app")</td>
+<td>Identifies the user or session</td>
+</tr>
+<tr>
+<td><strong>Authentication method</strong></td>
+<td>Something you know (static string)</td>
+<td>Something you know (signed token)</td>
+</tr>
+<tr>
+<td><strong>Verification</strong></td>
+<td>Simple string match</td>
+<td>Cryptographic signature verification</td>
+</tr>
+<tr>
+<td><strong>Revocation</strong></td>
+<td>Delete the key</td>
+<td>Revoke the token (or wait for expiry)</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Server-to-server, external APIs</td>
+<td>User authentication, user sessions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="oauth-20"><a aria-hidden="true" tabindex="-1" href="#oauth-20"><span class="icon icon-link"></span></a>OAuth 2.0</h2>
+<p>OAuth 2.0 is an <strong>authorization framework</strong> that allows third-party applications to obtain limited access to a user's resources without sharing credentials.</p>
+<h3 id="oauth-20-vs-oauth-10"><a aria-hidden="true" tabindex="-1" href="#oauth-20-vs-oauth-10"><span class="icon icon-link"></span></a>OAuth 2.0 vs OAuth 1.0</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>OAuth 1.0</th>
+<th>OAuth 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Cryptographic signature for every request</td>
+<td>Token-based (simpler)</td>
+</tr>
+<tr>
+<td><strong>Tokens</strong></td>
+<td>Request tokens + Access tokens</td>
+<td>Just access tokens</td>
+</tr>
+<tr>
+<td><strong>Use cases</strong></td>
+<td>APIs only</td>
+<td>APIs + User authentication</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>More complex, more secure by design</td>
+<td>Simpler, relies on HTTPS</td>
+</tr>
+<tr>
+<td><strong>Adoption</strong></td>
+<td>Legacy systems</td>
+<td>Modern standard (almost universal)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!note] OAuth 2.0 is NOT an authentication protocol
+OAuth 2.0 is an authorization framework. It answers "Can this app access these resources?" not "Who is this user?". OpenID Connect (OIDC) builds on OAuth 2.0 for authentication.</p>
+</blockquote>
+<h3 id="oauth-20-actors"><a aria-hidden="true" tabindex="-1" href="#oauth-20-actors"><span class="icon icon-link"></span></a>OAuth 2.0 Actors</h3>
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resource Owner</strong></td>
+<td>The user who owns the data</td>
+</tr>
+<tr>
+<td><strong>Client</strong></td>
+<td>The application requesting access</td>
+</tr>
+<tr>
+<td><strong>Authorization Server</strong></td>
+<td>Issues access tokens (e.g., Google's OAuth server)</td>
+</tr>
+<tr>
+<td><strong>Resource Server</strong></td>
+<td>Hosts the protected resources (e.g., Google's Contacts API)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oauth-20-authorization-flows"><a aria-hidden="true" tabindex="-1" href="#oauth-20-authorization-flows"><span class="icon icon-link"></span></a>OAuth 2.0 Authorization Flows</h3>
+<h4 id="authorization-code-flow-most-common"><a aria-hidden="true" tabindex="-1" href="#authorization-code-flow-most-common"><span class="icon icon-link"></span></a>Authorization Code Flow (most common)</h4>
+<p>Used for server-side web applications:</p>
+<pre><code>1. User clicks "Login with Google"
+2. Client redirects user to:
+   https://accounts.google.com/o/oauth2/v2/auth
+   ?client_id=YOUR_CLIENT_ID
+   &#x26;redirect_uri=https://yourapp.com/callback
+   &#x26;response_type=code
+   &#x26;scope=email profile
+   &#x26;state=random_csrf_token
+
+3. User authenticates with Google and grants permission
+
+4. Google redirects back:
+   https://yourapp.com/callback?code=AUTHORIZATION_CODE&#x26;state=csrf_token
+
+5. Client exchanges code for access token:
+   POST https://oauth2.googleapis.com/token
+   {
+     "grant_type": "authorization_code",
+     "code": "AUTHORIZATION_CODE",
+     "client_id": "YOUR_CLIENT_ID",
+     "client_secret": "YOUR_CLIENT_SECRET",
+     "redirect_uri": "https://yourapp.com/callback"
+   }
+
+6. Google returns:
+   {
+     "access_token": "&#x3C;jwt-access-token>",
+     "refresh_token": "1//0g...",
+     "expires_in": 3600,
+     "scope": "email profile"
+   }
+
+7. Client uses access token to access Google APIs:
+   GET https://www.googleapis.com/oauth2/v2/userinfo
+   Authorization: Bearer ya29.a0AfH6SMB...
+</code></pre>
+<h4 id="authorization-code-flow-with-pkce"><a aria-hidden="true" tabindex="-1" href="#authorization-code-flow-with-pkce"><span class="icon icon-link"></span></a>Authorization Code Flow with PKCE</h4>
+<p>PKCE (Proof Key for Code Exchange) adds security to prevent authorization code interception. Required for SPAs and mobile apps:</p>
+<pre><code>1. Client generates: code_verifier (random string)
+2. Client computes: code_challenge = BASE64URL(SHA256(code_verifier))
+3. Client sends: authorization request with code_challenge
+
+4. User authenticates and grants permission
+
+5. Client receives: authorization code
+
+6. Client exchanges code for token, including code_verifier:
+   POST /token
+   code=AUTH_CODE&#x26;
+   grant_type=authorization_code&#x26;
+   code_verifier=RANDOM_STRING_GENERATED_IN_STEP_1
+</code></pre>
+<blockquote>
+<p>[!tip] PKCE is required for public clients
+SPA (Single Page Applications) and mobile apps cannot securely store a client secret. PKCE protects them from authorization code interception attacks.</p>
+</blockquote>
+<h3 id="oauth-20-grant-types"><a aria-hidden="true" tabindex="-1" href="#oauth-20-grant-types"><span class="icon icon-link"></span></a>OAuth 2.0 Grant Types</h3>
+<table>
+<thead>
+<tr>
+<th>Grant Type</th>
+<th>Use case</th>
+<th>Where client_secret is sent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Authorization Code</strong></td>
+<td>Server-side web apps</td>
+<td>Token endpoint (behind server)</td>
+</tr>
+<tr>
+<td><strong>Authorization Code + PKCE</strong></td>
+<td>SPAs, mobile apps</td>
+<td>Token endpoint (with code_verifier)</td>
+</tr>
+<tr>
+<td><strong>Client Credentials</strong></td>
+<td>Server-to-server</td>
+<td>Token endpoint</td>
+</tr>
+<tr>
+<td><strong>Refresh Token</strong></td>
+<td>Refreshing expired access tokens</td>
+<td>Token endpoint</td>
+</tr>
+</tbody>
+</table>
+<h4 id="client-credentials-flow-machine-to-machine"><a aria-hidden="true" tabindex="-1" href="#client-credentials-flow-machine-to-machine"><span class="icon icon-link"></span></a>Client Credentials Flow (machine-to-machine)</h4>
+<p>Used when a service needs to access another service on its own behalf (no user involved):</p>
+<pre><code>POST https://auth.example.com/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials
+&#x26;client_id=service_a
+&#x26;client_secret=super_secret_key
+&#x26;scope=read:users write:users
+</code></pre>
+<h3 id="oauth-20-scopes"><a aria-hidden="true" tabindex="-1" href="#oauth-20-scopes"><span class="icon icon-link"></span></a>OAuth 2.0 Scopes</h3>
+<p>Scopes define the level of access granted:</p>
+<pre><code>scope=email profile
+# → Can read email and basic profile
+
+scope=read:users write:users delete:users
+# → Can read, write, and delete user data
+
+scope=admin
+# → Full admin access
+</code></pre>
+<blockquote>
+<p>[!tip] Principle of least privilege
+Always request the minimum scope needed. If your app only needs the user's email, request <code>scope=email</code> — not <code>scope=profile email address</code>.</p>
+</blockquote>
+<h2 id="openid-connect-oidc"><a aria-hidden="true" tabindex="-1" href="#openid-connect-oidc"><span class="icon icon-link"></span></a>OpenID Connect (OIDC)</h2>
+<p>OpenID Connect is an authentication layer on top of OAuth 2.0. It adds an <code>id_token</code> (JWT) to the authorization response.</p>
+<h3 id="oidc-vs-oauth-20"><a aria-hidden="true" tabindex="-1" href="#oidc-vs-oauth-20"><span class="icon icon-link"></span></a>OIDC vs OAuth 2.0</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>OAuth 2.0</th>
+<th>OpenID Connect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Purpose</strong></td>
+<td>Authorization (access resources)</td>
+<td>Authentication (identify the user)</td>
+</tr>
+<tr>
+<td><strong>Response</strong></td>
+<td>Access token</td>
+<td>Access token + ID token (JWT)</td>
+</tr>
+<tr>
+<td><strong>User info</strong></td>
+<td>No (need separate call)</td>
+<td>Yes (via UserInfo endpoint)</td>
+</tr>
+<tr>
+<td><strong>Standard claims</strong></td>
+<td>None</td>
+<td>sub, name, email, picture, etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oidc-id-token"><a aria-hidden="true" tabindex="-1" href="#oidc-id-token"><span class="icon icon-link"></span></a>OIDC ID Token</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "iss"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://accounts.google.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "sub"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"110169484474386276334"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "aud"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"your-client-id.apps.googleusercontent.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "exp"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1516239022</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "iat"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1516235422</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "email"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"john.doe@gmail.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "email_verified"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "name"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"John Doe"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "picture"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://lh3.googleusercontent.com/..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "locale"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"en"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="oidc-discovery"><a aria-hidden="true" tabindex="-1" href="#oidc-discovery"><span class="icon icon-link"></span></a>OIDC Discovery</h3>
+<pre><code>GET https://accounts.google.com/.well-known/openid-configuration
+
+# Response:
+{
+  "issuer": "https://accounts.google.com",
+  "authorization_endpoint": "https://accounts.google.com/o/oauth2/v2/auth",
+  "token_endpoint": "https://oauth2.googleapis.com/token",
+  "userinfo_endpoint": "https://openidconnect.googleapis.com/v1/userinfo",
+  "jwks_uri": "https://www.googleapis.com/oauth2/v3/certs",
+  "response_types_supported": ["code", "token", "id_token"],
+  "grant_types_supported": ["authorization_code", "refresh_token", "client_credentials"]
+}
+</code></pre>
+<h2 id="authentication-comparison-summary"><a aria-hidden="true" tabindex="-1" href="#authentication-comparison-summary"><span class="icon icon-link"></span></a>Authentication comparison summary</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Best for</th>
+<th>Security level</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic Auth</strong></td>
+<td>Legacy systems, simple tools</td>
+<td>Low (base64 is not encryption)</td>
+<td>Very low</td>
+</tr>
+<tr>
+<td><strong>Session cookies</strong></td>
+<td>Traditional server-rendered apps</td>
+<td>High</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>Bearer tokens (JWT)</strong></td>
+<td>APIs, SPAs, mobile apps</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>API keys</strong></td>
+<td>Server-to-server, external APIs</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>OAuth 2.0</strong></td>
+<td>Third-party access</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>OIDC</strong></td>
+<td>User authentication via identity provider</td>
+<td>Very high</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookies and sessions</td>
+<td>[[09-cookies-sessions]]</td>
+</tr>
+<tr>
+<td>JWT</td>
+<td>[[09-cookies-sessions]]</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>[[11-rest-api]]</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>Basic Auth</strong> sends base64-encoded credentials with every request. Simple but insecure without HTTPS.</li>
+<li><strong>Bearer Tokens</strong> (JWT) are the modern standard for API authentication. Tokens are self-contained and verifiable.</li>
+<li><strong>API Keys</strong> identify the caller (usually a service). They are simple strings used for server-to-server authentication.</li>
+<li><strong>OAuth 2.0</strong> is an authorization framework for granting limited access to resources. It does not authenticate users by itself.</li>
+<li><strong>OIDC</strong> adds authentication to OAuth 2.0 with an ID token (JWT) containing standard user claims.</li>
+<li><strong>PKCE</strong> is required for public clients (SPAs, mobile apps) to protect authorization codes.</li>
+<li>Always use the principle of least privilege: request minimum scopes, use short-lived tokens, and rotate keys.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Authentication is not one-size-fits-all. Use sessions for traditional web apps, JWTs for APIs, API keys for server-to-server, and OAuth 2.0 + OIDC when you need third-party identity. Each method has tradeoffs in security, complexity, and developer experience.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

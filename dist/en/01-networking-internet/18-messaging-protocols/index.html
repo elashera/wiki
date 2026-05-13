@@ -1,0 +1,680 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Messaging Protocols: AMQP, MQTT, WebSockets</h1> <div class="article-body"><h1 id="messaging-protocols-amqp-mqtt-websockets"><a aria-hidden="true" tabindex="-1" href="#messaging-protocols-amqp-mqtt-websockets"><span class="icon icon-link"></span></a>Messaging Protocols: AMQP, MQTT, WebSockets</h1>
+<blockquote>
+<p>[!tip] Messaging in a nutshell
+Messaging protocols enable applications to communicate <strong>asynchronously</strong>, decoupled and reliably — without sender and receiver needing to be connected at the same time. This article covers AMQP, MQTT, WebSockets, and Kafka.</p>
+</blockquote>
+<h2 id="what-is-messaging"><a aria-hidden="true" tabindex="-1" href="#what-is-messaging"><span class="icon icon-link"></span></a>What is messaging?</h2>
+<p>Messaging protocols are communication systems between applications that allow:</p>
+<ul>
+<li><strong>Asynchronous communication</strong>: The sender sends and keeps working, the receiver processes when it can</li>
+<li><strong>Decoupling</strong>: The sender doesn't need to know who the receiver is</li>
+<li><strong>Fault tolerance</strong>: Messages are stored until they can be processed</li>
+<li><strong>Scalability</strong>: Multiple consumers can read from the same queue</li>
+</ul>
+<h3 id="types-of-messaging"><a aria-hidden="true" tabindex="-1" href="#types-of-messaging"><span class="icon icon-link"></span></a>Types of messaging</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Point-to-Point</strong> (Queuing)</td>
+<td>One message goes to one consumer</td>
+<td>RabbitMQ queues</td>
+</tr>
+<tr>
+<td><strong>Publish/Subscribe</strong> (Pub/Sub)</td>
+<td>One message goes to all subscribers</td>
+<td>MQTT topics, Kafka</td>
+</tr>
+</tbody>
+</table>
+<h2 id="amqp-advanced-message-queuing-protocol"><a aria-hidden="true" tabindex="-1" href="#amqp-advanced-message-queuing-protocol"><span class="icon icon-link"></span></a>AMQP (Advanced Message Queuing Protocol)</h2>
+<p><strong>AMQP</strong> is a message queuing protocol oriented toward queues. The industry standard, and <strong>RabbitMQ</strong> is the most popular implementation.</p>
+<h3 id="key-amqp-concepts"><a aria-hidden="true" tabindex="-1" href="#key-amqp-concepts"><span class="icon icon-link"></span></a>Key AMQP concepts</h3>
+<pre><code>Producer → Exchange → Queue(s) → Consumer
+              │
+              ├─ Direct Exchange: exact routing key match
+              ├─ Topic Exchange: pattern matching
+              ├─ Fanout Exchange: broadcast to all
+              └─ Headers Exchange: match by headers
+</code></pre>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>Producer</strong>: Sends messages to an exchange</li>
+<li><strong>Exchange</strong>: Receives messages from the producer and routes them to queues</li>
+<li><strong>Queue</strong>: Stores messages until a consumer reads them</li>
+<li><strong>Consumer</strong>: Receives messages from a queue</li>
+<li><strong>Binding</strong>: Rule that connects an exchange to a queue</li>
+</ul>
+<h3 id="exchange-types"><a aria-hidden="true" tabindex="-1" href="#exchange-types"><span class="icon icon-link"></span></a>Exchange types</h3>
+<table>
+<thead>
+<tr>
+<th>Exchange</th>
+<th>Routing</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direct</strong></td>
+<td>Exact match on routing key</td>
+<td>Task queues, error handling</td>
+</tr>
+<tr>
+<td><strong>Topic</strong></td>
+<td>Pattern matching with wildcards</td>
+<td>Log aggregation, alerting</td>
+</tr>
+<tr>
+<td><strong>Fanout</strong></td>
+<td>Broadcast to all bound queues</td>
+<td>Notifications, broadcasting</td>
+</tr>
+<tr>
+<td><strong>Headers</strong></td>
+<td>Match by message headers</td>
+<td>Complex filtering</td>
+</tr>
+</tbody>
+</table>
+<h3 id="amqp-message-properties"><a aria-hidden="true" tabindex="-1" href="#amqp-message-properties"><span class="icon icon-link"></span></a>AMQP message properties</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// AMQP message structure</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  properties</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    content_type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'application/json'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    delivery_mode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 1 = transient, 2 = persistent</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    priority</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,            </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// 0-9 (9 = highest priority)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    correlation_id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'req-123'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    reply_to</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'reply_queue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    expiration</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'60000'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Message TTL in milliseconds</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    message_id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'msg-456'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    timestamp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1684000000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'user_signup'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    user_id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'user-789'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    headers</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      region</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'us-east-1'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      trace_id</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'trace-abc'</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  body</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JSON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stringify</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ userId: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">123</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, action: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'signup'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, email: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'john@example.com'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> })</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="rabbitmq-in-practice"><a aria-hidden="true" tabindex="-1" href="#rabbitmq-in-practice"><span class="icon icon-link"></span></a>RabbitMQ in practice</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Install RabbitMQ</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rabbitmq-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rabbitmq-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Management UI</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rabbitmq-plugins</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rabbitmq_management</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Available at http://localhost:15672 (guest/guest)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Command line</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">rabbitmqctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list_queues</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                    # List all queues</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">rabbitmqctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list_bindings</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                  # List all bindings</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">rabbitmqctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list_exchanges</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                 # List all exchanges</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">rabbitmqctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set_policy</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> HA</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "^ha-"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '.*'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '{"ha-mode":"all"}'</span></span></code></pre></figure>
+<h3 id="rabbitmq-durability-and-reliability"><a aria-hidden="true" tabindex="-1" href="#rabbitmq-durability-and-reliability"><span class="icon icon-link"></span></a>RabbitMQ durability and reliability</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Ensure messages survive broker restart</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">assertQueue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'task_queue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  durable: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          // Queue survives broker restart</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Mark message as persistent</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sendToQueue</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'task_queue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, Buffer.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(msg), {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  persistent: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       // Message survives broker restart</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Acknowledge after processing (not on receive)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">consume</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'task_queue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">msg</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (msg) {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      processTask</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(msg.content);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ack</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(msg);   </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Confirm after successful processing</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    } </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">catch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (err) {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      channel.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nack</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(msg, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Requeue on error</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
+<blockquote>
+<p>[!tip] Why acknowledge after processing?
+If RabbitMQ delivers a message and the consumer crashes before processing, the message is lost unless it was acknowledged. With <code>basic.ack</code> after processing, unacknowledged messages are redelivered to another consumer.</p>
+</blockquote>
+<h2 id="mqtt-message-queuing-telemetry-transport"><a aria-hidden="true" tabindex="-1" href="#mqtt-message-queuing-telemetry-transport"><span class="icon icon-link"></span></a>MQTT (Message Queuing Telemetry Transport)</h2>
+<p><strong>MQTT</strong> is a lightweight publish/subscribe messaging protocol designed for constrained devices and low-bandwidth, high-latency, or unreliable networks. It was created in 1999 for satellite links between oil pipelines and is now widely used in IoT.</p>
+<h3 id="mqtt-architecture"><a aria-hidden="true" tabindex="-1" href="#mqtt-architecture"><span class="icon icon-link"></span></a>MQTT architecture</h3>
+<pre><code>                    ┌─────────────┐
+                    │   MQTT      │
+                    │   Broker    │  ← Central server
+                    │  (Mosquitto │
+                    │   RabbitMQ) │
+                    └──────┬──────┘
+                           │
+              ┌────────────┼────────────┐
+              ▼            ▼            ▼
+        ┌──────────┐ ┌──────────┐ ┌──────────┐
+        │ Sensor A │ │ Sensor B │ │ App C    │
+        │ Publish  │ │ Publish  │ │ Subscribe│
+        └──────────┘ └──────────┘ └──────────┘
+</code></pre>
+<h3 id="mqtt-message-flow"><a aria-hidden="true" tabindex="-1" href="#mqtt-message-flow"><span class="icon icon-link"></span></a>MQTT message flow</h3>
+<pre><code>1. CONNECT: Client connects to broker
+   Client → Broker: CONNECT (client_id, keep_alive, clean_session)
+   Broker → Client: CONNACK (return_code)
+
+2. PUBLISH: Client publishes a message to a topic
+   Sensor A → Broker: PUBLISH ("sensors/temperature/1", "23.5°C", qos=1)
+   Broker → Sensor B: PUBLISH ("sensors/temperature/1", "23.5°C", qos=1)
+
+3. SUBSCRIBE: Client subscribes to a topic
+   App C → Broker: SUBSCRIBE ("sensors/#", qos=0)
+   Broker → App C: SUBACK
+
+4. UNSUBSCRIBE: Client unsubscribes
+   App C → Broker: UNSUBSCRIBE ("sensors/#")
+
+5. DISCONNECT: Client disconnects
+   App C → Broker: DISCONNECT
+</code></pre>
+<h3 id="mqtt-qos-levels"><a aria-hidden="true" tabindex="-1" href="#mqtt-qos-levels"><span class="icon icon-link"></span></a>MQTT QoS levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Name</th>
+<th>Delivery guarantee</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>At most once</td>
+<td>No guarantee, fire and forget</td>
+<td>Sensor readings, telemetry</td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>At least once</td>
+<td>Message delivered at least once (may duplicate)</td>
+<td>Status updates, notifications</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Exactly once</td>
+<td>Message delivered exactly once</td>
+<td>Financial transactions, command and control</td>
+</tr>
+</tbody>
+</table>
+<pre><code>QoS 0 (At most once):
+  Publisher → Broker → Subscriber
+  (No acknowledgment, no retry)
+
+QoS 1 (At least once):
+  Publisher → Broker: PUBLISH → PUBACK → Broker → Subscriber: PUBLISH → PUBACK
+  (Duplicates possible if PUBACK lost)
+
+QoS 2 (Exactly once):
+  Publisher → Broker: PUBLISH → PUBREC → Broker → Subscriber: PUBLISH → PUBREL → Subscriber → Broker: PUBCOMP
+  (Four-step handshake ensures exactly once delivery)
+</code></pre>
+<h3 id="mqtt-topics"><a aria-hidden="true" tabindex="-1" href="#mqtt-topics"><span class="icon icon-link"></span></a>MQTT topics</h3>
+<pre><code>Topic structure: hierarchical, using / as separator
+
+# = matches any number of levels (wildcard)
++ = matches exactly one level (wildcard)
+
+Topics:
+  sensors/temperature/1      → Specific sensor
+  sensors/temperature/+      → All temperature sensors
+  sensors/#                  → All sensors
+  home/livingroom/light/on   → Specific command
+  home/+/light/on            → All lights in all rooms
+  home/#                     → All topics under home
+
+Retained messages:
+  Broker stores the last message for a topic
+  New subscribers immediately receive the retained message
+
+  Sensor publishes: "sensors/temperature/1" → "23.5°C" (retained=true)
+  New subscriber connects later → Immediately receives "23.5°C"
+</code></pre>
+<h3 id="mqtt-use-cases"><a aria-hidden="true" tabindex="-1" href="#mqtt-use-cases"><span class="icon icon-link"></span></a>MQTT use cases</h3>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>QoS</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IoT sensors</strong></td>
+<td>0</td>
+<td>Temperature, humidity, motion sensors</td>
+</tr>
+<tr>
+<td><strong>Device commands</strong></td>
+<td>1 or 2</td>
+<td>Turn on/off devices, configure settings</td>
+</tr>
+<tr>
+<td><strong>Location tracking</strong></td>
+<td>0</td>
+<td>GPS coordinates of vehicles</td>
+</tr>
+<tr>
+<td><strong>Chat messaging</strong></td>
+<td>1</td>
+<td>Real-time messaging apps</td>
+</tr>
+<tr>
+<td><strong>Heartbeat monitoring</strong></td>
+<td>0</td>
+<td>Device online/offline status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mqtt-vs-amqp-comparison"><a aria-hidden="true" tabindex="-1" href="#mqtt-vs-amqp-comparison"><span class="icon icon-link"></span></a>MQTT vs AMQP comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>MQTT</th>
+<th>AMQP (RabbitMQ)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Model</strong></td>
+<td>Publish/Subscribe</td>
+<td>Point-to-Point + Pub/Sub</td>
+</tr>
+<tr>
+<td><strong>Protocol overhead</strong></td>
+<td>Very low (2-byte minimum header)</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td><strong>QoS levels</strong></td>
+<td>0, 1, 2</td>
+<td>No QoS (reliability via persistence)</td>
+</tr>
+<tr>
+<td><strong>Last will &#x26; testament</strong></td>
+<td>Yes (message if client disconnects)</td>
+<td>No (requires application logic)</td>
+</tr>
+<tr>
+<td><strong>Retained messages</strong></td>
+<td>Yes</td>
+<td>No (requires custom code)</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>IoT, constrained devices</td>
+<td>Enterprise messaging, task queues</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Simple</td>
+<td>More complex</td>
+</tr>
+</tbody>
+</table>
+<h2 id="websockets"><a aria-hidden="true" tabindex="-1" href="#websockets"><span class="icon icon-link"></span></a>WebSockets</h2>
+<p><strong>WebSockets</strong> provide a full-duplex communication channel over a single TCP connection. Unlike HTTP, data can flow in both directions at any time — the server can push data to the client without the client requesting it.</p>
+<h3 id="websocket-connection-lifecycle"><a aria-hidden="true" tabindex="-1" href="#websocket-connection-lifecycle"><span class="icon icon-link"></span></a>WebSocket connection lifecycle</h3>
+<pre><code>1. HTTP Upgrade Request:
+   GET /ws/chat HTTP/1.1
+   Host: example.com
+   Upgrade: websocket
+   Connection: Upgrade
+   Sec-WebSocket-Key: &#x3C;client-generated-key>
+   Sec-WebSocket-Version: 13
+
+2. HTTP Upgrade Response:
+   HTTP/1.1 101 Switching Protocols
+   Upgrade: websocket
+   Connection: Upgrade
+   Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
+
+3. WebSocket Communication:
+   Client ──────→ Server: "Hello from client"
+   Client ←────── Server: "Hello from server"
+   Client ──────→ Server: { "type": "message", "text": "Hi!" }
+   Client ←────── Server: { "type": "message", "text": "Hey there!" }
+   ... (bidirectional, no request/response overhead)
+</code></pre>
+<h3 id="websocket-vs-http-polling"><a aria-hidden="true" tabindex="-1" href="#websocket-vs-http-polling"><span class="icon icon-link"></span></a>WebSocket vs HTTP polling</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Latency</th>
+<th>Bandwidth</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP Long Polling</strong></td>
+<td>Client requests, server holds until data available</td>
+<td>Medium</td>
+<td>High (many requests)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>HTTP Short Polling</strong></td>
+<td>Client polls at intervals</td>
+<td>High (polling interval)</td>
+<td>Very high</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>WebSocket</strong></td>
+<td>Persistent bidirectional connection</td>
+<td>Low</td>
+<td>Low (single connection)</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<pre><code>HTTP Long Polling:
+  Client: GET /messages → Wait... → Server: [message data] → Client: GET /messages → Wait...
+  ↑ Each response requires a new request
+  
+WebSocket:
+  Client: Open connection → Server: [message 1] → Server: [message 2] → Server: [message 3]
+  ↑ Single persistent connection, no request overhead per message
+</code></pre>
+<h3 id="websocket-frames"><a aria-hidden="true" tabindex="-1" href="#websocket-frames"><span class="icon icon-link"></span></a>WebSocket frames</h3>
+<pre><code>WebSocket Frame:
+┌────────┬────────┬──────────────────────────┬──────────────────────────┐
+│FIN(1)│RSV(3)│OpCode(4)│Mask(1)│Payload Length(7) │  Extension data        │
+│      │      │        │     │+(16/64 bits)    │                          │
+├────────┴────────┴──────────────────────────┴──────────────────────────┤
+│                     Application Data (Payload)                         │
+└──────────────────────────────────────────────────────────────────────┘
+
+OpCode:
+  0x0 = Continuation frame
+  0x1 = Text frame
+  0x2 = Binary frame
+  0x8 = Connection close
+  0x9 = Ping
+  0xA = Pong
+</code></pre>
+<h3 id="websocket-in-nodejs"><a aria-hidden="true" tabindex="-1" href="#websocket-in-nodejs"><span class="icon icon-link"></span></a>WebSocket in Node.js</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Server (using ws library)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> WebSocket</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'ws'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> wss</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> WebSocket.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ port: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8080</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">wss.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'connection'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">ws</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'New client connected'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Send a message to the client</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">send</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JSON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stringify</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ type: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'connected'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, id: Date.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">now</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">() }));</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Listen for messages</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'message'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> message</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> JSON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">parse</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Received:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, message);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    // Broadcast to all connected clients</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    wss.clients.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">forEach</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">client</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">      if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (client </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">!==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ws </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x26;&#x26;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> client.readyState </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> WebSocket.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">OPEN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        client.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">send</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JSON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">stringify</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          type: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'message'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          from: message.userId,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">          text: message.text</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        }));</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Handle disconnection</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'close'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">code</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">reason</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">`Client disconnected: ${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">code</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">} ${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">reason</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">}`</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Handle errors</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'error'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">error</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'WebSocket error:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, error);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Keep alive: send ping periodically</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">setInterval</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(() </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  wss.clients.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">forEach</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">ws</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (ws.isAlive </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">===</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terminate</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ws.isAlive </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ws.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ping</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">30000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">wss.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'pong'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, () </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Pong received'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
+<h3 id="websocket-limitations"><a aria-hidden="true" tabindex="-1" href="#websocket-limitations"><span class="icon icon-link"></span></a>WebSocket limitations</h3>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Not NAT-friendly</strong></td>
+<td>Use HTTP/2 Server Push or polling as fallback</td>
+</tr>
+<tr>
+<td><strong>No built-in security</strong></td>
+<td>Use WSS (WebSocket over TLS)</td>
+</tr>
+<tr>
+<td><strong>Firewall issues</strong></td>
+<td>Use port 443 (same as HTTPS)</td>
+</tr>
+<tr>
+<td><strong>Browser support</strong></td>
+<td>Fallback to Server-Sent Events (SSE) or long polling</td>
+</tr>
+<tr>
+<td><strong>Stateful</strong></td>
+<td>Requires sticky sessions on load balancer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="websocket-vs-server-sent-events-sse"><a aria-hidden="true" tabindex="-1" href="#websocket-vs-server-sent-events-sse"><span class="icon icon-link"></span></a>WebSocket vs Server-Sent Events (SSE)</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>WebSocket</th>
+<th>SSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Direction</strong></td>
+<td>Bidirectional</td>
+<td>Server → Client only</td>
+</tr>
+<tr>
+<td><strong>Protocol</strong></td>
+<td>Full-duplex</td>
+<td>Half-duplex</td>
+</tr>
+<tr>
+<td><strong>Binary data</strong></td>
+<td>Yes</td>
+<td>No (text only)</td>
+</tr>
+<tr>
+<td><strong>Reconnection</strong></td>
+<td>Manual</td>
+<td>Automatic</td>
+</tr>
+<tr>
+<td><strong>Browser support</strong></td>
+<td>Good (fallbacks available)</td>
+<td>Good (except IE)</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Chat, gaming, real-time bidirectional</td>
+<td>Live feeds, notifications, stock prices</td>
+</tr>
+</tbody>
+</table>
+<pre><code>SSE example:
+  Client → Server: GET /events HTTP/1.1
+  Server → Client: Event: user-activity
+  Server → Client: Data: {"userId": 123, "action": "login"}
+  Server → Client:
+  Server → Client: Event: order-updated
+  Server → Client: Data: {"orderId": 456, "status": "shipped"}
+
+  Client handles events with JavaScript:
+  const eventSource = new EventSource('/events');
+  eventSource.onmessage = (event) => { /* handle */ };
+  eventSource.addEventListener('user-activity', (event) => { /* handle */ });
+</code></pre>
+<h2 id="kafka"><a aria-hidden="true" tabindex="-1" href="#kafka"><span class="icon icon-link"></span></a>Kafka</h2>
+<p><strong>Kafka</strong> is a distributed event streaming platform. It's a publish/subscribe messaging system with built-in persistence, scalability, and fault tolerance.</p>
+<h3 id="kafka-architecture"><a aria-hidden="true" tabindex="-1" href="#kafka-architecture"><span class="icon icon-link"></span></a>Kafka architecture</h3>
+<pre><code>Producer → Kafka Cluster (Brokers) → Consumer
+
+Kafka Cluster:
+┌───────────────────────────────────────┐
+│  Broker 1 (Kafka Node 1)              │
+│  Topic: orders                        │
+│    Partition 0: [msg1, msg2, msg3]    │
+│    Partition 1: [msg4, msg5, msg6]    │
+│                                       │
+│  Broker 2 (Kafka Node 2)              │
+│  Topic: orders                        │
+│    Partition 0: [replica of 1]        │
+│    Partition 1: [replica of 1]        │
+└───────────────────────────────────────┘
+
+Key concepts:
+  - Topic: Category for messages (e.g., "orders", "users")
+  - Partition: Ordered, immutable sequence of messages
+  - Offset: Position of a message in a partition
+  - Consumer Group: Set of consumers reading from a topic
+  - Replication: Partitions replicated across brokers for fault tolerance
+</code></pre>
+<h3 id="kafka-vs-other-messaging-systems"><a aria-hidden="true" tabindex="-1" href="#kafka-vs-other-messaging-systems"><span class="icon icon-link"></span></a>Kafka vs other messaging systems</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Kafka</th>
+<th>RabbitMQ (AMQP)</th>
+<th>MQTT Broker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>Very high (millions/sec)</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Low (ms)</td>
+<td>Very low (sub-ms)</td>
+<td>Very low</td>
+</tr>
+<tr>
+<td><strong>Message retention</strong></td>
+<td>Days to years (configurable)</td>
+<td>Until consumed</td>
+<td>Until consumed</td>
+</tr>
+<tr>
+<td><strong>Ordering</strong></td>
+<td>Ordered within partition</td>
+<td>Ordered per queue</td>
+<td>Ordered per topic</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Highly scalable (distributed)</td>
+<td>Limited by single broker</td>
+<td>Limited by broker</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Event streaming, logs, analytics</td>
+<td>Task queues, microservices</td>
+<td>IoT, devices</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h3>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP methods</td>
+<td>[[05-http-deep-dive]]</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>[[11-rest-api]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>AMQP</strong> (RabbitMQ) is a robust message queuing protocol with exchanges, queues, and binding rules. Best for enterprise messaging and task queues.</li>
+<li><strong>MQTT</strong> is a lightweight publish/subscribe protocol designed for constrained environments. Best for IoT devices and real-time telemetry.</li>
+<li><strong>WebSockets</strong> provide a full-duplex connection over a single TCP link. Best for real-time bidirectional communication (chat, gaming).</li>
+<li><strong>Kafka</strong> is a distributed event streaming platform with high throughput and persistent message storage. Best for event sourcing and analytics.</li>
+<li>Choose the right protocol based on: need for bidirectional communication, message persistence, QoS requirements, and network constraints.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Messaging protocols solve the problem of asynchronous, decoupled communication. No single protocol is the best for all cases — MQTT for IoT, AMQP for enterprise queues, WebSockets for real-time apps, Kafka for event streaming. Match the protocol to your use case.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

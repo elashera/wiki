@@ -1,0 +1,1598 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison</h1> <div class="article-body"><h1 id="cloud-providers-aws-azure-and-gcp"><a aria-hidden="true" tabindex="-1" href="#cloud-providers-aws-azure-and-gcp"><span class="icon icon-link"></span></a>Cloud Providers: AWS, Azure, and GCP</h1>
+<blockquote>
+<p>[!tip] Cloud providers in a nutshell
+<strong>AWS, Azure, and GCP</strong> are the three major public cloud providers. Each offers hundreds of services, different strengths, and distinct pricing models. This article compares them in detail.</p>
+</blockquote>
+<h2 id="what-is-a-cloud-provider"><a aria-hidden="true" tabindex="-1" href="#what-is-a-cloud-provider"><span class="icon icon-link"></span></a>What is a cloud provider?</h2>
+<p>A <strong>cloud provider</strong> is a company that offers computing infrastructure and services over the Internet, on demand (pay-as-you-go). Instead of buying physical servers, you <strong>rent</strong> resources in their data centers.</p>
+<h3 id="the-three-giants-tier-1"><a aria-hidden="true" tabindex="-1" href="#the-three-giants-tier-1"><span class="icon icon-link"></span></a>The three giants (Tier 1)</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Market Share</th>
+<th>Data Centers</th>
+<th>Regions</th>
+<th>Availability Zones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS</strong></td>
+<td>~31%</td>
+<td>300+</td>
+<td>36</td>
+<td>114+</td>
+</tr>
+<tr>
+<td><strong>Azure</strong></td>
+<td>~25%</td>
+<td>600+</td>
+<td>60+</td>
+<td>180+</td>
+</tr>
+<tr>
+<td><strong>GCP</strong></td>
+<td>~11%</td>
+<td>50+</td>
+<td>40+</td>
+<td>120+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fourth-tier-providers"><a aria-hidden="true" tabindex="-1" href="#fourth-tier-providers"><span class="icon icon-link"></span></a>Fourth-tier providers</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Market Share</th>
+<th>Specialty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Oracle Cloud</strong></td>
+<td>~3%</td>
+<td>Databases, enterprise</td>
+</tr>
+<tr>
+<td><strong>IBM Cloud</strong></td>
+<td>~1%</td>
+<td>Enterprise, hybrid</td>
+</tr>
+<tr>
+<td><strong>Alibaba Cloud</strong></td>
+<td>~5%</td>
+<td>Asia-Pacific</td>
+</tr>
+<tr>
+<td><strong>DigitalOcean</strong></td>
+<td>~2%</td>
+<td>Developer-friendly, simple</td>
+</tr>
+<tr>
+<td><strong>Hetzner</strong></td>
+<td>~1%</td>
+<td>EU/US, price-performance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aws-amazon-web-services"><a aria-hidden="true" tabindex="-1" href="#aws-amazon-web-services"><span class="icon icon-link"></span></a>AWS (Amazon Web Services)</h2>
+<p><strong>The pioneer</strong> (launched in 2006), the largest and most complete.</p>
+<h3 id="aws-services"><a aria-hidden="true" tabindex="-1" href="#aws-services"><span class="icon icon-link"></span></a>AWS services</h3>
+<h4 id="compute"><a aria-hidden="true" tabindex="-1" href="#compute"><span class="icon icon-link"></span></a>Compute</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EC2</strong></td>
+<td>Virtual machines (instances)</td>
+<td>Servers, APIs, apps</td>
+</tr>
+<tr>
+<td><strong>Lambda</strong></td>
+<td>Serverless functions</td>
+<td>Microservices, event-driven</td>
+</tr>
+<tr>
+<td><strong>ECS / EKS</strong></td>
+<td>Docker / Kubernetes containers</td>
+<td>Container orchestration</td>
+</tr>
+<tr>
+<td><strong>Elastic Beanstalk</strong></td>
+<td>PaaS (Platform as a Service)</td>
+<td>Fast app deployment</td>
+</tr>
+<tr>
+<td><strong>Bare Metal</strong></td>
+<td>Dedicated physical servers</td>
+<td>High performance, compliance</td>
+</tr>
+</tbody>
+</table>
+<h4 id="storage"><a aria-hidden="true" tabindex="-1" href="#storage"><span class="icon icon-link"></span></a>Storage</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S3</strong></td>
+<td>Object storage</td>
+<td>File storage, backups, static hosting</td>
+</tr>
+<tr>
+<td><strong>EBS</strong></td>
+<td>Block storage for EC2</td>
+<td>Database storage, system disks</td>
+</tr>
+<tr>
+<td><strong>EFS</strong></td>
+<td>Network file system (NFS)</td>
+<td>Shared file storage</td>
+</tr>
+<tr>
+<td><strong>Glacier</strong></td>
+<td>Archive storage</td>
+<td>Long-term backup, compliance</td>
+</tr>
+<tr>
+<td><strong>Storage Gateway</strong></td>
+<td>Hybrid cloud storage</td>
+<td>On-premises to cloud storage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="networking"><a aria-hidden="true" tabindex="-1" href="#networking"><span class="icon icon-link"></span></a>Networking</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VPC</strong></td>
+<td>Virtual Private Cloud</td>
+<td>Isolated network in AWS</td>
+</tr>
+<tr>
+<td><strong>Route 53</strong></td>
+<td>DNS service</td>
+<td>Domain registration, DNS management</td>
+</tr>
+<tr>
+<td><strong>CloudFront</strong></td>
+<td>CDN</td>
+<td>Content delivery, edge caching</td>
+</tr>
+<tr>
+<td><strong>Elastic Load Balancer</strong></td>
+<td>Load balancing</td>
+<td>Distribute traffic across EC2</td>
+</tr>
+<tr>
+<td><strong>VPN / Direct Connect</strong></td>
+<td>Dedicated connections</td>
+<td>On-premises to AWS connectivity</td>
+</tr>
+<tr>
+<td><strong>API Gateway</strong></td>
+<td>API management</td>
+<td>REST APIs, WebSocket APIs</td>
+</tr>
+<tr>
+<td><strong>Cognito</strong></td>
+<td>User authentication</td>
+<td>User pools, identity pools</td>
+</tr>
+</tbody>
+</table>
+<h4 id="databases"><a aria-hidden="true" tabindex="-1" href="#databases"><span class="icon icon-link"></span></a>Databases</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RDS</strong></td>
+<td>Managed relational databases</td>
+<td>PostgreSQL, MySQL, MariaDB, Oracle, SQL Server</td>
+</tr>
+<tr>
+<td><strong>DynamoDB</strong></td>
+<td>NoSQL key-value database</td>
+<td>High-scale, low-latency data</td>
+</tr>
+<tr>
+<td><strong>Neptune</strong></td>
+<td>Graph database</td>
+<td>Knowledge graphs, recommendation engines</td>
+</tr>
+<tr>
+<td><strong>Aurora</strong></td>
+<td>Managed PostgreSQL/MySQL</td>
+<td>High-performance RDS replacement</td>
+</tr>
+<tr>
+<td><strong>Redshift</strong></td>
+<td>Data warehousing</td>
+<td>Analytics, OLAP</td>
+</tr>
+<tr>
+<td><strong>ElastiCache</strong></td>
+<td>In-memory caching</td>
+<td>Redis, Memcached</td>
+</tr>
+</tbody>
+</table>
+<h4 id="serverless--ai"><a aria-hidden="true" tabindex="-1" href="#serverless--ai"><span class="icon icon-link"></span></a>Serverless &#x26; AI</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lambda</strong></td>
+<td>Serverless compute</td>
+<td>Event-driven functions</td>
+</tr>
+<tr>
+<td><strong>Step Functions</strong></td>
+<td>Workflow orchestration</td>
+<td>Multi-step processes</td>
+</tr>
+<tr>
+<td><strong>SageMaker</strong></td>
+<td>ML platform</td>
+<td>Model training and deployment</td>
+</tr>
+<tr>
+<td><strong>Bedrock</strong></td>
+<td>Foundation models</td>
+<td>LLM APIs (Claude, Llama, Titan)</td>
+</tr>
+<tr>
+<td><strong>Polly</strong></td>
+<td>Text-to-speech</td>
+<td>Voice synthesis</td>
+</tr>
+<tr>
+<td><strong>Rekognition</strong></td>
+<td>Image analysis</td>
+<td>Object detection, face recognition</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aws-pricing"><a aria-hidden="true" tabindex="-1" href="#aws-pricing"><span class="icon icon-link"></span></a>AWS pricing</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Pricing model</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EC2</strong></td>
+<td>Per hour/second</td>
+<td>t3.micro: ~$7/month (on-demand)</td>
+</tr>
+<tr>
+<td><strong>S3</strong></td>
+<td>Per GB stored + requests</td>
+<td>$0.023/GB/month</td>
+</tr>
+<tr>
+<td><strong>Lambda</strong></td>
+<td>Per request + compute time</td>
+<td>1M free requests/month</td>
+</tr>
+<tr>
+<td><strong>RDS</strong></td>
+<td>Per hour/instance</td>
+<td>db.t3.micro: ~$15/month</td>
+</tr>
+<tr>
+<td><strong>Data transfer</strong></td>
+<td>Per GB out</td>
+<td>$0.09/GB after free tier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aws-best-practices"><a aria-hidden="true" tabindex="-1" href="#aws-best-practices"><span class="icon icon-link"></span></a>AWS best practices</h3>
+<pre><code>1. Use IAM roles instead of access keys
+2. Enable MFA on all accounts
+3. Use VPC with private subnets
+4. Store secrets in AWS Secrets Manager or SSM Parameter Store
+5. Enable CloudTrail for audit logging
+6. Use S3 bucket policies (never public)
+7. Set up AWS Budgets for cost alerts
+8. Use reserved instances or savings plans for predictable workloads
+9. Enable versioning on S3 buckets
+10. Use infrastructure as code (Terraform, CloudFormation)
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Example IAM Policy (principle of least privilege)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "Version"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"2012-10-17"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "Statement"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    {</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      "Effect"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Allow"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      "Action"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        "s3:GetObject"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">        "s3:PutObject"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ],</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">      "Resource"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"arn:aws:s3:::myapp-bucket/*"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h2 id="azure-microsoft-azure"><a aria-hidden="true" tabindex="-1" href="#azure-microsoft-azure"><span class="icon icon-link"></span></a>Azure (Microsoft Azure)</h2>
+<p><strong>The enterprise giant</strong>, deeply integrated with Microsoft products.</p>
+<h3 id="azure-services"><a aria-hidden="true" tabindex="-1" href="#azure-services"><span class="icon icon-link"></span></a>Azure services</h3>
+<h4 id="compute-1"><a aria-hidden="true" tabindex="-1" href="#compute-1"><span class="icon icon-link"></span></a>Compute</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Virtual Machines</strong></td>
+<td>VMs (Windows/Linux)</td>
+<td>Servers, APIs, apps</td>
+</tr>
+<tr>
+<td><strong>Azure Functions</strong></td>
+<td>Serverless functions</td>
+<td>Event-driven workloads</td>
+</tr>
+<tr>
+<td><strong>Azure Container Instances</strong></td>
+<td>Single containers</td>
+<td>Quick container deployment</td>
+</tr>
+<tr>
+<td><strong>AKS (Kubernetes)</strong></td>
+<td>Managed Kubernetes</td>
+<td>Container orchestration</td>
+</tr>
+<tr>
+<td><strong>Azure App Service</strong></td>
+<td>PaaS for web apps</td>
+<td>Web apps, APIs, mobile backends</td>
+</tr>
+<tr>
+<td><strong>Azure Batch</strong></td>
+<td>Large-scale job processing</td>
+<td>HPC, rendering</td>
+</tr>
+</tbody>
+</table>
+<h4 id="storage-1"><a aria-hidden="true" tabindex="-1" href="#storage-1"><span class="icon icon-link"></span></a>Storage</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Blob Storage</strong></td>
+<td>Object storage</td>
+<td>File storage, static hosting</td>
+</tr>
+<tr>
+<td><strong>Azure Files</strong></td>
+<td>Managed file shares</td>
+<td>SMB file sharing</td>
+</tr>
+<tr>
+<td><strong>Disk Storage</strong></td>
+<td>Block storage for VMs</td>
+<td>VM system disks, data disks</td>
+</tr>
+<tr>
+<td><strong>Archive Storage</strong></td>
+<td>Cold storage</td>
+<td>Long-term retention</td>
+</tr>
+<tr>
+<td><strong>NetApp Files</strong></td>
+<td>Enterprise NFS/SMB</td>
+<td>High-performance file storage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="networking-1"><a aria-hidden="true" tabindex="-1" href="#networking-1"><span class="icon icon-link"></span></a>Networking</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Virtual Network (VNet)</strong></td>
+<td>Private network in Azure</td>
+<td>Isolated network</td>
+</tr>
+<tr>
+<td><strong>Azure DNS</strong></td>
+<td>DNS hosting</td>
+<td>Domain DNS management</td>
+</tr>
+<tr>
+<td><strong>Azure Front Door</strong></td>
+<td>CDN + WAF + global LB</td>
+<td>Global web acceleration</td>
+</tr>
+<tr>
+<td><strong>Application Gateway</strong></td>
+<td>L7 load balancer</td>
+<td>Web traffic routing, WAF</td>
+</tr>
+<tr>
+<td><strong>ExpressRoute</strong></td>
+<td>Dedicated private connection</td>
+<td>On-premises to Azure</td>
+</tr>
+<tr>
+<td><strong>Azure Load Balancer</strong></td>
+<td>L4 load balancer</td>
+<td>VM traffic distribution</td>
+</tr>
+<tr>
+<td><strong>Azure Firewall</strong></td>
+<td>Managed firewall</td>
+<td>Network security</td>
+</tr>
+</tbody>
+</table>
+<h4 id="databases-1"><a aria-hidden="true" tabindex="-1" href="#databases-1"><span class="icon icon-link"></span></a>Databases</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure SQL Database</strong></td>
+<td>Managed SQL Server</td>
+<td>Relational data</td>
+</tr>
+<tr>
+<td><strong>Cosmos DB</strong></td>
+<td>Multi-model NoSQL</td>
+<td>Global-scale NoSQL</td>
+</tr>
+<tr>
+<td><strong>Azure Database for PostgreSQL</strong></td>
+<td>Managed PostgreSQL</td>
+<td>PostgreSQL workloads</td>
+</tr>
+<tr>
+<td><strong>Azure Database for MySQL</strong></td>
+<td>Managed MySQL</td>
+<td>MySQL workloads</td>
+</tr>
+<tr>
+<td><strong>Azure Cache for Redis</strong></td>
+<td>In-memory cache</td>
+<td>Caching, session storage</td>
+</tr>
+<tr>
+<td><strong>Azure Synapse Analytics</strong></td>
+<td>Data warehousing</td>
+<td>Analytics, BI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="identity--security"><a aria-hidden="true" tabindex="-1" href="#identity--security"><span class="icon icon-link"></span></a>Identity &#x26; Security</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Azure Active Directory</strong></td>
+<td>Identity management</td>
+<td>User authentication, SSO</td>
+</tr>
+<tr>
+<td><strong>Microsoft Entra ID</strong></td>
+<td>Enterprise identity</td>
+<td>IAM, conditional access</td>
+</tr>
+<tr>
+<td><strong>Key Vault</strong></td>
+<td>Secrets management</td>
+<td>Keys, certificates, passwords</td>
+</tr>
+<tr>
+<td><strong>Microsoft Defender</strong></td>
+<td>Security platform</td>
+<td>Threat protection</td>
+</tr>
+<tr>
+<td><strong>Sentinel</strong></td>
+<td>SIEM</td>
+<td>Security monitoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="azure-pricing"><a aria-hidden="true" tabindex="-1" href="#azure-pricing"><span class="icon icon-link"></span></a>Azure pricing</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Pricing model</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Virtual Machines</strong></td>
+<td>Per second</td>
+<td>B2s: ~$10/month (on-demand)</td>
+</tr>
+<tr>
+<td><strong>Blob Storage</strong></td>
+<td>Per GB stored</td>
+<td>$0.018/GB/month</td>
+</tr>
+<tr>
+<td><strong>Functions</strong></td>
+<td>Per execution + GB-seconds</td>
+<td>1M executions free/month</td>
+</tr>
+<tr>
+<td><strong>SQL Database</strong></td>
+<td>Per vCore/hour</td>
+<td>Basic: ~$5/month</td>
+</tr>
+<tr>
+<td><strong>Data transfer</strong></td>
+<td>Per GB out</td>
+<td>$0.087/GB after free tier</td>
+</tr>
+</tbody>
+</table>
+<h3 id="azure-best-practices"><a aria-hidden="true" tabindex="-1" href="#azure-best-practices"><span class="icon icon-link"></span></a>Azure best practices</h3>
+<pre><code>1. Use Azure Policy for governance
+2. Use Managed Identities instead of service principals
+3. Deploy across multiple Availability Zones
+4. Use Azure Monitor for observability
+5. Implement disaster recovery with Azure Site Recovery
+6. Use Azure Backup for VM and database backup
+7. Implement RBAC (Role-Based Access Control)
+8. Use Azure Cost Management for budget tracking
+9. Deploy infrastructure as code (Bicep, Terraform)
+10. Use Azure DevOps or GitHub Actions for CI/CD
+</code></pre>
+<h2 id="gcp-google-cloud-platform"><a aria-hidden="true" tabindex="-1" href="#gcp-google-cloud-platform"><span class="icon icon-link"></span></a>GCP (Google Cloud Platform)</h2>
+<p><strong>The innovation leader</strong>, strong in data, AI, and Kubernetes.</p>
+<h3 id="gcp-services"><a aria-hidden="true" tabindex="-1" href="#gcp-services"><span class="icon icon-link"></span></a>GCP services</h3>
+<h4 id="compute-2"><a aria-hidden="true" tabindex="-1" href="#compute-2"><span class="icon icon-link"></span></a>Compute</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compute Engine</strong></td>
+<td>VMs (customizable)</td>
+<td>Servers, APIs, custom workloads</td>
+</tr>
+<tr>
+<td><strong>Cloud Functions</strong></td>
+<td>Serverless functions</td>
+<td>Event-driven code</td>
+</tr>
+<tr>
+<td><strong>Cloud Run</strong></td>
+<td>Managed containers</td>
+<td>Containerized apps, APIs</td>
+</tr>
+<tr>
+<td><strong>GKE (Kubernetes)</strong></td>
+<td>Managed Kubernetes</td>
+<td>Container orchestration</td>
+</tr>
+<tr>
+<td><strong>App Engine</strong></td>
+<td>PaaS (auto-scaling)</td>
+<td>Web apps, mobile backends</td>
+</tr>
+<tr>
+<td><strong>Cloud Build</strong></td>
+<td>CI/CD platform</td>
+<td>Automated builds</td>
+</tr>
+<tr>
+<td><strong>Dataproc</strong></td>
+<td>Managed Hadoop/Spark</td>
+<td>Big data processing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="storage-2"><a aria-hidden="true" tabindex="-1" href="#storage-2"><span class="icon icon-link"></span></a>Storage</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud Storage</strong></td>
+<td>Object storage</td>
+<td>File storage, backups, CDN</td>
+</tr>
+<tr>
+<td><strong>Persistent Disk</strong></td>
+<td>Block storage for VMs</td>
+<td>System and data disks</td>
+</tr>
+<tr>
+<td><strong>Filestore</strong></td>
+<td>Managed NFS</td>
+<td>Shared file storage</td>
+</tr>
+<tr>
+<td><strong>Memorystore</strong></td>
+<td>In-memory data store</td>
+<td>Redis, Memcached</td>
+</tr>
+</tbody>
+</table>
+<h4 id="networking-2"><a aria-hidden="true" tabindex="-1" href="#networking-2"><span class="icon icon-link"></span></a>Networking</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VPC</strong></td>
+<td>Virtual Private Cloud</td>
+<td>Isolated network</td>
+</tr>
+<tr>
+<td><strong>Cloud DNS</strong></td>
+<td>DNS hosting</td>
+<td>Domain DNS management</td>
+</tr>
+<tr>
+<td><strong>Cloud CDN</strong></td>
+<td>Content delivery</td>
+<td>Edge caching</td>
+</tr>
+<tr>
+<td><strong>Cloud Load Balancing</strong></td>
+<td>Global load balancer</td>
+<td>Global traffic distribution</td>
+</tr>
+<tr>
+<td><strong>Cloud Interconnect</strong></td>
+<td>Dedicated connection</td>
+<td>On-premises to GCP</td>
+</tr>
+<tr>
+<td><strong>Cloud Armor</strong></td>
+<td>DDoS/WAF protection</td>
+<td>Edge security</td>
+</tr>
+</tbody>
+</table>
+<h4 id="databases-2"><a aria-hidden="true" tabindex="-1" href="#databases-2"><span class="icon icon-link"></span></a>Databases</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud SQL</strong></td>
+<td>Managed MySQL/PostgreSQL/SQL Server</td>
+<td>Relational databases</td>
+</tr>
+<tr>
+<td><strong>Spanner</strong></td>
+<td>Horizontally scaled SQL</td>
+<td>Globally distributed relational data</td>
+</tr>
+<tr>
+<td><strong>Firestore</strong></td>
+<td>NoSQL document database</td>
+<td>Mobile/web app data</td>
+</tr>
+<tr>
+<td><strong>Bigtable</strong></td>
+<td>NoSQL wide-column</td>
+<td>IoT, analytics, time series</td>
+</tr>
+<tr>
+<td><strong>BigQuery</strong></td>
+<td>Serverless data warehouse</td>
+<td>Analytics, BI, ML</td>
+</tr>
+<tr>
+<td><strong>AlloyDB</strong></td>
+<td>Managed PostgreSQL</td>
+<td>High-performance PostgreSQL</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ai--data"><a aria-hidden="true" tabindex="-1" href="#ai--data"><span class="icon icon-link"></span></a>AI &#x26; Data</h4>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vertex AI</strong></td>
+<td>ML platform</td>
+<td>Model training, deployment</td>
+</tr>
+<tr>
+<td><strong>AutoML</strong></td>
+<td>Automated ML training</td>
+<td>Custom ML without coding</td>
+</tr>
+<tr>
+<td><strong>AI Platform</strong></td>
+<td>ML model management</td>
+<td>Model hosting, prediction</td>
+</tr>
+<tr>
+<td><strong>Dataflow</strong></td>
+<td>Stream/batch processing</td>
+<td>ETL pipelines</td>
+</tr>
+<tr>
+<td><strong>Dataform</strong></td>
+<td>Data transformation</td>
+<td>SQL-based data engineering</td>
+</tr>
+<tr>
+<td><strong>Looker</strong></td>
+<td>Business intelligence</td>
+<td>Data visualization</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gcp-pricing"><a aria-hidden="true" tabindex="-1" href="#gcp-pricing"><span class="icon icon-link"></span></a>GCP pricing</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Pricing model</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compute Engine</strong></td>
+<td>Per second</td>
+<td>e2-micro: ~$6/month (with free tier)</td>
+</tr>
+<tr>
+<td><strong>Cloud Storage</strong></td>
+<td>Per GB stored</td>
+<td>$0.020/GB/month</td>
+</tr>
+<tr>
+<td><strong>Cloud Functions</strong></td>
+<td>Per execution + resources</td>
+<td>2M invocations free/month</td>
+</tr>
+<tr>
+<td><strong>Cloud SQL</strong></td>
+<td>Per hour</td>
+<td>db-f1-micro: ~$10/month</td>
+</tr>
+<tr>
+<td><strong>Data transfer</strong></td>
+<td>Per GB out</td>
+<td>$0.12/GB after free tier</td>
+</tr>
+<tr>
+<td><strong>BigQuery</strong></td>
+<td>Per TB queried</td>
+<td>First 1TB/month free</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gcp-best-practices"><a aria-hidden="true" tabindex="-1" href="#gcp-best-practices"><span class="icon icon-link"></span></a>GCP best practices</h3>
+<pre><code>1. Use Service Accounts with minimal IAM roles
+2. Deploy in multiple regions for high availability
+3. Use Cloud Build + Artifact Registry for CI/CD
+4. Use Terraform for infrastructure (GCP is very Terraform-friendly)
+5. Enable Cloud Audit Logs for compliance
+6. Use Secret Manager for sensitive data
+7. Implement Network Security Policy for VPC segmentation
+8. Use Cloud Run for stateless containerized apps (simplest deployment)
+9. Use BigQuery for analytics (serverless, fast)
+10. Take advantage of sustained use discounts (automatic)
+</code></pre>
+<h2 id="comparison-aws-vs-azure-vs-gcp"><a aria-hidden="true" tabindex="-1" href="#comparison-aws-vs-azure-vs-gcp"><span class="icon icon-link"></span></a>Comparison: AWS vs Azure vs GCP</h2>
+<h3 id="services-comparison"><a aria-hidden="true" tabindex="-1" href="#services-comparison"><span class="icon icon-link"></span></a>Services comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>AWS</th>
+<th>Azure</th>
+<th>GCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VMs</strong></td>
+<td>EC2</td>
+<td>Virtual Machines</td>
+<td>Compute Engine</td>
+</tr>
+<tr>
+<td><strong>Serverless</strong></td>
+<td>Lambda</td>
+<td>Functions</td>
+<td>Cloud Functions</td>
+</tr>
+<tr>
+<td><strong>Containers</strong></td>
+<td>EKS / ECS</td>
+<td>AKS</td>
+<td>GKE</td>
+</tr>
+<tr>
+<td><strong>Object Storage</strong></td>
+<td>S3</td>
+<td>Blob Storage</td>
+<td>Cloud Storage</td>
+</tr>
+<tr>
+<td><strong>Managed DB</strong></td>
+<td>RDS</td>
+<td>Azure SQL</td>
+<td>Cloud SQL</td>
+</tr>
+<tr>
+<td><strong>NoSQL</strong></td>
+<td>DynamoDB</td>
+<td>Cosmos DB</td>
+<td>Firestore / Bigtable</td>
+</tr>
+<tr>
+<td><strong>Serverless DB</strong></td>
+<td>DynamoDB</td>
+<td>Cosmos DB</td>
+<td>Firestore</td>
+</tr>
+<tr>
+<td><strong>Data Warehouse</strong></td>
+<td>Redshift</td>
+<td>Synapse</td>
+<td>BigQuery</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>Route 53</td>
+<td>Azure DNS</td>
+<td>Cloud DNS</td>
+</tr>
+<tr>
+<td><strong>CDN</strong></td>
+<td>CloudFront</td>
+<td>Front Door</td>
+<td>Cloud CDN</td>
+</tr>
+<tr>
+<td><strong>Load Balancer</strong></td>
+<td>ELB</td>
+<td>App Gateway / LB</td>
+<td>Cloud LB</td>
+</tr>
+<tr>
+<td><strong>IAM</strong></td>
+<td>IAM</td>
+<td>Entra ID</td>
+<td>IAM</td>
+</tr>
+<tr>
+<td><strong>ML Platform</strong></td>
+<td>SageMaker</td>
+<td>Azure ML</td>
+<td>Vertex AI</td>
+</tr>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>EKS</td>
+<td>AKS</td>
+<td><strong>GKE</strong></td>
+</tr>
+<tr>
+<td><strong>CI/CD</strong></td>
+<td>CodePipeline</td>
+<td>DevOps</td>
+<td>Cloud Build</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pricing-comparison"><a aria-hidden="true" tabindex="-1" href="#pricing-comparison"><span class="icon icon-link"></span></a>Pricing comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>AWS</th>
+<th>Azure</th>
+<th>GCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Small VM</strong></td>
+<td>~$7/mo (t3.micro)</td>
+<td>~$10/mo (B2s)</td>
+<td>~$6/mo (e2-micro)*</td>
+</tr>
+<tr>
+<td><strong>Storage (per GB)</strong></td>
+<td>$0.023/mo</td>
+<td>$0.018/mo</td>
+<td>$0.020/mo</td>
+</tr>
+<tr>
+<td><strong>Data transfer out</strong></td>
+<td>$0.09/GB</td>
+<td>$0.087/GB</td>
+<td>$0.12/GB</td>
+</tr>
+<tr>
+<td><strong>Serverless</strong></td>
+<td>1M free req/mo</td>
+<td>1M exec/mo</td>
+<td>2M inv/mo</td>
+</tr>
+<tr>
+<td><strong>Managed DB</strong></td>
+<td>~$15/mo (db.t3.micro)</td>
+<td>~$5/mo (Basic)</td>
+<td>~$10/mo</td>
+</tr>
+</tbody>
+</table>
+<p>*GCP has a generous free tier ($300 credit + always-free e2-micro)</p>
+<h3 id="key-differentiators"><a aria-hidden="true" tabindex="-1" href="#key-differentiators"><span class="icon icon-link"></span></a>Key differentiators</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>AWS</th>
+<th>Azure</th>
+<th>GCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market position</strong></td>
+<td>#1, most services</td>
+<td>#2, enterprise-friendly</td>
+<td>#3, innovation-focused</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>General-purpose, largest service catalog</td>
+<td>Microsoft shops, enterprises</td>
+<td>Data, AI/ML, Kubernetes</td>
+</tr>
+<tr>
+<td><strong>Pricing</strong></td>
+<td>Complex, pay-as-you-go</td>
+<td>Enterprise contracts, hybrid</td>
+<td>Simple, sustained-use discounts</td>
+</tr>
+<tr>
+<td><strong>Free tier</strong></td>
+<td>Limited</td>
+<td>$200 credit (90 days)</td>
+<td>$300 credit + always-free</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Comprehensive, expensive</td>
+<td>Enterprise-focused</td>
+<td>Good, developer-friendly</td>
+</tr>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>EKS (mature)</td>
+<td>AKS (good integration)</td>
+<td><strong>GKE (best-in-class)</strong></td>
+</tr>
+<tr>
+<td><strong>Data analytics</strong></td>
+<td>Redshift, Athena</td>
+<td>Synapse</td>
+<td><strong>BigQuery (serverless leader)</strong></td>
+</tr>
+<tr>
+<td><strong>AI/ML</strong></td>
+<td>SageMaker, Bedrock</td>
+<td>Azure ML</td>
+<td><strong>Vertex AI, TPUs</strong></td>
+</tr>
+<tr>
+<td><strong>Global network</strong></td>
+<td>Largest (300+ PoPs)</td>
+<td>Large (600+ locations)</td>
+<td>Premium network (low latency)</td>
+</tr>
+<tr>
+<td><strong>Hybrid cloud</strong></td>
+<td>Outposts</td>
+<td><strong>Azure Arc (leader)</strong></td>
+<td>Anthos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-choose-which"><a aria-hidden="true" tabindex="-1" href="#when-to-choose-which"><span class="icon icon-link"></span></a>When to choose which</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Starting fresh, no preference</strong></td>
+<td>AWS</td>
+<td>Most services, largest community, most job opportunities</td>
+</tr>
+<tr>
+<td><strong>Microsoft-heavy company</strong></td>
+<td>Azure</td>
+<td>Active Directory integration, enterprise licensing</td>
+</tr>
+<tr>
+<td><strong>Data science / ML / AI</strong></td>
+<td>GCP</td>
+<td>Best-in-class AI tools, BigQuery, TPUs</td>
+</tr>
+<tr>
+<td><strong>Kubernetes</strong></td>
+<td>GCP</td>
+<td>GKE is the most managed and easiest</td>
+</tr>
+<tr>
+<td><strong>Large enterprise</strong></td>
+<td>Azure or AWS</td>
+<td>Both have enterprise contracts, support, compliance</td>
+</tr>
+<tr>
+<td><strong>Startup</strong></td>
+<td>GCP or AWS</td>
+<td>GCP for credits, AWS for ecosystem</td>
+</tr>
+<tr>
+<td><strong>Cost-sensitive</strong></td>
+<td>GCP</td>
+<td>Sustained use discounts, generous free tier</td>
+</tr>
+<tr>
+<td><strong>Multi-cloud</strong></td>
+<td>Both</td>
+<td>Use different strengths from each</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cloud-architecture-patterns"><a aria-hidden="true" tabindex="-1" href="#cloud-architecture-patterns"><span class="icon icon-link"></span></a>Cloud architecture patterns</h2>
+<h3 id="multi-tier-web-application"><a aria-hidden="true" tabindex="-1" href="#multi-tier-web-application"><span class="icon icon-link"></span></a>Multi-tier web application</h3>
+<pre><code>                    Internet
+                       │
+                  ┌────┴────┐
+                  │ CloudFl │ ← CDN + WAF
+                  │  are    │
+                  └────┬────┘
+                       │
+                  ┌────┴────┐
+                  │  Load   │ ← Global / regional LB
+                  │  Balancer│
+                  └────┬────┘
+                       │
+              ┌────────┼────────┐
+              ▼        ▼        ▼
+        ┌─────────┐ ┌─────────┐ ┌─────────┐
+        │  Web    │ │  Web    │ │  Web    │  ← Auto Scaling Group
+        │ Server  │ │ Server  │ │ Server  │
+        └────┬────┘ └────┬────┘ └────┬────┘
+             │            │            │
+             └────────────┼────────────┘
+                          ▼
+              ┌─────────────────────┐
+              │  Application API    │ ← Container orchestration
+              │  (Kubernetes / ECS) │     (EC2, ECS, or EKS)
+              └──────────┬──────────┘
+                         ▼
+              ┌─────────────────────┐
+              │    Database         │ ← RDS (PostgreSQL/MySQL)
+              └──────────┬──────────┘
+                         ▼
+              ┌─────────────────────┐
+              │   Cache (Redis)     │ ← ElastiCache
+              └─────────────────────┘
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+      ┌─────────────┐     ┌─────────────┐
+      │    S3       │     │    DynamoDB │
+      │  (Files)    │     │  (Session)  │
+      └─────────────┘     └─────────────┘
+</code></pre>
+<h3 id="serverless-architecture"><a aria-hidden="true" tabindex="-1" href="#serverless-architecture"><span class="icon icon-link"></span></a>Serverless architecture</h3>
+<pre><code>         User Request
+              │
+         ┌────┴────┐
+         │ API     │ ← API Gateway
+         │ Gateway │
+         └────┬────┘
+              │
+    ┌─────────┼──────────┐
+    ▼         ▼          ▼
+Lambda    Lambda     Lambda
+  (Auth)    (Create)   (Update)
+    │         │          │
+    └─────────┼──────────┘
+              ▼
+    ┌──────────────────┐
+    │  DynamoDB        │
+    │  (Data store)    │
+    └──────────────────┘
+              │
+    ┌─────────┼──────────┐
+    ▼         ▼          ▼
+  S3        SNS        SQS
+ (Files)   (Events)   (Queue)
+              │
+              ▼
+         Lambda
+      (Process)
+</code></pre>
+<h3 id="data-pipeline-architecture"><a aria-hidden="true" tabindex="-1" href="#data-pipeline-architecture"><span class="icon icon-link"></span></a>Data pipeline architecture</h3>
+<pre><code>    Data Sources
+    (Apps, Logs, Events)
+          │
+          ▼
+    ┌──────────┐
+    │  Kinesis │  ← Streaming ingestion
+    │ / PubSub │
+    └────┬─────┘
+         │
+         ▼
+    ┌──────────┐
+    │  Glue    │  ← ETL processing
+    │ / Data   │
+    │  Flow    │
+    └────┬─────┘
+         │
+         ▼
+    ┌──────────┐
+    │ Redshift │  ← Data warehouse
+    │ / BigQuery│
+    └────┬─────┘
+         │
+         ▼
+    ┌──────────┐
+    │  Athena  │  ← Ad-hoc queries
+    │ / Looker │
+    └──────────┘
+</code></pre>
+<h2 id="infrastructure-as-code-iac"><a aria-hidden="true" tabindex="-1" href="#infrastructure-as-code-iac"><span class="icon icon-link"></span></a>Infrastructure as Code (IaC)</h2>
+<h3 id="terraform-works-with-all-providers"><a aria-hidden="true" tabindex="-1" href="#terraform-works-with-all-providers"><span class="icon icon-link"></span></a>Terraform (works with all providers)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="hcl" data-theme="github-light github-dark"><code data-language="hcl" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Main.tf - Create an AWS EC2 instance</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">provider</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  region</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "us-east-1"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws_vpc"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "main"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  cidr_block</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "10.0.0.0/16"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  tags</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "main-vpc"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws_subnet"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "public"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  vpc_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                  =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws_vpc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">main</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">id</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  cidr_block</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">              =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "10.0.1.0/24"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  map_public_ip_on_launch</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  availability_zone</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">       =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "us-east-1a"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  tags</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "public-subnet"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws_instance"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "web"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ami</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">           =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "ami-0c55b159cbfafe1f0"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Ubuntu 22.04</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  instance_type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "t3.micro"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  subnet_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">     =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws_subnet</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">id</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  vpc_security_group_ids</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [aws_security_group</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">web</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">id]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  user_data</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;&#x3C;-EOF</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">              #!/bin/bash</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">              apt-get update</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">              apt-get install -y nginx</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">              systemctl start nginx</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">              EOF</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  tags</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    Name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "web-server"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws_security_group"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "web"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "web-sg"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  vpc_id</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws_vpc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">main</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">id</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  ingress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    from_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">   =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    to_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">     =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    protocol</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tcp"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    cidr_blocks</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0.0.0.0/0"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  ingress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    from_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">   =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 443</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    to_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">     =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 443</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    protocol</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tcp"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    cidr_blocks</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0.0.0.0/0"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  egress</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    from_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">   =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    to_port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">     =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    protocol</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "-1"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    cidr_blocks</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0.0.0.0/0"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Terraform workflow</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> init</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Initialize the working directory</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> plan</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Preview changes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apply</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Apply changes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> destroy</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # Clean up resources</span></span></code></pre></figure>
+<h3 id="pulumi-code-based-iac"><a aria-hidden="true" tabindex="-1" href="#pulumi-code-based-iac"><span class="icon icon-link"></span></a>Pulumi (code-based IaC)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "@pulumi/aws"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> vpc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws.ec2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Vpc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"main"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  cidrBlock: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"10.0.0.0/16"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> subnet</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws.ec2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Subnet</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"public"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  vpcId: vpc.id,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  cidrBlock: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"10.0.1.0/24"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  availabilityZone: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"us-east-1a"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  mapPublicIpOnLaunch: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> instance</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws.ec2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Instance</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"web"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ami: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"ami-0c55b159cbfafe1f0"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  instanceType: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"t3.micro"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  subnetId: subnet.id,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  tags: { Name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"web-server"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> },</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> publicIp</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> instance.publicIp;</span></span></code></pre></figure>
+<h2 id="cost-management"><a aria-hidden="true" tabindex="-1" href="#cost-management"><span class="icon icon-link"></span></a>Cost management</h2>
+<h3 id="aws-cost-management"><a aria-hidden="true" tabindex="-1" href="#aws-cost-management"><span class="icon icon-link"></span></a>AWS Cost Management</h3>
+<pre><code>1. AWS Budgets: Set spending limits and alerts
+2. AWS Cost Explorer: Visualize spending over time
+3. Reserved Instances: 1-3 year commitment (up to 72% savings)
+4. Savings Plans: Flexible commitment (up to 66% savings)
+5. Spot Instances: Bid for unused capacity (up to 90% savings)
+
+Spot instances:
+  - Use excess EC2 capacity
+  - Can be terminated with 2-minute warning
+  - Great for batch processing, CI/CD, stateless workloads
+  - NOT for production databases or stateful services
+</code></pre>
+<h3 id="azure-cost-management"><a aria-hidden="true" tabindex="-1" href="#azure-cost-management"><span class="icon icon-link"></span></a>Azure Cost Management</h3>
+<pre><code>1. Azure Cost Management + Billing: Track and analyze costs
+2. Azure Advisor: Recommendations for cost optimization
+3. Reserved VM Instances: 1-3 year commitment (up to 72%)
+4. Azure Savings Plans: Compute, storage, network (up to 65%)
+5. Spot VMs: Up to 90% savings for interruptible workloads
+</code></pre>
+<h3 id="gcp-cost-management"><a aria-hidden="true" tabindex="-1" href="#gcp-cost-management"><span class="icon icon-link"></span></a>GCP Cost Management</h3>
+<pre><code>1. Cloud Billing: Real-time cost monitoring
+2. Cost Table: Analyze costs by labels and services
+3. Committed Use Discounts: 1-3 year commitment (up to 57%)
+4. Sustained Use Discounts: Automatic for running resources
+5. Preemptible VMs: Up to 91% savings for short-lived workloads
+</code></pre>
+<h3 id="cost-optimization-checklist"><a aria-hidden="true" tabindex="-1" href="#cost-optimization-checklist"><span class="icon icon-link"></span></a>Cost optimization checklist</h3>
+<pre><code>[ ] Right-size instances (don't over-provision)
+[ ] Use auto-scaling (scale down when idle)
+[ ] Use reserved instances/savings plans for steady workloads
+[ ] Use spot/preemptible instances for batch jobs
+[ ] Delete unused resources (orphaned disks, snapshots)
+[ ] Use cloud-native storage (not EBS for archives)
+[ ] Use CDN to reduce data transfer costs
+[ ] Use VPC endpoints (avoid NAT gateway data transfer)
+[ ] Set up billing alerts
+[ ] Tag all resources (for cost allocation)
+[ ] Review monthly bills
+[ ] Use architecture patterns that minimize cost
+</code></pre>
+<h2 id="security-comparison"><a aria-hidden="true" tabindex="-1" href="#security-comparison"><span class="icon icon-link"></span></a>Security comparison</h2>
+<table>
+<thead>
+<tr>
+<th>Security Feature</th>
+<th>AWS</th>
+<th>Azure</th>
+<th>GCP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IAM</strong></td>
+<td>IAM (roles, policies)</td>
+<td>Entra ID (RBAC)</td>
+<td>IAM (roles)</td>
+</tr>
+<tr>
+<td><strong>MFA</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>Encryption</strong></td>
+<td>At rest + in transit</td>
+<td>At rest + in transit</td>
+<td>At rest + in transit</td>
+</tr>
+<tr>
+<td><strong>Key management</strong></td>
+<td>KMS</td>
+<td>Key Vault</td>
+<td>Cloud Key Management</td>
+</tr>
+<tr>
+<td><strong>Network security</strong></td>
+<td>Security Groups + NACLs</td>
+<td>NSG + Firewall</td>
+<td>VPC Firewall</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Extensive</td>
+<td>Extensive</td>
+<td>Extensive</td>
+</tr>
+<tr>
+<td><strong>DDoS protection</strong></td>
+<td>Shield</td>
+<td>DDoS Protection</td>
+<td>Cloud Armor</td>
+</tr>
+<tr>
+<td><strong>WAF</strong></td>
+<td>AWS WAF</td>
+<td>Azure WAF</td>
+<td>Cloud Armor</td>
+</tr>
+<tr>
+<td><strong>Security monitoring</strong></td>
+<td>Security Hub, GuardDuty</td>
+<td>Microsoft Defender</td>
+<td>Security Command Center</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shared-responsibility-model"><a aria-hidden="true" tabindex="-1" href="#shared-responsibility-model"><span class="icon icon-link"></span></a>Shared Responsibility Model</h3>
+<pre><code>                    Cloud Provider (responsible for)        Customer (responsible for)
+                    ┌────────────────────────────────────┐  ┌────────────────────────────────────┐
+                    │            The Cloud               │  │          IN the Cloud              │
+                    │                                    │  │                                    │
+                    │  ┌────────────────────────────┐   │  │  ┌────────────────────────────┐   │
+                    │  │   Physical Security        │   │  │  │   Operating System          │   │
+                    │  │   Data Center               │   │  │  │   (patching, updates)      │   │
+                    │  │   Hypervisor                 │   │  │  │   ┌────────────────────┐   │   │
+                    │  │   Networking Hardware        │   │  │  │  │   Application       │   │   │
+                    │  │   Cloud infrastructure       │   │  │  │  │   Data              │   │   │
+                    │  └────────────────────────────┘   │  │  │  │  │   IAM               │   │   │
+                    │                                    │  │  │  │  │   Configuration     │   │   │
+                    └────────────────────────────────────┘  │  │  │  └────────────────────┘   │   │
+                                                         ┌────────────────────────────────────┐
+                                                         │              YOUR RESPOSIBILITY    │
+                                                         └────────────────────────────────────┘
+</code></pre>
+<h2 id="cloud-provider-migration"><a aria-hidden="true" tabindex="-1" href="#cloud-provider-migration"><span class="icon icon-link"></span></a>Cloud provider migration</h2>
+<h3 id="migration-strategies-6-rs"><a aria-hidden="true" tabindex="-1" href="#migration-strategies-6-rs"><span class="icon icon-link"></span></a>Migration strategies (6 Rs)</h3>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>Description</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rehost</strong></td>
+<td>Lift and shift (move as-is)</td>
+<td>Quick migration, minimal change</td>
+</tr>
+<tr>
+<td><strong>Replatform</strong></td>
+<td>Minor optimizations (new OS, DB)</td>
+<td>Better performance without rewrite</td>
+</tr>
+<tr>
+<td><strong>Repurchase</strong></td>
+<td>Replace with SaaS product</td>
+<td>Off-the-shelf software (CRM, ERP)</td>
+</tr>
+<tr>
+<td><strong>Refactor</strong></td>
+<td>Rewrite for cloud-native</td>
+<td>Maximum cloud benefits</td>
+</tr>
+<tr>
+<td><strong>Retire</strong></td>
+<td>Shut down unused systems</td>
+<td>Reduce costs</td>
+</tr>
+<tr>
+<td><strong>Retain</strong></td>
+<td>Keep on-premises</td>
+<td>Compliance, latency requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="migration-tools"><a aria-hidden="true" tabindex="-1" href="#migration-tools"><span class="icon icon-link"></span></a>Migration tools</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Migration tools</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS</strong></td>
+<td>AWS Migration Hub, AWS DMS (database), SMS (server migration), CloudEndure</td>
+</tr>
+<tr>
+<td><strong>Azure</strong></td>
+<td>Azure Migrate, Azure Database Migration Service, Azure Site Recovery</td>
+</tr>
+<tr>
+<td><strong>GCP</strong></td>
+<td>Migrate for Compute Engine, Database Migration Service, Transfer Appliance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPS</td>
+<td>[[20-vps]]</td>
+</tr>
+<tr>
+<td>Cloudflare</td>
+<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>[[03-dns-deep-dive]]</td>
+</tr>
+<tr>
+<td>Servers and processes</td>
+<td>[[14-servers-processes]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li><strong>AWS</strong> is the largest and most comprehensive cloud provider with the most services and maturity. Best for general-purpose workloads.</li>
+<li><strong>Azure</strong> is the enterprise favorite, especially for Microsoft shops. Best for companies using Windows Server, Active Directory, and .NET.</li>
+<li><strong>GCP</strong> excels in data analytics, AI/ML, and Kubernetes (GKE). Best for data-heavy workloads and containerized applications.</li>
+<li>All three follow the <strong>shared responsibility model</strong>: the provider secures the cloud, you secure what's in it.</li>
+<li><strong>Infrastructure as Code</strong> (Terraform, Pulumi) is essential for managing cloud resources at scale.</li>
+<li><strong>Cost management</strong> is critical: set budgets, use reserved instances, right-size resources, and review bills monthly.</li>
+<li>Security best practices: <strong>least privilege IAM</strong>, <strong>MFA</strong>, <strong>encryption at rest and in transit</strong>, <strong>VPC segmentation</strong>, and <strong>continuous monitoring</strong>.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+There is no "best" cloud provider. Each has strengths: AWS for breadth, Azure for enterprise integration, GCP for data and AI. Most successful companies use <strong>multi-cloud</strong> strategies, leveraging the best service from each provider. Start with one, understand it deeply, and expand from there.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

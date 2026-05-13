@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production</h1> <div class="article-body"><h1 id="lets-encrypt-and-certbot-free-ssl-certificates-in-production"><a aria-hidden="true" tabindex="-1" href="#lets-encrypt-and-certbot-free-ssl-certificates-in-production"><span class="icon icon-link"></span></a>Let's Encrypt and Certbot: Free SSL Certificates in Production</h1>
+<blockquote>
+<p>[!tip] Let's Encrypt in a nutshell
+Let's Encrypt is a free, automated, and open Certificate Authority. It uses the ACME protocol to issue and manage TLS certificates. Certbot is the most popular tool for interacting with Let's Encrypt. This article covers everything you need to run Let's Encrypt in production.</p>
+</blockquote>
+<h2 id="what-is-lets-encrypt"><a aria-hidden="true" tabindex="-1" href="#what-is-lets-encrypt"><span class="icon icon-link"></span></a>What is Let's Encrypt?</h2>
+<p>Let's Encrypt is a <strong>free, automated, open Certificate Authority (CA)</strong> run by the Internet Security Research Group (ISRG). Its mission is to encrypt the entire Internet.</p>
+<h3 id="why-lets-encrypt-changed-the-game"><a aria-hidden="true" tabindex="-1" href="#why-lets-encrypt-changed-the-game"><span class="icon icon-link"></span></a>Why Let's Encrypt changed the game</h3>
+<p>Before Let's Encrypt:</p>
+<ul>
+<li>SSL certificates cost $50–$500+ per year</li>
+<li>Manual installation was error-prone</li>
+<li>Many small websites ran without HTTPS</li>
+</ul>
+<p>After Let's Encrypt:</p>
+<ul>
+<li><strong>Free</strong> certificates</li>
+<li><strong>Automated</strong> issuance and renewal</li>
+<li><strong>Programmatic</strong> management via ACME protocol</li>
+<li>HTTPS adoption skyrocketed (now ~90% of all websites use HTTPS)</li>
+</ul>
+<h2 id="the-acme-protocol"><a aria-hidden="true" tabindex="-1" href="#the-acme-protocol"><span class="icon icon-link"></span></a>The ACME Protocol</h2>
+<p>ACME (Automatic Certificate Management Environment) is the protocol that defines how clients communicate with CAs.</p>
+<h3 id="acme-workflow"><a aria-hidden="true" tabindex="-1" href="#acme-workflow"><span class="icon icon-link"></span></a>ACME workflow</h3>
+<pre><code>┌────────────┐     ┌─────────────┐     ┌──────────────┐
+│  Certbot   │     │  Let's      │     │  Your        │
+│  (Client)  │────→│  Encrypt    │────→│  Server      │
+│            │     │  (CA)       │     │              │
+│ 1. Register│     │             │     │              │
+│ 2. Identify│     │             │     │              │
+│ 3. Prove   │     │             │     │ 4. Serve     │
+│    control │     │ 5. Verify   │     │    challenge │
+│ 4. Receive │     │             │     │ 6. Issue     │
+│    cert    │     │ 7. Sign     │     │    cert      │
+└────────────┘     └─────────────┘     └──────────────┘
+</code></pre>
+<h3 id="acme-steps-in-detail"><a aria-hidden="true" tabindex="-1" href="#acme-steps-in-detail"><span class="icon icon-link"></span></a>ACME steps in detail</h3>
+<h4 id="1-registration"><a aria-hidden="true" tabindex="-1" href="#1-registration"><span class="icon icon-link"></span></a>1. Registration</h4>
+<p>The client creates an account with the CA:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Register an account with Let's Encrypt</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> register</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --agree-tos</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --email</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> admin@example.com</span></span></code></pre></figure>
+<p>This creates an account key pair. The public key is registered with Let's Encrypt.</p>
+<h4 id="2-identify-the-domain"><a aria-hidden="true" tabindex="-1" href="#2-identify-the-domain"><span class="icon icon-link"></span></a>2. Identify the domain</h4>
+<p>The client tells the CA which domains it needs certificates for:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/www/html</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span></code></pre></figure>
+<h4 id="3-prove-domain-control"><a aria-hidden="true" tabindex="-1" href="#3-prove-domain-control"><span class="icon icon-link"></span></a>3. Prove domain control</h4>
+<p>Let's Encrypt needs to verify that the client actually controls the domain. There are two main challenge types:</p>
+<table>
+<thead>
+<tr>
+<th>Challenge Type</th>
+<th>How it works</th>
+<th>Port needed</th>
+<th>DNS?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>HTTP-01</strong></td>
+<td>Server serves a token at <code>/.well-known/acme-challenge/&#x3C;token></code></td>
+<td>80</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>TLS-ALPN-01</strong></td>
+<td>Server presents cert with special extension on port 443</td>
+<td>443</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>DNS-01</strong></td>
+<td>Client creates a TXT record <code>_acme-challenge.example.com</code></td>
+<td>N/A</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>HTTP-01 (manual)</strong></td>
+<td>Client manually creates the challenge file</td>
+<td>80</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-receive-the-certificate"><a aria-hidden="true" tabindex="-1" href="#4-receive-the-certificate"><span class="icon icon-link"></span></a>4. Receive the certificate</h4>
+<p>After verification, the CA issues the certificate:</p>
+<pre><code>Certificate:
+├── Certificate (example.com)
+├── Certificate (intermediate: R13)
+└── Certificate (root: ISRG Root X1)
+
+Private Key:
+└── example.com key (kept on your server)
+</code></pre>
+<h2 id="certbot-the-lets-encrypt-client"><a aria-hidden="true" tabindex="-1" href="#certbot-the-lets-encrypt-client"><span class="icon icon-link"></span></a>Certbot: The Let's Encrypt Client</h2>
+<p>Certbot is the most popular ACME client. It automates certificate issuance and renewal.</p>
+<h3 id="installation"><a aria-hidden="true" tabindex="-1" href="#installation"><span class="icon icon-link"></span></a>Installation</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ubuntu/Debian</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># CentOS/RHEL</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dnf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Using snap (recommended for latest version)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> snap</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --classic</span></span></code></pre></figure>
+<h3 id="certificate-issuance-methods"><a aria-hidden="true" tabindex="-1" href="#certificate-issuance-methods"><span class="icon icon-link"></span></a>Certificate issuance methods</h3>
+<h4 id="standalone-mode-stops-web-server-temporarily"><a aria-hidden="true" tabindex="-1" href="#standalone-mode-stops-web-server-temporarily"><span class="icon icon-link"></span></a>Standalone mode (stops web server temporarily)</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Certbot starts its own HTTP server on port 80</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --standalone</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span></code></pre></figure>
+<p>Use case: No existing web server, or you can stop the web server.</p>
+<h4 id="webroot-mode-uses-existing-web-server"><a aria-hidden="true" tabindex="-1" href="#webroot-mode-uses-existing-web-server"><span class="icon icon-link"></span></a>Webroot mode (uses existing web server)</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Certbot places challenge files in your web root</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/www/html</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span></code></pre></figure>
+<p>Nginx configuration for webroot:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">example.com www.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    root </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/var/www/html;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Let's Encrypt challenge</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> /.well-known/acme-challenge/ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        allow </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">all</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Redirect all HTTP to HTTPS</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> https://$host$request_uri;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h4 id="nginx-plugin-automatic-configuration"><a aria-hidden="true" tabindex="-1" href="#nginx-plugin-automatic-configuration"><span class="icon icon-link"></span></a>Nginx plugin (automatic configuration)</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Certbot configures Nginx automatically</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.example.com</span></span></code></pre></figure>
+<p>What Certbot does with the Nginx plugin:</p>
+<ol>
+<li>Creates a temporary HTTP server block for the challenge</li>
+<li>Completes the HTTP-01 challenge</li>
+<li>Installs the certificate</li>
+<li>Creates an HTTPS server block with HSTS</li>
+<li>Sets up automatic HTTP-to-HTTPS redirect</li>
+<li>Configures OCSP stapling</li>
+</ol>
+<h4 id="dns-01-challenge-for-wildcard-certificates"><a aria-hidden="true" tabindex="-1" href="#dns-01-challenge-for-wildcard-certificates"><span class="icon icon-link"></span></a>DNS-01 challenge (for wildcard certificates)</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># DNS-01 is required for wildcard certificates</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns-cloudflare</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '*.example.com'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --dns-cloudflare-credentials</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/cloudflare.ini</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --email</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> admin@example.com</span></span></code></pre></figure>
+<p>Cloudflare credentials file (<code>/etc/letsencrypt/cloudflare.ini</code>):</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="ini" data-theme="github-light github-dark"><code data-language="ini" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">dns_cloudflare_email</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> = admin@example.com</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">dns_cloudflare_api_key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> = your_api_key_here</span></span></code></pre></figure>
+<blockquote>
+<p>[!caution] Protect your API key
+Restrict the API key to DNS only and never commit it to version control. Use environment variables or secrets management.</p>
+</blockquote>
+<h3 id="certificate-files"><a aria-hidden="true" tabindex="-1" href="#certificate-files"><span class="icon icon-link"></span></a>Certificate files</h3>
+<p>After issuance, Certbot stores certificates in:</p>
+<pre><code>/etc/letsencrypt/live/example.com/
+├── cert.pem        ← Certificate (server cert only)
+├── chain.pem       ← Certificate chain (intermediate)
+├── fullchain.pem   ← cert.pem + chain.pem (what servers need)
+└── privkey.pem     ← Private key (KEEP THIS SECURE!)
+</code></pre>
+<h3 id="nginx-configuration-with-lets-encrypt"><a aria-hidden="true" tabindex="-1" href="#nginx-configuration-with-lets-encrypt"><span class="icon icon-link"></span></a>Nginx configuration with Let's Encrypt</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">443</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ssl http2;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">example.com www.example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/example.com/fullchain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_certificate_key </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/example.com/privkey.pem;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # TLS configuration</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_protocols </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">TLSv1.2 TLSv1.3;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_ciphers </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_prefer_server_ciphers </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_cache </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">shared:SSL:10m;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_session_tickets </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">off</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # OCSP Stapling</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_stapling </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_stapling_verify </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    ssl_trusted_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/etc/letsencrypt/live/example.com/chain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    resolver </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8.8.8.8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.4.4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> valid=300s;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    resolver_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # HSTS</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Strict-Transport-Security </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"max-age=63072000; includeSubDomains; preload"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> always;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Security headers</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Frame-Options DENY always;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Content-Type-Options nosniff always;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    add_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-XSS-Protection </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1; mode=block"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> always;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # ... your application ...</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># HTTP → HTTPS redirect</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">example.com www.example.com;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> https://$host$request_uri;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h2 id="automatic-renewal"><a aria-hidden="true" tabindex="-1" href="#automatic-renewal"><span class="icon icon-link"></span></a>Automatic renewal</h2>
+<p>Certificates are valid for <strong>90 days</strong>. Certbot automatically renews them before expiration.</p>
+<h3 id="how-renewal-works"><a aria-hidden="true" tabindex="-1" href="#how-renewal-works"><span class="icon icon-link"></span></a>How renewal works</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Test renewal (dry run)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dry-run</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Actual renewal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span></span></code></pre></figure>
+<p>Certbot checks all certificates every time it runs. If a certificate is less than 30 days from expiration, it renews it.</p>
+<h3 id="setting-up-automatic-renewal"><a aria-hidden="true" tabindex="-1" href="#setting-up-automatic-renewal"><span class="icon icon-link"></span></a>Setting up automatic renewal</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Certbot installs a systemd timer automatically</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot.timer</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot.timer</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check timer status</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list-timers</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certbot</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># The timer runs twice daily (at 00:00 and 12:00)</span></span></code></pre></figure>
+<p>Manual cron alternative:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="cron" data-theme="github-light github-dark"><code data-language="cron" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># /etc/crontab</span></span>
+<span data-line=""><span>0 0,12 * * * root certbot renew --quiet --deploy-hook "systemctl reload nginx"</span></span></code></pre></figure>
+<h3 id="what-happens-during-renewal"><a aria-hidden="true" tabindex="-1" href="#what-happens-during-renewal"><span class="icon icon-link"></span></a>What happens during renewal</h3>
+<pre><code>1. Certbot timer fires
+2. Checks all certificates in /etc/letsencrypt/live/
+3. Finds certificates expiring in &#x3C; 30 days
+4. Runs renewal for those certificates
+5. Challenges are validated (HTTP-01 or DNS-01)
+6. New certificates are written to /etc/letsencrypt/live/
+7. --deploy-hook runs (e.g., nginx -s reload)
+8. Old certificates are cleaned up after 90 days
+</code></pre>
+<blockquote>
+<p>[!tip] Webroot vs Standalone for renewal
+Renewal uses the same method as the original issuance. If you used <code>--standalone</code>, you need to stop the web server during renewal. <code>--webroot</code> is recommended for production.</p>
+</blockquote>
+<h2 id="wildcard-certificates"><a aria-hidden="true" tabindex="-1" href="#wildcard-certificates"><span class="icon icon-link"></span></a>Wildcard certificates</h2>
+<p>Wildcard certificates cover all subdomains:</p>
+<pre><code>*.example.com → covers:
+  www.example.com
+  api.example.com
+  mail.example.com
+  *.example.com → covers:
+    sub1.sub2.example.com  ← Wildcards only work one level deep!
+</code></pre>
+<pre><code># Not covered by *.example.com:
+example.com          ← Must be explicitly listed
+a.b.example.com      ← Wildcards are single-level only
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Wildcard requires DNS-01 challenge</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns-cloudflare</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '*.example.com'</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --dns-cloudflare-credentials</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/cloudflare.ini</span></span></code></pre></figure>
+<h2 id="certificate-lifecycle-management"><a aria-hidden="true" tabindex="-1" href="#certificate-lifecycle-management"><span class="icon icon-link"></span></a>Certificate lifecycle management</h2>
+<h3 id="checking-certificate-validity"><a aria-hidden="true" tabindex="-1" href="#checking-certificate-validity"><span class="icon icon-link"></span></a>Checking certificate validity</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check all certificates</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certificates</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check a specific certificate</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> x509</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/example.com/cert.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -text</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -noout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Validity"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Check expiration date</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> x509</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/example.com/cert.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -noout</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -enddate</span></span></code></pre></figure>
+<h3 id="renewing-a-specific-certificate"><a aria-hidden="true" tabindex="-1" href="#renewing-a-specific-certificate"><span class="icon icon-link"></span></a>Renewing a specific certificate</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Renew a specific certificate</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> renew</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cert-name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Force renewal (not recommended, rate limits apply)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --force-renewal</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span></code></pre></figure>
+<h3 id="revoking-a-certificate"><a aria-hidden="true" tabindex="-1" href="#revoking-a-certificate"><span class="icon icon-link"></span></a>Revoking a certificate</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Revoke a certificate</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> revoke</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cert-path</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/example.com/cert.pem</span></span></code></pre></figure>
+<blockquote>
+<p>[!note] Why revoke?
+Common reasons: private key compromised, domain sold, certificate issued for wrong domains.</p>
+</blockquote>
+<h2 id="acme-alternatives"><a aria-hidden="true" tabindex="-1" href="#acme-alternatives"><span class="icon icon-link"></span></a>ACME alternatives</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Protocol</th>
+<th>Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Certbot</strong></td>
+<td>ACME v2</td>
+<td>Most popular, many plugins</td>
+</tr>
+<tr>
+<td><strong>acme.sh</strong></td>
+<td>ACME v2</td>
+<td>Shell script, no dependencies, cron support</td>
+</tr>
+<tr>
+<td><strong>lego</strong></td>
+<td>ACME v2</td>
+<td>Go-based, programmatic API</td>
+</tr>
+<tr>
+<td><strong>ffi</strong></td>
+<td>ACME v2</td>
+<td>Let's Encrypt's own Go library</td>
+</tr>
+<tr>
+<td><strong>Custom scripts</strong></td>
+<td>ACME v2</td>
+<td>Full control over the process</td>
+</tr>
+</tbody>
+</table>
+<h2 id="lets-encrypt-rate-limits"><a aria-hidden="true" tabindex="-1" href="#lets-encrypt-rate-limits"><span class="icon icon-link"></span></a>Let's Encrypt rate limits</h2>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Certificates per registered account per week</strong></td>
+<td>400</td>
+</tr>
+<tr>
+<td><strong>Failing authorizations per account per week</strong></td>
+<td>5</td>
+</tr>
+<tr>
+<td><strong>New orders per account per hour</strong></td>
+<td>300</td>
+</tr>
+<tr>
+<td><strong>Failed validations per IP per hour</strong></td>
+<td>20</td>
+</tr>
+<tr>
+<td><strong>Certificates per domain per week</strong></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Don't hit rate limits
+Use <code>--dry-run</code> to test. Never run certbot in a loop without checking. Set up automatic renewal properly.</p>
+</blockquote>
+<h2 id="production-best-practices"><a aria-hidden="true" tabindex="-1" href="#production-best-practices"><span class="icon icon-link"></span></a>Production best practices</h2>
+<h3 id="1-use-ocsp-stapling"><a aria-hidden="true" tabindex="-1" href="#1-use-ocsp-stapling"><span class="icon icon-link"></span></a>1. Use OCSP Stapling</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ssl_stapling </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ssl_stapling_verify </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">on</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ssl_trusted_certificate </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">/path/to/chain.pem;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">resolver </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8.8.8.8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.4.4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> valid=300s;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">resolver_timeout </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span></code></pre></figure>
+<p>OCSP Stapling means the server sends the OCSP response with the certificate, avoiding client-side OCSP checks.</p>
+<h3 id="2-use-diffie-hellman-parameters"><a aria-hidden="true" tabindex="-1" href="#2-use-diffie-hellman-parameters"><span class="icon icon-link"></span></a>2. Use Diffie-Hellman parameters</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Generate strong DH parameters (takes a while)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dhparam</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -out</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/ssl/certs/dhparam.pem</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4096</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Use in Nginx</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssl_dhparam</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/ssl/certs/dhparam.pem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span></code></pre></figure>
+<h3 id="3-set-up-monitoring"><a aria-hidden="true" tabindex="-1" href="#3-set-up-monitoring"><span class="icon icon-link"></span></a>3. Set up monitoring</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#!/bin/bash</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># /usr/local/bin/check-ssl-cert.sh</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">EXPIRY</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> s_client</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com:443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -servername</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> x509</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -noout</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -enddate</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> cut</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">EXPIRY_EPOCH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$EXPIRY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">NOW_EPOCH</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%s</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DAYS_LEFT</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(( (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">EXPIRY_EPOCH</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> NOW_EPOCH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 86400</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [ $DAYS_LEFT </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">-lt</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 7</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ]; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">then</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "WARNING: Certificate for example.com expires in </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$DAYS_LEFT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> days"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Send alert (Slack, email, PagerDuty, etc.)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">fi</span></span></code></pre></figure>
+<h3 id="4-backup-private-keys"><a aria-hidden="true" tabindex="-1" href="#4-backup-private-keys"><span class="icon icon-link"></span></a>4. Backup private keys</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Always backup private keys!</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/example.com/privkey.pem</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/ssl/</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 600</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/ssl/privkey.pem</span></span></code></pre></figure>
+<h3 id="5-use-a-staging-environment-for-testing"><a aria-hidden="true" tabindex="-1" href="#5-use-a-staging-environment-for-testing"><span class="icon icon-link"></span></a>5. Use a staging environment for testing</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Let's Encrypt has a staging environment for testing</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># (Rate limits are much higher, but certs are NOT trusted by browsers)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">certbot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> certonly</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --webroot</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -w</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/www/html</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> test.example.com</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --staging</span></span></code></pre></figure>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS and TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Cloudflare SSL/TLS</td>
+<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+</tr>
+<tr>
+<td>HTTP security headers</td>
+<td>[[05-http-deep-dive]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>Let's Encrypt provides <strong>free, automated, open</strong> SSL certificates via the ACME protocol.</li>
+<li>Certbot is the most popular client, with plugins for Nginx, Apache, Cloudflare, and more.</li>
+<li>Certificates are valid for <strong>90 days</strong> and should be renewed automatically.</li>
+<li><strong>HTTP-01</strong> challenges work with a running web server; <strong>DNS-01</strong> is required for wildcards.</li>
+<li>Production setups should use OCSP stapling, strong DH parameters, and certificate monitoring.</li>
+<li>Protect private keys and set up backups.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Let's Encrypt eliminated the cost and complexity of SSL certificates. With Certbot, you can automate the entire lifecycle — issuance, renewal, and deployment — in minutes. There is no excuse for not using HTTPS in 2026.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

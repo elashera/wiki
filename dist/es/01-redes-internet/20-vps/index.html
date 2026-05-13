@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">VPS: qué es, configurar, SSH, seguridad y DNS</h1> <div class="article-body"><h1 id="vps-qué-es-configurar-ssh-seguridad-y-dns"><a aria-hidden="true" tabindex="-1" href="#vps-qué-es-configurar-ssh-seguridad-y-dns"><span class="icon icon-link"></span></a>VPS: qué es, configurar, SSH, seguridad y DNS</h1>
+<blockquote>
+<p>[!tip] VPS en una frase
+Un <strong>VPS (Virtual Private Server)</strong> es un servidor virtual dedicado dentro de un servidor físico. Lo controlas completamente — sistema operativo, firewall, servicios — sin compartir recursos con otros usuarios.</p>
+</blockquote>
+<h2 id="qué-es-un-vps"><a aria-hidden="true" tabindex="-1" href="#qué-es-un-vps"><span class="icon icon-link"></span></a>¿Qué es un VPS?</h2>
+<p>Un VPS es una <strong>máquina virtual dedicada</strong> creada por virtualización (KVM, VMware, Xen). Compartes el hardware físico con otros VPS, pero cada uno tiene su propio:</p>
+<ul>
+<li>Sistema operativo</li>
+<li>CPU (reservado o compartido)</li>
+<li>Memoria RAM</li>
+<li>Disco</li>
+<li>Dirección IP</li>
+<li>Acceso root completo</li>
+</ul>
+<h3 id="vps-vs-hosting-compartido-vs-cloud"><a aria-hidden="true" tabindex="-1" href="#vps-vs-hosting-compartido-vs-cloud"><span class="icon icon-link"></span></a>VPS vs Hosting compartido vs Cloud</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Shared Hosting</th>
+<th>VPS</th>
+<th>Cloud (AWS EC2, etc.)</th>
+<th>Bare Metal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control</strong></td>
+<td>Limitado (cPanel)</td>
+<td>Completo (root)</td>
+<td>Completo</td>
+<td>Completo</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td>Compartido</td>
+<td>Reservado o compartido</td>
+<td>Reservado</td>
+<td>100% dedicado</td>
+</tr>
+<tr>
+<td><strong>Escalabilidad</strong></td>
+<td>Baja (cambiar plan)</td>
+<td>Media (upgrade plan)</td>
+<td>Alta (escalar en minutos)</td>
+<td>Baja (cambiar hardware)</td>
+</tr>
+<tr>
+<td><strong>Precio</strong></td>
+<td>$2-10/mes</td>
+<td>$5-50/mes</td>
+<td>$5-500+/mes</td>
+<td>$50-500+/mes</td>
+</tr>
+<tr>
+<td><strong>Configuración</strong></td>
+<td>Preconfigurado</td>
+<td>Desde cero</td>
+<td>Desde cero</td>
+<td>Desde cero</td>
+</tr>
+<tr>
+<td><strong>Uso típico</strong></td>
+<td>Blogs, sitios simples</td>
+<td>APIs, apps, bases de datos</td>
+<td>Producción escalable</td>
+<td>High performance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="proveedores-de-vps-populares"><a aria-hidden="true" tabindex="-1" href="#proveedores-de-vps-populares"><span class="icon icon-link"></span></a>Proveedores de VPS populares</h3>
+<table>
+<thead>
+<tr>
+<th>Proveedor</th>
+<th>Precio desde</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DigitalOcean</strong></td>
+<td>$4/mes</td>
+<td>Simple, good docs, droplets</td>
+</tr>
+<tr>
+<td><strong>Linode (Akamai)</strong></td>
+<td>$5/mos</td>
+<td>Simple, buen soporte</td>
+</tr>
+<tr>
+<td><strong>Vultr</strong></td>
+<td>$2.50/mes</td>
+<td>Muchos locations, high-frequency</td>
+</tr>
+<tr>
+<td><strong>Hetzner</strong></td>
+<td>€3.99/mes</td>
+<td>Excelente precio/rendimiento (EU/US)</td>
+</tr>
+<tr>
+<td><strong>AWS EC2</strong></td>
+<td>$0.01/hr</td>
+<td>Enterprise, todo incluido, complejo</td>
+</tr>
+<tr>
+<td><strong>Google Cloud</strong></td>
+<td>$0.011/hr</td>
+<td>Good ML tools, GCP integration</td>
+</tr>
+<tr>
+<td><strong>Azure</strong></td>
+<td>$0.0084/hr</td>
+<td>Enterprise, Microsoft ecosystem</td>
+</tr>
+<tr>
+<td><strong>Contabo</strong></td>
+<td>€3.99/mes</td>
+<td>Mucha RAM/Disk por precio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="primeros-pasos-configurar-un-vps"><a aria-hidden="true" tabindex="-1" href="#primeros-pasos-configurar-un-vps"><span class="icon icon-link"></span></a>Primeros pasos: configurar un VPS</h2>
+<h3 id="1-elegir-el-plan"><a aria-hidden="true" tabindex="-1" href="#1-elegir-el-plan"><span class="icon icon-link"></span></a>1. Elegir el plan</h3>
+<pre><code>Para empezar (proyectos personales):
+  - CPU: 1-2 vCPUs
+  - RAM: 1-2 GB
+  - Disk: 25-50 GB SSD
+  - OS: Ubuntu 22.04 LTS o Debian 12
+  - Location: más cercano a tus usuarios
+
+Para producción (APIs, apps):
+  - CPU: 2-4 vCPUs
+  - RAM: 4-8 GB
+  - Disk: 80-100 GB NVMe
+  - OS: Ubuntu 22.04 LTS o Debian 12
+  - Location: múltiples regiones si posible
+</code></pre>
+<h3 id="2-conexión-inicial"><a aria-hidden="true" tabindex="-1" href="#2-conexión-inicial"><span class="icon icon-link"></span></a>2. Conexión inicial</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Conectar por SSH (el proveedor te da IP + password)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root@TU_IP_DEL_VPS</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Una vez dentro, crear usuario:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">useradd</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /bin/bash</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">passwd</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Dar privilegios sudo:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">usermod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -aG</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O en Debian:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">usermod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -aG</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> wheel</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Probar con tu nuevo usuario:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario@TU_IP_DEL_VPS</span></span></code></pre></figure>
+<h3 id="3-configuración-básica-del-sistema"><a aria-hidden="true" tabindex="-1" href="#3-configuración-básica-del-sistema"><span class="icon icon-link"></span></a>3. Configuración básica del sistema</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Actualizar sistema</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> upgrade</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar herramientas esenciales</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> wget</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> htop</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tmux</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> unzip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> net-tools</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar hostname</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> hostnamectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set-hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-servidor</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar timezone</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> timedatectl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> set-timezone</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> America/Mexico_City</span></span></code></pre></figure>
+<h2 id="ssh-la-herramienta-esencial"><a aria-hidden="true" tabindex="-1" href="#ssh-la-herramienta-esencial"><span class="icon icon-link"></span></a>SSH: la herramienta esencial</h2>
+<h3 id="ssh-sin-contraseña-claves-ssh"><a aria-hidden="true" tabindex="-1" href="#ssh-sin-contraseña-claves-ssh"><span class="icon icon-link"></span></a>SSH sin contraseña (claves SSH)</h3>
+<p><strong>NUNCA uses contraseña para SSH en producción.</strong> Usa claves SSH.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En tu computadora LOCAL (no en el VPS):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Generar par de claves (si no tienes):</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ed25519</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tu@email.com"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># o con RSA (compatibilidad máxima):</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rsa</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -b</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 4096</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tu@email.com"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar la clave pública al VPS:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-copy-id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/.ssh/id_ed25519.pub</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario@TU_IP_DEL_VPS</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O manualmente:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/.ssh/id_ed25519.pub</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copia la salida y haz:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root@TU_IP_DEL_VPS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "mkdir -p ~/.ssh &#x26;&#x26; echo 'PASTE_KEY_AQUI' >> ~/.ssh/authorized_keys &#x26;&#x26; chmod 700 ~/.ssh &#x26;&#x26; chmod 600 ~/.ssh/authorized_keys"</span></span></code></pre></figure>
+<h3 id="archivos-de-configuración-ssh"><a aria-hidden="true" tabindex="-1" href="#archivos-de-configuración-ssh"><span class="icon icon-link"></span></a>Archivos de configuración SSH</h3>
+<pre><code># ~/.ssh/config (en tu computadora local):
+Host mi-vps
+    HostName TU_IP_DEL_VPS
+    User tu_usuario
+    IdentityFile ~/.ssh/id_ed25519
+    Port 22
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+
+# Ahora puedes hacer:
+ssh mi-vps
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># /etc/ssh/sshd_config (en el VPS):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cambiar puerto (seguridad por oscuridad, ayuda contra bots)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Port</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2222</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Desactivar login con contraseña</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">PasswordAuthentication</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> no</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Desactivar login root</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">PermitRootLogin</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> no</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limitar usuarios con SSH</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">AllowUsers</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Timeout de inactividad</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ClientAliveInterval</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 300</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ClientAliveCountMax</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Número máximo de intentos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">MaxAuthTries</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Usar solo SSH v2</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Protocol</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Restart sshd después de cambiar config:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sshd</span></span></code></pre></figure>
+<h3 id="ssh-con-llave-privada-protegida-por-passphrase"><a aria-hidden="true" tabindex="-1" href="#ssh-con-llave-privada-protegida-por-passphrase"><span class="icon icon-link"></span></a>SSH con llave privada protegida por passphrase</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Al generar la clave:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-keygen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ed25519</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tu@email.com"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Te pedirá un passphrase (recomendado)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para no escribir el passphrase cada vez:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/.ssh/id_ed25519</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Se guarda en memoria (agent) hasta que reinicias</span></span></code></pre></figure>
+<h3 id="ssh-agent"><a aria-hidden="true" tabindex="-1" href="#ssh-agent"><span class="icon icon-link"></span></a>SSH Agent</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Agregar clave al agent</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">eval</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-agent</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">)"</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ~/.ssh/id_ed25519</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver claves cargadas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh-add</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># SSH Agent forwarding (conectar a otro server desde tu VPS)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En ~/.ssh/config:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-vps</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    HostName</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TU_IP_DEL_VPS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    User</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ForwardAgent</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> yes</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Desde el VPS puedes SSH a otro server sin copiar la clave:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ssh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> otro-servidor</span></span></code></pre></figure>
+<h2 id="hardening-de-seguridad-del-vps"><a aria-hidden="true" tabindex="-1" href="#hardening-de-seguridad-del-vps"><span class="icon icon-link"></span></a>Hardening de seguridad del VPS</h2>
+<h3 id="firewall-ufw"><a aria-hidden="true" tabindex="-1" href="#firewall-ufw"><span class="icon icon-link"></span></a>Firewall (UFW)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar UFW (Uncomplicated Firewall)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar políticas por defecto</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> default</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> deny</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> incoming</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> default</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> outgoing</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Permitir SSH (¡IMPORTANTE: hazlo antes de activar!)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 2222/tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # O tu puerto SSH personalizado</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Permitir HTTP/HTTPS (si es un servidor web)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 80/tcp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 443/tcp</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Activar firewall</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> enable</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver estado</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> status</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> verbose</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para añadir reglas adicionales:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> allow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 192.168.1.0/24</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Solo tu red local</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> deny</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080/tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">               # Bloquear un puerto específico</span></span></code></pre></figure>
+<h3 id="fail2ban"><a aria-hidden="true" tabindex="-1" href="#fail2ban"><span class="icon icon-link"></span></a>Fail2Ban</h3>
+<p>Fail2Ban bloquea IPs que hacen muchos intentos fallidos de SSH:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail2ban</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar para SSH</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nano</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/fail2ban/jail.local</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Contenido:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">[sshd]</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">enabled</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">port</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 2222</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">filter</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sshd</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">logpath</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/log/auth.log</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">maxretry</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">bantime</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3600</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # 1 hora de ban</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">findtime</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 600</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # En 10 minutos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">banaction</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ufw</span></span></code></pre></figure>
+<h3 id="ssh-con-llave--fail2ban--ufw--seguridad-básica"><a aria-hidden="true" tabindex="-1" href="#ssh-con-llave--fail2ban--ufw--seguridad-básica"><span class="icon icon-link"></span></a>SSH con llave + fail2ban + UFW = Seguridad básica</h3>
+<pre><code>Capas de seguridad:
+1. UFW: firewall básico (solo puertos necesarios abiertos)
+2. SSH key-only: sin contraseña, solo llaves
+3. Fail2Ban: bloquea IPs con intentos fallidos
+4. Actualizaciones automáticas: security patches
+5. Monitoreo de logs
+</code></pre>
+<h3 id="actualizaciones-automáticas"><a aria-hidden="true" tabindex="-1" href="#actualizaciones-automáticas"><span class="icon icon-link"></span></a>Actualizaciones automáticas</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar unattended-upgrades</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> unattended-upgrades</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dpkg-reconfigure</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -plow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> unattended-upgrades</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver logs</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/log/unattended-upgrades/unattended-upgrades.log</span></span></code></pre></figure>
+<h3 id="chroot-ssh-ssh-chroot--jailing"><a aria-hidden="true" tabindex="-1" href="#chroot-ssh-ssh-chroot--jailing"><span class="icon icon-link"></span></a>Chroot SSH (ssh-chroot / jailing)</h3>
+<p>Para limitar qué puede hacer un usuario con SSH:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear un jailing environment para usuarios SFTP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> useradd</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /bin/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sftp_user</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mkdir</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/sftp_user/uploads</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> chown</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root:root</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/sftp_user</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 755</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/sftp_user</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar SFTP-only en sshd_config:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Match Group sftponly</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   ChrootDirectory /home/%u</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   ForceCommand internal-sftp</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   AllowTcpForwarding no</span></span></code></pre></figure>
+<h3 id="audit-de-seguridad"><a aria-hidden="true" tabindex="-1" href="#audit-de-seguridad"><span class="icon icon-link"></span></a>Audit de seguridad</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver puertos abiertos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ss</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver procesos corriendo</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> aux</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --sort=-%cpu</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> head</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -20</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver usuarios con shell</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -E</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "^(#|$)"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/passwd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> awk</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -F:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '$7 ~ /bash|sh/ {print $1}'</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver servicios activos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> list-units</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --type=service</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --state=running</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver archivos con SUID</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">find</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -perm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -4000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -type</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> f</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> 2></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/dev/null</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver conexiones activas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ss</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tnp</span></span></code></pre></figure>
+<h3 id="ssh-hardening-checklist"><a aria-hidden="true" tabindex="-1" href="#ssh-hardening-checklist"><span class="icon icon-link"></span></a>SSH hardening checklist</h3>
+<pre><code>✅ Cambiar puerto SSH de 22 a algo arbitrario
+✅ Desactivar login root por SSH (PermitRootLogin no)
+✅ Usar solo claves SSH (PasswordAuthentication no)
+✅ Limitar usuarios con SSH (AllowUsers / AllowGroups)
+✅ Configurar MaxAuthTries a 3
+✅ Instalar y configurar fail2ban
+✅ Configurar UFW firewall
+✅ Actualizaciones automáticas activadas
+✅ Monitorear logs con journalctl
+✅ Backup del VPS
+</code></pre>
+<h2 id="dns-para-tu-vps"><a aria-hidden="true" tabindex="-1" href="#dns-para-tu-vps"><span class="icon icon-link"></span></a>DNS para tu VPS</h2>
+<h3 id="configurar-dns-en-cloudflare"><a aria-hidden="true" tabindex="-1" href="#configurar-dns-en-cloudflare"><span class="icon icon-link"></span></a>Configurar DNS en Cloudflare</h3>
+<pre><code># Ejemplo: tu VPS tiene IP 192.0.2.1
+Tipo  Name              Value              Proxy
+───────────────────────────────────────────────────────
+A     @                 192.0.2.1          Proxied (naranja)
+A     www               192.0.2.1          Proxied (naranja)
+AAAA  @                 2001:db8::1        Proxied (si IPv6)
+TXT   @                 v=spf1 include:_spf.google.com ~all
+MX    @                 mail.ejemplo.com   DNS only (10)
+</code></pre>
+<h3 id="configurar-dns-en-tu-proveedor-digitalocean-linode-etc"><a aria-hidden="true" tabindex="-1" href="#configurar-dns-en-tu-proveedor-digitalocean-linode-etc"><span class="icon icon-link"></span></a>Configurar DNS en tu proveedor (DigitalOcean, Linode, etc.)</h3>
+<pre><code># Si NO usas Cloudflare, configuras DNS directamente en tu proveedor:
+A     @                 192.0.2.1          DNS only
+A     www               192.0.2.1          DNS only
+AAAA  @                 2001:db8::1        DNS only
+CNAME   mail            mail.provider.com  DNS only
+TXT     @               v=spf1 include:_spf.google.com ~all
+</code></pre>
+<h3 id="dns-de-tu-vps"><a aria-hidden="true" tabindex="-1" href="#dns-de-tu-vps"><span class="icon icon-link"></span></a>DNS de tu VPS</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar resolver DNS en el VPS:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nano</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 1.1.1.1</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 8.8.8.8</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En systemd-resolved:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nano</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/systemd/resolved.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># [Resolve]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># DNS=1.1.1.1 8.8.8.8</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># FallbackDNS=1.0.0.1 8.8.4.4</span></span></code></pre></figure>
+<h2 id="servidores-web-en-tu-vps"><a aria-hidden="true" tabindex="-1" href="#servidores-web-en-tu-vps"><span class="icon icon-link"></span></a>Servidores web en tu VPS</h2>
+<h3 id="nginx"><a aria-hidden="true" tabindex="-1" href="#nginx"><span class="icon icon-link"></span></a>Nginx</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar Nginx</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar sitio</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nano</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/sites-available/mi-sitio</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Contenido:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    listen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    server_name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.ejemplo.com</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$host$request_uri;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    listen</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 443</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    server_name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.ejemplo.com</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ssl_certificate</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/ejemplo.com/fullchain.pem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ssl_certificate_key</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/letsencrypt/live/ejemplo.com/privkey.pem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ssl_protocols</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TLSv1.2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TLSv1.3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    root</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/www/mi-sitio</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    index</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> index.html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    location</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        try_files</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $uri $uri</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">404</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    location</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /api</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        proxy_pass</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://localhost:3000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        proxy_set_header</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Host</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $host;</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">        proxy_set_header</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> X-Real-IP</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Activar y reiniciar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ln</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/sites-available/mi-sitio</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/sites-enabled/</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Verificar configuración</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> restart</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span></span></code></pre></figure>
+<h3 id="caddy-auto-https"><a aria-hidden="true" tabindex="-1" href="#caddy-auto-https"><span class="icon icon-link"></span></a>Caddy (auto-HTTPS)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="caddyfile" data-theme="github-light github-dark"><code data-language="caddyfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># Caddyfile — Auto-HTTPS</span></span>
+<span data-line=""><span>ejemplo.com {</span></span>
+<span data-line=""><span>    root * /var/www/mi-sitio</span></span>
+<span data-line=""><span>    file_server</span></span>
+<span data-line=""><span>    encode gzip</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>    handle_path /api/* {</span></span>
+<span data-line=""><span>        reverse_proxy localhost:3000</span></span>
+<span data-line=""><span>    }</span></span>
+<span data-line=""><span>}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>www.ejemplo.com {</span></span>
+<span data-line=""><span>    redir https://ejemplo.com{uri}</span></span>
+<span data-line=""><span>}</span></span></code></pre></figure>
+<h3 id="docker-en-tu-vps"><a aria-hidden="true" tabindex="-1" href="#docker-en-tu-vps"><span class="icon icon-link"></span></a>Docker en tu VPS</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar Docker</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -fsSL</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://get.docker.com</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> sh</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Agregar usuario al grupo docker</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> usermod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -aG</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tu_usuario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar Docker Compose</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker-compose-plugin</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">version:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '3.8'</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">services:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  web:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    build:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./frontend</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    ports:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "8080:80"</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  api:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    build:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./backend</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    environment:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DATABASE_URL=postgresql://user:pass@db:5432/mydb</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  db:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    image:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    environment:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTGRES_PASSWORD=secreto</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    volumes:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">      -</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> pgdata:/var/lib/postgresql/data</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  redis:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">    image:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> redis:7</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">volumes:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  pgdata:</span></span></code></pre></figure>
+<h2 id="monitoreo-del-vps"><a aria-hidden="true" tabindex="-1" href="#monitoreo-del-vps"><span class="icon icon-link"></span></a>Monitoreo del VPS</h2>
+<h3 id="herramientas"><a aria-hidden="true" tabindex="-1" href="#herramientas"><span class="icon icon-link"></span></a>Herramientas</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># htop — monitor de procesos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> htop</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">htop</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Prometheus + Node Exporter</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar node_exporter para métricas del sistema</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar Grafana para visualización</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Uptime Kuma — Monitoreo de uptime simple</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --restart=unless-stopped</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> uptime-kuma:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3001:3001</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  louislam/uptime-kuma:1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Prometheus + Grafana para métricas completas</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Node Exporter → Prometheus → Grafana</span></span></code></pre></figure>
+<h3 id="logs"><a aria-hidden="true" tabindex="-1" href="#logs"><span class="icon icon-link"></span></a>Logs</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver logs del sistema</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ssh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver logs de fail2ban</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> fail2ban</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Buscar errores en los logs</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> err</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -b</span></span></code></pre></figure>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Un VPS es un servidor virtual dedicado con control root completo</li>
+<li>Configura SSH con claves (no contraseñas) y cambia el puerto</li>
+<li>Usa UFW como firewall, fail2ban contra brute-force</li>
+<li>Desactiva login root por SSH</li>
+<li>Configura DNS apuntando al VPS</li>
+<li>Usa certificados Let's Encrypt (Certbot) o Caddy para HTTPS</li>
+<li>Monitorea con htop, Prometheus, Uptime Kuma</li>
+<li>Mantiene el sistema actualizado con unattended-upgrades</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Un VPS te da control total. La seguridad empieza con SSH por claves, firewall, fail2ban, y actualizaciones automáticas. Desde ahí puedes instalar cualquier software que necesites.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloudflare</td>
+<td>[[19-cloudflare-completo]] (usar Cloudflare delante del VPS)</td>
+</tr>
+<tr>
+<td>Certificados</td>
+<td>[[08-lets-encrypt]] (Let's Encrypt en tu VPS)</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>[[14-servidores-procesos]] (servidores como Nginx)</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>[[01-que-es-internet]] (contenedores en el VPS)</td>
+</tr>
+<tr>
+<td>Puertos</td>
+<td>[[12-puertos]] (qué puertos abrir en tu VPS)</td>
+</tr>
+<tr>
+<td>Firewalls</td>
+<td>[[17-firewalls-proxies-loadbalancers]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

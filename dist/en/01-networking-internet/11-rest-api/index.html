@@ -1,0 +1,685 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences</h1> <div class="article-body"><h1 id="rest-principles-resources-http-verbs-hateoas-graphqlrpc-differences"><a aria-hidden="true" tabindex="-1" href="#rest-principles-resources-http-verbs-hateoas-graphqlrpc-differences"><span class="icon icon-link"></span></a>REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences</h1>
+<blockquote>
+<p>[!tip] REST in a nutshell
+REST (Representational State Transfer) is an architectural style for designing networked applications. It relies on standard HTTP methods, stateless communication, and resource-based URLs. This article covers REST principles, best practices, and how it compares to GraphQL and RPC.</p>
+</blockquote>
+<h2 id="what-is-rest"><a aria-hidden="true" tabindex="-1" href="#what-is-rest"><span class="icon icon-link"></span></a>What is REST?</h2>
+<p>REST is an <strong>architectural style</strong> defined by Roy Fielding in his 2000 PhD dissertation. It is not a protocol, not a standard — it is a set of constraints that, when followed, produce simple, scalable, and maintainable APIs.</p>
+<h3 id="roy-fieldings-rest-constraints"><a aria-hidden="true" tabindex="-1" href="#roy-fieldings-rest-constraints"><span class="icon icon-link"></span></a>Roy Fielding's REST constraints</h3>
+<p>For an API to be "RESTful", it must satisfy these constraints:</p>
+<ol>
+<li><strong>Client-server</strong>: Separation of concerns (client handles UI, server handles data)</li>
+<li><strong>Stateless</strong>: Each request contains all information needed; server stores no client state</li>
+<li><strong>Cacheable</strong>: Responses must define themselves as cacheable or not</li>
+<li><strong>Uniform interface</strong>: Resources identified, manipulated via representations, self-descriptive messages, HATEOAS</li>
+<li><strong>Layered system</strong>: Client cannot tell if it is connected directly to the origin server or through intermediaries</li>
+<li><strong>Code on demand</strong> (optional): Servers can extend client functionality (e.g., JavaScript)</li>
+</ol>
+<blockquote>
+<p>[!note] "True REST" vs "RESTful APIs"
+Most APIs called "REST" only satisfy constraints 1, 2, 3, and 4 (without HATEOAS). True REST (with HATEOAS) is rare. Most developers use "REST" to mean "HTTP API with resources and standard HTTP methods".</p>
+</blockquote>
+<h2 id="rest-resources"><a aria-hidden="true" tabindex="-1" href="#rest-resources"><span class="icon icon-link"></span></a>REST Resources</h2>
+<p>In REST, everything is a <strong>resource</strong> — a piece of data that can be identified and manipulated.</p>
+<h3 id="resource-identification"><a aria-hidden="true" tabindex="-1" href="#resource-identification"><span class="icon icon-link"></span></a>Resource identification</h3>
+<p>Resources are identified by URIs:</p>
+<pre><code>GET /users/123          → A specific user resource
+GET /users              → Collection of user resources
+GET /users/123/orders   → Orders belonging to a specific user
+GET /products/456/images/original.jpg  → A specific image resource
+</code></pre>
+<h3 id="representations"><a aria-hidden="true" tabindex="-1" href="#representations"><span class="icon icon-link"></span></a>Representations</h3>
+<p>Resources are represented in different formats:</p>
+<pre><code>Same resource, different representations:
+GET /users/123
+Accept: application/json
+→ { "id": 123, "name": "John", "email": "john@example.com" }
+
+GET /users/123
+Accept: application/xml
+→ &#x3C;user>&#x3C;id>123&#x3C;/id>&#x3C;name>John&#x3C;/name>&#x3C;email>john@example.com&#x3C;/email>&#x3C;/user>
+
+GET /users/123
+Accept: text/html
+→ &#x3C;html>&#x3C;body>&#x3C;h1>John&#x3C;/h1>&#x3C;p>john@example.com&#x3C;/p>&#x3C;/body>&#x3C;/html>
+</code></pre>
+<h2 id="http-verbs-in-rest"><a aria-hidden="true" tabindex="-1" href="#http-verbs-in-rest"><span class="icon icon-link"></span></a>HTTP Verbs in REST</h2>
+<p>REST maps CRUD operations to HTTP methods:</p>
+<table>
+<thead>
+<tr>
+<th>CRUD</th>
+<th>HTTP Method</th>
+<th>RESTful endpoint</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Create</strong></td>
+<td>POST</td>
+<td><code>/users</code></td>
+<td>Create a new user</td>
+</tr>
+<tr>
+<td><strong>Read</strong></td>
+<td>GET</td>
+<td><code>/users</code></td>
+<td>List all users</td>
+</tr>
+<tr>
+<td><strong>Read</strong></td>
+<td>GET</td>
+<td><code>/users/123</code></td>
+<td>Get user by ID</td>
+</tr>
+<tr>
+<td><strong>Update</strong></td>
+<td>PUT</td>
+<td><code>/users/123</code></td>
+<td>Replace user entirely</td>
+</tr>
+<tr>
+<td><strong>Update</strong></td>
+<td>PATCH</td>
+<td><code>/users/123</code></td>
+<td>Partially update user</td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td>DELETE</td>
+<td><code>/users/123</code></td>
+<td>Delete user</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http-method-properties"><a aria-hidden="true" tabindex="-1" href="#http-method-properties"><span class="icon icon-link"></span></a>HTTP method properties</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Safe?</th>
+<th>Idempotent?</th>
+<th>Cacheable?</th>
+<th>Body allowed?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GET</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No (but not forbidden)</td>
+</tr>
+<tr>
+<td><strong>HEAD</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>POST</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Rarely</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>PUT</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>PATCH</strong></td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>DELETE</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="safe-and-idempotent-explained"><a aria-hidden="true" tabindex="-1" href="#safe-and-idempotent-explained"><span class="icon icon-link"></span></a>Safe and Idempotent explained</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Safe</strong></td>
+<td>Does not modify server state</td>
+<td>GET, HEAD, OPTIONS</td>
+</tr>
+<tr>
+<td><strong>Idempotent</strong></td>
+<td>Multiple identical requests have the same effect as one</td>
+<td>GET, PUT, DELETE, HEAD</td>
+</tr>
+</tbody>
+</table>
+<pre><code># Idempotent: calling multiple times has the same effect as calling once
+PUT /users/123 { "name": "John" }
+PUT /users/123 { "name": "John" }   # Same result: user named "John"
+
+# NOT idempotent: calling multiple times has different effects
+POST /users { "name": "John" }       # Creates John #1
+POST /users { "name": "John" }       # Creates John #2
+POST /users { "name": "John" }       # Creates John #3
+</code></pre>
+<h3 id="restful-url-design"><a aria-hidden="true" tabindex="-1" href="#restful-url-design"><span class="icon icon-link"></span></a>RESTful URL design</h3>
+<pre><code># GOOD: Noun-based, hierarchical
+GET    /users              → List users
+GET    /users/123          → Get user 123
+POST   /users              → Create user
+PUT    /users/123          → Update user 123
+DELETE /users/123          → Delete user 123
+
+GET    /users/123/orders   → Get orders for user 123
+POST   /users/123/orders   → Create order for user 123
+
+# BAD: Verb-based URLs (not RESTful)
+GET    /getUsers           → Should be GET /users
+GET    /getUser?id=123     → Should be GET /users/123
+POST   /createUser         → Should be POST /users
+POST   /deleteUser?id=123  → Should be DELETE /users/123
+</code></pre>
+<h2 id="rest-api-example"><a aria-hidden="true" tabindex="-1" href="#rest-api-example"><span class="icon icon-link"></span></a>REST API example</h2>
+<h3 id="complete-user-management-api"><a aria-hidden="true" tabindex="-1" href="#complete-user-management-api"><span class="icon icon-link"></span></a>Complete user management API</h3>
+<pre><code># List all users
+GET /api/v1/users
+Authorization: Bearer token
+Accept: application/json
+
+→ 200 OK
+{
+  "data": [
+    { "id": 1, "name": "Alice", "email": "alice@example.com" },
+    { "id": 2, "name": "Bob", "email": "bob@example.com" }
+  ],
+  "meta": { "total": 42, "page": 1, "per_page": 20 }
+}
+
+# Get a single user
+GET /api/v1/users/123
+Authorization: Bearer token
+
+→ 200 OK
+{
+  "data": {
+    "id": 123,
+    "name": "John Doe",
+    "email": "john@example.com",
+    "created_at": "2026-01-15T10:30:00Z",
+    "links": {
+      "self": "/api/v1/users/123",
+      "orders": "/api/v1/users/123/orders"
+    }
+  }
+}
+
+# Create a new user
+POST /api/v1/users
+Authorization: Bearer token
+Content-Type: application/json
+
+{ "name": "John Doe", "email": "john@example.com" }
+
+→ 201 Created
+{
+  "data": {
+    "id": 124,
+    "name": "John Doe",
+    "email": "john@example.com"
+  }
+}
+
+# Update a user (replace)
+PUT /api/v1/users/123
+Authorization: Bearer token
+Content-Type: application/json
+
+{ "name": "John Smith", "email": "john.smith@example.com" }
+
+→ 200 OK
+{ "data": { "id": 123, "name": "John Smith", "email": "john.smith@example.com" } }
+
+# Partially update a user
+PATCH /api/v1/users/123
+Authorization: Bearer token
+Content-Type: application/json
+
+{ "name": "John Smith Jr." }
+
+→ 200 OK
+{ "data": { "id": 123, "name": "John Smith Jr.", "email": "john.smith@example.com" } }
+
+# Delete a user
+DELETE /api/v1/users/123
+Authorization: Bearer token
+
+→ 204 No Content
+
+# Validation error
+POST /api/v1/users
+Authorization: Bearer token
+Content-Type: application/json
+
+{ "name": "", "email": "not-an-email" }
+
+→ 422 Unprocessable Entity
+{
+  "errors": {
+    "name": "Name cannot be empty",
+    "email": "Invalid email format"
+  }
+}
+</code></pre>
+<h2 id="rest-best-practices"><a aria-hidden="true" tabindex="-1" href="#rest-best-practices"><span class="icon icon-link"></span></a>REST Best Practices</h2>
+<h3 id="1-versioning"><a aria-hidden="true" tabindex="-1" href="#1-versioning"><span class="icon icon-link"></span></a>1. Versioning</h3>
+<pre><code># URI versioning (most common)
+/api/v1/users
+/api/v2/users
+
+# Header versioning
+Accept: application/vnd.api.v1+json
+
+# Query parameter versioning
+/api/users?version=1
+
+# URI versioning is the most common and easiest to debug
+</code></pre>
+<h3 id="2-pagination"><a aria-hidden="true" tabindex="-1" href="#2-pagination"><span class="icon icon-link"></span></a>2. Pagination</h3>
+<pre><code>GET /api/v1/users?page=2&#x26;limit=20
+
+→ 200 OK
+{
+  "data": [ ... 20 users ... ],
+  "meta": {
+    "total": 420,
+    "page": 2,
+    "per_page": 20,
+    "last_page": 21
+  },
+  "links": {
+    "first": "/api/v1/users?page=1",
+    "last": "/api/v1/users?page=21",
+    "prev": "/api/v1/users?page=1",
+    "next": "/api/v1/users?page=3"
+  }
+}
+</code></pre>
+<h3 id="3-filtering-and-sorting"><a aria-hidden="true" tabindex="-1" href="#3-filtering-and-sorting"><span class="icon icon-link"></span></a>3. Filtering and sorting</h3>
+<pre><code># Filtering
+GET /api/v1/users?role=admin&#x26;status=active
+GET /api/v1/products?category=electronics&#x26;min_price=10&#x26;max_price=100
+
+# Sorting
+GET /api/v1/users?sort=created_at:desc
+GET /api/v1/products?sort=name:asc
+
+# Field selection
+GET /api/v1/users/123?fields=id,name,email
+→ { "id": 123, "name": "John", "email": "john@example.com" }
+</code></pre>
+<h3 id="4-hateoas-hypermedia-as-the-engine-of-application-state"><a aria-hidden="true" tabindex="-1" href="#4-hateoas-hypermedia-as-the-engine-of-application-state"><span class="icon icon-link"></span></a>4. HATEOAS (Hypermedia as the Engine of Application State)</h3>
+<p>HATEOAS means responses include links to related resources, allowing clients to navigate the API without hardcoding URLs:</p>
+<pre><code>GET /api/v1/users/123
+
+→ 200 OK
+{
+  "id": 123,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "_links": {
+    "self": { "href": "/api/v1/users/123" },
+    "orders": { "href": "/api/v1/users/123/orders" },
+    "update": { "href": "/api/v1/users/123", "method": "PUT" },
+    "delete": { "href": "/api/v1/users/123", "method": "DELETE" },
+    "owner": { "href": "/api/v1/organizations/456" }
+  }
+}
+</code></pre>
+<blockquote>
+<p>[!note] HATEOAS in practice
+While HATEOAS is a core REST constraint, most real-world APIs skip it. The trade-off: HATEOAS makes APIs more discoverable but adds complexity. Popular formats that support HATEOAS include HAL, JSON:API, and Siren.</p>
+</blockquote>
+<h3 id="5-error-handling"><a aria-hidden="true" tabindex="-1" href="#5-error-handling"><span class="icon icon-link"></span></a>5. Error handling</h3>
+<pre><code>{
+  "error": {
+    "code": "VALIDATION_ERROR",
+    "message": "The request contains invalid data",
+    "details": [
+      { "field": "email", "message": "Invalid email format" }
+    ],
+    "status": 422,
+    "trace_id": "req-abc-123"
+  }
+}
+</code></pre>
+<h2 id="rest-vs-graphql"><a aria-hidden="true" tabindex="-1" href="#rest-vs-graphql"><span class="icon icon-link"></span></a>REST vs GraphQL</h2>
+<h3 id="rest"><a aria-hidden="true" tabindex="-1" href="#rest"><span class="icon icon-link"></span></a>REST</h3>
+<pre><code># Multiple endpoints for different data needs
+GET /users/123          → Returns user + related data
+GET /users/123/orders   → Returns only orders
+GET /users/123/posts    → Returns only posts
+
+# Over-fetching: getting data you don't need
+GET /users/123
+→ { "id": 1, "name": "John", "email": "j@e.com", "password_hash": "...", "ssn": "...", ... }
+
+# Under-fetching: needing multiple requests
+GET /users/123        → Get user
+GET /users/123/orders → Get orders
+GET /users/123/posts  → Get posts
+</code></pre>
+<h3 id="graphql"><a aria-hidden="true" tabindex="-1" href="#graphql"><span class="icon icon-link"></span></a>GraphQL</h3>
+<pre><code># Single endpoint, flexible queries
+POST /graphql
+{
+  "query": "{ user(id: 123) { name email orders { id total } } }"
+}
+
+# Exactly the data you ask for, no more, no less
+→ {
+  "data": {
+    "user": {
+      "name": "John",
+      "email": "john@example.com",
+      "orders": [
+        { "id": 1, "total": 99.99 },
+        { "id": 2, "total": 49.50 }
+      ]
+    }
+  }
+}
+</code></pre>
+<h3 id="rest-vs-graphql-comparison"><a aria-hidden="true" tabindex="-1" href="#rest-vs-graphql-comparison"><span class="icon icon-link"></span></a>REST vs GraphQL comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>REST</th>
+<th>GraphQL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Endpoints</strong></td>
+<td>Multiple (one per resource)</td>
+<td>Single (<code>/graphql</code>)</td>
+</tr>
+<tr>
+<td><strong>Data shape</strong></td>
+<td>Fixed by server</td>
+<td>Flexible (client requests what it needs)</td>
+</tr>
+<tr>
+<td><strong>Over-fetching</strong></td>
+<td>Possible</td>
+<td>Impossible</td>
+</tr>
+<tr>
+<td><strong>Under-fetching</strong></td>
+<td>Requires multiple requests</td>
+<td>Single query can include nested data</td>
+</tr>
+<tr>
+<td><strong>Caching</strong></td>
+<td>HTTP caching (easy)</td>
+<td>Requires application-level caching</td>
+</tr>
+<tr>
+<td><strong>Learning curve</strong></td>
+<td>Simple (HTTP methods)</td>
+<td>Steep (schema, queries, mutations)</td>
+</tr>
+<tr>
+<td><strong>Tooling</strong></td>
+<td>Built into HTTP</td>
+<td>Custom (GraphiQL, Apollo, etc.)</td>
+</tr>
+<tr>
+<td><strong>Versioning</strong></td>
+<td>Required (API changes)</td>
+<td>Schema evolution (add fields, deprecate)</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Low</td>
+<td>Medium to high</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Simple APIs, CRUD apps</td>
+<td>Complex data requirements, mobile apps</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rest-vs-rpc-json-rpc--xml-rpc"><a aria-hidden="true" tabindex="-1" href="#rest-vs-rpc-json-rpc--xml-rpc"><span class="icon icon-link"></span></a>REST vs RPC (JSON-RPC / XML-RPC)</h2>
+<h3 id="rpc-style-api"><a aria-hidden="true" tabindex="-1" href="#rpc-style-api"><span class="icon icon-link"></span></a>RPC-style API</h3>
+<pre><code># RPC: Function calls over HTTP
+POST /rpc
+{
+  "method": "getUser",
+  "params": { "id": 123 }
+}
+
+→ {
+  "result": { "id": 123, "name": "John", "email": "john@example.com" }
+}
+
+POST /rpc
+{
+  "method": "createUser",
+  "params": { "name": "John", "email": "john@example.com" }
+}
+
+→ {
+  "result": { "id": 124, "name": "John", "email": "john@example.com" }
+}
+</code></pre>
+<h3 id="rest-vs-rpc-comparison"><a aria-hidden="true" tabindex="-1" href="#rest-vs-rpc-comparison"><span class="icon icon-link"></span></a>REST vs RPC comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>REST</th>
+<th>RPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Resources (data)</td>
+<td>Actions (functions)</td>
+</tr>
+<tr>
+<td><strong>URLs</strong></td>
+<td>Nouns (<code>/users/123</code>)</td>
+<td>Verbs (<code>/getUser</code>)</td>
+</tr>
+<tr>
+<td><strong>Methods</strong></td>
+<td>HTTP methods (GET, POST, PUT, DELETE)</td>
+<td>Usually POST for everything</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>Stateless</td>
+<td>Can be stateful</td>
+</tr>
+<tr>
+<td><strong>Discoverability</strong></td>
+<td>URLs are self-documenting</td>
+<td>Method names must be documented</td>
+</tr>
+<tr>
+<td><strong>Caching</strong></td>
+<td>HTTP cache-friendly</td>
+<td>Not cache-friendly (always POST)</td>
+</tr>
+<tr>
+<td><strong>Flexibility</strong></td>
+<td>Standardized (HTTP methods)</td>
+<td>Custom (each service defines its own)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grpc"><a aria-hidden="true" tabindex="-1" href="#grpc"><span class="icon icon-link"></span></a>gRPC</h2>
+<p>gRPC is Google's RPC framework using HTTP/2 and Protocol Buffers:</p>
+<pre><code>// proto file
+service UserService {
+  rpc GetUser (GetUserRequest) returns (User);
+  rpc ListUsers (ListUsersRequest) returns (UserList);
+}
+
+message GetUserRequest {
+  string id = 1;
+}
+
+message User {
+  string id = 1;
+  string name = 2;
+  string email = 3;
+}
+</code></pre>
+<h3 id="rest-vs-grpc-comparison"><a aria-hidden="true" tabindex="-1" href="#rest-vs-grpc-comparison"><span class="icon icon-link"></span></a>REST vs gRPC comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>REST</th>
+<th>gRPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data format</strong></td>
+<td>JSON (text)</td>
+<td>Protocol Buffers (binary)</td>
+</tr>
+<tr>
+<td><strong>Transport</strong></td>
+<td>HTTP/1.1, HTTP/2, HTTP/3</td>
+<td>HTTP/2</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Good</td>
+<td>Better (binary, compressed)</td>
+</tr>
+<tr>
+<td><strong>Human readable</strong></td>
+<td>Yes (JSON)</td>
+<td>No (binary protobuf)</td>
+</tr>
+<tr>
+<td><strong>Language support</strong></td>
+<td>Any (HTTP)</td>
+<td>Generated from proto files</td>
+</tr>
+<tr>
+<td><strong>Streaming</strong></td>
+<td>Limited (WebSocket)</td>
+<td>Built-in (server, client, bidirectional)</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Public APIs, web</td>
+<td>Internal microservices, high-performance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rest-api-design-checklist"><a aria-hidden="true" tabindex="-1" href="#rest-api-design-checklist"><span class="icon icon-link"></span></a>REST API design checklist</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>nouns</strong> for resource names (<code>/users</code>, not <code>/getUsers</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>HTTP methods</strong> correctly (GET for reads, POST for create, PUT for replace, PATCH for update, DELETE for remove)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>HTTP status codes</strong> appropriately (200, 201, 204, 400, 401, 403, 404, 422, 500)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>plural nouns</strong> for collections (<code>/users</code>, not <code>/user</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>nested resources</strong> for relationships (<code>/users/123/orders</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Support <strong>pagination</strong>, <strong>filtering</strong>, and <strong>sorting</strong> for collections</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>consistent error format</strong> across all endpoints</li>
+<li class="task-list-item"><input type="checkbox" disabled> Version your API (<code>/api/v1/...</code>)</li>
+<li class="task-list-item"><input type="checkbox" disabled> Use <strong>HTTPS</strong> for all endpoints</li>
+<li class="task-list-item"><input type="checkbox" disabled> Document your API (OpenAPI/Swagger specification)</li>
+</ul>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP methods and semantics</td>
+<td>[[05-http-deep-dive]]</td>
+</tr>
+<tr>
+<td>Status codes</td>
+<td>[[06-status-codes]]</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>[[10-authentication-api-keys-tokens]]</td>
+</tr>
+<tr>
+<td>GraphQL</td>
+<td>[[11-rest-api]] (this article)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>REST is an <strong>architectural style</strong> with 6 constraints (client-server, stateless, cacheable, uniform interface, layered system, HATEOAS).</li>
+<li>Resources are identified by <strong>URIs</strong> and manipulated using <strong>HTTP methods</strong>.</li>
+<li><strong>POST</strong> (create), <strong>GET</strong> (read), <strong>PUT</strong> (replace), <strong>PATCH</strong> (update), <strong>DELETE</strong> (remove) map to CRUD operations.</li>
+<li><strong>Idempotent</strong> methods (GET, PUT, DELETE) can be retried safely.</li>
+<li><strong>HATEOAS</strong> adds hypermedia links to responses, enabling client navigation.</li>
+<li><strong>REST vs GraphQL</strong>: REST has fixed endpoints and data shapes; GraphQL has a single endpoint and flexible queries.</li>
+<li><strong>REST vs RPC</strong>: REST is resource-oriented; RPC is action-oriented.</li>
+<li>gRPC uses Protocol Buffers over HTTP/2 for high-performance internal communication.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+REST is about modeling your API around <strong>resources</strong> using standard <strong>HTTP methods</strong>. It is simple, scalable, and works with the existing HTTP infrastructure. Whether to use REST, GraphQL, or gRPC depends on your data complexity, performance needs, and client requirements.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

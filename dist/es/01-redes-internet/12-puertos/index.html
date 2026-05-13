@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Puertos, localhost y loopback</h1> <div class="article-body"><h1 id="puertos-localhost-y-loopback"><a aria-hidden="true" tabindex="-1" href="#puertos-localhost-y-loopback"><span class="icon icon-link"></span></a>Puertos, localhost y loopback</h1>
+<blockquote>
+<p>[!tip] Puertos en una frase
+Un <strong>puerto</strong> es como el número de apartamento en un edificio: la IP es el edificio (servidor), el puerto es la puerta específica (servicio) por donde entra la comunicación.</p>
+</blockquote>
+<h2 id="qué-es-un-puerto"><a aria-hidden="true" tabindex="-1" href="#qué-es-un-puerto"><span class="icon icon-link"></span></a>¿Qué es un puerto?</h2>
+<p>Un puerto es un <strong>número de 16 bits</strong> (0-65535) que identifica un servicio específico en un servidor. Piensa en un servidor como un edificio con múltiples puertas:</p>
+<pre><code>Servidor: 192.168.1.100 (la dirección del edificio)
+
+Puerto 22  → SSH (acceso remoto)
+Puerto 80  → HTTP (servidor web)
+Puerto 443 → HTTPS (servidor web seguro)
+Puerto 3000 → Tu app de desarrollo
+Puerto 5432 → PostgreSQL (base de datos)
+Puerto 6379 → Redis (caché)
+Puerto 8080 → Proxy inverso alternativo
+</code></pre>
+<h3 id="la-analogía-del-teléfono"><a aria-hidden="true" tabindex="-1" href="#la-analogía-del-teléfono"><span class="icon icon-link"></span></a>La analogía del teléfono</h3>
+<pre><code>IP = Número de teléfono del servidor
+Puerto = Extensión dentro del servidor
+
+Llamar al 666-555-1234 → Conectas al servidor
+Extensión 22 → SSH
+Extensión 80 → Web
+Extensión 443 → Web segura
+</code></pre>
+<h3 id="rangos-de-puertos"><a aria-hidden="true" tabindex="-1" href="#rangos-de-puertos"><span class="icon icon-link"></span></a>Rangos de puertos</h3>
+<table>
+<thead>
+<tr>
+<th>Rango</th>
+<th>Nombre</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0-1023</strong></td>
+<td>Well-known / System ports</td>
+<td>Servicios estándar: SSH(22), HTTP(80), HTTPS(443), DNS(53), SMTP(25)</td>
+</tr>
+<tr>
+<td><strong>1024-49151</strong></td>
+<td>Registered ports</td>
+<td>Servicios registrados: PostgreSQL(5432), MySQL(3306), MongoDB(27017)</td>
+</tr>
+<tr>
+<td><strong>49152-65535</strong></td>
+<td>Dynamic / Ephemeral</td>
+<td>Puertos temporales del cliente (conexiones salientes)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] ¿Por qué 65535?
+Porque un puerto es 16 bits: 2^16 = 65536 valores posibles (0-65535).</p>
+</blockquote>
+<h2 id="localhost--127001--1"><a aria-hidden="true" tabindex="-1" href="#localhost--127001--1"><span class="icon icon-link"></span></a>localhost / 127.0.0.1 / ::1</h2>
+<p><strong>localhost</strong> es un nombre que siempre apunta a <strong>tu propia máquina</strong>.</p>
+<h3 id="direcciones-equivalentes"><a aria-hidden="true" tabindex="-1" href="#direcciones-equivalentes"><span class="icon icon-link"></span></a>Direcciones equivalentes</h3>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>IPv4</th>
+<th>IPv6</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>localhost</code></td>
+<td><code>127.0.0.1</code></td>
+<td><code>::1</code></td>
+<td>Tu máquina local</td>
+</tr>
+<tr>
+<td><code>0.0.0.0</code></td>
+<td><code>::</code></td>
+<td><strong>Ninguna</strong></td>
+<td>"Todas las interfaces"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-qué-0000-no-es-tu-máquina"><a aria-hidden="true" tabindex="-1" href="#por-qué-0000-no-es-tu-máquina"><span class="icon icon-link"></span></a>¿Por qué 0.0.0.0 no es "tu máquina"?</h3>
+<pre><code># Bind a 127.0.0.1 (solo acceso local)
+node server.js --host 127.0.0.1 --port 3000
+# Accesible desde: localhost:3000
+# No accesible desde: otra máquina en la red
+
+# Bind a 0.0.0.0 (acceso desde cualquier interfaz)
+node server.js --host 0.0.0.0 --port 3000
+# Accesible desde: localhost:3000, 192.168.1.5:3000, cualquier IP del servidor
+# No accesible desde: Internet (a menos que el firewall lo permita)
+</code></pre>
+<blockquote>
+<p>[!warning] 0.0.0.0 NO es localhost</p>
+<ul>
+<li><code>0.0.0.0</code> significa "escucha en TODAS las interfaces de red"</li>
+<li><code>127.0.0.1</code> significa "solo escucha en la interfaz loopback"</li>
+<li>Cuando ves <code>http://localhost:3000</code> en docs de desarrollo, normalmente el servidor necesita binding a <code>0.0.0.0</code> para que funcione dentro de Docker</li>
+</ul>
+</blockquote>
+<h2 id="el-loopback-la-interfaz-de-red-interna"><a aria-hidden="true" tabindex="-1" href="#el-loopback-la-interfaz-de-red-interna"><span class="icon icon-link"></span></a>El loopback (la interfaz de red interna)</h2>
+<p>El <strong>loopback</strong> es una interfaz de red virtual que tu sistema operativo crea. Los paquetes que envías a <code>127.0.0.1</code> nunca salen de tu máquina:</p>
+<pre><code>Tu proceso                  Loopback interface
+   │                              │
+   │─── Paquete → 127.0.0.1 ────→ │
+   │                              │ (nunca toca la tarjeta de red)
+   │                              │ (nunca toca el cable/WiFi)
+   │←── Paquete ←─────────────────│ (el SO lo maneja internamente)
+</code></pre>
+<blockquote>
+<p>[!tip] El loopback es increíblemente rápido
+Porque los paquetes no salen de la máquina, el loopback es orders de magnitud más rápido que cualquier interfaz de red real. Latencia: ~0.01ms vs ~1ms para una interfaz local.</p>
+</blockquote>
+<h2 id="puertos-en-docker"><a aria-hidden="true" tabindex="-1" href="#puertos-en-docker"><span class="icon icon-link"></span></a>Puertos en Docker</h2>
+<h3 id="el-problema-contenedores-tienen-su-propia-red"><a aria-hidden="true" tabindex="-1" href="#el-problema-contenedores-tienen-su-propia-red"><span class="icon icon-link"></span></a>El problema: contenedores tienen su propia red</h3>
+<pre><code># Dentro del contenedor:
+# Tu app corre en localhost:3000
+# Pero localhost dentro del contenedor NO es localhost de tu máquina
+
+# Desde tu máquina (host):
+curl http://localhost:3000  → Connection refused! (porque el contenedor NO está en tu localhost)
+
+# Solución: puertos expuestos
+docker run -p 3000:3000 mi-app
+# ↑     ↑    ↑     ↑
+# host  │    container
+# puerto │    puerto
+</code></pre>
+<h3 id="cómo-funciona--p-hostcontainer"><a aria-hidden="true" tabindex="-1" href="#cómo-funciona--p-hostcontainer"><span class="icon icon-link"></span></a>Cómo funciona <code>-p host:container</code></h3>
+<pre><code>Tu máquina (host)                    Contenedor
+                    │
+                    │  Docker bridge network
+                    │
+ 3000 ←─────────────│─────────────→ 3000
+ (localhost:3000)   │    (app:3000)
+
+# El puerto 3000 del host redirige al puerto 3000 del contenedor
+</code></pre>
+<h3 id="ejemplos-de-mapeo-de-puertos"><a aria-hidden="true" tabindex="-1" href="#ejemplos-de-mapeo-de-puertos"><span class="icon icon-link"></span></a>Ejemplos de mapeo de puertos</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto igual en host y container</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Acceso: http://localhost:3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto diferente</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Acceso: http://localhost:8080  (redirige al 3000 dentro del contenedor)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Múltiples puertos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 5432:5432</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Acceso: localhost:3000 y localhost:5432</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo accesible desde localhost</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># No accesible desde otra máquina en la red</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Accesible desde cualquier IP (¡cuidado en producción!)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 0.0.0.0:3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span></code></pre></figure>
+<h3 id="puertos-en-docker-compose"><a aria-hidden="true" tabindex="-1" href="#puertos-en-docker-compose"><span class="icon icon-link"></span></a>Puertos en Docker Compose</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  web</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"3000:3000"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"127.0.0.1:8080:8080"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Solo accesible desde localhost</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"5432:5432"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Accesible desde localhost y desde otros contenedores</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Los puertos internos NUNCA se exponen al host (solo entre contenedores)</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  redis</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">redis:7</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: []  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sin puertos expuestos — solo accessible desde otros contenedores</span></span></code></pre></figure>
+<blockquote>
+<p>[!important] Puertos internos vs expuestos</p>
+<ul>
+<li><strong>Sin puertos expuestos</strong>: Los contenedores se comunican por la red interna de Docker. No se pueden acceder desde tu máquina host.</li>
+<li><strong>Con puertos expuestos</strong>: Se pueden acceder desde tu máquina con <code>localhost:puerto</code>.</li>
+</ul>
+<p><strong>Regla práctica</strong>: Expone solo los puertos del frontend al host. El backend, DB, Redis, etc., solo necesitan ser accesibles entre contenedores.</p>
+</blockquote>
+<h3 id="docker-networking-concepto"><a aria-hidden="true" tabindex="-1" href="#docker-networking-concepto"><span class="icon icon-link"></span></a>Docker networking (concepto)</h3>
+<pre><code># En docker-compose, los servicios se comunican por nombre
+services:
+  web:
+    depends_on: [api]
+    environment:
+      API_URL: http://api:3000  # ← usa el nombre del servicio, no localhost
+  api:
+    ports:
+      - "3000:3000"
+</code></pre>
+<h2 id="ver-puertos-abiertos"><a aria-hidden="true" tabindex="-1" href="#ver-puertos-abiertos"><span class="icon icon-link"></span></a>Ver puertos abiertos</h2>
+<h3 id="linux"><a aria-hidden="true" tabindex="-1" href="#linux"><span class="icon icon-link"></span></a>Linux</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver puertos que están escuchando (sudo necesario)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ss</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Estado  Recv-Q Send-Q Local Address:Port  Peer Address:Port Process</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN  0      128    0.0.0.0:22         0.0.0.0:*      users:(("sshd",pid=1234,fd=3))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN  0      128    0.0.0.0:80         0.0.0.0:*      users:(("nginx",pid=5678,fd=6))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN  0      128    0.0.0.0:3000       0.0.0.0:*      users:(("node",pid=9012,fd=15))</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LISTEN  0      128    127.0.0.1:5432     0.0.0.0:*      users:(("postgres",pid=3456,fd=5))</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver puertos en uso por un proceso específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> lsof</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -P</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3000</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># node    9012 emilio   15u  IPv4  123456      0t0  TCP *:3000 (LISTEN)</span></span></code></pre></figure>
+<h3 id="qué-significa-00003000-vs-1270013000"><a aria-hidden="true" tabindex="-1" href="#qué-significa-00003000-vs-1270013000"><span class="icon icon-link"></span></a>¿Qué significa <code>0.0.0.0:3000</code> vs <code>127.0.0.1:3000</code>?</h3>
+<table>
+<thead>
+<tr>
+<th>Bind address</th>
+<th>Accesible desde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0.0.0.0:3000</code></td>
+<td>localhost + cualquier IP de la máquina</td>
+</tr>
+<tr>
+<td><code>127.0.0.1:3000</code></td>
+<td>Solo localhost</td>
+</tr>
+<tr>
+<td><code>192.168.1.5:3000</code></td>
+<td>Solo desde esa IP específica</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Por qué ver <code>0.0.0.0</code> vs <code>127.0.0.1</code> importa
+Si tu app node.js hace <code>app.listen(3000)</code> por defecto, escucha en <code>0.0.0.0</code>. Si hace <code>app.listen(3000, '127.0.0.1')</code>, solo escucha en localhost.</p>
+<p>En Docker, necesitas que escuche en <code>0.0.0.0</code> (o <code>::</code>) para que el puerto mapeado funcione.</p>
+</blockquote>
+<h2 id="puertos-comunes-que-necesitas-conocer"><a aria-hidden="true" tabindex="-1" href="#puertos-comunes-que-necesitas-conocer"><span class="icon icon-link"></span></a>Puertos comunes que necesitas conocer</h2>
+<table>
+<thead>
+<tr>
+<th>Puerto</th>
+<th>Servicio</th>
+<th>Protocolo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>UDP/TCP</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>3000</td>
+<td>Node.js (dev)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>MongoDB</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>Proxy/Alt HTTP</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>8443</td>
+<td>Alt HTTPS</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>9200</td>
+<td>Elasticsearch</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>5672</td>
+<td>RabbitMQ</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>15672</td>
+<td>RabbitMQ Management</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>2375</td>
+<td>Docker API (sin TLS)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>2376</td>
+<td>Docker API (con TLS)</td>
+<td>TCP</td>
+</tr>
+<tr>
+<td>8888</td>
+<td>Jupyter, Prometheus</td>
+<td>TCP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ipv4-vs-ipv6"><a aria-hidden="true" tabindex="-1" href="#ipv4-vs-ipv6"><span class="icon icon-link"></span></a>IPv4 vs IPv6</h2>
+<h3 id="ipv4-32-bits"><a aria-hidden="true" tabindex="-1" href="#ipv4-32-bits"><span class="icon icon-link"></span></a>IPv4 (32 bits)</h3>
+<pre><code>Formato: 4 grupos de 8 bits, separados por puntos
+192.168.1.100
+
+Rangos privados (no enrutables en Internet):
+10.0.0.0/8        (10.0.0.0 - 10.255.255.255)
+172.16.0.0/12     (172.16.0.0 - 172.31.255.255)
+192.168.0.0/16    (192.168.0.0 - 192.168.255.255)
+
+Total: ~4.3 mil millones de direcciones
+</code></pre>
+<h3 id="ipv6-128-bits"><a aria-hidden="true" tabindex="-1" href="#ipv6-128-bits"><span class="icon icon-link"></span></a>IPv6 (128 bits)</h3>
+<pre><code>Formato: 8 grupos de 4 hexadecimales, separados por dos puntos
+2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+Compresión: los ceros a la izquierda y bloques consecutivos de ceros se pueden omitir
+2001:db8:85a3::8a2e:370:7334
+
+Rango local (equivalente a 127.0.0.1):
+::1 (loopback)
+
+Total: 3.4 × 10^38 direcciones (prácticamente infinito)
+</code></pre>
+<blockquote>
+<p>[!tip] Por qué necesitamos IPv6
+El IPv4 se agotó en 2011. Con NAT (ver [[13-nat-red]]) pudimos alargar la vida, pero IPv6 es la solución definitiva. Cada dispositivo puede tener su propia IP pública.</p>
+</blockquote>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>Un puerto identifica un servicio específico en un servidor (número 0-65535)</li>
+<li>localhost (127.0.0.1) siempre apunta a tu máquina; 0.0.0.0 significa "todas las interfaces"</li>
+<li>En Docker, necesitas <code>-p host:container</code> para exponer puertos al host</li>
+<li>Los servicios expuestos a Internet deben tener firewall configurado (solo abrir puertos necesarios)</li>
+<li>IPv6 es el futuro (más direcciones, sin necesidad de NAT)</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+Puertos + IP = dirección completa. La IP dice "dónde" (qué servidor), el puerto dice "a qué servicio" (qué puerta). Sin puerto, no sabes a qué servicio conectar.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cómo navega de URL a página</td>
+<td>[[02-como-navegar-de-url-a-pagina]] (el puerto se extrae de la URL)</td>
+</tr>
+<tr>
+<td>NAT</td>
+<td>[[13-nat-red]] (cómo el mapeo de puertos en NAT conecta mundo exterior e interior)</td>
+</tr>
+<tr>
+<td>Servidores y procesos</td>
+<td>[[14-servidores-procesos]] (un servidor es un proceso escuchando en un puerto)</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

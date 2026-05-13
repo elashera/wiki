@@ -1,0 +1,692 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">HTTP en profundidad</h1> <div class="article-body"><h1 id="http-en-profundidad"><a aria-hidden="true" tabindex="-1" href="#http-en-profundidad"><span class="icon icon-link"></span></a>HTTP en profundidad</h1>
+<blockquote>
+<p>[!tip] HTTP en una frase
+HTTP (HyperText Transfer Protocol) es el <strong>lenguaje</strong> que usan los navegadores y servidores para comunicarse. Peticiones y respuestas, una y otra vez.</p>
+</blockquote>
+<h2 id="qué-es-http"><a aria-hidden="true" tabindex="-1" href="#qué-es-http"><span class="icon icon-link"></span></a>¿Qué es HTTP?</h2>
+<p>HTTP es un protocolo de solicitud/respuesta de <strong>capa de aplicación</strong>. Funciona sobre TCP (por defecto puerto 80, o 443 si es HTTPS).</p>
+<h3 id="características-clave"><a aria-hidden="true" tabindex="-1" href="#características-clave"><span class="icon icon-link"></span></a>Características clave</h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Request/Response</strong></td>
+<td>El cliente pide, el servidor responde</td>
+</tr>
+<tr>
+<td><strong>Stateless</strong></td>
+<td>Cada petición es independiente. El servidor no "recuerda" la anterior (a menos que uses cookies/sesiones — ver [[09-cookies-sesiones]])</td>
+</tr>
+<tr>
+<td><strong>Sin conexión</strong></td>
+<td>HTTP/1.1 mantiene la conexión (keep-alive), pero HTTP/1.0 la cierra después de cada respuesta</td>
+</tr>
+<tr>
+<td><strong>Mediador</strong></td>
+<td>Puedes pasar por proxies, CDN, load balancers sin que cambie el protocolo</td>
+</tr>
+<tr>
+<td><strong>Extensible</strong></td>
+<td>Nuevos métodos, headers y códigos se añaden sin romper compatibilidad</td>
+</tr>
+</tbody>
+</table>
+<h2 id="estructura-de-una-petición-http"><a aria-hidden="true" tabindex="-1" href="#estructura-de-una-petición-http"><span class="icon icon-link"></span></a>Estructura de una petición HTTP</h2>
+<pre><code>GET /index.html HTTP/1.1
+Host: www.ejemplo.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: es-ES,es;q=0.9,en;q=0.8
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: session_id=abc123def456
+Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
+
+[Cuerpo — vacío en GET]
+</code></pre>
+<h3 id="la-línea-de-solicitud"><a aria-hidden="true" tabindex="-1" href="#la-línea-de-solicitud"><span class="icon icon-link"></span></a>La línea de solicitud</h3>
+<pre><code>GET /index.html HTTP/1.1
+│     │            │
+│     │            └── Versión del protocolo
+│     │
+│     └── Path (recurso solicitado)
+│         /index.html
+│         /api/users/42
+│         /search?q=hello&#x26;page=1
+│
+└── Método HTTP
+</code></pre>
+<h3 id="métodos-http"><a aria-hidden="true" tabindex="-1" href="#métodos-http"><span class="icon icon-link"></span></a>Métodos HTTP</h3>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>Seguro</th>
+<th>Idempotente</th>
+<th>Qué hace</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GET</strong></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Leer un recurso</td>
+<td><code>GET /api/users</code></td>
+</tr>
+<tr>
+<td><strong>HEAD</strong></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Igual que GET pero sin body</td>
+<td><code>HEAD /api/users</code></td>
+</tr>
+<tr>
+<td><strong>POST</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Crear un recurso / ejecutar acción</td>
+<td><code>POST /api/users</code> con body</td>
+</tr>
+<tr>
+<td><strong>PUT</strong></td>
+<td>No</td>
+<td>Sí</td>
+<td>Reemplazar un recurso completo</td>
+<td><code>PUT /api/users/42</code></td>
+</tr>
+<tr>
+<td><strong>PATCH</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Actualizar parcialmente un recurso</td>
+<td><code>PATCH /api/users/42</code></td>
+</tr>
+<tr>
+<td><strong>DELETE</strong></td>
+<td>No</td>
+<td>Sí</td>
+<td>Eliminar un recurso</td>
+<td><code>DELETE /api/users/42</code></td>
+</tr>
+<tr>
+<td><strong>OPTIONS</strong></td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Ver qué métodos soporta un recurso</td>
+<td><code>OPTIONS /api/users</code></td>
+</tr>
+<tr>
+<td><strong>CONNECT</strong></td>
+<td>No</td>
+<td>No</td>
+<td>Crear tunnel (para HTTPS/WS)</td>
+<td><code>CONNECT www.ejemplo.com:443</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="definiciones-importantes"><a aria-hidden="true" tabindex="-1" href="#definiciones-importantes"><span class="icon icon-link"></span></a>Definiciones importantes</h4>
+<ul>
+<li><strong>Seguro</strong>: No modifica datos en el servidor. GET y HEAD son seguros.</li>
+<li><strong>Idempotente</strong>: Hacer la misma petición múltiples veces produce el mismo resultado. GET, PUT, DELETE son idempotentes. POST NO lo es (crear el mismo usuario dos veces crea dos usuarios).</li>
+</ul>
+<blockquote>
+<p>[!caution] GET ≠ siempre leer
+Técnicamente, GET no debería tener efectos secundarios. Pero en la práctica, muchas APIs usan GET para métricas, logging, etc. Las buenas prácticas dicen que <strong>GET no debe modificar datos</strong>, pero la realidad es más gris.</p>
+</blockquote>
+<h4 id="post-vs-put-vs-patch"><a aria-hidden="true" tabindex="-1" href="#post-vs-put-vs-patch"><span class="icon icon-link"></span></a>POST vs PUT vs PATCH</h4>
+<pre><code># POST: Crear nuevo recurso
+POST /api/users
+Body: { "name": "Carlos", "email": "carlos@email.com" }
+→ Crea un nuevo usuario. ID lo asigna el servidor.
+→ NO es idempotente: dos POSTs = dos usuarios
+
+# PUT: Reemplazar recurso completo
+PUT /api/users/42
+Body: { "name": "Carlos", "email": "carlos.nuevo@email.com", "age": 30 }
+→ Reemplaza TODOS los campos del usuario 42. Si no envías "age", se borra.
+→ ES idempotente: dos PUTs iguales = mismo resultado
+
+# PATCH: Actualizar parcialmente
+PATCH /api/users/42
+Body: { "email": "carlos.nuevo@email.com" }
+→ Solo cambia el campo que envías. Los demás se mantienen.
+→ NO es idempotente (depende de la implementación)
+</code></pre>
+<h2 id="headers-de-petición"><a aria-hidden="true" tabindex="-1" href="#headers-de-petición"><span class="icon icon-link"></span></a>Headers de petición</h2>
+<p>Los headers son metadatos que acompañan a la petición. Se dividen en categorías:</p>
+<h3 id="headers-universales-sirven-en-petición-y-respuesta"><a aria-hidden="true" tabindex="-1" href="#headers-universales-sirven-en-petición-y-respuesta"><span class="icon icon-link"></span></a>Headers universales (sirven en petición y respuesta)</h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Ejemplo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cache-Control</code></td>
+<td><code>max-age=3600</code></td>
+<td>Política de caché</td>
+</tr>
+<tr>
+<td><code>Connection</code></td>
+<td><code>keep-alive</code></td>
+<td>Gestión de conexión</td>
+</tr>
+<tr>
+<td><code>Content-Length</code></td>
+<td><code>1234</code></td>
+<td>Tamaño del cuerpo en bytes</td>
+</tr>
+<tr>
+<td><code>Content-Type</code></td>
+<td><code>application/json</code></td>
+<td>Tipo de contenido del cuerpo</td>
+</tr>
+<tr>
+<td><code>Date</code></td>
+<td><code>Thu, 11 May 2024 12:00:00 GMT</code></td>
+<td>Fecha de creación</td>
+</tr>
+<tr>
+<td><code>Host</code></td>
+<td><code>www.ejemplo.com</code></td>
+<td>Dominio solicitado (requerido en HTTP/1.1)</td>
+</tr>
+<tr>
+<td><code>Transfer-Encoding</code></td>
+<td><code>chunked</code></td>
+<td>Cómo se codifica el body</td>
+</tr>
+<tr>
+<td><code>Upgrade</code></td>
+<td><code>websocket</code></td>
+<td>Cambio de protocolo</td>
+</tr>
+<tr>
+<td><code>Via</code></td>
+<td><code>1.1 proxy</code></td>
+<td>Protocolos usados por proxies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headers-de-petición-específicos"><a aria-hidden="true" tabindex="-1" href="#headers-de-petición-específicos"><span class="icon icon-link"></span></a>Headers de petición específicos</h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Ejemplo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Accept</code></td>
+<td><code>text/html,application/json</code></td>
+<td>Qué tipos de respuesta acepta</td>
+</tr>
+<tr>
+<td><code>Accept-Encoding</code></td>
+<td><code>gzip, br</code></td>
+<td>Qué codificaciones de compresión acepta</td>
+</tr>
+<tr>
+<td><code>Accept-Language</code></td>
+<td><code>es-ES,es;q=0.9</code></td>
+<td>Idiomas preferidos (con pesos)</td>
+</tr>
+<tr>
+<td><code>Authorization</code></td>
+<td><code>Bearer eyJ...</code></td>
+<td>Credenciales de autenticación</td>
+</tr>
+<tr>
+<td><code>Cookie</code></td>
+<td><code>session_id=abc123</code></td>
+<td>Cookies del dominio</td>
+</tr>
+<tr>
+<td><code>If-Modified-Since</code></td>
+<td><code>Thu, 01 May 2024 00:00:00 GMT</code></td>
+<td>Solo devuelve si cambió después</td>
+</tr>
+<tr>
+<td><code>If-None-Match</code></td>
+<td><code>"abc123"</code></td>
+<td>Solo devuelve si ETag cambió</td>
+</tr>
+<tr>
+<td><code>Origin</code></td>
+<td><code>https://app.ejemplo.com</code></td>
+<td>Origen de la petición (CORS)</td>
+</tr>
+<tr>
+<td><code>Referer</code></td>
+<td><code>https://app.ejemplo.com/dashboard</code></td>
+<td>Desde qué página vino</td>
+</tr>
+<tr>
+<td><code>User-Agent</code></td>
+<td><code>Mozilla/5.0...</code></td>
+<td>Identificación del cliente</td>
+</tr>
+<tr>
+<td><code>X-Request-ID</code></td>
+<td><code>req-12345</code></td>
+<td>ID único para tracking</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-práctico-de-headers"><a aria-hidden="true" tabindex="-1" href="#ejemplo-práctico-de-headers"><span class="icon icon-link"></span></a>Ejemplo práctico de headers</h3>
+<pre><code># Petición típica de un navegador
+GET /api/users/me HTTP/1.1
+Host: api.ejemplo.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+Accept: application/json
+Accept-Language: es-ES,es;q=0.9,en;q=0.8
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Cookie: session=xyz789
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+If-None-Match: "v2-abc123"
+</code></pre>
+<h3 id="headers-de-caché"><a aria-hidden="true" tabindex="-1" href="#headers-de-caché"><span class="icon icon-link"></span></a>Headers de caché</h3>
+<p>Los headers de caché son cruciales para el rendimiento:</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cache-Control</code></td>
+<td>Política de caché principal</td>
+</tr>
+<tr>
+<td><code>ETag</code></td>
+<td>Identificador de versión del recurso</td>
+</tr>
+<tr>
+<td><code>Last-Modified</code></td>
+<td>Última fecha de modificación</td>
+</tr>
+<tr>
+<td><code>Expires</code></td>
+<td>Fecha de expiración (legacy)</td>
+</tr>
+<tr>
+<td><code>Vary</code></td>
+<td>La respuesta varía según estos headers</td>
+</tr>
+</tbody>
+</table>
+<pre><code># Cache-Control valores comunes
+Cache-Control: public, max-age=3600          ← Cacheable, 1 hora
+Cache-Control: private, max-age=3600         ← Solo caché del navegador, no de CDN/proxy
+Cache-Control: no-cache                      ← Cacheable pero necesita validación
+Cache-Control: no-store                      ← No cachear en absoluto
+Cache-Control: max-age=31536000, immutable  ← Cacheable 1 año, nunca validar (archivos con hash)
+Cache-Control: must-revalidate               ← Cacheable pero debe verificar al volver a usar
+</code></pre>
+<h2 id="estructura-de-una-respuesta-http"><a aria-hidden="true" tabindex="-1" href="#estructura-de-una-respuesta-http"><span class="icon icon-link"></span></a>Estructura de una respuesta HTTP</h2>
+<pre><code>HTTP/1.1 200 OK
+Date: Thu, 11 May 2024 12:00:00 GMT
+Content-Type: application/json
+Content-Length: 456
+Connection: keep-alive
+Cache-Control: public, max-age=3600
+ETag: "v2-abc123"
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: nginx/1.24.0
+
+{"id": 42, "name": "Carlos", "email": "carlos@email.com"}
+</code></pre>
+<h3 id="la-línea-de-estado"><a aria-hidden="true" tabindex="-1" href="#la-línea-de-estado"><span class="icon icon-link"></span></a>La línea de estado</h3>
+<pre><code>HTTP/1.1 200 OK
+│       │    │
+│       │    └── Razón (descripción legible)
+│       │
+│       └── Código de estado (ver [[06-status-codes]])
+│
+└── Versión del protocolo
+</code></pre>
+<h3 id="headers-de-respuesta-específicos"><a aria-hidden="true" tabindex="-1" href="#headers-de-respuesta-específicos"><span class="icon icon-link"></span></a>Headers de respuesta específicos</h3>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Ejemplo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Access-Control-Allow-Origin</code></td>
+<td><code>https://app.ejemplo.com</code></td>
+<td>CORS</td>
+</tr>
+<tr>
+<td><code>Content-Disposition</code></td>
+<td><code>attachment; filename="report.pdf"</code></td>
+<td>Indica si se muestra o descarga</td>
+</tr>
+<tr>
+<td><code>Content-Security-Policy</code></td>
+<td><code>default-src 'self'</code></td>
+<td>CSP — previene XSS</td>
+</tr>
+<tr>
+<td><code>Location</code></td>
+<td><code>/new-page</code></td>
+<td>Para redirecciones (3xx)</td>
+</tr>
+<tr>
+<td><code>Retry-After</code></td>
+<td><code>120</code></td>
+<td>Para 429/503: esperar N segundos</td>
+</tr>
+<tr>
+<td><code>Set-Cookie</code></td>
+<td><code>session=xyz; HttpOnly; Secure</code></td>
+<td>Establecer una cookie</td>
+</tr>
+<tr>
+<td><code>Vary</code></td>
+<td><code>Accept-Encoding, User-Agent</code></td>
+<td>La respuesta varía según estos headers</td>
+</tr>
+<tr>
+<td><code>WWW-Authenticate</code></td>
+<td><code>Bearer realm="api"</code></td>
+<td>Para 401: qué método de auth usar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="headers-de-seguridad-importantes"><a aria-hidden="true" tabindex="-1" href="#headers-de-seguridad-importantes"><span class="icon icon-link"></span></a>Headers de seguridad importantes</h3>
+<pre><code># HSTS (HTTP Strict Transport Security)
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+# Dice al navegador: "Solo usa HTTPS durante 1 año, incluyendo subdominios"
+
+# X-Content-Type-Options: nosniff
+# Evita que el navegador intente "adivinar" el tipo de contenido
+# Si dice application/json y el navegador ve HTML, no lo ejecutará como script
+
+# X-Frame-Options
+X-Frame-Options: DENY         # Nunca permitir en iframe
+X-Frame-Options: SAMEORIGIN   # Solo permitir en iframe del mismo dominio
+
+# Content-Security-Policy (CSP)
+Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.example.com
+# Define qué fuentes están permitidas para cargar recursos
+</code></pre>
+<blockquote>
+<p>[!tip] CSP es la defensa más potente contra XSS
+Un buen CSP puede bloquear el 99% de los ataques XSS sin código adicional. Define explícitamente qué scripts, estilos, imágenes, etc. pueden cargar tus páginas.</p>
+</blockquote>
+<h2 id="el-cuerpo-de-la-petición-body"><a aria-hidden="true" tabindex="-1" href="#el-cuerpo-de-la-petición-body"><span class="icon icon-link"></span></a>El cuerpo de la petición (body)</h2>
+<p>El body contiene los datos que envías al servidor. El <code>Content-Type</code> del header indica <strong>cómo están codificados</strong> esos datos:</p>
+<h3 id="applicationjson-el-más-común"><a aria-hidden="true" tabindex="-1" href="#applicationjson-el-más-común"><span class="icon icon-link"></span></a>application/json (el más común)</h3>
+<pre><code>POST /api/users HTTP/1.1
+Content-Type: application/json
+
+{"name": "Carlos", "email": "carlos@email.com", "age": 30}
+</code></pre>
+<h3 id="applicationx-www-form-urlencoded-formularios-html-clásicos"><a aria-hidden="true" tabindex="-1" href="#applicationx-www-form-urlencoded-formularios-html-clásicos"><span class="icon icon-link"></span></a>application/x-www-form-urlencoded (formularios HTML clásicos)</h3>
+<pre><code>POST /login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=carlos&#x26;password=mipassword123
+</code></pre>
+<h3 id="multipartform-data-subida-de-archivos"><a aria-hidden="true" tabindex="-1" href="#multipartform-data-subida-de-archivos"><span class="icon icon-link"></span></a>multipart/form-data (subida de archivos)</h3>
+<pre><code>POST /upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary
+
+------WebKitFormBoundary
+Content-Disposition: form-data; name="avatar"; filename="foto.jpg"
+Content-Type: image/jpeg
+
+[binary data of the image]
+------WebKitFormBoundary--
+</code></pre>
+<h3 id="applicationxml-y-textplain"><a aria-hidden="true" tabindex="-1" href="#applicationxml-y-textplain"><span class="icon icon-link"></span></a>application/xml y text/plain</h3>
+<pre><code>POST /api/data HTTP/1.1
+Content-Type: application/xml
+
+&#x3C;user>&#x3C;name>Carlos&#x3C;/name>&#x3C;age>30&#x3C;/age>&#x3C;/user>
+</code></pre>
+<blockquote>
+<p>[!tip] JSON vs form-urlencoded vs multipart</p>
+<ul>
+<li><strong>JSON</strong>: Para APIs. Estructurado, fácil de parsear, soporta objetos anidados.</li>
+<li><strong>Form-urlencoded</strong>: Para formularios HTML simples. Muy limitado (solo strings).</li>
+<li><strong>Multipart</strong>: Para subir archivos. Soporta datos binarios.</li>
+<li><strong>XML</strong>: En desuso (excepto en legacy/enterprise). JSON lo reemplazó en casi todo.</li>
+</ul>
+</blockquote>
+<h2 id="keep-alive-y-conexiones-persistentes"><a aria-hidden="true" tabindex="-1" href="#keep-alive-y-conexiones-persistentes"><span class="icon icon-link"></span></a>Keep-Alive y conexiones persistentes</h2>
+<h3 id="http10-vs-http11"><a aria-hidden="true" tabindex="-1" href="#http10-vs-http11"><span class="icon icon-link"></span></a>HTTP/1.0 vs HTTP/1.1</h3>
+<pre><code>HTTP/1.0 (sin keep-alive):
+Cliente          Servidor
+  │─── Request ───→│
+  │←── Response ───│  (conexión cerrada)
+  │─── Request ───→│  (nueva conexión TCP + TLS)
+  │←── Response ───│  (conexión cerrada)
+
+HTTP/1.1 (con keep-alive):
+Cliente          Servidor
+  │─── Request ───→│
+  │←── Response ───│  (conexión mantiene abierta)
+  │─── Request ───→│  (misma conexión, más rápido)
+  │←── Response ───│  (misma conexión)
+</code></pre>
+<blockquote>
+<p>[!tip] Keep-Alive es default en HTTP/1.1
+En HTTP/1.0, necesitabas <code>Connection: keep-alive</code> explícito. En HTTP/1.1, es el default. Puedes cerrar con <code>Connection: close</code>.</p>
+</blockquote>
+<h2 id="http2"><a aria-hidden="true" tabindex="-1" href="#http2"><span class="icon icon-link"></span></a>HTTP/2</h2>
+<p>HTTP/2 es la evolución de HTTP/1.1. Las mejoras principales:</p>
+<h3 id="multiplexación"><a aria-hidden="true" tabindex="-1" href="#multiplexación"><span class="icon icon-link"></span></a>Multiplexación</h3>
+<p>En HTTP/1.1, necesitabas 6 conexiones paralelas para cargar 6 recursos en paralelo (límite del navegador). En HTTP/2, <strong>todo va por una sola conexión</strong> y se multiplexa:</p>
+<pre><code>HTTP/1.1 (6 conexiones):
+Conn 1: style.css
+Conn 2: script.js
+Conn 3: image1.jpg
+Conn 4: image2.jpg
+Conn 5: font.woff2
+Conn 6: favicon.ico
+
+HTTP/2 (1 conexión, streams multiplexados):
+Stream 1 |── style.css
+Stream 2 |── script.js
+Stream 3 |── image1.jpg
+Stream 4 |── image2.jpg
+Stream 5 |── font.woff2
+Stream 6 |── favicon.ico
+         │ (todo por UNA conexión TCP)
+</code></pre>
+<h3 id="binary-protocol"><a aria-hidden="true" tabindex="-1" href="#binary-protocol"><span class="icon icon-link"></span></a>Binary protocol</h3>
+<p>HTTP/1.1 usa texto plano (fácil de leer pero propenso a errores de parsing). HTTP/2 es <strong>binario</strong> (más eficiente, menos errores).</p>
+<h3 id="header-compression-hpack"><a aria-hidden="true" tabindex="-1" href="#header-compression-hpack"><span class="icon icon-link"></span></a>Header compression (HPACK)</h3>
+<p>HTTP/2 usa <strong>HPACK</strong> para comprimir headers. El primero se envía completo, los siguientes solo envían los cambios.</p>
+<h3 id="server-push"><a aria-hidden="true" tabindex="-1" href="#server-push"><span class="icon icon-link"></span></a>Server Push</h3>
+<p>El servidor puede enviar recursos que anticipa que el cliente necesitará. Sin embargo, Server Push es controversial y muchos lo desactivan porque si el cliente ya tiene los recursos en caché, se desperdicia ancho de banda. La tendencia actual es no usarlo.</p>
+<h3 id="prioridades-de-streams"><a aria-hidden="true" tabindex="-1" href="#prioridades-de-streams"><span class="icon icon-link"></span></a>Prioridades de streams</h3>
+<p>Cada stream puede tener un peso (1-256) y una dependencia de otros streams:</p>
+<pre><code>Stream 1 (prioridad alta): /css/style.css     ← Bloquea render
+Stream 2 (prioridad media): /js/app.js         ← Bloquea interactividad
+Stream 3 (prioridad baja): /images/lazy.jpg    ← No urgente
+</code></pre>
+<h2 id="http3-quic"><a aria-hidden="true" tabindex="-1" href="#http3-quic"><span class="icon icon-link"></span></a>HTTP/3 (QUIC)</h2>
+<p>HTTP/3 es la versión más moderna. Cambia lo más fundamental: <strong>de TCP a QUIC (sobre UDP)</strong>.</p>
+<h3 id="de-tcp-a-quic"><a aria-hidden="true" tabindex="-1" href="#de-tcp-a-quic"><span class="icon icon-link"></span></a>De TCP a QUIC</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>HTTP/2 (sobre TCP)</th>
+<th>HTTP/3 (sobre QUIC)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transporte</td>
+<td>TCP</td>
+<td>QUIC (sobre UDP)</td>
+</tr>
+<tr>
+<td>Handshake</td>
+<td>1-RTT TCP + 1-RTT TLS</td>
+<td>0-RTT o 1-RTT (todo en uno)</td>
+</tr>
+<tr>
+<td>Head-of-line blocking</td>
+<td>Sí (un packet perdido bloquea todo)</td>
+<td>No (por stream)</td>
+</tr>
+<tr>
+<td>Conexión migration</td>
+<td>No (cambiar IP rompe la conexión)</td>
+<td>Sí (mismo ID de conexión)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="por-qué-quic-sobre-udp"><a aria-hidden="true" tabindex="-1" href="#por-qué-quic-sobre-udp"><span class="icon icon-link"></span></a>¿Por qué QUIC sobre UDP?</h3>
+<p>En TCP, si un packet se pierde, <strong>todo se detiene</strong> hasta que se reenvía. En QUIC (sobre UDP), cada stream es independiente: si un packet de un stream se pierde, los otros streams siguen fluyendo.</p>
+<pre><code>HTTP/2 sobre TCP (un packet perdido = todo bloqueado):
+Packet 1  [OK]
+Packet 2  [PERDIDO] ← Todo se detiene aquí
+Packet 3  [OK pero no se puede procesar]
+
+HTTP/3 sobre QUIC (stream independiente):
+Stream 1: Packet 1 [OK]  →  Stream 2: Packet 1 [OK] → Funciona!
+Stream 1: Packet 2 [PERDIDO]
+Stream 2: Packet 2 [OK, sigue fluyendo]
+</code></pre>
+<blockquote>
+<p>[!tip] Cloudflare fue pionero en HTTP/3
+Cloudflare lanzó HTTP/3 (QUIC) en 2018 y fue el primer proveedor grande en ofrecerlo. Hoy es soportado por todos los navegadores modernos.</p>
+</blockquote>
+<h2 id="cors-cross-origin-resource-sharing"><a aria-hidden="true" tabindex="-1" href="#cors-cross-origin-resource-sharing"><span class="icon icon-link"></span></a>CORS (Cross-Origin Resource Sharing)</h2>
+<p>CORS es un mecanismo de seguridad del navegador que controla <strong>desde qué orígenes</strong> tu página web puede hacer peticiones a un servidor.</p>
+<h3 id="qué-es-un-origen"><a aria-hidden="true" tabindex="-1" href="#qué-es-un-origen"><span class="icon icon-link"></span></a>¿Qué es un "origen"?</h3>
+<p>Un origen = protocolo + dominio + puerto:</p>
+<pre><code>https://app.ejemplo.com:443  ← Este origen
+https://api.ejemplo.com:443  ← Otro origen (diferente dominio)
+http://app.ejemplo.com:80    ← Otro origen (diferente protocolo y puerto)
+https://app.ejemplo.com:443  ← Mismo origen (todo igual)
+</code></pre>
+<h3 id="ejemplo-de-cors"><a aria-hidden="true" tabindex="-1" href="#ejemplo-de-cors"><span class="icon icon-link"></span></a>Ejemplo de CORS</h3>
+<pre><code>Petición del navegador:
+GET https://api.ejemplo.com/users HTTP/1.1
+Origin: https://app.ejemplo.com
+
+Respuesta del servidor (si CORS está bien configurado):
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: https://app.ejemplo.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+</code></pre>
+<h3 id="preflight-options"><a aria-hidden="true" tabindex="-1" href="#preflight-options"><span class="icon icon-link"></span></a>Preflight (OPTIONS)</h3>
+<p>Para peticiones "no simples", el navegador primero hace una petición OPTIONS:</p>
+<pre><code>OPTIONS /api/users HTTP/1.1
+Origin: https://app.ejemplo.com
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: Content-Type, Authorization
+
+Respuesta:
+HTTP/1.1 204 No Content
+Access-Control-Allow-Origin: https://app.ejemplo.com
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Max-Age: 86400
+</code></pre>
+<blockquote>
+<p>[!tip] CORS solo afecta al navegador
+Si haces una petición con <code>curl</code>, Python requests, o Node.js fetch, CORS <strong>no se aplica</strong>. CORS es una restricción del navegador, no del protocolo HTTP.</p>
+</blockquote>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>HTTP es un protocolo request/response, stateless, basado en texto (HTTP/1.x) o binario (HTTP/2+)</li>
+<li>Los métodos GET, POST, PUT, PATCH, DELETE tienen significados semánticos específicos</li>
+<li>Los headers controlan caché, seguridad, autenticación, compresión</li>
+<li>El body puede estar en JSON, form-urlencoded, multipart, XML</li>
+<li>HTTP/2 añade multiplexación, header compression (HPACK), server push</li>
+<li>HTTP/3 cambia a QUIC (UDP), eliminando head-of-line blocking de TCP</li>
+<li>CORS controla desde qué orígenes se puede acceder a tu API</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+HTTP es simple en teoría (pide, responde) pero complejo en la práctica (seguridad, rendimiento, compatibilidad). Los headers son donde vive la mayoría de la complejidad.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>URL → página</td>
+<td>[[02-como-navegar-de-url-a-pagina]]</td>
+</tr>
+<tr>
+<td>Status codes</td>
+<td>[[06-status-codes]]</td>
+</tr>
+<tr>
+<td>HTTPS/TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Cookies/Sesiones</td>
+<td>[[09-cookies-sesiones]]</td>
+</tr>
+<tr>
+<td>Autenticación</td>
+<td>[[10-autenticacion-api-keys-tokens]]</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>[[11-api-rest]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful</h1> <div class="article-body"><h1 id="cookies-and-sessions-types-attributes-jwt-tokens-stateless-vs-stateful"><a aria-hidden="true" tabindex="-1" href="#cookies-and-sessions-types-attributes-jwt-tokens-stateless-vs-stateful"><span class="icon icon-link"></span></a>Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful</h1>
+<blockquote>
+<p>[!tip] Cookies and sessions in a nutshell
+Cookies are small pieces of data stored in the browser. Sessions are server-side data structures tied to cookies. Together, they solve HTTP's stateless nature: HTTP doesn't remember who you are between requests, but cookies + sessions make it possible to maintain a logged-in experience.</p>
+</blockquote>
+<h2 id="why-do-we-need-cookies-and-sessions"><a aria-hidden="true" tabindex="-1" href="#why-do-we-need-cookies-and-sessions"><span class="icon icon-link"></span></a>Why do we need cookies and sessions?</h2>
+<p>HTTP is <strong>stateless</strong>: each request is independent. The server has no memory of previous requests from the same client.</p>
+<pre><code>Request 1: GET /login → Server: "Here's the login page"
+Request 2: POST /login → Server: "I don't know who you are. Please log in again."
+Request 3: GET /dashboard → Server: "You need to log in first."
+</code></pre>
+<p>Cookies and sessions solve this by giving the server a way to remember the client across requests.</p>
+<pre><code>Request 1: GET /login → Server: "Here's the login page" + Set-Cookie: session_id=abc123
+Request 2: POST /login → Server: "Credentials validated" + Set-Cookie: session_id=xyz789
+Request 3: GET /dashboard → Cookie: session_id=xyz789 → Server: "Session found → You are John"
+</code></pre>
+<h2 id="cookies-what-are-they"><a aria-hidden="true" tabindex="-1" href="#cookies-what-are-they"><span class="icon icon-link"></span></a>Cookies: What are they?</h2>
+<p>A cookie is a <strong>key-value pair</strong> sent by the server in the response and returned by the browser in subsequent requests.</p>
+<h3 id="setting-a-cookie"><a aria-hidden="true" tabindex="-1" href="#setting-a-cookie"><span class="icon icon-link"></span></a>Setting a cookie</h3>
+<pre><code>Server → Browser: Set-Cookie: session_id=xyz789; Path=/; HttpOnly; Secure; SameSite=Strict
+</code></pre>
+<h3 id="browser-returning-a-cookie"><a aria-hidden="true" tabindex="-1" href="#browser-returning-a-cookie"><span class="icon icon-link"></span></a>Browser returning a cookie</h3>
+<pre><code>Browser → Server: Cookie: session_id=xyz789
+</code></pre>
+<h3 id="cookie-attributes"><a aria-hidden="true" tabindex="-1" href="#cookie-attributes"><span class="icon icon-link"></span></a>Cookie attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Path</code></td>
+<td>URL path where the cookie is sent</td>
+<td><code>Path=/admin</code> → only sent to <code>/admin/*</code></td>
+</tr>
+<tr>
+<td><code>Domain</code></td>
+<td>Domain the cookie is sent to</td>
+<td><code>Domain=.example.com</code> → sent to all subdomains</td>
+</tr>
+<tr>
+<td><code>Max-Age</code></td>
+<td>Lifetime in seconds</td>
+<td><code>Max-Age=3600</code> → expires in 1 hour</td>
+</tr>
+<tr>
+<td><code>Expires</code></td>
+<td>Exact expiration date</td>
+<td><code>Expires=Wed, 13 May 2026 15:00:00 GMT</code></td>
+</tr>
+<tr>
+<td><code>Secure</code></td>
+<td>Only sent over HTTPS</td>
+<td><code>Secure</code></td>
+</tr>
+<tr>
+<td><code>HttpOnly</code></td>
+<td>Not accessible via JavaScript</td>
+<td><code>HttpOnly</code></td>
+</tr>
+<tr>
+<td><code>SameSite</code></td>
+<td>Cross-site request control</td>
+<td><code>SameSite=Strict</code>, <code>Lax</code>, <code>None</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="cookie-security-attributes-must-use"><a aria-hidden="true" tabindex="-1" href="#cookie-security-attributes-must-use"><span class="icon icon-link"></span></a>Cookie security attributes (must-use)</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>What it does</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Secure</strong></td>
+<td>Cookie only sent over HTTPS</td>
+<td>Prevents cookie theft via man-in-the-middle</td>
+</tr>
+<tr>
+<td><strong>HttpOnly</strong></td>
+<td>JavaScript cannot read the cookie</td>
+<td>Prevents XSS cookie theft</td>
+</tr>
+<tr>
+<td><strong>SameSite</strong></td>
+<td>Controls when cookies are sent with cross-site requests</td>
+<td>Prevents CSRF attacks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="samesite-explained"><a aria-hidden="true" tabindex="-1" href="#samesite-explained"><span class="icon icon-link"></span></a>SameSite explained</h3>
+<pre><code>SameSite=Strict:
+  ┌──────────┐     ┌──────────┐
+  │ site-a.com│     │ site-b.com│
+  │           │     │           │
+  │  Cookie  │     │  Cookie   │
+  │  always  │     │  never    │
+  │  sent    │     │  sent     │
+  │          │     │           │
+  └──────────┘     └──────────┘
+  Cross-site: never sent (even from link)
+
+SameSite=Lax (default):
+  ┌──────────┐     ┌──────────┐
+  │ site-a.com│     │ site-b.com│
+  │           │     │           │
+  │  Cookie  │     │  Cookie   │
+  │  sent    │     │  sent     │
+  │  on top- │     │  on top-  │
+  │  level   │     │  level    │
+  │  GET     │     │  GET      │
+  │  only    │     │  only     │
+  └──────────┘     └──────────┘
+  Cross-site POST: not sent
+
+SameSite=None:
+  ┌──────────┐     ┌──────────┐
+  │ site-a.com│     │ site-b.com│
+  │           │     │           │
+  │  Cookie  │     │  Cookie   │
+  │  always  │     │  always   │
+  │  sent    │     │  sent     │
+  └──────────┘     └──────────┘
+  MUST also set Secure. Required for cross-site embedding.
+</code></pre>
+<blockquote>
+<p>[!caution] SameSite=None requires Secure
+Per the specification, <code>SameSite=None</code> must be accompanied by <code>Secure</code>. Browsers will reject cookies with <code>SameSite=None</code> that are not <code>Secure</code>.</p>
+</blockquote>
+<h2 id="types-of-cookies"><a aria-hidden="true" tabindex="-1" href="#types-of-cookies"><span class="icon icon-link"></span></a>Types of cookies</h2>
+<h3 id="session-cookies-vs-persistent-cookies"><a aria-hidden="true" tabindex="-1" href="#session-cookies-vs-persistent-cookies"><span class="icon icon-link"></span></a>Session cookies vs Persistent cookies</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Lifetime</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Session cookie</strong></td>
+<td>Until browser closes</td>
+<td><code>session_id=xyz789</code></td>
+</tr>
+<tr>
+<td><strong>Persistent cookie</strong></td>
+<td>Until <code>Expires</code> or <code>Max-Age</code></td>
+<td><code>remember_token=abc123; Max-Age=2592000</code> (30 days)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="first-party-vs-third-party-cookies"><a aria-hidden="true" tabindex="-1" href="#first-party-vs-third-party-cookies"><span class="icon icon-link"></span></a>First-party vs Third-party cookies</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Domain</th>
+<th>Example</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First-party</strong></td>
+<td>Same as the page domain</td>
+<td><code>example.com</code> sets cookie on <code>example.com</code></td>
+<td>Authentication, preferences</td>
+</tr>
+<tr>
+<td><strong>Third-party</strong></td>
+<td>Different from page domain</td>
+<td><code>ads.tracker.com</code> sets cookie when embedded on <code>example.com</code></td>
+<td>Advertising, analytics</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Third-party cookie deprecation
+Chrome, Firefox, Safari, and Edge are all deprecating or have deprecated third-party cookies. Chrome has begun blocking them in 2024–2025. Plan for first-party alternatives (First-Party IDs, Google's Privacy Sandbox, etc.).</p>
+</blockquote>
+<h3 id="technical-cookies-by-function"><a aria-hidden="true" tabindex="-1" href="#technical-cookies-by-function"><span class="icon icon-link"></span></a>Technical cookies by function</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strictly necessary</strong></td>
+<td>Required for the site to function</td>
+<td><code>session_id</code>, <code>csrf_token</code></td>
+</tr>
+<tr>
+<td><strong>Preferences</strong></td>
+<td>Remember user settings</td>
+<td><code>theme=dark</code>, <code>language=en</code></td>
+</tr>
+<tr>
+<td><strong>Analytics</strong></td>
+<td>Collect usage data</td>
+<td><code>_ga=GA1.2.123456</code> (Google Analytics)</td>
+</tr>
+<tr>
+<td><strong>Marketing</strong></td>
+<td>Track users for advertising</td>
+<td><code>ad_id=xyz</code> (ad networks)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sessions-server-side-state"><a aria-hidden="true" tabindex="-1" href="#sessions-server-side-state"><span class="icon icon-link"></span></a>Sessions: Server-side state</h2>
+<p>A session is a <strong>server-side data structure</strong> that stores information about a user. The session ID is stored as a cookie in the browser.</p>
+<h3 id="session-storage-backends"><a aria-hidden="true" tabindex="-1" href="#session-storage-backends"><span class="icon icon-link"></span></a>Session storage backends</h3>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Description</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>In-memory</strong></td>
+<td>Stored in server RAM</td>
+<td>Fastest</td>
+<td>Lost on restart, not distributed</td>
+</tr>
+<tr>
+<td><strong>Redis</strong></td>
+<td>Key-value store</td>
+<td>Distributed, fast, persistent</td>
+<td>Requires Redis server</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>SQL/NoSQL database</td>
+<td>Persistent, queryable</td>
+<td>Slower, DB load</td>
+</tr>
+<tr>
+<td><strong>File system</strong></td>
+<td>Serialized files</td>
+<td>Simple</td>
+<td>Slow, file locking issues</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-lifecycle"><a aria-hidden="true" tabindex="-1" href="#session-lifecycle"><span class="icon icon-link"></span></a>Session lifecycle</h3>
+<pre><code>1. User logs in → Server creates session
+2. Session data stored (in Redis, DB, etc.)
+3. Session ID sent to browser as cookie
+4. Subsequent requests include session ID cookie
+5. Server looks up session ID → finds user data
+6. User logs out → Server destroys session
+</code></pre>
+<h3 id="session-management-in-nodejs-express--express-session--redis"><a aria-hidden="true" tabindex="-1" href="#session-management-in-nodejs-express--express-session--redis"><span class="icon icon-link"></span></a>Session management in Node.js (Express + express-session + Redis)</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> session</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'express-session'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> RedisStore</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'connect-redis'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">).default;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> redis</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'redis'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> redisClient</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">createClient</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ url: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'redis://localhost:6379'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">use</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">session</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  store: </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> RedisStore</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ client: redisClient }),</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  secret: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'your-secret-key-change-in-production'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  resave: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,        </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Don't save session if unmodified</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  saveUninitialized: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">false</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Don't save uninitialized sessions</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  cookie: {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    secure: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// HTTPS only</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    httpOnly: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,     </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// No JavaScript access</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    sameSite: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'strict'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// CSRF protection</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    maxAge: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">24</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 60</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 60</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> *</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1000</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // 24 hours</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  name: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'sessionId'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     // Cookie name</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}));</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Setting session data</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/login'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Authenticate user...</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  req.session.userId </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user.id;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  req.session.role </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user.role;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  req.session.username </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user.username;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">json</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ success: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Accessing session data</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/profile'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> userId</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> req.session.userId;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Fetch user profile from database...</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Destroying session</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/logout'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  req.session.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">destroy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">err</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">json</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">({ success: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
+<h2 id="jwt-json-web-tokens"><a aria-hidden="true" tabindex="-1" href="#jwt-json-web-tokens"><span class="icon icon-link"></span></a>JWT (JSON Web Tokens)</h2>
+<p>JWT is an alternative to sessions. Instead of storing state on the server, the token itself contains the user data.</p>
+<h3 id="jwt-structure"><a aria-hidden="true" tabindex="-1" href="#jwt-structure"><span class="icon icon-link"></span></a>JWT structure</h3>
+<p>A JWT has three parts separated by dots:</p>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.              ← Header (Base64URL)
+eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4iLCJpYXQiOjE1MTYyMzkwMjJ9.  ← Payload (Base64URL)
+SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c   ← Signature
+</code></pre>
+<h3 id="jwt-parts-decoded"><a aria-hidden="true" tabindex="-1" href="#jwt-parts-decoded"><span class="icon icon-link"></span></a>JWT parts decoded</h3>
+<pre><code>Header (decoded):
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+Payload (decoded):
+{
+  "sub": "1234567890",
+  "name": "John",
+  "role": "user",
+  "iat": 1516239022,      // Issued at (Unix timestamp)
+  "exp": 1516242622       // Expiration (1 hour from now)
+}
+
+Signature:
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  "your-256-bit-secret"
+)
+</code></pre>
+<h3 id="jwt-usage"><a aria-hidden="true" tabindex="-1" href="#jwt-usage"><span class="icon icon-link"></span></a>JWT usage</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Creating a JWT (Node.js with jsonwebtoken)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> jwt</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> require</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'jsonwebtoken'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    sub: user.id,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    role: user.role,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    name: user.username</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  process.env.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JWT_SECRET</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  { expiresIn: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'1h'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Verifying a JWT</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> decoded</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">verify</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(token, process.env.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JWT_SECRET</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// { sub: '1234567890', role: 'user', name: 'John', iat: 1516239022, exp: 1516242622 }</span></span></code></pre></figure>
+<h3 id="jwt-in-http-headers"><a aria-hidden="true" tabindex="-1" href="#jwt-in-http-headers"><span class="icon icon-link"></span></a>JWT in HTTP headers</h3>
+<pre><code>GET /api/profile HTTP/1.1
+Host: api.example.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+</code></pre>
+<h3 id="jwt-vs-session-comparison"><a aria-hidden="true" tabindex="-1" href="#jwt-vs-session-comparison"><span class="icon icon-link"></span></a>JWT vs Session comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Sessions (server-side)</th>
+<th>JWT (stateless)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>State location</strong></td>
+<td>Server (Redis, DB)</td>
+<td>Embedded in token</td>
+</tr>
+<tr>
+<td><strong>Server load</strong></td>
+<td>Lookup by session ID</td>
+<td>No lookup needed</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Need shared store (Redis)</td>
+<td>Stateless, scales easily</td>
+</tr>
+<tr>
+<td><strong>Revocation</strong></td>
+<td>Immediate (delete session)</td>
+<td>Must wait for token to expire (or use blacklist)</td>
+</tr>
+<tr>
+<td><strong>Token size</strong></td>
+<td>Small (session ID, e.g., 32 bytes)</td>
+<td>Larger (header + payload + signature)</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Server-side</td>
+<td>Client-side (cookie or localStorage)</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td>Traditional web apps, microservices with shared store</td>
+<td>APIs, SPAs, mobile apps, distributed systems</td>
+</tr>
+</tbody>
+</table>
+<h3 id="jwt-security-best-practices"><a aria-hidden="true" tabindex="-1" href="#jwt-security-best-practices"><span class="icon icon-link"></span></a>JWT security best practices</h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// GOOD: Short expiration, secure secret</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(payload, process.env.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JWT_SECRET</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, { expiresIn: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'15m'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// GOOD: Verify signature and expiration</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> decoded</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">verify</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(token, process.env.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">JWT_SECRET</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// BAD: Weak secret (DO NOT DO THIS)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(payload, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'secret'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// BAD: No expiration</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(payload, secret, { expiresIn: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'9999d'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// GOOD: Use RS256 for better security (asymmetric)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jwt.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sign</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(payload, privateKey, { algorithm: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'RS256'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, expiresIn: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'15m'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> });</span></span></code></pre></figure>
+<h2 id="stateless-vs-stateful-authentication"><a aria-hidden="true" tabindex="-1" href="#stateless-vs-stateful-authentication"><span class="icon icon-link"></span></a>Stateless vs Stateful Authentication</h2>
+<h3 id="stateful-session-based"><a aria-hidden="true" tabindex="-1" href="#stateful-session-based"><span class="icon icon-link"></span></a>Stateful (Session-based)</h3>
+<pre><code>Client                          Server (with Redis)
+   │─── POST /login ────────────→│
+   │   { username, password }    │
+   │                           │
+   │                           │ 1. Validate credentials
+   │                           │ 2. Create session { userId, role, ... }
+   │                           │ 3. Store in Redis with random key
+   │                           │ 4. Return session ID
+   │←── Set-Cookie: sid=abc ───│
+   │                           │
+   │─── GET /profile ──────────→│
+   │   Cookie: sid=abc         │ 1. Look up sid=abc in Redis
+   │                           │ 2. Found! Return user data
+   │←── 200 OK (user data) ────│
+   │                           │
+   │─── GET /dashboard ────────→│
+   │   Cookie: sid=abc         │ 1. Look up sid=abc in Redis
+   │                           │ 2. Found! Return data
+   │←── 200 OK (dashboard) ────│
+</code></pre>
+<h3 id="stateless-jwt-based"><a aria-hidden="true" tabindex="-1" href="#stateless-jwt-based"><span class="icon icon-link"></span></a>Stateless (JWT-based)</h3>
+<pre><code>Client                          Server (no session store)
+   │─── POST /login ────────────→│
+   │   { username, password }    │
+   │                           │
+   │                           │ 1. Validate credentials
+   │                           │ 2. Sign JWT with private key
+   │                           │ 3. Return JWT
+   │←── { token: "eyJ..." } ───│
+   │                           │
+   │─── GET /profile ──────────→│
+   │   Authorization: Bearer ...│ 1. Verify JWT signature
+   │                           │ 2. Extract userId from payload
+   │                           │ 3. Return user data
+   │←── 200 OK (user data) ────│
+   │                           │
+   │─── GET /dashboard ────────→│
+   │   Authorization: Bearer ...│ 1. Verify JWT signature
+   │                           │ 2. Extract userId from payload
+   │                           │ 3. Return data
+   │←── 200 OK (dashboard) ────│
+</code></pre>
+<h3 id="when-to-choose-which"><a aria-hidden="true" tabindex="-1" href="#when-to-choose-which"><span class="icon icon-link"></span></a>When to choose which</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Recommended</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Traditional web app (server-rendered)</td>
+<td>Sessions</td>
+<td>Easier revocation, simpler</td>
+</tr>
+<tr>
+<td>SPA / Mobile app / Microservices</td>
+<td>JWT</td>
+<td>Stateless, no shared session store</td>
+</tr>
+<tr>
+<td>API with third-party clients</td>
+<td>JWT</td>
+<td>No session management overhead</td>
+</tr>
+<tr>
+<td>Need immediate logout/revocation</td>
+<td>Sessions</td>
+<td>Delete session = instant</td>
+</tr>
+<tr>
+<td>JWT with immediate revocation</td>
+<td>JWT + blacklist</td>
+<td>Extra complexity, Redis needed</td>
+</tr>
+<tr>
+<td>Long-lived authenticated sessions</td>
+<td>Sessions (Redis)</td>
+<td>Easy to manage, low client storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="refresh-tokens"><a aria-hidden="true" tabindex="-1" href="#refresh-tokens"><span class="icon icon-link"></span></a>Refresh tokens</h2>
+<p>JWT access tokens expire quickly (15 minutes). Refresh tokens allow the client to get a new access token without re-authenticating:</p>
+<pre><code>1. Login → Access Token (15 min) + Refresh Token (7 days)
+2. Access Token expires → Client uses Refresh Token to get new Access Token
+3. Refresh Token expires → User must log in again
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Login response</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "accessToken"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"eyJ..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,        </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Expires in 15 minutes</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "refreshToken"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"dGhpcyBpcyBh..."</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> // Expires in 7 days, stored server-side</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Access token expired → refresh</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">POST</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> /</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">api</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">auth</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">refresh</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "refreshToken"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"dGhpcyBpcyBh..."</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Response</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "accessToken"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"eyJ..."</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // New access token</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// If refresh token is invalid or expired</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "error"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Unauthorized"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  "message"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Please log in again"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h2 id="cookie-based-authentication-vs-token-based-authentication"><a aria-hidden="true" tabindex="-1" href="#cookie-based-authentication-vs-token-based-authentication"><span class="icon icon-link"></span></a>Cookie-based authentication vs Token-based authentication</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Cookie (Session)</th>
+<th>Token (JWT)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Cookie (httpOnly + Secure)</td>
+<td>Cookie or localStorage</td>
+</tr>
+<tr>
+<td><strong>CSRF</strong></td>
+<td>Protected by SameSite cookie attribute</td>
+<td>Not vulnerable (but origin check needed)</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Protected by HttpOnly flag</td>
+<td>Vulnerable if stored in localStorage</td>
+</tr>
+<tr>
+<td><strong>Server load</strong></td>
+<td>Requires session store lookup</td>
+<td>No lookup needed</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Shared store needed</td>
+<td>Stateless, any server can verify</td>
+</tr>
+<tr>
+<td><strong>CORS</strong></td>
+<td>Not applicable (same origin cookies)</td>
+<td>CORS headers needed</td>
+</tr>
+<tr>
+<td><strong>Mobile</strong></td>
+<td>Native apps cannot easily use cookies</td>
+<td>Works well on mobile</td>
+</tr>
+<tr>
+<td><strong>Revocation</strong></td>
+<td>Easy (delete session)</td>
+<td>Hard (need blacklist or wait for expiry)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication types</td>
+<td>[[10-authentication-api-keys-tokens]]</td>
+</tr>
+<tr>
+<td>HTTP methods</td>
+<td>[[05-http-deep-dive]]</td>
+</tr>
+<tr>
+<td>REST APIs</td>
+<td>[[11-rest-api]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>HTTP is stateless — cookies and sessions add state to HTTP.</li>
+<li><strong>Cookies</strong> are small key-value pairs stored in the browser with security attributes: <code>Secure</code>, <code>HttpOnly</code>, <code>SameSite</code>.</li>
+<li><strong>Sessions</strong> store state server-side; the session ID is sent as a cookie.</li>
+<li><strong>JWT</strong> is a stateless alternative: the token contains the user data and is self-contained.</li>
+<li><strong>Stateful</strong> (sessions) is better for traditional web apps; <strong>stateless</strong> (JWT) is better for APIs and distributed systems.</li>
+<li>Always use <code>Secure</code>, <code>HttpOnly</code>, and <code>SameSite</code> attributes on authentication cookies.</li>
+<li>Short-lived access tokens with refresh tokens is the recommended pattern for API authentication.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+There is no single best approach. Sessions are simpler and easier to revoke. JWTs are more scalable and better suited for distributed systems. Choose based on your architecture, not trends.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>

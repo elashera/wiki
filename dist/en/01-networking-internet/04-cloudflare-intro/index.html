@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection</h1> <div class="article-body"><h1 id="cloudflare-introduction"><a aria-hidden="true" tabindex="-1" href="#cloudflare-introduction"><span class="icon icon-link"></span></a>Cloudflare: Introduction</h1>
+<blockquote>
+<p>[!tip] Cloudflare in one sentence
+Cloudflare is a <strong>global reverse proxy</strong> that sits between your users and your server, offering CDN, DDoS protection, a web application firewall (WAF), DNS, and free SSL/TLS.</p>
+</blockquote>
+<h2 id="what-is-cloudflare"><a aria-hidden="true" tabindex="-1" href="#what-is-cloudflare"><span class="icon icon-link"></span></a>What is Cloudflare?</h2>
+<p>Cloudflare is a security and performance platform for the Internet. It is not just a CDN: it is a <strong>global security network</strong> with more than 300 data centers in 120+ cities. Its network absorbs and filters malicious traffic before it reaches your server.</p>
+<h3 id="what-does-reverse-proxy-mean"><a aria-hidden="true" tabindex="-1" href="#what-does-reverse-proxy-mean"><span class="icon icon-link"></span></a>What does "reverse proxy" mean?</h3>
+<p>A <strong>reverse proxy</strong> sits in front of your servers:</p>
+<pre><code>Internet          Cloudflare                    Your Server
+   │                    │                             │
+   ├─── HTTPS ────────→│  (Edge, WAF, CDN)           │
+   │                    │  Cache, compression,         │
+   │                    │  DDoS protection            │
+   │                    │  SSL/TLS termination        │
+   │                    │─── HTTP ───────────────────→│
+   │                    │   (no TLS, on your network) │
+   │←── HTTPS ─────────├─── HTTP ←───────────────────│
+   │                    │   (response from origin)    │
+</code></pre>
+<p><strong>Normal proxy</strong>: client → proxy → internet (the proxy acts on behalf of the client)
+<strong>Reverse proxy</strong>: internet → proxy → server (the proxy acts on behalf of the server)</p>
+<blockquote>
+<p>[!tip] Why a reverse proxy?
+Because your origin server can be on your local network (192.168.1.100), with arbitrary ports, without needing a public IP. Cloudflare exposes your site on the Internet, filters all traffic, and forwards it to your private server.</p>
+</blockquote>
+<h2 id="cloudflares-services"><a aria-hidden="true" tabindex="-1" href="#cloudflares-services"><span class="icon icon-link"></span></a>Cloudflare's services</h2>
+<h3 id="cdn-content-delivery-network"><a aria-hidden="true" tabindex="-1" href="#cdn-content-delivery-network"><span class="icon icon-link"></span></a>CDN (Content Delivery Network)</h3>
+<p>Cloudflare caches your content in data centers closest to your users:</p>
+<pre><code>Your server (Frankfurt, 100ms)
+         │
+         ├── Cloudflare Edge (Santiago, Chile, 20ms) ← User in Buenos Aires
+         ├── Cloudflare Edge (Mexico City, 30ms)     ← User in Mexico City
+         ├── Cloudflare Edge (Miami, 40ms)           ← User in New York
+         └── Cloudflare Edge (Amsterdam, 80ms)       ← User in London
+</code></pre>
+<p>Without CDN, a user in Buenos Aires would travel 200ms to Frankfurt. With Cloudflare, they travel 20ms to Santiago.</p>
+<p><strong>What gets cached:</strong></p>
+<ul>
+<li>Static files (CSS, JS, images, fonts)</li>
+<li>Content with <code>Cache-Control: public</code></li>
+<li>Static HTML pages</li>
+</ul>
+<p><strong>What does NOT get cached:</strong></p>
+<ul>
+<li>Dynamic pages (login, dashboard)</li>
+<li>APIs with personalized data</li>
+<li>Content with <code>Cache-Control: private</code> or <code>no-store</code></li>
+</ul>
+<h3 id="dns"><a aria-hidden="true" tabindex="-1" href="#dns"><span class="icon icon-link"></span></a>DNS</h3>
+<p>Cloudflare operates the fastest DNS resolvers in the world (1.1.1.1). It is also a full DNS provider with:</p>
+<ul>
+<li>DNS record management (A, AAAA, CNAME, MX, TXT, etc.)</li>
+<li>DNSSEC</li>
+<li>DNS-over-HTTPS and DNS-over-TLS</li>
+<li>DDoS protection at the DNS level</li>
+</ul>
+<h3 id="waf-web-application-firewall"><a aria-hidden="true" tabindex="-1" href="#waf-web-application-firewall"><span class="icon icon-link"></span></a>WAF (Web Application Firewall)</h3>
+<p>Cloudflare filters malicious traffic before it reaches your server:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IP Block</strong></td>
+<td>Blocks traffic from an IP or range</td>
+<td>Block traffic from a country</td>
+</tr>
+<tr>
+<td><strong>Rate Limiting</strong></td>
+<td>Limits requests per time window</td>
+<td>Max 100 requests/minute per IP</td>
+</tr>
+<tr>
+<td><strong>Bot Management</strong></td>
+<td>Detects and blocks malicious bots</td>
+<td>Block scrapers, brute-force</td>
+</tr>
+<tr>
+<td><strong>Geo Blocking</strong></td>
+<td>Blocks traffic by country/region</td>
+<td>Block traffic from certain countries</td>
+</tr>
+<tr>
+<td><strong>Custom WAF Rules</strong></td>
+<td>Rules based on headers, paths, user-agent</td>
+<td>Block <code>/wp-admin</code>, <code>/phpmyadmin</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="ddos-protection"><a aria-hidden="true" tabindex="-1" href="#ddos-protection"><span class="icon icon-link"></span></a>DDoS Protection</h3>
+<p>Cloudflare absorbs DDoS attacks before they reach your server. Its 300+ Tbps network can absorb attacks measured in terabits per second.</p>
+<table>
+<thead>
+<tr>
+<th>Attack type</th>
+<th>Description</th>
+<th>How Cloudflare mitigates it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Volumetric</strong></td>
+<td>Floods the network with traffic</td>
+<td>Its 300+ Tbps network absorbs the attack</td>
+</tr>
+<tr>
+<td><strong>Protocol</strong></td>
+<td>Exploits TCP/IP weaknesses (SYN flood)</td>
+<td>Completes the handshake on your behalf</td>
+</tr>
+<tr>
+<td><strong>Application</strong></td>
+<td>Saturates the application layer (HTTP flood)</td>
+<td>Caches content, rate limiting, JS challenge</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ssltls"><a aria-hidden="true" tabindex="-1" href="#ssltls"><span class="icon icon-link"></span></a>SSL/TLS</h3>
+<p>Cloudflare offers automatic and free SSL/TLS certificates:</p>
+<ul>
+<li><strong>Universal SSL</strong>: For <code>*.yourdomain.com</code>, issued by Let's Encrypt</li>
+<li><strong>Origin Certificate</strong>: Issued by Cloudflare, only for Cloudflare → Origin traffic</li>
+</ul>
+<h3 id="cloudflare-plans"><a aria-hidden="true" tabindex="-1" href="#cloudflare-plans"><span class="icon icon-link"></span></a>Cloudflare plans</h3>
+<table>
+<thead>
+<tr>
+<th>Plan</th>
+<th>Price</th>
+<th>Key features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Free</strong></td>
+<td>$0</td>
+<td>CDN, SSL, basic DDoS, 1 DNS zone</td>
+</tr>
+<tr>
+<td><strong>Pro</strong></td>
+<td>$20/zone/month</td>
+<td>Advanced WAF, Page Rules, Analytics, Bot Fight Mode</td>
+</tr>
+<tr>
+<td><strong>Business</strong></td>
+<td>$200/zone/month</td>
+<td>Custom WAF, Flexible SSL, Origin Server CS, Cache Reserve</td>
+</tr>
+<tr>
+<td><strong>Enterprise</strong></td>
+<td>Custom</td>
+<td>All of the above + SLA, advanced SSL, Cloudflare Load Balancer, Custom error pages</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] For personal projects
+The <strong>Free</strong> plan is surprisingly complete. For most personal and small projects, it is more than enough.</p>
+</blockquote>
+<h2 id="ssltls-modes-in-cloudflare"><a aria-hidden="true" tabindex="-1" href="#ssltls-modes-in-cloudflare"><span class="icon icon-link"></span></a>SSL/TLS modes in Cloudflare</h2>
+<h3 id="ssl-modes"><a aria-hidden="true" tabindex="-1" href="#ssl-modes"><span class="icon icon-link"></span></a>SSL modes</h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Description</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Off</strong></td>
+<td>No HTTPS at all</td>
+<td>Local testing, development</td>
+</tr>
+<tr>
+<td><strong>Flexible</strong></td>
+<td>Client ↔ Cloudflare (HTTPS), Cloudflare ↔ Origin (HTTP)</td>
+<td>Your origin does not have SSL configured</td>
+</tr>
+<tr>
+<td><strong>Full</strong></td>
+<td>Client ↔ Cloudflare (HTTPS), Cloudflare ↔ Origin (HTTPS)</td>
+<td>Your origin has SSL (auto-issued by Cloudflare)</td>
+</tr>
+<tr>
+<td><strong>Full (strict)</strong></td>
+<td>Same as Full, but verifies the origin's certificate is valid</td>
+<td><strong>RECOMMENDED</strong> for production</td>
+</tr>
+<tr>
+<td><strong>Strict</strong></td>
+<td>Same as Full strict, but rejects self-signed certificates</td>
+<td>Maximum security</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!caution] Flexible vs Full Strict</p>
+<ul>
+<li><strong>Flexible</strong> is dangerous: it creates a security bottleneck. Traffic between Cloudflare and your server is NOT encrypted.</li>
+<li><strong>Full (strict)</strong> is the right choice: encrypts the entire path. You need a valid certificate on your origin server.</li>
+<li>For production, <strong>always use Full (strict)</strong> with a valid certificate on the origin.</li>
+</ul>
+</blockquote>
+<h2 id="cloudflare-dns-records"><a aria-hidden="true" tabindex="-1" href="#cloudflare-dns-records"><span class="icon icon-link"></span></a>Cloudflare DNS records</h2>
+<p>When using Cloudflare as a proxy DNS:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Value</th>
+<th>Proxy status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Server IP</td>
+<td>Proxied (orange)</td>
+<td>Traffic passes through Cloudflare</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Server IP</td>
+<td>DNS only (gray)</td>
+<td>Traffic goes directly to the server</td>
+</tr>
+<tr>
+<td>CNAME</td>
+<td>other.domain.com</td>
+<td>Proxied</td>
+<td>Alias with proxy</td>
+</tr>
+<tr>
+<td>CAA</td>
+<td>0 issue "letsencrypt.org"</td>
+<td>DNS only</td>
+<td>SSL security</td>
+</tr>
+<tr>
+<td>TXT</td>
+<td>v=spf1...</td>
+<td>DNS only</td>
+<td>Email verification</td>
+</tr>
+<tr>
+<td>MX</td>
+<td>mail.domain.com</td>
+<td>DNS only (priority 10)</td>
+<td>Mail server</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!warning] Proxied vs DNS only</p>
+<ul>
+<li><strong>Proxied (orange)</strong>: Cloudflare intercepts all traffic. You get CDN, WAF, DDoS protection. But you cannot use arbitrary ports (only 80, 443, 2052, 2082, 2086, 2095).</li>
+<li><strong>DNS only (gray)</strong>: Cloudflare only answers DNS. Traffic goes directly to your server. Required for non-HTTP ports, SSH, etc.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>[!tip] Proxy on for web, off for everything else</p>
+<ul>
+<li><code>@</code> and <code>www</code>: Proxied (orange) → CDN, WAF, protection</li>
+<li><code>mail</code>: DNS only (gray) → Direct mail traffic</li>
+<li><code>spf</code>, <code>dkim</code>, <code>dmarc</code>: DNS only → Required for email</li>
+<li><code>acme-challenge</code>: DNS only → Required for Let's Encrypt</li>
+</ul>
+</blockquote>
+<h2 id="minimal-cloudflare-setup-configuring-dns"><a aria-hidden="true" tabindex="-1" href="#minimal-cloudflare-setup-configuring-dns"><span class="icon icon-link"></span></a>Minimal Cloudflare setup: configuring DNS</h2>
+<h3 id="step-by-step"><a aria-hidden="true" tabindex="-1" href="#step-by-step"><span class="icon icon-link"></span></a>Step by step</h3>
+<ol>
+<li><strong>Add your domain</strong> in Cloudflare (it asks you to change the nameservers)</li>
+<li><strong>Change the nameservers</strong> at your registrar (GoDaddy, Namecheap, etc.) to Cloudflare's:
+<ul>
+<li><code>earl.ns.cloudflare.com</code></li>
+<li><code>zita.ns.cloudflare.com</code>
+(these vary by zone)</li>
+</ul>
+</li>
+<li><strong>Wait for propagation</strong> (can take minutes to 48 hours)</li>
+<li><strong>Add your DNS records</strong> in Cloudflare</li>
+</ol>
+<h3 id="minimal-dns-records"><a aria-hidden="true" tabindex="-1" href="#minimal-dns-records"><span class="icon icon-link"></span></a>Minimal DNS records</h3>
+<pre><code>Type  Name              Value                Proxy
+────────────────────────────────────────────────────────────
+A     @                 YOUR_SERVER_IP        Proxied (orange)
+A     www               YOUR_SERVER_IP        Proxied (orange)
+CAA   @                 0 issue "letsencrypt.org"  DNS only
+TXT   @                 v=spf1 include:_spf.google.com ~all  DNS only
+MX    @                 mail.example.com      DNS only (priority 10)
+</code></pre>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>Cloudflare is a global reverse proxy with CDN, WAF, DDoS protection, and SSL/TLS</li>
+<li>It sits between your users and your server, filtering and optimizing traffic</li>
+<li>SSL modes range from Off (insecure) to Full Strict (secure)</li>
+<li>The WAF filters malicious traffic before it reaches your server</li>
+<li>DDoS protection absorbs attacks before they reach the origin</li>
+<li>Configure proxy for web, DNS only for everything else</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+Cloudflare is not "just a CDN". It is a firewall, CDN, DNS provider, SSL manager, and DDoS protector in a single product. And the free plan is surprisingly complete.</p>
+</blockquote>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept covered</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS in general</td>
+<td>[[03-dns-deep-dive]]</td>
+</tr>
+<tr>
+<td>SSL/TLS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Certificates</td>
+<td>[[08-lets-encrypt]]</td>
+</tr>
+<tr>
+<td>Nginx/Caddy as origin</td>
+<td>[[14-servers-processes]]</td>
+</tr>
+<tr>
+<td>Reverse proxy</td>
+<td>[[14-servers-processes]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

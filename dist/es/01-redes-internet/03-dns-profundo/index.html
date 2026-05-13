@@ -1,0 +1,457 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">DNS en profundidad</h1> <div class="article-body"><h1 id="dns-en-profundidad"><a aria-hidden="true" tabindex="-1" href="#dns-en-profundidad"><span class="icon icon-link"></span></a>DNS en profundidad</h1>
+<blockquote>
+<p>[!tip] DNS en una frase
+DNS (Domain Name System) es <strong>el libro de teléfono de Internet</strong>: traduce nombres que los humanos podemos recordar (<code>google.com</code>) a números que las máquinas entienden (<code>142.250.80.46</code>).</p>
+</blockquote>
+<h2 id="qué-es-dns"><a aria-hidden="true" tabindex="-1" href="#qué-es-dns"><span class="icon icon-link"></span></a>¿Qué es DNS?</h2>
+<p>DNS es un <strong>sistema de nombres de dominio distribuido y jerárquico</strong>. No es una base de datos centralizada (eso sería imposible a escala de Internet), sino una red de servidores que cooperan.</p>
+<h3 id="por-qué-dns"><a aria-hidden="true" tabindex="-1" href="#por-qué-dns"><span class="icon icon-link"></span></a>¿Por qué DNS?</h3>
+<p>Los humanos recordamos nombres: <code>google.com</code>, <code>github.com</code>. Las máquinas recuerdan números: <code>142.250.80.46</code>. DNS es el intermediario. Pero más que eso, DNS es también:</p>
+<ul>
+<li>Un <strong>sistema de configuración distribuido</strong>: Los MX, TXT, CAA, etc. permiten publicar metadatos sobre tu dominio.</li>
+<li>Una <strong>herramienta de balanceo de carga</strong>: Los records A pueden devolver múltiples IPs y el cliente elige una.</li>
+<li>Un <strong>mecanismo de failover</strong>: Con múltiples IPs, si una cae, el cliente prueba la siguiente.</li>
+</ul>
+<h3 id="la-jerarquía-de-nombres-de-dominio"><a aria-hidden="true" tabindex="-1" href="#la-jerarquía-de-nombres-de-dominio"><span class="icon icon-link"></span></a>La jerarquía de nombres de dominio</h3>
+<pre><code>                        . (root — el punto final, a menudo omitido)
+                       / \
+                      /   \
+                  .com    .org    .net    .es    .de ...
+                  /            \
+        ejemplo.com         wikipedia.org
+           /
+   www.ejemplo.com
+     /
+  server1.www.ejemplo.com
+</code></pre>
+<p>Cada nivel se llama <strong>label</strong>:</p>
+<ul>
+<li><code>server1</code> es un <strong>subdominio</strong> de <code>www</code></li>
+<li><code>www</code> es un <strong>subdominio</strong> de <code>ejemplo.com</code></li>
+<li><code>ejemplo.com</code> es un <strong>dominio de segundo nivel</strong> (SLD)</li>
+<li><code>.com</code> es un <strong>TLD</strong> (Top Level Domain)</li>
+<li>El punto final <code>.</code> es el <strong>root</strong> (raíz)</li>
+</ul>
+<blockquote>
+<p>[!tip] El punto final
+En DNS, <code>ejemplo.com.</code> con punto al final es técnicamente el nombre completo. El punto es el root. En la práctica, casi nunca lo escribimos porque el cliente DNS lo añade automáticamente.</p>
+</blockquote>
+<h2 id="tipos-de-registros-dns"><a aria-hidden="true" tabindex="-1" href="#tipos-de-registros-dns"><span class="icon icon-link"></span></a>Tipos de registros DNS</h2>
+<p>Cada nombre de dominio puede tener múltiples <strong>registros</strong> asociados. Estos son los más importantes:</p>
+<h3 id="registros-de-resolución-los-que-traducen-nombres"><a aria-hidden="true" tabindex="-1" href="#registros-de-resolución-los-que-traducen-nombres"><span class="icon icon-link"></span></a>Registros de resolución (los que traducen nombres)</h3>
+<table>
+<thead>
+<tr>
+<th>Registro</th>
+<th>Qué hace</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Dominio → dirección IPv4</td>
+<td><code>www → 93.184.216.34</code></td>
+</tr>
+<tr>
+<td><strong>AAAA</strong></td>
+<td>Dominio → dirección IPv6</td>
+<td><code>www → 2606:2800:220:1:248:1893:25c8:1946</code></td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>Alias: un nombre apunta a otro nombre</td>
+<td><code>www → ejemplo.com</code> (no a una IP)</td>
+</tr>
+<tr>
+<td><strong>NS</strong></td>
+<td>Nombre de servidor autoritativo</td>
+<td><code>ejemplo.com → ns1.registrar.com</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="a-vs-aaaa"><a aria-hidden="true" tabindex="-1" href="#a-vs-aaaa"><span class="icon icon-link"></span></a>A vs AAAA</h4>
+<pre><code>Dominio        Tipo    Valor
+─────────────────────────────────────────
+www.ejemplo.com  A       93.184.216.34    (IPv4)
+www.ejemplo.com  AAAA    2606:2800::1      (IPv6)
+</code></pre>
+<ul>
+<li><strong>A</strong>: Traduce a una dirección IPv4 (4 bytes = 32 bits, ej. 192.0.2.1)</li>
+<li><strong>AAAA</strong>: Traduce a una dirección IPv6 (16 bytes = 128 bits)</li>
+<li>Muchas páginas tienen ambos registros para ser accesibles desde IPv4 e IPv6</li>
+</ul>
+<blockquote>
+<p>[!tip] DNS equilibrado (round-robin)
+Un dominio puede tener múltiples registros A para la misma hostname:</p>
+<pre><code>www.ejemplo.com  A  93.184.216.34
+www.ejemplo.com  A  93.184.216.35
+www.ejemplo.com  A  93.184.216.36
+</code></pre>
+<p>El servidor DNS devuelve las IPs en orden rotativo. Esto es un balanceo de carga simple y sin estado.</p>
+</blockquote>
+<h4 id="cname-alias-canónico"><a aria-hidden="true" tabindex="-1" href="#cname-alias-canónico"><span class="icon icon-link"></span></a>CNAME (Alias canónico)</h4>
+<p>Un CNAME es un alias de <strong>otro nombre</strong>, no de una IP:</p>
+<pre><code>CNAME: www → example.com
+A: example.com → 93.184.216.34
+</code></pre>
+<p>Cuando consultas <code>www</code>, DNS primero busca el CNAME (<code>www → example.com</code>), luego busca el A de <code>example.com</code> (<code>93.184.216.34</code>).</p>
+<blockquote>
+<p>[!caution] Regla de los CNAME</p>
+<ul>
+<li>Un mismo nombre <strong>no puede</strong> tener un CNAME y otros registros (excepto DNSSEC y algunos específicos). Es un o un otro.</li>
+<li>Para evitar esto, existe el <strong>ALIAS</strong> (o ANAME) que es como un CNAME pero puede coexistir con otros registros. Es una extensión no estándar, pero muchos proveedores DNS lo soportan.</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>[!tip] CNAME vs A record</p>
+<ul>
+<li><strong>CNAME</strong>: Apunta a otro nombre. Más fácil de mantener (si la IP cambia, solo actualizas un lugar).</li>
+<li><strong>A record</strong>: Apunta directamente a una IP. Más rápido (un lookup menos).</li>
+<li>Para el dominio base (<code>@</code>), no puedes usar CNAME (RFC 1034). Usa ALIAS/ANAME o A record.</li>
+</ul>
+</blockquote>
+<h3 id="registros-de-correo"><a aria-hidden="true" tabindex="-1" href="#registros-de-correo"><span class="icon icon-link"></span></a>Registros de correo</h3>
+<table>
+<thead>
+<tr>
+<th>Registro</th>
+<th>Qué hace</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MX</strong></td>
+<td>Mail exchange — qué servidor recibe email para este dominio</td>
+<td><code>ejemplo.com → mail.ejemplo.com (prioridad 10)</code></td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td>Texto arbitrario — usado para verificación, SPF, DKIM, DMARC</td>
+<td><code>v=spf1 include:_spf.google.com ~all</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mx-mail-exchange"><a aria-hidden="true" tabindex="-1" href="#mx-mail-exchange"><span class="icon icon-link"></span></a>MX (Mail Exchange)</h4>
+<pre><code>Dominio        Tipo  Prioridad  Valor
+───────────────────────────────────────────────────
+ejemplo.com      MX  10         mail1.ejemplo.com
+ejemplo.com      MX  20         mail2.ejemplo.com
+</code></pre>
+<ul>
+<li>El valor es <strong>otro nombre de dominio</strong> (no una IP directa)</li>
+<li>La <strong>prioridad</strong> es numérica: <strong>menor número = mayor prioridad</strong>. Si el mail 1 no responde, se intenta el 2</li>
+<li>Puedes tener múltiples MX para redundancia</li>
+</ul>
+<h4 id="txt-text--más-que-texto-arbitrario"><a aria-hidden="true" tabindex="-1" href="#txt-text--más-que-texto-arbitrario"><span class="icon icon-link"></span></a>TXT (Text) — más que texto arbitrario</h4>
+<p>Los registros TXT se usan para <strong>verificación de dominio y seguridad de email</strong>:</p>
+<pre><code># Verificación de dominio (Google, Apple, etc.)
+google-site-verification=abc123def456
+
+# SPF (Sender Policy Framework) — quién puede enviar email en tu nombre
+@ v=spf1 include:_spf.google.com ~all
+
+# DKIM (DomainKeys Identified Mail) — firma criptográfica de emails
+default._domainkey v=DKIM1; k=rsa; p=MIGfMA0GCS...
+
+# DMARC — qué hacer con emails que fallan SPF/DKIM
+_dmarc v=DMARC1; p=reject; pct=100; rua=mailto:dmarc@ejemplo.com
+</code></pre>
+<ul>
+<li><strong>SPF</strong>: Lista de servidores autorizados para enviar emails. Si un email viene de un servidor no listado → posiblemente spam</li>
+<li><strong>DKIM</strong>: Cada email lleva una firma digital verificable con la clave pública del dominio (guardada en DNS)</li>
+<li><strong>DMARC</strong>: Política de qué hacer con los emails que no pasan SPF/DKIM (<code>none</code>, <code>quarantine</code>, <code>reject</code>)</li>
+</ul>
+<blockquote>
+<p>[!tip] Configuración recomendada de email</p>
+<ol>
+<li>Configura SPF (imprescindible)</li>
+<li>Configura DKIM (imprescindible)</li>
+<li>Configura DMARC en <code>p=none</code> primero, monitoriza, luego sube a <code>p=quarantine</code> y finalmente <code>p=reject</code></li>
+<li>Sin esto, tus emails pueden acabar en spam o ser suplantados</li>
+</ol>
+</blockquote>
+<h3 id="otros-registros-importantes"><a aria-hidden="true" tabindex="-1" href="#otros-registros-importantes"><span class="icon icon-link"></span></a>Otros registros importantes</h3>
+<table>
+<thead>
+<tr>
+<th>Registro</th>
+<th>Qué hace</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PTR</strong></td>
+<td>Reverse DNS — IP → nombre</td>
+<td>Verificación de servidores de correo</td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Servicio → ubicación (host:puerto)</td>
+<td>VoIP, XMPP, servicios internos</td>
+</tr>
+<tr>
+<td><strong>SOA</strong></td>
+<td>Start of Authority — metadata del dominio</td>
+<td>Serial, refresh, retry, expire, TTL mínimo</td>
+</tr>
+<tr>
+<td><strong>CAA</strong></td>
+<td>Certificate Authority Authorization — quién puede emitir certificados para tu dominio</td>
+<td>Seguridad SSL</td>
+</tr>
+</tbody>
+</table>
+<h4 id="soa-start-of-authority"><a aria-hidden="true" tabindex="-1" href="#soa-start-of-authority"><span class="icon icon-link"></span></a>SOA (Start of Authority)</h4>
+<p>Cada zona DNS tiene un registro SOA que contiene metadata administrativa:</p>
+<pre><code>ejemplo.com.  IN  SOA  ns1.ejemplo.com. admin.ejemplo.com. (
+    2024010101  ; Serial (aumenta cada vez que cambias algo)
+    3600        ; Refresh (cada cuánto el secundario consulta al primario)
+    900         ; Retry (si falla, reintentar después de 900s)
+    604800      ; Expire (si el secundario no puede contactar al primario, dejar de responder después de 7 días)
+    86400       ; Minimum TTL (TTL por defecto para registros sin TTL explícito)
+)
+</code></pre>
+<blockquote>
+<p>[!tip] El serial es crítico
+El serial se incrementa cada vez que cambias la configuración DNS. Formato recomendado: <code>YYYYMMDDNN</code> (año, mes, día, número de cambio ese día). Si subes la configuración DNS y no funciona, verifica que el serial se incrementó.</p>
+</blockquote>
+<h4 id="caa-certificate-authority-authorization"><a aria-hidden="true" tabindex="-1" href="#caa-certificate-authority-authorization"><span class="icon icon-link"></span></a>CAA (Certificate Authority Authorization)</h4>
+<pre><code>ejemplo.com.  IN  CAA  0 issue "letsencrypt.org"
+ejemplo.com.  IN  CAA  0 issue "digicert.com"
+</code></pre>
+<p>Esto dice: "Solo Let's Encrypt y DigiCert pueden emitir certificados para ejemplo.com". Sin CAA, cualquier CA puede emitir un certificado para tu dominio (lo cual es un riesgo de seguridad).</p>
+<blockquote>
+<p>[!warning] CAA y Let's Encrypt
+Si tienes un CAA que solo permite CA específicas, Let's Encrypt <strong>no podrá emitir certificados para tu dominio</strong>. Añade <code>0 issue "letsencrypt.org"</code> si quieres que funcione.</p>
+</blockquote>
+<h2 id="la-resolución-dns-en-detalle"><a aria-hidden="true" tabindex="-1" href="#la-resolución-dns-en-detalle"><span class="icon icon-link"></span></a>La resolución DNS en detalle</h2>
+<h3 id="resolución-recursiva-el-flujo-completo"><a aria-hidden="true" tabindex="-1" href="#resolución-recursiva-el-flujo-completo"><span class="icon icon-link"></span></a>Resolución recursiva (el flujo completo)</h3>
+<p>Cuando tu navegador necesita resolver <code>www.ejemplo.com</code>:</p>
+<pre><code>1. Navegador consulta su cache DNS (TTL: ~30s)
+   ├── Hit → Devuelve la IP directamente
+   └── Miss → Continua...
+
+2. SO (System Resolver) consulta su cache
+   ├── Hit → Devuelve la IP
+   └── Miss → Continua...
+
+3. Resolver DNS local (ISP o público: 1.1.1.1, 8.8.8.8)
+   ├── Hit en cache (TTL del resolver: puede ser horas)
+   │   └── Devuelve la IP al cliente (rápido!)
+   └── Miss → Resolución recursiva al sistema DNS global:
+                │
+                ▼
+        4. DNS Root Servers (13 grupos A-M)
+           │ → "Los TLD .com están en estos servidores..."
+           ▼
+        5. TLD Server (.com)
+           │ → "El authoritative de ejemplo.com está en ns1.ejemplo.com"
+           ▼
+        6. Authoritative DNS Server de ejemplo.com
+           │ → "www.ejemplo.com → 93.184.216.34"
+           │
+           ▼
+        7. El resolver local guarda en cache (TTL: 300s)
+        8. Devuelve la IP al cliente
+</code></pre>
+<h3 id="resolución-iterativa-entre-servidores-dns"><a aria-hidden="true" tabindex="-1" href="#resolución-iterativa-entre-servidores-dns"><span class="icon icon-link"></span></a>Resolución iterativa (entre servidores DNS)</h3>
+<p>Cuando los servidores DNS se preguntan entre sí, usan resolución iterativa:</p>
+<pre><code>Resolver (1.1.1.1) ──→ Root (A)  "No sé la de .com, pero aquí están los TLD .com"
+Resolver (1.1.1.1) ──→ TLD (.com) "No sé la de ejemplo.com, pero aquí está el authoritative"
+Resolver (1.1.1.1) ──→ Authoritative "www.ejemplo.com → 93.184.216.34"
+Resolver (1.1.1.1) ──→ Cliente "Aquí tienes: 93.184.216.34"
+</code></pre>
+<p>Cada servidor responde con:</p>
+<ol>
+<li>La respuesta (si la tiene)</li>
+<li><strong>NS records de los siguientes servidores</strong> para que el cliente pueda seguir preguntando</li>
+</ol>
+<h3 id="ttl-y-propagación"><a aria-hidden="true" tabindex="-1" href="#ttl-y-propagación"><span class="icon icon-link"></span></a>TTL y propagación</h3>
+<p>Cuando cambias un registro DNS:</p>
+<pre><code>T = 0: Cambias el registro DNS de 93.184.216.34 → 104.21.45.67
+T = +5min: Los resolvers con TTL de 300s ya olvidaron el valor viejo ✓
+T = +15min: Los resolvers con TTL de 900s olvidan el valor viejo ✓
+T = +1h: Todos los resolvers tienen el nuevo valor ✓
+</code></pre>
+<blockquote>
+<p>[!warning] Propagación DNS
+"La propagación DNS" no es mágica: es simplemente el tiempo que tarda en expirar el TTL de cada resolver. Si tu TTL era 86400 (24 horas), tardará 24 horas en propagarse completamente.</p>
+<p><strong>Regla de oro:</strong></p>
+<ul>
+<li><strong>Pre-cambio</strong>: Baja el TTL a 60s al menos 24h antes de hacer un cambio crítico</li>
+<li><strong>Post-cambio</strong>: Espera el TTL nuevo antes de asumir que todo está propagado</li>
+<li><strong>Para cambios urgentes</strong>: No puedes forzar la propagación. Solo puedes esperar o haber previsto con anticipación</li>
+</ul>
+</blockquote>
+<h3 id="dns-en-tu-sistema-operativo"><a aria-hidden="true" tabindex="-1" href="#dns-en-tu-sistema-operativo"><span class="icon icon-link"></span></a>DNS en tu sistema operativo</h3>
+<h4 id="linux"><a aria-hidden="true" tabindex="-1" href="#linux"><span class="icon icon-link"></span></a>Linux</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver qué resolver DNS usa tu sistema</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 1.1.1.1</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 8.8.8.8</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Consultar DNS desde la línea de comandos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">              # Consulta A</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> AAAA</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">         # Consulta AAAA</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> MX</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ejemplo.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">           # Consulta MX</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> TXT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Consulta TXT</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www.ejemplo.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> CNAME</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Consulta CNAME</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +trace</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Muestra toda la cadena de resolución</span></span></code></pre></figure>
+<h4 id="macos"><a aria-hidden="true" tabindex="-1" href="#macos"><span class="icon icon-link"></span></a>macOS</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">nslookup</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span></code></pre></figure>
+<h4 id="windows"><a aria-hidden="true" tabindex="-1" href="#windows"><span class="icon icon-link"></span></a>Windows</h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="cmd" data-theme="github-light github-dark"><code data-language="cmd" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">nslookup example.com</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ipconfig /displaydns   # Muestra la cache DNS del sistema</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">ipconfig /flushdns     # Limpia la cache DNS</span></span></code></pre></figure>
+<h4 id="comandos-útiles-de-dig"><a aria-hidden="true" tabindex="-1" href="#comandos-útiles-de-dig"><span class="icon icon-link"></span></a>Comandos útiles de <code>dig</code></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver la cadena completa de resolución</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +trace</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver solo la respuesta (sin toda la información extra)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +short</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 93.184.216.34</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver los tiempos de respuesta</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +stats</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Query time: 12 msec</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># SERVER: 1.1.1.1#53(1.1.1.1)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># WHEN: Thu May 11 12:00:00 CEST 2024</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># MSG SIZE  received: 112</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Forzar usar un resolver específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> @8.8.8.8</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span></code></pre></figure>
+<h3 id="dnssec"><a aria-hidden="true" tabindex="-1" href="#dnssec"><span class="icon icon-link"></span></a>DNSSEC</h3>
+<p>DNSSEC (DNS Security Extensions) añade <strong>firmas criptográficas</strong> a los registros DNS para verificar que la respuesta es legítima y no ha sido manipulada.</p>
+<h3 id="el-problema-dns-poisoning--spoofing"><a aria-hidden="true" tabindex="-1" href="#el-problema-dns-poisoning--spoofing"><span class="icon icon-link"></span></a>El problema: DNS poisoning / spoofing</h3>
+<p>Sin DNSSEC, un atacante en tu red puede:</p>
+<ol>
+<li>Interceptar tu consulta DNS</li>
+<li>Responder más rápido que el servidor legítimo</li>
+<li>Decirte "google.com → 666.666.666.666"</li>
+<li>Redirigirte a una página phishing</li>
+</ol>
+<h3 id="la-solución-dnssec"><a aria-hidden="true" tabindex="-1" href="#la-solución-dnssec"><span class="icon icon-link"></span></a>La solución: DNSSEC</h3>
+<p>DNSSEC firma cada zona DNS con <strong>claves criptográficas</strong>:</p>
+<pre><code>          Clave Pública DNSSEC (en el root)
+                │
+        Firma digital ✓
+                │
+        ┌───────┴────────┐
+        │                │
+   .com (TLD)      example.com (Zona)
+   Firma digital    Firma digital
+        │                │
+        └───────┬────────┘
+                │
+        Verificación de la cadena
+        desde el root hasta el registro
+</code></pre>
+<p><strong>Chain of trust</strong>: El root firma al TLD (.com), el TLD firma a la zona (ejemplo.com), la zona firma a sus registros. Cada eslabón se verifica desde arriba hacia abajo.</p>
+<blockquote>
+<p>[!note] DNSSEC ≠ HTTPS
+DNSSEC solo garantiza que la respuesta DNS es auténtica. No cifra la conexión. Para eso necesitas HTTPS/TLS. Son complementarios:</p>
+<ul>
+<li>DNSSEC → "la IP que me das es la verdadera"</li>
+<li>TLS → "la comunicación con esa IP está cifrada"</li>
+</ul>
+</blockquote>
+<h2 id="cdn-y-cloudflare"><a aria-hidden="true" tabindex="-1" href="#cdn-y-cloudflare"><span class="icon icon-link"></span></a>CDN y Cloudflare</h2>
+<p>Cloudflare es un proveedor de CDN que se posiciona <strong>entre tu usuario y tu servidor</strong>. Todo el tráfico pasa por Cloudflare antes de llegar a tu servidor.</p>
+<pre><code>Usuario                 Cloudflare                  Tu Servidor
+   │                         │                            │
+   ├─── HTTPS ──────────────→│                            │
+   │                         ├─── ¿En caché? ────────────→│
+   │                         │     SÍ → Devuelve caché   │
+   │                         │     NO → Pide al origin  │
+   │                         │                            │
+   │←── HTTPS ───────────────┤←── HTTP ──────────────────│
+   │                         │   (puerto 80/8080/etc.)   │
+</code></pre>
+<p>Esto permite:</p>
+<ul>
+<li><strong>Caché global</strong>: El contenido se sirve desde el edge más cercano al usuario (no desde tu servidor)</li>
+<li><strong>Protección DDoS</strong>: Cloudflare absorbe el ataque antes de que llegue a tu servidor</li>
+<li><strong>WAF</strong>: Firewall de aplicaciones web que filtra tráfico malicioso</li>
+<li><strong>SSL/TLS gratuito</strong>: Certificados automáticos con Let's Encrypt</li>
+<li><strong>Rate limiting</strong>: Limita cuántas peticiones puede hacer un usuario</li>
+</ul>
+<blockquote>
+<p>[!tip] Modo de proxy Cloudflare</p>
+<ul>
+<li><strong>DNS only (proxi desactivado)</strong>: Cloudflare solo responde DNS. El tráfico va directo al servidor. Sin CDN, sin WAF, sin protección.</li>
+<li><strong>Proxied (proxi activado)</strong>: El tráfico pasa por Cloudflare. Tienes CDN, WAF, DDoS protection, etc.</li>
+</ul>
+<p>Se indica con el icono de nube naranja (proxi) vs gris (solo DNS).</p>
+</blockquote>
+<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<ul>
+<li>DNS es jerárquico: root → TLD (.com) → dominio (ejemplo.com) → subdominio (www)</li>
+<li>Los registros A y AAAA traducen a IPs; CNAME crea aliases; MX gestiona email; TXT hace verificación y seguridad</li>
+<li>La resolución recursiva consulta: cache → resolver local → root → TLD → authoritative</li>
+<li>TTL controla cuánto tiempo se cachéa cada respuesta</li>
+<li>DNSSEC firma los registros DNS para prevenir spoofing</li>
+<li>Cloudflare posiciona entre usuario y servidor: CDN, WAF, protección DDoS</li>
+</ul>
+<blockquote>
+<p>[!quote] La clave
+DNS es un sistema distribuido, jerárquico y con caché. Cada nivel optimiza para un aspecto diferente: jerarquía para escalabilidad, distribución para no tener un único punto de fallo, caché para velocidad.</p>
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNS en la navegación</td>
+<td>[[02-como-navegar-de-url-a-pagina]]</td>
+</tr>
+<tr>
+<td>CDN y Cloudflare</td>
+<td>[[04-cloudflare-intro]]</td>
+</tr>
+<tr>
+<td>Let's Encrypt y certificados</td>
+<td>[[08-lets-encrypt]] (los certificados tienen CAA en DNS)</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>[[07-https-tls]]</td>
+</tr>
+<tr>
+<td>Nginx/Caddy como reverse proxy</td>
+<td>[[14-servidores-procesos]]</td>
+</tr>
+</tbody>
+</table></div> </div>  </div> </main>  </body></html>

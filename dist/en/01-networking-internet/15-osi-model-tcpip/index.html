@@ -1,0 +1,770 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+      <ul>
+        ${e.map((t,d)=>`
+          <li>
+            <a href="/${p}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
+    const path = window.location.pathname;
+    const url = new URL(path, window.location.origin);
+    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
+    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
+      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
+      if (langIndex !== -1) {
+        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
+      }
+    }
+    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
+    window.location.href = newPath;
+  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">OSI Model and TCP/IP: Layers, Protocols, Internal Functioning</h1> <div class="article-body"><h1 id="osi-model-and-tcpip-layers-protocols-internal-functioning"><a aria-hidden="true" tabindex="-1" href="#osi-model-and-tcpip-layers-protocols-internal-functioning"><span class="icon icon-link"></span></a>OSI Model and TCP/IP: Layers, Protocols, Internal Functioning</h1>
+<blockquote>
+<p>[!tip] OSI in a nutshell
+The OSI (Open Systems Interconnection) model is a conceptual framework of <strong>7 layers</strong> that describes how systems communicate over a network. Each layer has specific responsibilities and communicates with adjacent layers. This article covers every layer in detail.</p>
+</blockquote>
+<h2 id="what-is-the-osi-model"><a aria-hidden="true" tabindex="-1" href="#what-is-the-osi-model"><span class="icon icon-link"></span></a>What is the OSI model?</h2>
+<p>The <strong>OSI model</strong> was created by ISO in 1984 as a standard for understanding network communication. It divides communication into <strong>7 layers</strong>, each with well-defined responsibilities.</p>
+<p>It is not the model actually implemented in practice (TCP/IP is the real-world model), but it is fundamental for understanding networking concepts and diagnosing problems.</p>
+<h3 id="the-7-layers"><a aria-hidden="true" tabindex="-1" href="#the-7-layers"><span class="icon icon-link"></span></a>The 7 layers</h3>
+<pre><code>┌────────────────────────────────────────────┐
+│  7. Application    (HTTP, DNS, SMTP, FTP)  │ ← What the user sees
+│  6. Presentation   (SSL/TLS, encryption)   │ ← How data looks
+│  5. Session        (managing sessions)     │ ← How systems converse
+│  4. Transport      (TCP, UDP)              │ ← How data is sent
+│  3. Network        (IP, routing)           │ ← How data arrives
+│  2. Data Link      (Ethernet, WiFi, MAC)   │ ← How data moves on cable
+│  1. Physical       (cables, fiber, WiFi)   │ ← The physical bits
+└────────────────────────────────────────────┘
+</code></pre>
+<blockquote>
+<p>[!tip] Mnemonic
+From top to bottom: <strong>"All People Seem To Need Data Processing"</strong></p>
+<ol>
+<li><strong>A</strong>pplication → 2. <strong>P</strong>resentation → 3. <strong>S</strong>ession → 4. <strong>T</strong>ransport → 5. <strong>N</strong>etwork → 6. <strong>D</strong>ata Link → 7. <strong>P</strong>hysical</li>
+</ol>
+</blockquote>
+<h2 id="layer-7-application"><a aria-hidden="true" tabindex="-1" href="#layer-7-application"><span class="icon icon-link"></span></a>Layer 7: Application</h2>
+<p>The application layer is the only layer that <strong>interacts directly with user software</strong>. This is where protocols we use every day live: HTTP, DNS, SMTP, FTP, SSH, WebSocket.</p>
+<p><strong>Responsibility:</strong> Provide network services directly to applications.</p>
+<p><strong>Protocols:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Port</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTP</td>
+<td>80</td>
+<td>Web transfer</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>Encrypted web transfer</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>Name resolution</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>Email sending</td>
+</tr>
+<tr>
+<td>IMAP</td>
+<td>993</td>
+<td>Email receiving</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>Secure remote access</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>21</td>
+<td>File transfer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-application-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-application-layer-does"><span class="icon icon-link"></span></a>What the application layer does</h3>
+<p>The application layer defines:</p>
+<ul>
+<li><strong>Data format</strong>: How the message is structured (JSON, XML, HTML, binary)</li>
+<li><strong>Semantics</strong>: What the data means (GET = retrieve, POST = create)</li>
+<li><strong>Error reporting</strong>: How to report errors to the user</li>
+<li><strong>Session establishment</strong>: How to start/end a conversation with another application</li>
+</ul>
+<pre><code>Application layer PDU (Protocol Data Unit) = MESSAGE
+Example: "GET /index.html HTTP/1.1\r\nHost: example.com\r\n\r\n"
+</code></pre>
+<h2 id="layer-6-presentation"><a aria-hidden="true" tabindex="-1" href="#layer-6-presentation"><span class="icon icon-link"></span></a>Layer 6: Presentation</h2>
+<p>The presentation layer is responsible for <strong>data translation, encryption, and compression</strong>. It ensures that data sent by the application layer of one system can be read by the application layer of another system.</p>
+<h3 id="what-the-presentation-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-presentation-layer-does"><span class="icon icon-link"></span></a>What the presentation layer does</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Encryption</strong></td>
+<td>Encrypts data for confidentiality</td>
+<td>TLS/SSL, IPsec</td>
+</tr>
+<tr>
+<td><strong>Decryption</strong></td>
+<td>Decrypts received data</td>
+<td>TLS/SSL, IPsec</td>
+</tr>
+<tr>
+<td><strong>Compression</strong></td>
+<td>Reduces data size for transfer</td>
+<td>gzip, JPEG, MPEG</td>
+</tr>
+<tr>
+<td><strong>Decompression</strong></td>
+<td>Restores compressed data</td>
+<td>gunzip, JPEG decode</td>
+</tr>
+<tr>
+<td><strong>Translation</strong></td>
+<td>Converts data formats</td>
+<td>JSON ↔ XML, ASCII ↔ UTF-8</td>
+</tr>
+</tbody>
+</table>
+<h3 id="encryption-in-practice-tls-at-the-presentation-layer"><a aria-hidden="true" tabindex="-1" href="#encryption-in-practice-tls-at-the-presentation-layer"><span class="icon icon-link"></span></a>Encryption in practice (TLS at the Presentation layer)</h3>
+<pre><code>Before sending (encrypt):
+  Plain text:  "GET /index.html HTTP/1.1"
+  ↓ TLS encrypts
+  Cipher text: "U8x#kLm!pQz$7yR$tWn@jHv"
+
+After receiving (decrypt):
+  Cipher text: "U8x#kLm!pQz$7yR$tWn@jHv"
+  ↓ TLS decrypts
+  Plain text:  "GET /index.html HTTP/1.1"
+</code></pre>
+<blockquote>
+<p>[!note] TLS as presentation layer
+While TLS operates at the boundary between layers 4 and 5, it is most commonly associated with the presentation layer because its job is to transform (encrypt) data before handing it to the session/application layer.</p>
+</blockquote>
+<h3 id="compression"><a aria-hidden="true" tabindex="-1" href="#compression"><span class="icon icon-link"></span></a>Compression</h3>
+<pre><code>Original data (HTML page): 50,000 bytes
+After gzip compression:     12,000 bytes (76% reduction)
+After brotli compression:   10,500 bytes (79% reduction)
+
+HTTP header: Accept-Encoding: gzip, br
+→ Server sends compressed data
+→ Browser decompresses and renders
+</code></pre>
+<h3 id="translation"><a aria-hidden="true" tabindex="-1" href="#translation"><span class="icon icon-link"></span></a>Translation</h3>
+<pre><code>Client sends: {"name": "José", "lang": "es"} (UTF-8)
+Server receives: {"name": "José", "lang": "es"} (UTF-8)
+
+If the client and server use different character encodings:
+  Client: Windows-1252 → "José"
+  Server: UTF-8 → "JosÃ©" (garbled without proper encoding)
+
+The presentation layer handles the conversion so the application sees
+the correct data regardless of encoding differences.
+</code></pre>
+<h2 id="layer-5-session"><a aria-hidden="true" tabindex="-1" href="#layer-5-session"><span class="icon icon-link"></span></a>Layer 5: Session</h2>
+<p>The session layer establishes, manages, and terminates <strong>connections (sessions)</strong> between applications.</p>
+<h3 id="what-the-session-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-session-layer-does"><span class="icon icon-link"></span></a>What the session layer does</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Session establishment</strong></td>
+<td>Start a conversation between applications</td>
+<td>TCP three-way handshake</td>
+</tr>
+<tr>
+<td><strong>Session management</strong></td>
+<td>Maintain state during the conversation</td>
+<td>Keep-alive, session cookies</td>
+</tr>
+<tr>
+<td><strong>Session termination</strong></td>
+<td>End the conversation cleanly</td>
+<td>TCP FIN handshake</td>
+</tr>
+<tr>
+<td><strong>Dialog control</strong></td>
+<td>Coordinate who talks when</td>
+<td>Half-duplex vs full-duplex</td>
+</tr>
+<tr>
+<td><strong>Synchronization</strong></td>
+<td>Insert checkpoints for recovery</td>
+<td>FTP checkpoint/restore</td>
+</tr>
+</tbody>
+</table>
+<h3 id="session-management-in-practice"><a aria-hidden="true" tabindex="-1" href="#session-management-in-practice"><span class="icon icon-link"></span></a>Session management in practice</h3>
+<pre><code># Session cookies (Layer 7 + 5 working together)
+Server → Browser: Set-Cookie: session_id=xyz789; Path=/; HttpOnly; Secure
+
+Browser → Server (every subsequent request):
+Cookie: session_id=xyz789
+
+Server looks up session_id=xyz789 → finds user data → serves personalized content
+</code></pre>
+<h3 id="session-examples"><a aria-hidden="true" tabindex="-1" href="#session-examples"><span class="icon icon-link"></span></a>Session examples</h3>
+<pre><code>Telnet session:
+  1. Client connects to server:telnet → Session established
+  2. User types commands → Session active
+  3. User disconnects → Session terminated
+
+HTTP keep-alive:
+  1. Client opens TCP connection → Session starts
+  2. Multiple HTTP requests on same connection → Session continues
+  3. Connection times out or closes → Session ends
+</code></pre>
+<h2 id="layer-4-transport"><a aria-hidden="true" tabindex="-1" href="#layer-4-transport"><span class="icon icon-link"></span></a>Layer 4: Transport</h2>
+<p>The transport layer is responsible for <strong>end-to-end communication</strong>, reliability, flow control, and congestion control.</p>
+<h3 id="two-transport-protocols"><a aria-hidden="true" tabindex="-1" href="#two-transport-protocols"><span class="icon icon-link"></span></a>Two transport protocols</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>TCP (Transmission Control Protocol)</th>
+<th>UDP (User Datagram Protocol)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reliability</strong></td>
+<td>Guaranteed delivery</td>
+<td>Best-effort (may lose packets)</td>
+</tr>
+<tr>
+<td><strong>Order</strong></td>
+<td>Data arrives in order</td>
+<td>No order guarantee</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Slower (acknowledgment overhead)</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td><strong>Connection</strong></td>
+<td>Connection-oriented (handshake)</td>
+<td>Connectionless</td>
+</tr>
+<tr>
+<td><strong>Flow control</strong></td>
+<td>Yes (window size)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Congestion control</strong></td>
+<td>Yes (slow start, congestion avoidance)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Header size</strong></td>
+<td>20–60 bytes</td>
+<td>8 bytes</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Web, email, file transfer</td>
+<td>Streaming, VoIP, DNS, gaming</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tcp-header-structure"><a aria-hidden="true" tabindex="-1" href="#tcp-header-structure"><span class="icon icon-link"></span></a>TCP header structure</h3>
+<pre><code>TCP Header (20 bytes minimum):
+┌─────────────────────────────────────────────────────┐
+│  Source Port   │  Destination Port   │  Sequence #   │
+│  (16 bits)     │  (16 bits)          │  (32 bits)    │
+├─────────────────────────────────────────────────────┤
+│  Ack Number    │  Data Offset │ R |W|S|R|P|S|S|H|T|R|C│
+│  (32 bits)     │  (4 bits)    │ F|A|F|R|F|F|F|E|N|N│ │
+├─────────────────────────────────────────────────────┤
+│  Window Size   │  Checksum   │ Urgent Pointer │      │
+│  (16 bits)     │  (16 bits)  │  (16 bits)     │      │
+├─────────────────────────────────────────────────────┤
+│                    Options (optional)                │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Key fields:</strong></p>
+<ul>
+<li><strong>Sequence number</strong>: Tracks the order of bytes sent</li>
+<li><strong>Acknowledgment number</strong>: Tells the sender which byte was received next</li>
+<li><strong>Window size</strong>: How many bytes the receiver can accept (flow control)</li>
+<li><strong>Flags</strong>: SYN, ACK, FIN, RST, PSH, URG (control connection state)</li>
+<li><strong>Checksum</strong>: Error detection for the header and data</li>
+</ul>
+<h3 id="tcp-connection-states"><a aria-hidden="true" tabindex="-1" href="#tcp-connection-states"><span class="icon icon-link"></span></a>TCP connection states</h3>
+<pre><code>Client side:
+  CLOSED → SYN_SENT → ESTABLISHED → FIN_WAIT_1 → FIN_WAIT_2 → TIME_WAIT → CLOSED
+
+Server side:
+  CLOSED → LISTEN → SYN_RCVD → ESTABLISHED → CLOSE_WAIT → LAST_ACK → CLOSED
+
+3-way handshake:
+  Client:  SYN ───────────────────→ Server
+  Server:  SYN-ACK ────────────────→ Client
+  Client:  ACK ────────────────────→ Server
+
+4-way teardown:
+  Client:  FIN ───────────────────→ Server  (client done sending)
+  Server:  ACK ────────────────────→ Client  (got the FIN)
+  Server:  FIN ───────────────────→ Client  (server done sending)
+  Client:  ACK ────────────────────→ Server  (got the FIN)
+</code></pre>
+<h3 id="tcp-flow-control-window-size"><a aria-hidden="true" tabindex="-1" href="#tcp-flow-control-window-size"><span class="icon icon-link"></span></a>TCP flow control (window size)</h3>
+<pre><code>Receiver has 10,000 bytes of buffer space available.
+
+Client sends: "I can receive 10,000 bytes (window size = 10000)"
+Server sends: up to 10,000 bytes before waiting for ACK
+Receiver sends: "My window is now 5,000 bytes" (processed half)
+Server adjusts: sends up to 5,000 bytes
+
+If window = 0 → sender stops (receiver buffer full)
+</code></pre>
+<h3 id="tcp-congestion-control"><a aria-hidden="true" tabindex="-1" href="#tcp-congestion-control"><span class="icon icon-link"></span></a>TCP congestion control</h3>
+<pre><code>TCP uses congestion control to avoid overwhelming the network:
+
+1. Slow Start:
+   - Start with small window (1-2 MSS)
+   - Double the window every RTT (exponential growth)
+   - Until congestion threshold is reached
+
+2. Congestion Avoidance:
+   - Increase window by 1 MSS per RTT (linear growth)
+   - Gradual, conservative approach
+
+3. Fast Retransmit:
+   - If 3 duplicate ACKs arrive, retransmit immediately
+   - Don't wait for timeout
+
+4. Fast Recovery:
+   - Reduce window size after fast retransmit
+   - Enter congestion avoidance mode
+
+Slow Start → (congestion) → Congestion Avoidance → (dup ACKs) → Fast Retransmit
+         → (timeout) → Congestion Avoidance → Slow Start
+</code></pre>
+<h2 id="layer-3-network"><a aria-hidden="true" tabindex="-1" href="#layer-3-network"><span class="icon icon-link"></span></a>Layer 3: Network</h2>
+<p>The network layer is responsible for <strong>logical addressing and routing</strong>.</p>
+<h3 id="what-the-network-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-network-layer-does"><span class="icon icon-link"></span></a>What the network layer does</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Logical addressing</strong></td>
+<td>Assigns IP addresses</td>
+<td>IPv4, IPv6</td>
+</tr>
+<tr>
+<td><strong>Routing</strong></td>
+<td>Finds the best path between networks</td>
+<td>OSPF, BGP, EIGRP</td>
+</tr>
+<tr>
+<td><strong>Fragmentation</strong></td>
+<td>Splits packets to fit MTU</td>
+<td>IP</td>
+</tr>
+<tr>
+<td><strong>Packet forwarding</strong></td>
+<td>Moves packets from one interface to another</td>
+<td>IP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ipv4-packet-structure"><a aria-hidden="true" tabindex="-1" href="#ipv4-packet-structure"><span class="icon icon-link"></span></a>IPv4 packet structure</h3>
+<pre><code>IP Header (20 bytes minimum):
+┌──────────────────────────────────────────────────────────┐
+│  Version (4) │ IHL (4) │  DSCP (6) │ ECN (2) │         │
+├──────────────────────────────────────────────────────────┤
+│              Total Length (16 bits)                       │
+├──────────────────────────────────────────────────────────┤
+│  Identification (16) │ Flags (3) │ Fragment Offset (13)  │
+├──────────────────────────────────────────────────────────┤
+│   TTL (8)  │  Protocol (8) │     Header Checksum (16)    │
+├──────────────────────────────────────────────────────────┤
+│                   Source IP Address (32 bits)             │
+├──────────────────────────────────────────────────────────┤
+│                  Destination IP Address (32 bits)         │
+├──────────────────────────────────────────────────────────┤
+│                    Options (optional)                     │
+└──────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="routing-at-layer-3"><a aria-hidden="true" tabindex="-1" href="#routing-at-layer-3"><span class="icon icon-link"></span></a>Routing at Layer 3</h3>
+<pre><code>Packet travels:
+  Client (192.168.1.5) → Router (192.168.1.1) → ISP → Internet → Server (93.184.216.34)
+
+Each router makes a forwarding decision based on the destination IP:
+
+Router 1: "Destination 93.184.216.34 → Next hop: 10.0.0.1 (ISP)"
+Router 2: "Destination 93.184.216.34 → Next hop: 172.16.0.1 (Peer ISP)"
+Router 3: "Destination 93.184.216.34 → Next hop: 10.1.0.5 (Cloudflare)"
+Router 4: "Destination 93.184.216.34 → Directly connected → Deliver to 93.184.216.34"
+</code></pre>
+<h3 id="icmp-internet-control-message-protocol"><a aria-hidden="true" tabindex="-1" href="#icmp-internet-control-message-protocol"><span class="icon icon-link"></span></a>ICMP (Internet Control Message Protocol)</h3>
+<p>ICMP is a Layer 3 protocol used for diagnostics:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ping uses ICMP Echo Request / Echo Reply</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ping</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 93.184.216.34</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># PING 93.184.216.34 (93.184.216.34): 56 data bytes</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 64 bytes from 93.184.216.34: icmp_seq=0 ttl=56 time=42.3 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 64 bytes from 93.184.216.34: icmp_seq=1 ttl=56 time=38.7 ms</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Traceroute uses ICMP Time Exceeded messages</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">traceroute</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 93.184.216.34</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  1  192.168.1.1 (192.168.1.1)  1.234 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  2  10.0.0.1 (10.0.0.1)  5.678 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  3  172.16.0.1 (172.16.0.1)  23.456 ms</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  ...</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 12  93.184.216.34 (93.184.216.34)  42.345 ms</span></span></code></pre></figure>
+<h2 id="layer-2-data-link"><a aria-hidden="true" tabindex="-1" href="#layer-2-data-link"><span class="icon icon-link"></span></a>Layer 2: Data Link</h2>
+<p>The data link layer is responsible for <strong>physical addressing and error detection</strong> on a local network segment.</p>
+<h3 id="what-the-data-link-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-data-link-layer-does"><span class="icon icon-link"></span></a>What the data link layer does</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical addressing</strong></td>
+<td>MAC addresses (48-bit)</td>
+<td>IEEE 802</td>
+</tr>
+<tr>
+<td><strong>Framing</strong></td>
+<td>Packages data into frames</td>
+<td>Ethernet, PPP</td>
+</tr>
+<tr>
+<td><strong>Error detection</strong></td>
+<td>CRC checksums</td>
+<td>Ethernet FCS</td>
+</tr>
+<tr>
+<td><strong>Flow control</strong></td>
+<td>regulates data rate</td>
+<td>IEEE 802.3</td>
+</tr>
+<tr>
+<td><strong>Access control</strong></td>
+<td>Who can transmit on the medium</td>
+<td>CSMA/CD, CSMA/CA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ethernet-frame-structure"><a aria-hidden="true" tabindex="-1" href="#ethernet-frame-structure"><span class="icon icon-link"></span></a>Ethernet frame structure</h3>
+<pre><code>Ethernet Frame:
+┌──────────────────────────────────────────────────────────────┐
+│  Preamble (8 bytes) │ Destination MAC (6) │ Source MAC (6) │
+├──────────────────────────────────────────────────────────────┤
+│  Type (2) │          Payload (46-1500 bytes)               │
+├──────────────────────────────────────────────────────────────┤
+│  Frame Check Sequence (FCS) (4 bytes)                        │
+└──────────────────────────────────────────────────────────────┘
+
+Type field:
+  0x0800 → IPv4
+  0x86DD → IPv6
+  0x0806 → ARP
+  0x8100 → VLAN-tagged
+
+MAC address: 6 bytes (48 bits), unique to the network interface
+Format: 00:1A:2B:3C:4D:5E
+  First 3 bytes = Organizationally Unique Identifier (OUI)
+  Last 3 bytes = Network interface controller (NIC) specific
+</code></pre>
+<h3 id="arp-address-resolution-protocol"><a aria-hidden="true" tabindex="-1" href="#arp-address-resolution-protocol"><span class="icon icon-link"></span></a>ARP (Address Resolution Protocol)</h3>
+<p>ARP maps IP addresses to MAC addresses on the local network:</p>
+<pre><code># Device A wants to send data to Device B
+# Device A knows: 192.168.1.10 (IP of B)
+# Device A needs: MAC address of B
+
+# ARP Request (broadcast):
+"Who has 192.168.1.10? Tell 192.168.1.5"
+Dest MAC: FF:FF:FF:FF:FF:FF (broadcast to all devices)
+
+# ARP Reply (unicast):
+"I have 192.168.1.10, my MAC is AA:BB:CC:DD:EE:FF"
+Dest MAC: AA:BB:CC:DD:EE:FF (to Device A)
+
+# Device A caches the mapping:
+192.168.1.10 → AA:BB:CC:DD:EE:FF (TTL: 15 minutes)
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># View ARP cache</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> neigh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> show</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 192.168.1.1 dev eth0 lladdr aa:bb:cc:dd:ee:ff REACHABLE</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 192.168.1.10 dev eth0 lladdr 11:22:33:44:55:66 STALE</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Clear ARP cache</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> neigh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> flush</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> all</span></span></code></pre></figure>
+<h2 id="layer-1-physical"><a aria-hidden="true" tabindex="-1" href="#layer-1-physical"><span class="icon icon-link"></span></a>Layer 1: Physical</h2>
+<p>The physical layer is responsible for <strong>transmitting raw bits over a physical medium</strong>.</p>
+<h3 id="what-the-physical-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-physical-layer-does"><span class="icon icon-link"></span></a>What the physical layer does</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bits to signals</strong></td>
+<td>Converts digital data to physical signals</td>
+<td>Electrical, optical, RF</td>
+</tr>
+<tr>
+<td><strong>Signal encoding</strong></td>
+<td>How bits are represented</td>
+<td>NRZ, Manchester encoding</td>
+</tr>
+<tr>
+<td><strong>Physical topology</strong></td>
+<td>How devices are connected</td>
+<td>Bus, star, mesh, ring</td>
+</tr>
+<tr>
+<td><strong>Transmission mode</strong></td>
+<td>Direction of data flow</td>
+<td>Simplex, half-duplex, full-duplex</td>
+</tr>
+<tr>
+<td><strong>Hardware</strong></td>
+<td>Cables, connectors, transceivers</td>
+<td>RJ45, fiber optic, antennas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="physical-media"><a aria-hidden="true" tabindex="-1" href="#physical-media"><span class="icon icon-link"></span></a>Physical media</h3>
+<table>
+<thead>
+<tr>
+<th>Medium</th>
+<th>Speed</th>
+<th>Distance</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Twisted pair (Cat 5e)</strong></td>
+<td>1 Gbps</td>
+<td>100m</td>
+<td>Ethernet cables</td>
+</tr>
+<tr>
+<td><strong>Twisted pair (Cat 6)</strong></td>
+<td>10 Gbps</td>
+<td>55m</td>
+<td>Modern Ethernet</td>
+</tr>
+<tr>
+<td><strong>Fiber optic (single-mode)</strong></td>
+<td>100+ Gbps</td>
+<td>100km+</td>
+<td>Long-haul, data centers</td>
+</tr>
+<tr>
+<td><strong>Fiber optic (multi-mode)</strong></td>
+<td>40 Gbps</td>
+<td>550m</td>
+<td>Short-range data centers</td>
+</tr>
+<tr>
+<td><strong>Coaxial cable</strong></td>
+<td>1 Gbps</td>
+<td>500m</td>
+<td>Cable Internet</td>
+</tr>
+<tr>
+<td><strong>Radio (WiFi)</strong></td>
+<td>1-10 Gbps</td>
+<td>50-300m</td>
+<td>WiFi 6/6E/7</td>
+</tr>
+<tr>
+<td><strong>Radio (5G)</strong></td>
+<td>1-20 Gbps</td>
+<td>1-10 km</td>
+<td>Cellular</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-encapsulation-a-complete-example"><a aria-hidden="true" tabindex="-1" href="#data-encapsulation-a-complete-example"><span class="icon icon-link"></span></a>Data encapsulation: A complete example</h2>
+<p>When you send an HTTP request, data passes through all 7 layers:</p>
+<pre><code>Layer 7 - Application:
+  "GET /index.html HTTP/1.1\r\nHost: example.com\r\n\r\n"
+  (HTTP message)
+
+Layer 6 - Presentation:
+  [Encrypted by TLS]: "U8x#kLm!pQz$7yR$tWn@jHv..."
+  (encrypted HTTP)
+
+Layer 5 - Session:
+  [Session identifier added]: {session_id: "xyz789"}
+  (encrypted HTTP + session)
+
+Layer 4 - Transport (TCP):
+  [TCP Header: src=54321, dst=443, seq=1000, ack=0, flags=SYN]
+  + encrypted HTTP + session
+  → TCP Segment
+
+Layer 3 - Network (IP):
+  [IP Header: src=192.168.1.5, dst=93.184.216.34, TTL=64]
+  + TCP Segment
+  → IP Packet
+
+Layer 2 - Data Link (Ethernet):
+  [Ethernet Header: dst=AA:BB:CC:11:22:33, src=DD:EE:FF:44:55:66, type=0x0800]
+  + IP Packet + FCS
+  → Ethernet Frame
+
+Layer 1 - Physical:
+  [Bits]: 01011010...
+  → Electrical/optical/RF signals sent over the cable
+</code></pre>
+<pre><code>At the receiving server:
+
+Layer 1: Convert signals to bits
+Layer 2: Strip Ethernet header, verify FCS
+Layer 3: Strip IP header, check destination IP
+Layer 4: Strip TCP header, reassemble data stream
+Layer 5: Check session identifier
+Layer 6: Decrypt TLS
+Layer 7: Parse HTTP message → "GET /index.html HTTP/1.1"
+</code></pre>
+<h2 id="comparison-osi-vs-tcpip"><a aria-hidden="true" tabindex="-1" href="#comparison-osi-vs-tcpip"><span class="icon icon-link"></span></a>Comparison: OSI vs TCP/IP</h2>
+<table>
+<thead>
+<tr>
+<th>OSI Model (7 layers)</th>
+<th>TCP/IP Model (4 layers)</th>
+<th>Internet Protocols</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7. Application</td>
+<td>4. Application</td>
+<td>HTTP, DNS, SMTP, SSH, FTP, TLS</td>
+</tr>
+<tr>
+<td>6. Presentation</td>
+<td></td>
+<td>SSL/TLS, JPEG, GIF, ASCII/UTF-8</td>
+</tr>
+<tr>
+<td>5. Session</td>
+<td></td>
+<td>NetBIOS, RPC, SQL session</td>
+</tr>
+<tr>
+<td>4. Transport</td>
+<td>3. Transport</td>
+<td>TCP, UDP</td>
+</tr>
+<tr>
+<td>3. Network</td>
+<td>2. Internet</td>
+<td>IP, ICMP, ARP, IGMP</td>
+</tr>
+<tr>
+<td>2. Data Link</td>
+<td>1. Network Access</td>
+<td>Ethernet, WiFi (802.11), PPP, VLAN</td>
+</tr>
+<tr>
+<td>1. Physical</td>
+<td></td>
+<td>Cables, fiber, wireless</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!tip] Which model to use?</p>
+<ul>
+<li><strong>OSI</strong> is useful for teaching, troubleshooting, and understanding network layers conceptually.</li>
+<li><strong>TCP/IP</strong> is the model actually implemented in every network. Use it for practical work.</li>
+<li>When diagnosing a problem, thinking in OSI layers helps you identify which layer is failing.</li>
+</ul>
+</blockquote>
+<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>In-depth article</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is Internet</td>
+<td>[[01-what-is-internet]]</td>
+</tr>
+<tr>
+<td>URL to page journey</td>
+<td>[[02-url-to-page-journey]]</td>
+</tr>
+<tr>
+<td>Routing and subnetting</td>
+<td>[[16-routing-subnetting]]</td>
+</tr>
+<tr>
+<td>Servers and processes</td>
+<td>[[14-servers-processes]]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<ul>
+<li>The <strong>OSI model</strong> has 7 layers, each with specific responsibilities.</li>
+<li><strong>Layer 7 (Application)</strong>: HTTP, DNS, SMTP — protocols the user interacts with.</li>
+<li><strong>Layer 6 (Presentation)</strong>: Encryption (TLS), compression (gzip), encoding (UTF-8).</li>
+<li><strong>Layer 5 (Session)</strong>: Manages connections, keeps state across requests.</li>
+<li><strong>Layer 4 (Transport)</strong>: TCP (reliable, ordered) vs UDP (fast, unordered).</li>
+<li><strong>Layer 3 (Network)</strong>: IP addressing, routing, ICMP.</li>
+<li><strong>Layer 2 (Data Link)</strong>: MAC addresses, Ethernet frames, ARP.</li>
+<li><strong>Layer 1 (Physical)</strong>: Cables, fiber, WiFi — raw bit transmission.</li>
+<li><strong>Encapsulation</strong>: Data is wrapped layer by layer as it goes down; unwrapped layer by layer as it comes up.</li>
+<li>TCP/IP is the real-world model; OSI is the conceptual framework.</li>
+</ul>
+<blockquote>
+<p>[!quote] The key takeaway
+The OSI model is a mental framework for understanding network communication. When something breaks, knowing which layer it is at helps you diagnose and fix it. TCP is layer 4, IP is layer 3, Ethernet is layer 2, and HTTP is layer 7 — each layer depends on the ones below it.</p>
+</blockquote></div> </div>  </div> </main>  </body></html>
