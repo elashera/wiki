@@ -27,7 +27,7 @@
 
 | Módulo | Status | Notes |
 |--------|--------|-------|
-| 01 — Networking & Internet | pending | |
+| 01 — Networking & Internet | ✅ **complete** | 21 articles (~10,100 lines): OSI model, TCP/IP, HTTP/HTTPS/REST, DNS deep-dive, routing/subnetting/CIDR, firewalls/proxies/load balancers, SSL/TLS, Cloudflare complete, VPS, Cloud providers, messaging |
 | 02 — Infrastructure & Containers | pending | |
 | 03 — Distributed Systems | pending | |
 | 04 — Operating Systems | pending | |
