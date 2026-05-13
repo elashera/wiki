@@ -2,10 +2,6 @@
 import BaseLayout from './BaseLayout.astro';
 import NavBar from '../components/NavBar.astro';
 import Sidebar from '../components/Sidebar.astro';
-import SearchBar from '../components/SearchBar.astro';
-import type { SearchItem } from '../components/SearchBar.astro';
-import { buildSearchIndex } from '../search-index.js';
-import { getNavigation } from '../navigation.js';
 
 interface Props {
   lang: 'es' | 'en';
@@ -14,12 +10,10 @@ interface Props {
     description?: string;
   };
   currentSlug?: string;
-  searchResults?: SearchItem[];
 }
 
-const { lang, frontmatter, currentSlug, searchResults = [] } = Astro.props;
+const { lang, frontmatter, currentSlug } = Astro.props;
 const isEn = lang === 'en';
-const allSearch = buildSearchIndex();
 ---
 
 <BaseLayout lang={lang} frontmatter={frontmatter}>
@@ -27,7 +21,6 @@ const allSearch = buildSearchIndex();
   <Sidebar lang={lang} currentSlug={currentSlug} />
   <main class="main-content">
     <div class="container">
-      <SearchBar lang={lang} searchResults={searchResults} isOpen={false} />
       <slot />
     </div>
   </main>

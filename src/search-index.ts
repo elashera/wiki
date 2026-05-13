@@ -10,8 +10,8 @@ export interface SearchResult {
   section: string;
 }
 
-export function buildSearchIndex(): SearchResult[] {
-  const sections = getNavigation();
+export function buildSearchIndex(lang: 'es' | 'en' = 'es'): SearchResult[] {
+  const sections = getNavigation(lang);
   const results: SearchResult[] = [];
 
   for (const section of sections) {

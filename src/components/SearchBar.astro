@@ -7,21 +7,19 @@ export interface SearchItem {
 
 interface Props {
   lang: 'es' | 'en';
-  searchResults: SearchItem[];
-  isOpen: boolean;
 }
 
-const { lang, searchResults, isOpen } = Astro.props;
+const { lang } = Astro.props;
 const { buildSearchIndex } = await import('../search-index.js');
 
-const allItems: SearchItem[] = buildSearchIndex().map(item => ({
+const allItems: SearchItem[] = buildSearchIndex(lang).map(item => ({
   title: item.title,
   description: item.description,
   slug: item.slug,
 }));
 ---
 
-<div class="searchbar">
+<div class="searchbar" data-search-index={JSON.stringify(allItems)} data-lang={lang}>
   <div class="searchbar-container">
     <button
       class="searchbar-toggle"
@@ -50,29 +48,20 @@ const allItems: SearchItem[] = buildSearchIndex().map(item => ({
       </div>
 
       <div id="searchResults" class="search-results">
-        {searchResults.length > 0 ? (
-          <ul>
-            {searchResults.map((item, i) => (
-              <li key={i}>
-                <a href={`/${lang}${item.slug}`} class="search-result-link">
-                  <span class="search-result-title">{item.title}</span>
-                  <span class="search-result-desc">{item.description}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <div class="search-no-results">
-            {lang === 'es' ? 'Sin resultados' : 'No results found'}
-          </div>
-        )}
+        <div class="search-no-results">
+          {lang === 'es' ? 'Escribe para buscar...' : 'Type to search...'}
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-  const allItems: SearchItem[] = {allItems};
+  const searchbarEl = document.querySelector('.searchbar') as HTMLElement;
+  const allItems: SearchItem[] = JSON.parse(
+    searchbarEl?.getAttribute('data-search-index') || '[]'
+  );
+  const currentLang = searchbarEl?.getAttribute('data-lang') || 'es';
 
   const toggle = document.getElementById('searchToggle') as HTMLElement;
   const dropdown = document.getElementById('searchDropdown') as HTMLElement;
@@ -104,7 +93,7 @@ const allItems: SearchItem[] = buildSearchIndex().map(item => ({
       <ul>
         ${results.map((item, i) => `
           <li>
-            <a href="/${lang}${item.slug}" class="search-result-link">
+            <a href="/${currentLang}${item.slug}" class="search-result-link">
               <span class="search-result-title">${item.title}</span>
               <span class="search-result-desc">${item.description}</span>
             </a>

@@ -1,6 +1,6 @@
 ---
 import LanguageSwitcher from './LanguageSwitcher.astro';
-import type { Props as LanguageSwitcherProps } from './LanguageSwitcher.astro';
+import SearchBar from './SearchBar.astro';
 
 interface Props {
   lang: 'es' | 'en';
@@ -22,6 +22,7 @@ const { lang, isEn } = Astro.props;
     </nav>
 
     <div class="navbar-right">
+      <SearchBar lang={lang} />
       <LanguageSwitcher lang={lang} isEn={isEn} />
     </div>
   </div>

@@ -7,7 +7,7 @@ import * as path from 'path';
 export function getStaticPaths() {
   const contentDir = path.resolve('src/content/docs/en');
   const entries = fs.readdirSync(contentDir, { withFileTypes: true });
-  const paths: { params: { slug: string[] } }[] = [];
+  const paths: { params: { slug: string } }[] = [];
 
   for (const entry of entries) {
     if (entry.isDirectory()) {
@@ -15,7 +15,7 @@ export function getStaticPaths() {
       const files = fs.readdirSync(modulePath, { withFileTypes: true });
       for (const file of files) {
         if (file.name.endsWith('.md')) {
-          paths.push({ params: { slug: [entry.name, file.name.replace('.md', '')] } });
+          paths.push({ params: { slug: `${entry.name}/${file.name.replace('.md', '')}` } });
         }
       }
     }
@@ -25,9 +25,8 @@ export function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const slugArr = Array.isArray(slug) ? slug.filter(Boolean) : [];
-const filePath = `en/${slugArr.join('/')}.md`;
-const currentSlug = `/${slugArr.join('/')}`;
+const filePath = `en/${slug}.md`;
+const currentSlug = `/${slug}`;
 ---
 
 <AppLayout lang="en" currentSlug={currentSlug}>
