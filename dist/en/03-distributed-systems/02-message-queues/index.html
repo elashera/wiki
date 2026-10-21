@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/02-message-queues/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article active"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern</h1> <div class="article-body"><h1 id="message-queues-rabbitmq-kafka-and-the-producer-consumer-pattern">Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern<a aria-label="Link to section" class="anchor-link" href="#message-queues-rabbitmq-kafka-and-the-producer-consumer-pattern"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Message Queues in one sentence</div>
+                </div>
+                <div class="callout-content">A message queue is a system that enables components of an application to communicate asynchronously through messages, decoupling the message producer from the consumer, and enabling scaling, fault tolerance, and deferred processing.</div>
+              
+</blockquote>
+<h2 id="why-do-we-need-message-queues">Why do we need message queues?<a aria-label="Link to section" class="anchor-link" href="#why-do-we-need-message-queues"><span class="icon icon-link"></span></a></h2>
+<p>Imagine you have a web application where users can upload images. When someone uploads a photo, you need to:</p>
+<ol>
+<li>Resize it</li>
+<li>Create a thumbnail version</li>
+<li>Analyze it with AI to detect inappropriate content</li>
+<li>Update the database</li>
+<li>Send a notification to the user</li>
+</ol>
+<p>If you do all this synchronously (in the same request), the user would wait several seconds. But if you use a message queue:</p>
+<ol>
+<li>The user uploads the image</li>
+<li>The application puts a message in the queue: "process-image-id-123"</li>
+<li>The application responds to the user immediately: "Image received!"</li>
+<li>Various workers process the queue messages in parallel</li>
+</ol>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Restaurant analogy</div>
+                </div>
+                <div class="callout-content">Think of a restaurant:</div>
+              
+<ul>
+<li><strong>Without queue</strong>: The customer orders directly from the chef. The chef cooks, serves, and then attends to the next customer. Very slow if there are many customers.</li>
+<li><strong>With queue</strong>: The customer orders from the waiter. The waiter puts the order on a tray (the queue). The chef picks up orders from the tray when available. The waiter attends to the next customer immediately.</li>
+</ul>
+<p>The tray is the message queue. The waiter is the broker (RabbitMQ/Kafka). The chef is the consumer.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-producer-consumer-pattern">1. The producer-consumer pattern<a aria-label="Link to section" class="anchor-link" href="#1-the-producer-consumer-pattern"><span class="icon icon-link"></span></a></h2>
+<p>The producer-consumer pattern is the fundamental pattern behind all message queues:</p>
+<pre><code>┌──────────┐     ┌─────────────┐     ┌──────────┐
+│ Producer │────>│   Queue     │────>│ Consumer │
+│          │     │  (Broker)   │     │          │
+└──────────┘     └─────────────┘     └──────────┘
+</code></pre>
+<ul>
+<li><strong>Producer</strong>: The component that creates and sends messages to the queue.</li>
+<li><strong>Queue (Broker)</strong>: The system that temporarily stores messages and delivers them to consumers.</li>
+<li><strong>Consumer</strong>: The component that receives and processes messages from the queue.</li>
+</ul>
+<h3 id="11-communication-types">1.1 Communication types<a aria-label="Link to section" class="anchor-link" href="#11-communication-types"><span class="icon icon-link"></span></a></h3>
+<p><strong>Point-to-Point (Traditional queue)</strong>: Each message is consumed by exactly one consumer. It is like a mailbox: each letter arrives at a single recipient.</p>
+<pre><code>Producer → Queue → Consumer A  (message consumed by A)
+                    Consumer B  (does not receive the message)
+</code></pre>
+<p><strong>Publish-Subscribe (Pub/Sub)</strong>: Each message is sent to all subscribed consumers. It is like a mailing list: each message arrives at all subscribers.</p>
+<pre><code>Producer → Queue → Consumer A  (message received)
+              → Consumer B  (message received)
+              → Consumer C  (message received)
+</code></pre>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">RabbitMQ supports both patterns</div>
+                </div>
+                <div class="callout-content">RabbitMQ uses exchanges to determine how messages are distributed. It can do point-to-point (direct exchange) or pub/sub (fanout exchange).</div>
+              
+</blockquote>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Kafka is inherently pub/sub</div>
+                </div>
+                <div class="callout-content">Kafka uses topics and consumer groups. Each message in a topic is delivered to all consumer groups, but within a consumer group, each partition is consumed by a single consumer.</div>
+              
+</blockquote>
+<hr>
+<h2 id="2-rabbitmq-the-flexible-broker">2. RabbitMQ: The flexible broker<a aria-label="Link to section" class="anchor-link" href="#2-rabbitmq-the-flexible-broker"><span class="icon icon-link"></span></a></h2>
+<p>RabbitMQ is a message broker that implements the AMQP (Advanced Message Queuing Protocol). It is flexible, mature, and perfect for most enterprise messaging use cases.</p>
+<h3 id="21-rabbitmq-fundamental-concepts">2.1 RabbitMQ fundamental concepts<a aria-label="Link to section" class="anchor-link" href="#21-rabbitmq-fundamental-concepts"><span class="icon icon-link"></span></a></h3>
+<p><strong>Exchange</strong>: The point where messages arrive. A producer never sends a message directly to a queue. It always sends it to an exchange, and the exchange decides which queue(s) to send it to.</p>
+<pre><code>Producer → Exchange → Queue → Consumer
+</code></pre>
+<p>Types of exchanges:</p>
+<ul>
+<li><strong>Direct</strong>: Sends messages to queues whose binding key exactly matches the message's routing key.</li>
+<li><strong>Fanout</strong>: Sends messages to ALL queues bound to the exchange (pub/sub).</li>
+<li><strong>Topic</strong>: Sends messages to queues based on a routing key pattern (wildcards: <code>*</code> for one word, <code>#</code> for multiple).</li>
+<li><strong>Headers</strong>: Sends messages based on message headers (attributes) rather than routing keys.</li>
+</ul>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Exchange analogy</div>
+                </div>
+                <div class="callout-content">Imagine a mail system:</div>
+              
+<ul>
+<li><strong>Direct</strong>: A letter addressed to a specific address.</li>
+<li><strong>Fanout</strong>: A newsletter sent to all subscribers.</li>
+<li><strong>Topic</strong>: A letter categorized by interests (e.g., "technology.ai", "technology.networking").</li>
+<li><strong>Headers</strong>: A letter classified by content (e.g., "urgent", "personal").</li>
+</ul>
+</blockquote>
+<p><strong>Queue</strong>: The mailbox where messages are stored until consumed.</p>
+<p><strong>Binding</strong>: The rule connecting an exchange to a queue. A binding has a routing key (for direct/topic) or is empty (for fanout).</p>
+<p><strong>Consumer</strong>: The application that subscribes to a queue and processes messages.</p>
+<p><strong>Producer</strong>: The application that sends messages to an exchange.</p>
+<h3 id="22-durability-and-reliability">2.2 Durability and reliability<a aria-label="Link to section" class="anchor-link" href="#22-durability-and-reliability"><span class="icon icon-link"></span></a></h3>
+<p>RabbitMQ offers several delivery guarantees:</p>
+<p><strong>Message persistence</strong>: If you mark a message as "persistent", it is written to disk. If the broker crashes, messages are recovered on restart.</p>
+<p><strong>Durable queues</strong>: If you create a queue as "durable", it survives the broker restart.</p>
+<p><strong>Confirmations</strong>: The producer can wait for broker confirmation that it received the message.</p>
+<p><strong>Dead Letter Queues (DLQ)</strong>: If a message cannot be processed after several attempts, it is moved to a DLQ for further analysis.</p>
+<pre><code>Producer → Exchange → Queue → Consumer
+                                    │
+                         (fails N times)
+                                    │
+                                    ▼
+                              Dead Letter Queue
+</code></pre>
+<h3 id="23-amqp-the-protocol">2.3 AMQP: The protocol<a aria-label="Link to section" class="anchor-link" href="#23-amqp-the-protocol"><span class="icon icon-link"></span></a></h3>
+<p>AMQP is an application layer protocol that defines how producers, brokers, and consumers communicate. It is richer than HTTP for messaging:</p>
+<ul>
+<li><strong>Transactions</strong>: You can group multiple operations in a transaction.</li>
+<li><strong>Ack/nack</strong>: The consumer confirms (ack) or rejects (nack) a message after processing it.</li>
+<li><strong>QoS (Quality of Service)</strong>: You can limit how many messages are sent to a consumer without ack (prefetch count).</li>
+</ul>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Consumer example with prefetch</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">channel.basic_qos(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">prefetch_count</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Only send one new message when the consumer has acked the previous one</span></span></code></pre></figure>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Why prefetch_count=1?</div>
+                </div>
+                <div class="callout-content">Without prefetch, RabbitMQ will send all available messages to a consumer quickly. If that consumer is slow, memory will accumulate. With prefetch_count=1, RabbitMQ waits for the ack before sending the next message, regulating the flow.</div>
+              
+</blockquote>
+<hr>
+<h2 id="3-kafka-the-stream-processing-platform">3. Kafka: The stream processing platform<a aria-label="Link to section" class="anchor-link" href="#3-kafka-the-stream-processing-platform"><span class="icon icon-link"></span></a></h2>
+<p>Kafka is not just a message queue — it is a distributed streaming platform. Designed by LinkedIn and now maintained by the Apache Software Foundation, Kafka is optimized for high throughput and long-term persistence.</p>
+<h3 id="31-kafka-fundamental-concepts">3.1 Kafka fundamental concepts<a aria-label="Link to section" class="anchor-link" href="#31-kafka-fundamental-concepts"><span class="icon icon-link"></span></a></h3>
+<p><strong>Topic</strong>: A category or feed to which messages are published. It is similar to a table in a database or a folder in a file system.</p>
+<p><strong>Partition</strong>: Each topic is divided into partitions (shards). Partitions enable parallelism and horizontal scaling. Each partition is an ordered, immutable log.</p>
+<pre><code>Topic: "orders"
+┌─────────────────────────────────────────┐
+│ Partition 0  │ Partition 1  │ Partition 2 │
+│ ──────────── │ ─────────── │ ─────────── │
+│ msg-001      │ msg-010     │ msg-020     │
+│ msg-002      │ msg-011     │ msg-021     │
+│ msg-003      │ msg-012     │ msg-022     │
+└─────────────────────────────────────────┘
+</code></pre>
+<p><strong>Broker</strong>: An individual server in the Kafka cluster. Each broker stores one or more partitions.</p>
+<p><strong>Producer</strong>: Publishes messages to a topic. Can choose which partition to use (round-robin, by key, or custom).</p>
+<p><strong>Consumer</strong>: Subscribes to a topic and reads messages. Consumers are grouped into <strong>consumer groups</strong>.</p>
+<p><strong>Consumer Group</strong>: A group of consumers working together to consume a topic. Each partition is consumed by exactly one consumer within the group. This enables horizontal scaling: if you have 3 partitions and 3 consumers in the same group, each consumer processes one partition.</p>
+<pre><code>Topic: "orders" (3 partitions)
+┌──────────┐    ┌──────────┐    ┌──────────┐
+│ Partition │───>│ Consumer │    │ Partition│───>│ Consumer │
+│   0       │    │   A      │    │   1      │───>│   B      │
+└──────────┘    └──────────┘    └──────────┘    └──────────┘
+                                          ┌──────────┐
+                                          │ Partition│───>│ Consumer │
+                                          │   2      │    │   C      │
+                                          └──────────┘    └──────────┘
+</code></pre>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why consumer groups?</div>
+                </div>
+                <div class="callout-content">Consumer groups enable multiple consumers to work in parallel on the same topic. If you have 1000 messages per second and each consumer processes 200 messages per second, you need 5 consumers in the same group. If you want all consumers to receive ALL messages (e.g., for logging), create one consumer group per consumer.</div>
+              
+</blockquote>
+<h3 id="32-kafkas-log-immutable-and-persistent">3.2 Kafka's log: Immutable and persistent<a aria-label="Link to section" class="anchor-link" href="#32-kafkas-log-immutable-and-persistent"><span class="icon icon-link"></span></a></h3>
+<p>Each Kafka partition is an immutable, append-only log:</p>
+<pre><code>Partition 0 log:
+Offset 0: {key: "user-1", value: "created", timestamp: 1000}
+Offset 1: {key: "user-2", value: "updated", timestamp: 1001}
+Offset 2: {key: "user-1", value: "deleted", timestamp: 1002}
+Offset 3: {key: "user-3", value: "created", timestamp: 1003}
+</code></pre>
+<ul>
+<li><strong>Offset</strong>: A unique, incremental number that identifies each message within a partition.</li>
+<li><strong>Immutable</strong>: Once written, a message never changes. It cannot be modified or deleted (only marked as "compacted").</li>
+<li><strong>Append-only</strong>: Only new messages can be added to the end.</li>
+</ul>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Why immutable?</div>
+                </div>
+                <div class="callout-content">Immutable logs are simpler, faster, and more reliable. No need to worry about concurrent updates, locking, or data corruption. Additionally, they enable replay: you can re-read messages from any offset.</div>
+              
+</blockquote>
+<h3 id="33-message-retention">3.3 Message retention<a aria-label="Link to section" class="anchor-link" href="#33-message-retention"><span class="icon icon-link"></span></a></h3>
+<p>Unlike RabbitMQ (where messages are deleted after being consumed), Kafka retains messages for a configurable time (default 7 days) or until the log reaches a maximum size.</p>
+<pre><code># Retention configuration
+log.retention.hours=168    # 7 days
+log.retention.bytes=-1     # No size limit
+log.retention.check.interval.ms=300000
+</code></pre>
+<p>This enables:</p>
+<ul>
+<li><strong>Replay</strong>: Consumers can re-read messages from any offset.</li>
+<li><strong>Multi-consumption</strong>: Multiple consumer groups can read the same topic independently.</li>
+<li><strong>History</strong>: Data is available for historical analysis.</li>
+</ul>
+<h3 id="34-exactly-once-semantics">3.4 Exactly-once semantics<a aria-label="Link to section" class="anchor-link" href="#34-exactly-once-semantics"><span class="icon icon-link"></span></a></h3>
+<p>Kafka offers three delivery guarantees:</p>
+<ol>
+<li><strong>At-most-once</strong>: The message may be lost but never duplicated. (RabbitMQ with auto-ack)</li>
+<li><strong>At-least-once</strong>: The message is never lost but may be duplicated. (RabbitMQ with manual ack)</li>
+<li><strong>Exactly-once</strong>: The message is processed exactly once. (Kafka with transactions)</li>
+</ol>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Exactly-once is expensive</div>
+                </div>
+                <div class="callout-content">Exactly-once semantics require coordination between producers and consumers, which reduces throughput. In most cases, at-least-once + idempotency is sufficient and more efficient.</div>
+              
+</blockquote>
+<hr>
+<h2 id="4-comparison-rabbitmq-vs-kafka">4. Comparison: RabbitMQ vs Kafka<a aria-label="Link to section" class="anchor-link" href="#4-comparison-rabbitmq-vs-kafka"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>RabbitMQ</th>
+<th>Kafka</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Protocol</strong></td>
+<td>AMQP 0.9.1</td>
+<td>Kafka's own protocol</td>
+</tr>
+<tr>
+<td><strong>Pattern</strong></td>
+<td>Point-to-point and pub/sub</td>
+<td>Pub/sub with consumer groups</td>
+</tr>
+<tr>
+<td><strong>Retention</strong></td>
+<td>Messages deleted after consumption</td>
+<td>Messages retained by time/size</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>~10K-100K messages/sec</td>
+<td>~1M+ messages/sec</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Low (&#x3C; 1ms)</td>
+<td>Low (~1-5ms)</td>
+</tr>
+<tr>
+<td><strong>Durability</strong></td>
+<td>High (disk persistence)</td>
+<td>Very high (replication + disk)</td>
+</tr>
+<tr>
+<td><strong>Ordering</strong></td>
+<td>Ordered within a queue</td>
+<td>Ordered within a partition</td>
+</tr>
+<tr>
+<td><strong>Replay</strong></td>
+<td>No (messages deleted)</td>
+<td>Yes (from any offset)</td>
+</tr>
+<tr>
+<td><strong>Consumer groups</strong></td>
+<td>No (each message to one consumer)</td>
+<td>Yes (horizontal scaling)</td>
+</tr>
+<tr>
+<td><strong>Ideal use</strong></td>
+<td>Tasks, work queues, RPC</td>
+<td>Streaming, event sourcing, logs</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">When to use each?</div>
+                </div>
+                
+              
+<ul>
+<li><strong>RabbitMQ</strong>: When you need complex routing, async tasks, or patterns like work queues, RPC, or request-reply.</li>
+<li><strong>Kafka</strong>: When you need high throughput, long-term retention, streaming, event sourcing, or when multiple consumers need to read the same data.</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="5-common-patterns-with-message-queues">5. Common patterns with message queues<a aria-label="Link to section" class="anchor-link" href="#5-common-patterns-with-message-queues"><span class="icon icon-link"></span></a></h2>
+<h3 id="51-work-queue-work-queue">5.1 Work Queue (Work Queue)<a aria-label="Link to section" class="anchor-link" href="#51-work-queue-work-queue"><span class="icon icon-link"></span></a></h3>
+<p>Multiple consumers compete for messages from a queue. Each message is processed by a single consumer.</p>
+<pre><code>Producer → Queue → Consumer A  (processes message)
+                 → Consumer B  (processes next message)
+                 → Consumer C  (processes next message)
+</code></pre>
+<p>Use: Image processing, email sending, background tasks.</p>
+<h3 id="52-pubsub-publishsubscribe">5.2 Pub/Sub (Publish/Subscribe)<a aria-label="Link to section" class="anchor-link" href="#52-pubsub-publishsubscribe"><span class="icon icon-link"></span></a></h3>
+<p>A message is sent to all subscribed consumers.</p>
+<pre><code>Producer → Exchange (fanout) → Queue A → Consumer A
+                              → Queue B → Consumer B
+                              → Queue C → Consumer C
+</code></pre>
+<p>Use: Notifications, logging, metrics.</p>
+<h3 id="53-request-reply">5.3 Request-Reply<a aria-label="Link to section" class="anchor-link" href="#53-request-reply"><span class="icon icon-link"></span></a></h3>
+<p>A consumer responds to a message with another message.</p>
+<pre><code>Producer → Queue → Consumer → Response Queue → Producer (wait)
+</code></pre>
+<p>Use: Async RPC, service queries.</p>
+<h3 id="54-event-sourcing">5.4 Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#54-event-sourcing"><span class="icon icon-link"></span></a></h3>
+<p>Each state change is stored as an immutable event in Kafka. The current state is reconstructed by replaying all events.</p>
+<pre><code>Event log:
+1. UserCreated(id: 1, name: "Emilio")
+2. EmailUpdated(id: 1, email: "emilio@example.com")
+3. PasswordChanged(id: 1)
+4. UserDeleted(id: 1)
+
+Current state: UserDeleted(id: 1)
+</code></pre>
+<hr>
+<h2 id="key-concepts">Key concepts<a aria-label="Link to section" class="anchor-link" href="#key-concepts"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Message queues decouple producers from consumers</strong>: Producers do not need to know who consumes the messages, nor when. This enables independent scaling and resilience.</p>
+</li>
+<li>
+<p><strong>RabbitMQ is flexible but limited in throughput</strong>: Ideal for complex routing, async tasks, and enterprise patterns. Not ideal for high-volume streaming.</p>
+</li>
+<li>
+<p><strong>Kafka is a stream processing platform, not just a queue</strong>: Designed for high throughput, long-term retention, and event replay. Consumer groups enable horizontal scaling.</p>
+</li>
+<li>
+<p><strong>Durability is not automatic</strong>: In RabbitMQ, you need to mark messages as persistent and queues as durable. In Kafka, you need to configure replication factor > 1.</p>
+</li>
+<li>
+<p><strong>Ordering is partial</strong>: In RabbitMQ, order is maintained within a queue. In Kafka, order is maintained within a partition, not at the topic level.</p>
+</li>
+</ol>
+<h2 id="related-to">Related to<a aria-label="Link to section" class="anchor-link" href="#related-to"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[01-consensus-paxos-raft](/en/03-distributed-systems/01-consensus-paxos-raft) — Message queue brokers use internal consensus to replicate data between nodes</li>
+<li>[03-distributed-caching](/en/03-distributed-systems/03-distributed-caching) — Redis can also be used as a simple message queue (with lists and pub/sub)</li>
+<li>[04-event-driven-cqrs-saga](/en/03-distributed-systems/04-event-driven-cqrs-saga) — Message queues are the foundation of event-driven architecture and the Saga pattern</li>
+<li>[05-idempotency-retry-circuit-breakers](/en/03-distributed-systems/05-idempotency-retry-circuit-breakers) — Idempotency is essential when messages may be duplicated (at-least-once delivery)</li>
+</ul>
+<h2 id="references">References<a aria-label="Link to section" class="anchor-link" href="#references"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://www.rabbitmq.com/documentation.html">RabbitMQ Documentation</a></li>
+<li><a href="https://kafka.apache.org/documentation/">Apache Kafka Documentation</a></li>
+<li><a href="https://www.rabbitmq.com/resources/specs/amqp0-9-1.pdf">AMQP 0.9.1 Specification</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications — Martin Kleppmann</a></li>
+<li><a href="https://www.confluent.io/blog/kafka-log-structured-message-system/">Kafka: A Distributed Messaging System for Log Processing</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#why-do-we-need-message-queues">Why do we need message queues?</a> </li><li class="toc-depth-2"> <a href="#1-the-producer-consumer-pattern">1. The producer-consumer pattern</a> </li><li class="toc-depth-3"> <a href="#11-communication-types">1.1 Communication types</a> </li><li class="toc-depth-2"> <a href="#2-rabbitmq-the-flexible-broker">2. RabbitMQ: The flexible broker</a> </li><li class="toc-depth-3"> <a href="#21-rabbitmq-fundamental-concepts">2.1 RabbitMQ fundamental concepts</a> </li><li class="toc-depth-3"> <a href="#22-durability-and-reliability">2.2 Durability and reliability</a> </li><li class="toc-depth-3"> <a href="#23-amqp-the-protocol">2.3 AMQP: The protocol</a> </li><li class="toc-depth-2"> <a href="#3-kafka-the-stream-processing-platform">3. Kafka: The stream processing platform</a> </li><li class="toc-depth-3"> <a href="#31-kafka-fundamental-concepts">3.1 Kafka fundamental concepts</a> </li><li class="toc-depth-3"> <a href="#32-kafkas-log-immutable-and-persistent">3.2 Kafka&#39;s log: Immutable and persistent</a> </li><li class="toc-depth-3"> <a href="#33-message-retention">3.3 Message retention</a> </li><li class="toc-depth-3"> <a href="#34-exactly-once-semantics">3.4 Exactly-once semantics</a> </li><li class="toc-depth-2"> <a href="#4-comparison-rabbitmq-vs-kafka">4. Comparison: RabbitMQ vs Kafka</a> </li><li class="toc-depth-2"> <a href="#5-common-patterns-with-message-queues">5. Common patterns with message queues</a> </li><li class="toc-depth-3"> <a href="#51-work-queue">5.1 Work Queue</a> </li><li class="toc-depth-3"> <a href="#52-pubsub">5.2 Pub/Sub</a> </li><li class="toc-depth-3"> <a href="#53-request-reply">5.3 Request-Reply</a> </li><li class="toc-depth-3"> <a href="#54-event-sourcing">5.4 Event Sourcing</a> </li><li class="toc-depth-2"> <a href="#key-concepts">Key concepts</a> </li><li class="toc-depth-2"> <a href="#related-to">Related to</a> </li><li class="toc-depth-2"> <a href="#references">References</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

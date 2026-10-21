@@ -5,7 +5,7 @@ import rehypePrettyCode from 'rehype-pretty-code';
 import remarkGfm from 'remark-gfm';
 
 export default defineConfig({
-  site: 'https://wiki.example.com',
+  site: 'https://wiki.elashera.com',
   integrations: [],
   markdown: {
     shikiConfig: {

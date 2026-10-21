@@ -1,33 +1,26 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">From URL to Page: The Complete Journey</h1> <div class="article-body"><h1 id="from-url-to-page-the-complete-journey"><a aria-hidden="true" tabindex="-1" href="#from-url-to-page-the-complete-journey"><span class="icon icon-link"></span></a>From URL to Page: The Complete Journey</h1>
-<blockquote>
-<p>[!tip] In a nutshell
-When you type a URL and press Enter, a complex sequence of events unfolds in milliseconds: DNS resolution, TCP connection, TLS handshake, HTTP request and response, and finally, the browser renders the page. Here is every step.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/02-url-to-page-journey" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/02-url-to-page-journey/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article active"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">From URL to Page: The Complete Journey</h1> <div class="article-body"><h1 id="from-url-to-page-the-complete-journey">From URL to Page: The Complete Journey<a aria-label="Link to section" class="anchor-link" href="#from-url-to-page-the-complete-journey"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">In a nutshell</div>
+                </div>
+                <div class="callout-content">When you type a URL and press Enter, a complex sequence of events unfolds in milliseconds: DNS resolution, TCP connection, TLS handshake, HTTP request and response, and finally, the browser renders the page. Here is every step.</div>
+              
 </blockquote>
-<h2 id="overview-what-happens-when-you-press-enter"><a aria-hidden="true" tabindex="-1" href="#overview-what-happens-when-you-press-enter"><span class="icon icon-link"></span></a>Overview: What happens when you press Enter?</h2>
+<h2 id="overview-what-happens-when-you-press-enter">Overview: What happens when you press Enter?<a aria-label="Link to section" class="anchor-link" href="#overview-what-happens-when-you-press-enter"><span class="icon icon-link"></span></a></h2>
 <p>When you type <code>https://example.com</code> into your browser and hit Enter, the following high-level sequence occurs:</p>
 <pre><code>1. DNS Resolution          → Find the IP address
 2. TCP Connection          → Establish connection (3-way handshake)
@@ -38,12 +31,12 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 7. Browser Rendering       → Parse HTML, build DOM, paint pixels
 </code></pre>
 <p>This may happen in under a second for a fast server, but behind that speed is an extraordinary amount of work. Let us walk through every step in detail.</p>
-<h2 id="step-1-dns-resolution"><a aria-hidden="true" tabindex="-1" href="#step-1-dns-resolution"><span class="icon icon-link"></span></a>Step 1: DNS Resolution</h2>
+<h2 id="step-1-dns-resolution">Step 1: DNS Resolution<a aria-label="Link to section" class="anchor-link" href="#step-1-dns-resolution"><span class="icon icon-link"></span></a></h2>
 <p>Before the browser can send an HTTP request, it needs the IP address of the server. The URL contains a domain name (<code>example.com</code>), but the Internet routes traffic by IP addresses.</p>
-<h3 id="the-dns-lookup-process"><a aria-hidden="true" tabindex="-1" href="#the-dns-lookup-process"><span class="icon icon-link"></span></a>The DNS lookup process</h3>
+<h3 id="the-dns-lookup-process">The DNS lookup process<a aria-label="Link to section" class="anchor-link" href="#the-dns-lookup-process"><span class="icon icon-link"></span></a></h3>
 <pre><code>Browser cache → OS cache → Recursive resolver → Root DNS → TLD DNS → Authoritative DNS → IP address
 </code></pre>
-<h4 id="1a-browser-cache"><a aria-hidden="true" tabindex="-1" href="#1a-browser-cache"><span class="icon icon-link"></span></a>1a. Browser cache</h4>
+<h4 id="1a-browser-cache">1a. Browser cache<a aria-label="Link to section" class="anchor-link" href="#1a-browser-cache"><span class="icon icon-link"></span></a></h4>
 <p>The browser checks its own DNS cache first. If you recently visited <code>example.com</code>, the IP may still be cached.</p>
 <pre><code>Browser DNS cache lookup:
 ┌─────────────────────────────────┐
@@ -51,7 +44,7 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 └─────────────────────────────────┘
 </code></pre>
 <p>Browsers typically cache DNS entries for 1–60 minutes depending on the TTL (Time To Live) of the DNS record.</p>
-<h4 id="1b-operating-system-cache"><a aria-hidden="true" tabindex="-1" href="#1b-operating-system-cache"><span class="icon icon-link"></span></a>1b. Operating system cache</h4>
+<h4 id="1b-operating-system-cache">1b. Operating system cache<a aria-label="Link to section" class="anchor-link" href="#1b-operating-system-cache"><span class="icon icon-link"></span></a></h4>
 <p>If not in the browser cache, the OS DNS cache is checked. On Linux, this may be <code>systemd-resolved</code> or <code>nscd</code>. On macOS, it is the Bonjour cache. On Windows, it is the DNS Client service.</p>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Linux: Check systemd-resolved DNS cache</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">systemd-resolve</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --statistics</span></span>
@@ -59,7 +52,7 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># macOS: Check DNS cache</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dscacheutil</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -q</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> host</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span></span></code></pre></figure>
-<h4 id="1c-recursive-resolver-your-isps-dns-server"><a aria-hidden="true" tabindex="-1" href="#1c-recursive-resolver-your-isps-dns-server"><span class="icon icon-link"></span></a>1c. Recursive resolver (your ISP's DNS server)</h4>
+<h4 id="1c-recursive-resolver-your-isps-dns-server">1c. Recursive resolver (your ISP's DNS server)<a aria-label="Link to section" class="anchor-link" href="#1c-recursive-resolver-your-isps-dns-server"><span class="icon icon-link"></span></a></h4>
 <p>If the OS cache misses, your computer sends a DNS query to a <strong>recursive resolver</strong>. This is usually your ISP's DNS server (configured in your <code>/etc/resolv.conf</code>), but many users use public resolvers:</p>
 <table>
 <thead>
@@ -88,7 +81,7 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 </tbody>
 </table>
 <p>The recursive resolver is responsible for doing the entire DNS lookup on your behalf.</p>
-<h4 id="1d-the-chain-of-dns-servers"><a aria-hidden="true" tabindex="-1" href="#1d-the-chain-of-dns-servers"><span class="icon icon-link"></span></a>1d. The chain of DNS servers</h4>
+<h4 id="1d-the-chain-of-dns-servers">1d. The chain of DNS servers<a aria-label="Link to section" class="anchor-link" href="#1d-the-chain-of-dns-servers"><span class="icon icon-link"></span></a></h4>
 <p>The recursive resolver follows a chain:</p>
 <pre><code>┌──────────────┐     ┌──────────────┐     ┌──────────────────┐     ┌──────────────────┐
 │  Root DNS    │     │  TLD DNS     │     │ Authoritative    │     │
@@ -103,7 +96,7 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 <li><strong>TLD DNS servers</strong> (e.g., Verisign for <code>.com</code>) tell the resolver which servers are authoritative for <code>example.com</code>.</li>
 <li><strong>Authoritative DNS servers</strong> (e.g., Cloudflare, GoDaddy, or your own DNS provider) return the actual IP address.</li>
 </ol>
-<h3 id="dns-resolution-in-practice"><a aria-hidden="true" tabindex="-1" href="#dns-resolution-in-practice"><span class="icon icon-link"></span></a>DNS resolution in practice</h3>
+<h3 id="dns-resolution-in-practice">DNS resolution in practice<a aria-label="Link to section" class="anchor-link" href="#dns-resolution-in-practice"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Use dig to see the full DNS resolution chain</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dig</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> example.com</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +trace</span></span>
 <span data-line=""> </span>
@@ -120,13 +113,18 @@ When you type a URL and press Enter, a complex sequence of events unfolds in mil
 <span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.                    172800  IN      NS      a.root-servers.net.</span></span>
 <span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">a.root-servers.net.  172800  IN      A       198.41.0.4</span></span>
 <span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">;; ... (followed by TLD and authoritative queries)</span></span></code></pre></figure>
-<h3 id="why-dns-uses-udp-and-sometimes-tcp"><a aria-hidden="true" tabindex="-1" href="#why-dns-uses-udp-and-sometimes-tcp"><span class="icon icon-link"></span></a>Why DNS uses UDP (and sometimes TCP)</h3>
+<h3 id="why-dns-uses-udp-and-sometimes-tcp">Why DNS uses UDP (and sometimes TCP)<a aria-label="Link to section" class="anchor-link" href="#why-dns-uses-udp-and-sometimes-tcp"><span class="icon icon-link"></span></a></h3>
 <p>DNS queries are small (typically under 512 bytes), so DNS uses <strong>UDP</strong> by default for speed. However, if a response exceeds 512 bytes (e.g., with DNSSEC signatures), it falls back to <strong>TCP</strong>.</p>
-<blockquote>
-<p>[!tip] DNS over HTTPS (DoH)
-Modern browsers can use DNS over HTTPS (DoH) to encrypt DNS queries, preventing ISPs and third parties from seeing which domains you visit. Cloudflare's 1.1.1.1 and Google's 8.8.8.8 both support DoH.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">DNS over HTTPS (DoH)</div>
+                </div>
+                <div class="callout-content">Modern browsers can use DNS over HTTPS (DoH) to encrypt DNS queries, preventing ISPs and third parties from seeing which domains you visit. Cloudflare's 1.1.1.1 and Google's 8.8.8.8 both support DoH.</div>
+              
 </blockquote>
-<h2 id="step-2-tcp-connection-3-way-handshake"><a aria-hidden="true" tabindex="-1" href="#step-2-tcp-connection-3-way-handshake"><span class="icon icon-link"></span></a>Step 2: TCP Connection (3-Way Handshake)</h2>
+<h2 id="step-2-tcp-connection-3-way-handshake">Step 2: TCP Connection (3-Way Handshake)<a aria-label="Link to section" class="anchor-link" href="#step-2-tcp-connection-3-way-handshake"><span class="icon icon-link"></span></a></h2>
 <p>Once the browser has the IP address, it needs to establish a TCP connection to the server. This happens through the <strong>TCP 3-way handshake</strong>:</p>
 <pre><code>Client                          Server
    │                              │
@@ -139,7 +137,7 @@ Modern browsers can use DNS over HTTPS (DoH) to encrypt DNS queries, preventing 
    │  Connection established      │  Connection established
    │  Ready to send HTTP          │  Ready to receive HTTP
 </code></pre>
-<h3 id="what-each-step-means"><a aria-hidden="true" tabindex="-1" href="#what-each-step-means"><span class="icon icon-link"></span></a>What each step means</h3>
+<h3 id="what-each-step-means">What each step means<a aria-label="Link to section" class="anchor-link" href="#what-each-step-means"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -167,21 +165,21 @@ Modern browsers can use DNS over HTTPS (DoH) to encrypt DNS queries, preventing 
 </tbody>
 </table>
 <p>After this handshake, both sides know each other's initial sequence numbers, and the connection is ready for data transfer.</p>
-<h3 id="tcp-state-diagram-simplified"><a aria-hidden="true" tabindex="-1" href="#tcp-state-diagram-simplified"><span class="icon icon-link"></span></a>TCP state diagram (simplified)</h3>
+<h3 id="tcp-state-diagram-simplified">TCP state diagram (simplified)<a aria-label="Link to section" class="anchor-link" href="#tcp-state-diagram-simplified"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client:         CLOSED → SYN_SENT → ESTABLISHED
                 (SYN sent)  (SYN-ACK received)
 
 Server:         CLOSED → LISTEN → SYN_RCVD → ESTABLISHED
                 (accept)    (SYN received)  (ACK received)
 </code></pre>
-<h3 id="why-not-just-send-data-immediately"><a aria-hidden="true" tabindex="-1" href="#why-not-just-send-data-immediately"><span class="icon icon-link"></span></a>Why not just send data immediately?</h3>
+<h3 id="why-not-just-send-data-immediately">Why not just send data immediately?<a aria-label="Link to section" class="anchor-link" href="#why-not-just-send-data-immediately"><span class="icon icon-link"></span></a></h3>
 <p>The 3-way handshake prevents several problems:</p>
 <ul>
 <li><strong>Old duplicate connections</strong>: If an old SYN packet arrives late, the handshake detects it.</li>
 <li><strong>Resource allocation</strong>: Both sides know the other is willing to connect before allocating resources.</li>
 <li><strong>Sequence number synchronization</strong>: Both sides agree on starting sequence numbers for reliable delivery.</li>
 </ul>
-<h2 id="step-3-tls-handshake-for-https"><a aria-hidden="true" tabindex="-1" href="#step-3-tls-handshake-for-https"><span class="icon icon-link"></span></a>Step 3: TLS Handshake (for HTTPS)</h2>
+<h2 id="step-3-tls-handshake-for-https">Step 3: TLS Handshake (for HTTPS)<a aria-label="Link to section" class="anchor-link" href="#step-3-tls-handshake-for-https"><span class="icon icon-link"></span></a></h2>
 <p>If the URL starts with <code>https://</code>, a TLS handshake must occur before any HTTP data is sent. This is where encryption is negotiated:</p>
 <pre><code>Client                          Server
    │                              │
@@ -200,7 +198,7 @@ Server:         CLOSED → LISTEN → SYN_RCVD → ESTABLISHED
    │                              │
    │  TLS tunnel established      │  TLS tunnel established
 </code></pre>
-<h3 id="clienthello"><a aria-hidden="true" tabindex="-1" href="#clienthello"><span class="icon icon-link"></span></a>ClientHello</h3>
+<h3 id="clienthello">ClientHello<a aria-label="Link to section" class="anchor-link" href="#clienthello"><span class="icon icon-link"></span></a></h3>
 <p>The client lists:</p>
 <ul>
 <li>Supported TLS versions</li>
@@ -208,7 +206,7 @@ Server:         CLOSED → LISTEN → SYN_RCVD → ESTABLISHED
 <li>Random bytes (for key generation)</li>
 <li>SNI (Server Name Indication) — the domain name being requested (important for shared hosting)</li>
 </ul>
-<h3 id="serverhello"><a aria-hidden="true" tabindex="-1" href="#serverhello"><span class="icon icon-link"></span></a>ServerHello</h3>
+<h3 id="serverhello">ServerHello<a aria-label="Link to section" class="anchor-link" href="#serverhello"><span class="icon icon-link"></span></a></h3>
 <p>The server responds with:</p>
 <ul>
 <li>Selected TLS version (e.g., TLS 1.3)</li>
@@ -216,7 +214,7 @@ Server:         CLOSED → LISTEN → SYN_RCVD → ESTABLISHED
 <li>Its own random bytes</li>
 <li>Certificate (including the public key)</li>
 </ul>
-<h3 id="tls-13-vs-tls-12"><a aria-hidden="true" tabindex="-1" href="#tls-13-vs-tls-12"><span class="icon icon-link"></span></a>TLS 1.3 vs TLS 1.2</h3>
+<h3 id="tls-13-vs-tls-12">TLS 1.3 vs TLS 1.2<a aria-label="Link to section" class="anchor-link" href="#tls-13-vs-tls-12"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -253,11 +251,16 @@ Server:         CLOSED → LISTEN → SYN_RCVD → ESTABLISHED
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Why TLS 1.3 is faster
-TLS 1.3 reduces the handshake from 2 round-trips to 1 (0-RTT resumption is possible). This means the encrypted connection is established almost instantly on repeat visits.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Why TLS 1.3 is faster</div>
+                </div>
+                <div class="callout-content">TLS 1.3 reduces the handshake from 2 round-trips to 1 (0-RTT resumption is possible). This means the encrypted connection is established almost instantly on repeat visits.</div>
+              
 </blockquote>
-<h3 id="sni-server-name-indication"><a aria-hidden="true" tabindex="-1" href="#sni-server-name-indication"><span class="icon icon-link"></span></a>SNI (Server Name Indication)</h3>
+<h3 id="sni-server-name-indication">SNI (Server Name Indication)<a aria-label="Link to section" class="anchor-link" href="#sni-server-name-indication"><span class="icon icon-link"></span></a></h3>
 <p>When multiple domains share the same IP address, the client sends the requested domain name in the ClientHello. This is called <strong>SNI</strong>, and it allows the server to present the correct certificate.</p>
 <pre><code>┌─────────────────────────────────────┐
 │ Shared IP: 93.184.216.34            │
@@ -269,11 +272,16 @@ TLS 1.3 reduces the handshake from 2 round-trips to 1 (0-RTT resumption is possi
 Client sends SNI: "example.com" → Server presents cert A
 Client sends SNI: "blog.com"    → Server presents cert B
 </code></pre>
-<blockquote>
-<p>[!caution] SNI is sent in plaintext (in TLS 1.2)
-While the certificate content is encrypted, the SNI field itself is sent unencrypted in TLS 1.2. TLS 1.3 introduces encrypted SNI (ESNI), now called <strong>Encrypted Client Hello (ECH)</strong>, which encrypts the SNI as well.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">SNI is sent in plaintext (in TLS 1.2)</div>
+                </div>
+                <div class="callout-content">While the certificate content is encrypted, the SNI field itself is sent unencrypted in TLS 1.2. TLS 1.3 introduces encrypted SNI (ESNI), now called Encrypted Client Hello (ECH), which encrypts the SNI as well.</div>
+              
 </blockquote>
-<h2 id="step-4-http-request"><a aria-hidden="true" tabindex="-1" href="#step-4-http-request"><span class="icon icon-link"></span></a>Step 4: HTTP Request</h2>
+<h2 id="step-4-http-request">Step 4: HTTP Request<a aria-label="Link to section" class="anchor-link" href="#step-4-http-request"><span class="icon icon-link"></span></a></h2>
 <p>After the TLS handshake completes, the browser sends an HTTP request:</p>
 <pre><code>GET /index.html HTTP/1.1
 Host: example.com
@@ -285,7 +293,7 @@ Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 Cache-Control: max-age=0
 </code></pre>
-<h3 id="key-headers-explained"><a aria-hidden="true" tabindex="-1" href="#key-headers-explained"><span class="icon icon-link"></span></a>Key headers explained</h3>
+<h3 id="key-headers-explained">Key headers explained<a aria-label="Link to section" class="anchor-link" href="#key-headers-explained"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -324,7 +332,7 @@ Cache-Control: max-age=0
 </tr>
 </tbody>
 </table>
-<h3 id="http11-vs-http2-vs-http3"><a aria-hidden="true" tabindex="-1" href="#http11-vs-http2-vs-http3"><span class="icon icon-link"></span></a>HTTP/1.1 vs HTTP/2 vs HTTP/3</h3>
+<h3 id="http11-vs-http2-vs-http3">HTTP/1.1 vs HTTP/2 vs HTTP/3<a aria-label="Link to section" class="anchor-link" href="#http11-vs-http2-vs-http3"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -379,9 +387,9 @@ Cache-Control: max-age=0
 </tr>
 </tbody>
 </table>
-<h2 id="step-5-server-processing"><a aria-hidden="true" tabindex="-1" href="#step-5-server-processing"><span class="icon icon-link"></span></a>Step 5: Server Processing</h2>
+<h2 id="step-5-server-processing">Step 5: Server Processing<a aria-label="Link to section" class="anchor-link" href="#step-5-server-processing"><span class="icon icon-link"></span></a></h2>
 <p>The server receives the HTTP request, processes it, and generates a response. What happens next depends on the server:</p>
-<h3 id="simple-static-response-nginx"><a aria-hidden="true" tabindex="-1" href="#simple-static-response-nginx"><span class="icon icon-link"></span></a>Simple static response (Nginx)</h3>
+<h3 id="simple-static-response-nginx">Simple static response (Nginx)<a aria-label="Link to section" class="anchor-link" href="#simple-static-response-nginx"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Receive HTTP request on port 443
 2. TLS termination: decrypt the request
 3. Look up the requested file: /var/www/html/index.html
@@ -389,7 +397,7 @@ Cache-Control: max-age=0
 5. Compress with gzip/brotli
 6. Send HTTP response
 </code></pre>
-<h3 id="dynamic-response-nodejs--express"><a aria-hidden="true" tabindex="-1" href="#dynamic-response-nodejs--express"><span class="icon icon-link"></span></a>Dynamic response (Node.js + Express)</h3>
+<h3 id="dynamic-response-nodejs--express">Dynamic response (Node.js + Express)<a aria-label="Link to section" class="anchor-link" href="#dynamic-response-nodejs--express"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Express.js middleware chain</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/api/data'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 1. Authentication middleware checks token</span></span>
@@ -399,7 +407,7 @@ Cache-Control: max-age=0
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 4. Serialize and send response</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">json</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(data);</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
-<h3 id="server-architecture"><a aria-hidden="true" tabindex="-1" href="#server-architecture"><span class="icon icon-link"></span></a>Server architecture</h3>
+<h3 id="server-architecture">Server architecture<a aria-label="Link to section" class="anchor-link" href="#server-architecture"><span class="icon icon-link"></span></a></h3>
 <pre><code>                   Request arrives
                          │
                     ┌────┴────┐
@@ -426,7 +434,7 @@ Cache-Control: max-age=0
                     │   / MongoDB)│
                     └─────────────┘
 </code></pre>
-<h2 id="step-6-http-response"><a aria-hidden="true" tabindex="-1" href="#step-6-http-response"><span class="icon icon-link"></span></a>Step 6: HTTP Response</h2>
+<h2 id="step-6-http-response">Step 6: HTTP Response<a aria-label="Link to section" class="anchor-link" href="#step-6-http-response"><span class="icon icon-link"></span></a></h2>
 <p>The server sends back an HTTP response:</p>
 <pre><code>HTTP/1.1 200 OK
 Date: Mon, 13 May 2026 15:00:00 GMT
@@ -442,7 +450,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ... compressed HTML content ...
 </code></pre>
-<h3 id="response-headers-to-know"><a aria-hidden="true" tabindex="-1" href="#response-headers-to-know"><span class="icon icon-link"></span></a>Response headers to know</h3>
+<h3 id="response-headers-to-know">Response headers to know<a aria-label="Link to section" class="anchor-link" href="#response-headers-to-know"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -481,7 +489,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 </tr>
 </tbody>
 </table>
-<h2 id="step-7-browser-rendering"><a aria-hidden="true" tabindex="-1" href="#step-7-browser-rendering"><span class="icon icon-link"></span></a>Step 7: Browser Rendering</h2>
+<h2 id="step-7-browser-rendering">Step 7: Browser Rendering<a aria-label="Link to section" class="anchor-link" href="#step-7-browser-rendering"><span class="icon icon-link"></span></a></h2>
 <p>Once the HTML is received, the browser goes through a rendering pipeline:</p>
 <pre><code>1. Parse HTML → Build DOM (Document Object Model) tree
 2. Parse CSS → Build CSSOM (CSS Object Model) tree
@@ -490,8 +498,8 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 5. Paint → Render pixels to the screen
 6. Composite → Combine layers into the final image
 </code></pre>
-<h3 id="rendering-pipeline-details"><a aria-hidden="true" tabindex="-1" href="#rendering-pipeline-details"><span class="icon icon-link"></span></a>Rendering pipeline details</h3>
-<h4 id="dom-construction"><a aria-hidden="true" tabindex="-1" href="#dom-construction"><span class="icon icon-link"></span></a>DOM construction</h4>
+<h3 id="rendering-pipeline-details">Rendering pipeline details<a aria-label="Link to section" class="anchor-link" href="#rendering-pipeline-details"><span class="icon icon-link"></span></a></h3>
+<h4 id="dom-construction">DOM construction<a aria-label="Link to section" class="anchor-link" href="#dom-construction"><span class="icon icon-link"></span></a></h4>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="html" data-theme="github-light github-dark"><code data-language="html" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- Browser parses this HTML --></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">html</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  &#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">head</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">title</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>Hello&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">title</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">head</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">></span></span>
@@ -508,7 +516,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  └── body</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      ├── h1 [text: "Welcome"]</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      └── p [text: "This is a paragraph."]</span></span></code></pre></figure>
-<h4 id="critical-rendering-path"><a aria-hidden="true" tabindex="-1" href="#critical-rendering-path"><span class="icon icon-link"></span></a>Critical rendering path</h4>
+<h4 id="critical-rendering-path">Critical rendering path<a aria-label="Link to section" class="anchor-link" href="#critical-rendering-path"><span class="icon icon-link"></span></a></h4>
 <pre><code>HTML document
     │
     ▼
@@ -527,18 +535,23 @@ Parse HTML continues...
            ▼
 Build DOM + CSSOM → Render → Paint
 </code></pre>
-<blockquote>
-<p>[!caution] JavaScript blocking
-By default, <code>&#x3C;script></code> tags block HTML parsing. Use <code>defer</code> to load without blocking, or <code>async</code> to load in parallel (but not in order).</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">JavaScript blocking</div>
+                </div>
+                <div class="callout-content">By default, <script> tags block HTML parsing. Use defer to load without blocking, or async to load in parallel (but not in order).</div>
+              
 </blockquote>
-<h4 id="resources-fetched-after-initial-html"><a aria-hidden="true" tabindex="-1" href="#resources-fetched-after-initial-html"><span class="icon icon-link"></span></a>Resources fetched after initial HTML</h4>
+<h4 id="resources-fetched-after-initial-html">Resources fetched after initial HTML<a aria-label="Link to section" class="anchor-link" href="#resources-fetched-after-initial-html"><span class="icon icon-link"></span></a></h4>
 <p>Once the HTML is parsed, the browser discovers additional resources:</p>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="html" data-theme="github-light github-dark"><code data-language="html" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- These are found during HTML parsing and fetched in parallel --></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">link</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"stylesheet"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"styles.css"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- CSS --></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> src</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"app.js"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> defer</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>&#x3C;/</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">script</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>          </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- JS (deferred) --></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">img</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> src</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"hero.jpg"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> alt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Hero image"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>          </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- Image --></span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">link</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> rel</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"preload"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> href</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"font.woff2"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">>         </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- Preloaded font --></span></span></code></pre></figure>
-<h3 id="rendering-on-the-gpu"><a aria-hidden="true" tabindex="-1" href="#rendering-on-the-gpu"><span class="icon icon-link"></span></a>Rendering on the GPU</h3>
+<h3 id="rendering-on-the-gpu">Rendering on the GPU<a aria-label="Link to section" class="anchor-link" href="#rendering-on-the-gpu"><span class="icon icon-link"></span></a></h3>
 <p>Modern browsers use hardware acceleration for rendering:</p>
 <pre><code>┌─────────────────────────────────────────┐
 │              Browser (Compositor)        │
@@ -550,7 +563,7 @@ By default, <code>&#x3C;script></code> tags block HTML parsing. Use <code>defer<
 └─────────────────────────────────────────┘
 </code></pre>
 <p>Properties that create new compositor layers: <code>transform</code>, <code>opacity</code>, <code>filter</code>, <code>will-change</code>, <code>backface-visibility: hidden</code>.</p>
-<h2 id="performance-how-fast-should-this-be"><a aria-hidden="true" tabindex="-1" href="#performance-how-fast-should-this-be"><span class="icon icon-link"></span></a>Performance: How fast should this be?</h2>
+<h2 id="performance-how-fast-should-this-be">Performance: How fast should this be?<a aria-label="Link to section" class="anchor-link" href="#performance-how-fast-should-this-be"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -592,16 +605,21 @@ By default, <code>&#x3C;script></code> tags block HTML parsing. Use <code>defer<
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Core Web Vitals
-Google measures three key metrics for user experience:</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Core Web Vitals</div>
+                </div>
+                <div class="callout-content">Google measures three key metrics for user experience:</div>
+              
 <ul>
 <li><strong>LCP</strong> (Largest Contentful Paint): Under 2.5s</li>
 <li><strong>FID</strong> (First Input Delay): Under 100ms</li>
 <li><strong>CLS</strong> (Cumulative Layout Shift): Under 0.1</li>
 </ul>
 </blockquote>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -612,31 +630,31 @@ Google measures three key metrics for user experience:</p>
 <tbody>
 <tr>
 <td>DNS in detail</td>
-<td>[[03-dns-deep-dive]]</td>
+<td>[03-dns-deep-dive](/en/01-networking-internet/03-dns-deep-dive)</td>
 </tr>
 <tr>
 <td>HTTP in detail</td>
-<td>[[05-http-deep-dive]]</td>
+<td>[05-http-deep-dive](/en/01-networking-internet/05-http-deep-dive)</td>
 </tr>
 <tr>
 <td>HTTPS and TLS</td>
-<td>[[07-https-tls]]</td>
+<td>[07-https-tls](/en/01-networking-internet/07-https-tls)</td>
 </tr>
 <tr>
 <td>Status codes</td>
-<td>[[06-status-codes]]</td>
+<td>[06-status-codes](/en/01-networking-internet/06-status-codes)</td>
 </tr>
 <tr>
 <td>Ports and IP addresses</td>
-<td>[[12-ports]]</td>
+<td>[12-ports](/en/01-networking-internet/12-ports)</td>
 </tr>
 <tr>
 <td>NAT and address translation</td>
-<td>[[13-nat]]</td>
+<td>[13-nat](/en/01-networking-internet/13-nat)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li>A URL to page journey involves <strong>7 major steps</strong>: DNS, TCP, TLS, HTTP request, server processing, HTTP response, and rendering.</li>
 <li><strong>DNS</strong> translates domain names to IP addresses through a hierarchy of servers.</li>
@@ -646,7 +664,12 @@ Google measures three key metrics for user experience:</p>
 <li><strong>Browser rendering</strong> builds the DOM, CSSOM, and paints pixels to the screen.</li>
 <li>Performance depends on every link in this chain — optimizing just one is rarely enough.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-The journey from URL to rendered page is a carefully orchestrated sequence of protocols, each building on the previous one. Understanding each step gives you the power to diagnose and optimize any part of the stack.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">The journey from URL to rendered page is a carefully orchestrated sequence of protocols, each building on the previous one. Understanding each step gives you the power to diagnose and optimize any part of the stack.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#overview-what-happens-when-you-press-enter">Overview: What happens when you press Enter?</a> </li><li class="toc-depth-2"> <a href="#step-1-dns-resolution">Step 1: DNS Resolution</a> </li><li class="toc-depth-3"> <a href="#the-dns-lookup-process">The DNS lookup process</a> </li><li class="toc-depth-3"> <a href="#dns-resolution-in-practice">DNS resolution in practice</a> </li><li class="toc-depth-3"> <a href="#why-dns-uses-udp">Why DNS uses UDP</a> </li><li class="toc-depth-2"> <a href="#step-2-tcp-connection">Step 2: TCP Connection</a> </li><li class="toc-depth-3"> <a href="#what-each-step-means">What each step means</a> </li><li class="toc-depth-3"> <a href="#tcp-state-diagram">TCP state diagram</a> </li><li class="toc-depth-3"> <a href="#why-not-just-send-data-immediately">Why not just send data immediately?</a> </li><li class="toc-depth-2"> <a href="#step-3-tls-handshake">Step 3: TLS Handshake</a> </li><li class="toc-depth-3"> <a href="#clienthello">ClientHello</a> </li><li class="toc-depth-3"> <a href="#serverhello">ServerHello</a> </li><li class="toc-depth-3"> <a href="#tls-13-vs-tls-12">TLS 1.3 vs TLS 1.2</a> </li><li class="toc-depth-3"> <a href="#sni">SNI</a> </li><li class="toc-depth-2"> <a href="#step-4-http-request">Step 4: HTTP Request</a> </li><li class="toc-depth-3"> <a href="#key-headers-explained">Key headers explained</a> </li><li class="toc-depth-3"> <a href="#http11-vs-http2-vs-http3">HTTP/1.1 vs HTTP/2 vs HTTP/3</a> </li><li class="toc-depth-2"> <a href="#step-5-server-processing">Step 5: Server Processing</a> </li><li class="toc-depth-3"> <a href="#simple-static-response">Simple static response</a> </li><li class="toc-depth-3"> <a href="#dynamic-response">Dynamic response</a> </li><li class="toc-depth-3"> <a href="#server-architecture">Server architecture</a> </li><li class="toc-depth-2"> <a href="#step-6-http-response">Step 6: HTTP Response</a> </li><li class="toc-depth-3"> <a href="#response-headers-to-know">Response headers to know</a> </li><li class="toc-depth-2"> <a href="#step-7-browser-rendering">Step 7: Browser Rendering</a> </li><li class="toc-depth-3"> <a href="#rendering-pipeline-details">Rendering pipeline details</a> </li><li class="toc-depth-3"> <a href="#rendering-on-the-gpu">Rendering on the GPU</a> </li><li class="toc-depth-2"> <a href="#performance-how-fast-should-this-be">Performance: How fast should this be?</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

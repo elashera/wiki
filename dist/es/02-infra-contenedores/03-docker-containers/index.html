@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/02-infra-contenedores/03-docker-containers/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/02-infrastructure-containers/03-docker-containers" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article active"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Docker containers: ejecutar, gestionar y administrar contenedores en producción</h1> <div class="article-body"><h1 id="docker-containers-ejecutar-gestionar-y-administrar-contenedores-en-producción">Docker containers: ejecutar, gestionar y administrar contenedores en producción<a aria-label="Link to section" class="anchor-link" href="#docker-containers-ejecutar-gestionar-y-administrar-contenedores-en-producción"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Contenedores Docker en una frase</div>
+                </div>
+                <div class="callout-content">Un contenedor Docker es una instancia en ejecución de una imagen, aislada por namespaces y controlada por cgroups. Dominar la gestión de contenedores (crear, ejecutar, monitorizar, escalar, depurar) es esencial para cualquier pipeline de producción.</div>
+              
+</blockquote>
+<h2 id="el-ciclo-de-vida-de-un-contenedor">El ciclo de vida de un contenedor<a aria-label="Link to section" class="anchor-link" href="#el-ciclo-de-vida-de-un-contenedor"><span class="icon icon-link"></span></a></h2>
+<p>Entender el ciclo de vida completo es la base para gestionar contenedores eficientemente:</p>
+<pre><code>┌───────────┐     ┌───────────┐     ┌───────────┐     ┌───────────┐
+│ Created   │────▶│ Running   │────▶│ Stopped   │────▶│ Removed   │
+│           │     │           │     │           │     │           │
+│ docker    │     │ docker    │     │ docker    │     │ docker    │
+│ create    │     │ start     │     │ stop      │     │ rm        │
+└───────────┘     └───────────┘     └───────────┘     └───────────┘
+     │                │                │
+     │ docker start   │ docker kill    │ docker rm
+     │                │                │
+  ┌──┴──┐          ┌──┴──┐         ┌──┴──┐
+  │ 1   │          │ 0   │         │ N/A │
+  └─────┘          └─────┘         └─────┘
+
+Estados adicionales:
+  Paused     → docker pause (suspender)
+  Restarting → docker stop + auto-restart configurado
+  Dead       → Contenedor eliminado forzosamente por el daemon
+</code></pre>
+<h3 id="crear-vs-ejecutar">Crear vs Ejecutar<a aria-label="Link to section" class="anchor-link" href="#crear-vs-ejecutar"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker create: crea el contenedor pero NO lo ejecuta</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Útil para: preparar contenedores para ejecutar después, debugging</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run: crea + inicia en un solo comando</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker start: inicia un contenedor creado con docker create</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Solo ejecutándose</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Todos los estados</span></span></code></pre></figure>
+<pre><code>¿Cuándo usar docker create vs docker run?
+
+docker run: el 99% de los casos. Simple, directo, todo en uno.
+docker create + start: cuando necesitas configurar algo entre crear y ejecutar,
+  o cuando un orquestador (K8s, Swarm) gestiona el ciclo de vida.
+</code></pre>
+<h2 id="ejecutando-contenedores-comandos-esenciales">Ejecutando contenedores: comandos esenciales<a aria-label="Link to section" class="anchor-link" href="#ejecutando-contenedores-comandos-esenciales"><span class="icon icon-link"></span></a></h2>
+<h3 id="modo-detached-vs-interactivo">Modo detached vs interactivo<a aria-label="Link to section" class="anchor-link" href="#modo-detached-vs-interactivo"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Detached (segundo plano, sin terminal) — modo producción</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Interactivo (terminal, para debugging)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-shell</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sh</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Modo interactivo sin detach (tu terminal queda "pegada" al contenedor)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-shell</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sh</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># (Ctrl+P Ctrl+Q para detach sin matar el contenedor)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># TTY + stdin para interactuar como en una terminal real</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-shell</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sh</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Se siente como ssh al servidor</span></span></code></pre></figure>
+<h3 id="gestión-de-puertos">Gestión de puertos<a aria-label="Link to section" class="anchor-link" href="#gestión-de-puertos"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Mapeo de puerto único</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># localhost:8080 → contenedor:80</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Mapear el mismo puerto interno a puertos externos diferentes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8001:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8002:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8003:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Mapear múltiples puertos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8443:443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 9090:9090</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo para IPv4 o IPv6</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Solo localhost IPv4</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ::1:8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Solo localhost IPv6</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ IMPORTANTE: vincular a 127.0.0.1 para servicios sensibles</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:5432:5432</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Esto evita que la base de datos sea accesible desde la red externa</span></span></code></pre></figure>
+<h3 id="variables-de-entorno-y-configuración">Variables de entorno y configuración<a aria-label="Link to section" class="anchor-link" href="#variables-de-entorno-y-configuración"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Pasando variables con -e</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> NODE_ENV=production</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PORT=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DATABASE_URL=postgresql://user:pass@db:5432/mydb</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> REDIS_URL=redis://cache:6379</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> LOG_LEVEL=info</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  api-server:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Desde un archivo de variables</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># .env file:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># DATABASE_URL=postgresql://...</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># API_KEY=secret123</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># LOG_LEVEL=debug</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --env-file</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .env</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar variables en un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> env</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> printenv</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DATABASE_URL</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar hostname del contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --hostname</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server-01</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El contenedor responde a "web-server-01" en vez de su ID largo</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar DNS personalizado</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.8.8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.4.4</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar el host.docker.internal (útil en Mac/Windows)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --add-host=host.docker.internal:host-gateway</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span></code></pre></figure>
+<h2 id="gestión-de-recursos-límites-y-restricciones">Gestión de recursos: límites y restricciones<a aria-label="Link to section" class="anchor-link" href="#gestión-de-recursos-límites-y-restricciones"><span class="icon icon-link"></span></a></h2>
+<p>Los cgroups permiten limitar los recursos que un contenedor consume:</p>
+<h3 id="límites-de-cpu">Límites de CPU<a aria-label="Link to section" class="anchor-link" href="#límites-de-cpu"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Usar un fraction de CPU (0.5 = medio core, 2.0 = dos cores)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpus=0.5</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpus=2.0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:heavy</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Porcentaje de CPU con --cpu-percent (Windows)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># En Linux, --cpus es el equivalente</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpu-shares=512</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:light</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 50% de CPU por defecto</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpu-shares=1024</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:heavy</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # 100% de CPU</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Restringir a CPU específicas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpuset-cpus=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0,1"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # Solo cores 0 y 1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --cpuset-cpus=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"0-3"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:app</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # Cores 0, 1, 2, 3</span></span></code></pre></figure>
+<pre><code>CPU Shares vs CPU Quota:
+┌─────────────────┬───────────────────────┬──────────────────────┐
+│                   │  CPU Shares           │  CPU Quota (cpus)    │
+├─────────────────┼───────────────────────┼──────────────────────┤
+│  Tipo           │  Relativo             │  Absoluto            │
+│  Comportamiento │  Si no hay contención,│  Límite rígido       │
+│                 │  puede usar 100%      │  (no excede el límite)│
+│  Ejemplo        │  --cpu-shares=512     │  --cpus=0.5          │
+│  Equivalente    │  50% vs default 1024  │  50% de un core      │
+│  Uso recomendado│  Prioridades relativas│  Límites estrictos   │
+└─────────────────┴───────────────────────┴──────────────────────┘
+</code></pre>
+<h3 id="límites-de-memoria">Límites de memoria<a aria-label="Link to section" class="anchor-link" href="#límites-de-memoria"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Memoria total (hard limit)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory=512m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-swap=512m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --memory: límite de RAM (512 MB)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --memory-swap: límite total (RAM + swap). Si es igual a --memory, no hay swap.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Swap (memoria de intercambio)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory=512m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-swap=1g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 512 MB RAM + 512 MB swap = 1 GB total</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Memoria mínima (reservada)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory=512m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-reservation=256m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Siempre puede usar al menos 256 MB, máximo 512 MB</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Límite de intercambio</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory=1g</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-swappiness=0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 0 = no usar swap (preference)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 100 = usar swap como cualquier proceso normal</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Límite de shared memory (/dev/shm)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --shm-size=256m</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Útil para bases de datos (MySQL, PostgreSQL usan /dev/shm)</span></span></code></pre></figure>
+<pre><code>¿Qué pasa cuando un contenedor excede su límite?
+──────────────────────────────────────────────
+
+--memory=256m (hard limit):
+  Uso de memoria → 256 MB
+  ┌─────────────────────────┐
+  │  Contenedor             │
+  │                         │
+  │  Kernel OOM Killer      │ ← El kernel mata el proceso del contenedor
+  │  (Out of Memory)        │
+  └─────────────────────────┘
+
+--memory=256m --memory-swappiness=0:
+  Uso de memoria → 256 MB
+  ┌─────────────────────────┐
+  │  Contenedor             │
+  │                         │
+  │  OOM-Killed             │ ← Se mata el proceso
+  │                         │
+  │  Estado: Exited (137)   │ ← Código 137 = SIGKILL
+  └─────────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver código de salida 137</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># CONTAINER  STATUS</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># abc123     Exited (137) 2 minutes ago  ← OOM Killed</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># def456     Exited (1) 5 minutes ago   ← Error de aplicación</span></span></code></pre></figure>
+<h3 id="límites-de-io-de-disco">Límites de I/O de disco<a aria-label="Link to section" class="anchor-link" href="#límites-de-io-de-disco"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limitar tasa de escritura (bandwidth)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --device-write-bps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/sda:1mb</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limitar tasa de lectura</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --device-read-bps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/sda:5mb</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limitar operaciones de I/O (IOPS)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --device-write-iops</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/sda:100</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:limited</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Pesos de I/O (relativos, no hard limits)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --blkio-weight=100</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:light</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --blkio-weight=500</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:heavy</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Default weight es 500</span></span></code></pre></figure>
+<h3 id="ver-límites-de-recursos">Ver límites de recursos<a aria-label="Link to section" class="anchor-link" href="#ver-límites-de-recursos"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver uso de recursos en tiempo real</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stats</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># CONTAINER  CPU %  MEM USAGE/LIMIT  MEM %  NET I/O  BLOCK I/O</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># web        0.50%  15MiB/512MiB     2.9%   1.2kB/0B 0B/0B</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api        2.30%  85MiB/1GiB      8.4%   45kB/12kB 128kB/0B</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># db         1.10%  256MiB/512MiB    50.0%  2.1MB/5MB 512kB/128MB</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver recursos de un contenedor específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stats</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver recursos configurados</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.HostConfig.CpuQuota}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.HostConfig.Memory}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web</span></span></code></pre></figure>
+<h2 id="health-checks-monitorización-de-contenedores">Health Checks: monitorización de contenedores<a aria-label="Link to section" class="anchor-link" href="#health-checks-monitorización-de-contenedores"><span class="icon icon-link"></span></a></h2>
+<p>Los health checks permiten a Docker saber si tu aplicación dentro del contenedor está funcionando:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># health check inline</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-cmd=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"curl -f http://localhost:3000/health || exit 1"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-interval=30s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-timeout=10s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-retries=3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-start-period=40s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  mi-app:latest</span></span></code></pre></figure>
+<pre><code>Parámetros del health check:
+┌────────────────────────┬──────────────────────────────────────────┐
+│  Parámetro              │  Descripción                             │
+├────────────────────────┼──────────────────────────────────────────┤
+│  --health-cmd          │  Comando a ejecutar dentro del           │
+│                        │  contenedor. 0 = healthy, !=0 =          │
+│                        │  unhealthy.                              │
+│  --health-interval     │  Tiempo entre checks (default: 30s)      │
+│  --health-timeout      │  Máximo tiempo por comando (default: 30s)│
+│  --health-retries      │  Intentos antes de "unhealthy"           │
+│                        │  (default: 3)                            │
+│  --health-start-period │  Tiempo de gracia para arrancar          │
+│                        │  (default: 0s). No cuenta para retries.  │
+└────────────────────────┴──────────────────────────────────────────┘
+</code></pre>
+<pre><code>Estados de health check:
+─────────────────────
+
+  starting    → El contenedor se está iniciando. No se cuenta para retries.
+  healthy     → El health check pasó.
+  unhealthy   → El health check falló N veces (retries).
+
+Ejemplo con start-period:
+  T=0s   → Contenedor arranca (starting)
+  T=5s   → health check #1 falla (count=1) — contando
+  T=35s  → health check #2 pasa (count=0) — reset
+  T=65s  → health check #3 pasa (count=0) — healthy!
+</code></pre>
+<h3 id="health-checks-comunes">Health checks comunes<a aria-label="Link to section" class="anchor-link" href="#health-checks-comunes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># HTTP endpoint</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"curl -f http://localhost:3000/health || exit 1"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># TCP check (sin curl)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"nc -z localhost 3000 || exit 1"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Script de verificación</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/app/healthcheck.sh"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Comando con timeout</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"timeout 5 bash -c 'cat > /dev/tcp/localhost/3000' || exit 1"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># PostgreSQL check</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"pg_isready -U postgres || exit 1"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># MySQL check</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">--health-cmd</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mysqladmin ping -h localhost || exit 1"</span></span></code></pre></figure>
+<h3 id="auto-restart-con-health-checks">Auto-restart con health checks<a aria-label="Link to section" class="anchor-link" href="#auto-restart-con-health-checks"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Restart policy: cuándo reiniciar un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --restart=always</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">          # Siempre reiniciar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --restart=on-failure</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Solo en fallo</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --restart=on-failure:5</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # Máximo 5 reinicios</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --restart=unless-stopped</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">   # Excepto si se detuvo manualmente</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Combinar health check con restart</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --restart=on-failure:3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-cmd=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"curl -f http://localhost:3000/health || exit 1"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-interval=30s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-timeout=10s</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-retries=3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  mi-app:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Si el health check falla 3 veces, Docker reinicia el contenedor (hasta 5 veces)</span></span></code></pre></figure>
+<h2 id="gestión-de-logs">Gestión de logs<a aria-label="Link to section" class="anchor-link" href="#gestión-de-logs"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver logs de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Logs en tiempo real (follow)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Logs con timestamp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --timestamps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Últimas N líneas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --tail=100</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Logs entre timestamps</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --since</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 2024-01-15T10:00:00</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --until</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 2024-01-15T11:00:00</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Combinar filtros</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> logs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --tail=50</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --timestamps</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span></code></pre></figure>
+<h3 id="drivers-de-logging">Drivers de logging<a aria-label="Link to section" class="anchor-link" href="#drivers-de-logging"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Driver por defecto: json-file (logs en /var/lib/docker/containers/)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Problema: los logs pueden llenar el disco</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar driver de logging por contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-driver=json-file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> max-size=10m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> max-file=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O usar syslog para centralizar logs</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-driver=syslog</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> syslog-address=tcp://log-server:5514</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tag="nginx"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O usar journald para integrar con systemd</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --log-driver=journald</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span></code></pre></figure>
+<pre><code>Driver de logging JSON-FILE con rotación:
+┌──────────────────────────────────────────────────┐
+│  /var/lib/docker/containers/abc123/              │
+│    abc123-json.log        ← 10 MB (actual)       │
+│    abc123-json.log.1      ← 10 MB (anterior)     │
+│    abc123-json.log.2      ← 10 MB (anterior)     │
+│    abc123-json.log.3      ← 10 MB (anterior)     │
+│                                                  │
+│  max-size=10m       → 10 MB por archivo          │
+│  max-file=3         → Máximo 3 archivos          │
+│  total = 30 MB máximo                            │
+└──────────────────────────────────────────────────┘
+
+# Configurar a nivel global en /etc/docker/daemon.json:
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "10m",
+    "max-file": "3"
+  }
+}
+</code></pre>
+<h2 id="ejecutar-comandos-dentro-de-contenedores">Ejecutar comandos dentro de contenedores<a aria-label="Link to section" class="anchor-link" href="#ejecutar-comandos-dentro-de-contenedores"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Entrar a un contenedor en ejecución (sh/bash)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sh</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bash</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Si el contenedor tiene bash</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar un comando sin entrar a la terminal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/nginx/nginx.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -la</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/log/nginx/</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar como un usuario específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> whoami</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> www-data</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> whoami</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar en segundo plano (sin -it)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> touch</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /tmp/test-file</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar si un contenedor está sano</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://localhost:80</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ||</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "DOWN"</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar archivos dentro de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> config/nginx.conf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server:/etc/nginx/conf.d/</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server:/var/log/nginx/access.log</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./access.log</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar un archivo FUERA de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/log/nginx/access.log</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /tmp/access.log</span></span></code></pre></figure>
+<h2 id="inspeccionar-y-depurar-contenedores">Inspeccionar y depurar contenedores<a aria-label="Link to section" class="anchor-link" href="#inspeccionar-y-depurar-contenedores"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Información detallada de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Extraer campos específicos con format</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.State.Running}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.NetworkSettings.IPAddress}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.Mounts}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.Config.Env}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.HostConfig.Memory}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Logs de errores en formato JSON</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{range .LogPath}}{{.}}{{end}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Top proceso de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> top</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Distribución de red de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> port</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Networking</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bridge</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server_webnet</span></span></code></pre></figure>
+<h2 id="prácticas-comunes-de-gestión">Prácticas comunes de gestión<a aria-label="Link to section" class="anchor-link" href="#prácticas-comunes-de-gestión"><span class="icon icon-link"></span></a></h2>
+<h3 id="patrón-de-un-solo-proceso-por-contenedor">Patrón de un solo proceso por contenedor<a aria-label="Link to section" class="anchor-link" href="#patrón-de-un-solo-proceso-por-contenedor"><span class="icon icon-link"></span></a></h3>
+<pre><code>❌ MALO: múltiples procesos en un contenedor
+┌───────────────────────────────────┐
+│  Contenedor: mi-app               │
+│  CMD: /usr/local/bin/start.sh     │  ← Supervisord o init
+│  ┌───────────────────────────────┐│
+│  │  App (Node.js)                ││
+│  │  Log rotator                  ││
+│  │  Cron jobs                    ││
+│  │  Health check script          ││
+│  └───────────────────────────────┘│
+│  Problema: si muere el init,     │
+│  no puedes ver qué proceso falló  │
+└───────────────────────────────────┘
+
+✅ BUENO: un proceso por contenedor
+┌──────────────────────────┐  ┌──────────────────────────┐  ┌──────────────────────────┐
+│  Contenedor: api-server   │  │  Contenedor: log-rotator  │  │  Contenedor: cron-jobs   │
+│  CMD: node server.js     │  │  CMD: logrotate -f /etc  │  │  CMD: crond -f          │
+│  Puertos: 3000           │  │  Puertos: none            │  │  Puertos: none            │
+│  Volúmenes: /app/data    │  │  Volúmenes: /app/logs     │  │  Volúmenes: /app/data   │
+└──────────────────────────┘  └──────────────────────────┘  └──────────────────────────┘
+  Docker gestiona cada proceso   Docker gestaña cada proceso   Docker gestiona cada proceso
+  Individualmente               Individualmente               Individualmente
+</code></pre>
+<h3 id="patrón-de-contenedores-efímeros">Patrón de contenedores efímeros<a aria-label="Link to section" class="anchor-link" href="#patrón-de-contenedores-efímeros"><span class="icon icon-link"></span></a></h3>
+<pre><code>Contenedores efímeros: nacen, viven, mueren
+
+Nacimiento:
+  docker build -t mi-app:1.2.3 .
+  docker run -d --name api mi-app:1.2.3
+
+Vida:
+  docker exec api curl /health
+  docker logs -f api
+  docker stats api
+
+Muerte (grácil):
+  docker stop api         → Envía SIGTERM
+  docker kill api         → Envía SIGKILL (instantáneo)
+  docker rm api           → Elimina el contenedor
+
+Reciclaje:
+  docker run -d --name api-new mi-app:1.3.0
+  docker stop api &#x26;&#x26; docker rm api
+  # Nuevo contenedor reemplaza al viejo
+</code></pre>
+<h3 id="graceful-shutdown-con-sigterm">Graceful shutdown con SIGTERM<a aria-label="Link to section" class="anchor-link" href="#graceful-shutdown-con-sigterm"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Tu aplicación debe manejar SIGTERM para cerrar limpiamente:</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Node.js</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">process.on(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'SIGTERM'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, async () => {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  console.log(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'SIGTERM recibido, cerrando gracefulmente...'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  server.close(async () => {</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    await db.disconnect();  // Cerrar conexiones DB</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    console.log(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Conexiones cerradas, salida...'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    process.exit(0);</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Python (FastAPI/Flask)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">import signal</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">import sys</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">def shutdown_handler(signum, frame):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    print(f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Signal {signum} received, shutting down...'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    sys.exit(0)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">signal.signal(signal.SIGTERM, shutdown_handler)</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker stop envía SIGTERM primero, espera 10 segundos, luego SIGKILL</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --time=30</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ↑ 30 segundos para shutdown graceful antes de force kill</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar tiempo de stop</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.HostConfig.StopTimeout}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 10000000000 = 10 segundos (nanosegundos)</span></span></code></pre></figure>
+<h2 id="gestión-avanzada-networking-en-contenedores">Gestión avanzada: networking en contenedores<a aria-label="Link to section" class="anchor-link" href="#gestión-avanzada-networking-en-contenedores"><span class="icon icon-link"></span></a></h2>
+<h3 id="redes-bridge-por-defecto">Redes bridge (por defecto)<a aria-label="Link to section" class="anchor-link" href="#redes-bridge-por-defecto"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Red bridge por defecto</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># NETWORK ID  NAME       DRIVER</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># abc123      bridge      bridge</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># def456      host       host</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ghi789      none       null</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cada contenedor en la red bridge tiene su IP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web-server</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Redes bridge personalizadas (recomendado)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bridge</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --subnet</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 172.20.0.0/16</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear contenedores en la red personalizada</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> db</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --ip</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 172.20.0.10</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api puede acceder a db con "db" (DNS automático)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api puede acceder a db con "172.20.0.10" (IP)</span></span></code></pre></figure>
+<h3 id="network-modes">Network modes<a aria-label="Link to section" class="anchor-link" href="#network-modes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bridge (por defecto) — red aislada, NAT</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bridge</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Host — sin aislamiento de red, comparte red del host</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto 80 accesible en localhost:80 directamente</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># None — sin red</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> none</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sin interfaz de red</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Container — compartir red de otro contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> none</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> python:3.12-slim</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> worker</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> container:api</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> python:3.12-slim</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api y worker comparten la misma stack de red</span></span></code></pre></figure>
+<h2 id="patrones-de-gestión-en-producción">Patrones de gestión en producción<a aria-label="Link to section" class="anchor-link" href="#patrones-de-gestión-en-producción"><span class="icon icon-link"></span></a></h2>
+<h3 id="pattern-api--base-de-datos">Pattern: API + Base de datos<a aria-label="Link to section" class="anchor-link" href="#pattern-api--base-de-datos"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear red dedicada</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Base de datos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres-db</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --memory=1g</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-swap=1g</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --cpus=1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTGRES_PASSWORD=secreto</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> pg-data:/var/lib/postgresql/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># API</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --memory=512m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --memory-swap=512m</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --cpus=0.5</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DATABASE_URL=postgresql://user:secreto@postgres-db:5432/mydb</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --health-cmd=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"curl -f http://localhost:3000/health || exit 1"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --restart=unless-stopped</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  api-server:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Volúmenes se crean automáticamente</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span></span></code></pre></figure>
+<h3 id="patrón-nginx--api-reverse-proxy">Patrón: Nginx + API (reverse proxy)<a aria-label="Link to section" class="anchor-link" href="#patrón-nginx--api-reverse-proxy"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Docker Compose se usa para esto (ver artículo dedicado)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Pero manualmente:</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Red compartida</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># API (no expone puertos al host)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PORT=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server:1.2.3</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PORT=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Nginx (expone solo al host)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 80:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./nginx.conf:/etc/nginx/nginx.conf:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nginx.conf:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># upstream api {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   server api1:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   server api2:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># }</span></span></code></pre></figure>
+<h3 id="patrón-escalado-horizontal">Patrón: Escalado horizontal<a aria-label="Link to section" class="anchor-link" href="#patrón-escalado-horizontal"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escalar de 1 a N instancias</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 4</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">do</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> PORT=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> INSTANCE_ID=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">\</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    api-server:1.2.3</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">done</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Estado de los contenedores</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --filter</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "name=api"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># CONTAINER  IMAGE          STATUS    PORTS</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-1      api-server:1.2.3  Up</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-2      api-server:1.2.3  Up</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-3      api-server:1.2.3  Up</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-4      api-server:1.2.3  Up</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-5      api-server:1.2.3  Up</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escalar hacia abajo</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-5</span></span></code></pre></figure>
+<h3 id="patrón-rolling-update-manual">Patrón: Rolling update manual<a aria-label="Link to section" class="anchor-link" href="#patrón-rolling-update-manual"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Update gradual sin downtime</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v2-1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server:1.3.0</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v2-2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-server:1.3.0</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar que el v2 funciona</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://api-v2-1:3000/health</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # OK</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://api-v2-2:3000/health</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # OK</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Actualizar el nginx para que apunte al v2</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># (recargar nginx.conf con los nuevos upstreams)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> reload</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Eliminar el v1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v1-1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v1-1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v1-2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-v1-2</span></span></code></pre></figure>
+<h2 id="errores-comunes">Errores comunes<a aria-label="Link to section" class="anchor-link" href="#errores-comunes"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Exit 137</code></td>
+<td>OOM Killed (memoria excedida)</td>
+<td>Aumentar <code>--memory</code> o optimizar la app</td>
+</tr>
+<tr>
+<td><code>Exit 143</code></td>
+<td>SIGTERM recibido (docker stop)</td>
+<td>Shutdown graceful, revisar logs</td>
+</tr>
+<tr>
+<td><code>Exit 1</code></td>
+<td>Error de la aplicación</td>
+<td><code>docker logs nombre-contenedor</code></td>
+</tr>
+<tr>
+<td><code>Exit 0</code> inesperado</td>
+<td>Aplicación terminó normal</td>
+<td>Verificar que CMD es correcto</td>
+</tr>
+<tr>
+<td><code>bind: address already in use</code></td>
+<td>Puerto ocupado</td>
+<td><code>lsof -i :8080</code> o cambiar puerto</td>
+</tr>
+<tr>
+<td>Contenedor se detiene solo</td>
+<td>OOM, error de app, o límite</td>
+<td><code>docker inspect</code> y <code>docker logs</code></td>
+</tr>
+<tr>
+<td>No acceso a internet</td>
+<td>Red bridge sin DNS</td>
+<td><code>--network host</code> o configurar DNS</td>
+</tr>
+<tr>
+<td><code>permission denied</code></td>
+<td>Propietario de volúmenes</td>
+<td><code>--user</code> o <code>chown</code> en volumen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="resumen">Resumen<a aria-label="Link to section" class="anchor-link" href="#resumen"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><strong>Ciclo de vida</strong>: created → running → stopped → removed</li>
+<li><strong>docker run</strong> crea y ejecuta; <strong>docker create</strong> solo prepara</li>
+<li><strong>Recursos</strong>: límites de CPU (<code>--cpus</code>), memoria (<code>--memory</code>), I/O (<code>--device-write-bps</code>)</li>
+<li><strong>Health checks</strong>: monitorean la salud de la aplicación con <code>--health-cmd</code></li>
+<li><strong>Logs</strong>: <code>docker logs -f</code>, drivers de logging con rotación</li>
+<li><strong>exec</strong>: para comandos y debugging sin entrar a la terminal</li>
+<li><strong>Un solo proceso por contenedor</strong>: sigue el principio de responsabilidad única</li>
+<li><strong>Graceful shutdown</strong>: manejar SIGTERM para cerrar limpiamente</li>
+<li><strong>Restart policies</strong>: <code>always</code>, <code>on-failure</code>, <code>unless-stopped</code> para alta disponibilidad</li>
+</ul>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">La clave</div>
+                </div>
+                <div class="callout-content">Los contenedores Docker son efímeros: están diseñados para nacer, vivir su vida y morir. No los gestiones como servidores tradicionales. En su lugar, usa images versionadas, health checks, restart policies y volúmenes para datos. Si un contenedor falla, déjalo morir y crea uno nuevo — ese es el espíritu de la computación efímera.</div>
+              
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki<a aria-label="Link to section" class="anchor-link" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arquitectura Docker</td>
+<td>[02-infra-contenedores/01-docker-intro](/es/index)</td>
+</tr>
+<tr>
+<td>Creando imágenes</td>
+<td>[02-infra-contenedores/02-docker-images](/es/index)</td>
+</tr>
+<tr>
+<td>Docker Compose</td>
+<td>[02-infra-contenedores/04-docker-compose](/es/index)</td>
+</tr>
+<tr>
+<td>Networking Docker</td>
+<td>[02-infra-contenedores/05-docker-networking](/es/index)</td>
+</tr>
+<tr>
+<td>Volúmenes Docker</td>
+<td>[02-infra-contenedores/06-docker-volumes](/es/index)</td>
+</tr>
+</tbody>
+</table></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#el-ciclo-de-vida-de-un-contenedor">El ciclo de vida de un contenedor</a> </li><li class="toc-depth-3"> <a href="#crear-vs-ejecutar">Crear vs Ejecutar</a> </li><li class="toc-depth-2"> <a href="#ejecutando-contenedores-comandos-esenciales">Ejecutando contenedores: comandos esenciales</a> </li><li class="toc-depth-3"> <a href="#modo-detached-vs-interactivo">Modo detached vs interactivo</a> </li><li class="toc-depth-3"> <a href="#gestión-de-puertos">Gestión de puertos</a> </li><li class="toc-depth-3"> <a href="#variables-de-entorno-y-configuración">Variables de entorno y configuración</a> </li><li class="toc-depth-2"> <a href="#gestión-de-recursos-límites-y-restricciones">Gestión de recursos: límites y restricciones</a> </li><li class="toc-depth-3"> <a href="#límites-de-cpu">Límites de CPU</a> </li><li class="toc-depth-3"> <a href="#límites-de-memoria">Límites de memoria</a> </li><li class="toc-depth-3"> <a href="#límites-de-io-de-disco">Límites de I/O de disco</a> </li><li class="toc-depth-3"> <a href="#ver-límites-de-recursos">Ver límites de recursos</a> </li><li class="toc-depth-2"> <a href="#health-checks-monitorización-de-contenedores">Health Checks: monitorización de contenedores</a> </li><li class="toc-depth-3"> <a href="#health-checks-comunes">Health checks comunes</a> </li><li class="toc-depth-3"> <a href="#auto-restart-con-health-checks">Auto-restart con health checks</a> </li><li class="toc-depth-2"> <a href="#gestión-de-logs">Gestión de logs</a> </li><li class="toc-depth-3"> <a href="#drivers-de-logging">Drivers de logging</a> </li><li class="toc-depth-2"> <a href="#ejecutar-comandos-dentro-de-contenedores">Ejecutar comandos dentro de contenedores</a> </li><li class="toc-depth-2"> <a href="#inspeccionar-y-depurar-contenedores">Inspeccionar y depurar contenedores</a> </li><li class="toc-depth-2"> <a href="#prácticas-comunes-de-gestión">Prácticas comunes de gestión</a> </li><li class="toc-depth-3"> <a href="#patrón-de-un-solo-proceso-por-contenedor">Patrón de un solo proceso por contenedor</a> </li><li class="toc-depth-3"> <a href="#patrón-de-contenedores-efímeros">Patrón de contenedores efímeros</a> </li><li class="toc-depth-3"> <a href="#graceful-shutdown-con-sigterm">Graceful shutdown con SIGTERM</a> </li><li class="toc-depth-2"> <a href="#gestión-avanzada-networking-en-contenedores">Gestión avanzada: networking en contenedores</a> </li><li class="toc-depth-3"> <a href="#redes-bridge">Redes bridge</a> </li><li class="toc-depth-3"> <a href="#network-modes">Network modes</a> </li><li class="toc-depth-2"> <a href="#patrones-de-gestión-en-producción">Patrones de gestión en producción</a> </li><li class="toc-depth-3"> <a href="#pattern-api--base-de-datos">Pattern: API + Base de datos</a> </li><li class="toc-depth-3"> <a href="#patrón-nginx--api">Patrón: Nginx + API</a> </li><li class="toc-depth-3"> <a href="#patrón-escalado-horizontal">Patrón: Escalado horizontal</a> </li><li class="toc-depth-3"> <a href="#patrón-rolling-update-manual">Patrón: Rolling update manual</a> </li><li class="toc-depth-2"> <a href="#errores-comunes">Errores comunes</a> </li><li class="toc-depth-2"> <a href="#resumen">Resumen</a> </li><li class="toc-depth-2"> <a href="#conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

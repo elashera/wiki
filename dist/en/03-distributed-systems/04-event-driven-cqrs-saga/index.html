@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article active"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Event-driven architecture, CQRS, and the Saga Pattern</h1> <div class="article-body"><h1 id="event-driven-architecture-cqrs-and-the-saga-pattern">Event-driven architecture, CQRS, and the Saga Pattern<a aria-label="Link to section" class="anchor-link" href="#event-driven-architecture-cqrs-and-the-saga-pattern"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">In one sentence</div>
+                </div>
+                <div class="callout-content">Event-driven architecture communicates services through events, CQRS separates read and write operations, and the Saga Pattern manages distributed transactions that need eventual consistency.</div>
+              
+</blockquote>
+<h2 id="why-do-we-need-integration-patterns">Why do we need integration patterns?<a aria-label="Link to section" class="anchor-link" href="#why-do-we-need-integration-patterns"><span class="icon icon-link"></span></a></h2>
+<p>When you split an application into microservices, each service has its own database. How do you make two services maintain consistent data without using ACID transactions (which do not work across different databases)?</p>
+<pre><code>Microservice A (DB A) ──→ Microservice B (DB B)
+</code></pre>
+<p>A normal SQL transaction cannot span both databases. You need special patterns.</p>
+<hr>
+<h2 id="1-event-driven-architecture-eda">1. Event-Driven Architecture (EDA)<a aria-label="Link to section" class="anchor-link" href="#1-event-driven-architecture-eda"><span class="icon icon-link"></span></a></h2>
+<p>An event-driven architecture is one where components communicate by producing and consuming events, rather than calling each other directly.</p>
+<h3 id="11-what-is-an-event">1.1 What is an event?<a aria-label="Link to section" class="anchor-link" href="#11-what-is-an-event"><span class="icon icon-link"></span></a></h3>
+<p>An event is a fact that happened in the past, irreversible, and relevant to the system.</p>
+<pre><code>Typical events:
+- UserCreated(userId: 1, email: "emilio@example.com", timestamp: 2024-01-15T10:30:00Z)
+- OrderPlaced(orderId: 42, userId: 1, total: 99.99, timestamp: 2024-01-15T10:31:00Z)
+- PaymentCompleted(paymentId: 7, orderId: 42, timestamp: 2024-01-15T10:32:00Z)
+- InventoryReserved(inventoryId: 15, orderId: 42, items: [...], timestamp: 2024-01-15T10:32:01Z)
+</code></pre>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Events are named in the past tense</div>
+                </div>
+                <div class="callout-content">Event names should describe something that HAS ALREADY happened: UserCreated, not CreateUser; OrderPlaced, not PlaceOrder; PaymentFailed, not FailPayment.</div>
+              
+</blockquote>
+<h3 id="12-eda-vs-rpc-restgrpc">1.2 EDA vs RPC (REST/gRPC)<a aria-label="Link to section" class="anchor-link" href="#12-eda-vs-rpc-restgrpc"><span class="icon icon-link"></span></a></h3>
+<p><strong>RPC (synchronous)</strong>:</p>
+<pre><code>Client → API Gateway → Service A → Service B → Service C
+                ↑           ↑           ↑
+              Waits       Waits       Waits
+              (takes time) (takes time) (takes time)
+</code></pre>
+<p><strong>EDA (asynchronous)</strong>:</p>
+<pre><code>Client → Service A → [Event: UserCreated] → Service B (reads when available)
+                                     → Service C (reads when available)
+                                     → Service D (reads when available)
+</code></pre>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">EDA completely decouples services</div>
+                </div>
+                <div class="callout-content">In RPC, Service A needs to know Service B's URL. If Service B changes servers, Service A breaks. In EDA, Service A only publishes an event. Service B subscribes to the event it is interested in. Neither knows the other.</div>
+              
+</blockquote>
+<h3 id="13-eda-components">1.3 EDA components<a aria-label="Link to section" class="anchor-link" href="#13-eda-components"><span class="icon icon-link"></span></a></h3>
+<p><strong>Event Producers</strong>: Services that create and publish events.</p>
+<p><strong>Event Consumers (Listeners/Handlers)</strong>: Services that listen to events and react.</p>
+<p><strong>Event Broker/Stream</strong>: The system that stores and delivers events (Kafka, RabbitMQ, AWS SNS/SQS, Azure Event Grid).</p>
+<p><strong>Event Schema</strong>: The format of events. Must be versioned and stabilized.</p>
+<pre><code>┌──────────────────────────────────────────────────────────┐
+│                    Event Broker (Kafka)                   │
+│                                                          │
+│  Topic: events                                           │
+│  ├── Partition 0: UserCreated, OrderPlaced, PaymentDone   │
+│  ├── Partition 1: UserCreated, InventoryReserved         │
+│  └── Partition 2: PaymentFailed, OrderCancelled          │
+└──────────────────────────────────────────────────────────┘
+         ↑              ↑               ↑
+         │              │               │
+    Service A      Service B      Service C
+  (processes)      (reacts)       (reacts)
+</code></pre>
+<hr>
+<h2 id="2-event-sourcing">2. Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#2-event-sourcing"><span class="icon icon-link"></span></a></h2>
+<p>Event Sourcing is a pattern where an entity's state is stored as a sequence of events, not as a snapshot of the current state.</p>
+<h3 id="21-how-it-works">2.1 How it works<a aria-label="Link to section" class="anchor-link" href="#21-how-it-works"><span class="icon icon-link"></span></a></h3>
+<p>Instead of storing: <code>user:1000 → {email: "new@example.com", name: "Emilio"}</code></p>
+<p>You store:</p>
+<pre><code>Events for user 1000:
+1. UserCreated(userId: 1000, email: "old@example.com", name: "Emilio")
+2. EmailUpdated(userId: 1000, email: "new@example.com")
+3. NameUpdated(userId: 1000, name: "Emilio Garcia")
+</code></pre>
+<p>The current state is reconstructed by replaying all events:</p>
+<pre><code>Initial state: {}
+→ UserCreated → {email: "old@example.com", name: "Emilio"}
+→ EmailUpdated → {email: "new@example.com", name: "Emilio"}
+→ NameUpdated → {email: "new@example.com", name: "Emilio Garcia"}
+</code></pre>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Accounting book analogy</div>
+                </div>
+                <div class="callout-content">An accounting book does not store the current balance. It stores each transaction (debit, credit). The current balance is calculated by summing all transactions.</div>
+              
+<p>Event Sourcing is exactly that: you do not store the balance, you store the transactions. The balance is recalculated when you need it.</p>
+</blockquote>
+<h3 id="22-advantages-of-event-sourcing">2.2 Advantages of Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#22-advantages-of-event-sourcing"><span class="icon icon-link"></span></a></h3>
+<ol>
+<li><strong>Complete audit trail</strong>: Every change is recorded with its reason and timestamp.</li>
+<li><strong>Replay</strong>: You can reconstruct state at any point in time.</li>
+<li><strong>Debugging</strong>: You can see exactly which events caused a given state.</li>
+<li><strong>Natural integration</strong>: Events can be published to other services automatically.</li>
+</ol>
+<h3 id="23-disadvantages-of-event-sourcing">2.3 Disadvantages of Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#23-disadvantages-of-event-sourcing"><span class="icon icon-link"></span></a></h3>
+<ol>
+<li><strong>Complexity</strong>: It is an advanced pattern that changes how you design applications.</li>
+<li><strong>Complex querying</strong>: Queries are made against events, not a linear state.</li>
+<li><strong>Event migration</strong>: If an event schema changes, you need to migrate all existing events.</li>
+<li><strong>Eventual consistency</strong>: State is not immediately available after writing an event.</li>
+</ol>
+<hr>
+<h2 id="3-cqrs-command-query-responsibility-segregation">3. CQRS: Command Query Responsibility Segregation<a aria-label="Link to section" class="anchor-link" href="#3-cqrs-command-query-responsibility-segregation"><span class="icon icon-link"></span></a></h2>
+<p>CQRS separates read operations (query) from write operations (command).</p>
+<h3 id="31-the-traditional-model">3.1 The traditional model<a aria-label="Link to section" class="anchor-link" href="#31-the-traditional-model"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌─────────────────────────────────────┐
+│         Application                 │
+│                                     │
+│  GET /user/1000  →  SELECT * FROM users WHERE id = 1000
+│  PUT /user/1000  →  UPDATE users SET email = ? WHERE id = 1000
+│                                     │
+│  Single database for everything     │
+└─────────────────────────────────────┘
+</code></pre>
+<h3 id="32-the-cqrs-model">3.2 The CQRS model<a aria-label="Link to section" class="anchor-link" href="#32-the-cqrs-model"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    Application                              │
+│                                                             │
+│  PUT /user/1000 ──→ Command Model ──→ Write DB (PostgreSQL) │
+│                                                             │
+│  GET /user/1000 ──→ Query Model  ──→ Read DB (Redis/ES)    │
+│                                                             │
+│  Two separate databases, optimized for their workload       │
+└─────────────────────────────────────────────────────────────┘
+         │
+         │ Update events
+         │
+         ▼
+  Read DB is updated asynchronously
+</code></pre>
+<p><strong>Command Model</strong>: Optimized for writes. Validates business rules, applies transactions.</p>
+<p><strong>Query Model</strong>: Optimized for reads. Can be a materialized view, a cache, or an Elasticsearch index.</p>
+<h3 id="33-syncing-write-db-to-read-db">3.3 Syncing Write DB to Read DB<a aria-label="Link to section" class="anchor-link" href="#33-syncing-write-db-to-read-db"><span class="icon icon-link"></span></a></h3>
+<pre><code>1. Command executes in Write DB
+2. An event is generated: UserUpdated(userId: 1000, email: "new@example.com")
+3. The event is published to the event broker
+4. A handler updates the Query Model with the new data
+5. The next read uses the updated Query Model
+</code></pre>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Eventual consistency</div>
+                </div>
+                <div class="callout-content">There is a lag between writing to the Command Model and updating the Query Model. During that lag, a read may return stale data. This is acceptable for most applications, but not all.</div>
+              
+</blockquote>
+<h3 id="34-when-to-use-cqrs">3.4 When to use CQRS?<a aria-label="Link to section" class="anchor-link" href="#34-when-to-use-cqrs"><span class="icon icon-link"></span></a></h3>
+<ul>
+<li><strong>High read vs write load</strong>: If you have 100 reads for every write, having separate models allows optimizing each independently.</li>
+<li><strong>Complex read models</strong>: If you need materialized views, Elasticsearch indexes, or heavy aggregations.</li>
+<li><strong>Independent scaling</strong>: If you need to scale reads and writes separately.</li>
+</ul>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Do not use CQRS by default</div>
+                </div>
+                <div class="callout-content">CQRS adds significant complexity. Only use it when you have a clear reason: high asymmetric load, complex read models, or need for independent scaling. For most applications, a traditional CRUD model is sufficient.</div>
+              
+</blockquote>
+<hr>
+<h2 id="4-saga-pattern-distributed-transactions">4. Saga Pattern: Distributed transactions<a aria-label="Link to section" class="anchor-link" href="#4-saga-pattern-distributed-transactions"><span class="icon icon-link"></span></a></h2>
+<p>When an operation needs to modify data in multiple services, and you cannot use an ACID transaction, you need the Saga Pattern.</p>
+<h3 id="41-the-problem">4.1 The problem<a aria-label="Link to section" class="anchor-link" href="#41-the-problem"><span class="icon icon-link"></span></a></h3>
+<pre><code>Order Service (DB A) ──→ Payment Service (DB B) ──→ Inventory Service (DB C)
+</code></pre>
+<p>An order needs to:</p>
+<ol>
+<li>Create the order in Order Service</li>
+<li>Charge the user in Payment Service</li>
+<li>Reserve inventory in Inventory Service</li>
+</ol>
+<p>If step 2 succeeds but step 3 fails, how do you undo step 2? You cannot use a database rollback because each service has its own DB.</p>
+<h3 id="42-saga-choreography">4.2 Saga: Choreography<a aria-label="Link to section" class="anchor-link" href="#42-saga-choreography"><span class="icon icon-link"></span></a></h3>
+<p>Each saga is a sequence of local steps. Each step publishes an event that triggers the next step.</p>
+<pre><code>Step 1: OrderService.createOrder()
+    → Event: OrderCreated(orderId: 42, userId: 1, total: 99.99)
+    
+Step 2: PaymentService.handleOrderCreated()
+    → Charge the user
+    → If success: Event: PaymentCompleted(paymentId: 7, orderId: 42)
+    → If failure: Event: PaymentFailed(orderId: 42, reason: "insufficient_funds")
+    
+Step 3 (if success): InventoryService.handlePaymentCompleted()
+    → Reserve inventory
+    → If success: Event: InventoryReserved(inventoryId: 15, orderId: 42)
+    → If failure: Event: InventoryReservationFailed(orderId: 42, reason: "out_of_stock")
+    
+Step 4 (if failure in step 2 or 3): OrderService.handleFailure()
+    → Cancel the order
+    → Event: OrderCancelled(orderId: 42, reason: "payment_failed")
+</code></pre>
+<pre><code>┌──────────┐  OrderCreated   ┌──────────┐  PaymentCompleted  ┌──────────┐
+│  Order   │────────────────>│ Payment  │───────────────────>│ Inventory│
+│ Service  │                 │ Service  │                    │ Service  │
+└──────────┘                 └──────────┘                    └──────────┘
+     ▲                              │                              │
+     │                              │ PaymentFailed/               │ InventoryReservationFailed
+     │ CancelOrder                  └──────────────────────────────┘
+     │
+┌────┴────────────────────────────────────────────────────────────┐
+│                   Event Broker (Kafka)                          │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="43-saga-orchestration">4.3 Saga: Orchestration<a aria-label="Link to section" class="anchor-link" href="#43-saga-orchestration"><span class="icon icon-link"></span></a></h3>
+<p>Instead of each service publishing events and reacting to others (choreography), a central orchestrator coordinates all steps.</p>
+<pre><code>                 ┌─────────────┐
+                 │  Orchest.   │
+                 │  (Saga)     │
+                 └──────┬──────┘
+                        │
+           ┌────────────┼────────────┐
+           │            │            │
+           ▼            ▼            ▼
+    ┌──────────┐  ┌──────────┐  ┌──────────┐
+    │  Order   │  │ Payment  │  │ Inventory│
+    │ Service  │  │ Service  │  │ Service  │
+    └──────────┘  └──────────┘  └──────────┘
+</code></pre>
+<p>The orchestrator:</p>
+<ol>
+<li>Calls OrderService.createOrder()</li>
+<li>If success, calls PaymentService.charge()</li>
+<li>If success, calls InventoryService.reserve()</li>
+<li>If any step fails, calls compensations in reverse order</li>
+</ol>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Saga Orchestrator</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> OrderSagaOrchestrator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> execute</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self, order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        compensation_steps </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> []</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Step 1: Create order</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            order </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> order_service.create(order_data)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            compensation_steps.append(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">lambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: order_service.cancel(order.id))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Step 2: Charge</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            payment </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> payment_service.charge(order.id, order_data.total)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            compensation_steps.append(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">lambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: payment_service.refund(payment.id))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Step 3: Reserve inventory</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> inventory_service.reserve(order.id, order_data.items)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # All success!</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"status"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"success"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"order"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: order}</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> e:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Compensation in reverse order</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> step </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> reversed</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(compensation_steps):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> step()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> compensating_error:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                    log.error(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Compensation failed: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">compensating_error</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"status"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"failed"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"error"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(e)}</span></span></code></pre></figure>
+<h3 id="44-choreography-vs-orchestration">4.4 Choreography vs Orchestration<a aria-label="Link to section" class="anchor-link" href="#44-choreography-vs-orchestration"><span class="icon icon-link"></span></a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Choreography</th>
+<th>Orchestration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control</strong></td>
+<td>Decentralized (each service reacts)</td>
+<td>Centralized (orchestrator coordinates)</td>
+</tr>
+<tr>
+<td><strong>Coupling</strong></td>
+<td>Low (services do not know each other)</td>
+<td>Medium (services know the orchestrator)</td>
+</tr>
+<tr>
+<td><strong>Visibility</strong></td>
+<td>Difficult (need to track events)</td>
+<td>Easy (orchestrator knows the full flow)</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Simple for short sagas</td>
+<td>More complex to implement</td>
+</tr>
+<tr>
+<td><strong>Reusability</strong></td>
+<td>Hard to reuse the flow</td>
+<td>Easy to reuse the orchestrator</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Difficult (distributed traces)</td>
+<td>Easy (centralized orchestrator log)</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">When to use each?</div>
+                </div>
+                
+              
+<ul>
+<li><strong>Choreography</strong>: For simple flows with few services. Easy to implement, low coupling.</li>
+<li><strong>Orchestration</strong>: For complex flows with many services, compensations, and alternative paths. Easier to debug and maintain.</li>
+</ul>
+</blockquote>
+<h3 id="45-compensating-transactions">4.5 Compensating Transactions<a aria-label="Link to section" class="anchor-link" href="#45-compensating-transactions"><span class="icon icon-link"></span></a></h3>
+<p>Each saga step must have a <strong>compensating transaction</strong> that undoes its effects if a later step fails.</p>
+<pre><code>Normal step:          Compensation:
+─────────           ─────────
+createOrder()       cancelOrder()
+chargePayment()     refundPayment()
+reserveInventory()  releaseInventory()
+sendEmail()         sendCancellationEmail()
+</code></pre>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Compensations must be idempotent</div>
+                </div>
+                <div class="callout-content">If a compensation fails and is retried, it must produce the same effect. cancelOrder() twice must be equal to cancelOrder() once. This is essential for resilience.</div>
+              
+</blockquote>
+<hr>
+<h2 id="5-outbox-pattern">5. Outbox Pattern<a aria-label="Link to section" class="anchor-link" href="#5-outbox-pattern"><span class="icon icon-link"></span></a></h2>
+<p>The Outbox Pattern guarantees that an event is published to the broker only if the database transaction is committed.</p>
+<h3 id="51-the-problem">5.1 The problem<a aria-label="Link to section" class="anchor-link" href="#51-the-problem"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Without outbox: risk of inconsistency</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> create_order</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO orders ..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Write to DB</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    kafka.publish(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"OrderCreated"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">...</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Publish event</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # If step 2 fails, the event is lost</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # If step 1 fails, the event should not be published</span></span></code></pre></figure>
+<h3 id="52-the-solution-outbox-table">5.2 The solution: outbox table<a aria-label="Link to section" class="anchor-link" href="#52-the-solution-outbox-table"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> create_order</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.transaction():</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 1. Write the order to the main table</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO orders ..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 2. Write the event to the outbox table</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO outbox (event_type, payload) VALUES (?, ?)"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">                 "OrderCreated"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, json.dumps(order_data))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # The transaction commits BOTH writes simultaneously</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # If either fails, nothing is written</span></span></code></pre></figure>
+<p>A separate process (outbox poller) reads the outbox table and publishes events to the broker:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Outbox poller (runs every second)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">events </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"SELECT * FROM outbox WHERE published = false LIMIT 100"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> event </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> events:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    kafka.publish(event.event_type, event.payload)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"UPDATE outbox SET published = true WHERE id = ?"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, event.id)</span></span></code></pre></figure>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why does it work?</div>
+                </div>
+                <div class="callout-content">Writing to the outbox table and writing to the main table are in the same transaction. Either both are committed, or neither. The poller is responsible for publishing events to the broker asynchronously. If the broker is down, events stay in the outbox until it recovers.</div>
+              
+</blockquote>
+<hr>
+<h2 id="key-concepts">Key concepts<a aria-label="Link to section" class="anchor-link" href="#key-concepts"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Event-Driven Architecture decouples services</strong>: Services communicate through events, not direct calls. This enables independent scaling and resilience.</p>
+</li>
+<li>
+<p><strong>Event Sourcing stores the change history</strong>: Instead of storing the current state, you store all events that led to that state. This enables complete audit trails and replay.</p>
+</li>
+<li>
+<p><strong>CQRS separates read from write</strong>: The Command Model optimizes writes and validation. The Query Model optimizes reads and views. Synchronization through events (eventual consistency).</p>
+</li>
+<li>
+<p><strong>Saga Pattern for distributed transactions</strong>: When you cannot use ACID across multiple services, you divide the transaction into local steps with compensations. Choreography (decentralized) or Orchestration (centralized).</p>
+</li>
+<li>
+<p><strong>The Outbox Pattern guarantees event delivery</strong>: Write the event to an outbox table within the same transaction as your business operation. A poller publishes events to the broker asynchronously.</p>
+</li>
+</ol>
+<h2 id="related-to">Related to<a aria-label="Link to section" class="anchor-link" href="#related-to"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[01-consensus-paxos-raft](/en/03-distributed-systems/01-consensus-paxos-raft) — Systems that use events (like etcd) use consensus to replicate the event log</li>
+<li>[02-message-queues](/en/03-distributed-systems/02-message-queues) — Kafka is the ideal event broker for EDA and Sagas</li>
+<li>[03-distributed-caching](/en/03-distributed-systems/03-distributed-caching) — The Query Model in CQRS is often implemented with Redis as a cache</li>
+<li>[05-idempotency-retry-circuit-breakers](/en/03-distributed-systems/05-idempotency-retry-circuit-breakers) — Compensations in Sagas must be idempotent</li>
+</ul>
+<h2 id="references">References<a aria-label="Link to section" class="anchor-link" href="#references"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven">Event-Driven Architecture - Microsoft Azure</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS Pattern - Microsoft Azure</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/saga">Saga Pattern - Microsoft Azure</a></li>
+<li><a href="https://eventstore.com/">Event Sourcing - EventStore</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications — Chapter 9: Transactions</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#why-do-we-need-integration-patterns">Why do we need integration patterns?</a> </li><li class="toc-depth-2"> <a href="#1-event-driven-architecture">1. Event-Driven Architecture</a> </li><li class="toc-depth-3"> <a href="#11-what-is-an-event">1.1 What is an event?</a> </li><li class="toc-depth-3"> <a href="#12-eda-vs-rpc">1.2 EDA vs RPC</a> </li><li class="toc-depth-3"> <a href="#13-eda-components">1.3 EDA components</a> </li><li class="toc-depth-2"> <a href="#2-event-sourcing">2. Event Sourcing</a> </li><li class="toc-depth-3"> <a href="#21-how-it-works">2.1 How it works</a> </li><li class="toc-depth-3"> <a href="#22-advantages-of-event-sourcing">2.2 Advantages of Event Sourcing</a> </li><li class="toc-depth-3"> <a href="#23-disadvantages-of-event-sourcing">2.3 Disadvantages of Event Sourcing</a> </li><li class="toc-depth-2"> <a href="#3-cqrs-command-query-responsibility-segregation">3. CQRS: Command Query Responsibility Segregation</a> </li><li class="toc-depth-3"> <a href="#31-the-traditional-model">3.1 The traditional model</a> </li><li class="toc-depth-3"> <a href="#32-the-cqrs-model">3.2 The CQRS model</a> </li><li class="toc-depth-3"> <a href="#33-syncing-write-db-to-read-db">3.3 Syncing Write DB to Read DB</a> </li><li class="toc-depth-3"> <a href="#34-when-to-use-cqrs">3.4 When to use CQRS?</a> </li><li class="toc-depth-2"> <a href="#4-saga-pattern-distributed-transactions">4. Saga Pattern: Distributed transactions</a> </li><li class="toc-depth-3"> <a href="#41-the-problem">4.1 The problem</a> </li><li class="toc-depth-3"> <a href="#42-saga-choreography">4.2 Saga: Choreography</a> </li><li class="toc-depth-3"> <a href="#43-saga-orchestration">4.3 Saga: Orchestration</a> </li><li class="toc-depth-3"> <a href="#44-choreography-vs-orchestration">4.4 Choreography vs Orchestration</a> </li><li class="toc-depth-3"> <a href="#45-compensating-transactions">4.5 Compensating Transactions</a> </li><li class="toc-depth-2"> <a href="#5-outbox-pattern">5. Outbox Pattern</a> </li><li class="toc-depth-3"> <a href="#51-the-problem">5.1 The problem</a> </li><li class="toc-depth-3"> <a href="#52-the-solution-outbox-table">5.2 The solution: outbox table</a> </li><li class="toc-depth-2"> <a href="#key-concepts">Key concepts</a> </li><li class="toc-depth-2"> <a href="#related-to">Related to</a> </li><li class="toc-depth-2"> <a href="#references">References</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

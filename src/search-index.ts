@@ -1,6 +1,7 @@
 // Search index generator
 // Creates a search index from the navigation data for client-side search.
 import { getNavigation } from './navigation';
+import { getArticlesForModule, getAvailableNavigation } from './content-links';
 
 export interface SearchResult {
   id: string;
@@ -11,17 +12,20 @@ export interface SearchResult {
 }
 
 export function buildSearchIndex(lang: 'es' | 'en' = 'es'): SearchResult[] {
-  const sections = getNavigation(lang);
+  const sections = getAvailableNavigation(lang, getNavigation(lang));
   const results: SearchResult[] = [];
 
   for (const section of sections) {
     for (const item of section.items) {
-      results.push({
-        id: item.id,
-        title: item.title,
-        description: item.description,
-        slug: item.slug,
-        section: section.title,
+      const articles = getArticlesForModule(lang, item.slug);
+      articles.forEach((article, index) => {
+        results.push({
+          id: `${item.id}-${index}`,
+          title: article.title,
+          description: article.description || item.description,
+          slug: article.slug,
+          section: section.title,
+        });
       });
     }
   }

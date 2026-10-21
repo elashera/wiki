@@ -1,33 +1,25 @@
 ---
+import { translatePath } from '../navigation';
+
 interface Props {
   lang: 'es' | 'en';
   isEn: boolean;
 }
 
 const { lang, isEn } = Astro.props;
+
+const targetLang = lang === 'es' ? 'en' : 'es';
+const targetPath = translatePath(Astro.url.pathname, lang, targetLang);
+const esUrl = lang === 'es' ? Astro.url.pathname : targetPath;
+const enUrl = lang === 'en' ? Astro.url.pathname : targetPath;
 ---
 
-<button
-  class="lang-switcher"
-  onClick={() => {
-    // Get the current path and switch the language segment
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split('/').filter(Boolean);
-
-    if (segments[0] === 'en' || segments[0] === 'es') {
-      const langIndex = segments.indexOf(lang === 'es' ? 'en' : 'es');
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === 'es' ? 'en' : 'es';
-      }
-    }
-
-    const newPath = '/' + segments.join('/');
-    window.location.href = newPath;
-  }}
-  title={isEn ? 'Cambiar a Español' : 'Switch to English'}
->
-  <span class="lang-switcher-label">{isEn ? 'EN' : 'ES'}</span>
+<div class="lang-switcher">
+  <a href={esUrl} class="lang-switcher-link">
+    <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span>
+  </a>
   <span class="lang-switcher-separator">/</span>
-  <span class="lang-switcher-label">{isEn ? 'ES' : 'EN'}</span>
-</button>
+  <a href={enUrl} class="lang-switcher-link">
+    <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span>
+  </a>
+</div>

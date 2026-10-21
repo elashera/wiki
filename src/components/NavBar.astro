@@ -12,6 +12,10 @@ const { lang, isEn } = Astro.props;
 
 <header class="navbar">
   <div class="navbar-inner">
+    <button class="navbar-menu-button" type="button" aria-label={isEn ? 'Toggle navigation' : 'Mostrar navegación'} data-sidebar-toggle>
+      <span class="hamburger-icon"><span></span><span></span><span></span></span>
+    </button>
+
     <a href={`/${lang}`} class="navbar-brand">
       <span class="navbar-logo">📚</span>
       <span class="navbar-title">AI Engineer Wiki</span>

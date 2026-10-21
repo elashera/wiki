@@ -1,0 +1,678 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/02-infra-contenedores/06-docker-volumes/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/02-infrastructure-containers/06-docker-volumes" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article active"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup</h1> <div class="article-body"><h1 id="docker-volumes-persistencia-de-datos-named-volumes-bind-mounts-tmpfs-y-estrategias-de-backup">Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup<a aria-label="Link to section" class="anchor-link" href="#docker-volumes-persistencia-de-datos-named-volumes-bind-mounts-tmpfs-y-estrategias-de-backup"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Volumes Docker en una frase</div>
+                </div>
+                <div class="callout-content">Los volúmenes Docker son el mecanismo oficial para persistir datos entre reinicios y recreaciones de contenedores. A diferencia de los contenedores (que son efímeros), los volúmenes sobreviven a la eliminación de contenedores y pueden compartirse entre contenedores.</div>
+              
+</blockquote>
+<h2 id="por-qué-persistencia-en-contenedores">¿Por qué persistencia en contenedores?<a aria-label="Link to section" class="anchor-link" href="#por-qué-persistencia-en-contenedores"><span class="icon icon-link"></span></a></h2>
+<p>Los contenedores Docker son <strong>efímeros</strong>: cuando se eliminan, todo su sistema de archivos desaparece. Para bases de datos, archivos de configuración, logs y cualquier dato que deba sobrevivir, necesitas almacenamiento persistente:</p>
+<pre><code>Sin almacenamiento persistente:
+┌──────────────────────────────────────┐
+│  Contenedor 1: "mi-app"              │
+│  ┌────────────────────────────────┐  │
+│  │  /app (código)                  │  │  ← Capa de solo lectura (imagen)
+│  │  /data (archivos del usuario)   │  │  ← Capa de escritura (rw)
+│  │  /logs (logs)                  │  │  ← Capa de escritura (rw)
+│  └────────────────────────────────┘  │
+│                                       │
+│  docker rm mi-app → TODOS los datos  │
+│  de /data y /logs se PIERDEN         │
+└──────────────────────────────────────┘
+
+Con volúmenes:
+┌──────────────────────────────────────┐  ┌──────────────────────┐
+│  Contenedor 1: "mi-app"              │  │  Volumen: app-data   │
+│  ┌────────────────────────────────┐  │  │  /var/lib/docker/    │
+│  │  /app (código)                  │  │  │  volumes/app-data/   │
+│  │  /data (mountado al volumen)   │  │  │  - archivo1.db       │
+│  └────────────────────────────────┘  │  │  - archivo2.log      │
+└──────────────────────────────────────┘  └──────────────────────┘
+                                               │
+                                               │  Survives container
+                                               │  removal!
+                                               │  Shareable between
+                                               │  containers!
+                                               │  Backup-able!
+</code></pre>
+<h2 id="tipos-de-almacenamiento-docker">Tipos de almacenamiento Docker<a aria-label="Link to section" class="anchor-link" href="#tipos-de-almacenamiento-docker"><span class="icon icon-link"></span></a></h2>
+<p>Docker tiene <strong>tres tipos principales</strong> de almacenamiento persistente:</p>
+<h3 id="1-named-volumes-volúmenes-con-nombre">1. Named Volumes (volúmenes con nombre)<a aria-label="Link to section" class="anchor-link" href="#1-named-volumes-volúmenes-con-nombre"><span class="icon icon-link"></span></a></h3>
+<p>El <strong>tipo recomendado</strong> para persistencia de datos en contenedores Docker.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear un volumen nombrado</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Usar el volumen al crear un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Los datos persisten incluso si eliminas el contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Contenedor eliminado</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"> # Volumen sigue existiendo</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Reutilizar el mismo volumen con un nuevo contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app-new</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span></code></pre></figure>
+<pre><code>Estructura de un volumen nombrado:
+┌─────────────────────────────────────────────┐
+│  /var/lib/docker/volumes/                   │
+│    └── my-data/                             │
+│        ├── _data/                           │
+│        │   ├── archivo1.db                  │
+│        │   ├── archivo2.log                 │
+│        │   └── subfolder/                   │
+│        │       └── dato.dat                 │
+│        └── metadata.json                    │
+│            (gestionado por Docker)           │
+└─────────────────────────────────────────────┘
+
+Características:
+  - Gestionados por Docker (no puedes editar directamente)
+  - Se crean en /var/lib/docker/volumes/
+  - Pueden montarse en múltiples contenedores
+  - Surviven eliminación de contenedores
+  - Se pueden backup/restore fácilmente
+</code></pre>
+<h3 id="2-bind-mounts-montajes-de-directorio">2. Bind Mounts (montajes de directorio)<a aria-label="Link to section" class="anchor-link" href="#2-bind-mounts-montajes-de-directorio"><span class="icon icon-link"></span></a></h3>
+<p>Montan un <strong>directorio específico del host</strong> dentro del contenedor:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bind mount: carpeta local → contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/src:/app/src</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bind mount con ruta absoluta</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/user/data:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bind mount de solo lectura</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /home/user/config:/app/config:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span></code></pre></figure>
+<pre><code>Bind mount vs Named volume:
+┌─────────────────────┬─────────────────────┬─────────────────────┐
+│  Característica     │  Named Volume       │  Bind Mount         │
+├─────────────────────┼─────────────────────┼─────────────────────┤
+│  Ubicación          │ /docker/volumes/    │  Ruta que tú        │
+│                     │  (gestionado por    │  especifiques       │
+│                     │  Docker)            │                     │
+│  Control            │  Docker gestiona    │  Tú controlas       │
+│                     │  la ruta            │  la ruta            │
+│  Uso típico         │  Producción, BD     │  Desarrollo, conf.  │
+│  Multi-plataforma   │  ✅ Sí              │  ❌ Depende del SO  │
+│  Creación automática│  No (hay que crear) │  Sí (si existe)     │
+│  Performance        │  Ligeramente menor  │  Nativa (sin capa)  │
+│  Permisos           │  Docker gestiona    │  Host/contenedor    │
+└─────────────────────┴─────────────────────┴─────────────────────┘
+</code></pre>
+<h3 id="3-tmpfs-mounts-almacenamiento-temporal">3. tmpfs mounts (almacenamiento temporal)<a aria-label="Link to section" class="anchor-link" href="#3-tmpfs-mounts-almacenamiento-temporal"><span class="icon icon-link"></span></a></h3>
+<p>Monta un <strong>sistema de archivos temporal en memoria RAM</strong>:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tmpfs mount</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> temp-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /tmp/data:type=tmpfs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># tmpfs con límites de tamaño</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> temp-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --tmpfs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /tmp/data:size=100M</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span></code></pre></figure>
+<pre><code>tmpfs mounts:
+┌──────────────────────────────────────────┐
+│  Ventajas:                              │
+│  - Muy rápido (RAM, no disco)           │
+│  - Datos se borran al eliminar el       │
+│    contenedor                           │
+│  - No ocupa espacio en disco del host   │
+│  - Seguro para datos temporales/sensibles│
+│                                         │
+│  Desventajas:                            │
+│  - Se pierden al reiniciar              │
+│  - Limitado por RAM disponible          │
+│  - No persiste                          │
+│                                         │
+│  Casos de uso:                          │
+│  - Sesiones temporales                  │
+│  - Tokens, credenciales en runtime      │
+│  - Archivos temporales                  │
+│  - Cache de alto rendimiento            │
+│  - Datos sensibles que no deben ir a    │
+│    disco                               │
+└──────────────────────────────────────────┘
+</code></pre>
+<h2 id="gestión-de-volúmenes">Gestión de volúmenes<a aria-label="Link to section" class="anchor-link" href="#gestión-de-volúmenes"><span class="icon icon-link"></span></a></h2>
+<h3 id="crear-y-gestionar-volúmenes">Crear y gestionar volúmenes<a aria-label="Link to section" class="anchor-link" href="#crear-y-gestionar-volúmenes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear un volumen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear con driver específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> local</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> type=none</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> device=/mnt/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> o=bind</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  host-backed-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Listar volúmenes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># DRIVER    VOLUME NAME</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># local     my-data</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># local     pg-data</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># local     redis-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Inspeccionar un volumen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># [</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "CreatedAt": "2024-01-15T10:30:00Z",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Driver": "local",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Labels": null,</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Mountpoint": "/var/lib/docker/volumes/my-data/_data",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Name": "my-data",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Options": null,</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Scope": "local"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   }</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Eliminar un volumen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Eliminar todos los volúmenes no usados</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> prune</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> prune</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Sin confirmación</span></span></code></pre></figure>
+<h3 id="mount-points">Mount points<a aria-label="Link to section" class="anchor-link" href="#mount-points"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># mount point de un contenedor específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> test-app</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> test-app</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{range .Mounts}}{{.Name}}: {{.Destination}}\n{{end}}'</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># my-data: /app/data</span></span></code></pre></figure>
+<h2 id="mount-options-y-comportamiento">Mount options y comportamiento<a aria-label="Link to section" class="anchor-link" href="#mount-options-y-comportamiento"><span class="icon icon-link"></span></a></h2>
+<h3 id="mount-propagation">mount propagation<a aria-label="Link to section" class="anchor-link" href="#mount-propagation"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># mount propagation controla cómo se propagan los mount points</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># entre contenedores</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># shared: los mounts creados en cualquier contenedor aparecen en todos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> shared-data</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> shared-data:/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --mount-propagation=shared</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> c1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Bind mount con propagation</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /mnt/data:/data:shared</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> c1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># rshared: propagación recursiva (todo dentro se propaga)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /mnt/data:/data:rshared</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> c1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Propagación típica:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - shared: para storage como CephFS, NFS</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - rshared: para setups complejos de clustering</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - privado (default): mounts locales, no propagan</span></span></code></pre></figure>
+<h3 id="mount-consistency">mount consistency<a aria-label="Link to section" class="anchor-link" href="#mount-consistency"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Consistencia del mount:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - delegated: el contenedor es autoridad sobre el mount (dev)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - cached: host es autoridad, contenedor caché (prod en Docker Desktop)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - consistent: siempre同步 (más lento pero seguro)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/app:cached</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Por defecto: consistent</span></span></code></pre></figure>
+<h3 id="permissions-en-volumes">Permissions en volumes<a aria-label="Link to section" class="anchor-link" href="#permissions-en-volumes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Los permisos se controlan con USER en el Dockerfile o con --user</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --user</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 1000:1000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/app/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Si hay problema de permisos, usar un volumen temporario para chown:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> chown</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -R</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 1000:1000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># o crear un contenedor helper:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">):$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">)"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> chmod</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -R</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 755</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data</span></span></code></pre></figure>
+<h2 id="volúmenes-en-docker-compose">Volúmenes en Docker Compose<a aria-label="Link to section" class="anchor-link" href="#volúmenes-en-docker-compose"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml con volúmenes</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  postgres</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      POSTGRES_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">secret</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Named volume (recomendado)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">pg-data:/var/lib/postgresql/data</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Bind mount para configuración</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./postgres/conf.d:/etc/postgresql/conf.d:ro</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Bind mount para init scripts</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./postgres/init:/docker-entrypoint-initdb.d:ro</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  redis</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">redis:7-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">redis-data:/data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Código en desarrollo (bind mount)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./src:/app/src</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Logs persistentes</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">api-logs:/var/log/app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Datos del usuario</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">user-uploads:/app/uploads</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # tmpfs para cache (en memoria)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">tmpfs</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/app/cache</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        tmpfs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">          size</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">50M</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  pg-data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">local</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    driver_opts</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      type</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">none</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      device</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/mnt/disks/ssd</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      o</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">bind</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  redis-data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">local</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api-logs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  user-uploads</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span></code></pre></figure>
+<h2 id="drivers-de-volúmenes">Drivers de volúmenes<a aria-label="Link to section" class="anchor-link" href="#drivers-de-volúmenes"><span class="icon icon-link"></span></a></h2>
+<p>Los drivers permiten usar almacenamiento externo o de terceros:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Driver local (por defecto)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-local-volume</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># driver: local</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Driver NFS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> local</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> type=nfs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> o=nfsvers=4,addr=192.168.1.100,rw</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> device=:/nfs/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nfs-data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Driver Flocker (descontinuado, solo histórico)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Drivers de terceros:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - rexray/ebs    → AWS EBS</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - rexray/gce    → Google Compute Engine</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - cinder        → OpenStack Cinder</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - azure         → Azure Files</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - portworx      → Portworx Volume</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - sparkfun      → AWS EBS</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejemplo con rexray/ebs (AWS):</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rexray/ebs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> type=gp2</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> size=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">100</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  my-ebs-volume</span></span></code></pre></figure>
+<pre><code>Comparación de drivers:
+┌─────────────────────┬──────────────┬──────────────┬──────────────┐
+│  Driver             │  Local       │  NFS         │  AWS EBS     │
+├─────────────────────┼──────────────┼──────────────┼──────────────┤
+│  Performance        │  Nativa      │  Red (lento) │  SSD (rápido)│
+│  Persistencia       │  Disco local │  NFS server  │  EBS vol.    │
+│  Multi-host         │  ❌           │  ✅           │  ✅           │
+│  Backup             │  Manual      │  rsync       │  Snapshot    │
+│  Costo              │  Gratis      │  Servidor    │  $/GB/mes    │
+│  Caso de uso        │  Single-host │  Compartido  │  AWS cloud   │
+└─────────────────────┴──────────────┴──────────────┴──────────────┘
+</code></pre>
+<h2 id="estrategias-de-backup">Estrategias de backup<a aria-label="Link to section" class="anchor-link" href="#estrategias-de-backup"><span class="icon icon-link"></span></a></h2>
+<h3 id="backup-de-volúmenes">Backup de volúmenes<a aria-label="Link to section" class="anchor-link" href="#backup-de-volúmenes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup de un volumen usando un contenedor temporal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/source:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  tar</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> czf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/my-data-backup-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /source</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Restore de un backup</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/destination</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  tar</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> xzf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/my-data-backup-20240115.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /destination</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup con rsync (para backups incrementales)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/source:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> backup-data:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  rsync</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -av</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /source/</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/my-data/</span></span></code></pre></figure>
+<h3 id="backup-con-contenedor-helper">Backup con contenedor helper<a aria-label="Link to section" class="anchor-link" href="#backup-con-contenedor-helper"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear un contenedor helper para backups</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> backup-helper</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/data:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dev/null</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar backup</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> backup-helper</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "tar czf /backup/my-data-$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%Y%m%d).tar.gz -C /data ."</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup PostgreSQL específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --volumes-from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres-container</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  pg_dumpall</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -U</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> appuser</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/pg-full-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.sql</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup MySQL específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --volumes-from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mysql-container</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  mysql:8.0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  mysqldump</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> root</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p\$MYSQL_ROOT_PASSWORD</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --all-databases</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/mysql-full.sql</span></span></code></pre></figure>
+<h3 id="automatizar-backups-con-cron">Automatizar backups con cron<a aria-label="Link to section" class="anchor-link" href="#automatizar-backups-con-cron"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Script de backup</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># /opt/scripts/docker-backup.sh</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#!/bin/bash</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">DATE</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">VOLUME</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"my-data"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">BACKUP_DIR</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/backups"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear volumen temporal</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">TEMP_VOL</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar datos del volumen al temporal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $VOLUME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/source:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $TEMP_VOL</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/dest</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  cp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /source/.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /dest/</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Comprimir</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $TEMP_VOL</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/data</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $BACKUP_DIR</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  alpine:3.19</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  tar</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> czf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$VOLUME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$DATE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limpiar volumen temporal</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $TEMP_VOL</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Mantener solo últimos 7 backups</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ls</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $BACKUP_DIR</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$VOLUME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">*</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.tar.gz</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> tail</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +8</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> xargs</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span></span></code></pre></figure>
+<h3 id="estrategia-de-backup-en-producción">Estrategia de backup en producción<a aria-label="Link to section" class="anchor-link" href="#estrategia-de-backup-en-producción"><span class="icon icon-link"></span></a></h3>
+<pre><code>Estrategia de backup recomendada:
+
+┌─────────────────────────────────────────────────────┐
+│  Daily full backup (completo)                        │
+│  ├── Lunes a Domingo: backup completo del volumen   │
+│  └── Almacenar en:                                   │
+│      - Disco local (para restauración rápida)        │
+│      - S3/GCS (para disaster recovery)              │
+│      - Tape/Blu-ray (para compliance)               │
+│                                                     │
+│  Retención:                                          │
+│  ├── Últimos 7 días: daily backup                   │
+│  ├── Últimas 4 semanas: weekly backup               │
+│  └── Últimos 12 meses: monthly backup               │
+│                                                     │
+│  Verificación:                                      │
+│  ├── Cada backup: verificar integridad (checksum)   │
+│  ├── Mensualmente: probar restore                   │
+│  └── Anualmente: drill completo de disaster recovery│
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<h2 id="patrones-de-uso-de-volúmenes">Patrones de uso de volúmenes<a aria-label="Link to section" class="anchor-link" href="#patrones-de-uso-de-volúmenes"><span class="icon icon-link"></span></a></h2>
+<h3 id="patrón-1-base-de-datos-con-data-volumen">Patrón 1: Base de datos con data volumen<a aria-label="Link to section" class="anchor-link" href="#patrón-1-base-de-datos-con-data-volumen"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  postgres</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgres:16-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">pg-data:/var/lib/postgresql/data</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      POSTGRES_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">${POSTGRES_PASSWORD}</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    restart</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">unless-stopped</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  pg-data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">local</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup periódico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --volumes-from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  pg_dumpall</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -U</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> appuser</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> ></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/pg-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">date</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> +%Y%m%d</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.sql</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Restaurar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --volumes-from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup:/backup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  sh</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "cat /backup/pg-20240115.sql | psql -U appuser"</span></span></code></pre></figure>
+<h3 id="patrón-2-datos-de-usuario-con-volumen-dedicado">Patrón 2: Datos de usuario con volumen dedicado<a aria-label="Link to section" class="anchor-link" href="#patrón-2-datos-de-usuario-con-volumen-dedicado"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  webapp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">my-webapp:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">user-uploads:/app/uploads</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">user-avatars:/app/avatars</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  user-uploads</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  user-avatars</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span></code></pre></figure>
+<pre><code>Escalando con volumen compartido:
+
+┌─────────────────────────────────────────────┐
+│  3 instancias de la app                     │
+│                                             │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐     │
+│  │ Web-1   │  │ Web-2   │  │ Web-3   │     │
+│  │ :8001   │  │ :8002   │  │ :8003   │     │
+│  └────┬────┘  └────┬────┘  └────┬────┘     │
+│       │             │             │           │
+│       └─────────────┼─────────────┘           │
+│                     │                         │
+│              ┌──────▼──────┐                  │
+│              │  user-uploads│                  │
+│              │  (volumen    │                  │
+│              │   compartido)│                  │
+│              └─────────────┘                  │
+│                                             │
+│  ↑ Todos acceden al mismo volumen            │
+│  ↑ Los archivos subidos por Web-1            │
+│    son visibles para Web-2 y Web-3           │
+└─────────────────────────────────────────────┘
+</code></pre>
+<h3 id="patrón-3-separar-datos-de-configuración">Patrón 3: Separar datos de configuración<a aria-label="Link to section" class="anchor-link" href="#patrón-3-separar-datos-de-configuración"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  nginx</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Config: bind mount (cambios instantáneos)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./nginx/conf.d:/etc/nginx/conf.d:ro</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # SSL certs: bind mount (archivos sensibles)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./ssl:/etc/nginx/ssl:ro</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Logs: named volume (persistencia)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx-logs:/var/log/nginx</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Web content: bind mount (fácil actualización)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./html:/usr/share/nginx/html:ro</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  nginx-logs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span></code></pre></figure>
+<h3 id="patrón-4-desarrollo-con-hot-reload">Patrón 4: Desarrollo con hot-reload<a aria-label="Link to section" class="anchor-link" href="#patrón-4-desarrollo-con-hot-reload"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    build</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">.</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    volumes</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Código fuente: bind mount para hot-reload</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">./src:/app/src</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # node_modules: volume para evitar conflictos</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">/app/node_modules</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">      # Archivos generados: named volume</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">uploads:/app/uploads</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">NODE_ENV=development</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # ⚠️ El volumen /app/node_modules previene que</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  #    el bind mount de ./src sobrescriba node_modules</span></span></code></pre></figure>
+<h2 id="comparación-completa-de-tipos-de-almacenamiento">Comparación completa de tipos de almacenamiento<a aria-label="Link to section" class="anchor-link" href="#comparación-completa-de-tipos-de-almacenamiento"><span class="icon icon-link"></span></a></h2>
+<pre><code>Comparación final de tipos de almacenamiento Docker:
+
+┌──────────────────┬───────────────┬───────────────┬───────────────┐
+│                  │  Named Vol.   │  Bind Mount   │  tmpfs        │
+├──────────────────┼───────────────┼───────────────┼───────────────┤
+│  Persistencia    │  ✅ Sí         │  ✅ Sí         │  ❌ No         │
+│  Ubicación       │ /docker/      │  Tu ruta      │  RAM          │
+│  Performance     │  Buena        │  Nativa       │  Excelente    │
+│  Multi-host      │  ❌*          │  ✅*          │  N/A          │
+│  Permisos        │  Docker       │  Host         │  Contenedor   │
+│  Backup          │  Docker CLI   │  cp/rsync     │  No aplica    │
+│  Creación        │  docker vol   │  Crear dir    │  Implícito    │
+│  Usar en prod    │  ✅✅✅        │  ✅✅          │  ✅ (temp)    │
+│  Usar en dev     │  ✅           │  ✅✅✅        │  ✅           │
+├──────────────────┼───────────────┼───────────────┼───────────────┤
+│  Recomendación   │  BDD, datos   │  Código, conf │  Cache,       │
+│                  │  permanentes  │  desarrollo   │  sesiones     │
+└──────────────────┴───────────────┴───────────────┴───────────────┘
+
+* NFS y drivers externos permiten multi-host para named volumes y bind mounts
+</code></pre>
+<h2 id="problemas-comunes-y-soluciones">Problemas comunes y soluciones<a aria-label="Link to section" class="anchor-link" href="#problemas-comunes-y-soluciones"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>permission denied</code> al escribir en volumen</td>
+<td>UID/GID mismatch</td>
+<td>Usar <code>--user</code> o <code>chown</code> en el volumen</td>
+</tr>
+<tr>
+<td>Volúmenes no se comparten entre hosts</td>
+<td>Local driver</td>
+<td>Usar NFS, EBS, o Ceph</td>
+</tr>
+<tr>
+<td>Sin espacio en disco</td>
+<td>Volúmenes acumulados</td>
+<td><code>docker system prune -a</code></td>
+</tr>
+<tr>
+<td>Datos corruptos tras crash</td>
+<td>FS sync</td>
+<td>Usar <code>sync</code> en mount options</td>
+</tr>
+<tr>
+<td>Backup lento de BD</td>
+<td>I/O intenso</td>
+<td>Backup en contenedor separado, no en producción</td>
+</tr>
+<tr>
+<td>Dificultad para encontrar archivos</td>
+<td>Ruta desconocida</td>
+<td><code>docker volume inspect &#x3C;name></code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="debug-de-volúmenes">Debug de volúmenes<a aria-label="Link to section" class="anchor-link" href="#debug-de-volúmenes"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver dónde está mounted un volumen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{range .Mounts}}{{.Name}} → {{.Destination}} (type: {{.Type}})\n{{end}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> container-name</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver espacio usado por volúmenes</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> system</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> df</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Volumes"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver volúmenes huérfanos (sin contenedor)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> dangling=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Limpiar volúmenes no usados</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> volume</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> prune</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar integridad de un volumen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/data</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> du</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -sh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /data</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Backup de un volumen específico</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-data:/source</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">pwd</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">:/backup</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tar</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> czf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /backup/my-data-backup.tar.gz</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -C</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /source</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span></code></pre></figure>
+<h2 id="resumen">Resumen<a aria-label="Link to section" class="anchor-link" href="#resumen"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><strong>Named volumes</strong>: recomendados para persistencia de datos (BDD, archivos)</li>
+<li><strong>Bind mounts</strong>: ideales para desarrollo (código, configuración)</li>
+<li><strong>tmpfs mounts</strong>: para datos temporales en RAM (cache, sesiones)</li>
+<li><strong>Drivers de volúmenes</strong>: permiten almacenamiento externo (NFS, AWS EBS, GCE)</li>
+<li><strong>Backup</strong>: usar contenedores temporales con <code>docker run --rm</code> para tar/zip</li>
+<li><strong>Multi-contenedor</strong>: un volumen puede montarse en múltiples contenedores simultáneamente</li>
+<li><strong>Seguridad</strong>: usar <code>:ro</code> para archivos de solo lectura</li>
+<li><strong>Gestión</strong>: <code>docker volume ls</code>, <code>docker volume inspect</code>, <code>docker volume prune</code></li>
+</ul>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">La clave</div>
+                </div>
+                <div class="callout-content">En Docker, los contenedores son desechables pero los datos no lo son. Usa named volumes para datos que importan (bases de datos, archivos de usuario), bind mounts para cosas que cambian constantemente (código fuente, configuración en desarrollo), y tmpfs para datos temporales que no necesitas persistir. La separación clara entre datos y contenedores es la base de cualquier infraestructura Docker sólida.</div>
+              
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki<a aria-label="Link to section" class="anchor-link" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introducción a Docker</td>
+<td>[02-infra-contenedores/01-docker-intro](/es/index)</td>
+</tr>
+<tr>
+<td>Imágenes Docker</td>
+<td>[02-infra-contenedores/02-docker-images](/es/index)</td>
+</tr>
+<tr>
+<td>Contenedores</td>
+<td>[02-infra-contenedores/03-docker-containers](/es/index)</td>
+</tr>
+<tr>
+<td>Docker Compose</td>
+<td>[02-infra-contenedores/04-docker-compose](/es/index)</td>
+</tr>
+<tr>
+<td>Networking Docker</td>
+<td>[02-infra-contenedores/05-docker-networking](/es/index)</td>
+</tr>
+</tbody>
+</table></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#por-qué-persistencia-en-contenedores">¿Por qué persistencia en contenedores?</a> </li><li class="toc-depth-2"> <a href="#tipos-de-almacenamiento-docker">Tipos de almacenamiento Docker</a> </li><li class="toc-depth-3"> <a href="#1-named-volumes">1. Named Volumes</a> </li><li class="toc-depth-3"> <a href="#2-bind-mounts">2. Bind Mounts</a> </li><li class="toc-depth-3"> <a href="#3-tmpfs-mounts">3. tmpfs mounts</a> </li><li class="toc-depth-2"> <a href="#gestión-de-volúmenes">Gestión de volúmenes</a> </li><li class="toc-depth-3"> <a href="#crear-y-gestionar-volúmenes">Crear y gestionar volúmenes</a> </li><li class="toc-depth-3"> <a href="#mount-points">Mount points</a> </li><li class="toc-depth-2"> <a href="#mount-options-y-comportamiento">Mount options y comportamiento</a> </li><li class="toc-depth-3"> <a href="#mount-propagation">mount propagation</a> </li><li class="toc-depth-3"> <a href="#mount-consistency">mount consistency</a> </li><li class="toc-depth-3"> <a href="#permissions-en-volumes">Permissions en volumes</a> </li><li class="toc-depth-2"> <a href="#volúmenes-en-docker-compose">Volúmenes en Docker Compose</a> </li><li class="toc-depth-2"> <a href="#drivers-de-volúmenes">Drivers de volúmenes</a> </li><li class="toc-depth-2"> <a href="#estrategias-de-backup">Estrategias de backup</a> </li><li class="toc-depth-3"> <a href="#backup-de-volúmenes">Backup de volúmenes</a> </li><li class="toc-depth-3"> <a href="#backup-con-contenedor-helper">Backup con contenedor helper</a> </li><li class="toc-depth-3"> <a href="#automatizar-backups-con-cron">Automatizar backups con cron</a> </li><li class="toc-depth-3"> <a href="#estrategia-de-backup-en-producción">Estrategia de backup en producción</a> </li><li class="toc-depth-2"> <a href="#patrones-de-uso-de-volúmenes">Patrones de uso de volúmenes</a> </li><li class="toc-depth-3"> <a href="#patrón-1-base-de-datos-con-data-volumen">Patrón 1: Base de datos con data volumen</a> </li><li class="toc-depth-3"> <a href="#patrón-2-datos-de-usuario-con-volumen-dedicado">Patrón 2: Datos de usuario con volumen dedicado</a> </li><li class="toc-depth-3"> <a href="#patrón-3-separar-datos-de-configuración">Patrón 3: Separar datos de configuración</a> </li><li class="toc-depth-3"> <a href="#patrón-4-desarrollo-con-hot-reload">Patrón 4: Desarrollo con hot-reload</a> </li><li class="toc-depth-2"> <a href="#comparación-completa-de-tipos-de-almacenamiento">Comparación completa de tipos de almacenamiento</a> </li><li class="toc-depth-2"> <a href="#problemas-comunes-y-soluciones">Problemas comunes y soluciones</a> </li><li class="toc-depth-2"> <a href="#debug-de-volúmenes">Debug de volúmenes</a> </li><li class="toc-depth-2"> <a href="#resumen">Resumen</a> </li><li class="toc-depth-2"> <a href="#conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

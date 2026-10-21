@@ -57,6 +57,12 @@ const allItems: SearchItem[] = buildSearchIndex(lang).map(item => ({
 </div>
 
 <script>
+  interface SearchItem {
+    title: string;
+    description: string;
+    slug: string;
+  }
+
   const searchbarEl = document.querySelector('.searchbar') as HTMLElement;
   const allItems: SearchItem[] = JSON.parse(
     searchbarEl?.getAttribute('data-search-index') || '[]'
@@ -91,7 +97,7 @@ const allItems: SearchItem[] = buildSearchIndex(lang).map(item => ({
 
     resultsContainer.innerHTML = `
       <ul>
-        ${results.map((item, i) => `
+        ${results.map((item) => `
           <li>
             <a href="/${currentLang}${item.slug}" class="search-result-link">
               <span class="search-result-title">${item.title}</span>
@@ -148,6 +154,10 @@ const allItems: SearchItem[] = buildSearchIndex(lang).map(item => ({
   });
 
   // Expose functions globally for Astro SSR updates
-  window.__openSearch = openSearch;
-  window.__closeSearch = closeSearch;
+  const searchWindow = window as Window & {
+    __openSearch?: typeof openSearch;
+    __closeSearch?: typeof closeSearch;
+  };
+  searchWindow.__openSearch = openSearch;
+  searchWindow.__closeSearch = closeSearch;
 </script>

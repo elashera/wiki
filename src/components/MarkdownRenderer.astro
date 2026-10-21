@@ -4,25 +4,34 @@ import * as path from 'path';
 import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
+import remarkObsidianCallout from 'remark-obsidian-callout';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypePrettyCode from 'rehype-pretty-code';
+import GithubSlugger from 'github-slugger';
 
 interface Props {
   filePath: string;
+  lang: 'es' | 'en';
 }
 
-const { filePath } = Astro.props;
+const { filePath, lang } = Astro.props;
 
-const fullPath = path.resolve('src/content/docs', filePath);
+// Defensive: ensure filePath and lang are strings
+const _filePath = typeof filePath === 'string' ? filePath : '';
+const _lang = typeof lang === 'string' ? lang : 'en';
+
+const docsRoot = path.resolve('src/content/docs', _lang);
+const relativePath = _filePath.replace(`${_lang}/`, '');
+const fullPath = path.resolve(docsRoot, relativePath || 'index.md');
+const currentModuleDir = path.dirname(fullPath);
 const rawContent = fs.readFileSync(fullPath, 'utf-8');
 
 // Parse frontmatter
 let content = rawContent;
 let title = 'AI Engineer Wiki';
-let description = '';
 
 const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
 const match = rawContent.match(frontmatterRegex);
@@ -30,21 +39,101 @@ if (match) {
   const fm = match[1];
   content = match[2];
   const titleMatch = fm.match(/title:\s*"([^"]+)"/);
-  const descMatch = fm.match(/description:\s*"([^"]+)"/);
   if (titleMatch) title = titleMatch[1];
-  if (descMatch) description = descMatch[1];
+}
+
+const slugger = new GithubSlugger();
+const tableOfContents = [...content.matchAll(/^(#{2,3})\s+(.+)$/gm)].map((heading) => {
+  const text = heading[2]
+    .replace(/[*_`[\]]/g, '')
+    .replace(/\([^)]*\)/g, '')
+    .trim();
+
+  return {
+    depth: heading[1].length,
+    text,
+    id: slugger.slug(text),
+  };
+});
+
+// Build a map of all available article slugs per module for wikilink resolution
+interface ModuleMap {
+  [module: string]: string[];
+}
+
+const moduleMap: ModuleMap = {};
+
+function buildSlugMap(dir: string) {
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      const moduleName = entry.name;
+      const moduleDir = path.join(dir, moduleName);
+      const files = fs.readdirSync(moduleDir, { withFileTypes: true });
+      moduleMap[moduleName] = files
+        .filter((f) => f.isFile() && f.name.endsWith('.md'))
+        .map((f) => f.name.replace('.md', ''));
+    }
+  }
+}
+
+buildSlugMap(docsRoot);
+
+// Resolve [[wikilinks]] — handles [[slug]] and [[slug|alias]]
+function resolveWikilink(link: string): string {
+  if (!link) return `/${_lang}/`;
+  const slug = link.split('|')[0].trim();
+  if (!slug) return `/${_lang}/`;
+
+  for (const moduleName of Object.keys(moduleMap)) {
+    if (moduleMap[moduleName].includes(slug)) {
+      return `/${_lang}/${moduleName}/${slug}`;
+    }
+  }
+
+  return `/${_lang}/index`;
+}
+
+// Custom remark plugin to convert [[wikilinks]] to markdown links
+function remarkWikilink() {
+  return function (tree: any) {
+    function walk(node: any) {
+      if (node && typeof node === 'object') {
+        if (node.type === 'text' && node.value && /\[\[([^\]]+)\]\]/.test(node.value)) {
+          node.value = node.value.replace(/\[\[([^\]]+)\]\]/g, (_match: string, link: string) => {
+            const parts = link.split('|');
+            const slug = parts[0].trim();
+            const alias = parts[1] ? parts[1].trim() : slug;
+            const url = resolveWikilink(slug);
+            return `[${alias}](${url})`;
+          });
+        }
+        for (const key of Object.keys(node)) {
+          const child = node[key];
+          if (Array.isArray(child)) {
+            child.forEach(walk);
+          } else if (child && typeof child === 'object') {
+            walk(child);
+          }
+        }
+      }
+    }
+    walk(tree);
+  };
 }
 
 // Render markdown to HTML — rehype plugins MUST come before rehypeStringify
 const processor = unified()
   .use(remarkParse)
   .use(remarkGfm)
+  .use(remarkWikilink)
+  .use(remarkObsidianCallout)
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeSlug)
-  .use(rehypeAutolinkHeadings, [{
+  .use(rehypeAutolinkHeadings, {
     behavior: 'append',
     properties: { ariaLabel: 'Link to section', class: 'anchor-link' },
-  }])
+  })
   .use(rehypePrettyCode, {
     theme: { light: 'github-light', dark: 'github-dark' },
     keepBackground: false,
@@ -60,7 +149,22 @@ const result = await processor.process(content);
 const rendered = result.toString();
 ---
 
-<div class="article-content">
-  <h1 class="article-title">{title}</h1>
-  <div class="article-body" set:html={rendered} />
+<div class="article-layout">
+  <article class="article-content">
+    <h1 class="article-title">{title}</h1>
+    <div class="article-body" set:html={rendered} />
+  </article>
+
+  {tableOfContents.length > 0 && (
+    <aside class="page-toc" aria-label={lang === 'es' ? 'Índice de la página' : 'Page index'}>
+      <h2 class="page-toc-title">{lang === 'es' ? 'Índice' : 'Index'}</h2>
+      <ol>
+        {tableOfContents.map((item) => (
+          <li class:list={[`toc-depth-${item.depth}`]}>
+            <a href={`#${item.id}`}>{item.text}</a>
+          </li>
+        ))}
+      </ol>
+    </aside>
+  )}
 </div>

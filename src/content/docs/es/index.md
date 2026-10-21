@@ -28,6 +28,9 @@ La wiki está organizada en **18 módulos** divididos en dos grandes secciones:
 12. **RAG y Bases de Datos Vectoriales** — Vector embeddings, vector databases
 13. **Fine-Tuning** — LoRA, QLoRA, PEFT, instruction tuning
 14. **Agentes IA** — Tool use, ReAct, agentic frameworks, multi-agent
+
+### Recursos externos destacados
+99. **[IA para gente curiosa — Los cimientos](99-ia-para-gente-curiosa/)** — Resumen completo del Facsímil 01 del proyecto *IA para gente curiosa*: 12 capítulos sobre fundamentos de IA, desde qué es la IA hasta machine learning clásico. Incluye neuronas, redes, retropropagación, embeddings, entrenamiento vs inferencia, y ML clásico. Basado en el proyecto de [686f6c61](https://x.com/686f6c61).
 15. **Seguridad en IA** — Prompt injection, jailbreaking, guardrails, PII
 16. **Cloud e Infraestructura IA** — GPU cloud, serverless inference, Terraform
 17. **MLOps y Producción** — Model serving, monitoring, CI/CD for ML

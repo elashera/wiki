@@ -1,0 +1,428 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article active"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Arquitectura event-driven, CQRS y Saga Pattern</h1> <div class="article-body"><h1 id="arquitectura-event-driven-cqrs-y-saga-pattern">Arquitectura event-driven, CQRS y Saga Pattern<a aria-label="Link to section" class="anchor-link" href="#arquitectura-event-driven-cqrs-y-saga-pattern"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">En una frase</div>
+                </div>
+                <div class="callout-content">La arquitectura event-driven comunica servicios mediante eventos, CQRS separa las operaciones de lectura de escritura, y el Saga Pattern gestiona transacciones distribuidas que necesitan consistencia eventual.</div>
+              
+</blockquote>
+<h2 id="por-qué-necesitamos-patrones-de-integración">¿Por qué necesitamos patrones de integración?<a aria-label="Link to section" class="anchor-link" href="#por-qué-necesitamos-patrones-de-integración"><span class="icon icon-link"></span></a></h2>
+<p>Cuando divides una aplicación en microservicios, cada servicio tiene su propia base de datos. ¿Cómo haces que dos servicios mantengan datos consistentes sin usar transacciones ACID (que no funcionan a través de bases de datos diferentes)?</p>
+<pre><code>Microservicio A (DB A) ──→ Microservicio B (DB B)
+</code></pre>
+<p>Una transacción SQL normal no puede abarcar ambas bases de datos. Necesitas patrones especiales.</p>
+<hr>
+<h2 id="1-arquitectura-event-driven-eda">1. Arquitectura Event-Driven (EDA)<a aria-label="Link to section" class="anchor-link" href="#1-arquitectura-event-driven-eda"><span class="icon icon-link"></span></a></h2>
+<p>Una arquitectura event-driven es aquella en la que los componentes se comunican produciendo y consumiendo eventos, en lugar de llamarse directamente entre sí.</p>
+<h3 id="11-qué-es-un-evento">1.1 ¿Qué es un evento?<a aria-label="Link to section" class="anchor-link" href="#11-qué-es-un-evento"><span class="icon icon-link"></span></a></h3>
+<p>Un evento es un hecho que ocurrió en el pasado, irreversible y relevante para el sistema.</p>
+<pre><code>Eventos típicos:
+- UserCreated(userId: 1, email: "emilio@example.com", timestamp: 2024-01-15T10:30:00Z)
+- OrderPlaced(orderId: 42, userId: 1, total: 99.99, timestamp: 2024-01-15T10:31:00Z)
+- PaymentCompleted(paymentId: 7, orderId: 42, timestamp: 2024-01-15T10:32:00Z)
+- InventoryReserved(inventoryId: 15, orderId: 42, items: [...], timestamp: 2024-01-15T10:32:01Z)
+</code></pre>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Los eventos se nombran en pasado</div>
+                </div>
+                <div class="callout-content">Los nombres de eventos deben describir algo que YA ocurrió: UserCreated, no CreateUser; OrderPlaced, no PlaceOrder; PaymentFailed, no FailPayment.</div>
+              
+</blockquote>
+<h3 id="12-eda-vs-rpc-restgrpc">1.2 EDA vs RPC (REST/gRPC)<a aria-label="Link to section" class="anchor-link" href="#12-eda-vs-rpc-restgrpc"><span class="icon icon-link"></span></a></h3>
+<p><strong>RPC (sincrónico)</strong>:</p>
+<pre><code>Client → API Gateway → Service A → Service B → Service C
+                ↑           ↑           ↑
+              Espera      Espera      Espera
+              (tarda)     (tarda)     (tarda)
+</code></pre>
+<p><strong>EDA (asincrónico)</strong>:</p>
+<pre><code>Client → Service A → [Evento: UserCreated] → Service B (lee cuando pueda)
+                                     → Service C (lee cuando pueda)
+                                     → Service D (lee cuando pueda)
+</code></pre>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">EDA desacopla completamente los servicios</div>
+                </div>
+                <div class="callout-content">En RPC, Service A necesita saber la URL de Service B. Si Service B cambia de servidor, Service A se rompe. En EDA, Service A solo publica un evento. Service B se suscribe al evento que le interesa. Ninguno conoce al otro.</div>
+              
+</blockquote>
+<h3 id="13-componentes-de-eda">1.3 Componentes de EDA<a aria-label="Link to section" class="anchor-link" href="#13-componentes-de-eda"><span class="icon icon-link"></span></a></h3>
+<p><strong>Event Producers</strong>: Servicios que crean y publican eventos.</p>
+<p><strong>Event Consumers (Listeners/Handlers)</strong>: Servicios que escuchan eventos y reaccionan.</p>
+<p><strong>Event Broker/Stream</strong>: El sistema que almacena y entrega eventos (Kafka, RabbitMQ, AWS SNS/SQS, Azure Event Grid).</p>
+<p><strong>Event Schema</strong>: El formato de los eventos. Debe ser versionado y estabilizado.</p>
+<pre><code>┌──────────────────────────────────────────────────────────┐
+│                    Event Broker (Kafka)                   │
+│                                                          │
+│  Topic: events                                           │
+│  ├── Partition 0: UserCreated, OrderPlaced, PaymentDone   │
+│  ├── Partition 1: UserCreated, InventoryReserved         │
+│  └── Partition 2: PaymentFailed, OrderCancelled          │
+└──────────────────────────────────────────────────────────┘
+         ↑              ↑               ↑
+         │              │               │
+    Service A      Service B      Service C
+  (procesa)      (reacciona)    (reacciona)
+</code></pre>
+<hr>
+<h2 id="2-event-sourcing">2. Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#2-event-sourcing"><span class="icon icon-link"></span></a></h2>
+<p>Event Sourcing es un patrón donde el estado de una entidad se almacena como una secuencia de eventos, no como un snapshot del estado actual.</p>
+<h3 id="21-cómo-funciona">2.1 Cómo funciona<a aria-label="Link to section" class="anchor-link" href="#21-cómo-funciona"><span class="icon icon-link"></span></a></h3>
+<p>En lugar de almacenar: <code>user:1000 → {email: "new@example.com", name: "Emilio"}</code></p>
+<p>Almacenas:</p>
+<pre><code>Eventos del user 1000:
+1. UserCreated(userId: 1000, email: "old@example.com", name: "Emilio")
+2. EmailUpdated(userId: 1000, email: "new@example.com")
+3. NameUpdated(userId: 1000, name: "Emilio García")
+</code></pre>
+<p>El estado actual se reconstruye replayando todos los eventos:</p>
+<pre><code>Estado inicial: {}
+→ UserCreated → {email: "old@example.com", name: "Emilio"}
+→ EmailUpdated → {email: "new@example.com", name: "Emilio"}
+→ NameUpdated → {email: "new@example.com", name: "Emilio García"}
+</code></pre>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Analogía del libro de contabilidad</div>
+                </div>
+                <div class="callout-content">Un libro de contabilidad no almacena el saldo actual. Almacena cada transacción (débito, crédito). El saldo actual se calcula sumando todas las transacciones.</div>
+              
+<p>Event Sourcing es exactamente eso: no almacenas el saldo, almacenas las transacciones. El saldo se recalcula cuando lo necesitas.</p>
+</blockquote>
+<h3 id="22-ventajas-del-event-sourcing">2.2 Ventajas del Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#22-ventajas-del-event-sourcing"><span class="icon icon-link"></span></a></h3>
+<ol>
+<li><strong>Auditoría completa</strong>: Cada cambio queda registrado con su motivo y timestamp.</li>
+<li><strong>Replay</strong>: Puedes reconstruir el estado en cualquier punto del tiempo.</li>
+<li><strong>Debugging</strong>: Puedes ver exactamente qué eventos causaron un estado dado.</li>
+<li><strong>Integración natural</strong>: Los eventos se pueden publicar a otros servicios automáticamente.</li>
+</ol>
+<h3 id="23-desventajas-del-event-sourcing">2.3 Desventajas del Event Sourcing<a aria-label="Link to section" class="anchor-link" href="#23-desventajas-del-event-sourcing"><span class="icon icon-link"></span></a></h3>
+<ol>
+<li><strong>Complejidad</strong>: Es un patrón avanzado que cambia la forma de diseñar aplicaciones.</li>
+<li><strong>Querying complejo</strong>: Las consultas se hacen sobre eventos, no sobre un estado lineal.</li>
+<li><strong>Migration de eventos</strong>: Si cambia el esquema de un evento, necesitas migrar todos los eventos existentes.</li>
+<li><strong>Eventual consistency</strong>: El estado no está disponible inmediatamente después de escribir un evento.</li>
+</ol>
+<hr>
+<h2 id="3-cqrs-command-query-responsibility-segregation">3. CQRS: Command Query Responsibility Segregation<a aria-label="Link to section" class="anchor-link" href="#3-cqrs-command-query-responsibility-segregation"><span class="icon icon-link"></span></a></h2>
+<p>CQRS separa las operaciones de lectura (query) de las operaciones de escritura (command).</p>
+<h3 id="31-el-modelo-tradicional">3.1 El modelo tradicional<a aria-label="Link to section" class="anchor-link" href="#31-el-modelo-tradicional"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌─────────────────────────────────────┐
+│         Aplicación                 │
+│                                     │
+│  GET /user/1000  →  SELECT * FROM users WHERE id = 1000
+│  PUT /user/1000  →  UPDATE users SET email = ? WHERE id = 1000
+│                                     │
+│  Una sola base de datos para todo   │
+└─────────────────────────────────────┘
+</code></pre>
+<h3 id="32-el-modelo-cqrs">3.2 El modelo CQRS<a aria-label="Link to section" class="anchor-link" href="#32-el-modelo-cqrs"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌─────────────────────────────────────────────────────────────┐
+│                    Aplicación                               │
+│                                                             │
+│  PUT /user/1000 ──→ Command Model ──→ Write DB (PostgreSQL) │
+│                                                             │
+│  GET /user/1000 ──→ Query Model  ──→ Read DB (Redis/ES)    │
+│                                                             │
+│  Two separate databases, optimized for their workload       │
+└─────────────────────────────────────────────────────────────┘
+         │
+         │ Eventos de actualización
+         │
+         ▼
+  Read DB se actualiza de forma asíncrona
+</code></pre>
+<p><strong>Command Model</strong>: Optimizado para escrituras. Valida reglas de negocio, aplica transacciones.</p>
+<p><strong>Query Model</strong>: Optimizado para lecturas. Puede ser una vista materializada, un caché, o un índice Elasticsearch.</p>
+<h3 id="33-sincronización-de-write-db-a-read-db">3.3 Sincronización de Write DB a Read DB<a aria-label="Link to section" class="anchor-link" href="#33-sincronización-de-write-db-a-read-db"><span class="icon icon-link"></span></a></h3>
+<pre><code>1. Command se ejecuta en Write DB
+2. Se genera un evento: UserUpdated(userId: 1000, email: "new@example.com")
+3. El evento se publica al event broker
+4. Un handler actualiza el Query Model con los nuevos datos
+5. La próxima lectura usa el Query Model actualizado
+</code></pre>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Consistencia eventual</div>
+                </div>
+                <div class="callout-content">Hay un lag entre la escritura en el Command Model y la actualización del Query Model. Durante ese lag, una lectura puede devolver datos obsoletos. Esto es aceptable para la mayoría de las aplicaciones, pero no para todas.</div>
+              
+</blockquote>
+<h3 id="34-cuándo-usar-cqrs">3.4 ¿Cuándo usar CQRS?<a aria-label="Link to section" class="anchor-link" href="#34-cuándo-usar-cqrs"><span class="icon icon-link"></span></a></h3>
+<ul>
+<li><strong>Alta carga de lectura vs escritura</strong>: Si tienes 100 lecturas por cada escritura, tener modelos separados permite optimizar cada uno independently.</li>
+<li><strong>Modelos de lectura complejos</strong>: Si necesitas vistas materializadas, índices Elasticsearch, o agregaciones pesadas.</li>
+<li><strong>Escalado independiente</strong>: Si necesitas escalar las lecturas y escrituras por separado.</li>
+</ul>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">No uses CQRS por default</div>
+                </div>
+                <div class="callout-content">CQRS añade complejidad significativa. Solo úsalo cuando tengas una razón clara: alta carga asimétrica, modelos de lectura complejos, o necesidad de escalado independiente. Para la mayoría de aplicaciones, un modelo CRUD tradicional es suficiente.</div>
+              
+</blockquote>
+<hr>
+<h2 id="4-saga-pattern-transacciones-distribuidas">4. Saga Pattern: Transacciones distribuidas<a aria-label="Link to section" class="anchor-link" href="#4-saga-pattern-transacciones-distribuidas"><span class="icon icon-link"></span></a></h2>
+<p>Cuando una operación necesita modificar datos en múltiples servicios, y no puedes usar una transacción ACID, necesitas el Saga Pattern.</p>
+<h3 id="41-el-problema">4.1 El problema<a aria-label="Link to section" class="anchor-link" href="#41-el-problema"><span class="icon icon-link"></span></a></h3>
+<pre><code>Order Service (DB A) ──→ Payment Service (DB B) ──→ Inventory Service (DB C)
+</code></pre>
+<p>Una orden necesita:</p>
+<ol>
+<li>Crear la orden en Order Service</li>
+<li>Cobrar al usuario en Payment Service</li>
+<li>Reservar el inventario en Inventory Service</li>
+</ol>
+<p>Si el paso 2 funciona pero el paso 3 falla, ¿cómo deshaces el paso 2? No puedes usar un rollback de base de datos porque cada servicio tiene su propia DB.</p>
+<h3 id="42-saga-choreography">4.2 Saga: Choreography<a aria-label="Link to section" class="anchor-link" href="#42-saga-choreography"><span class="icon icon-link"></span></a></h3>
+<p>Cada saga es una secuencia de pasos locales. Cada paso publica un evento que dispara el siguiente paso.</p>
+<pre><code>Paso 1: OrderService.createOrder()
+    → Evento: OrderCreated(orderId: 42, userId: 1, total: 99.99)
+    
+Paso 2: PaymentService.handleOrderCreated()
+    → Cobra al usuario
+    → Si éxito: Evento: PaymentCompleted(paymentId: 7, orderId: 42)
+    → Si fallo: Evento: PaymentFailed(orderId: 42, reason: "insufficient_funds")
+    
+Paso 3 (si éxito): InventoryService.handlePaymentCompleted()
+    → Reserva inventario
+    → Si éxito: Evento: InventoryReserved(inventoryId: 15, orderId: 42)
+    → Si fallo: Evento: InventoryReservationFailed(orderId: 42, reason: "out_of_stock")
+    
+Paso 4 (si fallo en paso 2 o 3): OrderService.handleFailure()
+    → Cancela la orden
+    → Evento: OrderCancelled(orderId: 42, reason: "payment_failed")
+</code></pre>
+<pre><code>┌──────────┐  OrderCreated   ┌──────────┐  PaymentCompleted  ┌──────────┐
+│  Order   │────────────────>│ Payment  │───────────────────>│ Inventory│
+│ Service  │                 │ Service  │                    │ Service  │
+└──────────┘                 └──────────┘                    └──────────┘
+     ▲                              │                              │
+     │                              │ PaymentFailed/               │ InventoryReservationFailed
+     │ CancelOrder                  └──────────────────────────────┘
+     │
+┌────┴────────────────────────────────────────────────────────────┐
+│                   Event Broker (Kafka)                          │
+└─────────────────────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="43-saga-orchestration">4.3 Saga: Orchestration<a aria-label="Link to section" class="anchor-link" href="#43-saga-orchestration"><span class="icon icon-link"></span></a></h3>
+<p>En lugar de que cada servicio publique eventos y reactive a otros (choreography), un orquestador central coordina todos los pasos.</p>
+<pre><code>                 ┌─────────────┐
+                 │  Orquestr.  │
+                 │  (Saga)     │
+                 └──────┬──────┘
+                        │
+           ┌────────────┼────────────┐
+           │            │            │
+           ▼            ▼            ▼
+    ┌──────────┐  ┌──────────┐  ┌──────────┐
+    │  Order   │  │ Payment  │  │ Inventory│
+    │ Service  │  │ Service  │  │ Service  │
+    └──────────┘  └──────────┘  └──────────┘
+</code></pre>
+<p>El orquestador:</p>
+<ol>
+<li>Llama a OrderService.createOrder()</li>
+<li>Si éxito, llama a PaymentService.charge()</li>
+<li>Si éxito, llama a InventoryService.reserve()</li>
+<li>Si algún paso falla, llama a los compensaciones en orden inverso</li>
+</ol>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Orquestador de Saga</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> OrderSagaOrchestrator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> execute</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self, order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        compensation_steps </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> []</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Paso 1: Crear orden</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            order </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> order_service.create(order_data)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            compensation_steps.append(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">lambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: order_service.cancel(order.id))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Paso 2: Cobrar</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            payment </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> payment_service.charge(order.id, order_data.total)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            compensation_steps.append(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">lambda</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: payment_service.refund(payment.id))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Paso 3: Reservar inventario</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> inventory_service.reserve(order.id, order_data.items)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # ¡Todo éxito!</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"status"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"success"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"order"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: order}</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> e:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Compensación en orden inverso</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> step </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> reversed</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(compensation_steps):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                    await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> step()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> compensating_error:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">                    log.error(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Compensación falló: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">compensating_error</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"status"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"failed"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"error"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(e)}</span></span></code></pre></figure>
+<h3 id="44-choreography-vs-orchestration">4.4 Choreography vs Orchestration<a aria-label="Link to section" class="anchor-link" href="#44-choreography-vs-orchestration"><span class="icon icon-link"></span></a></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Choreography</th>
+<th>Orchestration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control</strong></td>
+<td>Descentralizado (cada service reacciona)</td>
+<td>Centralizado (orquestador coordina)</td>
+</tr>
+<tr>
+<td><strong>Acoplamiento</strong></td>
+<td>Bajo (services no se conocen)</td>
+<td>Medio (services conocen al orquestador)</td>
+</tr>
+<tr>
+<td><strong>Visibilidad</strong></td>
+<td>Difícil (necesitas跟踪 events)</td>
+<td>Fácil (el orquestador conoce todo el flujo)</td>
+</tr>
+<tr>
+<td><strong>Complejidad</strong></td>
+<td>Simple para sagas cortas</td>
+<td>Más compleja de implementar</td>
+</tr>
+<tr>
+<td><strong>Reusabilidad</strong></td>
+<td>Difícil de reusar el flujo</td>
+<td>Fácil de reusar el orquestador</td>
+</tr>
+<tr>
+<td><strong>Debugging</strong></td>
+<td>Difícil (trazas distribuidas)</td>
+<td>Fácil (log centralizado del orquestador)</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">¿Cuándo usar cada uno?</div>
+                </div>
+                
+              
+<ul>
+<li><strong>Choreography</strong>: Para flujos simples con pocos servicios. Fácil de implementar, bajo acoplamiento.</li>
+<li><strong>Orchestration</strong>: Para flujos complejos con muchos servicios, compensaciones, y rutas alternativas. Más fácil de debuggear y mantener.</li>
+</ul>
+</blockquote>
+<h3 id="45-compensating-transactions">4.5 Compensating Transactions<a aria-label="Link to section" class="anchor-link" href="#45-compensating-transactions"><span class="icon icon-link"></span></a></h3>
+<p>Cada paso de una saga debe tener una <strong>compensating transaction</strong> que deshaga sus efectos si un paso posterior falla.</p>
+<pre><code>Paso normal:        Compensación:
+─────────           ─────────
+createOrder()       cancelOrder()
+chargePayment()     refundPayment()
+reserveInventory()  releaseInventory()
+sendEmail()         sendCancellationEmail()
+</code></pre>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Las compensaciones deben ser idempotentes</div>
+                </div>
+                <div class="callout-content">Si una compensación falla y se reintentar, debe producir el mismo efecto. cancelOrder() dos veces debe ser igual que cancelOrder() una vez. Esto es esencial para la resiliencia.</div>
+              
+</blockquote>
+<hr>
+<h2 id="5-patrón-outbox">5. Patrón Outbox<a aria-label="Link to section" class="anchor-link" href="#5-patrón-outbox"><span class="icon icon-link"></span></a></h2>
+<p>El patrón Outbox garantiza que un evento se publique al broker solo si la transacción de base de datos se confirma.</p>
+<h3 id="51-el-problema">5.1 El problema<a aria-label="Link to section" class="anchor-link" href="#51-el-problema"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sin outbox: riesgo de inconsistencia</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> create_order</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO orders ..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Escribe en DB</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    kafka.publish(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"OrderCreated"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">...</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Publica evento</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Si el paso 2 falla, el evento se pierde</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Si el paso 1 falla, el evento no debería publicarse</span></span></code></pre></figure>
+<h3 id="52-la-solución-tabla-outbox">5.2 La solución: tabla outbox<a aria-label="Link to section" class="anchor-link" href="#52-la-solución-tabla-outbox"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> create_order</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(order_data):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.transaction():</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 1. Escribe la orden en la tabla principal</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO orders ..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 2. Escribe el evento en la tabla outbox</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"INSERT INTO outbox (event_type, payload) VALUES (?, ?)"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">                 "OrderCreated"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, json.dumps(order_data))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # La transacción confirma AMBAS escrituras simultáneamente</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Si alguna falla, nada se escribe</span></span></code></pre></figure>
+<p>Un proceso separado (outbox poller) lee la tabla outbox y publica los eventos al broker:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Outbox poller (ejecuta cada segundo)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">events </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"SELECT * FROM outbox WHERE published = false LIMIT 100"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> event </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> events:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    kafka.publish(event.event_type, event.payload)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"UPDATE outbox SET published = true WHERE id = ?"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, event.id)</span></span></code></pre></figure>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">¿Por qué funciona?</div>
+                </div>
+                <div class="callout-content">La escritura a la tabla outbox y la escritura a la tabla principal están en la misma transacción. O ambas se confirman, o ninguna. El poller se encarga de publicar los eventos al broker de forma asíncrona. Si el broker está caído, los eventos se quedan en la outbox hasta que se recupere.</div>
+              
+</blockquote>
+<hr>
+<h2 id="conceptos-clave">Conceptos clave<a aria-label="Link to section" class="anchor-link" href="#conceptos-clave"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Event-Driven Architecture desacopla servicios</strong>: Los servicios se comunican mediante eventos, no mediante llamadas directas. Esto permite escalado independiente y resiliencia.</p>
+</li>
+<li>
+<p><strong>Event Sourcing almacena el historial de cambios</strong>: En lugar de almacenar el estado actual, almacenas todos los eventos que llevaron a ese estado. Esto permite auditoría completa y replay.</p>
+</li>
+<li>
+<p><strong>CQRS separa lectura de escritura</strong>: El Command Model optimiza escrituras y validación. El Query Model optimiza lecturas y vistas. Sincronización mediante eventos (consistencia eventual).</p>
+</li>
+<li>
+<p><strong>Saga Pattern para transacciones distribuidas</strong>: Cuando no puedes usar ACID a través de múltiples servicios, divides la transacción en pasos locales con compensaciones. Choreography (descentralizado) u Orchestration (centralizado).</p>
+</li>
+<li>
+<p><strong>El patrón Outbox garantiza la entrega de eventos</strong>: Escribe el evento en una tabla outbox dentro de la misma transacción que tu operación de negocio. Un poller publica los eventos al broker de forma asíncrona.</p>
+</li>
+</ol>
+<h2 id="relacionado-con">Relacionado con<a aria-label="Link to section" class="anchor-link" href="#relacionado-con"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[01-consensus-paxos-raft](/es/03-sistemas-distribuidos/01-consensus-paxos-raft) — Los sistemas que usan eventos (como etcd) usan consenso para replicar el log de eventos</li>
+<li>[02-message-queues](/es/03-sistemas-distribuidos/02-message-queues) — Kafka es el broker de eventos ideal para EDA y Sagas</li>
+<li>[03-distributed-caching](/es/03-sistemas-distribuidos/03-distributed-caching) — El Query Model en CQRS a menudo se implementa con Redis como cache</li>
+<li>[05-idempotency-retry-circuit-breakers](/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers) — Las compensaciones en Sagas deben ser idempotentes</li>
+</ul>
+<h2 id="referencias">Referencias<a aria-label="Link to section" class="anchor-link" href="#referencias"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven">Event-Driven Architecture - Microsoft Azure</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs">CQRS Pattern - Microsoft Azure</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/saga">Saga Pattern - Microsoft Azure</a></li>
+<li><a href="https://eventstore.com/">Event Sourcing - Event Sourcing.com</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications — Chapter 9: Transactions</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#por-qué-necesitamos-patrones-de-integración">¿Por qué necesitamos patrones de integración?</a> </li><li class="toc-depth-2"> <a href="#1-arquitectura-event-driven">1. Arquitectura Event-Driven</a> </li><li class="toc-depth-3"> <a href="#11-qué-es-un-evento">1.1 ¿Qué es un evento?</a> </li><li class="toc-depth-3"> <a href="#12-eda-vs-rpc">1.2 EDA vs RPC</a> </li><li class="toc-depth-3"> <a href="#13-componentes-de-eda">1.3 Componentes de EDA</a> </li><li class="toc-depth-2"> <a href="#2-event-sourcing">2. Event Sourcing</a> </li><li class="toc-depth-3"> <a href="#21-cómo-funciona">2.1 Cómo funciona</a> </li><li class="toc-depth-3"> <a href="#22-ventajas-del-event-sourcing">2.2 Ventajas del Event Sourcing</a> </li><li class="toc-depth-3"> <a href="#23-desventajas-del-event-sourcing">2.3 Desventajas del Event Sourcing</a> </li><li class="toc-depth-2"> <a href="#3-cqrs-command-query-responsibility-segregation">3. CQRS: Command Query Responsibility Segregation</a> </li><li class="toc-depth-3"> <a href="#31-el-modelo-tradicional">3.1 El modelo tradicional</a> </li><li class="toc-depth-3"> <a href="#32-el-modelo-cqrs">3.2 El modelo CQRS</a> </li><li class="toc-depth-3"> <a href="#33-sincronización-de-write-db-a-read-db">3.3 Sincronización de Write DB a Read DB</a> </li><li class="toc-depth-3"> <a href="#34-cuándo-usar-cqrs">3.4 ¿Cuándo usar CQRS?</a> </li><li class="toc-depth-2"> <a href="#4-saga-pattern-transacciones-distribuidas">4. Saga Pattern: Transacciones distribuidas</a> </li><li class="toc-depth-3"> <a href="#41-el-problema">4.1 El problema</a> </li><li class="toc-depth-3"> <a href="#42-saga-choreography">4.2 Saga: Choreography</a> </li><li class="toc-depth-3"> <a href="#43-saga-orchestration">4.3 Saga: Orchestration</a> </li><li class="toc-depth-3"> <a href="#44-choreography-vs-orchestration">4.4 Choreography vs Orchestration</a> </li><li class="toc-depth-3"> <a href="#45-compensating-transactions">4.5 Compensating Transactions</a> </li><li class="toc-depth-2"> <a href="#5-patrón-outbox">5. Patrón Outbox</a> </li><li class="toc-depth-3"> <a href="#51-el-problema">5.1 El problema</a> </li><li class="toc-depth-3"> <a href="#52-la-solución-tabla-outbox">5.2 La solución: tabla outbox</a> </li><li class="toc-depth-2"> <a href="#conceptos-clave">Conceptos clave</a> </li><li class="toc-depth-2"> <a href="#relacionado-con">Relacionado con</a> </li><li class="toc-depth-2"> <a href="#referencias">Referencias</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

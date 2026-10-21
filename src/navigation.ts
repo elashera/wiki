@@ -131,6 +131,12 @@ const enNavData: NavSection[] = [
         description: 'ViT, CLIP, diffusion models, multimodal LLMs',
         slug: '/18-multimodal',
       },
+      {
+        id: 'mod-99',
+        title: 'IA for the Curious — Foundations',
+        description: 'What AI is (and is not), neural networks, backpropagation, embeddings, training vs inference, classic ML',
+        slug: '/99-ia-curious-foundations',
+      },
     ],
   },
 ];
@@ -252,6 +258,12 @@ const esNavData: NavSection[] = [
         description: 'ViT, CLIP, diffusion models, multimodal LLMs',
         slug: '/18-multimodal',
       },
+      {
+        id: 'mod-99',
+        title: 'IA para gente curiosa — Los cimientos',
+        description: 'Qué es la IA, redes neuronales, retropropagación, embeddings, entrenamiento vs inferencia, ML clásico',
+        slug: '/99-ia-para-gente-curiosa',
+      },
     ],
   },
 ];
@@ -260,3 +272,50 @@ export const getNavigation = (lang: 'es' | 'en' = 'es'): NavSection[] => {
   if (lang === 'en') return enNavData;
   return esNavData;
 };
+
+// Bidirectional slug mapping between ES and EN module slugs
+const slugMapEntries: [string, string][] = [
+  ['/01-redes-internet', '/01-networking-internet'],
+  ['/02-infra-contenedores', '/02-infrastructure-containers'],
+  ['/03-sistemas-distribuidos', '/03-distributed-systems'],
+  ['/04-sistemas-operativos', '/04-operating-systems'],
+  ['/05-programacion', '/05-programming-software-engineering'],
+  ['/06-bases-datos', '/06-databases'],
+  ['/07-ml-fundamentos', '/07-ml-fundamentals'],
+  ['/08-deep-learning', '/08-deep-learning'],
+  ['/09-llm-arquitectura', '/09-llm-architecture'],
+  ['/10-llm-entrenamiento', '/10-llm-training'],
+  ['/11-llm-evaluacion', '/11-llm-evaluation'],
+  ['/12-rag-bases-vectoriales', '/12-rag-vector-databases'],
+  ['/13-fine-tuning', '/13-fine-tuning'],
+  ['/14-agentes-ia', '/14-ai-agents'],
+  ['/15-seguridad-ia', '/15-ai-security'],
+  ['/16-cloud-ia', '/16-cloud-ia'],
+  ['/17-mlops', '/17-mlops'],
+  ['/18-multimodal', '/18-multimodal'],
+  ['/99-ia-para-gente-curiosa', '/99-ia-curious-foundations'],
+];
+
+export const esToEnSlug: Record<string, string> = Object.fromEntries(slugMapEntries);
+export const enToEsSlug: Record<string, string> = Object.fromEntries(slugMapEntries.map(([es, en]) => [en, es]));
+
+/** Translate a full path from one language to another, mapping the module slug. */
+export function translatePath(pathname: string, fromLang: 'es' | 'en', toLang: 'es' | 'en'): string {
+  const segments = pathname.split('/').filter(Boolean);
+  if (segments.length === 0) return `/${toLang}/`;
+
+  const currentLang = segments[0];
+  if (currentLang !== fromLang) return `/${toLang}/${segments.slice(1).join('/')}`;
+
+  const rest = segments.slice(1); // [moduleSlug, articleSlug, ...]
+  if (rest.length === 0) return `/${toLang}/`;
+
+  const moduleSlug = `/${rest[0]}`;
+  const slugLookup = fromLang === 'es' ? esToEnSlug : enToEsSlug;
+  const targetModuleSlug = slugLookup[moduleSlug] ?? moduleSlug;
+
+  const remaining = rest.slice(1).join('/');
+  return remaining
+    ? `/${toLang}${targetModuleSlug}/${remaining}`
+    : `/${toLang}${targetModuleSlug}`;
+}

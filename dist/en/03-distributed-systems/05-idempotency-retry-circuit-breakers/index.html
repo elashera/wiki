@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article active"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Idempotency, retry patterns, and circuit breakers</h1> <div class="article-body"><h1 id="idempotency-retry-patterns-and-circuit-breakers">Idempotency, retry patterns, and circuit breakers<a aria-label="Link to section" class="anchor-link" href="#idempotency-retry-patterns-and-circuit-breakers"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">In one sentence</div>
+                </div>
+                <div class="callout-content">Idempotency guarantees that repeating an operation does not change the result, retry patterns handle temporary failures with intelligent retries, and circuit breakers prevent a downed service from overwhelming others.</div>
+              
+</blockquote>
+<h2 id="why-is-resilience-essential">Why is resilience essential?<a aria-label="Link to section" class="anchor-link" href="#why-is-resilience-essential"><span class="icon icon-link"></span></a></h2>
+<p>In distributed systems, things FAIL. Constantly. It is not a question of IF something will fail, but WHEN. Servers crash, networks cut out, databases lock up, timeouts fire. Your system needs to be designed to FAIL GRACEFULLY — that is, to keep working (or at least degrade in a controlled way) when something goes wrong.</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">The law of distributed systems</div>
+                </div>
+                <div class="callout-content">Assume that anything that can fail, WILL fail. At some point. In production. With real users. Under maximum load.</div>
+              
+<ul>
+<li>Network calls can timeout</li>
+<li>Database connections can close</li>
+<li>Disks can fill up</li>
+<li>Services can have latency spikes</li>
+<li>External dependencies can have downtime</li>
+</ul>
+<p>If your code assumes everything will work, it is broken.</p>
+</blockquote>
+<hr>
+<h2 id="1-idempotency-repeating-does-not-change-the-result">1. Idempotency: Repeating does not change the result<a aria-label="Link to section" class="anchor-link" href="#1-idempotency-repeating-does-not-change-the-result"><span class="icon icon-link"></span></a></h2>
+<p>An operation is <strong>idempotent</strong> if executing it once or multiple times produces the same result.</p>
+<h3 id="11-idempotent-vs-non-idempotent-operations">1.1 Idempotent vs non-idempotent operations<a aria-label="Link to section" class="anchor-link" href="#11-idempotent-vs-non-idempotent-operations"><span class="icon icon-link"></span></a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Idempotent</th>
+<th>Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET /api/users</code></td>
+<td>✅ Yes</td>
+<td>Reading does not change anything</td>
+</tr>
+<tr>
+<td><code>DELETE /api/users/1</code></td>
+<td>✅ Yes</td>
+<td>Deleting once or a thousand times = deleted</td>
+</tr>
+<tr>
+<td><code>PUT /api/users/1</code> (replace)</td>
+<td>✅ Yes</td>
+<td>Replacing with the same data = same result</td>
+</tr>
+<tr>
+<td><code>POST /api/orders</code></td>
+<td>❌ No</td>
+<td>Creating an order once vs a thousand times = 1 vs 100 orders</td>
+</tr>
+<tr>
+<td><code>POST /api/payments</code></td>
+<td>❌ No</td>
+<td>Charging once vs charging 10 times = $100 vs $1000</td>
+</tr>
+<tr>
+<td><code>PATCH /api/users/1</code> (increment)</td>
+<td>❌ No</td>
+<td>Incrementing the counter once vs twice = 10 vs 11</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">PUT vs PATCH vs POST</div>
+                </div>
+                
+              
+<ul>
+<li><strong>PUT</strong> to an existing resource is idempotent (replaces the entire resource).</li>
+<li><strong>PATCH</strong> can be idempotent or not, depending on the operation (e.g., <code>PATCH /users/1/points/increment</code> is not idempotent).</li>
+<li><strong>POST</strong> is never idempotent (always creates something new). To make it idempotent, you need an idempotency token.</li>
+</ul>
+</blockquote>
+<h3 id="12-idempotency-tokens">1.2 Idempotency tokens<a aria-label="Link to section" class="anchor-link" href="#12-idempotency-tokens"><span class="icon icon-link"></span></a></h3>
+<p>The most common way to make POST idempotent is to use an idempotency token:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="http" data-theme="github-light github-dark"><code data-language="http" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">POST</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /api/payments</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">Idempotency-Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> abc-123-def-456</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">Content-Type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> application/json</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "amount"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">100.00</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "currency"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"EUR"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "recipient"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"merchant-123"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<p>The server stores the idempotency token along with the result:</p>
+<pre><code>Idempotency database:
+┌──────────────────┬───────────┬──────────────┬──────────────┐
+│  idempotency_key │  status   │  response    │  created_at  │
+├──────────────────┼───────────┼──────────────┼──────────────┤
+│  abc-123-def-456 │ COMPLETED │ {id: "pay-1"}│ 10:30:00.000 │
+└──────────────────┴───────────┴──────────────┴──────────────┘
+</code></pre>
+<p>When a second request with the same token arrives:</p>
+<pre><code>1. Search for token "abc-123-def-456" in DB
+2. Found with status "COMPLETED"
+3. Return the original response: {id: "pay-1"}
+4. DO NOT process the payment again
+</code></pre>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">The token must be unique per request</div>
+                </div>
+                <div class="callout-content">The client must generate a unique token for each request (e.g., a UUID). Do not reuse tokens for different requests. If you reuse a token for different requests, you will receive the response from the first one (which may be wrong for the second).</div>
+              
+</blockquote>
+<h3 id="13-idempotency-in-the-context-of-message-queues">1.3 Idempotency in the context of message queues<a aria-label="Link to section" class="anchor-link" href="#13-idempotency-in-the-context-of-message-queues"><span class="icon icon-link"></span></a></h3>
+<p>In message queues with at-least-once delivery (RabbitMQ manual ack, Kafka without transactions), messages may be duplicated. Idempotency of the consumer is essential:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Idempotent consumer</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> process_payment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(payment_event):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Check if we already processed this event</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.exists(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"processed_event:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">payment_event.id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.info(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Event already processed: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">payment_event.id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Skip, already processed</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Process</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> charge_user(payment_event.user_id, payment_event.amount)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Mark as processed</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    redis.setex(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"processed_event:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">payment_event.id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">86400</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> result</span></span></code></pre></figure>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">TTL on processed event tracking</div>
+                </div>
+                <div class="callout-content">Use a TTL (e.g., 24 hours) for "processed event" marks. If an event is duplicated after 24 hours, it is acceptable to process it again (or ignore it if the payment system detects it).</div>
+              
+</blockquote>
+<hr>
+<h2 id="2-retry-patterns-retrying-with-intelligence">2. Retry Patterns: Retrying with intelligence<a aria-label="Link to section" class="anchor-link" href="#2-retry-patterns-retrying-with-intelligence"><span class="icon icon-link"></span></a></h2>
+<p>When an operation fails, sometimes the simplest solution is to retry. But retrying without intelligence can make the problem worse (thundering herd, saturation).</p>
+<h3 id="21-simple-retry-not-recommended">2.1 Simple retry (NOT recommended)<a aria-label="Link to section" class="anchor-link" href="#21-simple-retry-not-recommended"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Bad: retry without limits or delays</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> _ </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> call_external_api()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        break</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        pass</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Immediately retry</span></span></code></pre></figure>
+<p>Problems:</p>
+<ul>
+<li>No delay, saturates the destination service</li>
+<li>No retry limit, infinite loop</li>
+<li>No backoff, all clients retry at the same time</li>
+</ul>
+<h3 id="22-exponential-backoff-with-jitter">2.2 Exponential Backoff with Jitter<a aria-label="Link to section" class="anchor-link" href="#22-exponential-backoff-with-jitter"><span class="icon icon-link"></span></a></h3>
+<p>The recommended pattern: wait longer between attempts, with randomness to avoid the thundering herd.</p>
+<pre><code>Attempt 1 → Fail → Wait 100ms
+Attempt 2 → Fail → Wait 200ms
+Attempt 3 → Fail → Wait 400ms
+Attempt 4 → Success!
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> random</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> retry_with_backoff</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(func, max_retries</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, base_delay</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, max_delay</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10.0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> attempt </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(max_retries </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> func()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> e:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> attempt </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> max_retries:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                raise</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Last attempt failed, re-raise</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Exponential backoff with jitter</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            delay </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> min</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(base_delay </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> **</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> attempt), max_delay)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            jitter </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> random.uniform(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, delay </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 10% jitter</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            actual_delay </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> delay </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> jitter</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            </span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            logger.warning(</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Attempt </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">attempt </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> failed: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">e</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">. "</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Retrying in </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">actual_delay</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">:.2f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">s"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            )</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            time.sleep(actual_delay)</span></span></code></pre></figure>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Why jitter?</div>
+                </div>
+                <div class="callout-content">Without jitter, if 1000 clients retry at the same time after a failure, all 1000 hit the destination service at the same time again (thundering herd). With jitter, the 1000 clients retry at different times, distributing the load.</div>
+              
+<p>Jitter = 10% means: the actual delay = calculated delay ± 10%. Not much, but enough to distribute the load.</p>
+</blockquote>
+<h3 id="23-retry-policies-by-error-type">2.3 Retry policies by error type<a aria-label="Link to section" class="anchor-link" href="#23-retry-policies-by-error-type"><span class="icon icon-link"></span></a></h3>
+<p>Not all errors should be retried:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> should_retry</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(error):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Retry on temporary errors</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> isinstance</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(error, (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">ConnectionError</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">TimeoutError</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, RequestTimeout)):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> True</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Retry on server errors (5xx)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> hasattr</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(error, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'status_code'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">and</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> error.status_code </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 500</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> True</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # DO NOT retry on client errors (4xx)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> hasattr</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(error, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'status_code'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">and</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 400</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> error.status_code </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 500</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> False</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # DO NOT retry on validation errors</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> isinstance</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(error, ValidationError):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> False</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> False</span></span></code></pre></figure>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Never retry client errors</div>
+                </div>
+                <div class="callout-content">A 400 (Bad Request) or 401 (Unauthorized) error will not be solved by retrying. You are just wasting resources and delaying the correct response to the user.</div>
+              
+</blockquote>
+<hr>
+<h2 id="3-circuit-breaker-pattern">3. Circuit Breaker Pattern<a aria-label="Link to section" class="anchor-link" href="#3-circuit-breaker-pattern"><span class="icon icon-link"></span></a></h2>
+<p>The circuit breaker prevents a downed service from overwhelming others. It works like an electrical switch: if there is a short circuit, the switch trips and cuts the power.</p>
+<h3 id="31-circuit-breaker-states">3.1 Circuit Breaker states<a aria-label="Link to section" class="anchor-link" href="#31-circuit-breaker-states"><span class="icon icon-link"></span></a></h3>
+<pre><code>                    ┌─────────┐
+         (success)  │         │   (error)
+Closed ──────────>│         │───> Open
+                   │         │   &#x3C;───────────────┐
+         (success)  └─────────┘                  │
+                   &#x3C;─────────────────────────────┘
+                               (timeout)
+                                   │
+                                   ▼
+                            ┌───────────────┐
+                            │               │  (success)
+                   half-open│               │───> Closed
+                            │               │
+                            │               │  (error)
+                            │               │───> Open
+                            └───────────────┘
+</code></pre>
+<p><strong>Closed (Closed)</strong>: Everything is working normally. Requests pass. Failures are counted.</p>
+<p><strong>Open (Open)</strong>: The failure threshold has been reached. All requests fail immediately without calling the service. A timeout is waited.</p>
+<p><strong>Half-Open (Half-Open)</strong>: After the timeout, ONE test request is allowed. If it works, the breaker closes. If it fails, it opens again.</p>
+<h3 id="32-circuit-breaker-configuration">3.2 Circuit Breaker configuration<a aria-label="Link to section" class="anchor-link" href="#32-circuit-breaker-configuration"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> CircuitBreaker</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    def</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> __init__</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        self,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        failure_threshold</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,      </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Number of failures to open the breaker</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        recovery_timeout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">30</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,      </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Seconds before going to half-open</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        half_open_max_calls</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># How many test calls in half-open</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        success_threshold</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,      </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Successes needed to close in half-open</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ):</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_threshold </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> failure_threshold</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.recovery_timeout </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> recovery_timeout</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.half_open_max_calls </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> half_open_max_calls</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.success_threshold </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> success_threshold</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "CLOSED"</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.last_failure_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> None</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.half_open_calls </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span></code></pre></figure>
+<h3 id="33-usage-example">3.3 Usage example<a aria-label="Link to section" class="anchor-link" href="#33-usage-example"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Initialize circuit breaker</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">payment_breaker </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> CircuitBreaker(</span></span>
+<span data-line=""><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    failure_threshold</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">    recovery_timeout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">30</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Use in code</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> process_payment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(user_id, amount):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Check if the circuit breaker is open</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> payment_breaker.is_open():</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        raise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> PaymentServiceUnavailable(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Payment service is unavailable"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> call_payment_service(user_id, amount)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # If success, record it</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        payment_breaker.record_success()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> result</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> e:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # If failure, record it</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        payment_breaker.record_failure()</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        raise</span></span></code></pre></figure>
+<h3 id="34-circuit-breaker-metrics">3.4 Circuit Breaker metrics<a aria-label="Link to section" class="anchor-link" href="#34-circuit-breaker-metrics"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> record_success</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "HALF_OPEN"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.half_open_calls </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.half_open_calls </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.success_threshold:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "CLOSED"</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            logger.info(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Circuit breaker CLOSED after half-open success"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    elif</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "CLOSED"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Reset on success</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> record_failure</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self):</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">+=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">    self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.last_failure_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> time.time()</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "HALF_OPEN"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "OPEN"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.warning(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Circuit breaker re-OPENED from half-open"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    elif</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "CLOSED"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> and</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">>=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_threshold:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.state </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "OPEN"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        logger.warning(</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Circuit breaker OPENED after </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.failure_count</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> failures"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        )</span></span></code></pre></figure>
+<h3 id="35-where-to-put-circuit-breakers">3.5 Where to put circuit breakers?<a aria-label="Link to section" class="anchor-link" href="#35-where-to-put-circuit-breakers"><span class="icon icon-link"></span></a></h3>
+<ul>
+<li><strong>Between services</strong>: Yes, always. Every call between microservices needs a circuit breaker.</li>
+<li><strong>To database</strong>: Yes, if the DB can saturate and affect other clients.</li>
+<li><strong>To third-party services (external APIs)</strong>: Yes, especially if they have rate limits.</li>
+<li><strong>Between web client and API gateway</strong>: Generally NO (web clients do not need circuit breakers for themselves).</li>
+</ul>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Circuit breaker != rate limiter</div>
+                </div>
+                
+              
+<ul>
+<li><strong>Circuit breaker</strong>: Opens when the destination service is FAILING. Protects the client from calling a downed service.</li>
+<li><strong>Rate limiter</strong>: Limits how many requests you can make, regardless of whether the service is failing or not. Protects the destination service from overload.</li>
+</ul>
+<p>The two are usually used together: rate limiter first, then circuit breaker.</p>
+</blockquote>
+<hr>
+<h2 id="4-bulkhead-pattern">4. Bulkhead Pattern<a aria-label="Link to section" class="anchor-link" href="#4-bulkhead-pattern"><span class="icon icon-link"></span></a></h2>
+<p>The bulkhead pattern isolates resources so that a failure in one component does not affect all others. It is named after the watertight compartments of a ship: if one compartment fills with water, the ship does not sink.</p>
+<h3 id="41-connection-pool-with-bulkhead">4.1 Connection pool with bulkhead<a aria-label="Link to section" class="anchor-link" href="#41-connection-pool-with-bulkhead"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Without bulkhead: single connection pool for everything</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">pool </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ConnectionPool(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">max_size</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># WITH bulkhead: separate pools per service</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">payment_pool </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ConnectionPool(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">max_size</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">inventory_pool </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ConnectionPool(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">max_size</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">notification_pool </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ConnectionPool(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">max_size</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre></figure>
+<p>If the notifications service saturates and consumes all connections from the shared pool, the payment and inventory services are NOT affected because they have separate pools.</p>
+<h3 id="42-python-implementation">4.2 Python implementation<a aria-label="Link to section" class="anchor-link" href="#42-python-implementation"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> threading</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> concurrent.futures </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ThreadPoolExecutor</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> Bulkhead</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    def</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> __init__</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self, max_concurrent</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, max_queue</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">100</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.max_concurrent </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> max_concurrent</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.max_queue </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> max_queue</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.semaphore </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> threading.Semaphore(max_concurrent)</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.executor </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ThreadPoolExecutor(</span></span>
+<span data-line=""><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">            max_workers</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">max_concurrent,</span></span>
+<span data-line=""><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">            thread_name_prefix</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"bulkhead"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        )</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> execute</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(self, func, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">args, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">**</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">kwargs):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        if</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> not</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.semaphore.acquire(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">timeout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            raise</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BulkheadFullException(</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Bulkhead full: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.max_concurrent</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> concurrent, "</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">                f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"queue full: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.max_queue</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            )</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">            future </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.executor.submit(func, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">args, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">**</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">kwargs)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">            return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> future.result(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">timeout</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">30</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        finally</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">            self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.semaphore.release()</span></span></code></pre></figure>
+<hr>
+<h2 id="5-rate-limiting">5. Rate Limiting<a aria-label="Link to section" class="anchor-link" href="#5-rate-limiting"><span class="icon icon-link"></span></a></h2>
+<p>Rate limiting controls how many requests a client (or your service) can make in a time period.</p>
+<h3 id="51-rate-limiting-strategies">5.1 Rate limiting strategies<a aria-label="Link to section" class="anchor-link" href="#51-rate-limiting-strategies"><span class="icon icon-link"></span></a></h3>
+<p><strong>Fixed Window</strong>: Count requests in fixed time windows.</p>
+<pre><code>Window: 00:00 - 00:59 → 100 requests
+Window: 01:00 - 01:59 → 100 requests
+</code></pre>
+<p>Problem: In the last seconds of window 1 and the first of window 2, you can make double the requests.</p>
+<p><strong>Sliding Window</strong>: Count requests in a continuously shifting window.</p>
+<pre><code>Now is 00:30 → count requests from 00:00 to 00:30
+</code></pre>
+<p>More precise but more computationally expensive.</p>
+<p><strong>Token Bucket</strong>: Each bucket has a limit of tokens that regenerate at a constant rate. Each request consumes one token.</p>
+<pre><code>Bucket: 100 tokens
+Regeneration: 10 tokens/second
+
+0s: 100 tokens (full)
+→ 50 requests → 50 tokens remaining
+1s: 60 tokens (10 regenerated)
+→ 40 requests → 20 tokens remaining
+...
+</code></pre>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Token bucket is the most practical</div>
+                </div>
+                <div class="callout-content">It is easy to implement, allows controlled bursts, and has predictable behavior. Redis supports it natively with INCR and EXPIRE.</div>
+              
+</blockquote>
+<h3 id="52-redis-implementation">5.2 Redis implementation<a aria-label="Link to section" class="anchor-link" href="#52-redis-implementation"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> check_rate_limit</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(redis, key, limit, window):</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    """</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    key: "rate_limit:api:user:123"</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    limit: 100 requests</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    window: 60 seconds</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    """</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    current </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.incr(key)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> current </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        redis.expire(key, window)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Only on first request</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> current </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">&#x3C;=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> limit</span></span></code></pre></figure>
+<hr>
+<h2 id="6-pattern-summary">6. Pattern Summary<a aria-label="Link to section" class="anchor-link" href="#6-pattern-summary"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Problem it solves</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Idempotency</strong></td>
+<td>Request duplication</td>
+<td>POST, payments, message queues</td>
+</tr>
+<tr>
+<td><strong>Retry + Backoff</strong></td>
+<td>Temporary failures</td>
+<td>Network calls, DB, external APIs</td>
+</tr>
+<tr>
+<td><strong>Circuit Breaker</strong></td>
+<td>Downed service overwhelms client</td>
+<td>Calls between microservices</td>
+</tr>
+<tr>
+<td><strong>Bulkhead</strong></td>
+<td>One component affects all</td>
+<td>Connection pools, threads</td>
+</tr>
+<tr>
+<td><strong>Rate Limiting</strong></td>
+<td>Service overload</td>
+<td>Public APIs, client limiting</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="key-concepts">Key concepts<a aria-label="Link to section" class="anchor-link" href="#key-concepts"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Idempotency is essential in distributed systems</strong>: Retries, at-least-once message queues, and network reconnections can duplicate requests. Without idempotency, duplicating a request can charge twice, create two orders, or send two emails.</p>
+</li>
+<li>
+<p><strong>Retry with exponential backoff and jitter is the standard pattern</strong>: Retrying immediately without delay saturates the service. Retrying always with the same delay causes thundering herd. Exponential backoff + jitter distributes retries over time and reduces load.</p>
+</li>
+<li>
+<p><strong>The circuit breaker protects against cascading failures</strong>: If a service is down, there is no point in continuing to call it. The circuit breaker cuts off calls, allows the service to recover, and then tests with a diagnostic request.</p>
+</li>
+<li>
+<p><strong>Bulkhead and rate limiting are complementary</strong>: Bulkhead isolates internal resources (pools, threads). Rate limiting controls external traffic (APIs, clients). Both prevent one component from overwhelming the system.</p>
+</li>
+<li>
+<p><strong>Nothing in production always works</strong>: Assume that EVERYTHING will fail at some point. Design for failure from the start, not as an afterthought.</p>
+</li>
+</ol>
+<h2 id="related-to">Related to<a aria-label="Link to section" class="anchor-link" href="#related-to"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[01-consensus-paxos-raft](/en/03-distributed-systems/01-consensus-paxos-raft) — Compensations in Sagas need to be idempotent</li>
+<li>[02-message-queues](/en/03-distributed-systems/02-message-queues) — Message queues with at-least-once delivery require idempotency in consumers</li>
+<li>[03-distributed-caching](/en/03-distributed-systems/03-distributed-caching) — Circuit breakers protect calls to Redis Cluster</li>
+<li>[04-event-driven-cqrs-saga](/en/03-distributed-systems/04-event-driven-cqrs-saga) — Sagas need idempotency in compensating transactions</li>
+</ul>
+<h2 id="references">References<a aria-label="Link to section" class="anchor-link" href="#references"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/best-practices/retry-service-specific/retry-service-specific#retry">Microsoft Anti-Patterns — Retry</a></li>
+<li><a href="https://martinfowler.com/bliki/CircuitBreaker.html">Martin Fowler — Circuit Breaker</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/saga">Microsoft Saga Pattern</a></li>
+<li><a href="https://github.com/Netflix/Hystrix/wiki">Netflix Hystrix — Circuit Breaker</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications — Chapter 7: Resource Pooling</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#why-is-resilience-essential">Why is resilience essential?</a> </li><li class="toc-depth-2"> <a href="#1-idempotency-repeating-does-not-change-the-result">1. Idempotency: Repeating does not change the result</a> </li><li class="toc-depth-3"> <a href="#11-idempotent-vs-non-idempotent-operations">1.1 Idempotent vs non-idempotent operations</a> </li><li class="toc-depth-3"> <a href="#12-idempotency-tokens">1.2 Idempotency tokens</a> </li><li class="toc-depth-3"> <a href="#13-idempotency-in-the-context-of-message-queues">1.3 Idempotency in the context of message queues</a> </li><li class="toc-depth-2"> <a href="#2-retry-patterns-retrying-with-intelligence">2. Retry Patterns: Retrying with intelligence</a> </li><li class="toc-depth-3"> <a href="#21-simple-retry">2.1 Simple retry</a> </li><li class="toc-depth-3"> <a href="#22-exponential-backoff-with-jitter">2.2 Exponential Backoff with Jitter</a> </li><li class="toc-depth-3"> <a href="#23-retry-policies-by-error-type">2.3 Retry policies by error type</a> </li><li class="toc-depth-2"> <a href="#3-circuit-breaker-pattern">3. Circuit Breaker Pattern</a> </li><li class="toc-depth-3"> <a href="#31-circuit-breaker-states">3.1 Circuit Breaker states</a> </li><li class="toc-depth-3"> <a href="#32-circuit-breaker-configuration">3.2 Circuit Breaker configuration</a> </li><li class="toc-depth-3"> <a href="#33-usage-example">3.3 Usage example</a> </li><li class="toc-depth-3"> <a href="#34-circuit-breaker-metrics">3.4 Circuit Breaker metrics</a> </li><li class="toc-depth-3"> <a href="#35-where-to-put-circuit-breakers">3.5 Where to put circuit breakers?</a> </li><li class="toc-depth-2"> <a href="#4-bulkhead-pattern">4. Bulkhead Pattern</a> </li><li class="toc-depth-3"> <a href="#41-connection-pool-with-bulkhead">4.1 Connection pool with bulkhead</a> </li><li class="toc-depth-3"> <a href="#42-python-implementation">4.2 Python implementation</a> </li><li class="toc-depth-2"> <a href="#5-rate-limiting">5. Rate Limiting</a> </li><li class="toc-depth-3"> <a href="#51-rate-limiting-strategies">5.1 Rate limiting strategies</a> </li><li class="toc-depth-3"> <a href="#52-redis-implementation">5.2 Redis implementation</a> </li><li class="toc-depth-2"> <a href="#6-pattern-summary">6. Pattern Summary</a> </li><li class="toc-depth-2"> <a href="#key-concepts">Key concepts</a> </li><li class="toc-depth-2"> <a href="#related-to">Related to</a> </li><li class="toc-depth-2"> <a href="#references">References</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

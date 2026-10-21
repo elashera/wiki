@@ -1,36 +1,29 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">OSI Model and TCP/IP: Layers, Protocols, Internal Functioning</h1> <div class="article-body"><h1 id="osi-model-and-tcpip-layers-protocols-internal-functioning"><a aria-hidden="true" tabindex="-1" href="#osi-model-and-tcpip-layers-protocols-internal-functioning"><span class="icon icon-link"></span></a>OSI Model and TCP/IP: Layers, Protocols, Internal Functioning</h1>
-<blockquote>
-<p>[!tip] OSI in a nutshell
-The OSI (Open Systems Interconnection) model is a conceptual framework of <strong>7 layers</strong> that describes how systems communicate over a network. Each layer has specific responsibilities and communicates with adjacent layers. This article covers every layer in detail.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/15-osi-model-tcpip" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/15-osi-model-tcpip/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article active"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">OSI Model and TCP/IP: Layers, Protocols, Internal Functioning</h1> <div class="article-body"><h1 id="osi-model-and-tcpip-layers-protocols-internal-functioning">OSI Model and TCP/IP: Layers, Protocols, Internal Functioning<a aria-label="Link to section" class="anchor-link" href="#osi-model-and-tcpip-layers-protocols-internal-functioning"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">OSI in a nutshell</div>
+                </div>
+                <div class="callout-content">The OSI (Open Systems Interconnection) model is a conceptual framework of 7 layers that describes how systems communicate over a network. Each layer has specific responsibilities and communicates with adjacent layers. This article covers every layer in detail.</div>
+              
 </blockquote>
-<h2 id="what-is-the-osi-model"><a aria-hidden="true" tabindex="-1" href="#what-is-the-osi-model"><span class="icon icon-link"></span></a>What is the OSI model?</h2>
+<h2 id="what-is-the-osi-model">What is the OSI model?<a aria-label="Link to section" class="anchor-link" href="#what-is-the-osi-model"><span class="icon icon-link"></span></a></h2>
 <p>The <strong>OSI model</strong> was created by ISO in 1984 as a standard for understanding network communication. It divides communication into <strong>7 layers</strong>, each with well-defined responsibilities.</p>
 <p>It is not the model actually implemented in practice (TCP/IP is the real-world model), but it is fundamental for understanding networking concepts and diagnosing problems.</p>
-<h3 id="the-7-layers"><a aria-hidden="true" tabindex="-1" href="#the-7-layers"><span class="icon icon-link"></span></a>The 7 layers</h3>
+<h3 id="the-7-layers">The 7 layers<a aria-label="Link to section" class="anchor-link" href="#the-7-layers"><span class="icon icon-link"></span></a></h3>
 <pre><code>┌────────────────────────────────────────────┐
 │  7. Application    (HTTP, DNS, SMTP, FTP)  │ ← What the user sees
 │  6. Presentation   (SSL/TLS, encryption)   │ ← How data looks
@@ -41,14 +34,19 @@ The OSI (Open Systems Interconnection) model is a conceptual framework of <stron
 │  1. Physical       (cables, fiber, WiFi)   │ ← The physical bits
 └────────────────────────────────────────────┘
 </code></pre>
-<blockquote>
-<p>[!tip] Mnemonic
-From top to bottom: <strong>"All People Seem To Need Data Processing"</strong></p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Mnemonic</div>
+                </div>
+                <div class="callout-content">From top to bottom: "All People Seem To Need Data Processing"</div>
+              
 <ol>
 <li><strong>A</strong>pplication → 2. <strong>P</strong>resentation → 3. <strong>S</strong>ession → 4. <strong>T</strong>ransport → 5. <strong>N</strong>etwork → 6. <strong>D</strong>ata Link → 7. <strong>P</strong>hysical</li>
 </ol>
 </blockquote>
-<h2 id="layer-7-application"><a aria-hidden="true" tabindex="-1" href="#layer-7-application"><span class="icon icon-link"></span></a>Layer 7: Application</h2>
+<h2 id="layer-7-application">Layer 7: Application<a aria-label="Link to section" class="anchor-link" href="#layer-7-application"><span class="icon icon-link"></span></a></h2>
 <p>The application layer is the only layer that <strong>interacts directly with user software</strong>. This is where protocols we use every day live: HTTP, DNS, SMTP, FTP, SSH, WebSocket.</p>
 <p><strong>Responsibility:</strong> Provide network services directly to applications.</p>
 <p><strong>Protocols:</strong></p>
@@ -98,7 +96,7 @@ From top to bottom: <strong>"All People Seem To Need Data Processing"</strong></
 </tr>
 </tbody>
 </table>
-<h3 id="what-the-application-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-application-layer-does"><span class="icon icon-link"></span></a>What the application layer does</h3>
+<h3 id="what-the-application-layer-does">What the application layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-application-layer-does"><span class="icon icon-link"></span></a></h3>
 <p>The application layer defines:</p>
 <ul>
 <li><strong>Data format</strong>: How the message is structured (JSON, XML, HTML, binary)</li>
@@ -109,9 +107,9 @@ From top to bottom: <strong>"All People Seem To Need Data Processing"</strong></
 <pre><code>Application layer PDU (Protocol Data Unit) = MESSAGE
 Example: "GET /index.html HTTP/1.1\r\nHost: example.com\r\n\r\n"
 </code></pre>
-<h2 id="layer-6-presentation"><a aria-hidden="true" tabindex="-1" href="#layer-6-presentation"><span class="icon icon-link"></span></a>Layer 6: Presentation</h2>
+<h2 id="layer-6-presentation">Layer 6: Presentation<a aria-label="Link to section" class="anchor-link" href="#layer-6-presentation"><span class="icon icon-link"></span></a></h2>
 <p>The presentation layer is responsible for <strong>data translation, encryption, and compression</strong>. It ensures that data sent by the application layer of one system can be read by the application layer of another system.</p>
-<h3 id="what-the-presentation-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-presentation-layer-does"><span class="icon icon-link"></span></a>What the presentation layer does</h3>
+<h3 id="what-the-presentation-layer-does">What the presentation layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-presentation-layer-does"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -148,7 +146,7 @@ Example: "GET /index.html HTTP/1.1\r\nHost: example.com\r\n\r\n"
 </tr>
 </tbody>
 </table>
-<h3 id="encryption-in-practice-tls-at-the-presentation-layer"><a aria-hidden="true" tabindex="-1" href="#encryption-in-practice-tls-at-the-presentation-layer"><span class="icon icon-link"></span></a>Encryption in practice (TLS at the Presentation layer)</h3>
+<h3 id="encryption-in-practice-tls-at-the-presentation-layer">Encryption in practice (TLS at the Presentation layer)<a aria-label="Link to section" class="anchor-link" href="#encryption-in-practice-tls-at-the-presentation-layer"><span class="icon icon-link"></span></a></h3>
 <pre><code>Before sending (encrypt):
   Plain text:  "GET /index.html HTTP/1.1"
   ↓ TLS encrypts
@@ -159,11 +157,16 @@ After receiving (decrypt):
   ↓ TLS decrypts
   Plain text:  "GET /index.html HTTP/1.1"
 </code></pre>
-<blockquote>
-<p>[!note] TLS as presentation layer
-While TLS operates at the boundary between layers 4 and 5, it is most commonly associated with the presentation layer because its job is to transform (encrypt) data before handing it to the session/application layer.</p>
+<blockquote class="callout-note" data-callout="note" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-text">TLS as presentation layer</div>
+                </div>
+                <div class="callout-content">While TLS operates at the boundary between layers 4 and 5, it is most commonly associated with the presentation layer because its job is to transform (encrypt) data before handing it to the session/application layer.</div>
+              
 </blockquote>
-<h3 id="compression"><a aria-hidden="true" tabindex="-1" href="#compression"><span class="icon icon-link"></span></a>Compression</h3>
+<h3 id="compression">Compression<a aria-label="Link to section" class="anchor-link" href="#compression"><span class="icon icon-link"></span></a></h3>
 <pre><code>Original data (HTML page): 50,000 bytes
 After gzip compression:     12,000 bytes (76% reduction)
 After brotli compression:   10,500 bytes (79% reduction)
@@ -172,7 +175,7 @@ HTTP header: Accept-Encoding: gzip, br
 → Server sends compressed data
 → Browser decompresses and renders
 </code></pre>
-<h3 id="translation"><a aria-hidden="true" tabindex="-1" href="#translation"><span class="icon icon-link"></span></a>Translation</h3>
+<h3 id="translation">Translation<a aria-label="Link to section" class="anchor-link" href="#translation"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client sends: {"name": "José", "lang": "es"} (UTF-8)
 Server receives: {"name": "José", "lang": "es"} (UTF-8)
 
@@ -183,9 +186,9 @@ If the client and server use different character encodings:
 The presentation layer handles the conversion so the application sees
 the correct data regardless of encoding differences.
 </code></pre>
-<h2 id="layer-5-session"><a aria-hidden="true" tabindex="-1" href="#layer-5-session"><span class="icon icon-link"></span></a>Layer 5: Session</h2>
+<h2 id="layer-5-session">Layer 5: Session<a aria-label="Link to section" class="anchor-link" href="#layer-5-session"><span class="icon icon-link"></span></a></h2>
 <p>The session layer establishes, manages, and terminates <strong>connections (sessions)</strong> between applications.</p>
-<h3 id="what-the-session-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-session-layer-does"><span class="icon icon-link"></span></a>What the session layer does</h3>
+<h3 id="what-the-session-layer-does">What the session layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-session-layer-does"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -222,7 +225,7 @@ the correct data regardless of encoding differences.
 </tr>
 </tbody>
 </table>
-<h3 id="session-management-in-practice"><a aria-hidden="true" tabindex="-1" href="#session-management-in-practice"><span class="icon icon-link"></span></a>Session management in practice</h3>
+<h3 id="session-management-in-practice">Session management in practice<a aria-label="Link to section" class="anchor-link" href="#session-management-in-practice"><span class="icon icon-link"></span></a></h3>
 <pre><code># Session cookies (Layer 7 + 5 working together)
 Server → Browser: Set-Cookie: session_id=xyz789; Path=/; HttpOnly; Secure
 
@@ -231,7 +234,7 @@ Cookie: session_id=xyz789
 
 Server looks up session_id=xyz789 → finds user data → serves personalized content
 </code></pre>
-<h3 id="session-examples"><a aria-hidden="true" tabindex="-1" href="#session-examples"><span class="icon icon-link"></span></a>Session examples</h3>
+<h3 id="session-examples">Session examples<a aria-label="Link to section" class="anchor-link" href="#session-examples"><span class="icon icon-link"></span></a></h3>
 <pre><code>Telnet session:
   1. Client connects to server:telnet → Session established
   2. User types commands → Session active
@@ -242,9 +245,9 @@ HTTP keep-alive:
   2. Multiple HTTP requests on same connection → Session continues
   3. Connection times out or closes → Session ends
 </code></pre>
-<h2 id="layer-4-transport"><a aria-hidden="true" tabindex="-1" href="#layer-4-transport"><span class="icon icon-link"></span></a>Layer 4: Transport</h2>
+<h2 id="layer-4-transport">Layer 4: Transport<a aria-label="Link to section" class="anchor-link" href="#layer-4-transport"><span class="icon icon-link"></span></a></h2>
 <p>The transport layer is responsible for <strong>end-to-end communication</strong>, reliability, flow control, and congestion control.</p>
-<h3 id="two-transport-protocols"><a aria-hidden="true" tabindex="-1" href="#two-transport-protocols"><span class="icon icon-link"></span></a>Two transport protocols</h3>
+<h3 id="two-transport-protocols">Two transport protocols<a aria-label="Link to section" class="anchor-link" href="#two-transport-protocols"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -296,7 +299,7 @@ HTTP keep-alive:
 </tr>
 </tbody>
 </table>
-<h3 id="tcp-header-structure"><a aria-hidden="true" tabindex="-1" href="#tcp-header-structure"><span class="icon icon-link"></span></a>TCP header structure</h3>
+<h3 id="tcp-header-structure">TCP header structure<a aria-label="Link to section" class="anchor-link" href="#tcp-header-structure"><span class="icon icon-link"></span></a></h3>
 <pre><code>TCP Header (20 bytes minimum):
 ┌─────────────────────────────────────────────────────┐
 │  Source Port   │  Destination Port   │  Sequence #   │
@@ -319,7 +322,7 @@ HTTP keep-alive:
 <li><strong>Flags</strong>: SYN, ACK, FIN, RST, PSH, URG (control connection state)</li>
 <li><strong>Checksum</strong>: Error detection for the header and data</li>
 </ul>
-<h3 id="tcp-connection-states"><a aria-hidden="true" tabindex="-1" href="#tcp-connection-states"><span class="icon icon-link"></span></a>TCP connection states</h3>
+<h3 id="tcp-connection-states">TCP connection states<a aria-label="Link to section" class="anchor-link" href="#tcp-connection-states"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client side:
   CLOSED → SYN_SENT → ESTABLISHED → FIN_WAIT_1 → FIN_WAIT_2 → TIME_WAIT → CLOSED
 
@@ -337,7 +340,7 @@ Server side:
   Server:  FIN ───────────────────→ Client  (server done sending)
   Client:  ACK ────────────────────→ Server  (got the FIN)
 </code></pre>
-<h3 id="tcp-flow-control-window-size"><a aria-hidden="true" tabindex="-1" href="#tcp-flow-control-window-size"><span class="icon icon-link"></span></a>TCP flow control (window size)</h3>
+<h3 id="tcp-flow-control-window-size">TCP flow control (window size)<a aria-label="Link to section" class="anchor-link" href="#tcp-flow-control-window-size"><span class="icon icon-link"></span></a></h3>
 <pre><code>Receiver has 10,000 bytes of buffer space available.
 
 Client sends: "I can receive 10,000 bytes (window size = 10000)"
@@ -347,7 +350,7 @@ Server adjusts: sends up to 5,000 bytes
 
 If window = 0 → sender stops (receiver buffer full)
 </code></pre>
-<h3 id="tcp-congestion-control"><a aria-hidden="true" tabindex="-1" href="#tcp-congestion-control"><span class="icon icon-link"></span></a>TCP congestion control</h3>
+<h3 id="tcp-congestion-control">TCP congestion control<a aria-label="Link to section" class="anchor-link" href="#tcp-congestion-control"><span class="icon icon-link"></span></a></h3>
 <pre><code>TCP uses congestion control to avoid overwhelming the network:
 
 1. Slow Start:
@@ -370,9 +373,9 @@ If window = 0 → sender stops (receiver buffer full)
 Slow Start → (congestion) → Congestion Avoidance → (dup ACKs) → Fast Retransmit
          → (timeout) → Congestion Avoidance → Slow Start
 </code></pre>
-<h2 id="layer-3-network"><a aria-hidden="true" tabindex="-1" href="#layer-3-network"><span class="icon icon-link"></span></a>Layer 3: Network</h2>
+<h2 id="layer-3-network">Layer 3: Network<a aria-label="Link to section" class="anchor-link" href="#layer-3-network"><span class="icon icon-link"></span></a></h2>
 <p>The network layer is responsible for <strong>logical addressing and routing</strong>.</p>
-<h3 id="what-the-network-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-network-layer-does"><span class="icon icon-link"></span></a>What the network layer does</h3>
+<h3 id="what-the-network-layer-does">What the network layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-network-layer-does"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -404,7 +407,7 @@ Slow Start → (congestion) → Congestion Avoidance → (dup ACKs) → Fast Ret
 </tr>
 </tbody>
 </table>
-<h3 id="ipv4-packet-structure"><a aria-hidden="true" tabindex="-1" href="#ipv4-packet-structure"><span class="icon icon-link"></span></a>IPv4 packet structure</h3>
+<h3 id="ipv4-packet-structure">IPv4 packet structure<a aria-label="Link to section" class="anchor-link" href="#ipv4-packet-structure"><span class="icon icon-link"></span></a></h3>
 <pre><code>IP Header (20 bytes minimum):
 ┌──────────────────────────────────────────────────────────┐
 │  Version (4) │ IHL (4) │  DSCP (6) │ ECN (2) │         │
@@ -422,7 +425,7 @@ Slow Start → (congestion) → Congestion Avoidance → (dup ACKs) → Fast Ret
 │                    Options (optional)                     │
 └──────────────────────────────────────────────────────────┘
 </code></pre>
-<h3 id="routing-at-layer-3"><a aria-hidden="true" tabindex="-1" href="#routing-at-layer-3"><span class="icon icon-link"></span></a>Routing at Layer 3</h3>
+<h3 id="routing-at-layer-3">Routing at Layer 3<a aria-label="Link to section" class="anchor-link" href="#routing-at-layer-3"><span class="icon icon-link"></span></a></h3>
 <pre><code>Packet travels:
   Client (192.168.1.5) → Router (192.168.1.1) → ISP → Internet → Server (93.184.216.34)
 
@@ -433,7 +436,7 @@ Router 2: "Destination 93.184.216.34 → Next hop: 172.16.0.1 (Peer ISP)"
 Router 3: "Destination 93.184.216.34 → Next hop: 10.1.0.5 (Cloudflare)"
 Router 4: "Destination 93.184.216.34 → Directly connected → Deliver to 93.184.216.34"
 </code></pre>
-<h3 id="icmp-internet-control-message-protocol"><a aria-hidden="true" tabindex="-1" href="#icmp-internet-control-message-protocol"><span class="icon icon-link"></span></a>ICMP (Internet Control Message Protocol)</h3>
+<h3 id="icmp-internet-control-message-protocol">ICMP (Internet Control Message Protocol)<a aria-label="Link to section" class="anchor-link" href="#icmp-internet-control-message-protocol"><span class="icon icon-link"></span></a></h3>
 <p>ICMP is a Layer 3 protocol used for diagnostics:</p>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ping uses ICMP Echo Request / Echo Reply</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ping</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 93.184.216.34</span></span>
@@ -448,9 +451,9 @@ Router 4: "Destination 93.184.216.34 → Directly connected → Deliver to 93.18
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  3  172.16.0.1 (172.16.0.1)  23.456 ms</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  ...</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 12  93.184.216.34 (93.184.216.34)  42.345 ms</span></span></code></pre></figure>
-<h2 id="layer-2-data-link"><a aria-hidden="true" tabindex="-1" href="#layer-2-data-link"><span class="icon icon-link"></span></a>Layer 2: Data Link</h2>
+<h2 id="layer-2-data-link">Layer 2: Data Link<a aria-label="Link to section" class="anchor-link" href="#layer-2-data-link"><span class="icon icon-link"></span></a></h2>
 <p>The data link layer is responsible for <strong>physical addressing and error detection</strong> on a local network segment.</p>
-<h3 id="what-the-data-link-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-data-link-layer-does"><span class="icon icon-link"></span></a>What the data link layer does</h3>
+<h3 id="what-the-data-link-layer-does">What the data link layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-data-link-layer-does"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -487,7 +490,7 @@ Router 4: "Destination 93.184.216.34 → Directly connected → Deliver to 93.18
 </tr>
 </tbody>
 </table>
-<h3 id="ethernet-frame-structure"><a aria-hidden="true" tabindex="-1" href="#ethernet-frame-structure"><span class="icon icon-link"></span></a>Ethernet frame structure</h3>
+<h3 id="ethernet-frame-structure">Ethernet frame structure<a aria-label="Link to section" class="anchor-link" href="#ethernet-frame-structure"><span class="icon icon-link"></span></a></h3>
 <pre><code>Ethernet Frame:
 ┌──────────────────────────────────────────────────────────────┐
 │  Preamble (8 bytes) │ Destination MAC (6) │ Source MAC (6) │
@@ -508,7 +511,7 @@ Format: 00:1A:2B:3C:4D:5E
   First 3 bytes = Organizationally Unique Identifier (OUI)
   Last 3 bytes = Network interface controller (NIC) specific
 </code></pre>
-<h3 id="arp-address-resolution-protocol"><a aria-hidden="true" tabindex="-1" href="#arp-address-resolution-protocol"><span class="icon icon-link"></span></a>ARP (Address Resolution Protocol)</h3>
+<h3 id="arp-address-resolution-protocol">ARP (Address Resolution Protocol)<a aria-label="Link to section" class="anchor-link" href="#arp-address-resolution-protocol"><span class="icon icon-link"></span></a></h3>
 <p>ARP maps IP addresses to MAC addresses on the local network:</p>
 <pre><code># Device A wants to send data to Device B
 # Device A knows: 192.168.1.10 (IP of B)
@@ -532,9 +535,9 @@ Dest MAC: AA:BB:CC:DD:EE:FF (to Device A)
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Clear ARP cache</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ip</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> neigh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> flush</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> all</span></span></code></pre></figure>
-<h2 id="layer-1-physical"><a aria-hidden="true" tabindex="-1" href="#layer-1-physical"><span class="icon icon-link"></span></a>Layer 1: Physical</h2>
+<h2 id="layer-1-physical">Layer 1: Physical<a aria-label="Link to section" class="anchor-link" href="#layer-1-physical"><span class="icon icon-link"></span></a></h2>
 <p>The physical layer is responsible for <strong>transmitting raw bits over a physical medium</strong>.</p>
-<h3 id="what-the-physical-layer-does"><a aria-hidden="true" tabindex="-1" href="#what-the-physical-layer-does"><span class="icon icon-link"></span></a>What the physical layer does</h3>
+<h3 id="what-the-physical-layer-does">What the physical layer does<a aria-label="Link to section" class="anchor-link" href="#what-the-physical-layer-does"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -571,7 +574,7 @@ Dest MAC: AA:BB:CC:DD:EE:FF (to Device A)
 </tr>
 </tbody>
 </table>
-<h3 id="physical-media"><a aria-hidden="true" tabindex="-1" href="#physical-media"><span class="icon icon-link"></span></a>Physical media</h3>
+<h3 id="physical-media">Physical media<a aria-label="Link to section" class="anchor-link" href="#physical-media"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -626,7 +629,7 @@ Dest MAC: AA:BB:CC:DD:EE:FF (to Device A)
 </tr>
 </tbody>
 </table>
-<h2 id="data-encapsulation-a-complete-example"><a aria-hidden="true" tabindex="-1" href="#data-encapsulation-a-complete-example"><span class="icon icon-link"></span></a>Data encapsulation: A complete example</h2>
+<h2 id="data-encapsulation-a-complete-example">Data encapsulation: A complete example<a aria-label="Link to section" class="anchor-link" href="#data-encapsulation-a-complete-example"><span class="icon icon-link"></span></a></h2>
 <p>When you send an HTTP request, data passes through all 7 layers:</p>
 <pre><code>Layer 7 - Application:
   "GET /index.html HTTP/1.1\r\nHost: example.com\r\n\r\n"
@@ -669,7 +672,7 @@ Layer 5: Check session identifier
 Layer 6: Decrypt TLS
 Layer 7: Parse HTTP message → "GET /index.html HTTP/1.1"
 </code></pre>
-<h2 id="comparison-osi-vs-tcpip"><a aria-hidden="true" tabindex="-1" href="#comparison-osi-vs-tcpip"><span class="icon icon-link"></span></a>Comparison: OSI vs TCP/IP</h2>
+<h2 id="comparison-osi-vs-tcpip">Comparison: OSI vs TCP/IP<a aria-label="Link to section" class="anchor-link" href="#comparison-osi-vs-tcpip"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -716,15 +719,21 @@ Layer 7: Parse HTTP message → "GET /index.html HTTP/1.1"
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Which model to use?</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Which model to use?</div>
+                </div>
+                
+              
 <ul>
 <li><strong>OSI</strong> is useful for teaching, troubleshooting, and understanding network layers conceptually.</li>
 <li><strong>TCP/IP</strong> is the model actually implemented in every network. Use it for practical work.</li>
 <li>When diagnosing a problem, thinking in OSI layers helps you identify which layer is failing.</li>
 </ul>
 </blockquote>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -735,23 +744,23 @@ Layer 7: Parse HTTP message → "GET /index.html HTTP/1.1"
 <tbody>
 <tr>
 <td>What is Internet</td>
-<td>[[01-what-is-internet]]</td>
+<td>[01-what-is-internet](/en/01-networking-internet/01-what-is-internet)</td>
 </tr>
 <tr>
 <td>URL to page journey</td>
-<td>[[02-url-to-page-journey]]</td>
+<td>[02-url-to-page-journey](/en/01-networking-internet/02-url-to-page-journey)</td>
 </tr>
 <tr>
 <td>Routing and subnetting</td>
-<td>[[16-routing-subnetting]]</td>
+<td>[16-routing-subnetting](/en/01-networking-internet/16-routing-subnetting)</td>
 </tr>
 <tr>
 <td>Servers and processes</td>
-<td>[[14-servers-processes]]</td>
+<td>[14-servers-processes](/en/01-networking-internet/14-servers-processes)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li>The <strong>OSI model</strong> has 7 layers, each with specific responsibilities.</li>
 <li><strong>Layer 7 (Application)</strong>: HTTP, DNS, SMTP — protocols the user interacts with.</li>
@@ -764,7 +773,12 @@ Layer 7: Parse HTTP message → "GET /index.html HTTP/1.1"
 <li><strong>Encapsulation</strong>: Data is wrapped layer by layer as it goes down; unwrapped layer by layer as it comes up.</li>
 <li>TCP/IP is the real-world model; OSI is the conceptual framework.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-The OSI model is a mental framework for understanding network communication. When something breaks, knowing which layer it is at helps you diagnose and fix it. TCP is layer 4, IP is layer 3, Ethernet is layer 2, and HTTP is layer 7 — each layer depends on the ones below it.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">The OSI model is a mental framework for understanding network communication. When something breaks, knowing which layer it is at helps you diagnose and fix it. TCP is layer 4, IP is layer 3, Ethernet is layer 2, and HTTP is layer 7 — each layer depends on the ones below it.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-is-the-osi-model">What is the OSI model?</a> </li><li class="toc-depth-3"> <a href="#the-7-layers">The 7 layers</a> </li><li class="toc-depth-2"> <a href="#layer-7-application">Layer 7: Application</a> </li><li class="toc-depth-3"> <a href="#what-the-application-layer-does">What the application layer does</a> </li><li class="toc-depth-2"> <a href="#layer-6-presentation">Layer 6: Presentation</a> </li><li class="toc-depth-3"> <a href="#what-the-presentation-layer-does">What the presentation layer does</a> </li><li class="toc-depth-3"> <a href="#encryption-in-practice">Encryption in practice</a> </li><li class="toc-depth-3"> <a href="#compression">Compression</a> </li><li class="toc-depth-3"> <a href="#translation">Translation</a> </li><li class="toc-depth-2"> <a href="#layer-5-session">Layer 5: Session</a> </li><li class="toc-depth-3"> <a href="#what-the-session-layer-does">What the session layer does</a> </li><li class="toc-depth-3"> <a href="#session-management-in-practice">Session management in practice</a> </li><li class="toc-depth-3"> <a href="#session-examples">Session examples</a> </li><li class="toc-depth-2"> <a href="#layer-4-transport">Layer 4: Transport</a> </li><li class="toc-depth-3"> <a href="#two-transport-protocols">Two transport protocols</a> </li><li class="toc-depth-3"> <a href="#tcp-header-structure">TCP header structure</a> </li><li class="toc-depth-3"> <a href="#tcp-connection-states">TCP connection states</a> </li><li class="toc-depth-3"> <a href="#tcp-flow-control">TCP flow control</a> </li><li class="toc-depth-3"> <a href="#tcp-congestion-control">TCP congestion control</a> </li><li class="toc-depth-2"> <a href="#layer-3-network">Layer 3: Network</a> </li><li class="toc-depth-3"> <a href="#what-the-network-layer-does">What the network layer does</a> </li><li class="toc-depth-3"> <a href="#ipv4-packet-structure">IPv4 packet structure</a> </li><li class="toc-depth-3"> <a href="#routing-at-layer-3">Routing at Layer 3</a> </li><li class="toc-depth-3"> <a href="#icmp">ICMP</a> </li><li class="toc-depth-2"> <a href="#layer-2-data-link">Layer 2: Data Link</a> </li><li class="toc-depth-3"> <a href="#what-the-data-link-layer-does">What the data link layer does</a> </li><li class="toc-depth-3"> <a href="#ethernet-frame-structure">Ethernet frame structure</a> </li><li class="toc-depth-3"> <a href="#arp">ARP</a> </li><li class="toc-depth-2"> <a href="#layer-1-physical">Layer 1: Physical</a> </li><li class="toc-depth-3"> <a href="#what-the-physical-layer-does">What the physical layer does</a> </li><li class="toc-depth-3"> <a href="#physical-media">Physical media</a> </li><li class="toc-depth-2"> <a href="#data-encapsulation-a-complete-example">Data encapsulation: A complete example</a> </li><li class="toc-depth-2"> <a href="#comparison-osi-vs-tcpip">Comparison: OSI vs TCP/IP</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

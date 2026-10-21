@@ -1,35 +1,28 @@
-<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Redes e Internet&#34;,&#34;description&#34;:&#34;Modelo OSI, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-redes-internet&#34;},{&#34;title&#34;:&#34;Infraestructura y Contenedores&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores&#34;},{&#34;title&#34;:&#34;Sistemas Distribuidos&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos&#34;},{&#34;title&#34;:&#34;Sistemas Operativos&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-sistemas-operativos&#34;},{&#34;title&#34;:&#34;Programación y Software Engineering&#34;,&#34;description&#34;:&#34;Python avanzado, patrones de diseño, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programacion&#34;},{&#34;title&#34;:&#34;Bases de Datos&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replicación, sharding&#34;,&#34;slug&#34;:&#34;/06-bases-datos&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentos&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Arquitectura y Funcionamiento&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-arquitectura&#34;},{&#34;title&#34;:&#34;LLMs — Entrenamiento&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-entrenamiento&#34;},{&#34;title&#34;:&#34;LLMs — Evaluación y Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluacion&#34;},{&#34;title&#34;:&#34;RAG y Bases de Datos Vectoriales&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-bases-vectoriales&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;Agentes IA&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-agentes-ia&#34;},{&#34;title&#34;:&#34;Seguridad en IA&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-seguridad-ia&#34;},{&#34;title&#34;:&#34;Cloud e Infraestructura IA&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps y Producción&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal y Visión por Computador&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Switch to English"> <span class="lang-switcher-label">ES</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">EN</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/es/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/es/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/es/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/es/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/es/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/es/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/es/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/es/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/es/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/es/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/es/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/es/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/es/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">HTTPS y TLS: cifrado paso a paso</h1> <div class="article-body"><h1 id="https-y-tls-cifrado-paso-a-paso"><a aria-hidden="true" tabindex="-1" href="#https-y-tls-cifrado-paso-a-paso"><span class="icon icon-link"></span></a>HTTPS y TLS: cifrado paso a paso</h1>
-<blockquote>
-<p>[!tip] HTTPS en una frase
-HTTPS = HTTP + TLS (cifrado). TLS es el protocolo criptográfico que garantiza que tu comunicación con el servidor es privada, íntegra y auténtica.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/07-https-tls/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/07-https-tls" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article active"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">HTTPS y TLS: cifrado paso a paso</h1> <div class="article-body"><h1 id="https-y-tls-cifrado-paso-a-paso">HTTPS y TLS: cifrado paso a paso<a aria-label="Link to section" class="anchor-link" href="#https-y-tls-cifrado-paso-a-paso"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">HTTPS en una frase</div>
+                </div>
+                <div class="callout-content">HTTPS = HTTP + TLS (cifrado). TLS es el protocolo criptográfico que garantiza que tu comunicación con el servidor es privada, íntegra y auténtica.</div>
+              
 </blockquote>
-<h2 id="qué-es-tls"><a aria-hidden="true" tabindex="-1" href="#qué-es-tls"><span class="icon icon-link"></span></a>¿Qué es TLS?</h2>
+<h2 id="qué-es-tls">¿Qué es TLS?<a aria-label="Link to section" class="anchor-link" href="#qué-es-tls"><span class="icon icon-link"></span></a></h2>
 <p>TLS (Transport Layer Security) es el protocolo que <strong>cifra</strong> la comunicación entre cliente y servidor. HTTPS es simplemente HTTP sobre TLS.</p>
-<h3 id="la-evolución"><a aria-hidden="true" tabindex="-1" href="#la-evolución"><span class="icon icon-link"></span></a>La evolución</h3>
+<h3 id="la-evolución">La evolución<a aria-label="Link to section" class="anchor-link" href="#la-evolución"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -76,13 +69,18 @@ HTTPS = HTTP + TLS (cifrado). TLS es el protocolo criptográfico que garantiza q
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!caution] TLS 1.0 y 1.1 están MUERTOS
-Desde 2020, todos los navegadores principales rechazan TLS 1.0 y 1.1. Si tu servidor aún los soporta, <strong>desactívalos inmediatamente</strong>. TLS 1.2 es el mínimo aceptable; TLS 1.3 es lo ideal.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">TLS 1.0 y 1.1 están MUERTOS</div>
+                </div>
+                <div class="callout-content">Desde 2020, todos los navegadores principales rechazan TLS 1.0 y 1.1. Si tu servidor aún los soporta, desactívalos inmediatamente. TLS 1.2 es el mínimo aceptable; TLS 1.3 es lo ideal.</div>
+              
 </blockquote>
-<h2 id="tls-por-dentro-el-handshake"><a aria-hidden="true" tabindex="-1" href="#tls-por-dentro-el-handshake"><span class="icon icon-link"></span></a>TLS por dentro: el Handshake</h2>
+<h2 id="tls-por-dentro-el-handshake">TLS por dentro: el Handshake<a aria-label="Link to section" class="anchor-link" href="#tls-por-dentro-el-handshake"><span class="icon icon-link"></span></a></h2>
 <p>El handshake de TLS es el proceso de establecimiento de la conexión segura.</p>
-<h3 id="tls-13-handshake-el-moderno-y-rápido"><a aria-hidden="true" tabindex="-1" href="#tls-13-handshake-el-moderno-y-rápido"><span class="icon icon-link"></span></a>TLS 1.3 Handshake (el moderno y rápido)</h3>
+<h3 id="tls-13-handshake-el-moderno-y-rápido">TLS 1.3 Handshake (el moderno y rápido)<a aria-label="Link to section" class="anchor-link" href="#tls-13-handshake-el-moderno-y-rápido"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cliente                          Servidor
    │                                │
    │─── ClientHello ──────────────→ │
@@ -105,7 +103,7 @@ Desde 2020, todos los navegadores principales rechazan TLS 1.0 y 1.1. Si tu serv
    │══════ Comunicación cifrada ════════
 </code></pre>
 <p><strong>Total: 1-RTT</strong> (una ronda de ida y vuelta). Con PSK (resumed session): <strong>0-RTT</strong> (instantáneo).</p>
-<h3 id="tls-12-handshake-el-antiguo-pero-aún-usado"><a aria-hidden="true" tabindex="-1" href="#tls-12-handshake-el-antiguo-pero-aún-usado"><span class="icon icon-link"></span></a>TLS 1.2 Handshake (el antiguo pero aún usado)</h3>
+<h3 id="tls-12-handshake-el-antiguo-pero-aún-usado">TLS 1.2 Handshake (el antiguo pero aún usado)<a aria-label="Link to section" class="anchor-link" href="#tls-12-handshake-el-antiguo-pero-aún-usado"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cliente                          Servidor
    │                                │
    │─── ClientHello ──────────────→ │  "Hola, soporto TLS 1.2, estos cipher suites..."
@@ -125,8 +123,14 @@ Desde 2020, todos los navegadores principales rechazan TLS 1.0 y 1.1. Si tu serv
    │══════ Comunicación cifrada ════════
 </code></pre>
 <p><strong>Total: 2-RTT</strong> (dos rondas de ida y vuelta).</p>
-<blockquote>
-<p>[!tip] ¿Por qué TLS 1.3 es mejor?</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">¿Por qué TLS 1.3 es mejor?</div>
+                </div>
+                
+              
 <ol>
 <li><strong>Más rápido</strong>: 1-RTT vs 2-RTT (0-RTT con resumption)</li>
 <li><strong>Más seguro</strong>: Elimina cipher suites vulnerables (RSA key exchange, CBC mode, MD5, SHA1)</li>
@@ -134,16 +138,16 @@ Desde 2020, todos los navegadores principales rechazan TLS 1.0 y 1.1. Si tu serv
 <li><strong>Menos complejidad</strong>: 4 mensajes vs 8-10 en TLS 1.2</li>
 </ol>
 </blockquote>
-<h2 id="cipher-suites"><a aria-hidden="true" tabindex="-1" href="#cipher-suites"><span class="icon icon-link"></span></a>Cipher suites</h2>
+<h2 id="cipher-suites">Cipher suites<a aria-label="Link to section" class="anchor-link" href="#cipher-suites"><span class="icon icon-link"></span></a></h2>
 <p>Una <strong>cipher suite</strong> es un conjunto de algoritmos criptográficos que se negocian durante el handshake.</p>
-<h3 id="tls-13-cipher-suites-solo-4"><a aria-hidden="true" tabindex="-1" href="#tls-13-cipher-suites-solo-4"><span class="icon icon-link"></span></a>TLS 1.3 Cipher Suites (solo 4)</h3>
+<h3 id="tls-13-cipher-suites-solo-4">TLS 1.3 Cipher Suites (solo 4)<a aria-label="Link to section" class="anchor-link" href="#tls-13-cipher-suites-solo-4"><span class="icon icon-link"></span></a></h3>
 <pre><code>TLS_AES_256_GCM_SHA384         → AES-256-GCM + SHA384
 TLS_AES_128_GCM_SHA256         → AES-128-GCM + SHA256
 TLS_CHACHA20_POLY1305_SHA256   → ChaCha20-Poly1305 + SHA256
 TLS_AES_128_CCM_SHA256         → AES-128-CCM + SHA256
 </code></pre>
 <p>TLS 1.3 eliminó todo lo demás. Solo quedan los que son seguros y eficientes.</p>
-<h3 id="tls-12-cipher-suites-decenas-de-opciones-muchas-malas"><a aria-hidden="true" tabindex="-1" href="#tls-12-cipher-suites-decenas-de-opciones-muchas-malas"><span class="icon icon-link"></span></a>TLS 1.2 Cipher Suites (decenas de opciones, muchas malas)</h3>
+<h3 id="tls-12-cipher-suites-decenas-de-opciones-muchas-malas">TLS 1.2 Cipher Suites (decenas de opciones, muchas malas)<a aria-label="Link to section" class="anchor-link" href="#tls-12-cipher-suites-decenas-de-opciones-muchas-malas"><span class="icon icon-link"></span></a></h3>
 <pre><code># Buenas (con ECDHE para forward secrecy):
 ECDHE-RSA-AES256-GCM-SHA384
 ECDHE-RSA-AES128-GCM-SHA256
@@ -157,17 +161,22 @@ RC4-SHA                      ← RC4 está roto
 3DES-SHA                     ← vulnerable a Sweet32
 NULL-SHA                     ← ¡sin cifrado!
 </code></pre>
-<blockquote>
-<p>[!tip] Forward secrecy (PFS)
-<strong>Forward secrecy</strong> significa que si la clave privada del servidor se compromete en el futuro, los mensajes del pasado NO pueden descifrarse.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Forward secrecy (PFS)</div>
+                </div>
+                <div class="callout-content">Forward secrecy significa que si la clave privada del servidor se compromete en el futuro, los mensajes del pasado NO pueden descifrarse.</div>
+              
 <ul>
 <li>Con <strong>ECDHE</strong> (Diffie-Hellman Elliptic Curve): cada sesión genera claves temporales diferentes. PFS ✓</li>
 <li>Con <strong>RSA</strong> key exchange: la clave de sesión se cifra con la clave RSA del servidor. Si se roba esa clave, todo el tráfico pasado se descifra. PFS ✗</li>
 </ul>
 <p><strong>TLS 1.3 obliga a PFS. TLS 1.2 lo hace opcional. Siempre usa ECDHE.</strong></p>
 </blockquote>
-<h2 id="certificados-digitales"><a aria-hidden="true" tabindex="-1" href="#certificados-digitales"><span class="icon icon-link"></span></a>Certificados digitales</h2>
-<h3 id="qué-es-un-certificado"><a aria-hidden="true" tabindex="-1" href="#qué-es-un-certificado"><span class="icon icon-link"></span></a>¿Qué es un certificado?</h3>
+<h2 id="certificados-digitales">Certificados digitales<a aria-label="Link to section" class="anchor-link" href="#certificados-digitales"><span class="icon icon-link"></span></a></h2>
+<h3 id="qué-es-un-certificado">¿Qué es un certificado?<a aria-label="Link to section" class="anchor-link" href="#qué-es-un-certificado"><span class="icon icon-link"></span></a></h3>
 <p>Un certificado digital es un documento que vincula una <strong>identidad</strong> (dominio) con una <strong>clave pública</strong>, firmado por una <strong>Autoridad de Confianza (CA)</strong>.</p>
 <pre><code>┌────────────────────────────────────────────────────────────┐
 │                  CERTIFICADO TLS                            │
@@ -183,7 +192,7 @@ NULL-SHA                     ← ¡sin cifrado!
 │ Signature: [firma criptográfica de Let's Encrypt]          │
 └────────────────────────────────────────────────────────────┘
 </code></pre>
-<h3 id="chain-of-trust-cadena-de-confianza"><a aria-hidden="true" tabindex="-1" href="#chain-of-trust-cadena-de-confianza"><span class="icon icon-link"></span></a>Chain of Trust (cadena de confianza)</h3>
+<h3 id="chain-of-trust-cadena-de-confianza">Chain of Trust (cadena de confianza)<a aria-label="Link to section" class="anchor-link" href="#chain-of-trust-cadena-de-confianza"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client
   │
   │ Verifica la firma del certificado
@@ -206,7 +215,7 @@ Trust Store del navegador (raíz de confianza)
 <li>El cliente verifica que la CA raíz está en su trust store (pre-instalada)</li>
 <li>Si todo verifica → el certificado es válido</li>
 </ol>
-<h3 id="tipos-de-validación-de-certificados"><a aria-hidden="true" tabindex="-1" href="#tipos-de-validación-de-certificados"><span class="icon icon-link"></span></a>Tipos de validación de certificados</h3>
+<h3 id="tipos-de-validación-de-certificados">Tipos de validación de certificados<a aria-label="Link to section" class="anchor-link" href="#tipos-de-validación-de-certificados"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -237,11 +246,16 @@ Trust Store del navegador (raíz de confianza)
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!note] EV certificates están en desuso
-Chrome eliminó el indicador verde de EV en 2019. Los certificados EV se ven exactamente igual que los DV en la barra de direcciones (un candado). Solo las verificaciones OV/DV importan.</p>
+<blockquote class="callout-note" data-callout="note" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-text">EV certificates están en desuso</div>
+                </div>
+                <div class="callout-content">Chrome eliminó el indicador verde de EV en 2019. Los certificados EV se ven exactamente igual que los DV en la barra de direcciones (un candado). Solo las verificaciones OV/DV importan.</div>
+              
 </blockquote>
-<h3 id="qué-es-el-san-subject-alternative-name"><a aria-hidden="true" tabindex="-1" href="#qué-es-el-san-subject-alternative-name"><span class="icon icon-link"></span></a>¿Qué es el SAN (Subject Alternative Name)?</h3>
+<h3 id="qué-es-el-san-subject-alternative-name">¿Qué es el SAN (Subject Alternative Name)?<a aria-label="Link to section" class="anchor-link" href="#qué-es-el-san-subject-alternative-name"><span class="icon icon-link"></span></a></h3>
 <p>El campo SAN permite incluir <strong>múltiples dominios</strong> en un solo certificado:</p>
 <pre><code>Subject Alternative Names:
   - ejemplo.com
@@ -249,9 +263,14 @@ Chrome eliminó el indicador verde de EV en 2019. Los certificados EV se ven exa
   - api.ejemplo.com
   - *.internal.ejemplo.com    ← wildcard
 </code></pre>
-<blockquote>
-<p>[!tip] Wildcard certificates
-<code>*.ejemplo.com</code> cubre cualquier subdominio de primer nivel:</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Wildcard certificates</div>
+                </div>
+                <div class="callout-content">*.ejemplo.com cubre cualquier subdominio de primer nivel:</div>
+              
 <ul>
 <li><a href="http://www.ejemplo.com">www.ejemplo.com</a> ✓</li>
 <li>api.ejemplo.com ✓</li>
@@ -266,9 +285,9 @@ Chrome eliminó el indicador verde de EV en 2019. Los certificados EV se ven exa
 <li>ejemplo.com ✗</li>
 </ul>
 </blockquote>
-<h2 id="sni-server-name-indication"><a aria-hidden="true" tabindex="-1" href="#sni-server-name-indication"><span class="icon icon-link"></span></a>SNI (Server Name Indication)</h2>
+<h2 id="sni-server-name-indication">SNI (Server Name Indication)<a aria-label="Link to section" class="anchor-link" href="#sni-server-name-indication"><span class="icon icon-link"></span></a></h2>
 <p><strong>SNI</strong> permite que un servidor físico albergue múltiples sitios HTTPS con diferentes certificados en la misma IP.</p>
-<h3 id="la-solución-sni"><a aria-hidden="true" tabindex="-1" href="#la-solución-sni"><span class="icon icon-link"></span></a>La solución: SNI</h3>
+<h3 id="la-solución-sni">La solución: SNI<a aria-label="Link to section" class="anchor-link" href="#la-solución-sni"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cliente                          Servidor
    │                                │
    │─── ClientHello ──────────────→ │
@@ -277,15 +296,20 @@ Chrome eliminó el indicador verde de EV en 2019. Los certificados EV se ven exa
    │←── ServerHello + Certificate ──│  "Aquí va el certificado de ejemplo.com"
 </code></pre>
 <p>El cliente indica <strong>qué dominio quiere</strong> EN el propio ClientHello (antes de que empiece el handshake). El servidor entonces envía el certificado correcto.</p>
-<blockquote>
-<p>[!tip] SNI es universal hoy en día
-Todos los navegadores modernos envían SNI. Es parte del estándar desde 2003. El único problema es que SNI viaja en texto plano (no está cifrado), por lo que un observador de red puede saber qué dominio estás visitando. Esto se está corrigiendo con <strong>Encrypted SNI (ESNI/ECH)</strong> en TLS 1.3.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">SNI es universal hoy en día</div>
+                </div>
+                <div class="callout-content">Todos los navegadores modernos envían SNI. Es parte del estándar desde 2003. El único problema es que SNI viaja en texto plano (no está cifrado), por lo que un observador de red puede saber qué dominio estás visitando. Esto se está corrigiendo con Encrypted SNI (ESNI/ECH) en TLS 1.3.</div>
+              
 </blockquote>
-<h2 id="hsts-http-strict-transport-security"><a aria-hidden="true" tabindex="-1" href="#hsts-http-strict-transport-security"><span class="icon icon-link"></span></a>HSTS (HTTP Strict Transport Security)</h2>
+<h2 id="hsts-http-strict-transport-security">HSTS (HTTP Strict Transport Security)<a aria-label="Link to section" class="anchor-link" href="#hsts-http-strict-transport-security"><span class="icon icon-link"></span></a></h2>
 <p>HSTS es un header que le dice al navegador: "Solo comunícate conmigo por HTTPS, nunca por HTTP":</p>
 <pre><code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 </code></pre>
-<h3 id="qué-hace"><a aria-hidden="true" tabindex="-1" href="#qué-hace"><span class="icon icon-link"></span></a>¿Qué hace?</h3>
+<h3 id="qué-hace">¿Qué hace?<a aria-label="Link to section" class="anchor-link" href="#qué-hace"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Usuario escribe: http://ejemplo.com
    ↓
 2. Petición llega al servidor (en claro, sin cifrar)
@@ -299,7 +323,7 @@ Todos los navegadores modernos envían SNI. Es parte del estándar desde 2003. E
    el navegador UPGRADE automáticamente a https://ejemplo.com
    SIN hacer la petición HTTP
 </code></pre>
-<h3 id="parámetros"><a aria-hidden="true" tabindex="-1" href="#parámetros"><span class="icon icon-link"></span></a>Parámetros</h3>
+<h3 id="parámetros">Parámetros<a aria-label="Link to section" class="anchor-link" href="#parámetros"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -322,9 +346,14 @@ Todos los navegadores modernos envían SNI. Es parte del estándar desde 2003. E
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!caution] Preload HSTS
-Cuando activas <code>preload</code>, tu dominio se añade a una lista hardcodeada en todos los navegadores. <strong>Esto es irreversible</strong> — una vez en la lista, no puedes quitarte.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Preload HSTS</div>
+                </div>
+                <div class="callout-content">Cuando activas preload, tu dominio se añade a una lista hardcodeada en todos los navegadores. Esto es irreversible — una vez en la lista, no puedes quitarte.</div>
+              
 <p>Solo usa preload si:</p>
 <ol>
 <li>Tienes HSTS activo en TODOS los subdominios</li>
@@ -333,13 +362,13 @@ Cuando activas <code>preload</code>, tu dominio se añade a una lista hardcodead
 <li>Aceptas que no podrás revertir fácilmente</li>
 </ol>
 </blockquote>
-<h3 id="verificar-hsts"><a aria-hidden="true" tabindex="-1" href="#verificar-hsts"><span class="icon icon-link"></span></a>Verificar HSTS</h3>
+<h3 id="verificar-hsts">Verificar HSTS<a aria-label="Link to section" class="anchor-link" href="#verificar-hsts"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar si un dominio tiene HSTS activo</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -I</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://ejemplo.com</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> strict-transport-security</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar si un dominio está en la lista preload</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://hstspreload.org/api/v2/domains/ejemplo.com</span></span></code></pre></figure>
-<h2 id="certificados-autofirmados-vs-ca"><a aria-hidden="true" tabindex="-1" href="#certificados-autofirmados-vs-ca"><span class="icon icon-link"></span></a>Certificados: autofirmados vs CA</h2>
+<h2 id="certificados-autofirmados-vs-ca">Certificados: autofirmados vs CA<a aria-label="Link to section" class="anchor-link" href="#certificados-autofirmados-vs-ca"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -381,7 +410,7 @@ Cuando activas <code>preload</code>, tu dominio se añade a una lista hardcodead
 </tr>
 </tbody>
 </table>
-<h2 id="comparación-rápida-tls-vs-ssh-vs-ipsec"><a aria-hidden="true" tabindex="-1" href="#comparación-rápida-tls-vs-ssh-vs-ipsec"><span class="icon icon-link"></span></a>Comparación rápida: TLS vs SSH vs IPSec</h2>
+<h2 id="comparación-rápida-tls-vs-ssh-vs-ipsec">Comparación rápida: TLS vs SSH vs IPSec<a aria-label="Link to section" class="anchor-link" href="#comparación-rápida-tls-vs-ssh-vs-ipsec"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -424,7 +453,7 @@ Cuando activas <code>preload</code>, tu dominio se añade a una lista hardcodead
 </tr>
 </tbody>
 </table>
-<h2 id="resumen"><a aria-hidden="true" tabindex="-1" href="#resumen"><span class="icon icon-link"></span></a>Resumen</h2>
+<h2 id="resumen">Resumen<a aria-label="Link to section" class="anchor-link" href="#resumen"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li>TLS 1.3 es el estándar: 1-RTT, forward secrecy obligatoria, solo cipher suites seguras</li>
 <li>El handshake negocia versión, cipher suite, autentica el servidor con certificado</li>
@@ -433,11 +462,16 @@ Cuando activas <code>preload</code>, tu dominio se añade a una lista hardcodead
 <li>SNI permite hosting de múltiples dominios HTTPS en una IP</li>
 <li>HSTS fuerza el uso de HTTPS y previene ataques de downgrade</li>
 </ul>
-<blockquote>
-<p>[!quote] La clave
-TLS no es solo "cifrado". Es un protocolo completo que garantiza: confidencialidad (cifrado), integridad (no se puede modificar), y autenticidad (el servidor es quien dice ser). TLS 1.3 es rápido, simple y seguro.</p>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">La clave</div>
+                </div>
+                <div class="callout-content">TLS no es solo "cifrado". Es un protocolo completo que garantiza: confidencialidad (cifrado), integridad (no se puede modificar), y autenticidad (el servidor es quien dice ser). TLS 1.3 es rápido, simple y seguro.</div>
+              
 </blockquote>
-<h2 id="conexión-con-el-resto-de-la-wiki"><a aria-hidden="true" tabindex="-1" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a>Conexión con el resto de la wiki</h2>
+<h2 id="conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki<a aria-label="Link to section" class="anchor-link" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -448,23 +482,23 @@ TLS no es solo "cifrado". Es un protocolo completo que garantiza: confidencialid
 <tbody>
 <tr>
 <td>Cómo navega de URL a página</td>
-<td>[[02-como-navegar-de-url-a-pagina]] (paso 6: TLS handshake)</td>
+<td>[02-como-navegar-de-url-a-pagina](/es/01-redes-internet/02-como-navegar-de-url-a-pagina) (paso 6: TLS handshake)</td>
 </tr>
 <tr>
 <td>DNS y CAA</td>
-<td>[[03-dns-profundo]] (CAA controla quién puede emitir certificados)</td>
+<td>[03-dns-profundo](/es/01-redes-internet/03-dns-profundo) (CAA controla quién puede emitir certificados)</td>
 </tr>
 <tr>
 <td>Let's Encrypt</td>
-<td>[[08-lets-encrypt]] (cómo obtener certificados gratuitos)</td>
+<td>[08-lets-encrypt](/es/01-redes-internet/08-lets-encrypt) (cómo obtener certificados gratuitos)</td>
 </tr>
 <tr>
 <td>Nginx/Caddy como TLS terminator</td>
-<td>[[14-servidores-procesos]]</td>
+<td>[14-servidores-procesos](/es/01-redes-internet/14-servidores-procesos)</td>
 </tr>
 <tr>
 <td>Cloudflare SSL modes</td>
-<td>[[04-cloudflare-intro]]</td>
+<td>[04-cloudflare-intro](/es/01-redes-internet/04-cloudflare-intro)</td>
 </tr>
 </tbody>
-</table></div> </div>  </div> </main>  </body></html>
+</table></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#qué-es-tls">¿Qué es TLS?</a> </li><li class="toc-depth-3"> <a href="#la-evolución">La evolución</a> </li><li class="toc-depth-2"> <a href="#tls-por-dentro-el-handshake">TLS por dentro: el Handshake</a> </li><li class="toc-depth-3"> <a href="#tls-13-handshake">TLS 1.3 Handshake</a> </li><li class="toc-depth-3"> <a href="#tls-12-handshake">TLS 1.2 Handshake</a> </li><li class="toc-depth-2"> <a href="#cipher-suites">Cipher suites</a> </li><li class="toc-depth-3"> <a href="#tls-13-cipher-suites">TLS 1.3 Cipher Suites</a> </li><li class="toc-depth-3"> <a href="#tls-12-cipher-suites">TLS 1.2 Cipher Suites</a> </li><li class="toc-depth-2"> <a href="#certificados-digitales">Certificados digitales</a> </li><li class="toc-depth-3"> <a href="#qué-es-un-certificado">¿Qué es un certificado?</a> </li><li class="toc-depth-3"> <a href="#chain-of-trust">Chain of Trust</a> </li><li class="toc-depth-3"> <a href="#tipos-de-validación-de-certificados">Tipos de validación de certificados</a> </li><li class="toc-depth-3"> <a href="#qué-es-el-san-">¿Qué es el SAN ?</a> </li><li class="toc-depth-2"> <a href="#sni">SNI</a> </li><li class="toc-depth-3"> <a href="#la-solución-sni">La solución: SNI</a> </li><li class="toc-depth-2"> <a href="#hsts">HSTS</a> </li><li class="toc-depth-3"> <a href="#qué-hace">¿Qué hace?</a> </li><li class="toc-depth-3"> <a href="#parámetros">Parámetros</a> </li><li class="toc-depth-3"> <a href="#verificar-hsts">Verificar HSTS</a> </li><li class="toc-depth-2"> <a href="#certificados-autofirmados-vs-ca">Certificados: autofirmados vs CA</a> </li><li class="toc-depth-2"> <a href="#comparación-rápida-tls-vs-ssh-vs-ipsec">Comparación rápida: TLS vs SSH vs IPSec</a> </li><li class="toc-depth-2"> <a href="#resumen">Resumen</a> </li><li class="toc-depth-2"> <a href="#conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

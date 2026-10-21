@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/01-consensus-paxos-raft/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article active"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Consensus in distributed systems: Paxos, Raft, and the agreement problem</h1> <div class="article-body"><h1 id="consensus-in-distributed-systems-paxos-raft-and-the-agreement-problem">Consensus in distributed systems: Paxos, Raft, and the agreement problem<a aria-label="Link to section" class="anchor-link" href="#consensus-in-distributed-systems-paxos-raft-and-the-agreement-problem"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Consensus in one sentence</div>
+                </div>
+                <div class="callout-content">Distributed consensus is the problem of making multiple nodes, which can fail at any time, agree on a single consistent value — without a central server commanding all of them.</div>
+              
+</blockquote>
+<h2 id="why-is-it-so-hard-to-agree">Why is it so hard to agree?<a aria-label="Link to section" class="anchor-link" href="#why-is-it-so-hard-to-agree"><span class="icon icon-link"></span></a></h2>
+<p>Imagine you have a team of five people working on a shared document. Each can make changes, but if two people edit the same line at the same time, who wins? On a single computer, this is solved with a lock: one person gets the lock, modifies, and releases it. But in a distributed system, there is no central lock — every node is equal, there is no one who commands the others.</p>
+<p>The <strong>consensus problem</strong> is the fundamental problem of distributed systems: how do we make a group of nodes, which can fail at any time (crash, network partition, clock skew), agree on a value?</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">The golden rule of distributed systems</div>
+                </div>
+                <div class="callout-content">In a distributed system, assume the following:</div>
+              
+<ul>
+<li>Messages can arrive late, be duplicated, or be lost</li>
+<li>Nodes can die at any time and recover</li>
+<li>Node clocks are not perfectly synchronized</li>
+<li>Network partitions are the norm, not the exception</li>
+</ul>
+<p>If your system does not work correctly under these assumptions, it does not work.</p>
+</blockquote>
+<h3 id="the-cap-theorem">The CAP theorem<a aria-label="Link to section" class="anchor-link" href="#the-cap-theorem"><span class="icon icon-link"></span></a></h3>
+<p>The CAP theorem (Berkeley, 2000) states that in the presence of a network partition (P), a distributed read/write system can only guarantee two of three properties:</p>
+<ul>
+<li><strong>Consistency (C)</strong>: All reads return the most recent write, or an error. All nodes see the same data at the same time.</li>
+<li><strong>Availability (A)</strong>: Every request receives a response (not necessarily the most recent), regardless of whether any node has failed.</li>
+<li><strong>Partition Tolerance (P)</strong>: The system continues to operate despite network partitions (loss of messages between nodes).</li>
+</ul>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">CAP is not a binary choice</div>
+                </div>
+                <div class="callout-content">CAP does not say "choose C or A." It says that in the presence of a partition (P is mandatory in distributed systems), you must choose between C and A. In practice, almost all systems choose P (because network partitions happen) and then choose between C or A depending on the use case.</div>
+              
+</blockquote>
+<ul>
+<li><strong>CP systems</strong> (consistency + partition tolerance): When there is a partition, some nodes may become unavailable to maintain consistency. Examples: HBase, MongoDB (strong consistency mode), etcd, Consul.</li>
+<li><strong>AP systems</strong> (availability + partition tolerance): When there is a partition, all nodes continue to respond but may return inconsistent data. Examples: Cassandra, DynamoDB, CouchDB.</li>
+</ul>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Reality is more nuanced</div>
+                </div>
+                <div class="callout-content">CAP is a useful simplification but not absolute. Real systems like Dynamo (Amazon) use eventual consistency with client-side resolution (conflict-free replicated data types — CRDTs). Systems like Cassandra allow adjusting consistency per operation (quorum, ONE, ALL). Strong consistency is not an on/off switch — it is a spectrum.</div>
+              
+</blockquote>
+<hr>
+<h2 id="1-the-failure-model">1. The failure model<a aria-label="Link to section" class="anchor-link" href="#1-the-failure-model"><span class="icon icon-link"></span></a></h2>
+<p>Before understanding Paxos and Raft, you need to understand what types of failures we are designing to tolerate.</p>
+<h3 id="11-crash-stop-model">1.1 Crash-stop model<a aria-label="Link to section" class="anchor-link" href="#11-crash-stop-model"><span class="icon icon-link"></span></a></h3>
+<p>The simplest failure: a node "crashed" and does not respond. It never comes back. This is the easiest model to handle.</p>
+<h3 id="12-crash-recovery-model">1.2 Crash-recovery model<a aria-label="Link to section" class="anchor-link" href="#12-crash-recovery-model"><span class="icon icon-link"></span></a></h3>
+<p>A node crashes but can recover (restart, reconnect). The problem here is that it may lose state not persisted to disk. If a node was the leader and restarts, does it know it was the leader? Does it know what decisions it made?</p>
+<h3 id="13-byzantine-failure-model">1.3 Byzantine failure model<a aria-label="Link to section" class="anchor-link" href="#13-byzantine-failure-model"><span class="icon icon-link"></span></a></h3>
+<p>The worst case: a node can behave arbitrarily and maliciously. It can send contradictory messages to different nodes, forge signatures, or do things that no "normal" consensus protocol can handle. The PBFT (Practical Byzantine Fault Tolerance) protocol can tolerate up to f Byzantine nodes in a system of 3f+1 nodes.</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Most systems do NOT tolerate Byzantine failures</div>
+                </div>
+                <div class="callout-content">Paxos, Raft, and most consensus protocols assume crash-stop or crash-recovery failures. They assume nodes follow the protocol correctly but can crash. If you need Byzantine fault tolerance (blockchain, high-security financial systems), you need PBFT or variants.</div>
+              
+</blockquote>
+<h3 id="14-lost-duplicated-and-out-of-order-messages">1.4 Lost, duplicated, and out-of-order messages<a aria-label="Link to section" class="anchor-link" href="#14-lost-duplicated-and-out-of-order-messages"><span class="icon icon-link"></span></a></h3>
+<p>In distributed networks:</p>
+<ul>
+<li>A message can be lost (network drop)</li>
+<li>A message can arrive duplicated (retransmission)</li>
+<li>Messages can arrive out of order (different network paths)</li>
+<li>Messages can arrive late (network latency)</li>
+</ul>
+<p>Consensus protocols must handle all these cases.</p>
+<hr>
+<h2 id="2-paxos-consensus-under-adverse-conditions">2. Paxos: Consensus under adverse conditions<a aria-label="Link to section" class="anchor-link" href="#2-paxos-consensus-under-adverse-conditions"><span class="icon icon-link"></span></a></h2>
+<p>Paxos was proposed by Leslie Lamport in 1989 (published in 1998). It is the first practical consensus algorithm and the most studied. Lamport called it "Paxos" because he presented it as a case study based on the government system of the ancient island of Paxos.</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Paxos is famous for being hard to understand</div>
+                </div>
+                <div class="callout-content">Lamport himself wrote "The Part-Time Parliament" (2001) to explain Paxos more clearly. Jeffrey Mogul wrote "Paxos Made Simple" (2002) to demonstrate that it was simple (and that Lamport had not explained it well). Scott Chacon and others have written multiple explanations. If Paxos confuses you, you are not alone — even experts disagree on which is the best explanation.</div>
+              
+</blockquote>
+<h3 id="21-roles-in-paxos">2.1 Roles in Paxos<a aria-label="Link to section" class="anchor-link" href="#21-roles-in-paxos"><span class="icon icon-link"></span></a></h3>
+<p>Paxos has three roles, which can be exercised by one or more nodes:</p>
+<ul>
+<li><strong>Proposers</strong>: Propose values to be accepted. A proposer is like a "candidate" presenting a proposal.</li>
+<li><strong>Acceptors</strong>: Vote on proposals. A proposal is "accepted" when the majority of acceptors vote for it. Acceptors are the "voters."</li>
+<li><strong>Learners</strong>: Learn which value was accepted. They do not participate in the decision, only find out the result.</li>
+</ul>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Parliament analogy</div>
+                </div>
+                <div class="callout-content">Imagine a parliament where:</div>
+              
+<ul>
+<li>Proposers are politicians proposing laws</li>
+<li>Acceptors are parliamentarians voting</li>
+<li>Learners are citizens wanting to know which laws were passed</li>
+</ul>
+<p>For a law to pass, it needs a majority of votes. A politician can propose multiple laws (multiple proposers). Parliamentarians can vote in multiple sessions. Citizens only need to know the final result.</p>
+</blockquote>
+<h3 id="22-paxos-phases-basic-paxos">2.2 Paxos Phases (Basic Paxos)<a aria-label="Link to section" class="anchor-link" href="#22-paxos-phases-basic-paxos"><span class="icon icon-link"></span></a></h3>
+<p>Each proposal in Paxos has a unique number (proposal number) that determines the order. Proposal numbers are global and unique — typically the proposer ID is concatenated with a monotonic counter.</p>
+<p><strong>Phase 1: Prepare (Preparation)</strong></p>
+<p>The proposer chooses a unique proposal number n greater than any number it has used before. It sends a PREPARE request to all acceptors:</p>
+<pre><code>Proposer → Acceptors: PREPARE(n)
+</code></pre>
+<p>Each acceptor responds:</p>
+<ul>
+<li>If it already voted for a number n' &#x3C; n, it responds with VOTED(n', v') where v' is the value it voted for (or null if it did not vote for anything).</li>
+<li>If it already voted for a number n' > n, it rejects the proposal (the proposer must try with a higher number).</li>
+<li>If it never voted, or voted for n' &#x3C; n, it promises not to vote for any number less than n and responds with the highest value it has voted for (if any).</li>
+</ul>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why Phase 1?</div>
+                </div>
+                <div class="callout-content">Phase 1 serves two purposes:</div>
+              
+<ol>
+<li><strong>Avoid collisions</strong>: If two proposers propose at the same time, the one with the higher proposal number wins. The other sees that someone already won and withdraws.</li>
+<li><strong>Learn the highest value</strong>: If an acceptor already voted for a value, the proposer must respect that value (it cannot impose a new one). This guarantees Paxos's safety property.</li>
+</ol>
+</blockquote>
+<p><strong>Phase 2: Accept (Acceptance)</strong></p>
+<p>If the proposer receives responses from the majority of acceptors in Phase 1:</p>
+<ul>
+<li>It takes the value v with the highest proposal number from the responses (if all responses are null, the proposer chooses the value it wants to propose).</li>
+<li>It sends an ACCEPT request to all acceptors:</li>
+</ul>
+<pre><code>Proposer → Acceptors: ACCEPT(n, v)
+</code></pre>
+<p>Each acceptor responds accepting if it has not already promised to vote for a higher number:</p>
+<pre><code>Acceptor → Proposer: ACCEPTED(n)
+</code></pre>
+<p>If the majority accepts, value v is "accepted" and the proposer communicates it to the learners.</p>
+<h3 id="23-safety-properties-of-paxos">2.3 Safety Properties of Paxos<a aria-label="Link to section" class="anchor-link" href="#23-safety-properties-of-paxos"><span class="icon icon-link"></span></a></h3>
+<p>Paxos guarantees two fundamental properties:</p>
+<p>1.<strong>Safety (Safety)</strong>: If a value v is accepted, then no different value can be accepted. That is, once something is decided, nothing else can be decided.</p>
+<ol start="2">
+<li><strong>Liveness (Liveness)</strong>: If a value is proposed and the majority of acceptors are active, eventually that value will be accepted.</li>
+</ol>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Paxos guarantees safety, not always liveness</div>
+                </div>
+                <div class="callout-content">Paxos guarantees that nothing incorrect is ever decided (safety). But if there are constant collisions between proposers (two proposers proposing at the same time with overlapping proposal numbers), there can be livelock — no value is ever decided. In practice, this is resolved by choosing a "leader" proposer that is the only one proposing.</div>
+              
+</blockquote>
+<h3 id="24-multi-paxos-paxos-in-practice">2.4 Multi-Paxos: Paxos in practice<a aria-label="Link to section" class="anchor-link" href="#24-multi-paxos-paxos-in-practice"><span class="icon icon-link"></span></a></h3>
+<p>Basic Paxos is slow because it requires two rounds of communication per value. In practice, <strong>Multi-Paxos</strong> is used: a proposer becomes a leader (through a process similar to Raft's leader election) and proposes values sequentially without needing Phase 1 for each one.</p>
+<pre><code>Leader → Followers: APPEND_ENTRIES(entries)
+Followers → Leader: ACK
+</code></pre>
+<p>This is exactly what etcd and Consul do: a leader propagates entries to a replicated log, and followers confirm. Phase 1 (prepare) is only needed when there is a new leader or when a collision is detected.</p>
+<hr>
+<h2 id="3-raft-understandable-consensus">3. Raft: Understandable consensus<a aria-label="Link to section" class="anchor-link" href="#3-raft-understandable-consensus"><span class="icon icon-link"></span></a></h2>
+<p>Raft was designed in 2013 by Diego Ongaro and John Ousterhout specifically to be understandable. Their paper says: "Paxos is complicated, and we want to make consensus understandable."</p>
+<p>Raft is equivalent to Paxos in terms of safety and availability properties, but it is designed as three independent subproblems:</p>
+<ol>
+<li><strong>Leader election</strong>: Choosing a leader</li>
+<li><strong>Log replication</strong>: Replicating the leader's log to followers</li>
+<li><strong>Safety</strong>: Ensuring logs are consistent</li>
+</ol>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Why is Raft more understandable than Paxos?</div>
+                </div>
+                <div class="callout-content">In Paxos, roles (proposer, acceptor, learner) do not correspond to physical processes — a node can exercise multiple roles and roles are mixed. In Raft, roles correspond to physical states of the node (follower, candidate, leader), and each role has a clear, separate behavior.</div>
+              
+</blockquote>
+<h3 id="31-node-states-in-raft">3.1 Node States in Raft<a aria-label="Link to section" class="anchor-link" href="#31-node-states-in-raft"><span class="icon icon-link"></span></a></h3>
+<p>Each node in a Raft cluster is always in one of these three states:</p>
+<p><strong>Follower</strong>: The default state. Followers only respond to leader and candidate requests. They do not initiate anything on their own. If a follower does not receive messages from a leader for a timeout, it becomes a candidate.</p>
+<p><strong>Candidate</strong>: A node that wants to become a leader. It becomes a candidate when:</p>
+<ul>
+<li>It is a follower and does not receive a leader heartbeat (election timeout)</li>
+<li>Or when a new election is started (e.g., after detecting the leader crashed)</li>
+</ul>
+<p>The candidate votes for itself and requests votes from other nodes. If it gets a majority, it becomes a leader.</p>
+<p><strong>Leader</strong>: The only node that accepts client entries, replicates them to all followers' logs, and applies them to state. The leader sends periodic heartbeats to maintain its authority.</p>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">State transitions</div>
+                </div>
+                
+              
+<pre><code>Follower ──(timeout)──> Candidate ──(wins election)──> Leader
+   ^                                                    │
+   │                                                    │
+   └──────────────(new leader detected)─────────────────┘
+</code></pre>
+<p>A leader that loses connection with the majority becomes a follower (detects a more recent leader). A candidate that loses the election becomes a follower.</p>
+</blockquote>
+<h3 id="32-election-leader-election">3.2 Election (Leader Election)<a aria-label="Link to section" class="anchor-link" href="#32-election-leader-election"><span class="icon icon-link"></span></a></h3>
+<p>Each node has an <strong>election timeout</strong> between 150ms and 300ms (in the reference implementation). When a follower does not receive a heartbeat during its timeout, it becomes a candidate:</p>
+<ol>
+<li>Increments its term by 1</li>
+<li>Changes to candidate state</li>
+<li>Votes for itself</li>
+<li>Sends RequestVote RPC to all other nodes</li>
+</ol>
+<pre><code>RequestVote RPC:
+- term: the candidate's term
+- candidateId: the candidate's ID
+- lastLogIndex: the index of its last log entry
+- lastLogTerm: the term of its last log entry
+</code></pre>
+<p>A voter (follower or candidate) grants its vote if:</p>
+<ol>
+<li>The candidate's term is >= its own term</li>
+<li>It has not already voted in this term</li>
+<li>The candidate's log is at least as up-to-date as its own (lastLogTerm >= its lastLogTerm, and if terms are equal, lastLogIndex >= its lastLogIndex)</li>
+</ol>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why the log condition?</div>
+                </div>
+                <div class="callout-content">The log condition ensures that a node with a more complete log has a higher chance of becoming leader. This reduces the probability that a leader with an incomplete log overwrites valid entries on other nodes.</div>
+              
+</blockquote>
+<p>If the candidate receives votes from the majority, it becomes a leader. If it receives votes from a higher term, it becomes a follower. If there is a split vote (no candidate gets a majority), a new election is started with a new random timeout.</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Split votes</div>
+                </div>
+                <div class="callout-content">If there are 5 nodes and 3 candidates, each could get 1 vote and none would have a majority (needs 3). This causes a new election. Random timeouts reduce the probability of splits, but do not eliminate them. In large clusters, splits are rare.</div>
+              
+</blockquote>
+<h3 id="33-log-replication">3.3 Log Replication<a aria-label="Link to section" class="anchor-link" href="#33-log-replication"><span class="icon icon-link"></span></a></h3>
+<p>Once there is a leader, the replication flow is:</p>
+<ol>
+<li>
+<p><strong>The client sends an entry to the leader</strong>: The client sends an operation (e.g., SET key=value) to the leader.</p>
+</li>
+<li>
+<p><strong>The leader appends the entry to its log</strong>: The leader appends the entry to the end of its log with the next available index. The entry includes the term in which it was proposed.</p>
+</li>
+<li>
+<p><strong>The leader sends AppendEntries RPC to all followers</strong>:</p>
+</li>
+</ol>
+<pre><code>AppendEntries RPC:
+- term: the leader's term
+- leaderId: the leader's ID
+- prevLogIndex: the index of the entry before the new pair
+- prevLogTerm: the term of the previous entry
+- entries[]: the new entries to replicate (empty for heartbeats)
+- leaderCommit: the index the leader has confirmed as committed
+</code></pre>
+<ol start="4">
+<li>
+<p><strong>Followers respond</strong>: If the follower finds the prevLogIndex entry with the correct term, it accepts the new entries, appends them to its log, and responds with success. If it does not find the prevLogIndex entry or the term does not match, it responds with failure.</p>
+</li>
+<li>
+<p><strong>The leader waits for the majority</strong>: When the majority of followers have successfully replicated the entry, the leader marks it as "committed" and applies it to state.</p>
+</li>
+<li>
+<p><strong>The leader communicates the result to the client</strong>: The leader responds to the client with the operation result.</p>
+</li>
+</ol>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why prevLogIndex and prevLogTerm?</div>
+                </div>
+                <div class="callout-content">This is the log "linking" mechanism. Each entry points to the previous one, creating an immutable chain. If a follower has a different log (e.g., because a previous leader wrote entries that were later overwritten), the leader verifies that the follower has the previous entry with the correct term. If not, the follower deletes conflicting entries and receives the leader's entries.</div>
+              
+</blockquote>
+<h3 id="34-consistency-check-in-elections">3.4 Consistency Check in Elections<a aria-label="Link to section" class="anchor-link" href="#34-consistency-check-in-elections"><span class="icon icon-link"></span></a></h3>
+<p>A critical property of Raft is the <strong>Leader Completeness Property</strong>:</p>
+<blockquote>
+<p>If a value in term t is committed, then all entries in previous terms are also in that leader's log.</p>
+</blockquote>
+<p>This is guaranteed because:</p>
+<ul>
+<li>To be elected, a candidate must have a log at least as complete as at least half of the nodes</li>
+<li>If an entry is committed in a previous term, at least one node has it (because a majority is needed for commit)</li>
+<li>Therefore, any candidate will have that entry in its log</li>
+</ul>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">What if this is not guaranteed?</div>
+                </div>
+                <div class="callout-content">Imagine leader L1 proposes value V1 in term 1. L1 replicates V1 to 2 of 5 nodes and then crashes. V1 is NOT committed (did not reach majority). A new leader L2 is elected in term 2. If L2 does not know about V1, it could propose V2. Then L1 revives, wins an election in term 3, and overwrites V2 with V1. The system decided V1 and then V2 — violating safety.</div>
+              
+<p>Raft prevents this: L2 could not have been elected if it did not have at least one node with V1, because that node would have voted against L2 (its log would be more complete).</p>
+</blockquote>
+<h3 id="35-log-compaction-snapshotting">3.5 Log Compaction: Snapshotting<a aria-label="Link to section" class="anchor-link" href="#35-log-compaction-snapshotting"><span class="icon icon-link"></span></a></h3>
+<p>The log grows indefinitely. To prevent it from consuming all disk space, Raft uses <strong>snapshots</strong>:</p>
+<ol>
+<li>The leader (or any node) periodically creates a snapshot of the current state (e.g., the full database state).</li>
+<li>It sends the snapshot to followers along with the index of the last entry included in the snapshot.</li>
+<li>Followers replace their log with the snapshot and discard all previous entries.</li>
+</ol>
+<pre><code>InstallSnapshot RPC:
+- term: the leader's term
+- leaderId: the leader's ID
+- lastIncludedIndex: index of the last entry in the snapshot
+- lastIncludedTerm: term of the last entry in the snapshot
+- data: the snapshot data (serialized)
+- offset: offset in the data stream (for large snapshots)
+- done: true if this is the last chunk
+</code></pre>
+<hr>
+<h2 id="4-comparison-paxos-vs-raft">4. Comparison: Paxos vs Raft<a aria-label="Link to section" class="anchor-link" href="#4-comparison-paxos-vs-raft"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Paxos</th>
+<th>Raft</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Understandability</strong></td>
+<td>Hard (multiple interpretations)</td>
+<td>Designed to be understandable</td>
+</tr>
+<tr>
+<td><strong>Roles</strong></td>
+<td>Proposer, Acceptor, Learner (logical)</td>
+<td>Leader, Follower, Candidate (physical)</td>
+</tr>
+<tr>
+<td><strong>Election</strong></td>
+<td>Implicit (proposers compete)</td>
+<td>Explicit (RequestVote RPC)</td>
+</tr>
+<tr>
+<td><strong>Log replication</strong></td>
+<td>Multi-Paxos (leader optimizes)</td>
+<td>AppendEntries (leader propagates)</td>
+</tr>
+<tr>
+<td><strong>Implementations</strong></td>
+<td>ZooKeeper (ZAB), Spanner</td>
+<td>etcd, Consul, TiKV, MongoDB</td>
+</tr>
+<tr>
+<td><strong>Fault tolerance</strong></td>
+<td>Crash-stop, crash-recovery</td>
+<td>Crash-recovery</td>
+</tr>
+<tr>
+<td><strong>Terminology</strong></td>
+<td>Proposals, votes, acceptance</td>
+<td>Logs, terms, heartbeats, snapshots</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Don't choose between Paxos and Raft</div>
+                </div>
+                <div class="callout-content">They are equivalent in theory. The choice depends on the implementation:</div>
+              
+<ul>
+<li><strong>etcd</strong> uses Raft (elegant, well-understood, easy to debug)</li>
+<li><strong>ZooKeeper</strong> uses ZAB (a Paxos variant, simpler than full Paxos)</li>
+<li><strong>Spanner</strong> uses Paxos (Two-Phase Paxos with TrueTime)</li>
+<li><strong>Consul</strong> uses Raft</li>
+<li><strong>TiKV</strong> uses Raft</li>
+</ul>
+<p>If you are designing a new system, Raft is generally the best choice due to its clarity.</p>
+</blockquote>
+<hr>
+<h2 id="5-practical-applications-of-raft">5. Practical applications of Raft<a aria-label="Link to section" class="anchor-link" href="#5-practical-applications-of-raft"><span class="icon icon-link"></span></a></h2>
+<h3 id="51-etcd">5.1 etcd<a aria-label="Link to section" class="anchor-link" href="#51-etcd"><span class="icon icon-link"></span></a></h3>
+<p>etcd is a distributed key-value store that uses Raft to replicate its state. It is the state database for Kubernetes:</p>
+<ul>
+<li>All Kubernetes objects (pods, services, deployments) are stored in etcd</li>
+<li>When a pod is created, the API server writes to etcd</li>
+<li>etcd replicates the write to the majority of nodes</li>
+<li>Only when the majority confirms, the API server responds "OK" to the client</li>
+<li>Kubernetes controllers read from etcd and react to changes</li>
+</ul>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why etcd in Kubernetes?</div>
+                </div>
+                <div class="callout-content">etcd provides a consistent and durable state for the entire cluster. If the API server crashes, it can restart and read the state from etcd. If a node crashes, pods are recreated on other nodes based on the state in etcd. etcd is the single source of truth.</div>
+              
+</blockquote>
+<h3 id="52-consul">5.2 Consul<a aria-label="Link to section" class="anchor-link" href="#52-consul"><span class="icon icon-link"></span></a></h3>
+<p>Consul uses Raft for:</p>
+<ul>
+<li>Service discovery: register and discover services</li>
+<li>Health checking: verify if services are healthy</li>
+<li>Key-value store: distributed configuration</li>
+<li>Multi-datacenter: replication between datacenters</li>
+</ul>
+<h3 id="53-mongodb">5.3 MongoDB<a aria-label="Link to section" class="anchor-link" href="#53-mongodb"><span class="icon icon-link"></span></a></h3>
+<p>MongoDB replica sets use a Raft-like protocol:</p>
+<ul>
+<li>A primary node accepts writes</li>
+<li>Secondary nodes replicate the oplog (operation log)</li>
+<li>If the primary crashes, secondaries elect a new one</li>
+<li>Consistency can be adjusted (strong, eventual, causal)</li>
+</ul>
+<h3 id="54-tikv">5.4 TiKV<a aria-label="Link to section" class="anchor-link" href="#54-tikv"><span class="icon icon-link"></span></a></h3>
+<p>TiKV is a MySQL-compatible distributed database that uses Raft on each region (shard). Each region has its own Raft leader that replicates data to peers.</p>
+<hr>
+<h2 id="6-the-flp-problem-impossibility-of-consensus-in-asynchronous-systems">6. The FLP problem: Impossibility of consensus in asynchronous systems<a aria-label="Link to section" class="anchor-link" href="#6-the-flp-problem-impossibility-of-consensus-in-asynchronous-systems"><span class="icon icon-link"></span></a></h2>
+<p>Before finishing, it is essential to understand why consensus is so difficult in theory.</p>
+<p>The FLP theorem (Fischer, Lynch, Patterson, 1985) proves that it is <strong>impossible</strong> to design a deterministic consensus algorithm that guarantees both safety and liveness in an asynchronous system with even a single crash failure.</p>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">What does this mean?</div>
+                </div>
+                <div class="callout-content">In an asynchronous system (where there are no bounds on message delivery time), there is no deterministic algorithm that can:</div>
+              
+<ol>
+<li>Always reach a consensus (liveness)</li>
+<li>Never decide an incorrect value (safety)</li>
+<li>Tolerate at least one crash failure</li>
+</ol>
+<p>This means ALL practical consensus algorithms must break one of these assumptions:</p>
+<ul>
+<li><strong>Raft and Paxos</strong>: Assume timeouts (they are not purely asynchronous — they assume if you don't receive a response in X time, the node crashed)</li>
+<li><strong>PBFT</strong>: Assumes clock synchronization</li>
+<li><strong>Randomized consensus</strong>: Uses randomness to avoid livelock</li>
+</ul>
+</blockquote>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Raft breaks asynchrony with timeouts</div>
+                </div>
+                <div class="callout-content">Raft assumes that if a follower does not receive a heartbeat within a random timeout, the leader has crashed. This assumption (that messages take at most T milliseconds) breaks pure asynchrony and allows Raft to achieve liveness.</div>
+              
+</blockquote>
+<hr>
+<h2 id="key-concepts">Key concepts<a aria-label="Link to section" class="anchor-link" href="#key-concepts"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Distributed consensus is difficult</strong> because nodes can fail, messages can be lost, and clocks are not synchronized. CAP reminds us that in the presence of partitions, we must choose between consistency and availability.</p>
+</li>
+<li>
+<p><strong>Paxos is the first practical consensus algorithm</strong> but is notoriously difficult to understand and implement correctly. Multi-Paxos optimizes the common case (a stable leader) for performance.</p>
+</li>
+<li>
+<p><strong>Raft is equivalent to Paxos but designed to be understandable</strong>. It separates consensus into three subproblems: election, log replication, and safety. It is the foundation of etcd, Consul, TiKV, and MongoDB.</p>
+</li>
+<li>
+<p><strong>Leader election is critical</strong>: Without a leader, multiple nodes could propose conflicting values. Raft uses random timeouts and log completeness verification to choose the most suitable leader.</p>
+</li>
+<li>
+<p><strong>FLP proves that consensus is inherently difficult</strong>: There is no perfect algorithm. All practical algorithms make assumptions (timeouts, synchronization, randomness) to avoid the theoretical impossibility.</p>
+</li>
+</ol>
+<h2 id="related-to">Related to<a aria-label="Link to section" class="anchor-link" href="#related-to"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[02-message-queues](/en/03-distributed-systems/02-message-queues) — Message queues use internal consensus to replicate messages between brokers</li>
+<li>[03-distributed-caching](/en/03-distributed-systems/03-distributed-caching) — Redis Cluster uses a Gossip-like consensus protocol for consistency</li>
+<li>[04-event-driven-cqrs-saga](/en/03-distributed-systems/04-event-driven-cqrs-saga) — Distributed events need consensus to ensure all services see the same events</li>
+<li>[05-idempotency-retry-circuit-breakers](/en/03-distributed-systems/05-idempotency-retry-circuit-breakers) — Idempotency is complementary to consensus: if consensus fails, idempotency prevents side effects</li>
+</ul>
+<h2 id="references">References<a aria-label="Link to section" class="anchor-link" href="#references"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://lamport.azurewebsites.net/pubs/paxos-simple.pdf">Paxos Made Simple — Lamport (2001)</a></li>
+<li><a href="https://raft.github.io/raft.pdf">In Search of an Understandable Consensus Algorithm — Raft (Ongaro &#x26; Ousterhout, 2014)</a></li>
+<li><a href="https://lamport.azurewebsites.net/pubs/lamport-paxos.pdf">The Part-Time Parliament — Lamport (2001)</a></li>
+<li><a href="https://www.microsoft.com/en-us/research/publication/impossibility-of-distributed-consensus-with-one-faulty-process/">FLP Impossibility — Fischer, Lynch, Patterson (1985)</a></li>
+<li><a href="https://etcd.io/docs/v3.5/learning/consensus/">etcd Documentation — Raft Consensus</a></li>
+<li><a href="https://raft.github.io/">The Raft Distributed System — raft.github.io</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#why-is-it-so-hard-to-agree">Why is it so hard to agree?</a> </li><li class="toc-depth-3"> <a href="#the-cap-theorem">The CAP theorem</a> </li><li class="toc-depth-2"> <a href="#1-the-failure-model">1. The failure model</a> </li><li class="toc-depth-3"> <a href="#11-crash-stop-model">1.1 Crash-stop model</a> </li><li class="toc-depth-3"> <a href="#12-crash-recovery-model">1.2 Crash-recovery model</a> </li><li class="toc-depth-3"> <a href="#13-byzantine-failure-model">1.3 Byzantine failure model</a> </li><li class="toc-depth-3"> <a href="#14-lost-duplicated-and-out-of-order-messages">1.4 Lost, duplicated, and out-of-order messages</a> </li><li class="toc-depth-2"> <a href="#2-paxos-consensus-under-adverse-conditions">2. Paxos: Consensus under adverse conditions</a> </li><li class="toc-depth-3"> <a href="#21-roles-in-paxos">2.1 Roles in Paxos</a> </li><li class="toc-depth-3"> <a href="#22-paxos-phases">2.2 Paxos Phases</a> </li><li class="toc-depth-3"> <a href="#23-safety-properties-of-paxos">2.3 Safety Properties of Paxos</a> </li><li class="toc-depth-3"> <a href="#24-multi-paxos-paxos-in-practice">2.4 Multi-Paxos: Paxos in practice</a> </li><li class="toc-depth-2"> <a href="#3-raft-understandable-consensus">3. Raft: Understandable consensus</a> </li><li class="toc-depth-3"> <a href="#31-node-states-in-raft">3.1 Node States in Raft</a> </li><li class="toc-depth-3"> <a href="#32-election">3.2 Election</a> </li><li class="toc-depth-3"> <a href="#33-log-replication">3.3 Log Replication</a> </li><li class="toc-depth-3"> <a href="#34-consistency-check-in-elections">3.4 Consistency Check in Elections</a> </li><li class="toc-depth-3"> <a href="#35-log-compaction-snapshotting">3.5 Log Compaction: Snapshotting</a> </li><li class="toc-depth-2"> <a href="#4-comparison-paxos-vs-raft">4. Comparison: Paxos vs Raft</a> </li><li class="toc-depth-2"> <a href="#5-practical-applications-of-raft">5. Practical applications of Raft</a> </li><li class="toc-depth-3"> <a href="#51-etcd">5.1 etcd</a> </li><li class="toc-depth-3"> <a href="#52-consul">5.2 Consul</a> </li><li class="toc-depth-3"> <a href="#53-mongodb">5.3 MongoDB</a> </li><li class="toc-depth-3"> <a href="#54-tikv">5.4 TiKV</a> </li><li class="toc-depth-2"> <a href="#6-the-flp-problem-impossibility-of-consensus-in-asynchronous-systems">6. The FLP problem: Impossibility of consensus in asynchronous systems</a> </li><li class="toc-depth-2"> <a href="#key-concepts">Key concepts</a> </li><li class="toc-depth-2"> <a href="#related-to">Related to</a> </li><li class="toc-depth-2"> <a href="#references">References</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

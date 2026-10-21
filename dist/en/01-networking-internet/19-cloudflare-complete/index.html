@@ -1,35 +1,28 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream</h1> <div class="article-body"><h1 id="cloudflare-complete-cdn-dns-waf-ddos-ssltls-workers"><a aria-hidden="true" tabindex="-1" href="#cloudflare-complete-cdn-dns-waf-ddos-ssltls-workers"><span class="icon icon-link"></span></a>Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers</h1>
-<blockquote>
-<p>[!tip] Cloudflare in one sentence
-Cloudflare is <strong>much more than a CDN</strong>: it is a complete security and performance platform that operates at the edge of the Internet with more than 300 data centers in 120+ cities. This article covers EVERYTHING.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/19-cloudflare-complete" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/19-cloudflare-complete/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article active"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream</h1> <div class="article-body"><h1 id="cloudflare-complete-cdn-dns-waf-ddos-ssltls-workers">Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers<a aria-label="Link to section" class="anchor-link" href="#cloudflare-complete-cdn-dns-waf-ddos-ssltls-workers"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Cloudflare in one sentence</div>
+                </div>
+                <div class="callout-content">Cloudflare is much more than a CDN: it is a complete security and performance platform that operates at the edge of the Internet with more than 300 data centers in 120+ cities. This article covers EVERYTHING.</div>
+              
 </blockquote>
-<h2 id="what-is-cloudflare"><a aria-hidden="true" tabindex="-1" href="#what-is-cloudflare"><span class="icon icon-link"></span></a>What is Cloudflare?</h2>
+<h2 id="what-is-cloudflare">What is Cloudflare?<a aria-label="Link to section" class="anchor-link" href="#what-is-cloudflare"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare is a global reverse proxy that sits between your users and your origin server. All traffic passes through Cloudflare before reaching your server.</p>
-<h3 id="cloudflares-edge-network"><a aria-hidden="true" tabindex="-1" href="#cloudflares-edge-network"><span class="icon icon-link"></span></a>Cloudflare's edge network</h3>
+<h3 id="cloudflares-edge-network">Cloudflare's edge network<a aria-label="Link to section" class="anchor-link" href="#cloudflares-edge-network"><span class="icon icon-link"></span></a></h3>
 <pre><code>                         Cloudflare Edge Network
               ┌─────────────────────────────────────────┐
               │                                         │
@@ -43,7 +36,7 @@ Cloudflare is <strong>much more than a CDN</strong>: it is a complete security a
     Your Origin Server (single exposure point)
 </code></pre>
 <p>Cloudflare operates in <strong>120+ cities</strong> with a network capacity of <strong>22+ Tbps</strong> (peaks of more than 71.1 Tbps during massive DDoS attacks).</p>
-<h3 id="what-cloudflare-provides"><a aria-hidden="true" tabindex="-1" href="#what-cloudflare-provides"><span class="icon icon-link"></span></a>What Cloudflare provides</h3>
+<h3 id="what-cloudflare-provides">What Cloudflare provides<a aria-label="Link to section" class="anchor-link" href="#what-cloudflare-provides"><span class="icon icon-link"></span></a></h3>
 <p>| Service | What it does | Free | Pro | Enterprise |
 |----------|-------------|---------|---------|
 | <strong>CDN</strong> | Global content cache | ✓ | ✓ | ✓ |
@@ -57,7 +50,7 @@ Cloudflare is <strong>much more than a CDN</strong>: it is a complete security a
 | <strong>Workers</strong> | Edge computing | ✓ | ✓ | ✓ |
 | <strong>Stream</strong> | Video hosting | ✗ | ✗ | ✗ |
 | <strong>Image Optimizer</strong> | Image optimization | ✗ | ✓ | ✓ |</p>
-<h2 id="1-cdn-content-delivery-network"><a aria-hidden="true" tabindex="-1" href="#1-cdn-content-delivery-network"><span class="icon icon-link"></span></a>1. CDN (Content Delivery Network)</h2>
+<h2 id="1-cdn-content-delivery-network">1. CDN (Content Delivery Network)<a aria-label="Link to section" class="anchor-link" href="#1-cdn-content-delivery-network"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare caches your content in data centers closest to your users:</p>
 <pre><code>Your server (Frankfurt, 100ms latency)
          │
@@ -67,7 +60,7 @@ Cloudflare is <strong>much more than a CDN</strong>: it is a complete security a
          └── Cloudflare Edge (Amsterdam, 80ms)       → User in London
 </code></pre>
 <p>Without CDN, a user in Buenos Aires would have 200ms latency to Frankfurt. With Cloudflare, only 20ms to Santiago.</p>
-<h3 id="what-gets-cached"><a aria-hidden="true" tabindex="-1" href="#what-gets-cached"><span class="icon icon-link"></span></a>What gets cached</h3>
+<h3 id="what-gets-cached">What gets cached<a aria-label="Link to section" class="anchor-link" href="#what-gets-cached"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cacheable content:
   ✓ Static files (CSS, JS, images, fonts)
   ✓ Content with Cache-Control: public
@@ -81,7 +74,7 @@ Non-cacheable content:
   ✗ Content with Cache-Control: private or no-store
   ✗ Cookies present in request (unless using Cache Rules)
 </code></pre>
-<h3 id="cache-control-headers"><a aria-hidden="true" tabindex="-1" href="#cache-control-headers"><span class="icon icon-link"></span></a>Cache-Control headers</h3>
+<h3 id="cache-control-headers">Cache-Control headers<a aria-label="Link to section" class="anchor-link" href="#cache-control-headers"><span class="icon icon-link"></span></a></h3>
 <pre><code># Make a page cacheable for 1 hour
 Cache-Control: public, max-age=3600
 # → Cloudflare caches for 1 hour (Edge + Browser cache)
@@ -98,7 +91,7 @@ Cache-Control: no-store, private
 Cache-Control: public, max-age=300, stale-while-revalidate=600
 # → Serve cached version for 300s, revalidate up to 600s after expiry
 </code></pre>
-<h3 id="cloudflare-cache-rules"><a aria-hidden="true" tabindex="-1" href="#cloudflare-cache-rules"><span class="icon icon-link"></span></a>Cloudflare cache rules</h3>
+<h3 id="cloudflare-cache-rules">Cloudflare cache rules<a aria-label="Link to section" class="anchor-link" href="#cloudflare-cache-rules"><span class="icon icon-link"></span></a></h3>
 <pre><code># Cache Rules in Cloudflare dashboard:
 # URL: /api/data*
 # Edge TTL: 300 seconds
@@ -111,7 +104,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_id}/cachepurge" \
   -H "Content-Type: application/json" \
   --data '{"purge_everything":false,"files":["https://example.com/page1","https://example.com/page2"]}'
 </code></pre>
-<h3 id="cache-purge"><a aria-hidden="true" tabindex="-1" href="#cache-purge"><span class="icon icon-link"></span></a>Cache purge</h3>
+<h3 id="cache-purge">Cache purge<a aria-label="Link to section" class="anchor-link" href="#cache-purge"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Purge specific URL</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -X</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POST</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "https://api.cloudflare.com/client/v4/zones/{zone_id}/purge_cache"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Authorization: Bearer {token}"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
@@ -133,7 +126,7 @@ curl -X POST "https://api.cloudflare.com/client/v4/zones/{zone_id}/cachepurge" \
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Authorization: Bearer {token}"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Content-Type: application/json"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --data</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> '{"cache_tags":["users"]}'</span></span></code></pre></figure>
-<h3 id="caching-at-the-edge-vs-origin"><a aria-hidden="true" tabindex="-1" href="#caching-at-the-edge-vs-origin"><span class="icon icon-link"></span></a>Caching at the edge vs origin</h3>
+<h3 id="caching-at-the-edge-vs-origin">Caching at the edge vs origin<a aria-label="Link to section" class="anchor-link" href="#caching-at-the-edge-vs-origin"><span class="icon icon-link"></span></a></h3>
 <pre><code>Request flow with caching:
   User → Cloudflare Edge → (Cache HIT) → Serve cached content
                                       → (Cache MISS) → Forward to origin
@@ -149,9 +142,9 @@ Cache status codes in Cloudflare response headers:
   CF-Cache-Status: BYPASS  → Bypassed by Cache Rules
   CF-Cache-Status: REVALIDATED → Freshened stale content
 </code></pre>
-<h2 id="2-dns"><a aria-hidden="true" tabindex="-1" href="#2-dns"><span class="icon icon-link"></span></a>2. DNS</h2>
+<h2 id="2-dns">2. DNS<a aria-label="Link to section" class="anchor-link" href="#2-dns"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare operates the fastest DNS resolvers in the world (1.1.1.1) and is a full DNS provider.</p>
-<h3 id="cloudflare-dns-management"><a aria-hidden="true" tabindex="-1" href="#cloudflare-dns-management"><span class="icon icon-link"></span></a>Cloudflare DNS management</h3>
+<h3 id="cloudflare-dns-management">Cloudflare DNS management<a aria-label="Link to section" class="anchor-link" href="#cloudflare-dns-management"><span class="icon icon-link"></span></a></h3>
 <p>When using Cloudflare as your DNS provider:</p>
 <table>
 <thead>
@@ -225,7 +218,7 @@ Cache status codes in Cloudflare response headers:
 </tr>
 </tbody>
 </table>
-<h3 id="proxy-status-proxied-orange-vs-dns-only-gray"><a aria-hidden="true" tabindex="-1" href="#proxy-status-proxied-orange-vs-dns-only-gray"><span class="icon icon-link"></span></a>Proxy status: Proxied (Orange) vs DNS Only (Gray)</h3>
+<h3 id="proxy-status-proxied-orange-vs-dns-only-gray">Proxy status: Proxied (Orange) vs DNS Only (Gray)<a aria-label="Link to section" class="anchor-link" href="#proxy-status-proxied-orange-vs-dns-only-gray"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -272,8 +265,14 @@ Cache status codes in Cloudflare response headers:
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Orange proxy for web, gray for everything else</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Orange proxy for web, gray for everything else</div>
+                </div>
+                
+              
 <ul>
 <li><code>@</code> and <code>www</code>: Proxied (orange) → CDN, WAF, protection</li>
 <li><code>mail</code>: DNS only (gray) → Direct mail traffic</li>
@@ -282,8 +281,8 @@ Cache status codes in Cloudflare response headers:
 <li>SSH on port 22: DNS only (gray)</li>
 </ul>
 </blockquote>
-<h3 id="dns-records-explained"><a aria-hidden="true" tabindex="-1" href="#dns-records-explained"><span class="icon icon-link"></span></a>DNS records explained</h3>
-<h4 id="a-and-aaaa-records"><a aria-hidden="true" tabindex="-1" href="#a-and-aaaa-records"><span class="icon icon-link"></span></a>A and AAAA records</h4>
+<h3 id="dns-records-explained">DNS records explained<a aria-label="Link to section" class="anchor-link" href="#dns-records-explained"><span class="icon icon-link"></span></a></h3>
+<h4 id="a-and-aaaa-records">A and AAAA records<a aria-label="Link to section" class="anchor-link" href="#a-and-aaaa-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; A record maps a name to an IPv4 address
 @       A       93.184.216.34     300     Proxied
 www     A       93.184.216.34     300     Proxied
@@ -291,17 +290,22 @@ www     A       93.184.216.34     300     Proxied
 ; AAAA record maps a name to an IPv6 address
 www     AAAA    2606:2800:220:1:248:1893:25c8:1946  300     Proxied
 </code></pre>
-<h4 id="cname-records"><a aria-hidden="true" tabindex="-1" href="#cname-records"><span class="icon icon-link"></span></a>CNAME records</h4>
+<h4 id="cname-records">CNAME records<a aria-label="Link to section" class="anchor-link" href="#cname-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; CNAME points one name to another
 blog    CNAME   blog.example.com  300     DNS only
 api     CNAME   api.example.com   300     Proxied
 docs    CNAME   docs-site.pages.dev  300  Proxied
 </code></pre>
-<blockquote>
-<p>[!caution] CNAME at the root domain
-A CNAME record cannot coexist with other records at the same name (RFC 1034). Cloudflare's CNAME flattening and ALIAS/ANAME records work around this limitation.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">CNAME at the root domain</div>
+                </div>
+                <div class="callout-content">A CNAME record cannot coexist with other records at the same name (RFC 1034). Cloudflare's CNAME flattening and ALIAS/ANAME records work around this limitation.</div>
+              
 </blockquote>
-<h4 id="mx-records"><a aria-hidden="true" tabindex="-1" href="#mx-records"><span class="icon icon-link"></span></a>MX records</h4>
+<h4 id="mx-records">MX records<a aria-label="Link to section" class="anchor-link" href="#mx-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; MX records for email delivery (priority 10 is highest)
 @       MX  10   mail.example.com.
 @       MX  20   backup-mail.example.com.
@@ -309,7 +313,7 @@ A CNAME record cannot coexist with other records at the same name (RFC 1034). Cl
 ; MX records must point to A or AAAA records, not CNAMEs
 ; (RFC 2181)
 </code></pre>
-<h4 id="txt-records"><a aria-hidden="true" tabindex="-1" href="#txt-records"><span class="icon icon-link"></span></a>TXT records</h4>
+<h4 id="txt-records">TXT records<a aria-label="Link to section" class="anchor-link" href="#txt-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; SPF (Sender Policy Framework)
 @       TXT     v=spf1 include:_spf.google.com ~all
 
@@ -325,7 +329,7 @@ _dmarc        TXT     v=DMARC1; p=reject; rua=mailto:dmarc@example.com
 ; AWS Verification
 @       TXT     amazon-verification=xyz789
 </code></pre>
-<h4 id="caa-records"><a aria-hidden="true" tabindex="-1" href="#caa-records"><span class="icon icon-link"></span></a>CAA records</h4>
+<h4 id="caa-records">CAA records<a aria-label="Link to section" class="anchor-link" href="#caa-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; CAA controls which CAs can issue certificates for your domain
 @       CAA     0 issue "letsencrypt.org"
 @       CAA     0 issue "sectigo.com"
@@ -335,14 +339,14 @@ _dmarc        TXT     v=DMARC1; p=reject; rua=mailto:dmarc@example.com
 @       CAA     0 issue "letsencrypt.org"
 @       CAA     0 issuewild ";"
 </code></pre>
-<h4 id="srv-records"><a aria-hidden="true" tabindex="-1" href="#srv-records"><span class="icon icon-link"></span></a>SRV records</h4>
+<h4 id="srv-records">SRV records<a aria-label="Link to section" class="anchor-link" href="#srv-records"><span class="icon icon-link"></span></a></h4>
 <pre><code>; SRV records for service discovery
 _sip._tcp       SRV     10 60 5060 sip.example.com.
 _xmpp-server._tcp SRV   5 0 5269 xmpp.example.com.
 
 ; Format: Priority Weight Port Target
 </code></pre>
-<h3 id="dnssec-in-cloudflare"><a aria-hidden="true" tabindex="-1" href="#dnssec-in-cloudflare"><span class="icon icon-link"></span></a>DNSSEC in Cloudflare</h3>
+<h3 id="dnssec-in-cloudflare">DNSSEC in Cloudflare<a aria-label="Link to section" class="anchor-link" href="#dnssec-in-cloudflare"><span class="icon icon-link"></span></a></h3>
 <p>Cloudflare supports DNSSEC natively:</p>
 <pre><code>Enable DNSSEC in Cloudflare dashboard:
   DNS → DNSSEC → Activate
@@ -356,13 +360,18 @@ Your domain registrar must have a DS record pointing to Cloudflare:
   39405 13 1 2B92DC8F... (truncated)
   39405 13 2 82B9... (truncated)
 </code></pre>
-<blockquote>
-<p>[!tip] DS record at registrar
-After activating DNSSEC in Cloudflare, you must add the DS records to your domain registrar's DNS settings. Without this, validation will fail.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">DS record at registrar</div>
+                </div>
+                <div class="callout-content">After activating DNSSEC in Cloudflare, you must add the DS records to your domain registrar's DNS settings. Without this, validation will fail.</div>
+              
 </blockquote>
-<h2 id="3-waf-web-application-firewall"><a aria-hidden="true" tabindex="-1" href="#3-waf-web-application-firewall"><span class="icon icon-link"></span></a>3. WAF (Web Application Firewall)</h2>
+<h2 id="3-waf-web-application-firewall">3. WAF (Web Application Firewall)<a aria-label="Link to section" class="anchor-link" href="#3-waf-web-application-firewall"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare's WAF filters malicious traffic before it reaches your server.</p>
-<h3 id="built-in-rules"><a aria-hidden="true" tabindex="-1" href="#built-in-rules"><span class="icon icon-link"></span></a>Built-in rules</h3>
+<h3 id="built-in-rules">Built-in rules<a aria-label="Link to section" class="anchor-link" href="#built-in-rules"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -417,7 +426,7 @@ After activating DNSSEC in Cloudflare, you must add the DS records to your domai
 </tr>
 </tbody>
 </table>
-<h3 id="custom-waf-rules"><a aria-hidden="true" tabindex="-1" href="#custom-waf-rules"><span class="icon icon-link"></span></a>Custom WAF rules</h3>
+<h3 id="custom-waf-rules">Custom WAF rules<a aria-label="Link to section" class="anchor-link" href="#custom-waf-rules"><span class="icon icon-link"></span></a></h3>
 <pre><code># Cloudflare Rules → Security → WAF → Custom Rules
 
 # Rule 1: Block requests to common admin paths
@@ -445,7 +454,7 @@ Expression:
   not ip.src in {"10.0.0.0/8", "192.168.0.0/16"}
 Action: Block
 </code></pre>
-<h3 id="waf-managed-rules"><a aria-hidden="true" tabindex="-1" href="#waf-managed-rules"><span class="icon icon-link"></span></a>WAF managed rules</h3>
+<h3 id="waf-managed-rules">WAF managed rules<a aria-label="Link to section" class="anchor-link" href="#waf-managed-rules"><span class="icon icon-link"></span></a></h3>
 <pre><code># Cloudflare Managed Rules (Pro and above)
 # Pre-built rulesets from Cloudflare's security team:
 # - Critical Elements: Rules for most critical vulnerabilities
@@ -453,7 +462,7 @@ Action: Block
 # - DDoS Ruleset: DDoS mitigation rules
 # - Bot Fight Mode: Bot detection (Free and Pro)
 </code></pre>
-<h3 id="waf-actions"><a aria-hidden="true" tabindex="-1" href="#waf-actions"><span class="icon icon-link"></span></a>WAF actions</h3>
+<h3 id="waf-actions">WAF actions<a aria-label="Link to section" class="anchor-link" href="#waf-actions"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -495,9 +504,9 @@ Action: Block
 </tr>
 </tbody>
 </table>
-<h2 id="4-ddos-protection"><a aria-hidden="true" tabindex="-1" href="#4-ddos-protection"><span class="icon icon-link"></span></a>4. DDoS Protection</h2>
+<h2 id="4-ddos-protection">4. DDoS Protection<a aria-label="Link to section" class="anchor-link" href="#4-ddos-protection"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare absorbs DDoS attacks before they reach your server.</p>
-<h3 id="types-of-ddos-attacks-cloudflare-mitigates"><a aria-hidden="true" tabindex="-1" href="#types-of-ddos-attacks-cloudflare-mitigates"><span class="icon icon-link"></span></a>Types of DDoS attacks Cloudflare mitigates</h3>
+<h3 id="types-of-ddos-attacks-cloudflare-mitigates">Types of DDoS attacks Cloudflare mitigates<a aria-label="Link to section" class="anchor-link" href="#types-of-ddos-attacks-cloudflare-mitigates"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -549,7 +558,7 @@ Action: Block
 </tr>
 </tbody>
 </table>
-<h3 id="ddos-protection-at-each-layer"><a aria-hidden="true" tabindex="-1" href="#ddos-protection-at-each-layer"><span class="icon icon-link"></span></a>DDoS protection at each layer</h3>
+<h3 id="ddos-protection-at-each-layer">DDoS protection at each layer<a aria-label="Link to section" class="anchor-link" href="#ddos-protection-at-each-layer"><span class="icon icon-link"></span></a></h3>
 <pre><code>Layer 3/4 (Volumetric):
   Cloudflare absorbs attacks at the network level
   - 300+ Tbps global capacity
@@ -563,9 +572,9 @@ Layer 7 (Application):
   - JS Challenge (requires JavaScript execution)
   - Bot Management (identifies and blocks bots)
 </code></pre>
-<h2 id="5-ssltls"><a aria-hidden="true" tabindex="-1" href="#5-ssltls"><span class="icon icon-link"></span></a>5. SSL/TLS</h2>
+<h2 id="5-ssltls">5. SSL/TLS<a aria-label="Link to section" class="anchor-link" href="#5-ssltls"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare offers comprehensive SSL/TLS management.</p>
-<h3 id="ssltls-modes"><a aria-hidden="true" tabindex="-1" href="#ssltls-modes"><span class="icon icon-link"></span></a>SSL/TLS modes</h3>
+<h3 id="ssltls-modes">SSL/TLS modes<a aria-label="Link to section" class="anchor-link" href="#ssltls-modes"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -608,11 +617,16 @@ Layer 7 (Application):
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!caution] Never use Flexible in production
-Flexible mode creates a security gap: the connection between Cloudflare and your origin is NOT encrypted. An attacker on the network between Cloudflare and your origin can intercept or modify traffic. Always use Full (strict) or higher.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Never use Flexible in production</div>
+                </div>
+                <div class="callout-content">Flexible mode creates a security gap: the connection between Cloudflare and your origin is NOT encrypted. An attacker on the network between Cloudflare and your origin can intercept or modify traffic. Always use Full (strict) or higher.</div>
+              
 </blockquote>
-<h3 id="cloudflare-origin-certificates"><a aria-hidden="true" tabindex="-1" href="#cloudflare-origin-certificates"><span class="icon icon-link"></span></a>Cloudflare Origin Certificates</h3>
+<h3 id="cloudflare-origin-certificates">Cloudflare Origin Certificates<a aria-label="Link to section" class="anchor-link" href="#cloudflare-origin-certificates"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cloudflare Origin Certificate:
   - Issued by Cloudflare (not Let's Encrypt)
   - Only valid for traffic coming from Cloudflare
@@ -625,7 +639,7 @@ Usage:
   2. Install cert + key on your Nginx/Apache
   3. Set Cloudflare SSL mode to Full (strict)
 </code></pre>
-<h3 id="tls-13-support"><a aria-hidden="true" tabindex="-1" href="#tls-13-support"><span class="icon icon-link"></span></a>TLS 1.3 support</h3>
+<h3 id="tls-13-support">TLS 1.3 support<a aria-label="Link to section" class="anchor-link" href="#tls-13-support"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cloudflare supports TLS 1.3 by default.
 
 Cipher suites supported:
@@ -636,16 +650,16 @@ Cipher suites supported:
 Check TLS version:
   openssl s_client -connect example.com:443 -tls1_3
 </code></pre>
-<h3 id="hsts"><a aria-hidden="true" tabindex="-1" href="#hsts"><span class="icon icon-link"></span></a>HSTS</h3>
+<h3 id="hsts">HSTS<a aria-label="Link to section" class="anchor-link" href="#hsts"><span class="icon icon-link"></span></a></h3>
 <pre><code>Cloudflare enables HSTS for all proxied domains:
   Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
 
 You can customize this in the Cloudflare dashboard:
   SSL/TLS → Edge Certificates → HSTS
 </code></pre>
-<h2 id="6-cloudflare-workers"><a aria-hidden="true" tabindex="-1" href="#6-cloudflare-workers"><span class="icon icon-link"></span></a>6. Cloudflare Workers</h2>
+<h2 id="6-cloudflare-workers">6. Cloudflare Workers<a aria-label="Link to section" class="anchor-link" href="#6-cloudflare-workers"><span class="icon icon-link"></span></a></h2>
 <p>Cloudflare Workers is Cloudflare's serverless compute platform. Code runs on Cloudflare's edge network, close to users.</p>
-<h3 id="how-workers-work"><a aria-hidden="true" tabindex="-1" href="#how-workers-work"><span class="icon icon-link"></span></a>How Workers work</h3>
+<h3 id="how-workers-work">How Workers work<a aria-label="Link to section" class="anchor-link" href="#how-workers-work"><span class="icon icon-link"></span></a></h3>
 <pre><code>                   Cloudflare Edge Network
               ┌─────────────────────────────────┐
               │                                 │
@@ -657,7 +671,7 @@ You can customize this in the Cloudflare dashboard:
     Workers run on EVERY edge location
     Response: ~0ms additional latency
 </code></pre>
-<h3 id="workers-runtime"><a aria-hidden="true" tabindex="-1" href="#workers-runtime"><span class="icon icon-link"></span></a>Workers runtime</h3>
+<h3 id="workers-runtime">Workers runtime<a aria-label="Link to section" class="anchor-link" href="#workers-runtime"><span class="icon icon-link"></span></a></h3>
 <pre><code>V8 isolate (isolated execution environment)
   ├─ JavaScript/TypeScript/Wasm
   ├─ Fetch API (intercept and modify requests)
@@ -670,7 +684,7 @@ You can customize this in the Cloudflare dashboard:
 Cold start: ~0ms (warm instances)
 Execution limit: 5ms (Free), 50ms (Paid)
 </code></pre>
-<h3 id="example-workers-basic-proxy"><a aria-hidden="true" tabindex="-1" href="#example-workers-basic-proxy"><span class="icon icon-link"></span></a>Example: Workers basic proxy</h3>
+<h3 id="example-workers-basic-proxy">Example: Workers basic proxy<a aria-label="Link to section" class="anchor-link" href="#example-workers-basic-proxy"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// worker.js</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  async</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fetch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">request</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">env</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">ctx</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
@@ -695,7 +709,7 @@ Execution limit: 5ms (Free), 50ms (Paid)
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fetch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(request);</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></figure>
-<h3 id="example-workers-caching-with-kv"><a aria-hidden="true" tabindex="-1" href="#example-workers-caching-with-kv"><span class="icon icon-link"></span></a>Example: Workers caching with KV</h3>
+<h3 id="example-workers-caching-with-kv">Example: Workers caching with KV<a aria-label="Link to section" class="anchor-link" href="#example-workers-caching-with-kv"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  async</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> fetch</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">request</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">env</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> url</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> URL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(request.url);</span></span>
@@ -717,7 +731,7 @@ Execution limit: 5ms (Free), 50ms (Paid)
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> response;</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></figure>
-<h3 id="example-workers-with-kv"><a aria-hidden="true" tabindex="-1" href="#example-workers-with-kv"><span class="icon icon-link"></span></a>Example: Workers with KV</h3>
+<h3 id="example-workers-with-kv">Example: Workers with KV<a aria-label="Link to section" class="anchor-link" href="#example-workers-with-kv"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Bind KV namespace in wrangler.toml</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// [[kv_namespaces]]</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// binding = "COUNTER"</span></span>
@@ -741,7 +755,7 @@ Execution limit: 5ms (Free), 50ms (Paid)
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    });</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></figure>
-<h3 id="workers-pricing"><a aria-hidden="true" tabindex="-1" href="#workers-pricing"><span class="icon icon-link"></span></a>Workers pricing</h3>
+<h3 id="workers-pricing">Workers pricing<a aria-label="Link to section" class="anchor-link" href="#workers-pricing"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -772,7 +786,7 @@ Execution limit: 5ms (Free), 50ms (Paid)
 </tr>
 </tbody>
 </table>
-<h2 id="7-argo-smart-routing"><a aria-hidden="true" tabindex="-1" href="#7-argo-smart-routing"><span class="icon icon-link"></span></a>7. Argo Smart Routing</h2>
+<h2 id="7-argo-smart-routing">7. Argo Smart Routing<a aria-label="Link to section" class="anchor-link" href="#7-argo-smart-routing"><span class="icon icon-link"></span></a></h2>
 <p>Argo Smart Routing optimizes the path your traffic takes through the Internet:</p>
 <pre><code>Standard routing:
   User → ISP → Cloudflare → ISP → Origin
@@ -793,8 +807,8 @@ Pricing:
   - Argo Smart Routing: $0.50/GB of traffic
   - Argo Tunnel: $5/month (no traffic charge)
 </code></pre>
-<h2 id="8-additional-services"><a aria-hidden="true" tabindex="-1" href="#8-additional-services"><span class="icon icon-link"></span></a>8. Additional services</h2>
-<h3 id="cloudflare-stream"><a aria-hidden="true" tabindex="-1" href="#cloudflare-stream"><span class="icon icon-link"></span></a>Cloudflare Stream</h3>
+<h2 id="8-additional-services">8. Additional services<a aria-label="Link to section" class="anchor-link" href="#8-additional-services"><span class="icon icon-link"></span></a></h2>
+<h3 id="cloudflare-stream">Cloudflare Stream<a aria-label="Link to section" class="anchor-link" href="#cloudflare-stream"><span class="icon icon-link"></span></a></h3>
 <p>Video hosting and delivery platform:</p>
 <pre><code>Cloudflare Stream:
   - Upload videos once
@@ -808,7 +822,7 @@ Pricing:
   - Storage: $1/1000 GB/month after free tier
   - Playback: $0.01/GB after free tier (5,000 GB/month)
 </code></pre>
-<h3 id="cloudflare-r2"><a aria-hidden="true" tabindex="-1" href="#cloudflare-r2"><span class="icon icon-link"></span></a>Cloudflare R2</h3>
+<h3 id="cloudflare-r2">Cloudflare R2<a aria-label="Link to section" class="anchor-link" href="#cloudflare-r2"><span class="icon icon-link"></span></a></h3>
 <p>S3-compatible object storage with no egress fees:</p>
 <pre><code>Cloudflare R2 vs AWS S3:
   R2:    $0.015/GB/month storage, $0/GB egress
@@ -821,7 +835,7 @@ Pricing:
   - No request fees
   - Global distribution through Cloudflare network
 </code></pre>
-<h3 id="cloudflare-pages"><a aria-hidden="true" tabindex="-1" href="#cloudflare-pages"><span class="icon icon-link"></span></a>Cloudflare Pages</h3>
+<h3 id="cloudflare-pages">Cloudflare Pages<a aria-label="Link to section" class="anchor-link" href="#cloudflare-pages"><span class="icon icon-link"></span></a></h3>
 <p>Static site hosting with CI/CD:</p>
 <pre><code>Cloudflare Pages:
   - Connect GitHub/GitLab repository
@@ -834,8 +848,8 @@ Pricing:
   - Next.js, Nuxt, SvelteKit, Remix, Hugo, Jekyll, Gatsby
   - Vite, Astro, 11ty, and more
 </code></pre>
-<h2 id="production-configuration-checklist"><a aria-hidden="true" tabindex="-1" href="#production-configuration-checklist"><span class="icon icon-link"></span></a>Production configuration checklist</h2>
-<h3 id="dns-setup"><a aria-hidden="true" tabindex="-1" href="#dns-setup"><span class="icon icon-link"></span></a>DNS setup</h3>
+<h2 id="production-configuration-checklist">Production configuration checklist<a aria-label="Link to section" class="anchor-link" href="#production-configuration-checklist"><span class="icon icon-link"></span></a></h2>
+<h3 id="dns-setup">DNS setup<a aria-label="Link to section" class="anchor-link" href="#dns-setup"><span class="icon icon-link"></span></a></h3>
 <pre><code>@       A       YOUR_ORIGIN_IP   Proxied (orange)
 www     A       YOUR_ORIGIN_IP   Proxied (orange)
 api     CNAME   your-origin.com  Proxied (orange)
@@ -844,7 +858,7 @@ mail    A       MAIL_SERVER_IP   DNS only (gray)
 @       TXT   v=spf1 include:_spf.google.com ~all  DNS only
 @       CAA   0 issue "letsencrypt.org"  DNS only
 </code></pre>
-<h3 id="ssltls-settings"><a aria-hidden="true" tabindex="-1" href="#ssltls-settings"><span class="icon icon-link"></span></a>SSL/TLS settings</h3>
+<h3 id="ssltls-settings">SSL/TLS settings<a aria-label="Link to section" class="anchor-link" href="#ssltls-settings"><span class="icon icon-link"></span></a></h3>
 <pre><code>SSL/TLS Mode: Full (strict)
 Minimum TLS Version: TLS 1.2
 TLS 1.3: Enabled
@@ -854,7 +868,7 @@ HTTP Strict Transport Security Preloading: On (if eligible)
 Always Use HTTPS: On
 Early Hints: On
 </code></pre>
-<h3 id="performance-settings"><a aria-hidden="true" tabindex="-1" href="#performance-settings"><span class="icon icon-link"></span></a>Performance settings</h3>
+<h3 id="performance-settings">Performance settings<a aria-label="Link to section" class="anchor-link" href="#performance-settings"><span class="icon icon-link"></span></a></h3>
 <pre><code>Brotli: On
 Minimum Expires Header: 0 seconds
 Auto Minify: CSS, JavaScript, HTML (if safe)
@@ -862,7 +876,7 @@ Rocket Loader: Off (can break JavaScript)
 Development Mode: Off
 Server Side Excludes: Off
 </code></pre>
-<h3 id="security-settings"><a aria-hidden="true" tabindex="-1" href="#security-settings"><span class="icon icon-link"></span></a>Security settings</h3>
+<h3 id="security-settings">Security settings<a aria-label="Link to section" class="anchor-link" href="#security-settings"><span class="icon icon-link"></span></a></h3>
 <pre><code>Bot Fight Mode: On (Free and Pro)
 WAF: OWASP Core Ruleset enabled
 Rate Limiting:
@@ -874,7 +888,7 @@ Zero Trust: Enable for internal access
 Access Rules: Block specific countries/ASNs
 IP Access Rules: Block known bad actors
 </code></pre>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -885,23 +899,23 @@ IP Access Rules: Block known bad actors
 <tbody>
 <tr>
 <td>DNS deep-dive</td>
-<td>[[03-dns-deep-dive]]</td>
+<td>[03-dns-deep-dive](/en/01-networking-internet/03-dns-deep-dive)</td>
 </tr>
 <tr>
 <td>HTTPS/TLS</td>
-<td>[[07-https-tls]]</td>
+<td>[07-https-tls](/en/01-networking-internet/07-https-tls)</td>
 </tr>
 <tr>
 <td>Cloudflare intro</td>
-<td>[[04-cloudflare-intro]]</td>
+<td>[04-cloudflare-intro](/en/01-networking-internet/04-cloudflare-intro)</td>
 </tr>
 <tr>
 <td>Let's Encrypt</td>
-<td>[[08-lets-encrypt]]</td>
+<td>[08-lets-encrypt](/en/01-networking-internet/08-lets-encrypt)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li>Cloudflare is a <strong>complete platform</strong>: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo, Stream, and more.</li>
 <li>The <strong>CDN</strong> caches content globally, reducing latency by serving from edge locations.</li>
@@ -913,7 +927,12 @@ IP Access Rules: Block known bad actors
 <li><strong>Argo Smart Routing</strong> uses a private network backbone for lower latency.</li>
 <li>Always use <strong>Full (strict)</strong> SSL mode, enable <strong>HSTS</strong>, and configure <strong>rate limiting</strong> for production.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-Cloudflare is not "just a CDN". It is a comprehensive security and performance platform that handles CDN, DNS, WAF, DDoS protection, SSL/TLS management, and edge computing. The free plan is remarkably complete — for most projects, it provides more than enough protection and performance.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">Cloudflare is not "just a CDN". It is a comprehensive security and performance platform that handles CDN, DNS, WAF, DDoS protection, SSL/TLS management, and edge computing. The free plan is remarkably complete — for most projects, it provides more than enough protection and performance.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-is-cloudflare">What is Cloudflare?</a> </li><li class="toc-depth-3"> <a href="#cloudflares-edge-network">Cloudflare&#39;s edge network</a> </li><li class="toc-depth-3"> <a href="#what-cloudflare-provides">What Cloudflare provides</a> </li><li class="toc-depth-2"> <a href="#1-cdn">1. CDN</a> </li><li class="toc-depth-3"> <a href="#what-gets-cached">What gets cached</a> </li><li class="toc-depth-3"> <a href="#cache-control-headers">Cache-Control headers</a> </li><li class="toc-depth-3"> <a href="#cloudflare-cache-rules">Cloudflare cache rules</a> </li><li class="toc-depth-3"> <a href="#cache-purge">Cache purge</a> </li><li class="toc-depth-3"> <a href="#caching-at-the-edge-vs-origin">Caching at the edge vs origin</a> </li><li class="toc-depth-2"> <a href="#2-dns">2. DNS</a> </li><li class="toc-depth-3"> <a href="#cloudflare-dns-management">Cloudflare DNS management</a> </li><li class="toc-depth-3"> <a href="#proxy-status-proxied--vs-dns-only">Proxy status: Proxied  vs DNS Only</a> </li><li class="toc-depth-3"> <a href="#dns-records-explained">DNS records explained</a> </li><li class="toc-depth-3"> <a href="#dnssec-in-cloudflare">DNSSEC in Cloudflare</a> </li><li class="toc-depth-2"> <a href="#3-waf">3. WAF</a> </li><li class="toc-depth-3"> <a href="#built-in-rules">Built-in rules</a> </li><li class="toc-depth-3"> <a href="#custom-waf-rules">Custom WAF rules</a> </li><li class="toc-depth-3"> <a href="#waf-managed-rules">WAF managed rules</a> </li><li class="toc-depth-3"> <a href="#waf-actions">WAF actions</a> </li><li class="toc-depth-2"> <a href="#4-ddos-protection">4. DDoS Protection</a> </li><li class="toc-depth-3"> <a href="#types-of-ddos-attacks-cloudflare-mitigates">Types of DDoS attacks Cloudflare mitigates</a> </li><li class="toc-depth-3"> <a href="#ddos-protection-at-each-layer">DDoS protection at each layer</a> </li><li class="toc-depth-2"> <a href="#5-ssltls">5. SSL/TLS</a> </li><li class="toc-depth-3"> <a href="#ssltls-modes">SSL/TLS modes</a> </li><li class="toc-depth-3"> <a href="#cloudflare-origin-certificates">Cloudflare Origin Certificates</a> </li><li class="toc-depth-3"> <a href="#tls-13-support">TLS 1.3 support</a> </li><li class="toc-depth-3"> <a href="#hsts">HSTS</a> </li><li class="toc-depth-2"> <a href="#6-cloudflare-workers">6. Cloudflare Workers</a> </li><li class="toc-depth-3"> <a href="#how-workers-work">How Workers work</a> </li><li class="toc-depth-3"> <a href="#workers-runtime">Workers runtime</a> </li><li class="toc-depth-3"> <a href="#example-workers-basic-proxy">Example: Workers basic proxy</a> </li><li class="toc-depth-3"> <a href="#example-workers-caching-with-kv">Example: Workers caching with KV</a> </li><li class="toc-depth-3"> <a href="#example-workers-with-kv">Example: Workers with KV</a> </li><li class="toc-depth-3"> <a href="#workers-pricing">Workers pricing</a> </li><li class="toc-depth-2"> <a href="#7-argo-smart-routing">7. Argo Smart Routing</a> </li><li class="toc-depth-2"> <a href="#8-additional-services">8. Additional services</a> </li><li class="toc-depth-3"> <a href="#cloudflare-stream">Cloudflare Stream</a> </li><li class="toc-depth-3"> <a href="#cloudflare-r2">Cloudflare R2</a> </li><li class="toc-depth-3"> <a href="#cloudflare-pages">Cloudflare Pages</a> </li><li class="toc-depth-2"> <a href="#production-configuration-checklist">Production configuration checklist</a> </li><li class="toc-depth-3"> <a href="#dns-setup">DNS setup</a> </li><li class="toc-depth-3"> <a href="#ssltls-settings">SSL/TLS settings</a> </li><li class="toc-depth-3"> <a href="#performance-settings">Performance settings</a> </li><li class="toc-depth-3"> <a href="#security-settings">Security settings</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

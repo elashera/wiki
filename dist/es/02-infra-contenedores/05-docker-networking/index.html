@@ -1,0 +1,827 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/02-infra-contenedores/05-docker-networking/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/02-infrastructure-containers/05-docker-networking" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article active"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores</h1> <div class="article-body"><h1 id="docker-networking-bridge-host-overlay-redes-personalizadas-mapeo-de-puertos-y-dns-en-contenedores">Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores<a aria-label="Link to section" class="anchor-link" href="#docker-networking-bridge-host-overlay-redes-personalizadas-mapeo-de-puertos-y-dns-en-contenedores"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Networking Docker en una frase</div>
+                </div>
+                <div class="callout-content">Docker networking es el sistema que permite a los contenedores comunicarse entre sí y con el mundo exterior. Por defecto usa redes bridge con NAT, pero también soporta redes host, overlay para Swarm/Kubernetes, y redes personalizadas con DNS automático.</div>
+              
+</blockquote>
+<h2 id="por-qué-networking-docker-es-diferente">¿Por qué networking Docker es diferente?<a aria-label="Link to section" class="anchor-link" href="#por-qué-networking-docker-es-diferente"><span class="icon icon-link"></span></a></h2>
+<p>Los contenedores son procesos aislados — cada uno tiene su propio namespace de red, su propio conjunto de interfaces, su propio espacio de direcciones IP. Esto hace que la networking de Docker sea un problema único de resolver.</p>
+<pre><code>Contenedor A                    Host                    Contenedor B
+┌──────────────────┐      ┌──────────────────┐      ┌──────────────────┐
+│  PID Namespace    │      │  PID Namespace    │      │  PID Namespace    │
+│  Network Namespace │      │  Network Namespace│      │  Network Namespace│
+│                  │      │                  │      │                  │
+│  eth0: 172.17.0.2│      │  eth0: 10.0.0.1   │      │  eth0: 172.17.0.3│
+│  IP: 172.17.0.2  │      │  IP: 10.0.0.1     │      │  IP: 172.17.0.3  │
+│  Puerto 3000     │      │  Puerto 8080:3000 │      │  Puerto 5432     │
+│                  │      │  iptables NAT     │      │                  │
+└──────────────────┘      └──────────────────┘      └──────────────────┘
+          │                        │                        │
+          └────────────────────────┼────────────────────────┘
+                                   │
+                           docker0 bridge (172.17.0.1)
+</code></pre>
+<h2 id="tipos-de-redes-docker">Tipos de redes Docker<a aria-label="Link to section" class="anchor-link" href="#tipos-de-redes-docker"><span class="icon icon-link"></span></a></h2>
+<h3 id="1-red-bridge-por-defecto">1. Red bridge (por defecto)<a aria-label="Link to section" class="anchor-link" href="#1-red-bridge-por-defecto"><span class="icon icon-link"></span></a></h3>
+<p>La red bridge es el <strong>modo de red por defecto</strong> de Docker. Crea una pasarela virtual para cada host Docker.</p>
+<pre><code>Red bridge por defecto (docker0):
+
+┌──────────────────────────────────────────────────────────────────────┐
+│  Host: 10.0.2.15                     docker0: 172.17.0.1/16          │
+│  eth0: 10.0.2.15 ───┐                                               │
+│                     │        ┌──────────────────────────────────┐    │
+│                     └────────│ docker0 bridge                    │    │
+│                              │ 172.17.0.1 (gateway)             │    │
+│                              │                                  │    │
+│                              │  ┌──────────────────┐           │    │
+│                              │  │ container: web    │           │    │
+│                              │  │  172.17.0.2      │           │    │
+│                              │  │  eth0: eth0       │           │    │
+│                              │  └──────────────────┘           │    │
+│                              │                                  │    │
+│                              │  ┌──────────────────┐           │    │
+│                              │  │ container: db     │           │    │
+│                              │  │  172.17.0.3       │           │    │
+│                              │  │  eth0: eth0       │           │    │
+│                              │  └──────────────────┘           │    │
+│                              └──────────────────────────────────┘    │
+│                                                                      │
+│  iptables (NAT):                                                     │
+│  PREROUTING: docker0 → contenedores                                 │
+│  POSTROUTING: contenedores → host (MASCARADA)                       │
+│  FORWARD: host ↔ contenedores                                        │
+└──────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver la red bridge por defecto</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ls</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># NETWORK ID  NAME      DRIVER    SCOPE</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># abc123      bridge    bridge    local</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># def456      host      host      local</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ghi789      none      null      local</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Inspeccionar la red bridge</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bridge</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># [</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Name": "bridge",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "Driver": "bridge",</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     "IPAM": {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#       "Config": [{"Subnet": "172.17.0.0/16", "Gateway": "172.17.0.1"}]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#     }</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   }</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Los contenedores conectados a la red bridge</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Se comunican con IPs como 172.17.0.x</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># NO se comunican por nombre (sin red personalizada)</span></span></code></pre></figure>
+<pre><code>Características de la red bridge por defecto:
+┌─────────────────────┬──────────────────────────────────────┐
+│  Característica     │  Detalle                             │
+├─────────────────────┼──────────────────────────────────────┤
+│  Driver             │  bridge (iptables)                   │
+│  Subnet             │  172.17.0.0/16 (por defecto)         │
+│  Gateway            │  172.17.0.1                          │
+│  DNS interno        │  ❌ No (no resuelve nombres)         │
+│  Comunicación       │  Solo por IP                         │
+│  Aislamiento        │  Alto (necesita --network)           │
+│  Puerto mapeo       │  -p flag                             │
+└─────────────────────┴──────────────────────────────────────┘
+</code></pre>
+<h3 id="2-red-bridge-personalizada-recomendada">2. Red bridge personalizada (RECOMENDADA)<a aria-label="Link to section" class="anchor-link" href="#2-red-bridge-personalizada-recomendada"><span class="icon icon-link"></span></a></h3>
+<p>Las redes bridge personalizadas <strong>resuelven el problema de DNS interno</strong> de la red bridge por defecto:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear una red bridge personalizada con subnet específica</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> bridge</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --subnet</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 172.20.0.0/16</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --gateway</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 172.20.0.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --opt</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> com.docker.network.bridge.name=br-myapp</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  myapp-network</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Conectar servicios a la red</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp-network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> db</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp-network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># web y db pueden comunicarse por NOMBRE: db responde a "db", web responde a "web"</span></span></code></pre></figure>
+<pre><code>DNS en red bridge personalizada:
+─────────────────────────────────
+
+┌──────────────────────────────────────────────┐
+│  myapp-network (bridge personalizado)         │
+│                                              │
+│  web (172.20.0.2) ──DNS──▶ 172.20.0.3 (db)   │
+│    │                                      │   │
+│    │ host: db                              │   │
+│    │ host: 172.20.0.3                      │   │
+│    │                                       │   │
+│  api (172.20.0.4) ──DNS──▶ 172.20.0.3 (db)  │
+│    │                                      │   │
+│    │ host: db                              │   │
+│    │                                       │   │
+│  cache (172.20.0.5)                        │   │
+│    │ host: db                              │   │
+│    │ host: web                             │   │
+│    │ host: api                             │   │
+│    │ host: cache                           │   │
+│    └───────────────────────────────────────┘   │
+└──────────────────────────────────────────────┘
+
+⚡ Los nombres de los contenedores se resuelven automáticamente
+   a sus IPs en la red. No necesitas configurar DNS manualmente.
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml con red personalizada</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  web</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">myapp-net</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"80:80"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      DATABASE_URL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgresql://user:pass@db:5432/mydb</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">myapp-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  db</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    environment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      POSTGRES_PASSWORD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">secret</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">myapp-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">networks</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  myapp-net</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    driver</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">bridge</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ipam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">      config</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">subnet</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">172.25.0.0/16</span></span></code></pre></figure>
+<h3 id="3-red-host">3. Red host<a aria-label="Link to section" class="anchor-link" href="#3-red-host"><span class="icon icon-link"></span></a></h3>
+<p>La red host <strong>comparte la red del host</strong> directamente. No hay aislamiento de red ni NAT:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Red host: el contenedor usa la red del host directamente</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Nginx escucha en el puerto 80 del HOST directamente</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># http://localhost:80 → nginx en el host (sin mapeo de puertos)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ Con host networking NO se usa -p (mapeo de puertos)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run -d --network host -p 8080:80 nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Esto da ERROR porque --network host ignora -p</span></span></code></pre></figure>
+<pre><code>Comparación host vs bridge:
+
+REDA HOST:
+┌────────────────────────────────────┐
+│  Host Server: 10.0.2.15            │
+│                                     │
+│  ┌──────────────────────────────┐  │
+│  │  Container: nginx            │  │  ← Misma red que el host
+│  │  Puerto: 80 (directo)        │  │  ← Sin NAT, sin bridge
+│  │  IP: 10.0.2.15 (la del host) │  │  ← Misma IP
+│  └──────────────────────────────┘  │
+│                                     │
+│  http://10.0.2.15:80 → nginx       │
+└────────────────────────────────────┘
+
+REDA BRIDGE (por defecto):
+┌────────────────────────────────────────────┐
+│  Host Server: 10.0.2.15                    │
+│                                             │
+│  ┌───────────────────────────────────┐     │
+│  │  docker0 bridge: 172.17.0.1/16    │     │
+│  │                                    │     │
+│  │  ┌──────────────────────────┐     │     │
+│  │  │  Container: nginx        │     │     │
+│  │  │  IP: 172.17.0.2          │     │     │
+│  │  │  Puerto: 80              │     │     │
+│  │  └──────────────────────────┘     │     │
+│  └───────────────────────────────────┘     │
+│                                             │
+│  iptables -t nat:                           │
+│  :8080 → :172.17.0.2:80                    │
+│                                             │
+│  http://10.0.2.15:8080 → nginx             │
+└────────────────────────────────────────────┘
+</code></pre>
+<pre><code>Cuándo usar host networking:
+┌─────────────────────┬────────────────────────────────────┐
+│  Caso               │  ¿Usar host?                       │
+├─────────────────────┼────────────────────────────────────┤
+│  API web estándar   │  ❌ bridge + -p                    │
+│  Base de datos      │  ❌ bridge (o host si máximo perf) │
+│  máximo rendimiento │  ✅ host (evita NAT)               │
+│  múltiples cont.    │  ❌ host (colisión de puertos)     │
+│  networking         │                                    │
+│  Contenedor         │  ✅ host (sin NAT overhead)      │
+│  de logging/        │                                    │
+│  monitoreo          │                                    │
+└─────────────────────┴────────────────────────────────────┘
+
+Ventajas host:
+  - Cero overhead de red (sin NAT, sin bridge)
+  - Acceso directo a interfaces de red del host
+  - IP real visible en logs (sin IP de bridge)
+
+Desventajas host:
+  - No hay aislamiento de red
+  - Colisión de puertos (no puedes tener 2 servicios en el puerto 80)
+  - No se puede usar -p con --network host
+  - Riesgo de seguridad (contenedor ve toda la red del host)
+</code></pre>
+<h3 id="4-red-none">4. Red none<a aria-label="Link to section" class="anchor-link" href="#4-red-none"><span class="icon icon-link"></span></a></h3>
+<p>La red <strong>none</strong> elimina toda la red del contenedor:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sin red</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> none</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El contenedor tiene NO interfaz de red en absoluto</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para debugging: cuando necesitas ejecutar un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># sin acceso a la red (ej: procesar datos offline)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para añadir red manualmente después:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> none</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ... configurar manualmente la red después ...</span></span></code></pre></figure>
+<h3 id="5-red-overlay-docker-swarm">5. Red overlay (Docker Swarm)<a aria-label="Link to section" class="anchor-link" href="#5-red-overlay-docker-swarm"><span class="icon icon-link"></span></a></h3>
+<p>Las redes overlay conectan contenedores en <strong>diferentes hosts de un cluster Swarm</strong>:</p>
+<pre><code>Cluster Swarm con 3 nodos:
+
+┌────────────────────┐     ┌────────────────────┐     ┌────────────────────┐
+│  Node 1            │     │  Node 2            │     │  Node 3            │
+│  10.0.1.10         │     │  10.0.1.20         │     │  10.0.1.30         │
+│                    │     │                    │     │                    │
+│  ┌──────────────┐  │     │  ┌──────────────┐  │     │  ┌──────────────┐  │
+│  │ container    │  │     │  │ container    │  │     │  │ container    │  │
+│  │ web:1        │  │     │  │ web:2        │  │     │  │ web:3        │  │
+│  │ 10.0.96.2    │  │     │  │ 10.0.96.3    │  │     │  │ 10.0.96.4    │  │
+│  └──────────────┘  │     │  └──────────────┘  │     │  └──────────────┘  │
+│                    │     │                    │     │                    │
+│  ┌──────────────┐  │     │  ┌──────────────┐  │     │  ┌──────────────┐  │
+│  │ container    │  │     │  │ container    │  │     │  │ container    │  │
+│  │ db:1         │  │     │  │ db:2         │  │     │  │ db:3         │  │
+│  │ 10.0.97.2    │  │     │  │ 10.0.97.3    │  │     │  │ 10.0.97.4    │  │
+│  └──────────────┘  │     │  └──────────────┘  │     │  └──────────────┘  │
+└────────────────────┘     └────────────────────┘     └────────────────────┘
+         │                          │                          │
+         └──────────────────────────┼──────────────────────────┘
+                                    │
+                           ┌────────▼────────┐
+                           │  Overlay Network │
+                           │  myapp-overlay   │
+                           │  (red virtual    │
+                           │   sobre la       │
+                           │   infraestructura)│
+                           └─────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear un cluster Swarm</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> swarm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> init</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --advertise-addr</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 10.0.1.10</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> swarm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> join</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --token</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">toke</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">n</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 10.0.1.10:2377</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear red overlay (disponible en todos los nodos)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> overlay</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --attachable</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  myapp-overlay</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ahora los contenedores en cualquier nodo</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># pueden comunicarse a través de esta red overlay</span></span></code></pre></figure>
+<pre><code>Overlay vs Bridge:
+┌─────────────────────┬──────────────┬──────────────┐
+│  Característica     │  Bridge      │  Overlay     │
+├─────────────────────┼──────────────┼──────────────┤
+│  Scope              │  Un solo     │  Multi-node  │
+│                     │  host        │  (Swarm)     │
+│  Uso                │  docker      │  Docker      │
+│                     │  compose /   │  Swarm       │
+│                     │  docker run  │              │
+│  Comunicación       │  IP/Nombre   │  IP/Nombre   │
+│  Inter-host         │  ❌ No       │  ✅ Sí       │
+│  Encapsulamiento    │  No          │  VXLAN       │
+│  Complejidad        │  Baja        │  Media       │
+└─────────────────────┴──────────────┴──────────────┘
+</code></pre>
+<h2 id="mapeo-de-puertos">Mapeo de puertos<a aria-label="Link to section" class="anchor-link" href="#mapeo-de-puertos"><span class="icon icon-link"></span></a></h2>
+<h3 id="el-sistema-de-puertos-docker">El sistema de puertos Docker<a aria-label="Link to section" class="anchor-link" href="#el-sistema-de-puertos-docker"><span class="icon icon-link"></span></a></h3>
+<pre><code>El mapeo de puertos conecta el puerto del contenedor con el puerto del host:
+
+┌────────────────────────────────────────────────────────────────┐
+│  Host: 192.168.1.100                                           │
+│                                                                 │
+│  docker0 bridge: 172.17.0.1                                    │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────────────┐  │
+│  │  iptables NAT Rules (resumen):                            │  │
+│  │                                                          │  │
+│  │  PREROUTING (DNAT):                                      │  │
+│  │    -j DOCKER ! -i docker0                                │  │
+│  │      -p tcp --dport 8080 -> 172.17.0.2:80               │  │
+│  │    -j DOCKER ! -i docker0                                │  │
+│  │      -p tcp --dport 3000 -> 172.17.0.3:3000             │  │
+│  │    -j DOCKER ! -i docker0                                │  │
+│  │      -p tcp --dport 5432 -> 172.17.0.4:5432             │  │
+│  │                                                          │  │
+│  │  POSTROUTING (MASQUERADE):                               │  │
+│  │    -s 172.17.0.0/16 -o eth0 -j MASQUERADE               │  │
+│  └──────────────────────────────────────────────────────────┘  │
+│                                                                 │
+│  Acceso:                                                        │
+│  http://192.168.1.100:8080 → nginx en 172.17.0.2:80           │
+│  http://192.168.1.100:3000 → api en 172.17.0.3:3000           │
+│  psql -h 192.168.1.100 -p 5432 → postgres en 172.17.0.4:5432  │
+└────────────────────────────────────────────────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sintaxis: -p [host-ip:]host-port:container-port[/protocol]</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#           ↑          ↑     ↑</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#           │          │     └── Puerto del contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#           │          └── Puerto del host (si no se especifica IP, escucha en todas)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#           └── IP del host (opcional)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto específico de host IP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo accesible desde localhost, no desde la red externa</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto UDP</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 5353:53/udp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Rango de puertos del host</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8000-8010:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ No recomendado — usa puertos individuales</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puerto aleatorio del host (útil para pruebas)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Docker asigna un puerto aleatorio. Verlo con:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> port</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">container-nam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">></span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejemplo de salida: 80/tcp -> 0.0.0.0:49153</span></span></code></pre></figure>
+<h3 id="escenarios-comunes-de-mapeo-de-puertos">Escenarios comunes de mapeo de puertos<a aria-label="Link to section" class="anchor-link" href="#escenarios-comunes-de-mapeo-de-puertos"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escenario 1: API interna (solo localhost)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo accesible desde la máquina local</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escenario 2: API pública (toda la red)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Accesible desde cualquier IP que pueda llegar al host</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escenario 3: Base de datos interna</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:5432:5432</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo localhost (buena práctica para BDD)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escenario 4: Varios contenedores en mismos puertos internos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8001:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8002:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 8003:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> web3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Acceder:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># http://localhost:8001  → web1</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># http://localhost:8002  → web2</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># http://localhost:8003  → web3</span></span></code></pre></figure>
+<h3 id="publicación-en-docker-compose">Publicación en Docker Compose<a aria-label="Link to section" class="anchor-link" href="#publicación-en-docker-compose"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker-compose.yml</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">services</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  web</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"80:80"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">                 # Todos los interfaces</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"127.0.0.1:443:443"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # Solo localhost</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  api</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3000</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">            # Puerto del contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        published</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8080"</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Puerto del host</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        protocol</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">tcp</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">           # Protocolo</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        mode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">host</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">              # host = directo al host</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  # Puertos en Swarm</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">  worker</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    image</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">my-worker:latest</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">    ports</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">mode</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">ingress</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        target</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">8080</span></span>
+<span data-line=""><span style="--shiki-light:#22863A;--shiki-dark:#85E89D">        published</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8080"</span></span></code></pre></figure>
+<h2 id="dns-en-contenedores">DNS en contenedores<a aria-label="Link to section" class="anchor-link" href="#dns-en-contenedores"><span class="icon icon-link"></span></a></h2>
+<h3 id="dns-de-la-red-bridge-personalizada">DNS de la red bridge personalizada<a aria-label="Link to section" class="anchor-link" href="#dns-de-la-red-bridge-personalizada"><span class="icon icon-link"></span></a></h3>
+<p>En redes bridge personalizadas, Docker usa un <strong>resolver DNS integrado</strong> que resuelve:</p>
+<ol>
+<li>Nombres de contenedores → IPs</li>
+<li>Nombres de servicios → IPs</li>
+<li>Hosts del host → IPs</li>
+</ol>
+<pre><code>┌──────────────────────────────────────────────────┐
+│  DNS en red bridge personalizada                  │
+│                                                  │
+│  docker network create my-app-net                │
+│                                                  │
+│  docker run -d --name web --network my-app-net   │
+│             nginx:latest                          │
+│                                                  │
+│  docker run -d --name api --network my-app-net   │
+│             my-api:latest                        │
+│                                                  │
+│  docker run -d --name db --network my-app-net    │
+│             postgres:16                          │
+│                                                  │
+│  DNS disponible en TODOS los contenedores:       │
+│  - web → resuelve a 172.20.0.2                   │
+│  - api → resuelve a 172.20.0.3                   │
+│  - db  → resuelve a 172.20.0.4                   │
+│                                                  │
+│  También funciona desde dentro del contenedor:   │
+│  curl http://api:3000                            │
+│  psql -h db -U user                              │
+│  wget http://web:80                              │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<h3 id="dns-configuration">DNS configuration<a aria-label="Link to section" class="anchor-link" href="#dns-configuration"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar DNS personalizado para contenedores</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.8.8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 8.8.4.4</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Usar DNS del host</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --dns=host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configuración global en /etc/docker/daemon.json:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "dns"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8.8.8.8"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"8.8.4.4"],</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "dns-search"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"mycompany.local"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">],</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "dns-opt"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"ndots:2"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="dns-interno-y-resolución">DNS interno y resolución<a aria-label="Link to section" class="anchor-link" href="#dns-interno-y-resolución"><span class="icon icon-link"></span></a></h3>
+<pre><code>DNS resolution flow:
+
+Contenedor quiere resolver "db"
+  │
+  ▼
+1. /etc/resolv.conf del contenedor
+   nameserver 127.0.0.11  ← DNS interno de Docker
+   search docker          ← Search domain
+
+  │
+  ▼
+2. DNS interno de Docker (127.0.0.11)
+   │
+   ├── Si "db" es nombre de contenedor → resuelve IP
+   ├── Si "db" es nombre de servicio en compose → resuelve IP
+   ├── Si "google.com" → proxy a DNS configurado
+   └── Si no encuentra → proxy a DNS configurado
+   │
+   ▼
+3. DNS externo configurado (8.8.8.8, etc.)
+   │
+   ▼
+4. Resultado devuelto al contenedor
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver el DNS interno de Docker</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 127.0.0.11</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># options ndots:2</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver DNS en un contenedor con red personalizada</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nameserver 127.0.0.11</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># options ndots:2</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Test DNS</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-app-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> alpine:3.19</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nslookup</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> db</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Server:  127.0.0.11</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Address: 127.0.0.11:53</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Non-authoritative answer:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># db.my-app-net.default.svc.cluster.local</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Name:      db</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Address: 172.20.0.4</span></span></code></pre></figure>
+<h2 id="networking-entre-contenedores">Networking entre contenedores<a aria-label="Link to section" class="anchor-link" href="#networking-entre-contenedores"><span class="icon icon-link"></span></a></h2>
+<h3 id="patrón-api--base-de-datos">Patrón: API + Base de datos<a aria-label="Link to section" class="anchor-link" href="#patrón-api--base-de-datos"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear red dedicada</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Base de datos en la red</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> postgres</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTGRES_PASSWORD=secret</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># API conectada a la misma red</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># La API accede a postgres con el nombre "postgres"</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 3000:3000</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DATABASE_URL=postgresql://postgres:secret@postgres:5432/mydb</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  my-api:latest</span></span></code></pre></figure>
+<pre><code>Arquitectura de red:
+
+┌──────────────────────────────────────────────┐
+│  app-net (bridge personalizado)               │
+│                                              │
+│  api (172.22.0.2)                              │
+│    ├── Puerto: 3000 (mapeado a host:3000)     │
+│    └── DB_URL: postgresql://postgres:5432     │
+│         ↑                                    │
+│         │ HTTP                               │
+│         │ TCP                                │
+│         ▼                                    │
+│  postgres (172.22.0.3)                         │
+│    ├── Puerto: 5432 (NO mapeado al host)      │
+│    └── Solo accesible desde app-net           │
+│                                              │
+│  ⚠️ postgres NO es accesible desde fuera      │
+│     de la red app-net (bueno para seguridad)  │
+└──────────────────────────────────────────────┘
+</code></pre>
+<h3 id="patrón-reverse-proxy-con-nginx">Patrón: Reverse proxy con Nginx<a aria-label="Link to section" class="anchor-link" href="#patrón-reverse-proxy-con-nginx"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Red frontend (accesible desde fuera)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Nginx (expone al mundo)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 80:80</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 443:443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -v</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./nginx.conf:/etc/nginx/nginx.conf:ro</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># API services (solo accesibles desde proxy-net)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app-net</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-2</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> proxy-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> api-3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># api-1, api-2, api-3 accesibles desde nginx con nombre</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># nginx.conf:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># upstream api {</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   server api-1:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   server api-2:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#   server api-3:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># }</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ./nginx.conf</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">upstream</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> api_backend </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> api-1:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> api-2:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> api-3:3000;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">upstream</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> websocket </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> websocket-1:8080;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">server</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    listen </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">80</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">example.com;</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> /api/ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://api_backend;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Host $host;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Real-IP $remote_addr;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">X-Forwarded-For $proxy_add_x_forwarded_for;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> /ws/ </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://websocket;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_http_version </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Upgrade $http_upgrade;</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_set_header </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">Connection </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"upgrade"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> / </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        proxy_pass </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">http://api_backend;</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
+<h3 id="patrón-servicio-con-red-interna-y-externa">Patrón: Servicio con red interna y externa<a aria-label="Link to section" class="anchor-link" href="#patrón-servicio-con-red-interna-y-externa"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌────────────────────────────────────────────┐
+│  Multi-tier networking                      │
+│                                             │
+│  external-net                               │
+│  ┌──────────┐    ┌────────────────────┐    │
+│  │  Nginx   │    │                    │    │
+│  │  :80,443 │    │  app-net           │    │
+│  └──────────┘    │  ┌────────────┐    │    │
+│      │           │  │  api-1     │    │    │
+│      │           │  │  api-2     │    │    │
+│      │           │  └────────────┘    │    │
+│      │  HTTP │    │  ┌────────────┐    │    │
+│      │  HTTPS│    │  │  db        │    │    │
+│      ▼       │    │  │  :5432     │    │    │
+│  ┌──────────┐│    │  └────────────┘    │    │
+│  │  API     ││    │  ┌────────────┐    │    │
+│  │  :3000   ││    │  │  cache     │    │    │
+│  └──────────┘│    │  │  :6379     │    │    │
+│      │       │    │  └────────────┘    │    │
+│      │       │    │  ┌────────────┐    │    │
+│      │       │    │  │  worker    │    │    │
+│      ▼       │    │  │  (solo     │    │    │
+│  ┌──────────┐│    │  │   interno) │    │    │
+│  │  Worker  ││    │  └────────────┘    │    │
+│  │  (sin    │    │                    │    │
+│  │  puertos)│    └────────────────────┘    │
+│  └──────────┘                             │
+│                                             │
+│  external-net: solo nginx (accesible fuera) │
+│  app-net: todos los servicios              │
+│                                             │
+│  worker no tiene puertos expuestos           │
+│  db y cache no tienen puertos expuestos      │
+└────────────────────────────────────────────┘
+</code></pre>
+<h2 id="troubleshooting-de-red">Troubleshooting de red<a aria-label="Link to section" class="anchor-link" href="#troubleshooting-de-red"><span class="icon icon-link"></span></a></h2>
+<h3 id="herramientas-de-diagnóstico">Herramientas de diagnóstico<a aria-label="Link to section" class="anchor-link" href="#herramientas-de-diagnóstico"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Ver contenedores conectados a una red</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Ver la configuración de red de un contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Entrar al contenedor y hacer ping</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ping</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -c</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> other-container</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nslookup</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> other-container</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/resolv.conf</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Ver reglas de iptables</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -L</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> iptables</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -L</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> DOCKER</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -n</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -v</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 5. Ver estadísticas de red del contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> stats</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># NET I/O muestra bytes transmitidos/recibidos</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 6. Ver conexiones activas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> netstat</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ss</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -tlnp</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -I</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> http://other-container:3000/health</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 7. Ver logs de red del daemon</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> journalctl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> docker.service</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --since</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "10 min ago"</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -i</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span></span></code></pre></figure>
+<h3 id="problemas-comunes">Problemas comunes<a aria-label="Link to section" class="anchor-link" href="#problemas-comunes"><span class="icon icon-link"></span></a></h3>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Causa</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name or service not known</code></td>
+<td>DNS no resuelve</td>
+<td>Verificar que los contenedores están en la misma red</td>
+</tr>
+<tr>
+<td><code>connection refused</code></td>
+<td>Servicio no está corriendo</td>
+<td><code>docker ps</code>, verificar health check</td>
+</tr>
+<tr>
+<td><code>connection timed out</code></td>
+<td>Puerto no mapeado / firewall</td>
+<td>Verificar <code>-p</code>, verificar firewall del host</td>
+</tr>
+<tr>
+<td>Puertos internos colisionan</td>
+<td>Múltiples contenedores en mismo puerto</td>
+<td>Usar <code>-p host1:cont:80 -p host2:cont:80</code></td>
+</tr>
+<tr>
+<td>Contenedor no puede acceder a internet</td>
+<td>DNS no configurado</td>
+<td><code>--dns 8.8.8.8</code> o <code>--network host</code></td>
+</tr>
+<tr>
+<td>No se accede desde otro host</td>
+<td>Puerto mapeado a 127.0.0.1</td>
+<td>Usar <code>0.0.0.0:puerto</code> o solo <code>puerto</code></td>
+</tr>
+<tr>
+<td>Red no creada antes del contenedor</td>
+<td>Network no existe</td>
+<td>Crear red antes o usar <code>--network</code></td>
+</tr>
+<tr>
+<td>Contenedores en redes diferentes no se comunican</td>
+<td>Redes no compartidas</td>
+<td>Conectar contenedor a ambas redes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="debug-conectar-contenedor-a-red-existente">Debug: conectar contenedor a red existente<a aria-label="Link to section" class="anchor-link" href="#debug-conectar-contenedor-a-red-existente"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Un contenedor en ejecución en una red diferente</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> connect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-running-container</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ahora puede comunicarse con otros contenedores en myapp-net</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> exec</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-running-container</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ping</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> other-container</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Desconectar</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> disconnect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> myapp-net</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-running-container</span></span></code></pre></figure>
+<h2 id="networking-en-producción">Networking en producción<a aria-label="Link to section" class="anchor-link" href="#networking-en-producción"><span class="icon icon-link"></span></a></h2>
+<h3 id="seguridad-de-red">Seguridad de red<a aria-label="Link to section" class="anchor-link" href="#seguridad-de-red"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. No exponer bases de datos al host</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> db</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> backend-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> POSTGRES_PASSWORD=secret</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  postgres:16</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sin -p → solo accesible desde backend-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Red interna para servicios sensibles</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --internal</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> backend-net</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --internal: sin acceso a internet, sin acceso al host</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Proxy reverso para toda la entrada</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo nginx/proxy expone puertos al host</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Todos los demás servicios en red interna</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Limitar acceso por IP (si es necesario)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 127.0.0.1:8080:80</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> my-api:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo accesible desde localhost</span></span></code></pre></figure>
+<h3 id="performance-de-red">Performance de red<a aria-label="Link to section" class="anchor-link" href="#performance-de-red"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para máxima performance, evitar NAT:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Usar --network host (si no hay colisión de puertos)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> host</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Usar IPv6 directo (evita NAT)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar IPv6 en daemon.json:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "ip6tables"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "ipv6"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">,</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">  "fixed-cidr-v6"</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "2001:db8:1::/64"</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Usar macvlan para IP dedicada</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> create</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --driver</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> macvlan</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --subnet=192.168.1.0/24</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  --gateway=192.168.1.1</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  -o</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> parent=eth0</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  macvlan-net</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -d</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --network</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> macvlan-net</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --ip</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 192.168.1.100</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El contenedor tiene su IP propia en la red física</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Máxima performance, sin NAT</span></span></code></pre></figure>
+<h2 id="resumen">Resumen<a aria-label="Link to section" class="anchor-link" href="#resumen"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><strong>Red bridge por defecto</strong>: aislamiento de red, DNS por IP (no nombre)</li>
+<li><strong>Red bridge personalizada</strong>: DNS automático por nombre, recomendada para compose</li>
+<li><strong>Red host</strong>: sin aislamiento, máxima performance, sin NAT</li>
+<li><strong>Red overlay</strong>: para clusters Swarm/Kubernetes, comunicación inter-host</li>
+<li><strong>Red none</strong>: sin red, para contenedores offline</li>
+<li><strong>Port mapping</strong>: <code>-p host:container</code> con opciones de IP y protocolo</li>
+<li><strong>DNS</strong>: resuelve nombres de contenedores y servicios automáticamente en redes personalizadas</li>
+<li><strong>Múltiples redes</strong>: un contenedor puede estar en varias redes simultáneamente</li>
+<li><strong>Seguridad</strong>: no exponer puertos de BDD, usar redes internas para servicios sensibles</li>
+<li><strong>Debug</strong>: docker network inspect, docker exec + nslookup, iptables</li>
+</ul>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">La clave</div>
+                </div>
+                <div class="callout-content">La regla de oro de Docker networking es: cada contenedor vive en su propia red aislada, y se comunica a través de pasarelas controladas. Usa redes bridge personalizadas para el 99% de los casos, y solo salte a redes host/macvlan cuando el rendimiento sea crítico y comprendas las implicaciones de seguridad.</div>
+              
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki<a aria-label="Link to section" class="anchor-link" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introducción a Docker</td>
+<td>[02-infra-contenedores/01-docker-intro](/es/index)</td>
+</tr>
+<tr>
+<td>Imágenes Docker</td>
+<td>[02-infra-contenedores/02-docker-images](/es/index)</td>
+</tr>
+<tr>
+<td>Contenedores</td>
+<td>[02-infra-contenedores/03-docker-containers](/es/index)</td>
+</tr>
+<tr>
+<td>Docker Compose</td>
+<td>[02-infra-contenedores/04-docker-compose](/es/index)</td>
+</tr>
+<tr>
+<td>Volúmenes Docker</td>
+<td>[02-infra-contenedores/06-docker-volumes](/es/index)</td>
+</tr>
+<tr>
+<td>Modelos OSI/TCP-IP</td>
+<td>[01-redes-internet/015-modelo-osi-tcpip](/es/index)</td>
+</tr>
+</tbody>
+</table></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#por-qué-networking-docker-es-diferente">¿Por qué networking Docker es diferente?</a> </li><li class="toc-depth-2"> <a href="#tipos-de-redes-docker">Tipos de redes Docker</a> </li><li class="toc-depth-3"> <a href="#1-red-bridge">1. Red bridge</a> </li><li class="toc-depth-3"> <a href="#2-red-bridge-personalizada">2. Red bridge personalizada</a> </li><li class="toc-depth-3"> <a href="#3-red-host">3. Red host</a> </li><li class="toc-depth-3"> <a href="#4-red-none">4. Red none</a> </li><li class="toc-depth-3"> <a href="#5-red-overlay">5. Red overlay</a> </li><li class="toc-depth-2"> <a href="#mapeo-de-puertos">Mapeo de puertos</a> </li><li class="toc-depth-3"> <a href="#el-sistema-de-puertos-docker">El sistema de puertos Docker</a> </li><li class="toc-depth-3"> <a href="#escenarios-comunes-de-mapeo-de-puertos">Escenarios comunes de mapeo de puertos</a> </li><li class="toc-depth-3"> <a href="#publicación-en-docker-compose">Publicación en Docker Compose</a> </li><li class="toc-depth-2"> <a href="#dns-en-contenedores">DNS en contenedores</a> </li><li class="toc-depth-3"> <a href="#dns-de-la-red-bridge-personalizada">DNS de la red bridge personalizada</a> </li><li class="toc-depth-3"> <a href="#dns-configuration">DNS configuration</a> </li><li class="toc-depth-3"> <a href="#dns-interno-y-resolución">DNS interno y resolución</a> </li><li class="toc-depth-2"> <a href="#networking-entre-contenedores">Networking entre contenedores</a> </li><li class="toc-depth-3"> <a href="#patrón-api--base-de-datos">Patrón: API + Base de datos</a> </li><li class="toc-depth-3"> <a href="#patrón-reverse-proxy-con-nginx">Patrón: Reverse proxy con Nginx</a> </li><li class="toc-depth-3"> <a href="#patrón-servicio-con-red-interna-y-externa">Patrón: Servicio con red interna y externa</a> </li><li class="toc-depth-2"> <a href="#troubleshooting-de-red">Troubleshooting de red</a> </li><li class="toc-depth-3"> <a href="#herramientas-de-diagnóstico">Herramientas de diagnóstico</a> </li><li class="toc-depth-3"> <a href="#problemas-comunes">Problemas comunes</a> </li><li class="toc-depth-3"> <a href="#debug-conectar-contenedor-a-red-existente">Debug: conectar contenedor a red existente</a> </li><li class="toc-depth-2"> <a href="#networking-en-producción">Networking en producción</a> </li><li class="toc-depth-3"> <a href="#seguridad-de-red">Seguridad de red</a> </li><li class="toc-depth-3"> <a href="#performance-de-red">Performance de red</a> </li><li class="toc-depth-2"> <a href="#resumen">Resumen</a> </li><li class="toc-depth-2"> <a href="#conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

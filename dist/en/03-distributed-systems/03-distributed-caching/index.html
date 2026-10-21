@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/03-distributed-systems/03-distributed-caching/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article active"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Distributed caching: Redis, clusters, and consistency</h1> <div class="article-body"><h1 id="distributed-caching-redis-clusters-and-consistency">Distributed caching: Redis, clusters, and consistency<a aria-label="Link to section" class="anchor-link" href="#distributed-caching-redis-clusters-and-consistency"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Caching in one sentence</div>
+                </div>
+                <div class="callout-content">Distributed caching is a technique that stores frequently accessed data in memory across multiple servers, reducing access latency and load on central databases.</div>
+              
+</blockquote>
+<h2 id="why-do-we-need-distributed-caching">Why do we need distributed caching?<a aria-label="Link to section" class="anchor-link" href="#why-do-we-need-distributed-caching"><span class="icon icon-link"></span></a></h2>
+<p>Databases are slow compared to memory. A PostgreSQL query can take 5-50ms. A Redis in-memory read takes 0.1-0.5ms. If you have a million users making the same query, that is a million database queries.</p>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Library analogy</div>
+                </div>
+                <div class="callout-content">Imagine a huge library:</div>
+              
+<ul>
+<li><strong>Database</strong>: Books on shelves in the basement (very slow, but everything is there).</li>
+<li><strong>Local cache</strong>: A book you carry in your backpack (very fast, but you can only carry one).</li>
+<li><strong>Distributed cache</strong>: A bookshelf in the reading room with the most popular books (fast, shared by everyone, but limited in space).</li>
+</ul>
+<p>Redis is that bookshelf in the reading room.</p>
+</blockquote>
+<hr>
+<h2 id="1-redis-the-in-memory-data-structure-server">1. Redis: The in-memory data structure server<a aria-label="Link to section" class="anchor-link" href="#1-redis-the-in-memory-data-structure-server"><span class="icon icon-link"></span></a></h2>
+<p>Redis (Remote Dictionary Server) is an open-source in-memory data store that supports diverse data structures. It is not just a cache — it is a versatile database used as cache, message broker, and more.</p>
+<h3 id="11-redis-data-types">1.1 Redis data types<a aria-label="Link to section" class="anchor-link" href="#11-redis-data-types"><span class="icon icon-link"></span></a></h3>
+<p>Unlike a simple key-value cache (like Memcached), Redis supports complex data structures:</p>
+<p><strong>Strings</strong>: The most basic type. A binary-safe value of up to 512MB.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>SET user:1000:name "Emilio"</span></span>
+<span data-line=""><span>GET user:1000:name</span></span>
+<span data-line=""><span># -> "Emilio"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>INCR view_count:article:42</span></span>
+<span data-line=""><span># -> 1234</span></span></code></pre></figure>
+<p><strong>Hashes</strong>: A map of fields and values. Ideal for storing objects.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>HSET user:1000 name "Emilio" email "emilio@example.com" age 30</span></span>
+<span data-line=""><span>HGETALL user:1000</span></span>
+<span data-line=""><span># -> name: Emilio, email: emilio@example.com, age: 30</span></span></code></pre></figure>
+<p><strong>Lists</strong>: Ordered lists of strings. Allow push/pop from both ends.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>LPUSH notifications:user:1000 "new-order" "new-message"</span></span>
+<span data-line=""><span>LRANGE notifications:user:1000 0 -1</span></span>
+<span data-line=""><span># -> ["new-order", "new-message"]</span></span></code></pre></figure>
+<p><strong>Sets</strong>: Unordered collections of unique strings.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>SADD tags:article:42 "ai" "machine-learning" "nlp"</span></span>
+<span data-line=""><span>SMEMBERS tags:article:42</span></span>
+<span data-line=""><span># -> {"ai", "machine-learning", "nlp"}</span></span>
+<span data-line=""> </span>
+<span data-line=""><span>SINTER tags:article:42 tags:article:99</span></span>
+<span data-line=""><span># -> Articles in both sets</span></span></code></pre></figure>
+<p><strong>Sorted Sets</strong>: Sets where each member has a score. Useful for ranking, leaderboards, and time-series.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>ZADD leaderboard 1500 "player1" 2300 "player2" 980 "player3"</span></span>
+<span data-line=""><span>ZRANGE leaderboard 0 -1 WITHSCORES</span></span>
+<span data-line=""><span># -> player3 (980), player1 (1500), player2 (2300)</span></span></code></pre></figure>
+<p><strong>Bitmaps</strong>: Individual bits representing boolean values.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>SETBIT user:1000:login:2024-01-01 1</span></span>
+<span data-line=""><span>SETBIT user:1000:login:2024-01-02 1</span></span>
+<span data-line=""><span>SETBIT user:1000:login:2024-01-03 0</span></span>
+<span data-line=""><span># -> User 1000: logged in on day 1 and 2, not on day 3</span></span></code></pre></figure>
+<p><strong>HyperLogLogs</strong>: Structure for approximate unique element counting (cardinality).</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>PFADD visitors "user1" "user2" "user3" "user1" "user4"</span></span>
+<span data-line=""><span>PFCOUNT visitors</span></span>
+<span data-line=""><span># -> 4 (approximate, with 0.81% standard error)</span></span></code></pre></figure>
+<h3 id="12-persistence-rdb-vs-aof">1.2 Persistence: RDB vs AOF<a aria-label="Link to section" class="anchor-link" href="#12-persistence-rdb-vs-aof"><span class="icon icon-link"></span></a></h3>
+<p>Redis is in-memory, but it needs to persist data to disk to avoid losing it on restart. It offers two modes:</p>
+<p><strong>RDB (Snapshotting)</strong>: Takes periodic snapshots of the dataset into a compact binary file.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># Configuration</span></span>
+<span data-line=""><span>save 900 1      # Snapshot every 15 min if at least 1 change</span></span>
+<span data-line=""><span>save 300 10     # Snapshot every 5 min if at least 10 changes</span></span>
+<span data-line=""><span>save 60 10000   # Snapshot every 1 min if at least 10000 changes</span></span></code></pre></figure>
+<ul>
+<li><strong>Advantages</strong>: Compact file, fast to restore, ideal for backups.</li>
+<li><strong>Disadvantages</strong>: You may lose data between snapshots.</li>
+</ul>
+<p><strong>AOF (Append Only File)</strong>: Records each write operation in a log.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># Configuration</span></span>
+<span data-line=""><span>appendonly yes</span></span>
+<span data-line=""><span>appendfsync everysec  # Sync to disk every second</span></span>
+<span data-line=""><span># Options: always (safe but slow), everysec (balanced), no (OS-dependent)</span></span></code></pre></figure>
+<ul>
+<li><strong>Advantages</strong>: Less data loss (only the last second).</li>
+<li><strong>Disadvantages</strong>: Larger file, slower restoration.</li>
+</ul>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Use RDB, AOF, or both?</div>
+                </div>
+                <div class="callout-content">The recommended configuration for production is to use both:</div>
+              
+<ul>
+<li><strong>AOF</strong> for durability (lose only ~1 second of data)</li>
+<li><strong>RDB</strong> for backups and fast recovery</li>
+</ul>
+<p>Redis combines both on startup: loads the last RDB and replays the AOF.</p>
+</blockquote>
+<h3 id="13-redis-pubsub">1.3 Redis Pub/Sub<a aria-label="Link to section" class="anchor-link" href="#13-redis-pubsub"><span class="icon icon-link"></span></a></h3>
+<p>Redis includes a lightweight pub/sub system:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span># Subscriber</span></span>
+<span data-line=""><span>SUBSCRIBE channel:notifications</span></span>
+<span data-line=""> </span>
+<span data-line=""><span># Publisher</span></span>
+<span data-line=""><span>PUBLISH channel:notifications "new-message"</span></span></code></pre></figure>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Redis pub/sub is not durable</div>
+                </div>
+                <div class="callout-content">Messages are lost if there are no active subscribers. Redis pub/sub is for real-time messaging, not for durable message queues. For durable queues, use Redis Lists with BLPOP/BRPOP or better yet, RabbitMQ/Kafka.</div>
+              
+</blockquote>
+<h3 id="14-lua-scripts">1.4 Lua Scripts<a aria-label="Link to section" class="anchor-link" href="#14-lua-scripts"><span class="icon icon-link"></span></a></h3>
+<p>Redis supports atomic execution of Lua scripts:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="lua" data-theme="github-light github-dark"><code data-language="lua" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">-- Script: Increment counter only if it exists</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">call</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'EXISTS'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, KEYS[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 1</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> then</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">call</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'INCR'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, KEYS[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">])</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">else</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> -</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre></figure>
+<p>Lua scripts execute atomically — no other command runs while the script executes. This is useful for complex operations that need atomicity without using MULTI/EXEC (transactions).</p>
+<hr>
+<h2 id="2-redis-cluster-automatic-sharding">2. Redis Cluster: Automatic sharding<a aria-label="Link to section" class="anchor-link" href="#2-redis-cluster-automatic-sharding"><span class="icon icon-link"></span></a></h2>
+<p>Redis Cluster is Redis's solution for scaling beyond a single server. It divides the key space into 16384 hash slots and distributes them across multiple nodes.</p>
+<h3 id="21-how-sharding-works">2.1 How sharding works<a aria-label="Link to section" class="anchor-link" href="#21-how-sharding-works"><span class="icon icon-link"></span></a></h3>
+<p>Each node in the cluster is responsible for a subset of the 16384 hash slots:</p>
+<pre><code>Node A: Hash slots 0-5460
+Node B: Hash slots 5461-10922
+Node C: Hash slots 10923-16383
+</code></pre>
+<p>When a client wants to access a key:</p>
+<ol>
+<li>Calculates the hash slot of the key: <code>CRC16(key) % 16384</code></li>
+<li>If the slot is on the node it connected to, returns the data.</li>
+<li>If the slot is on another node, responds with a MOVED redirect:</li>
+</ol>
+<pre><code>> GET user:1000:name
+MOVED 5461 192.168.1.2:6380
+# Client redirects to 192.168.1.2:6380
+> GET user:1000:name
+"Emilio"
+</code></pre>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Smart clients</div>
+                </div>
+                <div class="callout-content">Modern Redis clients (jedis, redis-py, redis-clustering) handle redirects automatically. They maintain a cache of the hash slot → node mapping, so most queries go directly to the correct node.</div>
+              
+</blockquote>
+<h3 id="22-replication-and-failover">2.2 Replication and failover<a aria-label="Link to section" class="anchor-link" href="#22-replication-and-failover"><span class="icon icon-link"></span></a></h3>
+<p>Each master node can have one or more replica nodes:</p>
+<pre><code>Node A (master) → Replica A1
+Node B (master) → Replica B1
+Node C (master) → Replica C1
+</code></pre>
+<p>If a master crashes:</p>
+<ol>
+<li>Replicas detect the crash (failure detection by timeout).</li>
+<li>A replica auto-promotes to master (elective failover).</li>
+<li>The new master reassigns the crashed master's hash slots.</li>
+<li>The cluster reconfigures and notifies clients.</li>
+</ol>
+<pre><code>Before failover:
+Node A (master) → Replica A1
+
+After failover:
+Node A (crashed) ✗
+Replica A1 (promoted to master) → Replica A2 (new replica)
+</code></pre>
+<blockquote class="callout-info" data-callout="info" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                  <div class="callout-title-text">Why 16384 hash slots?</div>
+                </div>
+                <div class="callout-content">16384 is an arbitrary but reasonable number. It is large enough to scale (thousands of nodes) but small enough that each node can maintain a hash slot table in memory without issues.</div>
+              
+</blockquote>
+<h3 id="23-gossip-protocol">2.3 Gossip protocol<a aria-label="Link to section" class="anchor-link" href="#23-gossip-protocol"><span class="icon icon-link"></span></a></h3>
+<p>Redis Cluster uses a Gossip protocol for communication between nodes:</p>
+<ul>
+<li>Each node periodically sends Gossip messages to random nodes.</li>
+<li>Messages contain information about cluster state (nodes, slots, failures).</li>
+<li>This enables rapid information propagation without a central node.</li>
+</ul>
+<blockquote class="callout-example" data-callout="example" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg></div>
+                  <div class="callout-title-text">Gossip analogy</div>
+                </div>
+                <div class="callout-content">Imagine an office where:</div>
+              
+<ul>
+<li>Each day, each person talks to 2-3 random colleagues.</li>
+<li>They share what they know about who is sick, who was late, etc.</li>
+<li>Within a few days, EVERYONE knows everything.</li>
+</ul>
+<p>That is Gossip: information that spreads person to person, in a decentralized way.</p>
+</blockquote>
+<hr>
+<h2 id="3-caching-patterns">3. Caching patterns<a aria-label="Link to section" class="anchor-link" href="#3-caching-patterns"><span class="icon icon-link"></span></a></h2>
+<h3 id="31-cache-aside-lazy-loading">3.1 Cache-Aside (Lazy Loading)<a aria-label="Link to section" class="anchor-link" href="#31-cache-aside-lazy-loading"><span class="icon icon-link"></span></a></h3>
+<p>The most common pattern. The application manages the cache:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> get_user</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(user_id):</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 1. Try cache</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    user </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.get(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> deserialize(user)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # 2. If not in cache, query DB</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    user </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.query(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"SELECT * FROM users WHERE id = ?"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, user_id)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # 3. Save to cache</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        redis.setex(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3600</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, serialize(user))</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> user</span></span></code></pre></figure>
+<ul>
+<li><strong>Advantages</strong>: Simple, cache only stores needed data.</li>
+<li><strong>Disadvantages</strong>: Cache miss initial request requires DB query.</li>
+</ul>
+<h3 id="32-read-through--write-through">3.2 Read-Through / Write-Through<a aria-label="Link to section" class="anchor-link" href="#32-read-through--write-through"><span class="icon icon-link"></span></a></h3>
+<p>The cache manages read/write logic automatically (usually with a wrapper).</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Read-through</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> cache.get(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cache queries DB if it does not have it</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Write-through</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">cache.set(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, user_data)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cache writes to DB automatically</span></span></code></pre></figure>
+<h3 id="33-write-behind-write-back">3.3 Write-Behind (Write-Back)<a aria-label="Link to section" class="anchor-link" href="#33-write-behind-write-back"><span class="icon icon-link"></span></a></h3>
+<p>Write goes to cache first, and the cache writes to DB asynchronously.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Written to cache immediately</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">cache.set(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, user_data)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Written to DB asynchronously by the cache</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># (seconds or minutes later)</span></span></code></pre></figure>
+<ul>
+<li><strong>Advantages</strong>: Very fast writes.</li>
+<li><strong>Disadvantages</strong>: If cache crashes before writing to DB, data is lost.</li>
+</ul>
+<h3 id="34-ttl-time-to-live-and-eviction">3.4 TTL (Time-To-Live) and eviction<a aria-label="Link to section" class="anchor-link" href="#34-ttl-time-to-live-and-eviction"><span class="icon icon-link"></span></a></h3>
+<p>All values in Redis can have a TTL:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="redis" data-theme="github-light github-dark"><code data-language="redis" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span>SET user:1000:name "Emilio" EX 3600</span></span>
+<span data-line=""><span># Expires in 1 hour</span></span>
+<span data-line=""> </span>
+<span data-line=""><span># Or after last access:</span></span>
+<span data-line=""><span>SET user:1000:name "Emilio" PX 3600000</span></span>
+<span data-line=""><span># Expires in 3600000 milliseconds</span></span></code></pre></figure>
+<p>Eviction policies when memory is full:</p>
+<ul>
+<li><strong>noeviction</strong>: Returns error when memory is full.</li>
+<li><strong>allkeys-lru</strong>: Evict the least recently used key.</li>
+<li><strong>allkeys-lfu</strong>: Evict the least frequently used key.</li>
+<li><strong>volatile-lru</strong>: Only evict keys with TTL, least recently used.</li>
+<li><strong>volatile-lfu</strong>: Only evict keys with TTL, least frequently used.</li>
+<li><strong>volatile-ttl</strong>: Evict the key with the shortest TTL.</li>
+</ul>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Always configure a TTL</div>
+                </div>
+                <div class="callout-content">Without TTL, keys never expire. If you do not manage them manually, the cache will fill up and start evicting keys (or fail if you use noeviction). Always set a reasonable TTL.</div>
+              
+</blockquote>
+<hr>
+<h2 id="4-common-caching-problems">4. Common caching problems<a aria-label="Link to section" class="anchor-link" href="#4-common-caching-problems"><span class="icon icon-link"></span></a></h2>
+<h3 id="41-cache-stampede-thundering-herd">4.1 Cache Stampede (Thundering Herd)<a aria-label="Link to section" class="anchor-link" href="#41-cache-stampede-thundering-herd"><span class="icon icon-link"></span></a></h3>
+<p>When a high-TTL key expires, thousands of requests hit the database simultaneously.</p>
+<pre><code>Time 0:    TTL expires for key "popular-article"
+Time 0.1s: 1000 requests arrive at once
+Time 0.2s:  1000 queries to the DB (!!!)
+</code></pre>
+<p><strong>Solution</strong>: Distributed lock or "guard dog" pattern:</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> get_article</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(article_id):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    data </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.get(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"article:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">article_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> data:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> data</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    </span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">    # Try to get the lock</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    lock </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> redis.set(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"lock:article:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">article_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"1"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">nx</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">ex</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> lock:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # I am the only one regenerating</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        data </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> db.get_article(article_id)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        redis.setex(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"article:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">article_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">3600</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, data)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> data</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Someone else is regenerating, wait and retry</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">        time.sleep(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">0.1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> get_article(article_id)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Recursive retry</span></span></code></pre></figure>
+<h3 id="42-cache-penetration">4.2 Cache Penetration<a aria-label="Link to section" class="anchor-link" href="#42-cache-penetration"><span class="icon icon-link"></span></a></h3>
+<p>Requests for data that does not exist in the DB, filling the cache with null entries.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Malicious user requests non-existent users</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1000000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    get_user(i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 7</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Never exist</span></span></code></pre></figure>
+<p><strong>Solution</strong>: Cache null results with a short TTL, or use a Bloom Filter.</p>
+<h3 id="43-cache-breakdown">4.3 Cache Breakdown<a aria-label="Link to section" class="anchor-link" href="#43-cache-breakdown"><span class="icon icon-link"></span></a></h3>
+<p>Similar to cache stampede but for a single popular key that expires.</p>
+<p><strong>Solution</strong>: Distributed mutex (same as stampede).</p>
+<hr>
+<h2 id="5-consistency-in-distributed-caching">5. Consistency in distributed caching<a aria-label="Link to section" class="anchor-link" href="#5-consistency-in-distributed-caching"><span class="icon icon-link"></span></a></h2>
+<p>Cache is inherently inconsistent with the database. Data in cache may be stale. The key question is: how much inconsistency can you tolerate?</p>
+<h3 id="51-eventual-consistency-the-norm">5.1 Eventual consistency (the norm)<a aria-label="Link to section" class="anchor-link" href="#51-eventual-consistency-the-norm"><span class="icon icon-link"></span></a></h3>
+<p>In most systems, cache has eventual consistency: eventually data in cache will be consistent, but not immediately.</p>
+<pre><code>Time 0:    DB: user.email = "old@example.com"
+Time 0:    Cache: user.email = "old@example.com"
+Time 1:    User updates email → DB: user.email = "new@example.com"
+Time 1.1:  Cache NOT updated yet (stale)
+Time 3600: TTL expires, cache regenerates with new data
+</code></pre>
+<h3 id="52-invalidation-vs-update">5.2 Invalidation vs Update<a aria-label="Link to section" class="anchor-link" href="#52-invalidation-vs-update"><span class="icon icon-link"></span></a></h3>
+<p><strong>Invalidation</strong> (recommended): Remove the cache key when updated in DB. The next read regenerates the cache.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> update_user</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(user_id, data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.update_user(user_id, data)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    redis.delete(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Invalidate cache</span></span></code></pre></figure>
+<p><strong>Update</strong>: Update both DB and cache.</p>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> update_user</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(user_id, data):</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    db.update_user(user_id, data)</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    redis.set(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"user:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">user_id</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, serialize(data))  </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Update cache</span></span></code></pre></figure>
+<blockquote class="callout-warning" data-callout="warning" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Invalidation or update?</div>
+                </div>
+                <div class="callout-content">Invalidation is safer because it avoids race conditions. With update, if the DB write fails but the cache write succeeds, you will have inconsistent data. With invalidation, the next read always gets the correct data from the DB.</div>
+              
+<p>However, invalidation causes cache misses. If inconsistency is acceptable for a short time, update is more efficient.</p>
+</blockquote>
+<hr>
+<h2 id="key-concepts">Key concepts<a aria-label="Link to section" class="anchor-link" href="#key-concepts"><span class="icon icon-link"></span></a></h2>
+<ol>
+<li>
+<p><strong>Redis is much more than a cache</strong>: It supports strings, hashes, lists, sets, sorted sets, bitmaps, HyperLogLogs, and Lua scripts. It is a versatile in-memory database.</p>
+</li>
+<li>
+<p><strong>Persistence is optional but recommended</strong>: RDB for periodic snapshots, AOF for operation logging. Using both is the typical production configuration.</p>
+</li>
+<li>
+<p><strong>Redis Cluster automatic sharding</strong>: 16384 hash slots distributed among master nodes, with replication and automatic failover. Smart clients handle redirects automatically.</p>
+</li>
+<li>
+<p><strong>Caching introduces inconsistency</strong>: Data in cache may be stale. Invalidation is safer than update, but update is more efficient. Choose based on your inconsistency tolerance.</p>
+</li>
+<li>
+<p><strong>Cache failure patterns are predictable</strong>: Cache stampede, penetration, and breakdown have well-established solutions (mutex, bloom filters, TTL).</p>
+</li>
+</ol>
+<h2 id="related-to">Related to<a aria-label="Link to section" class="anchor-link" href="#related-to"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li>[01-consensus-paxos-raft](/en/03-distributed-systems/01-consensus-paxos-raft) — Redis Cluster uses a consensus protocol for node failover</li>
+<li>[02-message-queues](/en/03-distributed-systems/02-message-queues) — Redis pub/sub can be used as a simple message queue, but without durability</li>
+<li>[04-event-driven-cqrs-saga](/en/03-distributed-systems/04-event-driven-cqrs-saga) — Cache is common in CQRS for reading the query model</li>
+<li>[05-idempotency-retry-circuit-breakers](/en/03-distributed-systems/05-idempotency-retry-circuit-breakers) — Cache consistency affects the idempotency of operations</li>
+</ul>
+<h2 id="references">References<a aria-label="Link to section" class="anchor-link" href="#references"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><a href="https://redis.io/documentation">Redis Documentation</a></li>
+<li><a href="https://redis.io/docs/reference/cluster-spec/">Redis Cluster Specification</a></li>
+<li><a href="https://dataintensive.net/">Designing Data-Intensive Applications — Chapter 9: Data and Locking</a></li>
+<li><a href="https://redis.io/docs/manual/persistence/">Redis Persistence Documentation</a></li>
+<li><a href="https://redis.io/docs/manual/patterns/">Redis Cache Patterns</a></li>
+</ul></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#why-do-we-need-distributed-caching">Why do we need distributed caching?</a> </li><li class="toc-depth-2"> <a href="#1-redis-the-in-memory-data-structure-server">1. Redis: The in-memory data structure server</a> </li><li class="toc-depth-3"> <a href="#11-redis-data-types">1.1 Redis data types</a> </li><li class="toc-depth-3"> <a href="#12-persistence-rdb-vs-aof">1.2 Persistence: RDB vs AOF</a> </li><li class="toc-depth-3"> <a href="#13-redis-pubsub">1.3 Redis Pub/Sub</a> </li><li class="toc-depth-3"> <a href="#14-lua-scripts">1.4 Lua Scripts</a> </li><li class="toc-depth-2"> <a href="#2-redis-cluster-automatic-sharding">2. Redis Cluster: Automatic sharding</a> </li><li class="toc-depth-3"> <a href="#21-how-sharding-works">2.1 How sharding works</a> </li><li class="toc-depth-3"> <a href="#22-replication-and-failover">2.2 Replication and failover</a> </li><li class="toc-depth-3"> <a href="#23-gossip-protocol">2.3 Gossip protocol</a> </li><li class="toc-depth-2"> <a href="#3-caching-patterns">3. Caching patterns</a> </li><li class="toc-depth-3"> <a href="#31-cache-aside">3.1 Cache-Aside</a> </li><li class="toc-depth-3"> <a href="#32-read-through--write-through">3.2 Read-Through / Write-Through</a> </li><li class="toc-depth-3"> <a href="#33-write-behind">3.3 Write-Behind</a> </li><li class="toc-depth-3"> <a href="#34-ttl--and-eviction">3.4 TTL  and eviction</a> </li><li class="toc-depth-2"> <a href="#4-common-caching-problems">4. Common caching problems</a> </li><li class="toc-depth-3"> <a href="#41-cache-stampede">4.1 Cache Stampede</a> </li><li class="toc-depth-3"> <a href="#42-cache-penetration">4.2 Cache Penetration</a> </li><li class="toc-depth-3"> <a href="#43-cache-breakdown">4.3 Cache Breakdown</a> </li><li class="toc-depth-2"> <a href="#5-consistency-in-distributed-caching">5. Consistency in distributed caching</a> </li><li class="toc-depth-3"> <a href="#51-eventual-consistency">5.1 Eventual consistency</a> </li><li class="toc-depth-3"> <a href="#52-invalidation-vs-update">5.2 Invalidation vs Update</a> </li><li class="toc-depth-2"> <a href="#key-concepts">Key concepts</a> </li><li class="toc-depth-2"> <a href="#related-to">Related to</a> </li><li class="toc-depth-2"> <a href="#references">References</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

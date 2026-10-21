@@ -29,6 +29,31 @@ The dev server will be available at `http://localhost:4321`.
 | `npm run preview` | Preview the production build locally |
 | `npm run check` | Run TypeScript/Astro type checking |
 
+## Production
+
+The production wiki is a static Astro build served by Caddy at:
+
+```text
+https://wiki.elashera.com
+```
+
+Deployment target on the VPS:
+
+```text
+/srv/wiki
+```
+
+Deployment flow:
+
+```bash
+npm ci
+npm run check
+npm run build
+rsync -az --delete dist/ lenag-vps:/srv/wiki/
+```
+
+Caddy serves the generated files directly with `try_files {path} {path}/index.html /index.html`.
+
 ## Directory Structure
 
 ```

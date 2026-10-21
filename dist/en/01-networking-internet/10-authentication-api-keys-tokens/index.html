@@ -1,45 +1,38 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0</h1> <div class="article-body"><h1 id="authentication-basic-auth-bearer-tokens-api-keys-oauth-20"><a aria-hidden="true" tabindex="-1" href="#authentication-basic-auth-bearer-tokens-api-keys-oauth-20"><span class="icon icon-link"></span></a>Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0</h1>
-<blockquote>
-<p>[!tip] Authentication in a nutshell
-Authentication is verifying that someone is who they claim to be. HTTP provides several mechanisms: Basic Auth, Bearer tokens, API keys, and the OAuth 2.0 framework. Each has different security properties and use cases.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/10-authentication-api-keys-tokens" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article active"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0</h1> <div class="article-body"><h1 id="authentication-basic-auth-bearer-tokens-api-keys-oauth-20">Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0<a aria-label="Link to section" class="anchor-link" href="#authentication-basic-auth-bearer-tokens-api-keys-oauth-20"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Authentication in a nutshell</div>
+                </div>
+                <div class="callout-content">Authentication is verifying that someone is who they claim to be. HTTP provides several mechanisms: Basic Auth, Bearer tokens, API keys, and the OAuth 2.0 framework. Each has different security properties and use cases.</div>
+              
 </blockquote>
-<h2 id="what-is-authentication"><a aria-hidden="true" tabindex="-1" href="#what-is-authentication"><span class="icon icon-link"></span></a>What is Authentication?</h2>
+<h2 id="what-is-authentication">What is Authentication?<a aria-label="Link to section" class="anchor-link" href="#what-is-authentication"><span class="icon icon-link"></span></a></h2>
 <p>Authentication is the process of <strong>verifying identity</strong>. It answers the question: "Are you who you claim to be?"</p>
 <pre><code>Authentication (AuthN)  → "Are you John?"
 Authorization (AuthZ)   → "Can John access /admin?"
 </code></pre>
-<h2 id="http-authentication-header"><a aria-hidden="true" tabindex="-1" href="#http-authentication-header"><span class="icon icon-link"></span></a>HTTP Authentication Header</h2>
+<h2 id="http-authentication-header">HTTP Authentication Header<a aria-label="Link to section" class="anchor-link" href="#http-authentication-header"><span class="icon icon-link"></span></a></h2>
 <p>HTTP has a standard way to send credentials in requests:</p>
 <pre><code>Authorization: &#x3C;type> &#x3C;credentials>
 </code></pre>
 <p>The type and format depend on the authentication method.</p>
-<h2 id="http-basic-authentication"><a aria-hidden="true" tabindex="-1" href="#http-basic-authentication"><span class="icon icon-link"></span></a>HTTP Basic Authentication</h2>
+<h2 id="http-basic-authentication">HTTP Basic Authentication<a aria-label="Link to section" class="anchor-link" href="#http-basic-authentication"><span class="icon icon-link"></span></a></h2>
 <p>Basic Auth is the simplest form of HTTP authentication. Credentials are sent as base64-encoded username and password.</p>
-<h3 id="how-basic-auth-works"><a aria-hidden="true" tabindex="-1" href="#how-basic-auth-works"><span class="icon icon-link"></span></a>How Basic Auth works</h3>
+<h3 id="how-basic-auth-works">How Basic Auth works<a aria-label="Link to section" class="anchor-link" href="#how-basic-auth-works"><span class="icon icon-link"></span></a></h3>
 <pre><code># Server requires authentication
 GET /api/data HTTP/1.1
 Host: api.example.com
@@ -57,13 +50,13 @@ Authorization: Basic &#x3C;base64-encoded-credentials>
 # Server validates and responds
 HTTP/1.1 200 OK
 </code></pre>
-<h3 id="basic-auth-in-curl"><a aria-hidden="true" tabindex="-1" href="#basic-auth-in-curl"><span class="icon icon-link"></span></a>Basic Auth in curl</h3>
+<h3 id="basic-auth-in-curl">Basic Auth in curl<a aria-label="Link to section" class="anchor-link" href="#basic-auth-in-curl"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># With username and password</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -u</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> john:secret123</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.example.com/data</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Equivalent to:</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -H</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "Authorization: Basic &#x3C;base64-encoded-credentials>"</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> https://api.example.com/data</span></span></code></pre></figure>
-<h3 id="basic-auth-security"><a aria-hidden="true" tabindex="-1" href="#basic-auth-security"><span class="icon icon-link"></span></a>Basic Auth security</h3>
+<h3 id="basic-auth-security">Basic Auth security<a aria-label="Link to section" class="anchor-link" href="#basic-auth-security"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -94,13 +87,18 @@ HTTP/1.1 200 OK
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!caution] Basic Auth is almost always the wrong choice
-Basic Auth sends credentials with every request. It is not designed for modern API authentication. Use it only for simple internal tools or when absolutely required by legacy systems. It MUST be used over HTTPS only.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Basic Auth is almost always the wrong choice</div>
+                </div>
+                <div class="callout-content">Basic Auth sends credentials with every request. It is not designed for modern API authentication. Use it only for simple internal tools or when absolutely required by legacy systems. It MUST be used over HTTPS only.</div>
+              
 </blockquote>
-<h2 id="bearer-tokens-token-based-authentication"><a aria-hidden="true" tabindex="-1" href="#bearer-tokens-token-based-authentication"><span class="icon icon-link"></span></a>Bearer Tokens (Token-based authentication)</h2>
+<h2 id="bearer-tokens-token-based-authentication">Bearer Tokens (Token-based authentication)<a aria-label="Link to section" class="anchor-link" href="#bearer-tokens-token-based-authentication"><span class="icon icon-link"></span></a></h2>
 <p>Bearer tokens are the modern standard for API authentication. Any holder of the token (the "bearer") can use it.</p>
-<h3 id="how-bearer-tokens-work"><a aria-hidden="true" tabindex="-1" href="#how-bearer-tokens-work"><span class="icon icon-link"></span></a>How Bearer Tokens work</h3>
+<h3 id="how-bearer-tokens-work">How Bearer Tokens work<a aria-label="Link to section" class="anchor-link" href="#how-bearer-tokens-work"><span class="icon icon-link"></span></a></h3>
 <pre><code># Client sends token
 GET /api/data HTTP/1.1
 Host: api.example.com
@@ -112,7 +110,7 @@ Content-Type: application/json
 
 { "id": 123, "name": "John" }
 </code></pre>
-<h3 id="bearer-token-vs-basic-auth"><a aria-hidden="true" tabindex="-1" href="#bearer-token-vs-basic-auth"><span class="icon icon-link"></span></a>Bearer token vs Basic Auth</h3>
+<h3 id="bearer-token-vs-basic-auth">Bearer token vs Basic Auth<a aria-label="Link to section" class="anchor-link" href="#bearer-token-vs-basic-auth"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -154,7 +152,7 @@ Content-Type: application/json
 </tr>
 </tbody>
 </table>
-<h3 id="bearer-token-security-best-practices"><a aria-hidden="true" tabindex="-1" href="#bearer-token-security-best-practices"><span class="icon icon-link"></span></a>Bearer token security best practices</h3>
+<h3 id="bearer-token-security-best-practices">Bearer token security best practices<a aria-label="Link to section" class="anchor-link" href="#bearer-token-security-best-practices"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Good: Store tokens in httpOnly cookies</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">res.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">cookie</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'token'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, accessToken, {</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  httpOnly: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -167,7 +165,7 @@ Content-Type: application/json
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Bad: Never send tokens over plain HTTP</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Bad: Never log tokens</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">console.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">log</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'Auth header:'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, req.headers.authorization); </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// BAD!</span></span></code></pre></figure>
-<h3 id="where-to-store-tokens"><a aria-hidden="true" tabindex="-1" href="#where-to-store-tokens"><span class="icon icon-link"></span></a>Where to store tokens</h3>
+<h3 id="where-to-store-tokens">Where to store tokens<a aria-label="Link to section" class="anchor-link" href="#where-to-store-tokens"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -204,13 +202,18 @@ Content-Type: application/json
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Best practice: httpOnly + Secure + SameSite cookies
-Store the Bearer token in an httpOnly cookie. This protects against XSS (JavaScript cannot read it) and works seamlessly with CSRF protection via SameSite.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Best practice: httpOnly + Secure + SameSite cookies</div>
+                </div>
+                <div class="callout-content">Store the Bearer token in an httpOnly cookie. This protects against XSS (JavaScript cannot read it) and works seamlessly with CSRF protection via SameSite.</div>
+              
 </blockquote>
-<h2 id="api-keys"><a aria-hidden="true" tabindex="-1" href="#api-keys"><span class="icon icon-link"></span></a>API Keys</h2>
+<h2 id="api-keys">API Keys<a aria-label="Link to section" class="anchor-link" href="#api-keys"><span class="icon icon-link"></span></a></h2>
 <p>API keys are simple strings used to identify the caller. They are commonly used for server-to-server authentication.</p>
-<h3 id="how-api-keys-work"><a aria-hidden="true" tabindex="-1" href="#how-api-keys-work"><span class="icon icon-link"></span></a>How API keys work</h3>
+<h3 id="how-api-keys-work">How API keys work<a aria-label="Link to section" class="anchor-link" href="#how-api-keys-work"><span class="icon icon-link"></span></a></h3>
 <pre><code># Using an API key in the header
 GET /api/data HTTP/1.1
 Host: api.example.com
@@ -225,7 +228,7 @@ Content-Type: application/json
 X-API-Key: &#x3C;your-api-key-here>
 {"name": "John"}
 </code></pre>
-<h3 id="api-key-security-properties"><a aria-hidden="true" tabindex="-1" href="#api-key-security-properties"><span class="icon icon-link"></span></a>API key security properties</h3>
+<h3 id="api-key-security-properties">API key security properties<a aria-label="Link to section" class="anchor-link" href="#api-key-security-properties"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -256,7 +259,7 @@ X-API-Key: &#x3C;your-api-key-here>
 </tr>
 </tbody>
 </table>
-<h3 id="api-key-best-practices"><a aria-hidden="true" tabindex="-1" href="#api-key-best-practices"><span class="icon icon-link"></span></a>API key best practices</h3>
+<h3 id="api-key-best-practices">API key best practices<a aria-label="Link to section" class="anchor-link" href="#api-key-best-practices"><span class="icon icon-link"></span></a></h3>
 <pre><code># GOOD: Rotate keys regularly
 # GOOD: Use different keys for development, staging, production
 # GOOD: Store keys in environment variables or secrets managers
@@ -268,7 +271,7 @@ X-API-Key: &#x3C;your-api-key-here>
 # BAD: Share API keys via email or chat
 # BAD: Use the same key for all environments
 </code></pre>
-<h3 id="api-key-vs-bearer-token"><a aria-hidden="true" tabindex="-1" href="#api-key-vs-bearer-token"><span class="icon icon-link"></span></a>API key vs Bearer token</h3>
+<h3 id="api-key-vs-bearer-token">API key vs Bearer token<a aria-label="Link to section" class="anchor-link" href="#api-key-vs-bearer-token"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -305,9 +308,9 @@ X-API-Key: &#x3C;your-api-key-here>
 </tr>
 </tbody>
 </table>
-<h2 id="oauth-20"><a aria-hidden="true" tabindex="-1" href="#oauth-20"><span class="icon icon-link"></span></a>OAuth 2.0</h2>
+<h2 id="oauth-20">OAuth 2.0<a aria-label="Link to section" class="anchor-link" href="#oauth-20"><span class="icon icon-link"></span></a></h2>
 <p>OAuth 2.0 is an <strong>authorization framework</strong> that allows third-party applications to obtain limited access to a user's resources without sharing credentials.</p>
-<h3 id="oauth-20-vs-oauth-10"><a aria-hidden="true" tabindex="-1" href="#oauth-20-vs-oauth-10"><span class="icon icon-link"></span></a>OAuth 2.0 vs OAuth 1.0</h3>
+<h3 id="oauth-20-vs-oauth-10">OAuth 2.0 vs OAuth 1.0<a aria-label="Link to section" class="anchor-link" href="#oauth-20-vs-oauth-10"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -344,11 +347,16 @@ X-API-Key: &#x3C;your-api-key-here>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!note] OAuth 2.0 is NOT an authentication protocol
-OAuth 2.0 is an authorization framework. It answers "Can this app access these resources?" not "Who is this user?". OpenID Connect (OIDC) builds on OAuth 2.0 for authentication.</p>
+<blockquote class="callout-note" data-callout="note" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-text">OAuth 2.0 is NOT an authentication protocol</div>
+                </div>
+                <div class="callout-content">OAuth 2.0 is an authorization framework. It answers "Can this app access these resources?" not "Who is this user?". OpenID Connect (OIDC) builds on OAuth 2.0 for authentication.</div>
+              
 </blockquote>
-<h3 id="oauth-20-actors"><a aria-hidden="true" tabindex="-1" href="#oauth-20-actors"><span class="icon icon-link"></span></a>OAuth 2.0 Actors</h3>
+<h3 id="oauth-20-actors">OAuth 2.0 Actors<a aria-label="Link to section" class="anchor-link" href="#oauth-20-actors"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -375,8 +383,8 @@ OAuth 2.0 is an authorization framework. It answers "Can this app access these r
 </tr>
 </tbody>
 </table>
-<h3 id="oauth-20-authorization-flows"><a aria-hidden="true" tabindex="-1" href="#oauth-20-authorization-flows"><span class="icon icon-link"></span></a>OAuth 2.0 Authorization Flows</h3>
-<h4 id="authorization-code-flow-most-common"><a aria-hidden="true" tabindex="-1" href="#authorization-code-flow-most-common"><span class="icon icon-link"></span></a>Authorization Code Flow (most common)</h4>
+<h3 id="oauth-20-authorization-flows">OAuth 2.0 Authorization Flows<a aria-label="Link to section" class="anchor-link" href="#oauth-20-authorization-flows"><span class="icon icon-link"></span></a></h3>
+<h4 id="authorization-code-flow-most-common">Authorization Code Flow (most common)<a aria-label="Link to section" class="anchor-link" href="#authorization-code-flow-most-common"><span class="icon icon-link"></span></a></h4>
 <p>Used for server-side web applications:</p>
 <pre><code>1. User clicks "Login with Google"
 2. Client redirects user to:
@@ -414,7 +422,7 @@ OAuth 2.0 is an authorization framework. It answers "Can this app access these r
    GET https://www.googleapis.com/oauth2/v2/userinfo
    Authorization: Bearer ya29.a0AfH6SMB...
 </code></pre>
-<h4 id="authorization-code-flow-with-pkce"><a aria-hidden="true" tabindex="-1" href="#authorization-code-flow-with-pkce"><span class="icon icon-link"></span></a>Authorization Code Flow with PKCE</h4>
+<h4 id="authorization-code-flow-with-pkce">Authorization Code Flow with PKCE<a aria-label="Link to section" class="anchor-link" href="#authorization-code-flow-with-pkce"><span class="icon icon-link"></span></a></h4>
 <p>PKCE (Proof Key for Code Exchange) adds security to prevent authorization code interception. Required for SPAs and mobile apps:</p>
 <pre><code>1. Client generates: code_verifier (random string)
 2. Client computes: code_challenge = BASE64URL(SHA256(code_verifier))
@@ -430,11 +438,16 @@ OAuth 2.0 is an authorization framework. It answers "Can this app access these r
    grant_type=authorization_code&#x26;
    code_verifier=RANDOM_STRING_GENERATED_IN_STEP_1
 </code></pre>
-<blockquote>
-<p>[!tip] PKCE is required for public clients
-SPA (Single Page Applications) and mobile apps cannot securely store a client secret. PKCE protects them from authorization code interception attacks.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">PKCE is required for public clients</div>
+                </div>
+                <div class="callout-content">SPA (Single Page Applications) and mobile apps cannot securely store a client secret. PKCE protects them from authorization code interception attacks.</div>
+              
 </blockquote>
-<h3 id="oauth-20-grant-types"><a aria-hidden="true" tabindex="-1" href="#oauth-20-grant-types"><span class="icon icon-link"></span></a>OAuth 2.0 Grant Types</h3>
+<h3 id="oauth-20-grant-types">OAuth 2.0 Grant Types<a aria-label="Link to section" class="anchor-link" href="#oauth-20-grant-types"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -466,7 +479,7 @@ SPA (Single Page Applications) and mobile apps cannot securely store a client se
 </tr>
 </tbody>
 </table>
-<h4 id="client-credentials-flow-machine-to-machine"><a aria-hidden="true" tabindex="-1" href="#client-credentials-flow-machine-to-machine"><span class="icon icon-link"></span></a>Client Credentials Flow (machine-to-machine)</h4>
+<h4 id="client-credentials-flow-machine-to-machine">Client Credentials Flow (machine-to-machine)<a aria-label="Link to section" class="anchor-link" href="#client-credentials-flow-machine-to-machine"><span class="icon icon-link"></span></a></h4>
 <p>Used when a service needs to access another service on its own behalf (no user involved):</p>
 <pre><code>POST https://auth.example.com/oauth/token
 Content-Type: application/x-www-form-urlencoded
@@ -476,7 +489,7 @@ grant_type=client_credentials
 &#x26;client_secret=super_secret_key
 &#x26;scope=read:users write:users
 </code></pre>
-<h3 id="oauth-20-scopes"><a aria-hidden="true" tabindex="-1" href="#oauth-20-scopes"><span class="icon icon-link"></span></a>OAuth 2.0 Scopes</h3>
+<h3 id="oauth-20-scopes">OAuth 2.0 Scopes<a aria-label="Link to section" class="anchor-link" href="#oauth-20-scopes"><span class="icon icon-link"></span></a></h3>
 <p>Scopes define the level of access granted:</p>
 <pre><code>scope=email profile
 # → Can read email and basic profile
@@ -487,13 +500,18 @@ scope=read:users write:users delete:users
 scope=admin
 # → Full admin access
 </code></pre>
-<blockquote>
-<p>[!tip] Principle of least privilege
-Always request the minimum scope needed. If your app only needs the user's email, request <code>scope=email</code> — not <code>scope=profile email address</code>.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Principle of least privilege</div>
+                </div>
+                <div class="callout-content">Always request the minimum scope needed. If your app only needs the user's email, request scope=email — not scope=profile email address.</div>
+              
 </blockquote>
-<h2 id="openid-connect-oidc"><a aria-hidden="true" tabindex="-1" href="#openid-connect-oidc"><span class="icon icon-link"></span></a>OpenID Connect (OIDC)</h2>
+<h2 id="openid-connect-oidc">OpenID Connect (OIDC)<a aria-label="Link to section" class="anchor-link" href="#openid-connect-oidc"><span class="icon icon-link"></span></a></h2>
 <p>OpenID Connect is an authentication layer on top of OAuth 2.0. It adds an <code>id_token</code> (JWT) to the authorization response.</p>
-<h3 id="oidc-vs-oauth-20"><a aria-hidden="true" tabindex="-1" href="#oidc-vs-oauth-20"><span class="icon icon-link"></span></a>OIDC vs OAuth 2.0</h3>
+<h3 id="oidc-vs-oauth-20">OIDC vs OAuth 2.0<a aria-label="Link to section" class="anchor-link" href="#oidc-vs-oauth-20"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -525,7 +543,7 @@ Always request the minimum scope needed. If your app only needs the user's email
 </tr>
 </tbody>
 </table>
-<h3 id="oidc-id-token"><a aria-hidden="true" tabindex="-1" href="#oidc-id-token"><span class="icon icon-link"></span></a>OIDC ID Token</h3>
+<h3 id="oidc-id-token">OIDC ID Token<a aria-label="Link to section" class="anchor-link" href="#oidc-id-token"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "iss"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://accounts.google.com"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "sub"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"110169484474386276334"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -538,7 +556,7 @@ Always request the minimum scope needed. If your app only needs the user's email
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "picture"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"https://lh3.googleusercontent.com/..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "locale"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"en"</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
-<h3 id="oidc-discovery"><a aria-hidden="true" tabindex="-1" href="#oidc-discovery"><span class="icon icon-link"></span></a>OIDC Discovery</h3>
+<h3 id="oidc-discovery">OIDC Discovery<a aria-label="Link to section" class="anchor-link" href="#oidc-discovery"><span class="icon icon-link"></span></a></h3>
 <pre><code>GET https://accounts.google.com/.well-known/openid-configuration
 
 # Response:
@@ -552,7 +570,7 @@ Always request the minimum scope needed. If your app only needs the user's email
   "grant_types_supported": ["authorization_code", "refresh_token", "client_credentials"]
 }
 </code></pre>
-<h2 id="authentication-comparison-summary"><a aria-hidden="true" tabindex="-1" href="#authentication-comparison-summary"><span class="icon icon-link"></span></a>Authentication comparison summary</h2>
+<h2 id="authentication-comparison-summary">Authentication comparison summary<a aria-label="Link to section" class="anchor-link" href="#authentication-comparison-summary"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -601,7 +619,7 @@ Always request the minimum scope needed. If your app only needs the user's email
 </tr>
 </tbody>
 </table>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -612,23 +630,23 @@ Always request the minimum scope needed. If your app only needs the user's email
 <tbody>
 <tr>
 <td>Cookies and sessions</td>
-<td>[[09-cookies-sessions]]</td>
+<td>[09-cookies-sessions](/en/01-networking-internet/09-cookies-sessions)</td>
 </tr>
 <tr>
 <td>JWT</td>
-<td>[[09-cookies-sessions]]</td>
+<td>[09-cookies-sessions](/en/01-networking-internet/09-cookies-sessions)</td>
 </tr>
 <tr>
 <td>REST APIs</td>
-<td>[[11-rest-api]]</td>
+<td>[11-rest-api](/en/01-networking-internet/11-rest-api)</td>
 </tr>
 <tr>
 <td>HTTPS</td>
-<td>[[07-https-tls]]</td>
+<td>[07-https-tls](/en/01-networking-internet/07-https-tls)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li><strong>Basic Auth</strong> sends base64-encoded credentials with every request. Simple but insecure without HTTPS.</li>
 <li><strong>Bearer Tokens</strong> (JWT) are the modern standard for API authentication. Tokens are self-contained and verifiable.</li>
@@ -638,7 +656,12 @@ Always request the minimum scope needed. If your app only needs the user's email
 <li><strong>PKCE</strong> is required for public clients (SPAs, mobile apps) to protect authorization codes.</li>
 <li>Always use the principle of least privilege: request minimum scopes, use short-lived tokens, and rotate keys.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-Authentication is not one-size-fits-all. Use sessions for traditional web apps, JWTs for APIs, API keys for server-to-server, and OAuth 2.0 + OIDC when you need third-party identity. Each method has tradeoffs in security, complexity, and developer experience.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">Authentication is not one-size-fits-all. Use sessions for traditional web apps, JWTs for APIs, API keys for server-to-server, and OAuth 2.0 + OIDC when you need third-party identity. Each method has tradeoffs in security, complexity, and developer experience.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-is-authentication">What is Authentication?</a> </li><li class="toc-depth-2"> <a href="#http-authentication-header">HTTP Authentication Header</a> </li><li class="toc-depth-2"> <a href="#http-basic-authentication">HTTP Basic Authentication</a> </li><li class="toc-depth-3"> <a href="#how-basic-auth-works">How Basic Auth works</a> </li><li class="toc-depth-3"> <a href="#basic-auth-in-curl">Basic Auth in curl</a> </li><li class="toc-depth-3"> <a href="#basic-auth-security">Basic Auth security</a> </li><li class="toc-depth-2"> <a href="#bearer-tokens">Bearer Tokens</a> </li><li class="toc-depth-3"> <a href="#how-bearer-tokens-work">How Bearer Tokens work</a> </li><li class="toc-depth-3"> <a href="#bearer-token-vs-basic-auth">Bearer token vs Basic Auth</a> </li><li class="toc-depth-3"> <a href="#bearer-token-security-best-practices">Bearer token security best practices</a> </li><li class="toc-depth-3"> <a href="#where-to-store-tokens">Where to store tokens</a> </li><li class="toc-depth-2"> <a href="#api-keys">API Keys</a> </li><li class="toc-depth-3"> <a href="#how-api-keys-work">How API keys work</a> </li><li class="toc-depth-3"> <a href="#api-key-security-properties">API key security properties</a> </li><li class="toc-depth-3"> <a href="#api-key-best-practices">API key best practices</a> </li><li class="toc-depth-3"> <a href="#api-key-vs-bearer-token">API key vs Bearer token</a> </li><li class="toc-depth-2"> <a href="#oauth-20">OAuth 2.0</a> </li><li class="toc-depth-3"> <a href="#oauth-20-vs-oauth-10">OAuth 2.0 vs OAuth 1.0</a> </li><li class="toc-depth-3"> <a href="#oauth-20-actors">OAuth 2.0 Actors</a> </li><li class="toc-depth-3"> <a href="#oauth-20-authorization-flows">OAuth 2.0 Authorization Flows</a> </li><li class="toc-depth-3"> <a href="#oauth-20-grant-types">OAuth 2.0 Grant Types</a> </li><li class="toc-depth-3"> <a href="#oauth-20-scopes">OAuth 2.0 Scopes</a> </li><li class="toc-depth-2"> <a href="#openid-connect">OpenID Connect</a> </li><li class="toc-depth-3"> <a href="#oidc-vs-oauth-20">OIDC vs OAuth 2.0</a> </li><li class="toc-depth-3"> <a href="#oidc-id-token">OIDC ID Token</a> </li><li class="toc-depth-3"> <a href="#oidc-discovery">OIDC Discovery</a> </li><li class="toc-depth-2"> <a href="#authentication-comparison-summary">Authentication comparison summary</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

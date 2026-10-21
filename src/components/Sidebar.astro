@@ -1,5 +1,6 @@
 ---
 import type { NavSection } from '../navigation';
+import { getArticlesForModule, getAvailableNavigation, getFirstArticleHref } from '../content-links';
 
 interface Props {
   lang: 'es' | 'en';
@@ -9,17 +10,20 @@ interface Props {
 const { lang, currentSlug } = Astro.props;
 const { getNavigation } = await import('../navigation.js');
 
-const navSections: NavSection[] = getNavigation();
+const navSections: NavSection[] = getAvailableNavigation(lang, getNavigation(lang));
+
+const fundamentalsSection = navSections[0];
+const aiSection = navSections[1];
 
 // Check if current module belongs to Fundamentos or IA
-const isFundamentos = navSections[0].items.some(
+const isFundamentos = fundamentalsSection?.items.some(
   (item) => currentSlug?.startsWith(item.slug)
 );
-const isIA = navSections[1].items.some(
+const isIA = aiSection?.items.some(
   (item) => currentSlug?.startsWith(item.slug)
 );
 
-function moduleClass(item: { slug: string }, isActive?: boolean, isOpen?: boolean) {
+function moduleClass(isActive?: boolean, isOpen?: boolean) {
   const parts = ['nav-module'];
   if (isActive) parts.push('active');
   if (isOpen) parts.push('nav-module-open');
@@ -27,48 +31,127 @@ function moduleClass(item: { slug: string }, isActive?: boolean, isOpen?: boolea
 }
 ---
 
-<div class="layout-sidebar">
+<div class="sidebar-backdrop" data-sidebar-close></div>
+
+<div class="layout-sidebar" id="siteSidebar">
   <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
-    <button class="sidebar-toggle" aria-label="Toggle navigation">
-      <span class="hamburger-icon"><span></span><span></span><span></span></span>
-    </button>
+    <div class="sidebar-header">
+      <span class="sidebar-heading">{lang === 'es' ? 'Indice' : 'Index'}</span>
+      <button class="sidebar-toggle" type="button" aria-label={lang === 'es' ? 'Ocultar navegación' : 'Hide navigation'} data-sidebar-toggle>
+        <span class="hamburger-icon"><span></span><span></span><span></span></span>
+      </button>
+    </div>
 
     <!-- Fundamentos section -->
-    <div class="nav-section">
-      <h3 class="nav-section-title">{navSections[0].title}</h3>
+    {fundamentalsSection && <div class="nav-section">
+      <h3 class="nav-section-title">{fundamentalsSection.title}</h3>
       <ul class="nav-list">
-        {navSections[0].items.map((item) => {
+        {fundamentalsSection.items.map((item) => {
           const isActive = currentSlug?.startsWith(item.slug);
           const isModuleOpen = isFundamentos && currentSlug?.startsWith(item.slug);
+          const href = getFirstArticleHref(lang, item.slug);
+          const articles = getArticlesForModule(lang, item.slug);
           return (
             <li class="nav-item-group">
-              <a href={`/${lang}${item.slug}`} class:list={[moduleClass(item, isActive, isModuleOpen)]}>
+              <a href={href} class:list={[moduleClass(isActive, isModuleOpen)]}>
                 <span class="nav-module-icon">▸</span>
                 <span class="nav-module-title">{item.title}</span>
               </a>
+              <ul class="nav-article-list">
+                {articles.map((article) => (
+                  <li>
+                    <a
+                      href={`/${lang}${article.slug}`}
+                      class:list={['nav-article', currentSlug === article.slug && 'active']}
+                    >
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </li>
           );
         })}
       </ul>
-    </div>
+    </div>}
 
     <!-- IA section -->
-    <div class="nav-section">
-      <h3 class="nav-section-title">{navSections[1].title}</h3>
+    {aiSection && <div class="nav-section">
+      <h3 class="nav-section-title">{aiSection.title}</h3>
       <ul class="nav-list">
-        {navSections[1].items.map((item) => {
+        {aiSection.items.map((item) => {
           const isActive = currentSlug?.startsWith(item.slug);
           const isModuleOpen = isIA && currentSlug?.startsWith(item.slug);
+          const href = getFirstArticleHref(lang, item.slug);
+          const articles = getArticlesForModule(lang, item.slug);
           return (
             <li class="nav-item-group">
-              <a href={`/${lang}${item.slug}`} class:list={[moduleClass(item, isActive, isModuleOpen)]}>
+              <a href={href} class:list={[moduleClass(isActive, isModuleOpen)]}>
                 <span class="nav-module-icon">▸</span>
                 <span class="nav-module-title">{item.title}</span>
               </a>
+              <ul class="nav-article-list">
+                {articles.map((article) => (
+                  <li>
+                    <a
+                      href={`/${lang}${article.slug}`}
+                      class:list={['nav-article', currentSlug === article.slug && 'active']}
+                    >
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </li>
           );
         })}
       </ul>
-    </div>
+    </div>}
   </nav>
 </div>
+
+<script>
+  const desktopQuery = window.matchMedia('(min-width: 1024px)');
+  const storageKey = 'wiki-sidebar-collapsed';
+  const body = document.body;
+
+  function setSidebarState(open: boolean) {
+    if (desktopQuery.matches) {
+      body.classList.toggle('sidebar-collapsed', !open);
+      body.classList.remove('sidebar-mobile-open');
+      localStorage.setItem(storageKey, open ? 'false' : 'true');
+      return;
+    }
+
+    body.classList.toggle('sidebar-mobile-open', open);
+    body.classList.remove('sidebar-collapsed');
+  }
+
+  function applyInitialState() {
+    if (desktopQuery.matches) {
+      setSidebarState(localStorage.getItem(storageKey) !== 'true');
+    } else {
+      setSidebarState(false);
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-sidebar-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const isOpen = desktopQuery.matches
+        ? !body.classList.contains('sidebar-collapsed')
+        : body.classList.contains('sidebar-mobile-open');
+      setSidebarState(!isOpen);
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>('[data-sidebar-close]').forEach((element) => {
+    element.addEventListener('click', () => setSidebarState(false));
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') setSidebarState(false);
+  });
+
+  desktopQuery.addEventListener('change', applyInitialState);
+  applyInitialState();
+</script>

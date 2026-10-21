@@ -33,3 +33,22 @@ Guía interconectada de fundamentos de Internet, infraestructura y desarrollo mo
 ## 04 — Arquitectura Moderna
 
 - [Próximamente]
+
+## 99 — IA para gente curiosa (Fascículo 01)
+
+> [!info] Fuente externa
+> Resumen del Facsímil 01 del proyecto [IA para gente curiosa](https://www.iaparagentecuriosa.686f6c61.dev/) por [686f6c61](https://x.com/686f6c61). Licencia CC BY 4.0 + MIT.
+
+- [[ES/99-ia-para-gente-curiosa/index|Índice completo]] — 12 capítulos sobre fundamentos de IA
+- [[ES/99-ia-para-gente-curiosa/01-que-es-ia|01 — Qué es y qué no es la IA]] — Predicción del siguiente token, tokenización, logits, softmax
+- [[ES/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos|02 — Sistemas deterministas vs probabilísticos]] — Temperatura, top-p, top-k, tests por propiedades
+- [[ES/99-ia-para-gente-curiosa/03-principios-fundamentales|03 — Principios fundamentales]] — Supervisado, no supervisado, post-training, atención, scaling laws
+- [[ES/99-ia-para-gente-curiosa/04-neurona-artificial|04 — La neurona artificial]] — y = f(Σ wᵢxᵢ + b), pesos, sesgo, activaciones
+- [[ES/99-ia-para-gente-curiosa/05-redes-neuronales|05 — Redes neuronales]] — Capas, matrices, forward pass, contratos de forma
+- [[ES/99-ia-para-gente-curiosa/06-retropropagacion|06 — Retropropagación]] — Gradientes, regla de la cadena, ejemplo numérico
+- [[ES/99-ia-para-gente-curiosa/07-perdida-optimizadores|07 — Pérdida y optimizadores]] — Cross-entropy, MSE, Adam, AdamW, Muon
+- [[ES/99-ia-para-gente-curiosa/08-cnns-rnns|08 — CNNs y RNNs]] — Convoluciones, LSTMs, comparación con Transformer
+- [[ES/99-ia-para-gente-curiosa/09-token-embedding|09 — Tokens y embeddings]] — BPE, similitud coseno, modelos de embedding
+- [[ES/99-ia-para-gente-curiosa/10-entrenamiento-inferencia|10 — Entrenamiento vs inferencia]] — Prefill, decode, KV cache, cuantización, LoRA
+- [[ES/99-ia-para-gente-curiosa/11-ml-clasico|11 — ML clásico]] — SVM, árboles, clustering, precision, recall, F1
+- [[ES/99-ia-para-gente-curiosa/12-recapitulacion|12 — Recapitulación]] — Revisión activa con preguntas de autoevaluación

@@ -1,0 +1,743 @@
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
+      <ul>
+        ${e.map(t=>`
+          <li>
+            <a href="/${y}${t.slug}" class="search-result-link">
+              <span class="search-result-title">${t.title}</span>
+              <span class="search-result-desc">${t.description}</span>
+            </a>
+          </li>
+        `).join("")}
+      </ul>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Mostrar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/es" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/es/index" class="navbar-link">Inicio</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;¿Qué es Internet?&#34;,&#34;description&#34;:&#34;Fundamentos de Internet: qué es realmente, el modelo cliente-servidor, el protocolo TCP/IP y cómo funciona la red de redes a nivel técnico.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/01-que-es-internet&#34;},{&#34;title&#34;:&#34;¿Cómo navegar? Del URL a la página renderizada&#34;,&#34;description&#34;:&#34;El viaje completo paso a paso cuando escribes una URL en el navegador: DNS, TCP, TLS, HTTP, renderizado. Más de 30 pasos explicados en detalle.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/02-como-navegar-de-url-a-pagina&#34;},{&#34;title&#34;:&#34;DNS en profundidad&#34;,&#34;description&#34;:&#34;El sistema de nombres de dominio explicado a fondo: resolución recursiva e iterativa, tipos de registros (A, AAAA, CNAME, MX, TXT, SRV, SOA, CAA), caché, TTL, DNSSEC y herramientas CLI.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/03-dns-profundo&#34;},{&#34;title&#34;:&#34;Cloudflare: Introducción&#34;,&#34;description&#34;:&#34;Introducción a Cloudflare: qué es, CDN, DNS, protección WAF, SSL/TLS, protección DDoS y por qué posicionarse como proxy inverso entre tu usuario y tu servidor.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP en profundidad&#34;,&#34;description&#34;:&#34;HTTP a fondo: métodos (GET, POST, PUT, PATCH, DELETE), headers universales y específicos, cuerpo de peticiones (JSON, form, multipart), keep-alive, HTTP/2 multiplexación, HTTP/3 QUIC, CORS.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/05-http-profundo&#34;},{&#34;title&#34;:&#34;Códigos de estado HTTP&#34;,&#34;description&#34;:&#34;Todos los códigos de estado HTTP explicados: 1xx información, 2xx éxito, 3xx redirección, 4xx error del cliente, 5xx error del servidor, con ejemplos y mejores prácticas.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS y TLS: cifrado paso a paso&#34;,&#34;description&#34;:&#34;HTTPS explicado a fondo: TLS handshake (1.2 vs 1.3), cipher suites, certificados digitales, chain of trust, SNI, HSTS, forward secrecy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt y Certbot: certificados gratuitos&#34;,&#34;description&#34;:&#34;Obtener y renovar certificados TLS gratuitos con Let's Encrypt y Certbot: protocolo ACME, métodos de validación, configuración en Nginx y Caddy.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies y sesiones&#34;,&#34;description&#34;:&#34;HTTP es stateless: cookies, sesiones del servidor (Redis), JWT (stateless), refresh tokens, atributos de seguridad (HttpOnly, Secure, SameSite).&#34;,&#34;slug&#34;:&#34;/01-redes-internet/09-cookies-sesiones&#34;},{&#34;title&#34;:&#34;Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Todos los mecanismos de autenticación explicados: Basic Auth, Bearer tokens (JWT, opaque), API keys, OAuth 2.0 con PKCE, MFA, MTLS, y mejores prácticas de seguridad.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/10-autenticacion-api-keys-tokens&#34;},{&#34;title&#34;:&#34;APIs REST: principios, recursos y HATEOAS&#34;,&#34;description&#34;:&#34;REST explicado a fondo: principios, recursos y URLs, métodos HTTP semánticos, HATEOAS, versionado, GraphQL/RPC vs REST, y errores comunes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/11-api-rest&#34;},{&#34;title&#34;:&#34;Puertos, localhost y loopback&#34;,&#34;description&#34;:&#34;Qué es un puerto, localhost vs 0.0.0.0, loopback, puertos well-known vs ephemeral, Docker networking, IPv4 vs IPv6, y cómo ver puertos abiertos.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/12-puertos&#34;},{&#34;title&#34;:&#34;NAT: Network Address Translation&#34;,&#34;description&#34;:&#34;NAT explicado a fondo: SNAT, DNAT, port forwarding, masquerading, NAT y Docker, NAT traversal (STUN, TURN, ICE), IPv6.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/13-nat-red&#34;},{&#34;title&#34;:&#34;Servidores y procesos: qué es un servidor&#34;,&#34;description&#34;:&#34;Un servidor es solo un proceso. Procesos, PID, daemons, sockets, señales, modelos de concurrencia (event loop, fork, threads), gestión con PM2, Systemd y Docker.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/14-servidores-procesos&#34;},{&#34;title&#34;:&#34;Modelo OSI y TCP/IP: capas y protocolos&#34;,&#34;description&#34;:&#34;El modelo OSI de 7 capas explicado en profundidad: cada capa, sus protocolos, cómo funciona internamente, y cómo se compara con TCP/IP.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/15-modelo-osi-tcpip&#34;},{&#34;title&#34;:&#34;Routing, subnetting y CIDR&#34;,&#34;description&#34;:&#34;Enrutamiento de paquetes, subnetting, CIDR, máscaras de red, VLSM, route summarization, y cómo funciona el enrutamiento entre redes.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, proxies y load balancers&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algoritmos de balanceo), y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Protocolos de mensajería: AMQP, MQTT y WebSockets&#34;,&#34;description&#34;:&#34;Protocolos de mensajería en tiempo real: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, y cuándo usar cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/18-protocolos-mensajeria&#34;},{&#34;title&#34;:&#34;Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers&#34;,&#34;description&#34;:&#34;Cloudflare a profundidad total: CDN, DNS, WAF, protección DDoS, SSL/TLS, Workers, Argo, Stream, Image Optimizer, y cómo configurarlo todo para producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/19-cloudflare-completo&#34;},{&#34;title&#34;:&#34;VPS: qué es, configurar, SSH, seguridad y DNS&#34;,&#34;description&#34;:&#34;VPS explicado a fondo: qué es, cómo configurar uno, SSH (claves, configs avanzadas), hardening de seguridad, DNS setup, y mejores prácticas de producción.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud providers: AWS, Azure y GCP&#34;,&#34;description&#34;:&#34;Comparación completa de los 3 principales cloud providers: AWS, Azure y GCP — servicios, pricing, IAM, networking, y cuándo elegir cada uno.&#34;,&#34;slug&#34;:&#34;/01-redes-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura&#34;,&#34;description&#34;:&#34;Docker explicado desde cero: qué son los contenedores, por qué cambiaron la industria, arquitectura completa (cliente, daemon, imágenes, contenedores, registros) y cómo funciona internamente.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/01-docker-intro&#34;},{&#34;title&#34;:&#34;Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds&#34;,&#34;description&#34;:&#34;Guía completa de imágenes Docker: Dockerfile paso a paso, mejor prácticas, sistema de capas, multi-stage builds, optimización de tamaño, etiquetas semánticas y gestión de registros.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/02-docker-images&#34;},{&#34;title&#34;:&#34;Docker containers: ejecutar, gestionar y administrar contenedores en producción&#34;,&#34;description&#34;:&#34;Guía completa de contenedores Docker: ciclo de vida, ejecución, stop/sigkill, gestión de recursos (CPU, memoria, I/O), health checks, logs, exec, y patrones de gestión en producción.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/03-docker-containers&#34;},{&#34;title&#34;:&#34;Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml&#34;,&#34;description&#34;:&#34;Guía completa de Docker Compose: archivos compose, servicios, networks, volumes, secrets, profiles, variables, multi-stage builds, y patrones de aplicación multi-contenedor.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/04-docker-compose&#34;},{&#34;title&#34;:&#34;Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores&#34;,&#34;description&#34;:&#34;Redes Docker explicadas a fondo: bridge, host, overlay, redes personalizadas, port mapping, DNS interno, networking entre contenedores, y troubleshooting de red.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/05-docker-networking&#34;},{&#34;title&#34;:&#34;Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup&#34;,&#34;description&#34;:&#34;Guía completa de almacenamiento en Docker: tipos de volúmenes (named, bind mount, tmpfs), drivers de volúmenes, persistencia, backup strategies y gestión del ciclo de vida de datos.&#34;,&#34;slug&#34;:&#34;/02-infra-contenedores/06-docker-volumes&#34;},{&#34;title&#34;:&#34;Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia&#34;,&#34;description&#34;:&#34;Cómo los sistemas distribuidos se ponen de acuerdo: Paxos, Raft, el teorema CAP, y el teorema FLP. Explicado desde cero con diagramas y ejemplos prácticos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka y el patrón producer-consumer&#34;,&#34;description&#34;:&#34;Cómo funcionan las message queues: patrón producer-consumer, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), y cómo elegir entre ellos.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/02-message-queues&#34;},{&#34;title&#34;:&#34;Caching distribuido: Redis, clusters y consistencia&#34;,&#34;description&#34;:&#34;Cómo funciona el caching distribuido: Redis (tipos de datos, persistencia RDB/AOF, pub/sub), Redis Cluster (sharding, hash slots, failover), y patrones de consistencia en caché.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Arquitectura event-driven, CQRS y Saga Pattern&#34;,&#34;description&#34;:&#34;Patrones avanzados de sistemas distribuidos: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, y el Saga Pattern para transacciones distribuidas.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotencia, retry patterns y circuit breakers&#34;,&#34;description&#34;:&#34;Patrones de resiliencia en sistemas distribuidos: idempotencia, exponential backoff con jitter, circuit breaker, bulkhead, rate limiting, y retry policies.&#34;,&#34;slug&#34;:&#34;/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;Qué es y qué no es la inteligencia artificial&#34;,&#34;description&#34;:&#34;La IA no es conciencia, ni oráculo, ni buscador. Es predicción estadística del siguiente token. Tokenización, logits, softmax y el mecanismo central de los LLM.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/01-que-es-ia&#34;},{&#34;title&#34;:&#34;Sistemas deterministas frente a sistemas probabilísticos&#34;,&#34;description&#34;:&#34;Diferencia entre funciones puras y sistemas con muestreo. Temperatura, top-p, top-k, y cómo testear código con LLMs validando propiedades, no texto exacto.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos&#34;},{&#34;title&#34;:&#34;Principios fundamentales de la inteligencia artificial&#34;,&#34;description&#34;:&#34;Cinco principios: aprendizaje supervisado, no supervisado, post-training, atención y scaling laws. Un único motor: el descenso de gradiente.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/03-principios-fundamentales&#34;},{&#34;title&#34;:&#34;La neurona artificial: el átomo del aprendizaje&#34;,&#34;description&#34;:&#34;La neurona artificial es una función matemática: y = f(Σ wᵢxᵢ + b). Entradas, pesos, sesgo y activación. El átomo del deep learning.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/04-neurona-artificial&#34;},{&#34;title&#34;:&#34;Redes neuronales: capas, arquitectura y flujo&#34;,&#34;description&#34;:&#34;De la neurona a la red: capas, matrices de pesos, forward pass, contratos de forma, jerarquía de representaciones y presupuesto de parámetros.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/05-redes-neuronales&#34;},{&#34;title&#34;:&#34;Cómo aprende una red: retropropagación&#34;,&#34;description&#34;:&#34;El bucle de entrenamiento: forward, pérdida, backward, actualizar. Cálculo manual de gradientes con regla de la cadena y ejemplo numérico completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/06-retropropagacion&#34;},{&#34;title&#34;:&#34;Funciones de pérdida y optimizadores&#34;,&#34;description&#34;:&#34;Cross-entropy, MSE, pérdida bisagra, margen. Optimizadores SGD, Adam, AdamW, Muon. Contrato mínimo de una run de entrenamiento.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/07-perdida-optimizadores&#34;},{&#34;title&#34;:&#34;CNNs y RNNs: redes para visión y secuencias&#34;,&#34;description&#34;:&#34;Convoluciones, filtros, pooling, stride. RNNs, LSTMs, GRUs. Comparación con Transformer. Por qué el Transformer ganó.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/08-cnns-rnns&#34;},{&#34;title&#34;:&#34;Del token al embedding: cómo el modelo representa lenguaje&#34;,&#34;description&#34;:&#34;Tokenización BPE, embeddings densos, similitud coseno, modelos de embedding, Matryoshka. El puente entre texto y matemáticas.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/09-token-embedding&#34;},{&#34;title&#34;:&#34;Entrenamiento frente a inferencia: dos mundos distintos&#34;,&#34;description&#34;:&#34;Las tres fases del entrenamiento (pre-entrenamiento, SFT, alineamiento). Prefill y decode, KV cache, cuantización, LoRA, pipeline ML completo.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/10-entrenamiento-inferencia&#34;},{&#34;title&#34;:&#34;Machine learning clásico: el mapa antes de los LLM&#34;,&#34;description&#34;:&#34;Clasificación vs regresión, SVM, árboles de decisión, clustering, validación, matriz de confusión, precision, recall, F1.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/11-ml-clasico&#34;},{&#34;title&#34;:&#34;Lo que deberías saber: recapitulación de fundamentos&#34;,&#34;description&#34;:&#34;Revisión activa de los 12 capítulos. Preguntas de autoevaluación para verificar que los cimientos están sólidos antes de avanzar.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/12-recapitulacion&#34;},{&#34;title&#34;:&#34;IA para gente curiosa — Facsímil 01: Los cimientos&#34;,&#34;description&#34;:&#34;Resumen completo del Facsímil 01 del proyecto IA para gente curiosa. 12 capítulos sobre fundamentos de inteligencia artificial, desde qué es la IA hasta machine learning clásico.&#34;,&#34;slug&#34;:&#34;/99-ia-para-gente-curiosa/index&#34;}]" data-lang="es"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Buscar artículos..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Escribe para buscar... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/02-infra-contenedores/02-docker-images/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/02-infrastructure-containers/02-docker-images" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Indice</span> <button class="sidebar-toggle" type="button" aria-label="Ocultar navegación" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/es/01-redes-internet/01-que-es-internet" class="nav-article"> ¿Qué es Internet? </a> </li><li> <a href="/es/01-redes-internet/02-como-navegar-de-url-a-pagina" class="nav-article"> ¿Cómo navegar? Del URL a la página renderizada </a> </li><li> <a href="/es/01-redes-internet/03-dns-profundo" class="nav-article"> DNS en profundidad </a> </li><li> <a href="/es/01-redes-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introducción </a> </li><li> <a href="/es/01-redes-internet/05-http-profundo" class="nav-article"> HTTP en profundidad </a> </li><li> <a href="/es/01-redes-internet/06-status-codes" class="nav-article"> Códigos de estado HTTP </a> </li><li> <a href="/es/01-redes-internet/07-https-tls" class="nav-article"> HTTPS y TLS: cifrado paso a paso </a> </li><li> <a href="/es/01-redes-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt y Certbot: certificados gratuitos </a> </li><li> <a href="/es/01-redes-internet/09-cookies-sesiones" class="nav-article"> Cookies y sesiones </a> </li><li> <a href="/es/01-redes-internet/10-autenticacion-api-keys-tokens" class="nav-article"> Autenticación: Basic Auth, Bearer tokens, API keys, OAuth 2.0 </a> </li><li> <a href="/es/01-redes-internet/11-api-rest" class="nav-article"> APIs REST: principios, recursos y HATEOAS </a> </li><li> <a href="/es/01-redes-internet/12-puertos" class="nav-article"> Puertos, localhost y loopback </a> </li><li> <a href="/es/01-redes-internet/13-nat-red" class="nav-article"> NAT: Network Address Translation </a> </li><li> <a href="/es/01-redes-internet/14-servidores-procesos" class="nav-article"> Servidores y procesos: qué es un servidor </a> </li><li> <a href="/es/01-redes-internet/15-modelo-osi-tcpip" class="nav-article"> Modelo OSI y TCP/IP: capas y protocolos </a> </li><li> <a href="/es/01-redes-internet/16-routing-subnetting" class="nav-article"> Routing, subnetting y CIDR </a> </li><li> <a href="/es/01-redes-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, proxies y load balancers </a> </li><li> <a href="/es/01-redes-internet/18-protocolos-mensajeria" class="nav-article"> Protocolos de mensajería: AMQP, MQTT y WebSockets </a> </li><li> <a href="/es/01-redes-internet/19-cloudflare-completo" class="nav-article"> Cloudflare completo: CDN, DNS, WAF, DDoS, SSL/TLS y Workers </a> </li><li> <a href="/es/01-redes-internet/20-vps" class="nav-article"> VPS: qué es, configurar, SSH, seguridad y DNS </a> </li><li> <a href="/es/01-redes-internet/21-cloud-providers" class="nav-article"> Cloud providers: AWS, Azure y GCP </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> <ul class="nav-article-list"> <li> <a href="/es/02-infra-contenedores/01-docker-intro" class="nav-article"> Docker en profundidad: qué es, por qué los contenedores importan y su arquitectura </a> </li><li> <a href="/es/02-infra-contenedores/02-docker-images" class="nav-article active"> Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds </a> </li><li> <a href="/es/02-infra-contenedores/03-docker-containers" class="nav-article"> Docker containers: ejecutar, gestionar y administrar contenedores en producción </a> </li><li> <a href="/es/02-infra-contenedores/04-docker-compose" class="nav-article"> Docker Compose: orquestación de aplicaciones multi-contenedor con docker-compose.yml </a> </li><li> <a href="/es/02-infra-contenedores/05-docker-networking" class="nav-article"> Docker networking: bridge, host, overlay, redes personalizadas, mapeo de puertos y DNS en contenedores </a> </li><li> <a href="/es/02-infra-contenedores/06-docker-volumes" class="nav-article"> Docker volumes: persistencia de datos, named volumes, bind mounts, tmpfs y estrategias de backup </a> </li> </ul> </li><li class="nav-item-group"> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/03-sistemas-distribuidos/01-consensus-paxos-raft" class="nav-article"> Consensus en sistemas distribuidos: Paxos, Raft y el problema de la concordia </a> </li><li> <a href="/es/03-sistemas-distribuidos/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka y el patrón producer-consumer </a> </li><li> <a href="/es/03-sistemas-distribuidos/03-distributed-caching" class="nav-article"> Caching distribuido: Redis, clusters y consistencia </a> </li><li> <a href="/es/03-sistemas-distribuidos/04-event-driven-cqrs-saga" class="nav-article"> Arquitectura event-driven, CQRS y Saga Pattern </a> </li><li> <a href="/es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotencia, retry patterns y circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA para gente curiosa — Los cimientos</span> </a> <ul class="nav-article-list"> <li> <a href="/es/99-ia-para-gente-curiosa/01-que-es-ia" class="nav-article"> Qué es y qué no es la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos" class="nav-article"> Sistemas deterministas frente a sistemas probabilísticos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/03-principios-fundamentales" class="nav-article"> Principios fundamentales de la inteligencia artificial </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/04-neurona-artificial" class="nav-article"> La neurona artificial: el átomo del aprendizaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/05-redes-neuronales" class="nav-article"> Redes neuronales: capas, arquitectura y flujo </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/06-retropropagacion" class="nav-article"> Cómo aprende una red: retropropagación </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/07-perdida-optimizadores" class="nav-article"> Funciones de pérdida y optimizadores </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/08-cnns-rnns" class="nav-article"> CNNs y RNNs: redes para visión y secuencias </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/09-token-embedding" class="nav-article"> Del token al embedding: cómo el modelo representa lenguaje </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia" class="nav-article"> Entrenamiento frente a inferencia: dos mundos distintos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/11-ml-clasico" class="nav-article"> Machine learning clásico: el mapa antes de los LLM </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/12-recapitulacion" class="nav-article"> Lo que deberías saber: recapitulación de fundamentos </a> </li><li> <a href="/es/99-ia-para-gente-curiosa/index" class="nav-article"> IA para gente curiosa — Facsímil 01: Los cimientos </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds</h1> <div class="article-body"><h1 id="imágenes-docker-creando-imágenes-optimizadas-con-dockerfile-capas-y-multi-stage-builds">Imágenes Docker: creando imágenes optimizadas con Dockerfile, capas y multi-stage builds<a aria-label="Link to section" class="anchor-link" href="#imágenes-docker-creando-imágenes-optimizadas-con-dockerfile-capas-y-multi-stage-builds"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Imágenes Docker en una frase</div>
+                </div>
+                <div class="callout-content">Una imagen Docker es una plantilla de solo lectura construida a partir de capas, definida por un Dockerfile. Es el resultado de empaquetar tu aplicación con todo su entorno para que pueda ejecutarse idénticamente en cualquier lugar.</div>
+              
+</blockquote>
+<h2 id="qué-es-una-imagen-docker">¿Qué es una imagen Docker?<a aria-label="Link to section" class="anchor-link" href="#qué-es-una-imagen-docker"><span class="icon icon-link"></span></a></h2>
+<p>Una imagen Docker es una <strong>plantilla inmutable</strong> que contiene todo lo necesario para ejecutar una aplicación: código, runtime, bibliotecas, variables de entorno y configuración. Las imágenes se construyen en <strong>capas apiladas</strong>, cada una representando un paso en la creación.</p>
+<h3 id="imagen-vs-contenedor-la-analogía">Imagen vs Contenedor: la analogía<a aria-label="Link to section" class="anchor-link" href="#imagen-vs-contenedor-la-analogía"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌─────────────────────────────────────────┐
+│  Relación Imagen ↔ Contenedor           │
+│                                          │
+│  Imagen       = Clase (en POO)           │
+│  Contenedor   = Instancia                │
+│                                          │
+│  Imagen       = Foto en un libro         │
+│  Contenedor   = Foto impresa             │
+│                                          │
+│  Imagen       = Receta de cocina         │
+│  Contenedor   = Plato preparado          │
+│                                          │
+│  Imagen       = Molde de galletas        │
+│  Contenedor   = Galleta hecha            │
+└─────────────────────────────────────────┘
+</code></pre>
+<h3 id="estructura-de-una-imagen">Estructura de una imagen<a aria-label="Link to section" class="anchor-link" href="#estructura-de-una-imagen"><span class="icon icon-link"></span></a></h3>
+<pre><code>┌──────────────────────────────────────────┐
+│         Imagen Docker                    │
+│         (ej: node:20-alpine)             │
+│                                          │
+│  ┌─ Layer 5 (top): tu código + app      │
+│  ├─ Layer 4: dependencias instaladas     │
+│  ├─ Layer 3: runtime (Node.js)          │
+│  ├─ Layer 2: herramientas del sistema    │
+│  └─ Layer 1 (base): sistema operativo    │
+│      (alpine:3.19 ~ 5MB)                │
+│                                          │
+│  Tamaño total: ~170 MB                  │
+└──────────────────────────────────────────┘
+</code></pre>
+<h2 id="el-dockerfile-guía-completa">El Dockerfile: guía completa<a aria-label="Link to section" class="anchor-link" href="#el-dockerfile-guía-completa"><span class="icon icon-link"></span></a></h2>
+<p>Un <strong>Dockerfile</strong> es un script que Docker lee para construir una imagen automáticamente. Cada instrucción crea una nueva capa.</p>
+<h3 id="sintaxis-básica">Sintaxis básica<a aria-label="Link to section" class="anchor-link" href="#sintaxis-básica"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># La línea 1 siempre debe ser FROM</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instrucciones que crean capas:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package.json /app/</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm install</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<h3 id="instrucciones-del-dockerfile">Instrucciones del Dockerfile<a aria-label="Link to section" class="anchor-link" href="#instrucciones-del-dockerfile"><span class="icon icon-link"></span></a></h3>
+<h4 id="from-la-base-de-todo">FROM: la base de todo<a aria-label="Link to section" class="anchor-link" href="#from-la-base-de-todo"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sintaxis básica</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> imagen:tag</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Con AS (para multi-stage builds)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> build-stage</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> production-stage</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Imagen base popular:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> alpine:3.19          # ~5 MB, mínimo absoluto</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> debian:bookworm-slim # ~70 MB, más herramientas</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> ubuntu:22.04         # ~77 MB, más completo</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine       # ~170 MB, Node.js + Alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> python:3.12-slim     # ~130 MB, Python + Debian slim</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> golang:1.22-alpine   # ~400 MB, Go + Alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> rust:1.75-slim       # ~600 MB, Rust + Debian slim</span></span></code></pre></figure>
+<h4 id="workdir-directorio-de-trabajo">WORKDIR: directorio de trabajo<a aria-label="Link to section" class="anchor-link" href="#workdir-directorio-de-trabajo"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Establece el directorio de trabajo para las instrucciones posteriores</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Es equivalente a hacer "mkdir -p /app &#x26;&#x26; cd /app"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># WORKDIR vs RUN cd</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: WORKDIR es persistente, RUN cd no</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> cd /app                    # ❌ El cd se pierde después de esta instrucción</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . /app                    # ❌ Termina en /</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"index.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]       # Error: no encuentra index.js en /</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: WORKDIR persiste entre capas</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"index.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]       # ✅ index.js está en /app</span></span></code></pre></figure>
+<pre><code>WORKDIR también crea la carpeta si no existe:
+FROM node:20-alpine
+WORKDIR /app                   # Crea /app
+WORKDIR src                    # Crea /app/src
+WORKDIR ../tmp                 # Crea /tmp (sube un nivel desde /app/src)
+# El WORKDIR actual ahora es /tmp
+CMD ["pwd"]                    # /tmp
+</code></pre>
+<h4 id="copy-vs-add">COPY vs ADD<a aria-label="Link to section" class="anchor-link" href="#copy-vs-add"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># COPY: copia archivos locales al contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> origen/ destino/</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package.json /app/</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> *.txt /docs/              # Soporta wildcards</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --chown=appuser:appgroup archivo /app/  # Cambia propietario</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ADD: como COPY pero con funcionalidades extra</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ADD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> archivo.tar.gz /app/       # ✅ Descomprime automáticamente</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ADD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> http://ejemplo.com/archivo /app/  # ✅ Descarga de URL</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ADD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --chown=appuser:appgroup archivo /app/  # Cambia propietario</span></span></code></pre></figure>
+<pre><code>COPY vs ADD: ¿cuál usar?
+┌─────────────────┬──────────────┬──────────────┐
+│  Caso           │  COPY        │  ADD         │
+├─────────────────┼──────────────┼──────────────┤
+│  Copia local    │  ✅ Recomendado │ ✅           │
+│  URL remota     │  ❌          │ ✅           │
+│  .tar.gz auto   │  ❌          │ ✅           │
+│  Checksum       │  ❌          │ --chown      │
+│  Claridad       │  ✅           │ Menos claro  │
+└─────────────────┴──────────────┴──────────────┘
+
+Regla: Usa COPY siempre que puedas.
+Usa ADD SOLO si necesitas:
+- Descomprimir archivos .tar.gz automáticamente
+- Descargar desde URLs (aunque curl o wget en RUN es preferible)
+</code></pre>
+<h4 id="run-ejecutar-comandos">RUN: ejecutar comandos<a aria-label="Link to section" class="anchor-link" href="#run-ejecutar-comandos"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Shell form: se ejecuta en un shell (sh -c)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm install</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Exec form: se ejecuta directamente (sin shell)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"npm"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"install"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Múltiples RUN (cada uno crea una capa):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get update &#x26;&#x26; apt-get install -y curl</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get install -y wget</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get install -y git</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Mejor: combinar en un solo RUN para menos capas:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get update &#x26;&#x26; apt-get install -y \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    curl \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    wget \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    git \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x26;&#x26; rm -rf /var/lib/apt/lists/*</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ Nota: cada RUN crea una nueva capa</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Las capas previas se "congelan" — cambios en instrucciones</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># posteriores no afectan capas ya construidas</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ¿Cuántas capas crea cada enfoque?</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: 5 capas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> curl</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> wget</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> git</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -rf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/lib/apt/lists/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">*</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: 1 capa</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> update</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">apt-get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -y</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">    curl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> wget</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> git</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    &#x26;&#x26; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">rm</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -rf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /var/lib/apt/lists/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">*</span></span></code></pre></figure>
+<h4 id="cmd-vs-entrypoint">CMD vs ENTRYPOINT<a aria-label="Link to section" class="anchor-link" href="#cmd-vs-entrypoint"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># CMD: valores por defecto que el usuario puede sobrescribir</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El usuario puede ejecutar:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app              → node server.js (default)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app npm test     → npm test (CMD sobrescrito)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app node debug   → node debug (CMD sobrescrito)</span></span>
+<span data-line=""> </span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ENTRYPOINT: el comando principal que NO se sobrescribe fácilmente</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENTRYPOINT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># El usuario puede agregar argumentos:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app              → node server.js</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app --debug      → node server.js --debug</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app --help       → node server.js --help</span></span></code></pre></figure>
+<pre><code>CMD vs ENTRYPOINT: la diferencia clave
+
+CMD (valores por defecto):
+  docker run mi-app:latest              → node server.js
+  docker run mi-app:latest npm test     → npm test (CMD se REEMPLAZA)
+  docker run mi-app:latest --debug      → --debug (CMD se REEMPLAZA)
+
+ENTRYPOINT (comando fijo):
+  docker run mi-app:latest              → node server.js
+  docker run mi-app:latest npm test     → node server.js npm test (se AGREGA)
+  docker run mi-app:latest --debug      → node server.js --debug (se AGREGA)
+
+# Combina ambos para configurabilidad:
+FROM node:20-alpine
+ENTRYPOINT ["node"]
+CMD ["server.js"]
+
+# docker run mi-app             → node server.js
+# docker run mi-app debug.js    → node debug.js
+# docker run mi-app --inspect   → node --inspect
+</code></pre>
+<h4 id="env-variables-de-entorno">ENV: variables de entorno<a aria-label="Link to section" class="anchor-link" href="#env-variables-de-entorno"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sintaxis KEY=VALUE</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> NODE_ENV=production</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> APP_PORT=3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Sintaxis con shell (útil para valores con espacios):</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> GREETING=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Hello World"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Referenciar variables en el mismo Dockerfile:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> APP_DIR=/app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> $APP_DIR</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Verificar variables en un contenedor:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">docker run --env DATABASE_URL=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"postgresql://..."</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">docker run -e NODE_ENV=production -e API_KEY=abc123 mi-app</span></span></code></pre></figure>
+<h4 id="arg-variables-de-construcción">ARG: variables de construcción<a aria-label="Link to section" class="anchor-link" href="#arg-variables-de-construcción"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ARG: solo existe durante la construcción (no en el contenedor)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ARG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> NODE_VERSION=20</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ARG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> BUILD_VERSION=1.0.0</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:${NODE_VERSION}-alpine</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> echo </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Construyendo versión ${BUILD_VERSION}"</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Al construir, puedes pasar valores:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker build --build-arg NODE_VERSION=18 --build-arg BUILD_VERSION=2.0.0 -t mi-app .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Valores por defecto si no se pasa:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> alpine:3.19</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ARG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> HTTP_PORT=80</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ARG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> APP_ENV=production</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> echo </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Puerto: ${HTTP_PORT}"</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> echo </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"Ambiente: ${APP_ENV}"</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">ARG</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> vs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ENV:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ¿cuándo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> usar</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cada</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> uno?</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">┌─────────────────┬──────────────┬──────────────┐</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">                   │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ARG</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">         │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ENV</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">         │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">├─────────────────┼──────────────┼──────────────┤</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  Durante</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ✅</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Sí</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  También</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">     │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  En</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> contenedor</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ❌</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> No</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ✅</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Sí</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ❌</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">          │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ✅</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Sí</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ❌</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">          │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  ✅</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> Sí</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">       │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  Uso</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> típico</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">     │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  Versiones</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  Configuración│</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">│</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">                 │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  del</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   │</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">  de</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> la</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> app</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">   │</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">└─────────────────┴──────────────┴──────────────┘</span></span></code></pre></figure>
+<h4 id="expose-documentación-de-puertos">EXPOSE: documentación de puertos<a aria-label="Link to section" class="anchor-link" href="#expose-documentación-de-puertos"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># EXPOSE no publica puertos — es documentación</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># La publicación real se hace con -p en docker run</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">EXPOSE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run -p 8080:3000 mi-app</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#                         ↑</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  EXPOSE dice "esta app usa el puerto 3000 internamente"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">#  -p dice "mapear el puerto 3000 interno al 8080 externo"</span></span></code></pre></figure>
+<h4 id="user-cambiar-usuario">USER: cambiar usuario<a aria-label="Link to section" class="anchor-link" href="#user-cambiar-usuario"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ Nunca ejecutes como root</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear usuario no-root</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> addgroup -S appgroup &#x26;&#x26; adduser -S appuser -G appgroup</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cambiar al usuario no-root</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> appuser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># O puedes especificar UID:GID</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 1000:1000</span></span></code></pre></figure>
+<h4 id="volume-volúmenes">VOLUME: volúmenes<a aria-label="Link to section" class="anchor-link" href="#volume-volúmenes"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Declara un punto de montaje como volumen</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">VOLUME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/app/data"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/app/logs"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Esto crea volúmenes anónimos automáticamente</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># docker run mi-app creará volúmenes gestionados por Docker</span></span></code></pre></figure>
+<h4 id="healthcheck-verificación-de-salud">HEALTHCHECK: verificación de salud<a aria-label="Link to section" class="anchor-link" href="#healthcheck-verificación-de-salud"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> nginx:latest</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">HEALTHCHECK</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --interval=30s --timeout=10s --start-period=5s --retries=3 \</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> curl -f http://localhost/ || exit 1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Parámetros:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --interval: tiempo entre checks (default: 30s)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --timeout: tiempo máximo por check (default: 30s)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --start-period: tiempo antes del primer check (default: 0s)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># --retries: intentos antes de marcar "unhealthy" (default: 3)</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Comprobación en contenedor:</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">docker inspect --format=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'{{.State.Health.Status}}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> mi-contenedor</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># healthy | unhealthy | starting</span></span></code></pre></figure>
+<h2 id="construcción-de-capas-el-sistema-de-caché">Construcción de capas: el sistema de caché<a aria-label="Link to section" class="anchor-link" href="#construcción-de-capas-el-sistema-de-caché"><span class="icon icon-link"></span></a></h2>
+<p>Entender cómo Docker construye capas es <strong>fundamental</strong> para crear imágenes rápidas:</p>
+<pre><code>Proceso de construcción con caché:
+
+Dockerfile:
+  FROM node:20-alpine        ← Capa 1: Si node:20-alpine no cambió → ✅ caché
+  WORKDIR /app               ← Capa 2: Si no cambió → ✅ caché
+  COPY package.json .        ← Capa 3: Si package.json NO cambió → ✅ caché
+  RUN npm install            ← Capa 4: Si la capa anterior fue caché → ✅ caché
+  COPY . .                   ← Capa 5: Si el directorio cambió → ❌ reconstruye
+  CMD ["node", "server.js"]  ← Capa 6: nueva imagen
+
+Resultado:
+  - Capas 1-4: usadas del caché (segundos)
+  - Capa 5: reconstruida (solo si algo cambió)
+  - Capa 6: nueva imagen
+
+⚡ Con caché: build de 5 segundos
+❌ Sin caché: build de 2 minutos (npm install)
+</code></pre>
+<h3 id="el-orden-importa-pon-los-archivos-menos-cambiantes-primero">El orden importa: pon los archivos menos cambiantes primero<a aria-label="Link to section" class="anchor-link" href="#el-orden-importa-pon-los-archivos-menos-cambiantes-primero"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: cada cambio en el código invalida npm install</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .                   ← Cambia TODO → invalida todas las capas siguientes</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm install            ← Siempre se reconstruye (❌ lento)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: package.json separado del código</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package.json package-lock.json ./  ← Cambia RARO</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm install                            ← Se usa caché la mayor parte del tiempo</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .                                 ← Cambia FRECUENTE, pero npm install no se toca</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<h2 id="multi-stage-builds-la-técnica-más-importante">Multi-stage builds: la técnica más importante<a aria-label="Link to section" class="anchor-link" href="#multi-stage-builds-la-técnica-más-importante"><span class="icon icon-link"></span></a></h2>
+<p>Los <strong>multi-stage builds</strong> permiten usar múltiples <code>FROM</code> en un mismo Dockerfile. Cada <code>FROM</code> es una nueva etapa con su propia base:</p>
+<h3 id="por-qué-multi-stage-builds">¿Por qué multi-stage builds?<a aria-label="Link to section" class="anchor-link" href="#por-qué-multi-stage-builds"><span class="icon icon-link"></span></a></h3>
+<pre><code>Problema: imágenes enormes con herramientas de build innecesarias
+
+❌ Imagen sin multi-stage (3.2 GB):
+┌─────────────────────────────────────┐
+│  FROM golang:latest (1.4 GB)        │
+│  RUN apt-get update                 │
+│  RUN apt-get install -y git         │  ← git no se necesita en producción
+│  RUN go build                       │
+│  COPY . .                           │
+│  CMD ["./myapp"]                    │
+│  ┌─────────────────────────────────┐│
+│  │  Go compiler + stdlib            ││  ← 1.4 GB
+│  │  build-essential                 ││  ← 200 MB
+│  │  git                             ││  ← 50 MB
+│  │  Tu aplicación compilada         ││  ← 50 MB
+│  └─────────────────────────────────┘│
+└─────────────────────────────────────┘
+Total: ~3.2 GB
+
+
+✅ Imagen con multi-stage (50 MB):
+Stage 1 (build):
+┌─────────────────────────────────────┐
+│  FROM golang:latest (1.4 GB)        │
+│  ... build the app ...              │
+│  /app/bin/myapp (50 MB compilado)   │
+└─────────────────────────────────────┘
+  │
+  │  COPY --from=build-stage /app/bin/myapp
+  ▼
+Stage 2 (production):
+┌─────────────────────────────────────┐
+│  FROM alpine:3.19 (5 MB)            │
+│  COPY --from=build-stage /app/bin/myapp /myapp
+│  CMD ["/myapp"]                     │
+│  ┌─────────────────────────────────┐│
+│  │  Alpine base                     ││  ← 5 MB
+│  │  Tu aplicación compilada         ││  ← 50 MB
+│  └─────────────────────────────────┘│
+└─────────────────────────────────────┘
+Total: ~55 MB (60x más pequeña!)
+</code></pre>
+<h3 id="ejemplo-real-aplicación-nodejs">Ejemplo real: aplicación Node.js<a aria-label="Link to section" class="anchor-link" href="#ejemplo-real-aplicación-nodejs"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 1: Dependencias y caché</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> deps</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package.json package-lock.json ./</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm ci --only=production</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 2: Build (si tu app necesita compilación)</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> build</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> package.json package-lock.json ./</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm ci</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm run build</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 3: Producción — imagen mínima</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> node:20-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> production</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Crear usuario no-root</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> addgroup -S appgroup &#x26;&#x26; adduser -S appuser -G appgroup</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar solo lo necesario de stages anteriores</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=deps /app/node_modules ./node_modules</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=build /app/dist ./dist</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=build /app/package.json ./</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Cambiar a usuario no-root</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> appuser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Variables de entorno</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> NODE_ENV=production</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> PORT=3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">EXPOSE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 3000</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">HEALTHCHECK</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --interval=30s --timeout=10s --retries=3 \</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">  CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> wget -qO- http://localhost:3000/health || exit 1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"dist/server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<h3 id="ejemplo-real-aplicación-python-con-pyinstaller">Ejemplo real: aplicación Python con PyInstaller<a aria-label="Link to section" class="anchor-link" href="#ejemplo-real-aplicación-python-con-pyinstaller"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 1: Build de la aplicación</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> python:3.12-slim </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> builder</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar PyInstaller</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> pip install --no-cache-dir pyinstaller</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar fuentes</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Compilar a binario</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> pyinstaller --onefile --clean main.py</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 2: Producción — solo el binario</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> alpine:3.19</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> addgroup -S appgroup &#x26;&#x26; adduser -S appuser -G appgroup</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=builder /app/dist/main /app/main</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> chmod +x /app/main</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> appuser</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/app/main"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<h3 id="ejemplo-real-aplicación-go-con-cross-compilation">Ejemplo real: aplicación Go con cross-compilation<a aria-label="Link to section" class="anchor-link" href="#ejemplo-real-aplicación-go-con-cross-compilation"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 1: Compilar</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> golang:1.22-alpine </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> builder</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Instalar dependencias de build</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apk add --no-cache git ca-certificates tzdata</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar y descargar dependencias</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> go.mod go.sum ./</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> go mod download</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Copiar todo el código</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> . .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Compilar de forma estática</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o /app/server .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Stage 2: Producción — imagen super pequeña</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ═══════════════════════════════════════════</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> scratch</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># scratch es la imagen más pequeña posible: 0 MB</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /app</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=builder /app/server /server</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> --from=builder /usr/share/zoneinfo /usr/share/zoneinfo</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">EXPOSE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> 8080</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/server"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></figure>
+<pre><code>💡 Con FROM scratch, la imagen Go contiene:
+  - El binario compilado estáticamente (sin dependencias)
+  - Certificados CA (para HTTPS)
+  - Zoneinfo (para manejo de zonas horarias)
+
+Tamaño final: ~10-15 MB
+</code></pre>
+<h2 id="optimización-de-imágenes">Optimización de imágenes<a aria-label="Link to section" class="anchor-link" href="#optimización-de-imágenes"><span class="icon icon-link"></span></a></h2>
+<h3 id="estrategias-para-imágenes-más-pequeñas">Estrategias para imágenes más pequeñas<a aria-label="Link to section" class="anchor-link" href="#estrategias-para-imágenes-más-pequeñas"><span class="icon icon-link"></span></a></h3>
+<h4 id="1-elegir-la-imagen-base-correcta">1. Elegir la imagen base correcta<a aria-label="Link to section" class="anchor-link" href="#1-elegir-la-imagen-base-correcta"><span class="icon icon-link"></span></a></h4>
+<pre><code>Tamaño de imágenes base populares:
+┌──────────────────────────────────┬──────────────┐
+│  Imagen base                     │  Tamaño      │
+├──────────────────────────────────┼──────────────┤
+│  alpine:3.19                     │  ~5 MB       │
+│  scratch                         │  0 MB        │
+│  distroless                      │  ~2-4 MB     │
+│  busybox                         │  ~1.5 MB     │
+│  debian:bookworm-slim            │  ~70 MB      │
+│  ubuntu:22.04                    │  ~77 MB      │
+│  node:20-alpine                  │  ~170 MB     │
+│  node:20                         │  ~950 MB     │
+│  python:3.12-slim                │  ~130 MB     │
+│  golang:1.22-alpine              │  ~400 MB     │
+└──────────────────────────────────┴──────────────┘
+</code></pre>
+<h4 id="2-usar-dockerignore">2. Usar <code>.dockerignore</code><a aria-label="Link to section" class="anchor-link" href="#2-usar-dockerignore"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># .dockerignore — EXCLUSO archivos del contexto de build</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">node_modules</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.git</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.gitignore</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.md</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.env</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.env.*</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.log</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.swp</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">.swo</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">~</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.vscode</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.idea</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">dist</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">build</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.next</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.nuxt</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">coverage</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.nyc_output</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">.DS_Store</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">thunder-collection.json</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">src/**/*.test.ts</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">src/**/*.spec.ts</span></span></code></pre></figure>
+<pre><code>Con .dockerignore:
+  Contexto de build: 150 MB → 3 MB (50x más pequeño)
+  
+Sin .dockerignore:
+  node_modules/ se copia al contexto de build
+  Cada cambio en node_modules invalida el caché de COPY
+  Build se vuelve increíblemente lento
+</code></pre>
+<h4 id="3-combinar-run-con--y-">3. Combinar RUN con &#x26;&#x26; y &#x26;&#x26;<a aria-label="Link to section" class="anchor-link" href="#3-combinar-run-con--y-"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: 5 capas</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get update</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get install -y curl</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get install -y wget</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get install -y git</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> rm -rf /var/lib/apt/lists/*</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: 1 capa (limpieza incluida)</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> apt-get update &#x26;&#x26; apt-get install -y \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    curl wget git &#x26;&#x26; \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    rm -rf /var/lib/apt/lists/*</span></span></code></pre></figure>
+<h4 id="4-eliminar-archivos-temporales-en-la-misma-capa">4. Eliminar archivos temporales en la misma capa<a aria-label="Link to section" class="anchor-link" href="#4-eliminar-archivos-temporales-en-la-misma-capa"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: los archivos temporales permanecen en la capa</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> wget http://ejemplo.com/archivo-grande.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> tar -xzf archivo-grande.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> rm archivo-grande.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Los 3 RUN = 3 capas. Los 100 MB del .tar.gz están en las 3 capas.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: todo en un RUN, el tar.gz no queda en la imagen final</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> wget http://ejemplo.com/archivo-grande.tar.gz &#x26;&#x26; \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    tar -xzf archivo-grande.tar.gz &#x26;&#x26; \</span></span>
+<span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    rm archivo-grande.tar.gz</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1 sola capa. El archivo tar.gz fue descargado, extraído y eliminado</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># en la misma capa.</span></span></code></pre></figure>
+<h4 id="5-usar---no-cache-dir-con-pip">5. Usar <code>--no-cache-dir</code> con pip<a aria-label="Link to section" class="anchor-link" href="#5-usar---no-cache-dir-con-pip"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ❌ Malo: caché de pip queda en la imagen</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> pip install requests flask</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ✅ Bueno: limpia el caché de pip</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> pip install --no-cache-dir requests flask</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para npm también:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> npm ci --only=production &#x26;&#x26; npm cache clean --force</span></span></code></pre></figure>
+<h4 id="6-usar-distroless-google">6. Usar Distroless (Google)<a aria-label="Link to section" class="anchor-link" href="#6-usar-distroless-google"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="dockerfile" data-theme="github-light github-dark"><code data-language="dockerfile" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Google Distroless: imágenes sin shell, sin package manager, SO mínimo</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Solo contienen tu app y sus dependencias de runtime</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Node.js sin shell, sin bash, sin package manager</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> gcr.io/distroless/nodejs20-debian12</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> server.js /</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"/server.js"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Tamaño: ~100 MB vs ~170 MB de node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Seguridad: superficie de ataque mínima (no hay bash, ni apt, ni user add)</span></span></code></pre></figure>
+<h4 id="7-usar-buildkit-optimización-automática">7. Usar BuildKit (optimización automática)<a aria-label="Link to section" class="anchor-link" href="#7-usar-buildkit-optimización-automática"><span class="icon icon-link"></span></a></h4>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># BuildKit habilitado por defecto en Docker 23.0+</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Forzar BuildKit:</span></span>
+<span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> DOCKER_BUILDKIT</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">1</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Con BuildKit puedes usar:</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - mount=type=cache para caché de dependencias</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - secret para credenciales seguras en build time</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># - ssh para clonar repos privados</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejemplo: caché de npm</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># syntax=docker/dockerfile:1</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node:20-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --mount=type=cache,target=/root/.npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ci</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">COPY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> package.json</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> package-lock.json</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ./</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">RUN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --mount=type=cache,target=/root/.npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> npm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> ci</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">COPY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span></code></pre></figure>
+<h2 id="etiquetado-semántico-de-imágenes">Etiquetado semántico de imágenes<a aria-label="Link to section" class="anchor-link" href="#etiquetado-semántico-de-imágenes"><span class="icon icon-link"></span></a></h2>
+<pre><code>Versionado de imágenes Docker:
+
+┌─────────────────────────────────────────────────────┐
+│  Semver para Docker                                 │
+│                                                     │
+│  mi-app:1.2.3       ← Versión exacta (recomendado)  │
+│  mi-app:1.2         ← Última 1.2.x                  │
+│  mi-app:1           ← Última 1.x.x                  │
+│  mi-app:latest      ← Última versión (NO para prod) │
+│                                                     │
+│  git commit short   ← mi-app:abc123                 │
+│  git tag            ← mi-app:v2.1.0                 │
+│  git branch         ← mi-app:main                   │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Construir con etiqueta de versión</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Construir con SHA del commit</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> rev-parse</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --short</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> HEAD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Construir con tag y latest (para fácil referencia)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> build</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:latest</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> .</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># ⚠️ Advertencia sobre "latest"</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># "latest" no significa "más reciente". Significa "la última que etiqueté como latest".</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Puede apuntar a una versión antigua si no la actualizaste.</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Para producción, SIEMPRE usa versión específica:</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # ✅ Reproducible</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:latest</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # ❌ No determinista</span></span></code></pre></figure>
+<h2 id="registro-de-imágenes">Registro de imágenes<a aria-label="Link to section" class="anchor-link" href="#registro-de-imágenes"><span class="icon icon-link"></span></a></h2>
+<h3 id="autenticación">Autenticación<a aria-label="Link to section" class="anchor-link" href="#autenticación"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Iniciar sesión en Docker Hub</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> login</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Iniciar sesión en un registry privado</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> login</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> registry.gitlab.com</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> login</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> gcr.io</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> login</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> 123456789.dkr.ecr.us-east-1.amazonaws.com</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Push de imagen a registry</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> tag</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> registry.gitlab.com/mi-usuario/mi-app:1.2.3</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> push</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> registry.gitlab.com/mi-usuario/mi-app:1.2.3</span></span></code></pre></figure>
+<h3 id="políticas-de-imágenes">Políticas de imágenes<a aria-label="Link to section" class="anchor-link" href="#políticas-de-imágenes"><span class="icon icon-link"></span></a></h3>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Políticas recomendadas para imágenes en producción:</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 1. Imágenes oficiales siempre que sea posible</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">✅ FROM nginx:1.25-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">❌ FROM myuser/nginx:1.25</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 2. Versiones específicas, no "latest"</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">✅ FROM node:20.11.0-alpine</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">❌ FROM node:latest</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 3. Scaneo de vulnerabilidades (Clair, Trivy, Grype)</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">docker scan mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 4. Firmar imágenes (Cosign, Notary)</span></span>
+<span data-line=""><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">cosign sign registry.example.com/mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># 5. Limitar tamaño máximo en el registry</span></span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Configurar en registry para rechazar imágenes > 1 GB</span></span></code></pre></figure>
+<h2 id="debugging-de-imágenes">Debugging de imágenes<a aria-label="Link to section" class="anchor-link" href="#debugging-de-imágenes"><span class="icon icon-link"></span></a></h2>
+<figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver el historial de una imagen (qué capas contiene)</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> history</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver capas detalladas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> history</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --no-trunc</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar un contenedor y entrar en modo shell</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -it</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --entrypoint</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> sh</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ejecutar un solo comando en la imagen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> /etc/os-release</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> node</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --version</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Escanear vulnerabilidades</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> scan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Inspeccionar metadatos</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> inspect</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Ver variables de entorno de la imagen</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> run</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> --rm</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> env</span></span>
+<span data-line=""> </span>
+<span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Contar capas</span></span>
+<span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">docker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> history</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> mi-app:1.2.3</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> wc</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> -l</span></span></code></pre></figure>
+<h2 id="resumen">Resumen<a aria-label="Link to section" class="anchor-link" href="#resumen"><span class="icon icon-link"></span></a></h2>
+<ul>
+<li><strong>Imágenes</strong> son plantillas de solo lectura construidas en capas</li>
+<li><strong>Dockerfile</strong> define las capas: FROM, COPY, RUN, CMD, etc.</li>
+<li><strong>El orden importa</strong>: archivos menos cambiantes primero para aprovechar el caché</li>
+<li><strong>Multi-stage builds</strong> reducen imágenes de GBs a MBs separando build de producción</li>
+<li><strong>Optimización</strong>: .dockerignore, combinar RUN, limpiar caché, usar Alpine/Distroless</li>
+<li><strong>Etiquetado semántico</strong>: versiona imágenes (1.2.3) nunca uses latest para producción</li>
+<li><strong>Registro</strong>: push a Docker Hub, GHCR, GCR, ECR, o registry privado</li>
+<li><strong>Debug</strong>: docker history, docker run --rm, docker inspect para diagnosticar problemas</li>
+</ul>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">La clave</div>
+                </div>
+                <div class="callout-content">Las imágenes Docker más importantes no son las que corren más rápido (aunque eso importa), sino las que son deterministas y reproducibles. Una imagen con etiqueta de versión fija, construida con multi-stage y limpiada con .dockerignore, es la base de un pipeline de despliegue confiable.</div>
+              
+</blockquote>
+<h2 id="conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki<a aria-label="Link to section" class="anchor-link" href="#conexión-con-el-resto-de-la-wiki"><span class="icon icon-link"></span></a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto tocado</th>
+<th>Artículo en profundidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Introducción a Docker</td>
+<td>[02-infra-contenedores/01-docker-intro](/es/index)</td>
+</tr>
+<tr>
+<td>Gestión de contenedores</td>
+<td>[02-infra-contenedores/03-docker-containers](/es/index)</td>
+</tr>
+<tr>
+<td>Docker Compose</td>
+<td>[02-infra-contenedores/04-docker-compose](/es/index)</td>
+</tr>
+<tr>
+<td>Volúmenes Docker</td>
+<td>[02-infra-contenedores/06-docker-volumes](/es/index)</td>
+</tr>
+</tbody>
+</table></div> </article> <aside class="page-toc" aria-label="Índice de la página"> <h2 class="page-toc-title">Índice</h2> <ol> <li class="toc-depth-2"> <a href="#qué-es-una-imagen-docker">¿Qué es una imagen Docker?</a> </li><li class="toc-depth-3"> <a href="#imagen-vs-contenedor-la-analogía">Imagen vs Contenedor: la analogía</a> </li><li class="toc-depth-3"> <a href="#estructura-de-una-imagen">Estructura de una imagen</a> </li><li class="toc-depth-2"> <a href="#el-dockerfile-guía-completa">El Dockerfile: guía completa</a> </li><li class="toc-depth-3"> <a href="#sintaxis-básica">Sintaxis básica</a> </li><li class="toc-depth-3"> <a href="#instrucciones-del-dockerfile">Instrucciones del Dockerfile</a> </li><li class="toc-depth-2"> <a href="#construcción-de-capas-el-sistema-de-caché">Construcción de capas: el sistema de caché</a> </li><li class="toc-depth-3"> <a href="#el-orden-importa-pon-los-archivos-menos-cambiantes-primero">El orden importa: pon los archivos menos cambiantes primero</a> </li><li class="toc-depth-2"> <a href="#multi-stage-builds-la-técnica-más-importante">Multi-stage builds: la técnica más importante</a> </li><li class="toc-depth-3"> <a href="#por-qué-multi-stage-builds">¿Por qué multi-stage builds?</a> </li><li class="toc-depth-3"> <a href="#ejemplo-real-aplicación-nodejs">Ejemplo real: aplicación Node.js</a> </li><li class="toc-depth-3"> <a href="#ejemplo-real-aplicación-python-con-pyinstaller">Ejemplo real: aplicación Python con PyInstaller</a> </li><li class="toc-depth-3"> <a href="#ejemplo-real-aplicación-go-con-cross-compilation">Ejemplo real: aplicación Go con cross-compilation</a> </li><li class="toc-depth-2"> <a href="#optimización-de-imágenes">Optimización de imágenes</a> </li><li class="toc-depth-3"> <a href="#estrategias-para-imágenes-más-pequeñas">Estrategias para imágenes más pequeñas</a> </li><li class="toc-depth-2"> <a href="#etiquetado-semántico-de-imágenes">Etiquetado semántico de imágenes</a> </li><li class="toc-depth-2"> <a href="#registro-de-imágenes">Registro de imágenes</a> </li><li class="toc-depth-3"> <a href="#autenticación">Autenticación</a> </li><li class="toc-depth-3"> <a href="#políticas-de-imágenes">Políticas de imágenes</a> </li><li class="toc-depth-2"> <a href="#debugging-de-imágenes">Debugging de imágenes</a> </li><li class="toc-depth-2"> <a href="#resumen">Resumen</a> </li><li class="toc-depth-2"> <a href="#conexión-con-el-resto-de-la-wiki">Conexión con el resto de la wiki</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

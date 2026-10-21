@@ -1,35 +1,28 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison</h1> <div class="article-body"><h1 id="cloud-providers-aws-azure-and-gcp"><a aria-hidden="true" tabindex="-1" href="#cloud-providers-aws-azure-and-gcp"><span class="icon icon-link"></span></a>Cloud Providers: AWS, Azure, and GCP</h1>
-<blockquote>
-<p>[!tip] Cloud providers in a nutshell
-<strong>AWS, Azure, and GCP</strong> are the three major public cloud providers. Each offers hundreds of services, different strengths, and distinct pricing models. This article compares them in detail.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/21-cloud-providers" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/21-cloud-providers/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article active"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison</h1> <div class="article-body"><h1 id="cloud-providers-aws-azure-and-gcp">Cloud Providers: AWS, Azure, and GCP<a aria-label="Link to section" class="anchor-link" href="#cloud-providers-aws-azure-and-gcp"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Cloud providers in a nutshell</div>
+                </div>
+                <div class="callout-content">AWS, Azure, and GCP are the three major public cloud providers. Each offers hundreds of services, different strengths, and distinct pricing models. This article compares them in detail.</div>
+              
 </blockquote>
-<h2 id="what-is-a-cloud-provider"><a aria-hidden="true" tabindex="-1" href="#what-is-a-cloud-provider"><span class="icon icon-link"></span></a>What is a cloud provider?</h2>
+<h2 id="what-is-a-cloud-provider">What is a cloud provider?<a aria-label="Link to section" class="anchor-link" href="#what-is-a-cloud-provider"><span class="icon icon-link"></span></a></h2>
 <p>A <strong>cloud provider</strong> is a company that offers computing infrastructure and services over the Internet, on demand (pay-as-you-go). Instead of buying physical servers, you <strong>rent</strong> resources in their data centers.</p>
-<h3 id="the-three-giants-tier-1"><a aria-hidden="true" tabindex="-1" href="#the-three-giants-tier-1"><span class="icon icon-link"></span></a>The three giants (Tier 1)</h3>
+<h3 id="the-three-giants-tier-1">The three giants (Tier 1)<a aria-label="Link to section" class="anchor-link" href="#the-three-giants-tier-1"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -64,7 +57,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="fourth-tier-providers"><a aria-hidden="true" tabindex="-1" href="#fourth-tier-providers"><span class="icon icon-link"></span></a>Fourth-tier providers</h3>
+<h3 id="fourth-tier-providers">Fourth-tier providers<a aria-label="Link to section" class="anchor-link" href="#fourth-tier-providers"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -101,10 +94,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="aws-amazon-web-services"><a aria-hidden="true" tabindex="-1" href="#aws-amazon-web-services"><span class="icon icon-link"></span></a>AWS (Amazon Web Services)</h2>
+<h2 id="aws-amazon-web-services">AWS (Amazon Web Services)<a aria-label="Link to section" class="anchor-link" href="#aws-amazon-web-services"><span class="icon icon-link"></span></a></h2>
 <p><strong>The pioneer</strong> (launched in 2006), the largest and most complete.</p>
-<h3 id="aws-services"><a aria-hidden="true" tabindex="-1" href="#aws-services"><span class="icon icon-link"></span></a>AWS services</h3>
-<h4 id="compute"><a aria-hidden="true" tabindex="-1" href="#compute"><span class="icon icon-link"></span></a>Compute</h4>
+<h3 id="aws-services">AWS services<a aria-label="Link to section" class="anchor-link" href="#aws-services"><span class="icon icon-link"></span></a></h3>
+<h4 id="compute">Compute<a aria-label="Link to section" class="anchor-link" href="#compute"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -141,7 +134,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="storage"><a aria-hidden="true" tabindex="-1" href="#storage"><span class="icon icon-link"></span></a>Storage</h4>
+<h4 id="storage">Storage<a aria-label="Link to section" class="anchor-link" href="#storage"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -178,7 +171,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="networking"><a aria-hidden="true" tabindex="-1" href="#networking"><span class="icon icon-link"></span></a>Networking</h4>
+<h4 id="networking">Networking<a aria-label="Link to section" class="anchor-link" href="#networking"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -225,7 +218,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="databases"><a aria-hidden="true" tabindex="-1" href="#databases"><span class="icon icon-link"></span></a>Databases</h4>
+<h4 id="databases">Databases<a aria-label="Link to section" class="anchor-link" href="#databases"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -267,7 +260,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="serverless--ai"><a aria-hidden="true" tabindex="-1" href="#serverless--ai"><span class="icon icon-link"></span></a>Serverless &#x26; AI</h4>
+<h4 id="serverless--ai">Serverless &#x26; AI<a aria-label="Link to section" class="anchor-link" href="#serverless--ai"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -309,7 +302,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="aws-pricing"><a aria-hidden="true" tabindex="-1" href="#aws-pricing"><span class="icon icon-link"></span></a>AWS pricing</h3>
+<h3 id="aws-pricing">AWS pricing<a aria-label="Link to section" class="anchor-link" href="#aws-pricing"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -346,7 +339,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="aws-best-practices"><a aria-hidden="true" tabindex="-1" href="#aws-best-practices"><span class="icon icon-link"></span></a>AWS best practices</h3>
+<h3 id="aws-best-practices">AWS best practices<a aria-label="Link to section" class="anchor-link" href="#aws-best-practices"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Use IAM roles instead of access keys
 2. Enable MFA on all accounts
 3. Use VPC with private subnets
@@ -372,10 +365,10 @@
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  ]</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
-<h2 id="azure-microsoft-azure"><a aria-hidden="true" tabindex="-1" href="#azure-microsoft-azure"><span class="icon icon-link"></span></a>Azure (Microsoft Azure)</h2>
+<h2 id="azure-microsoft-azure">Azure (Microsoft Azure)<a aria-label="Link to section" class="anchor-link" href="#azure-microsoft-azure"><span class="icon icon-link"></span></a></h2>
 <p><strong>The enterprise giant</strong>, deeply integrated with Microsoft products.</p>
-<h3 id="azure-services"><a aria-hidden="true" tabindex="-1" href="#azure-services"><span class="icon icon-link"></span></a>Azure services</h3>
-<h4 id="compute-1"><a aria-hidden="true" tabindex="-1" href="#compute-1"><span class="icon icon-link"></span></a>Compute</h4>
+<h3 id="azure-services">Azure services<a aria-label="Link to section" class="anchor-link" href="#azure-services"><span class="icon icon-link"></span></a></h3>
+<h4 id="compute-1">Compute<a aria-label="Link to section" class="anchor-link" href="#compute-1"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -417,7 +410,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="storage-1"><a aria-hidden="true" tabindex="-1" href="#storage-1"><span class="icon icon-link"></span></a>Storage</h4>
+<h4 id="storage-1">Storage<a aria-label="Link to section" class="anchor-link" href="#storage-1"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -454,7 +447,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="networking-1"><a aria-hidden="true" tabindex="-1" href="#networking-1"><span class="icon icon-link"></span></a>Networking</h4>
+<h4 id="networking-1">Networking<a aria-label="Link to section" class="anchor-link" href="#networking-1"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -501,7 +494,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="databases-1"><a aria-hidden="true" tabindex="-1" href="#databases-1"><span class="icon icon-link"></span></a>Databases</h4>
+<h4 id="databases-1">Databases<a aria-label="Link to section" class="anchor-link" href="#databases-1"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -543,7 +536,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="identity--security"><a aria-hidden="true" tabindex="-1" href="#identity--security"><span class="icon icon-link"></span></a>Identity &#x26; Security</h4>
+<h4 id="identity--security">Identity &#x26; Security<a aria-label="Link to section" class="anchor-link" href="#identity--security"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -580,7 +573,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="azure-pricing"><a aria-hidden="true" tabindex="-1" href="#azure-pricing"><span class="icon icon-link"></span></a>Azure pricing</h3>
+<h3 id="azure-pricing">Azure pricing<a aria-label="Link to section" class="anchor-link" href="#azure-pricing"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -617,7 +610,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="azure-best-practices"><a aria-hidden="true" tabindex="-1" href="#azure-best-practices"><span class="icon icon-link"></span></a>Azure best practices</h3>
+<h3 id="azure-best-practices">Azure best practices<a aria-label="Link to section" class="anchor-link" href="#azure-best-practices"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Use Azure Policy for governance
 2. Use Managed Identities instead of service principals
 3. Deploy across multiple Availability Zones
@@ -629,10 +622,10 @@
 9. Deploy infrastructure as code (Bicep, Terraform)
 10. Use Azure DevOps or GitHub Actions for CI/CD
 </code></pre>
-<h2 id="gcp-google-cloud-platform"><a aria-hidden="true" tabindex="-1" href="#gcp-google-cloud-platform"><span class="icon icon-link"></span></a>GCP (Google Cloud Platform)</h2>
+<h2 id="gcp-google-cloud-platform">GCP (Google Cloud Platform)<a aria-label="Link to section" class="anchor-link" href="#gcp-google-cloud-platform"><span class="icon icon-link"></span></a></h2>
 <p><strong>The innovation leader</strong>, strong in data, AI, and Kubernetes.</p>
-<h3 id="gcp-services"><a aria-hidden="true" tabindex="-1" href="#gcp-services"><span class="icon icon-link"></span></a>GCP services</h3>
-<h4 id="compute-2"><a aria-hidden="true" tabindex="-1" href="#compute-2"><span class="icon icon-link"></span></a>Compute</h4>
+<h3 id="gcp-services">GCP services<a aria-label="Link to section" class="anchor-link" href="#gcp-services"><span class="icon icon-link"></span></a></h3>
+<h4 id="compute-2">Compute<a aria-label="Link to section" class="anchor-link" href="#compute-2"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -679,7 +672,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="storage-2"><a aria-hidden="true" tabindex="-1" href="#storage-2"><span class="icon icon-link"></span></a>Storage</h4>
+<h4 id="storage-2">Storage<a aria-label="Link to section" class="anchor-link" href="#storage-2"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -711,7 +704,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="networking-2"><a aria-hidden="true" tabindex="-1" href="#networking-2"><span class="icon icon-link"></span></a>Networking</h4>
+<h4 id="networking-2">Networking<a aria-label="Link to section" class="anchor-link" href="#networking-2"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -753,7 +746,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="databases-2"><a aria-hidden="true" tabindex="-1" href="#databases-2"><span class="icon icon-link"></span></a>Databases</h4>
+<h4 id="databases-2">Databases<a aria-label="Link to section" class="anchor-link" href="#databases-2"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -795,7 +788,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="ai--data"><a aria-hidden="true" tabindex="-1" href="#ai--data"><span class="icon icon-link"></span></a>AI &#x26; Data</h4>
+<h4 id="ai--data">AI &#x26; Data<a aria-label="Link to section" class="anchor-link" href="#ai--data"><span class="icon icon-link"></span></a></h4>
 <table>
 <thead>
 <tr>
@@ -837,7 +830,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gcp-pricing"><a aria-hidden="true" tabindex="-1" href="#gcp-pricing"><span class="icon icon-link"></span></a>GCP pricing</h3>
+<h3 id="gcp-pricing">GCP pricing<a aria-label="Link to section" class="anchor-link" href="#gcp-pricing"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -879,7 +872,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="gcp-best-practices"><a aria-hidden="true" tabindex="-1" href="#gcp-best-practices"><span class="icon icon-link"></span></a>GCP best practices</h3>
+<h3 id="gcp-best-practices">GCP best practices<a aria-label="Link to section" class="anchor-link" href="#gcp-best-practices"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Use Service Accounts with minimal IAM roles
 2. Deploy in multiple regions for high availability
 3. Use Cloud Build + Artifact Registry for CI/CD
@@ -891,8 +884,8 @@
 9. Use BigQuery for analytics (serverless, fast)
 10. Take advantage of sustained use discounts (automatic)
 </code></pre>
-<h2 id="comparison-aws-vs-azure-vs-gcp"><a aria-hidden="true" tabindex="-1" href="#comparison-aws-vs-azure-vs-gcp"><span class="icon icon-link"></span></a>Comparison: AWS vs Azure vs GCP</h2>
-<h3 id="services-comparison"><a aria-hidden="true" tabindex="-1" href="#services-comparison"><span class="icon icon-link"></span></a>Services comparison</h3>
+<h2 id="comparison-aws-vs-azure-vs-gcp">Comparison: AWS vs Azure vs GCP<a aria-label="Link to section" class="anchor-link" href="#comparison-aws-vs-azure-vs-gcp"><span class="icon icon-link"></span></a></h2>
+<h3 id="services-comparison">Services comparison<a aria-label="Link to section" class="anchor-link" href="#services-comparison"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -995,7 +988,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="pricing-comparison"><a aria-hidden="true" tabindex="-1" href="#pricing-comparison"><span class="icon icon-link"></span></a>Pricing comparison</h3>
+<h3 id="pricing-comparison">Pricing comparison<a aria-label="Link to section" class="anchor-link" href="#pricing-comparison"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -1039,7 +1032,7 @@
 </tbody>
 </table>
 <p>*GCP has a generous free tier ($300 credit + always-free e2-micro)</p>
-<h3 id="key-differentiators"><a aria-hidden="true" tabindex="-1" href="#key-differentiators"><span class="icon icon-link"></span></a>Key differentiators</h3>
+<h3 id="key-differentiators">Key differentiators<a aria-label="Link to section" class="anchor-link" href="#key-differentiators"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -1112,7 +1105,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="when-to-choose-which"><a aria-hidden="true" tabindex="-1" href="#when-to-choose-which"><span class="icon icon-link"></span></a>When to choose which</h3>
+<h3 id="when-to-choose-which">When to choose which<a aria-label="Link to section" class="anchor-link" href="#when-to-choose-which"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -1164,8 +1157,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="cloud-architecture-patterns"><a aria-hidden="true" tabindex="-1" href="#cloud-architecture-patterns"><span class="icon icon-link"></span></a>Cloud architecture patterns</h2>
-<h3 id="multi-tier-web-application"><a aria-hidden="true" tabindex="-1" href="#multi-tier-web-application"><span class="icon icon-link"></span></a>Multi-tier web application</h3>
+<h2 id="cloud-architecture-patterns">Cloud architecture patterns<a aria-label="Link to section" class="anchor-link" href="#cloud-architecture-patterns"><span class="icon icon-link"></span></a></h2>
+<h3 id="multi-tier-web-application">Multi-tier web application<a aria-label="Link to section" class="anchor-link" href="#multi-tier-web-application"><span class="icon icon-link"></span></a></h3>
 <pre><code>                    Internet
                        │
                   ┌────┴────┐
@@ -1207,7 +1200,7 @@
       │  (Files)    │     │  (Session)  │
       └─────────────┘     └─────────────┘
 </code></pre>
-<h3 id="serverless-architecture"><a aria-hidden="true" tabindex="-1" href="#serverless-architecture"><span class="icon icon-link"></span></a>Serverless architecture</h3>
+<h3 id="serverless-architecture">Serverless architecture<a aria-label="Link to section" class="anchor-link" href="#serverless-architecture"><span class="icon icon-link"></span></a></h3>
 <pre><code>         User Request
               │
          ┌────┴────┐
@@ -1236,7 +1229,7 @@ Lambda    Lambda     Lambda
          Lambda
       (Process)
 </code></pre>
-<h3 id="data-pipeline-architecture"><a aria-hidden="true" tabindex="-1" href="#data-pipeline-architecture"><span class="icon icon-link"></span></a>Data pipeline architecture</h3>
+<h3 id="data-pipeline-architecture">Data pipeline architecture<a aria-label="Link to section" class="anchor-link" href="#data-pipeline-architecture"><span class="icon icon-link"></span></a></h3>
 <pre><code>    Data Sources
     (Apps, Logs, Events)
           │
@@ -1265,8 +1258,8 @@ Lambda    Lambda     Lambda
     │ / Looker │
     └──────────┘
 </code></pre>
-<h2 id="infrastructure-as-code-iac"><a aria-hidden="true" tabindex="-1" href="#infrastructure-as-code-iac"><span class="icon icon-link"></span></a>Infrastructure as Code (IaC)</h2>
-<h3 id="terraform-works-with-all-providers"><a aria-hidden="true" tabindex="-1" href="#terraform-works-with-all-providers"><span class="icon icon-link"></span></a>Terraform (works with all providers)</h3>
+<h2 id="infrastructure-as-code-iac">Infrastructure as Code (IaC)<a aria-label="Link to section" class="anchor-link" href="#infrastructure-as-code-iac"><span class="icon icon-link"></span></a></h2>
+<h3 id="terraform-works-with-all-providers">Terraform (works with all providers)<a aria-label="Link to section" class="anchor-link" href="#terraform-works-with-all-providers"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="hcl" data-theme="github-light github-dark"><code data-language="hcl" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Main.tf - Create an AWS EC2 instance</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">provider</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> "aws"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  region</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "us-east-1"</span></span>
@@ -1340,7 +1333,7 @@ Lambda    Lambda     Lambda
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> plan</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">        # Preview changes</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> apply</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">       # Apply changes</span></span>
 <span data-line=""><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">terraform</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> destroy</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">     # Clean up resources</span></span></code></pre></figure>
-<h3 id="pulumi-code-based-iac"><a aria-hidden="true" tabindex="-1" href="#pulumi-code-based-iac"><span class="icon icon-link"></span></a>Pulumi (code-based IaC)</h3>
+<h3 id="pulumi-code-based-iac">Pulumi (code-based IaC)<a aria-label="Link to section" class="anchor-link" href="#pulumi-code-based-iac"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">import</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> *</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF"> "@pulumi/aws"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> vpc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> aws.ec2.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">Vpc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">"main"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, {</span></span>
@@ -1362,8 +1355,8 @@ Lambda    Lambda     Lambda
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span>
 <span data-line=""> </span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> publicIp</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> instance.publicIp;</span></span></code></pre></figure>
-<h2 id="cost-management"><a aria-hidden="true" tabindex="-1" href="#cost-management"><span class="icon icon-link"></span></a>Cost management</h2>
-<h3 id="aws-cost-management"><a aria-hidden="true" tabindex="-1" href="#aws-cost-management"><span class="icon icon-link"></span></a>AWS Cost Management</h3>
+<h2 id="cost-management">Cost management<a aria-label="Link to section" class="anchor-link" href="#cost-management"><span class="icon icon-link"></span></a></h2>
+<h3 id="aws-cost-management">AWS Cost Management<a aria-label="Link to section" class="anchor-link" href="#aws-cost-management"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. AWS Budgets: Set spending limits and alerts
 2. AWS Cost Explorer: Visualize spending over time
 3. Reserved Instances: 1-3 year commitment (up to 72% savings)
@@ -1376,21 +1369,21 @@ Spot instances:
   - Great for batch processing, CI/CD, stateless workloads
   - NOT for production databases or stateful services
 </code></pre>
-<h3 id="azure-cost-management"><a aria-hidden="true" tabindex="-1" href="#azure-cost-management"><span class="icon icon-link"></span></a>Azure Cost Management</h3>
+<h3 id="azure-cost-management">Azure Cost Management<a aria-label="Link to section" class="anchor-link" href="#azure-cost-management"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Azure Cost Management + Billing: Track and analyze costs
 2. Azure Advisor: Recommendations for cost optimization
 3. Reserved VM Instances: 1-3 year commitment (up to 72%)
 4. Azure Savings Plans: Compute, storage, network (up to 65%)
 5. Spot VMs: Up to 90% savings for interruptible workloads
 </code></pre>
-<h3 id="gcp-cost-management"><a aria-hidden="true" tabindex="-1" href="#gcp-cost-management"><span class="icon icon-link"></span></a>GCP Cost Management</h3>
+<h3 id="gcp-cost-management">GCP Cost Management<a aria-label="Link to section" class="anchor-link" href="#gcp-cost-management"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Cloud Billing: Real-time cost monitoring
 2. Cost Table: Analyze costs by labels and services
 3. Committed Use Discounts: 1-3 year commitment (up to 57%)
 4. Sustained Use Discounts: Automatic for running resources
 5. Preemptible VMs: Up to 91% savings for short-lived workloads
 </code></pre>
-<h3 id="cost-optimization-checklist"><a aria-hidden="true" tabindex="-1" href="#cost-optimization-checklist"><span class="icon icon-link"></span></a>Cost optimization checklist</h3>
+<h3 id="cost-optimization-checklist">Cost optimization checklist<a aria-label="Link to section" class="anchor-link" href="#cost-optimization-checklist"><span class="icon icon-link"></span></a></h3>
 <pre><code>[ ] Right-size instances (don't over-provision)
 [ ] Use auto-scaling (scale down when idle)
 [ ] Use reserved instances/savings plans for steady workloads
@@ -1404,7 +1397,7 @@ Spot instances:
 [ ] Review monthly bills
 [ ] Use architecture patterns that minimize cost
 </code></pre>
-<h2 id="security-comparison"><a aria-hidden="true" tabindex="-1" href="#security-comparison"><span class="icon icon-link"></span></a>Security comparison</h2>
+<h2 id="security-comparison">Security comparison<a aria-label="Link to section" class="anchor-link" href="#security-comparison"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -1471,7 +1464,7 @@ Spot instances:
 </tr>
 </tbody>
 </table>
-<h3 id="shared-responsibility-model"><a aria-hidden="true" tabindex="-1" href="#shared-responsibility-model"><span class="icon icon-link"></span></a>Shared Responsibility Model</h3>
+<h3 id="shared-responsibility-model">Shared Responsibility Model<a aria-label="Link to section" class="anchor-link" href="#shared-responsibility-model"><span class="icon icon-link"></span></a></h3>
 <pre><code>                    Cloud Provider (responsible for)        Customer (responsible for)
                     ┌────────────────────────────────────┐  ┌────────────────────────────────────┐
                     │            The Cloud               │  │          IN the Cloud              │
@@ -1489,8 +1482,8 @@ Spot instances:
                                                          │              YOUR RESPOSIBILITY    │
                                                          └────────────────────────────────────┘
 </code></pre>
-<h2 id="cloud-provider-migration"><a aria-hidden="true" tabindex="-1" href="#cloud-provider-migration"><span class="icon icon-link"></span></a>Cloud provider migration</h2>
-<h3 id="migration-strategies-6-rs"><a aria-hidden="true" tabindex="-1" href="#migration-strategies-6-rs"><span class="icon icon-link"></span></a>Migration strategies (6 Rs)</h3>
+<h2 id="cloud-provider-migration">Cloud provider migration<a aria-label="Link to section" class="anchor-link" href="#cloud-provider-migration"><span class="icon icon-link"></span></a></h2>
+<h3 id="migration-strategies-6-rs">Migration strategies (6 Rs)<a aria-label="Link to section" class="anchor-link" href="#migration-strategies-6-rs"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -1532,7 +1525,7 @@ Spot instances:
 </tr>
 </tbody>
 </table>
-<h3 id="migration-tools"><a aria-hidden="true" tabindex="-1" href="#migration-tools"><span class="icon icon-link"></span></a>Migration tools</h3>
+<h3 id="migration-tools">Migration tools<a aria-label="Link to section" class="anchor-link" href="#migration-tools"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -1555,7 +1548,7 @@ Spot instances:
 </tr>
 </tbody>
 </table>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -1566,23 +1559,23 @@ Spot instances:
 <tbody>
 <tr>
 <td>VPS</td>
-<td>[[20-vps]]</td>
+<td>[20-vps](/en/01-networking-internet/20-vps)</td>
 </tr>
 <tr>
 <td>Cloudflare</td>
-<td>[[04-cloudflare-intro]], [[19-cloudflare-complete]]</td>
+<td>[04-cloudflare-intro](/en/01-networking-internet/04-cloudflare-intro), [19-cloudflare-complete](/en/01-networking-internet/19-cloudflare-complete)</td>
 </tr>
 <tr>
 <td>DNS</td>
-<td>[[03-dns-deep-dive]]</td>
+<td>[03-dns-deep-dive](/en/01-networking-internet/03-dns-deep-dive)</td>
 </tr>
 <tr>
 <td>Servers and processes</td>
-<td>[[14-servers-processes]]</td>
+<td>[14-servers-processes](/en/01-networking-internet/14-servers-processes)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li><strong>AWS</strong> is the largest and most comprehensive cloud provider with the most services and maturity. Best for general-purpose workloads.</li>
 <li><strong>Azure</strong> is the enterprise favorite, especially for Microsoft shops. Best for companies using Windows Server, Active Directory, and .NET.</li>
@@ -1592,7 +1585,12 @@ Spot instances:
 <li><strong>Cost management</strong> is critical: set budgets, use reserved instances, right-size resources, and review bills monthly.</li>
 <li>Security best practices: <strong>least privilege IAM</strong>, <strong>MFA</strong>, <strong>encryption at rest and in transit</strong>, <strong>VPC segmentation</strong>, and <strong>continuous monitoring</strong>.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-There is no "best" cloud provider. Each has strengths: AWS for breadth, Azure for enterprise integration, GCP for data and AI. Most successful companies use <strong>multi-cloud</strong> strategies, leveraging the best service from each provider. Start with one, understand it deeply, and expand from there.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">There is no "best" cloud provider. Each has strengths: AWS for breadth, Azure for enterprise integration, GCP for data and AI. Most successful companies use multi-cloud strategies, leveraging the best service from each provider. Start with one, understand it deeply, and expand from there.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-is-a-cloud-provider">What is a cloud provider?</a> </li><li class="toc-depth-3"> <a href="#the-three-giants">The three giants</a> </li><li class="toc-depth-3"> <a href="#fourth-tier-providers">Fourth-tier providers</a> </li><li class="toc-depth-2"> <a href="#aws">AWS</a> </li><li class="toc-depth-3"> <a href="#aws-services">AWS services</a> </li><li class="toc-depth-3"> <a href="#aws-pricing">AWS pricing</a> </li><li class="toc-depth-3"> <a href="#aws-best-practices">AWS best practices</a> </li><li class="toc-depth-2"> <a href="#azure">Azure</a> </li><li class="toc-depth-3"> <a href="#azure-services">Azure services</a> </li><li class="toc-depth-3"> <a href="#azure-pricing">Azure pricing</a> </li><li class="toc-depth-3"> <a href="#azure-best-practices">Azure best practices</a> </li><li class="toc-depth-2"> <a href="#gcp">GCP</a> </li><li class="toc-depth-3"> <a href="#gcp-services">GCP services</a> </li><li class="toc-depth-3"> <a href="#gcp-pricing">GCP pricing</a> </li><li class="toc-depth-3"> <a href="#gcp-best-practices">GCP best practices</a> </li><li class="toc-depth-2"> <a href="#comparison-aws-vs-azure-vs-gcp">Comparison: AWS vs Azure vs GCP</a> </li><li class="toc-depth-3"> <a href="#services-comparison">Services comparison</a> </li><li class="toc-depth-3"> <a href="#pricing-comparison">Pricing comparison</a> </li><li class="toc-depth-3"> <a href="#key-differentiators">Key differentiators</a> </li><li class="toc-depth-3"> <a href="#when-to-choose-which">When to choose which</a> </li><li class="toc-depth-2"> <a href="#cloud-architecture-patterns">Cloud architecture patterns</a> </li><li class="toc-depth-3"> <a href="#multi-tier-web-application">Multi-tier web application</a> </li><li class="toc-depth-3"> <a href="#serverless-architecture">Serverless architecture</a> </li><li class="toc-depth-3"> <a href="#data-pipeline-architecture">Data pipeline architecture</a> </li><li class="toc-depth-2"> <a href="#infrastructure-as-code">Infrastructure as Code</a> </li><li class="toc-depth-3"> <a href="#terraform">Terraform</a> </li><li class="toc-depth-3"> <a href="#pulumi">Pulumi</a> </li><li class="toc-depth-2"> <a href="#cost-management">Cost management</a> </li><li class="toc-depth-3"> <a href="#aws-cost-management">AWS Cost Management</a> </li><li class="toc-depth-3"> <a href="#azure-cost-management">Azure Cost Management</a> </li><li class="toc-depth-3"> <a href="#gcp-cost-management">GCP Cost Management</a> </li><li class="toc-depth-3"> <a href="#cost-optimization-checklist">Cost optimization checklist</a> </li><li class="toc-depth-2"> <a href="#security-comparison">Security comparison</a> </li><li class="toc-depth-3"> <a href="#shared-responsibility-model">Shared Responsibility Model</a> </li><li class="toc-depth-2"> <a href="#cloud-provider-migration">Cloud provider migration</a> </li><li class="toc-depth-3"> <a href="#migration-strategies">Migration strategies</a> </li><li class="toc-depth-3"> <a href="#migration-tools">Migration tools</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

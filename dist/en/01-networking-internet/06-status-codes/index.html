@@ -1,33 +1,26 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors</h1> <div class="article-body"><h1 id="http-status-codes-1xx-through-5xx-when-theyre-used-common-errors"><a aria-hidden="true" tabindex="-1" href="#http-status-codes-1xx-through-5xx-when-theyre-used-common-errors"><span class="icon icon-link"></span></a>HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors</h1>
-<blockquote>
-<p>[!tip] Status codes in a nutshell
-HTTP status codes are 3-digit numbers that tell you whether a request succeeded, failed, or needs further action. They are divided into five categories: 1xx, 2xx, 3xx, 4xx, and 5xx.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/06-status-codes" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/06-status-codes/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article active"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors</h1> <div class="article-body"><h1 id="http-status-codes-1xx-through-5xx-when-theyre-used-common-errors">HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors<a aria-label="Link to section" class="anchor-link" href="#http-status-codes-1xx-through-5xx-when-theyre-used-common-errors"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Status codes in a nutshell</div>
+                </div>
+                <div class="callout-content">HTTP status codes are 3-digit numbers that tell you whether a request succeeded, failed, or needs further action. They are divided into five categories: 1xx, 2xx, 3xx, 4xx, and 5xx.</div>
+              
 </blockquote>
-<h2 id="what-are-http-status-codes"><a aria-hidden="true" tabindex="-1" href="#what-are-http-status-codes"><span class="icon icon-link"></span></a>What are HTTP status codes?</h2>
+<h2 id="what-are-http-status-codes">What are HTTP status codes?<a aria-label="Link to section" class="anchor-link" href="#what-are-http-status-codes"><span class="icon icon-link"></span></a></h2>
 <p>HTTP status codes are <strong>3-digit numbers</strong> returned by a server in response to a client request. They are defined in <a href="https://datatracker.ietf.org/doc/html/rfc7231">RFC 7231</a> and subsequent RFCs.</p>
 <pre><code>HTTP/1.1 200 OK
 Content-Type: text/html
@@ -72,7 +65,7 @@ Content-Length: 4832
 </tr>
 </tbody>
 </table>
-<h2 id="1xx-informational"><a aria-hidden="true" tabindex="-1" href="#1xx-informational"><span class="icon icon-link"></span></a>1xx: Informational</h2>
+<h2 id="1xx-informational">1xx: Informational<a aria-label="Link to section" class="anchor-link" href="#1xx-informational"><span class="icon icon-link"></span></a></h2>
 <p>Informational responses indicate that the request was received and processing continues. They are rare in practice.</p>
 <table>
 <thead>
@@ -100,7 +93,7 @@ Content-Length: 4832
 </tr>
 </tbody>
 </table>
-<h3 id="100-continue"><a aria-hidden="true" tabindex="-1" href="#100-continue"><span class="icon icon-link"></span></a>100 Continue</h3>
+<h3 id="100-continue">100 Continue<a aria-label="Link to section" class="anchor-link" href="#100-continue"><span class="icon icon-link"></span></a></h3>
 <p>Used in a two-step request:</p>
 <pre><code># Step 1: Send headers only
 POST /api/upload HTTP/1.1
@@ -115,7 +108,7 @@ Content-Length: 999999
 [... file upload data ...]
 </code></pre>
 <p>This is useful for large uploads: the server can reject before the client transfers the entire body.</p>
-<h3 id="101-switching-protocols"><a aria-hidden="true" tabindex="-1" href="#101-switching-protocols"><span class="icon icon-link"></span></a>101 Switching Protocols</h3>
+<h3 id="101-switching-protocols">101 Switching Protocols<a aria-label="Link to section" class="anchor-link" href="#101-switching-protocols"><span class="icon icon-link"></span></a></h3>
 <p>Used to upgrade from HTTP to another protocol:</p>
 <pre><code># WebSocket upgrade request
 GET /ws HTTP/1.1
@@ -133,7 +126,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 # Now WebSocket protocol takes over
 </code></pre>
-<h3 id="103-early-hints"><a aria-hidden="true" tabindex="-1" href="#103-early-hints"><span class="icon icon-link"></span></a>103 Early Hints</h3>
+<h3 id="103-early-hints">103 Early Hints<a aria-label="Link to section" class="anchor-link" href="#103-early-hints"><span class="icon icon-link"></span></a></h3>
 <p>A modern feature for performance optimization:</p>
 <pre><code># Server sends hints before the full response is ready
 HTTP/1.1 103 Early Hints
@@ -145,9 +138,9 @@ HTTP/1.1 200 OK
 Content-Type: text/html
 </code></pre>
 <p>This allows browsers to start loading resources before the HTML is even fully processed.</p>
-<h2 id="2xx-success"><a aria-hidden="true" tabindex="-1" href="#2xx-success"><span class="icon icon-link"></span></a>2xx: Success</h2>
+<h2 id="2xx-success">2xx: Success<a aria-label="Link to section" class="anchor-link" href="#2xx-success"><span class="icon icon-link"></span></a></h2>
 <p>Success codes mean the request was received, understood, and accepted.</p>
-<h3 id="200-ok"><a aria-hidden="true" tabindex="-1" href="#200-ok"><span class="icon icon-link"></span></a>200 OK</h3>
+<h3 id="200-ok">200 OK<a aria-label="Link to section" class="anchor-link" href="#200-ok"><span class="icon icon-link"></span></a></h3>
 <p>The standard success response. The request succeeded and the response body contains the result.</p>
 <pre><code>HTTP/1.1 200 OK
 Content-Type: application/json
@@ -158,7 +151,7 @@ Content-Type: application/json
   "email": "john@example.com"
 }
 </code></pre>
-<h3 id="201-created"><a aria-hidden="true" tabindex="-1" href="#201-created"><span class="icon icon-link"></span></a>201 Created</h3>
+<h3 id="201-created">201 Created<a aria-label="Link to section" class="anchor-link" href="#201-created"><span class="icon icon-link"></span></a></h3>
 <p>Returned when a new resource is created (typically after a POST request):</p>
 <pre><code># Request
 POST /api/users HTTP/1.1
@@ -175,7 +168,7 @@ Content-Type: application/json
 {"id": 123, "name": "John Doe", "email": "john@example.com"}
 </code></pre>
 <p>The <code>Location</code> header points to the newly created resource.</p>
-<h3 id="204-no-content"><a aria-hidden="true" tabindex="-1" href="#204-no-content"><span class="icon icon-link"></span></a>204 No Content</h3>
+<h3 id="204-no-content">204 No Content<a aria-label="Link to section" class="anchor-link" href="#204-no-content"><span class="icon icon-link"></span></a></h3>
 <p>The request succeeded, but there is no body to return. Common for DELETE requests:</p>
 <pre><code># Request
 DELETE /api/users/123 HTTP/1.1
@@ -183,7 +176,7 @@ DELETE /api/users/123 HTTP/1.1
 # Response
 HTTP/1.1 204 No Content
 </code></pre>
-<h3 id="206-partial-content"><a aria-hidden="true" tabindex="-1" href="#206-partial-content"><span class="icon icon-link"></span></a>206 Partial Content</h3>
+<h3 id="206-partial-content">206 Partial Content<a aria-label="Link to section" class="anchor-link" href="#206-partial-content"><span class="icon icon-link"></span></a></h3>
 <p>Used for range requests (e.g., resuming a download or streaming video):</p>
 <pre><code># Request
 GET /video.mp4 HTTP/1.1
@@ -197,7 +190,7 @@ Content-Type: video/mp4
 
 [... next 1000 bytes of the video file ...]
 </code></pre>
-<h3 id="207-multi-status"><a aria-hidden="true" tabindex="-1" href="#207-multi-status"><span class="icon icon-link"></span></a>207 Multi-Status</h3>
+<h3 id="207-multi-status">207 Multi-Status<a aria-label="Link to section" class="anchor-link" href="#207-multi-status"><span class="icon icon-link"></span></a></h3>
 <p>Used with WebDAV: the response contains multiple status codes for multiple operations:</p>
 <pre><code>HTTP/1.1 207 Multi-Status
 Content-Type: application/xml
@@ -213,9 +206,9 @@ Content-Type: application/xml
   &#x3C;/D:response>
 &#x3C;/DAV:multistatus>
 </code></pre>
-<h2 id="3xx-redirection"><a aria-hidden="true" tabindex="-1" href="#3xx-redirection"><span class="icon icon-link"></span></a>3xx: Redirection</h2>
+<h2 id="3xx-redirection">3xx: Redirection<a aria-label="Link to section" class="anchor-link" href="#3xx-redirection"><span class="icon icon-link"></span></a></h2>
 <p>Redirection codes tell the client to take further action to complete the request, usually at a different URI.</p>
-<h3 id="301-moved-permanently"><a aria-hidden="true" tabindex="-1" href="#301-moved-permanently"><span class="icon icon-link"></span></a>301 Moved Permanently</h3>
+<h3 id="301-moved-permanently">301 Moved Permanently<a aria-label="Link to section" class="anchor-link" href="#301-moved-permanently"><span class="icon icon-link"></span></a></h3>
 <p>The resource has permanently moved to a new location. Browsers cache this redirect:</p>
 <pre><code># Old URL
 GET /old-page HTTP/1.1
@@ -228,14 +221,20 @@ Cache-Control: max-age=31536000
 # Browser automatically follows to /new-page
 </code></pre>
 <p>Search engines transfer PageRank from the old URL to the new one. Use this for permanent moves.</p>
-<h3 id="302-found-formerly-moved-temporarily"><a aria-hidden="true" tabindex="-1" href="#302-found-formerly-moved-temporarily"><span class="icon icon-link"></span></a>302 Found (formerly "Moved Temporarily")</h3>
+<h3 id="302-found-formerly-moved-temporarily">302 Found (formerly "Moved Temporarily")<a aria-label="Link to section" class="anchor-link" href="#302-found-formerly-moved-temporarily"><span class="icon icon-link"></span></a></h3>
 <p>The resource temporarily resides at a different location. The browser should use the original method (GET or POST):</p>
 <pre><code># Response
 HTTP/1.1 302 Found
 Location: /maintenance-page
 </code></pre>
-<blockquote>
-<p>[!tip] 302 vs 307 and 308</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">302 vs 307 and 308</div>
+                </div>
+                
+              
 <table>
 <thead>
 <tr>
@@ -269,7 +268,7 @@ Location: /maintenance-page
 </table>
 <p>Use 307/308 when you need to guarantee the HTTP method is preserved.</p>
 </blockquote>
-<h3 id="304-not-modified"><a aria-hidden="true" tabindex="-1" href="#304-not-modified"><span class="icon icon-link"></span></a>304 Not Modified</h3>
+<h3 id="304-not-modified">304 Not Modified<a aria-label="Link to section" class="anchor-link" href="#304-not-modified"><span class="icon icon-link"></span></a></h3>
 <p>Used with conditional requests (If-None-Match / If-Modified-Since). Tells the browser to use its cached version:</p>
 <pre><code># Client: "Do you have a new version since ETag abc123?"
 GET /api/data HTTP/1.1
@@ -281,7 +280,7 @@ ETag: "abc123"
 
 # Client uses cached data, no body transferred
 </code></pre>
-<h3 id="307-temporary-redirect"><a aria-hidden="true" tabindex="-1" href="#307-temporary-redirect"><span class="icon icon-link"></span></a>307 Temporary Redirect</h3>
+<h3 id="307-temporary-redirect">307 Temporary Redirect<a aria-label="Link to section" class="anchor-link" href="#307-temporary-redirect"><span class="icon icon-link"></span></a></h3>
 <p>Same as 302, but explicitly preserves the HTTP method:</p>
 <pre><code>POST /api/submit
 → 307 Temporary Redirect
@@ -289,7 +288,7 @@ ETag: "abc123"
 
 # Browser resends as POST to /api/new-endpoint (not GET!)
 </code></pre>
-<h3 id="308-permanent-redirect"><a aria-hidden="true" tabindex="-1" href="#308-permanent-redirect"><span class="icon icon-link"></span></a>308 Permanent Redirect</h3>
+<h3 id="308-permanent-redirect">308 Permanent Redirect<a aria-label="Link to section" class="anchor-link" href="#308-permanent-redirect"><span class="icon icon-link"></span></a></h3>
 <p>Same as 301, but explicitly preserves the HTTP method:</p>
 <pre><code>POST /api/old-endpoint
 → 308 Permanent Redirect
@@ -297,7 +296,7 @@ ETag: "abc123"
 
 # Browser resends as POST to /api/new-endpoint
 </code></pre>
-<h3 id="301-vs-302-vs-307-vs-308-comparison"><a aria-hidden="true" tabindex="-1" href="#301-vs-302-vs-307-vs-308-comparison"><span class="icon icon-link"></span></a>301 vs 302 vs 307 vs 308 comparison</h3>
+<h3 id="301-vs-302-vs-307-vs-308-comparison">301 vs 302 vs 307 vs 308 comparison<a aria-label="Link to section" class="anchor-link" href="#301-vs-302-vs-307-vs-308-comparison"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -334,7 +333,7 @@ ETag: "abc123"
 </tr>
 </tbody>
 </table>
-<h3 id="common-redirect-patterns"><a aria-hidden="true" tabindex="-1" href="#common-redirect-patterns"><span class="icon icon-link"></span></a>Common redirect patterns</h3>
+<h3 id="common-redirect-patterns">Common redirect patterns<a aria-label="Link to section" class="anchor-link" href="#common-redirect-patterns"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="nginx" data-theme="github-light github-dark"><code data-language="nginx" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D"># Nginx: 301 permanent redirect</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">location</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0"> /old-path </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> /new-path;</span></span>
@@ -351,9 +350,9 @@ ETag: "abc123"
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    server_name </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">example.com;</span></span>
 <span data-line=""><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">    return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF"> 301</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> https://$host$request_uri;</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
-<h2 id="4xx-client-errors"><a aria-hidden="true" tabindex="-1" href="#4xx-client-errors"><span class="icon icon-link"></span></a>4xx: Client Errors</h2>
+<h2 id="4xx-client-errors">4xx: Client Errors<a aria-label="Link to section" class="anchor-link" href="#4xx-client-errors"><span class="icon icon-link"></span></a></h2>
 <p>Client error codes mean the request contains bad syntax, is missing required information, or cannot be fulfilled by the client.</p>
-<h3 id="400-bad-request"><a aria-hidden="true" tabindex="-1" href="#400-bad-request"><span class="icon icon-link"></span></a>400 Bad Request</h3>
+<h3 id="400-bad-request">400 Bad Request<a aria-label="Link to section" class="anchor-link" href="#400-bad-request"><span class="icon icon-link"></span></a></h3>
 <p>The server cannot understand the request due to malformed syntax:</p>
 <pre><code># Sending malformed JSON
 POST /api/users HTTP/1.1
@@ -369,7 +368,7 @@ Content-Type: application/json
   "error": "Invalid JSON: Unexpected token i at position 0"
 }
 </code></pre>
-<h3 id="401-unauthorized"><a aria-hidden="true" tabindex="-1" href="#401-unauthorized"><span class="icon icon-link"></span></a>401 Unauthorized</h3>
+<h3 id="401-unauthorized">401 Unauthorized<a aria-label="Link to section" class="anchor-link" href="#401-unauthorized"><span class="icon icon-link"></span></a></h3>
 <p>Authentication is required. The client must provide valid credentials:</p>
 <pre><code># Request without credentials
 GET /api/admin HTTP/1.1
@@ -382,14 +381,20 @@ WWW-Authenticate: Bearer realm="api"
   "error": "Authentication required"
 }
 </code></pre>
-<blockquote>
-<p>[!note] 401 vs 403</p>
+<blockquote class="callout-note" data-callout="note" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="2" x2="22" y2="6"></line><path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path></svg></div>
+                  <div class="callout-title-text">401 vs 403</div>
+                </div>
+                
+              
 <ul>
 <li><strong>401 Unauthorized</strong>: You are not logged in (or credentials are missing/invalid).</li>
 <li><strong>403 Forbidden</strong>: You are logged in, but you do not have permission for this resource.</li>
 </ul>
 </blockquote>
-<h3 id="403-forbidden"><a aria-hidden="true" tabindex="-1" href="#403-forbidden"><span class="icon icon-link"></span></a>403 Forbidden</h3>
+<h3 id="403-forbidden">403 Forbidden<a aria-label="Link to section" class="anchor-link" href="#403-forbidden"><span class="icon icon-link"></span></a></h3>
 <p>The server understood the request but refuses to authorize it. The client is authenticated but lacks permissions:</p>
 <pre><code># Logged in as regular user, trying to access admin page
 GET /api/admin HTTP/1.1
@@ -401,7 +406,7 @@ HTTP/1.1 403 Forbidden
   "error": "Insufficient permissions. Admin role required."
 }
 </code></pre>
-<h3 id="404-not-found"><a aria-hidden="true" tabindex="-1" href="#404-not-found"><span class="icon icon-link"></span></a>404 Not Found</h3>
+<h3 id="404-not-found">404 Not Found<a aria-label="Link to section" class="anchor-link" href="#404-not-found"><span class="icon icon-link"></span></a></h3>
 <p>The requested resource does not exist:</p>
 <pre><code># Request
 GET /api/users/999999
@@ -414,8 +419,14 @@ Content-Type: application/json
   "error": "User not found"
 }
 </code></pre>
-<blockquote>
-<p>[!tip] 404 vs 410</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">404 vs 410</div>
+                </div>
+                
+              
 <table>
 <thead>
 <tr>
@@ -438,7 +449,7 @@ Content-Type: application/json
 </tbody>
 </table>
 </blockquote>
-<h3 id="405-method-not-allowed"><a aria-hidden="true" tabindex="-1" href="#405-method-not-allowed"><span class="icon icon-link"></span></a>405 Method Not Allowed</h3>
+<h3 id="405-method-not-allowed">405 Method Not Allowed<a aria-label="Link to section" class="anchor-link" href="#405-method-not-allowed"><span class="icon icon-link"></span></a></h3>
 <p>The HTTP method is not supported for this resource:</p>
 <pre><code># Only GET and POST allowed for this endpoint
 POST /api/users/123
@@ -451,7 +462,7 @@ Allow: GET, POST, PUT, DELETE
   "error": "Method DELETE is not allowed for this endpoint"
 }
 </code></pre>
-<h3 id="408-request-timeout"><a aria-hidden="true" tabindex="-1" href="#408-request-timeout"><span class="icon icon-link"></span></a>408 Request Timeout</h3>
+<h3 id="408-request-timeout">408 Request Timeout<a aria-label="Link to section" class="anchor-link" href="#408-request-timeout"><span class="icon icon-link"></span></a></h3>
 <p>The server timed out waiting for the client's request:</p>
 <pre><code># Client sends request but takes too long to send the body
 POST /api/upload
@@ -467,7 +478,7 @@ Connection: close
   "error": "Request timeout. Please retry."
 }
 </code></pre>
-<h3 id="409-conflict"><a aria-hidden="true" tabindex="-1" href="#409-conflict"><span class="icon icon-link"></span></a>409 Conflict</h3>
+<h3 id="409-conflict">409 Conflict<a aria-label="Link to section" class="anchor-link" href="#409-conflict"><span class="icon icon-link"></span></a></h3>
 <p>The request conflicts with the current state of the server:</p>
 <pre><code># Trying to create a user that already exists
 POST /api/users
@@ -479,7 +490,7 @@ HTTP/1.1 409 Conflict
   "error": "A user with email john@example.com already exists"
 }
 </code></pre>
-<h3 id="410-gone"><a aria-hidden="true" tabindex="-1" href="#410-gone"><span class="icon icon-link"></span></a>410 Gone</h3>
+<h3 id="410-gone">410 Gone<a aria-label="Link to section" class="anchor-link" href="#410-gone"><span class="icon icon-link"></span></a></h3>
 <p>The resource has been permanently removed and will not return:</p>
 <pre><code># Request to an old API endpoint that was removed
 GET /api/v1/users
@@ -491,7 +502,7 @@ HTTP/1.1 410 Gone
   "documentation": "https://example.com/api/v2/docs"
 }
 </code></pre>
-<h3 id="413-payload-too-large"><a aria-hidden="true" tabindex="-1" href="#413-payload-too-large"><span class="icon icon-link"></span></a>413 Payload Too Large</h3>
+<h3 id="413-payload-too-large">413 Payload Too Large<a aria-label="Link to section" class="anchor-link" href="#413-payload-too-large"><span class="icon icon-link"></span></a></h3>
 <p>The request body exceeds the server's size limit:</p>
 <pre><code># Uploading a 500MB file when max is 10MB
 POST /api/upload
@@ -507,7 +518,7 @@ Content-Type: application/json
   "max_size": "10MB"
 }
 </code></pre>
-<h3 id="415-unsupported-media-type"><a aria-hidden="true" tabindex="-1" href="#415-unsupported-media-type"><span class="icon icon-link"></span></a>415 Unsupported Media Type</h3>
+<h3 id="415-unsupported-media-type">415 Unsupported Media Type<a aria-label="Link to section" class="anchor-link" href="#415-unsupported-media-type"><span class="icon icon-link"></span></a></h3>
 <p>The Content-Type is not supported:</p>
 <pre><code># Server expects JSON but receives XML
 POST /api/users
@@ -522,7 +533,7 @@ HTTP/1.1 415 Unsupported Media Type
   "error": "Unsupported content type. Expected: application/json"
 }
 </code></pre>
-<h3 id="418-im-a-teapot"><a aria-hidden="true" tabindex="-1" href="#418-im-a-teapot"><span class="icon icon-link"></span></a>418 I'm a Teapot</h3>
+<h3 id="418-im-a-teapot">418 I'm a Teapot<a aria-label="Link to section" class="anchor-link" href="#418-im-a-teapot"><span class="icon icon-link"></span></a></h3>
 <p>A famous Easter egg from RFC 2324 (Hyper Text Coffee Pot Control Protocol). The server refuses to brew coffee because it is a teapot:</p>
 <pre><code>HTTP/1.1 418 I'm a teapot
 Allow: HEAD
@@ -532,7 +543,7 @@ Allow: HEAD
 &#x3C;/body>
 </code></pre>
 <p>This is sometimes used as a honeypot to detect bots (legitimate clients should never send this request).</p>
-<h3 id="429-too-many-requests"><a aria-hidden="true" tabindex="-1" href="#429-too-many-requests"><span class="icon icon-link"></span></a>429 Too Many Requests</h3>
+<h3 id="429-too-many-requests">429 Too Many Requests<a aria-label="Link to section" class="anchor-link" href="#429-too-many-requests"><span class="icon icon-link"></span></a></h3>
 <p>Rate limiting has been exceeded:</p>
 <pre><code># Making too many API requests
 GET /api/data HTTP/1.1
@@ -549,7 +560,7 @@ X-RateLimit-Reset: 1684000000
   "error": "Rate limit exceeded. Please retry after 60 seconds."
 }
 </code></pre>
-<h3 id="422-unprocessable-entity"><a aria-hidden="true" tabindex="-1" href="#422-unprocessable-entity"><span class="icon icon-link"></span></a>422 Unprocessable Entity</h3>
+<h3 id="422-unprocessable-entity">422 Unprocessable Entity<a aria-label="Link to section" class="anchor-link" href="#422-unprocessable-entity"><span class="icon icon-link"></span></a></h3>
 <p>The request is well-formed but contains semantic errors (commonly used in REST APIs):</p>
 <pre><code># Creating a user with invalid data
 POST /api/users
@@ -565,7 +576,7 @@ HTTP/1.1 422 Unprocessable Entity
   }
 }
 </code></pre>
-<h3 id="451-unavailable-for-legal-reasons"><a aria-hidden="true" tabindex="-1" href="#451-unavailable-for-legal-reasons"><span class="icon icon-link"></span></a>451 Unavailable For Legal Reasons</h3>
+<h3 id="451-unavailable-for-legal-reasons">451 Unavailable For Legal Reasons<a aria-label="Link to section" class="anchor-link" href="#451-unavailable-for-legal-reasons"><span class="icon icon-link"></span></a></h3>
 <p>The resource is unavailable due to legal reasons (copyright, government request):</p>
 <pre><code>HTTP/1.1 451 Unavailable For Legal Reasons
 Link: &#x3C;http://example.com/legal>; rel="described-by"
@@ -574,9 +585,9 @@ Link: &#x3C;http://example.com/legal>; rel="described-by"
   "error": "This content is unavailable in your jurisdiction due to legal restrictions."
 }
 </code></pre>
-<h2 id="5xx-server-errors"><a aria-hidden="true" tabindex="-1" href="#5xx-server-errors"><span class="icon icon-link"></span></a>5xx: Server Errors</h2>
+<h2 id="5xx-server-errors">5xx: Server Errors<a aria-label="Link to section" class="anchor-link" href="#5xx-server-errors"><span class="icon icon-link"></span></a></h2>
 <p>Server error codes mean the server failed to fulfill a valid request. These are server-side problems.</p>
-<h3 id="500-internal-server-error"><a aria-hidden="true" tabindex="-1" href="#500-internal-server-error"><span class="icon icon-link"></span></a>500 Internal Server Error</h3>
+<h3 id="500-internal-server-error">500 Internal Server Error<a aria-label="Link to section" class="anchor-link" href="#500-internal-server-error"><span class="icon icon-link"></span></a></h3>
 <p>A generic error when the server encounters an unexpected condition:</p>
 <pre><code># Server-side exception
 POST /api/users
@@ -595,11 +606,16 @@ Content-Type: application/json
   "error": "TypeError: Cannot read property 'name' of undefined at createUser (/app/routes/users.js:15:12)"
 }
 </code></pre>
-<blockquote>
-<p>[!caution] Never expose internal error details in production
-Stack traces and internal error messages reveal your code structure and can be exploited by attackers.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Never expose internal error details in production</div>
+                </div>
+                <div class="callout-content">Stack traces and internal error messages reveal your code structure and can be exploited by attackers.</div>
+              
 </blockquote>
-<h3 id="501-not-implemented"><a aria-hidden="true" tabindex="-1" href="#501-not-implemented"><span class="icon icon-link"></span></a>501 Not Implemented</h3>
+<h3 id="501-not-implemented">501 Not Implemented<a aria-label="Link to section" class="anchor-link" href="#501-not-implemented"><span class="icon icon-link"></span></a></h3>
 <p>The server does not support the functionality required to fulfill the request:</p>
 <pre><code># Requesting a method the server doesn't support
 PROPFIND /webdav/ HTTP/1.1
@@ -612,7 +628,7 @@ HTTP/1.1 501 Not Implemented
   "error": "The PROPFIND method is not supported on this server."
 }
 </code></pre>
-<h3 id="502-bad-gateway"><a aria-hidden="true" tabindex="-1" href="#502-bad-gateway"><span class="icon icon-link"></span></a>502 Bad Gateway</h3>
+<h3 id="502-bad-gateway">502 Bad Gateway<a aria-label="Link to section" class="anchor-link" href="#502-bad-gateway"><span class="icon icon-link"></span></a></h3>
 <p>The server, acting as a gateway or proxy, received an invalid response from an upstream server:</p>
 <pre><code># Cloudflare (proxy) → Nginx (origin)
 # Nginx crashes or returns malformed data
@@ -629,7 +645,7 @@ Content-Type: text/html
 &#x3C;/html>
 </code></pre>
 <p>Common causes: upstream server crash, timeout, or misconfiguration.</p>
-<h3 id="503-service-unavailable"><a aria-hidden="true" tabindex="-1" href="#503-service-unavailable"><span class="icon icon-link"></span></a>503 Service Unavailable</h3>
+<h3 id="503-service-unavailable">503 Service Unavailable<a aria-label="Link to section" class="anchor-link" href="#503-service-unavailable"><span class="icon icon-link"></span></a></h3>
 <p>The server is temporarily unable to handle the request. Often used during maintenance or when overloaded:</p>
 <pre><code># During maintenance
 HTTP/1.1 503 Service Unavailable
@@ -644,7 +660,7 @@ Content-Type: text/html
 &#x3C;/body>
 &#x3C;/html>
 </code></pre>
-<h3 id="504-gateway-timeout"><a aria-hidden="true" tabindex="-1" href="#504-gateway-timeout"><span class="icon icon-link"></span></a>504 Gateway Timeout</h3>
+<h3 id="504-gateway-timeout">504 Gateway Timeout<a aria-label="Link to section" class="anchor-link" href="#504-gateway-timeout"><span class="icon icon-link"></span></a></h3>
 <p>The server, acting as a gateway or proxy, did not receive a timely response from an upstream server:</p>
 <pre><code># Cloudflare → Nginx → Node.js
 # Node.js takes 120 seconds to respond, but Cloudflare timeout is 100 seconds
@@ -652,8 +668,14 @@ Content-Type: text/html
 Cloudflare response:
 HTTP/1.1 504 Gateway Timeout
 </code></pre>
-<blockquote>
-<p>[!tip] Fixing 504 timeouts</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Fixing 504 timeouts</div>
+                </div>
+                
+              
 <ol>
 <li>Optimize the backend (database queries, caching)</li>
 <li>Increase upstream timeout (Nginx <code>proxy_read_timeout</code>)</li>
@@ -661,7 +683,7 @@ HTTP/1.1 504 Gateway Timeout
 <li>Add a loading state on the frontend</li>
 </ol>
 </blockquote>
-<h2 id="common-http-errors-and-their-fixes"><a aria-hidden="true" tabindex="-1" href="#common-http-errors-and-their-fixes"><span class="icon icon-link"></span></a>Common HTTP errors and their fixes</h2>
+<h2 id="common-http-errors-and-their-fixes">Common HTTP errors and their fixes<a aria-label="Link to section" class="anchor-link" href="#common-http-errors-and-their-fixes"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -740,8 +762,8 @@ HTTP/1.1 504 Gateway Timeout
 </tr>
 </tbody>
 </table>
-<h2 id="status-code-best-practices"><a aria-hidden="true" tabindex="-1" href="#status-code-best-practices"><span class="icon icon-link"></span></a>Status code best practices</h2>
-<h3 id="choosing-the-right-status-code"><a aria-hidden="true" tabindex="-1" href="#choosing-the-right-status-code"><span class="icon icon-link"></span></a>Choosing the right status code</h3>
+<h2 id="status-code-best-practices">Status code best practices<a aria-label="Link to section" class="anchor-link" href="#status-code-best-practices"><span class="icon icon-link"></span></a></h2>
+<h3 id="choosing-the-right-status-code">Choosing the right status code<a aria-label="Link to section" class="anchor-link" href="#choosing-the-right-status-code"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -800,7 +822,7 @@ HTTP/1.1 504 Gateway Timeout
 </tr>
 </tbody>
 </table>
-<h3 id="error-response-format"><a aria-hidden="true" tabindex="-1" href="#error-response-format"><span class="icon icon-link"></span></a>Error response format</h3>
+<h3 id="error-response-format">Error response format<a aria-label="Link to section" class="anchor-link" href="#error-response-format"><span class="icon icon-link"></span></a></h3>
 <p>REST APIs commonly return structured error responses:</p>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span data-line=""><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF">  "error"</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
@@ -820,7 +842,7 @@ HTTP/1.1 504 Gateway Timeout
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    ]</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></figure>
-<h3 id="status-codes-in-middleware-chains"><a aria-hidden="true" tabindex="-1" href="#status-codes-in-middleware-chains"><span class="icon icon-link"></span></a>Status codes in middleware chains</h3>
+<h3 id="status-codes-in-middleware-chains">Status codes in middleware chains<a aria-label="Link to section" class="anchor-link" href="#status-codes-in-middleware-chains"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Express.js error handling middleware</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">use</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">((</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">err</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">next</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // Default to 500</span></span>
@@ -845,7 +867,7 @@ HTTP/1.1 504 Gateway Timeout
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">  });</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -856,23 +878,23 @@ HTTP/1.1 504 Gateway Timeout
 <tbody>
 <tr>
 <td>HTTP methods</td>
-<td>[[05-http-deep-dive]]</td>
+<td>[05-http-deep-dive](/en/01-networking-internet/05-http-deep-dive)</td>
 </tr>
 <tr>
 <td>Client-server model</td>
-<td>[[01-what-is-internet]]</td>
+<td>[01-what-is-internet](/en/01-networking-internet/01-what-is-internet)</td>
 </tr>
 <tr>
 <td>Authentication</td>
-<td>[[10-authentication-api-keys-tokens]]</td>
+<td>[10-authentication-api-keys-tokens](/en/01-networking-internet/10-authentication-api-keys-tokens)</td>
 </tr>
 <tr>
 <td>REST APIs</td>
-<td>[[11-rest-api]]</td>
+<td>[11-rest-api](/en/01-networking-internet/11-rest-api)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li><strong>1xx</strong> responses are informational (Continue, Switching Protocols, Early Hints).</li>
 <li><strong>2xx</strong> responses indicate success (200 OK, 201 Created, 204 No Content).</li>
@@ -882,7 +904,12 @@ HTTP/1.1 504 Gateway Timeout
 <li>Always use the <strong>most specific</strong> status code possible. 422 is more informative than 400; 502 is more informative than 500.</li>
 <li>Never expose internal error details in production responses.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-Status codes are a contract between client and server. Using them correctly makes APIs predictable, debuggable, and professional. Each code has a specific meaning — pick the right one.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">Status codes are a contract between client and server. Using them correctly makes APIs predictable, debuggable, and professional. Each code has a specific meaning — pick the right one.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-are-http-status-codes">What are HTTP status codes?</a> </li><li class="toc-depth-2"> <a href="#1xx-informational">1xx: Informational</a> </li><li class="toc-depth-3"> <a href="#100-continue">100 Continue</a> </li><li class="toc-depth-3"> <a href="#101-switching-protocols">101 Switching Protocols</a> </li><li class="toc-depth-3"> <a href="#103-early-hints">103 Early Hints</a> </li><li class="toc-depth-2"> <a href="#2xx-success">2xx: Success</a> </li><li class="toc-depth-3"> <a href="#200-ok">200 OK</a> </li><li class="toc-depth-3"> <a href="#201-created">201 Created</a> </li><li class="toc-depth-3"> <a href="#204-no-content">204 No Content</a> </li><li class="toc-depth-3"> <a href="#206-partial-content">206 Partial Content</a> </li><li class="toc-depth-3"> <a href="#207-multi-status">207 Multi-Status</a> </li><li class="toc-depth-2"> <a href="#3xx-redirection">3xx: Redirection</a> </li><li class="toc-depth-3"> <a href="#301-moved-permanently">301 Moved Permanently</a> </li><li class="toc-depth-3"> <a href="#302-found">302 Found</a> </li><li class="toc-depth-3"> <a href="#304-not-modified">304 Not Modified</a> </li><li class="toc-depth-3"> <a href="#307-temporary-redirect">307 Temporary Redirect</a> </li><li class="toc-depth-3"> <a href="#308-permanent-redirect">308 Permanent Redirect</a> </li><li class="toc-depth-3"> <a href="#301-vs-302-vs-307-vs-308-comparison">301 vs 302 vs 307 vs 308 comparison</a> </li><li class="toc-depth-3"> <a href="#common-redirect-patterns">Common redirect patterns</a> </li><li class="toc-depth-2"> <a href="#4xx-client-errors">4xx: Client Errors</a> </li><li class="toc-depth-3"> <a href="#400-bad-request">400 Bad Request</a> </li><li class="toc-depth-3"> <a href="#401-unauthorized">401 Unauthorized</a> </li><li class="toc-depth-3"> <a href="#403-forbidden">403 Forbidden</a> </li><li class="toc-depth-3"> <a href="#404-not-found">404 Not Found</a> </li><li class="toc-depth-3"> <a href="#405-method-not-allowed">405 Method Not Allowed</a> </li><li class="toc-depth-3"> <a href="#408-request-timeout">408 Request Timeout</a> </li><li class="toc-depth-3"> <a href="#409-conflict">409 Conflict</a> </li><li class="toc-depth-3"> <a href="#410-gone">410 Gone</a> </li><li class="toc-depth-3"> <a href="#413-payload-too-large">413 Payload Too Large</a> </li><li class="toc-depth-3"> <a href="#415-unsupported-media-type">415 Unsupported Media Type</a> </li><li class="toc-depth-3"> <a href="#418-im-a-teapot">418 I&#39;m a Teapot</a> </li><li class="toc-depth-3"> <a href="#429-too-many-requests">429 Too Many Requests</a> </li><li class="toc-depth-3"> <a href="#422-unprocessable-entity">422 Unprocessable Entity</a> </li><li class="toc-depth-3"> <a href="#451-unavailable-for-legal-reasons">451 Unavailable For Legal Reasons</a> </li><li class="toc-depth-2"> <a href="#5xx-server-errors">5xx: Server Errors</a> </li><li class="toc-depth-3"> <a href="#500-internal-server-error">500 Internal Server Error</a> </li><li class="toc-depth-3"> <a href="#501-not-implemented">501 Not Implemented</a> </li><li class="toc-depth-3"> <a href="#502-bad-gateway">502 Bad Gateway</a> </li><li class="toc-depth-3"> <a href="#503-service-unavailable">503 Service Unavailable</a> </li><li class="toc-depth-3"> <a href="#504-gateway-timeout">504 Gateway Timeout</a> </li><li class="toc-depth-2"> <a href="#common-http-errors-and-their-fixes">Common HTTP errors and their fixes</a> </li><li class="toc-depth-2"> <a href="#status-code-best-practices">Status code best practices</a> </li><li class="toc-depth-3"> <a href="#choosing-the-right-status-code">Choosing the right status code</a> </li><li class="toc-depth-3"> <a href="#error-response-format">Error response format</a> </li><li class="toc-depth-3"> <a href="#status-codes-in-middleware-chains">Status codes in middleware chains</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

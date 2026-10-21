@@ -7,10 +7,9 @@ interface Props {
     title?: string;
     description?: string;
   };
-  children: import('astro').HTMLContent;
 }
 
-const { lang, frontmatter, children } = Astro.props;
+const { lang, frontmatter } = Astro.props;
 ---
 
 <!DOCTYPE html>

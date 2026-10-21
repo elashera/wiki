@@ -1,35 +1,28 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.CEM8Ro2r.css"><script type="module">const h=document.querySelector(".searchbar"),o=JSON.parse(h?.getAttribute("data-search-index")||"[]"),p=h?.getAttribute("data-lang")||"es",s=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),n=document.getElementById("searchInput"),c=document.getElementById("searchResults");function i(){r.hidden=!1,s.classList.add("open"),n.value="",l(o),setTimeout(()=>n.focus(),50)}function a(){r.hidden=!0,s.classList.remove("open")}function l(e){if(c){if(e.length===0){c.innerHTML=`<div class="search-no-results">${n.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}c.innerHTML=`
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="AI Engineer Wiki — Bilingual technical documentation"><title>AI Engineer Wiki</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/_slug_.Bux_va1g.css"><script type="module">const c=window.matchMedia("(min-width: 1024px)"),h="wiki-sidebar-collapsed",s=document.body;function n(e){if(c.matches){s.classList.toggle("sidebar-collapsed",!e),s.classList.remove("sidebar-mobile-open"),localStorage.setItem(h,e?"false":"true");return}s.classList.toggle("sidebar-mobile-open",e),s.classList.remove("sidebar-collapsed")}function m(){c.matches?n(localStorage.getItem(h)!=="true"):n(!1)}document.querySelectorAll("[data-sidebar-toggle]").forEach(e=>{e.addEventListener("click",()=>{const t=c.matches?!s.classList.contains("sidebar-collapsed"):s.classList.contains("sidebar-mobile-open");n(!t)})});document.querySelectorAll("[data-sidebar-close]").forEach(e=>{e.addEventListener("click",()=>n(!1))});document.addEventListener("keydown",e=>{e.key==="Escape"&&n(!1)});c.addEventListener("change",m);m();const g=document.querySelector(".searchbar"),d=JSON.parse(g?.getAttribute("data-search-index")||"[]"),y=g?.getAttribute("data-lang")||"es",o=document.getElementById("searchToggle"),r=document.getElementById("searchDropdown"),a=document.getElementById("searchInput"),i=document.getElementById("searchResults");function p(){r.hidden=!1,o.classList.add("open"),a.value="",u(d),setTimeout(()=>a.focus(),50)}function l(){r.hidden=!0,o.classList.remove("open")}function u(e){if(i){if(e.length===0){i.innerHTML=`<div class="search-no-results">${a.placeholder==="Buscar artículos..."?"Sin resultados":"No results found"}</div>`;return}i.innerHTML=`
       <ul>
-        ${e.map((t,d)=>`
+        ${e.map(t=>`
           <li>
-            <a href="/${p}${t.slug}" class="search-result-link">
+            <a href="/${y}${t.slug}" class="search-result-link">
               <span class="search-result-title">${t.title}</span>
               <span class="search-result-desc">${t.description}</span>
             </a>
           </li>
         `).join("")}
       </ul>
-    `}}function f(e){if(!e.trim()){l(o);return}const t=e.toLowerCase(),d=o.filter(u=>u.title.toLowerCase().includes(t)||u.description.toLowerCase().includes(t));l(d)}s.addEventListener("click",()=>{r.hidden?i():a()});n?.addEventListener("input",e=>{f(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!s.contains(e.target)&&a()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),i()),e.key==="Escape"&&a()});window.__openSearch=i;window.__closeSearch=a;
-</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;Networking &#38; Internet&#34;,&#34;description&#34;:&#34;OSI model, TCP/IP, HTTP/HTTPS, DNS, routing, firewalls, SSL/TLS, Cloudflare, VPS, Cloud providers&#34;,&#34;slug&#34;:&#34;/01-networking-internet&#34;},{&#34;title&#34;:&#34;Infrastructure &#38; Containers&#34;,&#34;description&#34;:&#34;Docker, Kubernetes, CI/CD pipelines, Monitoring&#34;,&#34;slug&#34;:&#34;/02-infrastructure-containers&#34;},{&#34;title&#34;:&#34;Distributed Systems&#34;,&#34;description&#34;:&#34;Consensus, message queues, distributed caching, event-driven architecture&#34;,&#34;slug&#34;:&#34;/03-distributed-systems&#34;},{&#34;title&#34;:&#34;Operating Systems&#34;,&#34;description&#34;:&#34;Linux internals, kernel, filesystems, memory, networking, syscalls&#34;,&#34;slug&#34;:&#34;/04-operating-systems&#34;},{&#34;title&#34;:&#34;Programming &#38; Software Engineering&#34;,&#34;description&#34;:&#34;Advanced Python, design patterns, testing, Git, debugging&#34;,&#34;slug&#34;:&#34;/05-programming-software-engineering&#34;},{&#34;title&#34;:&#34;Databases&#34;,&#34;description&#34;:&#34;PostgreSQL, MongoDB, Redis, CAP theorem, replication, sharding&#34;,&#34;slug&#34;:&#34;/06-databases&#34;},{&#34;title&#34;:&#34;Machine Learning Fundamentals&#34;,&#34;description&#34;:&#34;Supervised learning, neural networks, loss functions, optimizers&#34;,&#34;slug&#34;:&#34;/07-ml-fundamentals&#34;},{&#34;title&#34;:&#34;Deep Learning&#34;,&#34;description&#34;:&#34;CNNs, RNNs, Transformers, PyTorch, GPU computing&#34;,&#34;slug&#34;:&#34;/08-deep-learning&#34;},{&#34;title&#34;:&#34;LLMs — Architecture and Functioning&#34;,&#34;description&#34;:&#34;Tokenization, decoder-only architecture, attention, KV cache&#34;,&#34;slug&#34;:&#34;/09-llm-architecture&#34;},{&#34;title&#34;:&#34;LLMs — Training&#34;,&#34;description&#34;:&#34;Pre-training, distributed training, RLHF, alignment&#34;,&#34;slug&#34;:&#34;/10-llm-training&#34;},{&#34;title&#34;:&#34;LLMs — Evaluation &#38; Benchmarking&#34;,&#34;description&#34;:&#34;MMLU, LM-Eval, hallucination, red teaming&#34;,&#34;slug&#34;:&#34;/11-llm-evaluation&#34;},{&#34;title&#34;:&#34;RAG &#38; Vector Databases&#34;,&#34;description&#34;:&#34;Vector embeddings, vector databases, RAG architecture&#34;,&#34;slug&#34;:&#34;/12-rag-vector-databases&#34;},{&#34;title&#34;:&#34;Fine-Tuning&#34;,&#34;description&#34;:&#34;LoRA, QLoRA, PEFT, instruction tuning&#34;,&#34;slug&#34;:&#34;/13-fine-tuning&#34;},{&#34;title&#34;:&#34;AI Agents&#34;,&#34;description&#34;:&#34;Tool use, ReAct, agentic frameworks, multi-agent&#34;,&#34;slug&#34;:&#34;/14-ai-agents&#34;},{&#34;title&#34;:&#34;AI Security&#34;,&#34;description&#34;:&#34;Prompt injection, jailbreaking, guardrails, PII&#34;,&#34;slug&#34;:&#34;/15-ai-security&#34;},{&#34;title&#34;:&#34;Cloud &#38; AI Infrastructure&#34;,&#34;description&#34;:&#34;GPU cloud, serverless inference, Terraform, cost optimization&#34;,&#34;slug&#34;:&#34;/16-cloud-ia&#34;},{&#34;title&#34;:&#34;MLOps &#38; Production&#34;,&#34;description&#34;:&#34;Model serving, monitoring, CI/CD for ML&#34;,&#34;slug&#34;:&#34;/17-mlops&#34;},{&#34;title&#34;:&#34;Multimodal &#38; Computer Vision&#34;,&#34;description&#34;:&#34;ViT, CLIP, diffusion models, multimodal LLMs&#34;,&#34;slug&#34;:&#34;/18-multimodal&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <button class="lang-switcher" onClick="() => {
-    const path = window.location.pathname;
-    const url = new URL(path, window.location.origin);
-    const segments = url.pathname.split(&#34;/&#34;).filter(Boolean);
-    if (segments[0] === &#34;en&#34; || segments[0] === &#34;es&#34;) {
-      const langIndex = segments.indexOf(lang === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;);
-      if (langIndex !== -1) {
-        segments[langIndex] = segments[langIndex] === &#34;es&#34; ? &#34;en&#34; : &#34;es&#34;;
-      }
-    }
-    const newPath = &#34;/&#34; + segments.join(&#34;/&#34;);
-    window.location.href = newPath;
-  }" title="Cambiar a Español"> <span class="lang-switcher-label">EN</span> <span class="lang-switcher-separator">/</span> <span class="lang-switcher-label">ES</span> </button> </div> </div> </header> <div class="layout-sidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <button class="sidebar-toggle" aria-label="Toggle navigation"> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentos</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-redes-internet" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Redes e Internet</span> </a> </li><li class="nav-item-group"> <a href="/en/02-infra-contenedores" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Infraestructura y Contenedores</span> </a> </li><li class="nav-item-group"> <a href="/en/03-sistemas-distribuidos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Distribuidos</span> </a> </li><li class="nav-item-group"> <a href="/en/04-sistemas-operativos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Sistemas Operativos</span> </a> </li><li class="nav-item-group"> <a href="/en/05-programacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Programación y Software Engineering</span> </a> </li><li class="nav-item-group"> <a href="/en/06-bases-datos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Bases de Datos</span> </a> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Inteligencia Artificial</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/07-ml-fundamentos" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Machine Learning Fundamentals</span> </a> </li><li class="nav-item-group"> <a href="/en/08-deep-learning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Deep Learning</span> </a> </li><li class="nav-item-group"> <a href="/en/09-llm-arquitectura" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Arquitectura y Funcionamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/10-llm-entrenamiento" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Entrenamiento</span> </a> </li><li class="nav-item-group"> <a href="/en/11-llm-evaluacion" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">LLMs — Evaluación y Benchmarking</span> </a> </li><li class="nav-item-group"> <a href="/en/12-rag-bases-vectoriales" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">RAG y Bases de Datos Vectoriales</span> </a> </li><li class="nav-item-group"> <a href="/en/13-fine-tuning" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Fine-Tuning</span> </a> </li><li class="nav-item-group"> <a href="/en/14-agentes-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Agentes IA</span> </a> </li><li class="nav-item-group"> <a href="/en/15-seguridad-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Seguridad en IA</span> </a> </li><li class="nav-item-group"> <a href="/en/16-cloud-ia" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Cloud e Infraestructura IA</span> </a> </li><li class="nav-item-group"> <a href="/en/17-mlops" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">MLOps y Producción</span> </a> </li><li class="nav-item-group"> <a href="/en/18-multimodal" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Multimodal y Visión por Computador</span> </a> </li> </ul> </div> </nav> </div> <main class="main-content"> <div class="container">  <div class="article-content"> <h1 class="article-title">HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3</h1> <div class="article-body"><h1 id="http-deep-dive-methods-headers-body-pipeline-http11-vs-http2-vs-http3"><a aria-hidden="true" tabindex="-1" href="#http-deep-dive-methods-headers-body-pipeline-http11-vs-http2-vs-http3"><span class="icon icon-link"></span></a>HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3</h1>
-<blockquote>
-<p>[!tip] HTTP in a nutshell
-HTTP (HyperText Transfer Protocol) is the foundation of data communication on the World Wide Web. It is an application-layer, request-response protocol where clients send requests and servers send responses. This article covers HTTP in full depth.</p>
+    `}}function E(e){if(!e.trim()){u(d);return}const t=e.toLowerCase(),b=d.filter(f=>f.title.toLowerCase().includes(t)||f.description.toLowerCase().includes(t));u(b)}o.addEventListener("click",()=>{r.hidden?p():l()});a?.addEventListener("input",e=>{E(e.target.value)});document.addEventListener("click",e=>{!r.contains(e.target)&&!o.contains(e.target)&&l()});document.addEventListener("keydown",e=>{(e.metaKey||e.ctrlKey)&&e.key==="k"&&(e.preventDefault(),p()),e.key==="Escape"&&l()});const L=window;L.__openSearch=p;L.__closeSearch=l;
+</script></head> <body>  <header class="navbar"> <div class="navbar-inner"> <button class="navbar-menu-button" type="button" aria-label="Toggle navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> <a href="/en" class="navbar-brand"> <span class="navbar-logo">📚</span> <span class="navbar-title">AI Engineer Wiki</span> </a> <nav class="navbar-links" aria-label="Top navigation"> <a href="/en/index" class="navbar-link">Home</a> </nav> <div class="navbar-right"> <div class="searchbar" data-search-index="[{&#34;title&#34;:&#34;What Is the Internet?&#34;,&#34;description&#34;:&#34;Internet fundamentals: what it really is, the client-server model, the TCP/IP protocol suite, and how the network of networks works at the technical level.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/01-what-is-internet&#34;},{&#34;title&#34;:&#34;From URL to Page: The Complete Journey&#34;,&#34;description&#34;:&#34;The complete journey from typing a URL to a rendered page: DNS resolution, TCP handshake, TLS negotiation, HTTP request/response, browser rendering, and everything in between.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/02-url-to-page-journey&#34;},{&#34;title&#34;:&#34;DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC&#34;,&#34;description&#34;:&#34;DNS deep-dive: how name resolution works, cache hierarchy, TTL, all record types, DNSSEC, DNS-over-HTTPS/TLS, and common DNS issues.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/03-dns-deep-dive&#34;},{&#34;title&#34;:&#34;Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection&#34;,&#34;description&#34;:&#34;Introduction to Cloudflare: what it is, CDN, DNS, WAF protection, SSL/TLS, DDoS protection, and why it positions itself as a reverse proxy between your user and your server.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/04-cloudflare-intro&#34;},{&#34;title&#34;:&#34;HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3&#34;,&#34;description&#34;:&#34;HTTP deep-dive: HTTP methods (GET, POST, PUT, PATCH, DELETE), headers, request body, request pipeline, and the evolution from HTTP/1.1 to HTTP/2 to HTTP/3.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/05-http-deep-dive&#34;},{&#34;title&#34;:&#34;HTTP Status Codes: 1xx through 5xx, When They're Used, Common Errors&#34;,&#34;description&#34;:&#34;HTTP status codes explained in detail: 1xx informational, 2xx success, 3xx redirection, 4xx client errors, 5xx server errors, when they're used, and common errors.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/06-status-codes&#34;},{&#34;title&#34;:&#34;HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS&#34;,&#34;description&#34;:&#34;HTTPS and TLS explained step by step: TLS handshake, certificates, cipher suites, SNI, HSTS, certificate pinning, and the security properties of HTTPS.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/07-https-tls&#34;},{&#34;title&#34;:&#34;Let's Encrypt and Certbot: Free SSL Certificates in Production&#34;,&#34;description&#34;:&#34;Let's Encrypt and Certbot: getting free SSL certificates in production, automated renewal, ACME protocol, wildcards, and best practices for secure certificate management.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/08-lets-encrypt&#34;},{&#34;title&#34;:&#34;Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful&#34;,&#34;description&#34;:&#34;Cookies and sessions explained: cookie types, security attributes, JWT tokens, session management, stateless vs stateful authentication, and best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/09-cookies-sessions&#34;},{&#34;title&#34;:&#34;Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0&#34;,&#34;description&#34;:&#34;Authentication methods explained: HTTP Basic Auth, Bearer tokens, API keys, OAuth 2.0 authorization flows, OpenID Connect, and when to use each method.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/10-authentication-api-keys-tokens&#34;},{&#34;title&#34;:&#34;REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences&#34;,&#34;description&#34;:&#34;REST API design: architectural principles, resources, HTTP verbs, status codes, HATEOAS, pagination, versioning, and how REST differs from GraphQL and RPC.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/11-rest-api&#34;},{&#34;title&#34;:&#34;Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral&#34;,&#34;description&#34;:&#34;Network ports explained: localhost, loopback interfaces, IPv4 vs IPv6 addressing, well-known vs ephemeral ports, and port mapping.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/12-ports&#34;},{&#34;title&#34;:&#34;NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding&#34;,&#34;description&#34;:&#34;NAT (Network Address Translation) explained: SNAT, DNAT, masquerading, port forwarding, how private addresses reach the Internet, and how Cloudflare hides your origin.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/13-nat&#34;},{&#34;title&#34;:&#34;Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl&#34;,&#34;description&#34;:&#34;Servers explained: what is a process, PID, daemon, zombie process, sockets, signals, concurrency models (event loop, fork, threads), and management with PM2, Systemd, and Docker.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/14-servers-processes&#34;},{&#34;title&#34;:&#34;OSI Model and TCP/IP: Layers, Protocols, Internal Functioning&#34;,&#34;description&#34;:&#34;OSI model explained: 7 layers, protocols, encapsulation, how each layer works internally, and comparison with the TCP/IP model.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/15-osi-model-tcpip&#34;},{&#34;title&#34;:&#34;Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization&#34;,&#34;description&#34;:&#34;Packet routing, subnetting, CIDR notation, subnet masks, VLSM, route summarization, and how routers make forwarding decisions between networks.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/16-routing-subnetting&#34;},{&#34;title&#34;:&#34;Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms&#34;,&#34;description&#34;:&#34;Firewalls (stateful, stateless, WAF), proxies (forward, reverse), load balancers (L4 vs L7, algorithms), and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/17-firewalls-proxies-loadbalancers&#34;},{&#34;title&#34;:&#34;Messaging Protocols: AMQP, MQTT, WebSockets&#34;,&#34;description&#34;:&#34;Real-time messaging protocols: AMQP (RabbitMQ), MQTT, WebSockets, Kafka, and when to use each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/18-messaging-protocols&#34;},{&#34;title&#34;:&#34;Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream&#34;,&#34;description&#34;:&#34;Cloudflare in complete depth: CDN, DNS, WAF, DDoS protection, SSL/TLS, Workers, Argo Smart Routing, Stream, Image Optimizer, and production configuration.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/19-cloudflare-complete&#34;},{&#34;title&#34;:&#34;VPS: What It Is, How to Configure, SSH, Security, DNS&#34;,&#34;description&#34;:&#34;VPS explained in depth: what it is, how to configure one, SSH (keys, advanced configs), security hardening, DNS setup, and production best practices.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/20-vps&#34;},{&#34;title&#34;:&#34;Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison&#34;,&#34;description&#34;:&#34;Complete comparison of the top 3 cloud providers: AWS, Azure, and GCP — services, pricing, IAM, networking, and when to choose each one.&#34;,&#34;slug&#34;:&#34;/01-networking-internet/21-cloud-providers&#34;},{&#34;title&#34;:&#34;Consensus in distributed systems: Paxos, Raft, and the agreement problem&#34;,&#34;description&#34;:&#34;How distributed systems agree: Paxos, Raft, the CAP theorem, and the FLP theorem. Explained from scratch with diagrams and practical examples.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/01-consensus-paxos-raft&#34;},{&#34;title&#34;:&#34;Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern&#34;,&#34;description&#34;:&#34;How message queues work: producer-consumer pattern, RabbitMQ (exchanges, queues, AMQP), Kafka (topics, partitions, brokers, consumer groups), and how to choose between them.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/02-message-queues&#34;},{&#34;title&#34;:&#34;Distributed caching: Redis, clusters, and consistency&#34;,&#34;description&#34;:&#34;How distributed caching works: Redis (data types, RDB/AOF persistence, pub/sub), Redis Cluster (sharding, hash slots, failover), and caching consistency patterns.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/03-distributed-caching&#34;},{&#34;title&#34;:&#34;Event-driven architecture, CQRS, and the Saga Pattern&#34;,&#34;description&#34;:&#34;Advanced distributed systems patterns: event-driven architecture, CQRS (Command Query Responsibility Segregation), event sourcing, and the Saga Pattern for distributed transactions.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/04-event-driven-cqrs-saga&#34;},{&#34;title&#34;:&#34;Idempotency, retry patterns, and circuit breakers&#34;,&#34;description&#34;:&#34;Resilience patterns in distributed systems: idempotency, exponential backoff with jitter, circuit breaker, bulkhead, rate limiting, and retry policies.&#34;,&#34;slug&#34;:&#34;/03-distributed-systems/05-idempotency-retry-circuit-breakers&#34;},{&#34;title&#34;:&#34;IA for the Curious — Fascicle 01: Foundations&#34;,&#34;description&#34;:&#34;Complete summary of Fascicle 01 of the IA for the Curious project. 12 chapters covering AI fundamentals.&#34;,&#34;slug&#34;:&#34;/99-ia-curious-foundations/index&#34;}]" data-lang="en"> <div class="searchbar-container"> <button class="searchbar-toggle" aria-label="Search articles" id="searchToggle"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <span class="searchbar-shortcut">⌘K</span> </button> <div class="searchbar-dropdown" id="searchDropdown" hidden> <div class="searchbar-input-wrapper"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> <circle cx="11" cy="11" r="8"></circle> <path d="m21 21-4.35-4.35"></path> </svg> <input type="text" id="searchInput" placeholder="Search articles..." autocomplete="off"> </div> <div id="searchResults" class="search-results"> <div class="search-no-results"> Type to search... </div> </div> </div> </div> </div>  <div class="lang-switcher"> <a href="/es/01-redes-internet/05-http-deep-dive" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'es' ? 'dimmed' : ''}">ES</span> </a> <span class="lang-switcher-separator">/</span> <a href="/en/01-networking-internet/05-http-deep-dive/" class="lang-switcher-link"> <span class="lang-switcher-label {lang !== 'en' ? 'dimmed' : ''}">EN</span> </a> </div> </div> </div> </header> <div class="sidebar-backdrop" data-sidebar-close></div> <div class="layout-sidebar" id="siteSidebar"> <nav class="sidebar-nav" role="navigation" aria-label="Main navigation"> <div class="sidebar-header"> <span class="sidebar-heading">Index</span> <button class="sidebar-toggle" type="button" aria-label="Hide navigation" data-sidebar-toggle> <span class="hamburger-icon"><span></span><span></span><span></span></span> </button> </div> <!-- Fundamentos section --> <div class="nav-section"> <h3 class="nav-section-title">Fundamentals</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-module active nav-module-open"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Networking &amp; Internet</span> </a> <ul class="nav-article-list"> <li> <a href="/en/01-networking-internet/01-what-is-internet" class="nav-article"> What Is the Internet? </a> </li><li> <a href="/en/01-networking-internet/02-url-to-page-journey" class="nav-article"> From URL to Page: The Complete Journey </a> </li><li> <a href="/en/01-networking-internet/03-dns-deep-dive" class="nav-article"> DNS Deep-Dive: Resolution, Cache, TTL, Record Types, DNSSEC </a> </li><li> <a href="/en/01-networking-internet/04-cloudflare-intro" class="nav-article"> Cloudflare: Introduction — CDN, DNS, WAF, DDoS Protection </a> </li><li> <a href="/en/01-networking-internet/05-http-deep-dive" class="nav-article active"> HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3 </a> </li><li> <a href="/en/01-networking-internet/06-status-codes" class="nav-article"> HTTP Status Codes: 1xx through 5xx, When They&#39;re Used, Common Errors </a> </li><li> <a href="/en/01-networking-internet/07-https-tls" class="nav-article"> HTTPS and TLS: Handshake Step by Step, Certificates, Cipher Suites, SNI, HSTS </a> </li><li> <a href="/en/01-networking-internet/08-lets-encrypt" class="nav-article"> Let&#39;s Encrypt and Certbot: Free SSL Certificates in Production </a> </li><li> <a href="/en/01-networking-internet/09-cookies-sessions" class="nav-article"> Cookies and Sessions: Types, Attributes, JWT, Tokens, Stateless vs Stateful </a> </li><li> <a href="/en/01-networking-internet/10-authentication-api-keys-tokens" class="nav-article"> Authentication: Basic Auth, Bearer Tokens, API Keys, OAuth 2.0 </a> </li><li> <a href="/en/01-networking-internet/11-rest-api" class="nav-article"> REST: Principles, Resources, HTTP Verbs, HATEOAS, GraphQL/RPC Differences </a> </li><li> <a href="/en/01-networking-internet/12-ports" class="nav-article"> Ports, Localhost, Loopback, IPv4 vs IPv6, Well-Known vs Ephemeral </a> </li><li> <a href="/en/01-networking-internet/13-nat" class="nav-article"> NAT: Address Translation, SNAT, DNAT, Masquerading, Port Forwarding </a> </li><li> <a href="/en/01-networking-internet/14-servers-processes" class="nav-article"> Servers and Processes: What Is a Process, PID, Daemon, Zombie, What Happens Under curl </a> </li><li> <a href="/en/01-networking-internet/15-osi-model-tcpip" class="nav-article"> OSI Model and TCP/IP: Layers, Protocols, Internal Functioning </a> </li><li> <a href="/en/01-networking-internet/16-routing-subnetting" class="nav-article"> Routing, Subnetting, CIDR: Packet Routing, Subnet Masks, VLSM, Route Summarization </a> </li><li> <a href="/en/01-networking-internet/17-firewalls-proxies-loadbalancers" class="nav-article"> Firewalls, Proxies, Load Balancers: Stateful, Stateless, WAF, Reverse Proxy, Load Balancing Algorithms </a> </li><li> <a href="/en/01-networking-internet/18-messaging-protocols" class="nav-article"> Messaging Protocols: AMQP, MQTT, WebSockets </a> </li><li> <a href="/en/01-networking-internet/19-cloudflare-complete" class="nav-article"> Cloudflare Complete: CDN, DNS, WAF, DDoS, SSL/TLS, Workers, Argo, Stream </a> </li><li> <a href="/en/01-networking-internet/20-vps" class="nav-article"> VPS: What It Is, How to Configure, SSH, Security, DNS </a> </li><li> <a href="/en/01-networking-internet/21-cloud-providers" class="nav-article"> Cloud Providers: AWS, Azure, and GCP — Services, Pricing, IAM, Networking, Comparison </a> </li> </ul> </li><li class="nav-item-group"> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">Distributed Systems</span> </a> <ul class="nav-article-list"> <li> <a href="/en/03-distributed-systems/01-consensus-paxos-raft" class="nav-article"> Consensus in distributed systems: Paxos, Raft, and the agreement problem </a> </li><li> <a href="/en/03-distributed-systems/02-message-queues" class="nav-article"> Message Queues: RabbitMQ, Kafka, and the producer-consumer pattern </a> </li><li> <a href="/en/03-distributed-systems/03-distributed-caching" class="nav-article"> Distributed caching: Redis, clusters, and consistency </a> </li><li> <a href="/en/03-distributed-systems/04-event-driven-cqrs-saga" class="nav-article"> Event-driven architecture, CQRS, and the Saga Pattern </a> </li><li> <a href="/en/03-distributed-systems/05-idempotency-retry-circuit-breakers" class="nav-article"> Idempotency, retry patterns, and circuit breakers </a> </li> </ul> </li> </ul> </div> <!-- IA section --> <div class="nav-section"> <h3 class="nav-section-title">Artificial Intelligence</h3> <ul class="nav-list"> <li class="nav-item-group"> <a href="/en/99-ia-curious-foundations/index" class="nav-module"> <span class="nav-module-icon">▸</span> <span class="nav-module-title">IA for the Curious — Foundations</span> </a> <ul class="nav-article-list"> <li> <a href="/en/99-ia-curious-foundations/index" class="nav-article"> IA for the Curious — Fascicle 01: Foundations </a> </li> </ul> </li> </ul> </div> </nav> </div>  <main class="main-content"> <div class="container">  <div class="article-layout"> <article class="article-content"> <h1 class="article-title">HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3</h1> <div class="article-body"><h1 id="http-deep-dive-methods-headers-body-pipeline-http11-vs-http2-vs-http3">HTTP Deep-Dive: Methods, Headers, Body, Pipeline, HTTP/1.1 vs HTTP/2 vs HTTP/3<a aria-label="Link to section" class="anchor-link" href="#http-deep-dive-methods-headers-body-pipeline-http11-vs-http2-vs-http3"><span class="icon icon-link"></span></a></h1>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">HTTP in a nutshell</div>
+                </div>
+                <div class="callout-content">HTTP (HyperText Transfer Protocol) is the foundation of data communication on the World Wide Web. It is an application-layer, request-response protocol where clients send requests and servers send responses. This article covers HTTP in full depth.</div>
+              
 </blockquote>
-<h2 id="what-is-http"><a aria-hidden="true" tabindex="-1" href="#what-is-http"><span class="icon icon-link"></span></a>What is HTTP?</h2>
+<h2 id="what-is-http">What is HTTP?<a aria-label="Link to section" class="anchor-link" href="#what-is-http"><span class="icon icon-link"></span></a></h2>
 <p>HTTP is a <strong>stateless, request-response protocol</strong> that operates on top of TCP (and in HTTP/3, on top of QUIC/UDP). It defines how messages are formatted and transmitted, and what actions web servers and browsers should take in response.</p>
-<h3 id="http-at-the-osi-model"><a aria-hidden="true" tabindex="-1" href="#http-at-the-osi-model"><span class="icon icon-link"></span></a>HTTP at the OSI model</h3>
+<h3 id="http-at-the-osi-model">HTTP at the OSI model<a aria-label="Link to section" class="anchor-link" href="#http-at-the-osi-model"><span class="icon icon-link"></span></a></h3>
 <p>HTTP operates at the <strong>Application layer</strong> (Layer 7), using TCP at the transport layer:</p>
 <pre><code>┌─────────────────────────────────┐
 │  HTTP/1.1 / HTTP/2 / HTTP/3    │ ← Application layer
@@ -49,7 +42,7 @@ HTTP (HyperText Transfer Protocol) is the foundation of data communication on th
 │  └────────────────────────────┘│
 └─────────────────────────────────┘
 </code></pre>
-<h3 id="http-is-request-response"><a aria-hidden="true" tabindex="-1" href="#http-is-request-response"><span class="icon icon-link"></span></a>HTTP is request-response</h3>
+<h3 id="http-is-request-response">HTTP is request-response<a aria-label="Link to section" class="anchor-link" href="#http-is-request-response"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client                          Server
    │─── GET /index.html ────────→│  Request
    │   Host: example.com         │
@@ -63,9 +56,9 @@ HTTP (HyperText Transfer Protocol) is the foundation of data communication on th
    │                           │
    │←── 201 Created ────────────│  Next response
 </code></pre>
-<h2 id="http-message-structure"><a aria-hidden="true" tabindex="-1" href="#http-message-structure"><span class="icon icon-link"></span></a>HTTP message structure</h2>
+<h2 id="http-message-structure">HTTP message structure<a aria-label="Link to section" class="anchor-link" href="#http-message-structure"><span class="icon icon-link"></span></a></h2>
 <p>Every HTTP message has three parts:</p>
-<h3 id="1-start-line"><a aria-hidden="true" tabindex="-1" href="#1-start-line"><span class="icon icon-link"></span></a>1. Start line</h3>
+<h3 id="1-start-line">1. Start line<a aria-label="Link to section" class="anchor-link" href="#1-start-line"><span class="icon icon-link"></span></a></h3>
 <p><strong>Request line</strong> (for client → server):</p>
 <pre><code>GET /index.html HTTP/1.1
 </code></pre>
@@ -82,7 +75,7 @@ HTTP (HyperText Transfer Protocol) is the foundation of data communication on th
 <li>Status code (<code>200</code>)</li>
 <li>Reason phrase (<code>OK</code>)</li>
 </ul>
-<h3 id="2-headers"><a aria-hidden="true" tabindex="-1" href="#2-headers"><span class="icon icon-link"></span></a>2. Headers</h3>
+<h3 id="2-headers">2. Headers<a aria-label="Link to section" class="anchor-link" href="#2-headers"><span class="icon icon-link"></span></a></h3>
 <pre><code>Host: example.com
 User-Agent: Mozilla/5.0 (Macintosh; Intel...)
 Accept: text/html,application/xhtml+xml
@@ -90,14 +83,14 @@ Accept-Language: en-US,en;q=0.9
 Accept-Encoding: gzip, br
 Connection: keep-alive
 </code></pre>
-<h3 id="3-body-optional"><a aria-hidden="true" tabindex="-1" href="#3-body-optional"><span class="icon icon-link"></span></a>3. Body (optional)</h3>
+<h3 id="3-body-optional">3. Body (optional)<a aria-label="Link to section" class="anchor-link" href="#3-body-optional"><span class="icon icon-link"></span></a></h3>
 <pre><code>{
   "username": "john",
   "password": "secret123"
 }
 </code></pre>
 <p>The body is present in requests (POST, PUT, PATCH) and most server responses, but NOT in GET or HEAD requests.</p>
-<h2 id="http-methods"><a aria-hidden="true" tabindex="-1" href="#http-methods"><span class="icon icon-link"></span></a>HTTP methods</h2>
+<h2 id="http-methods">HTTP methods<a aria-label="Link to section" class="anchor-link" href="#http-methods"><span class="icon icon-link"></span></a></h2>
 <p>HTTP methods define <strong>what action</strong> the client wants to perform. They are categorized as safe, idempotent, or cacheable.</p>
 <table>
 <thead>
@@ -168,7 +161,7 @@ Connection: keep-alive
 </tr>
 </tbody>
 </table>
-<h3 id="get-vs-post"><a aria-hidden="true" tabindex="-1" href="#get-vs-post"><span class="icon icon-link"></span></a>GET vs POST</h3>
+<h3 id="get-vs-post">GET vs POST<a aria-label="Link to section" class="anchor-link" href="#get-vs-post"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -220,7 +213,7 @@ Connection: keep-alive
 </tr>
 </tbody>
 </table>
-<h3 id="put-vs-patch"><a aria-hidden="true" tabindex="-1" href="#put-vs-patch"><span class="icon icon-link"></span></a>PUT vs PATCH</h3>
+<h3 id="put-vs-patch">PUT vs PATCH<a aria-label="Link to section" class="anchor-link" href="#put-vs-patch"><span class="icon icon-link"></span></a></h3>
 <pre><code>PUT /api/users/123 HTTP/1.1
 Content-Type: application/json
 
@@ -239,19 +232,24 @@ Content-Type: application/json
 }
 → Updates ONLY the specified fields. Age changes from 30 to 31. Name and email unchanged.
 </code></pre>
-<h3 id="safe-methods-no-side-effects"><a aria-hidden="true" tabindex="-1" href="#safe-methods-no-side-effects"><span class="icon icon-link"></span></a>Safe methods (no side effects)</h3>
+<h3 id="safe-methods-no-side-effects">Safe methods (no side effects)<a aria-label="Link to section" class="anchor-link" href="#safe-methods-no-side-effects"><span class="icon icon-link"></span></a></h3>
 <ul>
 <li><strong>GET</strong>: Should not modify server state</li>
 <li><strong>HEAD</strong>: Same as GET, but no body</li>
 <li><strong>OPTIONS</strong>: Only returns metadata</li>
 </ul>
-<blockquote>
-<p>[!caution] GET should never modify data
-Even though HTTP does not technically forbid a body in GET requests, any method that changes server state should NOT use GET. This is why search queries use GET (read-only) but form submissions use POST (writes data).</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">GET should never modify data</div>
+                </div>
+                <div class="callout-content">Even though HTTP does not technically forbid a body in GET requests, any method that changes server state should NOT use GET. This is why search queries use GET (read-only) but form submissions use POST (writes data).</div>
+              
 </blockquote>
-<h2 id="http-headers"><a aria-hidden="true" tabindex="-1" href="#http-headers"><span class="icon icon-link"></span></a>HTTP headers</h2>
+<h2 id="http-headers">HTTP headers<a aria-label="Link to section" class="anchor-link" href="#http-headers"><span class="icon icon-link"></span></a></h2>
 <p>HTTP headers are key-value pairs that provide metadata about the request or response.</p>
-<h3 id="request-headers"><a aria-hidden="true" tabindex="-1" href="#request-headers"><span class="icon icon-link"></span></a>Request headers</h3>
+<h3 id="request-headers">Request headers<a aria-label="Link to section" class="anchor-link" href="#request-headers"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -328,7 +326,7 @@ Even though HTTP does not technically forbid a body in GET requests, any method 
 </tr>
 </tbody>
 </table>
-<h3 id="response-headers"><a aria-hidden="true" tabindex="-1" href="#response-headers"><span class="icon icon-link"></span></a>Response headers</h3>
+<h3 id="response-headers">Response headers<a aria-label="Link to section" class="anchor-link" href="#response-headers"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -405,7 +403,7 @@ Even though HTTP does not technically forbid a body in GET requests, any method 
 </tr>
 </tbody>
 </table>
-<h3 id="conditional-requests-with-headers"><a aria-hidden="true" tabindex="-1" href="#conditional-requests-with-headers"><span class="icon icon-link"></span></a>Conditional requests with headers</h3>
+<h3 id="conditional-requests-with-headers">Conditional requests with headers<a aria-label="Link to section" class="anchor-link" href="#conditional-requests-with-headers"><span class="icon icon-link"></span></a></h3>
 <p>HTTP supports conditional requests, where the server only responds if certain conditions are met:</p>
 <pre><code># Client sends a request with ETag
 GET /api/data HTTP/1.1
@@ -425,9 +423,9 @@ If-Modified-Since: Mon, 13 May 2026 00:00:00 GMT
 
 # Same logic: 304 if unchanged, 200 with body if changed
 </code></pre>
-<h2 id="request-body-formats"><a aria-hidden="true" tabindex="-1" href="#request-body-formats"><span class="icon icon-link"></span></a>Request body formats</h2>
+<h2 id="request-body-formats">Request body formats<a aria-label="Link to section" class="anchor-link" href="#request-body-formats"><span class="icon icon-link"></span></a></h2>
 <p>The body format depends on the <code>Content-Type</code> header:</p>
-<h3 id="applicationjson"><a aria-hidden="true" tabindex="-1" href="#applicationjson"><span class="icon icon-link"></span></a>application/json</h3>
+<h3 id="applicationjson">application/json<a aria-label="Link to section" class="anchor-link" href="#applicationjson"><span class="icon icon-link"></span></a></h3>
 <p>The most common format for APIs:</p>
 <pre><code>POST /api/users HTTP/1.1
 Host: example.com
@@ -440,7 +438,7 @@ Content-Length: 67
   "age": 30
 }
 </code></pre>
-<h3 id="applicationx-www-form-urlencoded"><a aria-hidden="true" tabindex="-1" href="#applicationx-www-form-urlencoded"><span class="icon icon-link"></span></a>application/x-www-form-urlencoded</h3>
+<h3 id="applicationx-www-form-urlencoded">application/x-www-form-urlencoded<a aria-label="Link to section" class="anchor-link" href="#applicationx-www-form-urlencoded"><span class="icon icon-link"></span></a></h3>
 <p>The default format for HTML forms:</p>
 <pre><code>POST /login HTTP/1.1
 Host: example.com
@@ -449,7 +447,7 @@ Content-Length: 33
 
 username=john&#x26;password=secret123
 </code></pre>
-<h3 id="multipartform-data"><a aria-hidden="true" tabindex="-1" href="#multipartform-data"><span class="icon icon-link"></span></a>multipart/form-data</h3>
+<h3 id="multipartform-data">multipart/form-data<a aria-label="Link to section" class="anchor-link" href="#multipartform-data"><span class="icon icon-link"></span></a></h3>
 <p>For file uploads:</p>
 <pre><code>POST /upload HTTP/1.1
 Host: example.com
@@ -466,7 +464,7 @@ Content-Disposition: form-data; name="caption"
 My vacation photo
 ------WebKitFormBoundary--
 </code></pre>
-<h3 id="applicationxml"><a aria-hidden="true" tabindex="-1" href="#applicationxml"><span class="icon icon-link"></span></a>application/xml</h3>
+<h3 id="applicationxml">application/xml<a aria-label="Link to section" class="anchor-link" href="#applicationxml"><span class="icon icon-link"></span></a></h3>
 <p>XML format (less common now but still used):</p>
 <pre><code>POST /api/users HTTP/1.1
 Host: example.com
@@ -478,9 +476,9 @@ Content-Type: application/xml
   &#x3C;email>john@example.com&#x3C;/email>
 &#x3C;/user>
 </code></pre>
-<h2 id="http11"><a aria-hidden="true" tabindex="-1" href="#http11"><span class="icon icon-link"></span></a>HTTP/1.1</h2>
+<h2 id="http11">HTTP/1.1<a aria-label="Link to section" class="anchor-link" href="#http11"><span class="icon icon-link"></span></a></h2>
 <p>HTTP/1.1 (RFC 7230-7235) is the most widely used version. It introduced several key features:</p>
-<h3 id="key-features-of-http11"><a aria-hidden="true" tabindex="-1" href="#key-features-of-http11"><span class="icon icon-link"></span></a>Key features of HTTP/1.1</h3>
+<h3 id="key-features-of-http11">Key features of HTTP/1.1<a aria-label="Link to section" class="anchor-link" href="#key-features-of-http11"><span class="icon icon-link"></span></a></h3>
 <ul>
 <li><strong>Persistent connections</strong> (<code>Connection: keep-alive</code>): Reuse TCP connections for multiple requests</li>
 <li><strong>Chunked transfer encoding</strong>: Send responses with unknown size</li>
@@ -488,7 +486,7 @@ Content-Type: application/xml
 <li><strong>Range requests</strong>: Download parts of a file (<code>Range: bytes=0-1000</code>)</li>
 <li><strong>Pipelining</strong>: Send multiple requests without waiting for responses</li>
 </ul>
-<h3 id="http11-pipelining-rarely-used"><a aria-hidden="true" tabindex="-1" href="#http11-pipelining-rarely-used"><span class="icon icon-link"></span></a>HTTP/1.1 pipelining (rarely used)</h3>
+<h3 id="http11-pipelining-rarely-used">HTTP/1.1 pipelining (rarely used)<a aria-label="Link to section" class="anchor-link" href="#http11-pipelining-rarely-used"><span class="icon icon-link"></span></a></h3>
 <p>Pipelining allows multiple requests on one connection:</p>
 <pre><code>Client                          Server
    │─── GET /a HTTP/1.1 ────────→│
@@ -500,7 +498,7 @@ Content-Type: application/xml
    │←── 200 /c ─────────────────│
 </code></pre>
 <p><strong>Problem</strong>: Head-of-line blocking. If response A is slow, responses B and C must wait, even though they could have been faster. This is why pipelining was deprecated in practice.</p>
-<h3 id="connection-keep-alive-in-http11"><a aria-hidden="true" tabindex="-1" href="#connection-keep-alive-in-http11"><span class="icon icon-link"></span></a>Connection: keep-alive in HTTP/1.1</h3>
+<h3 id="connection-keep-alive-in-http11">Connection: keep-alive in HTTP/1.1<a aria-label="Link to section" class="anchor-link" href="#connection-keep-alive-in-http11"><span class="icon icon-link"></span></a></h3>
 <pre><code># First request
 GET /index.html HTTP/1.1
 Host: example.com
@@ -518,13 +516,18 @@ Host: example.com
 GET /app.js HTTP/1.1
 Host: example.com
 </code></pre>
-<blockquote>
-<p>[!tip] Why keep-alive matters
-Without keep-alive, every request requires a full TCP 3-way handshake. For a page with 20 resources, that is 20 × 3 RTTs wasted just on connections. Keep-alive reduces this to 1 handshake + 19 requests on the same connection.</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Why keep-alive matters</div>
+                </div>
+                <div class="callout-content">Without keep-alive, every request requires a full TCP 3-way handshake. For a page with 20 resources, that is 20 × 3 RTTs wasted just on connections. Keep-alive reduces this to 1 handshake + 19 requests on the same connection.</div>
+              
 </blockquote>
-<h2 id="http2"><a aria-hidden="true" tabindex="-1" href="#http2"><span class="icon icon-link"></span></a>HTTP/2</h2>
+<h2 id="http2">HTTP/2<a aria-label="Link to section" class="anchor-link" href="#http2"><span class="icon icon-link"></span></a></h2>
 <p>HTTP/2 (RFC 7540) was introduced to solve HTTP/1.1's performance problems. It is NOT a new protocol at the application level — the same methods, headers, and semantics apply. The changes are in <strong>how data is transmitted</strong>:</p>
-<h3 id="key-features-of-http2"><a aria-hidden="true" tabindex="-1" href="#key-features-of-http2"><span class="icon icon-link"></span></a>Key features of HTTP/2</h3>
+<h3 id="key-features-of-http2">Key features of HTTP/2<a aria-label="Link to section" class="anchor-link" href="#key-features-of-http2"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -566,7 +569,7 @@ Without keep-alive, every request requires a full TCP 3-way handshake. For a pag
 </tr>
 </tbody>
 </table>
-<h3 id="binary-framing-in-http2"><a aria-hidden="true" tabindex="-1" href="#binary-framing-in-http2"><span class="icon icon-link"></span></a>Binary framing in HTTP/2</h3>
+<h3 id="binary-framing-in-http2">Binary framing in HTTP/2<a aria-label="Link to section" class="anchor-link" href="#binary-framing-in-http2"><span class="icon icon-link"></span></a></h3>
 <p>HTTP/2 replaces HTTP/1.1's text-based protocol with binary framing:</p>
 <pre><code>+-----------------------------------------------+
 |                 Length (24)                    |
@@ -578,7 +581,7 @@ Without keep-alive, every request requires a full TCP 3-way handshake. For a pag
 |                   Frame Payload...            |
 +/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+/+
 </code></pre>
-<h3 id="stream-multiplexing"><a aria-hidden="true" tabindex="-1" href="#stream-multiplexing"><span class="icon icon-link"></span></a>Stream multiplexing</h3>
+<h3 id="stream-multiplexing">Stream multiplexing<a aria-label="Link to section" class="anchor-link" href="#stream-multiplexing"><span class="icon icon-link"></span></a></h3>
 <p>HTTP/2 allows multiple streams over a single TCP connection:</p>
 <pre><code>┌────────────────────────────────────────────────┐
 │              TCP Connection                     │
@@ -591,7 +594,7 @@ Without keep-alive, every request requires a full TCP 3-way handshake. For a pag
 └────────────────────────────────────────────────┘
 All on the same connection, all interleaved!
 </code></pre>
-<h3 id="server-push"><a aria-hidden="true" tabindex="-1" href="#server-push"><span class="icon icon-link"></span></a>Server push</h3>
+<h3 id="server-push">Server push<a aria-label="Link to section" class="anchor-link" href="#server-push"><span class="icon icon-link"></span></a></h3>
 <p>HTTP/2 allows the server to send resources before the client requests them:</p>
 <pre><code>Client                          Server
    │─── GET /index.html ────────→│
@@ -604,11 +607,16 @@ All on the same connection, all interleaved!
 
    # Server anticipates what the client will need
 </code></pre>
-<blockquote>
-<p>[!caution] Server push can be harmful
-Pushing resources the client already has cached wastes bandwidth. Modern browsers allow clients to cancel pushes, and many developers disable it. Use push only for critical above-the-fold resources.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">Server push can be harmful</div>
+                </div>
+                <div class="callout-content">Pushing resources the client already has cached wastes bandwidth. Modern browsers allow clients to cancel pushes, and many developers disable it. Use push only for critical above-the-fold resources.</div>
+              
 </blockquote>
-<h3 id="http2-priorities"><a aria-hidden="true" tabindex="-1" href="#http2-priorities"><span class="icon icon-link"></span></a>HTTP/2 priorities</h3>
+<h3 id="http2-priorities">HTTP/2 priorities<a aria-label="Link to section" class="anchor-link" href="#http2-priorities"><span class="icon icon-link"></span></a></h3>
 <pre><code>Stream 1 (weight 16): /index.html     ← Highest priority
   ├── Stream 2 (weight 8): /style.css  ← Secondary
   │   ├── Stream 4 (weight 4): /fonts/roboto.woff2
@@ -616,9 +624,9 @@ Pushing resources the client already has cached wastes bandwidth. Modern browser
   └── Stream 3 (weight 8): /app.js
       └── Stream 6 (weight 4): /vendor.js
 </code></pre>
-<h2 id="http3"><a aria-hidden="true" tabindex="-1" href="#http3"><span class="icon icon-link"></span></a>HTTP/3</h2>
+<h2 id="http3">HTTP/3<a aria-label="Link to section" class="anchor-link" href="#http3"><span class="icon icon-link"></span></a></h2>
 <p>HTTP/3 (RFC 9114) replaces TCP with <strong>QUIC</strong> (Quick UDP Internet Connections) at the transport layer. This solves the fundamental problem of TCP-level head-of-line blocking.</p>
-<h3 id="key-differences-http3-vs-http2"><a aria-hidden="true" tabindex="-1" href="#key-differences-http3-vs-http2"><span class="icon icon-link"></span></a>Key differences: HTTP/3 vs HTTP/2</h3>
+<h3 id="key-differences-http3-vs-http2">Key differences: HTTP/3 vs HTTP/2<a aria-label="Link to section" class="anchor-link" href="#key-differences-http3-vs-http2"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -665,7 +673,7 @@ Pushing resources the client already has cached wastes bandwidth. Modern browser
 </tr>
 </tbody>
 </table>
-<h3 id="how-quic-works"><a aria-hidden="true" tabindex="-1" href="#how-quic-works"><span class="icon icon-link"></span></a>How QUIC works</h3>
+<h3 id="how-quic-works">How QUIC works<a aria-label="Link to section" class="anchor-link" href="#how-quic-works"><span class="icon icon-link"></span></a></h3>
 <pre><code>Client                          Server
    │─── ClientHello + Key ──────→│  (UDP datagram)
    │   + Initial + Crypto        │
@@ -687,7 +695,7 @@ RTT 2:     Client sends encrypted application data
 <pre><code>RTT 0:     Client sends Initial packet (with TLS ClientHello + 0-RTT data)
            → Server accepts → Data is processed immediately!
 </code></pre>
-<h3 id="connection-migration"><a aria-hidden="true" tabindex="-1" href="#connection-migration"><span class="icon icon-link"></span></a>Connection migration</h3>
+<h3 id="connection-migration">Connection migration<a aria-label="Link to section" class="anchor-link" href="#connection-migration"><span class="icon icon-link"></span></a></h3>
 <p>QUIC supports connection migration:</p>
 <pre><code>WiFi A (192.168.1.5) → Switch to WiFi B (10.0.0.5)
 
@@ -696,7 +704,7 @@ QUIC: Connection persists! The connection ID identifies the session,
       not the IP address. Data flows seamlessly across network changes.
 </code></pre>
 <p>This is crucial for mobile devices that frequently switch networks.</p>
-<h3 id="why-http3-adoption-is-growing"><a aria-hidden="true" tabindex="-1" href="#why-http3-adoption-is-growing"><span class="icon icon-link"></span></a>Why HTTP/3 adoption is growing</h3>
+<h3 id="why-http3-adoption-is-growing">Why HTTP/3 adoption is growing<a aria-label="Link to section" class="anchor-link" href="#why-http3-adoption-is-growing"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -727,11 +735,16 @@ QUIC: Connection persists! The connection ID identifies the session,
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!caution] HTTP/3 requires UDP support
-Some corporate firewalls and networks block or rate-limit UDP traffic. This can cause HTTP/3 connections to fail or perform worse than HTTP/2 in certain environments.</p>
+<blockquote class="callout-caution" data-callout="caution" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+                  <div class="callout-title-text">HTTP/3 requires UDP support</div>
+                </div>
+                <div class="callout-content">Some corporate firewalls and networks block or rate-limit UDP traffic. This can cause HTTP/3 connections to fail or perform worse than HTTP/2 in certain environments.</div>
+              
 </blockquote>
-<h2 id="http11-vs-http2-vs-http3-comparison-summary"><a aria-hidden="true" tabindex="-1" href="#http11-vs-http2-vs-http3-comparison-summary"><span class="icon icon-link"></span></a>HTTP/1.1 vs HTTP/2 vs HTTP/3: Comparison summary</h2>
+<h2 id="http11-vs-http2-vs-http3-comparison-summary">HTTP/1.1 vs HTTP/2 vs HTTP/3: Comparison summary<a aria-label="Link to section" class="anchor-link" href="#http11-vs-http2-vs-http3-comparison-summary"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -810,8 +823,8 @@ Some corporate firewalls and networks block or rate-limit UDP traffic. This can 
 </tr>
 </tbody>
 </table>
-<h2 id="http-request-lifecycle-in-a-server"><a aria-hidden="true" tabindex="-1" href="#http-request-lifecycle-in-a-server"><span class="icon icon-link"></span></a>HTTP request lifecycle in a server</h2>
-<h3 id="request-parsing"><a aria-hidden="true" tabindex="-1" href="#request-parsing"><span class="icon icon-link"></span></a>Request parsing</h3>
+<h2 id="http-request-lifecycle-in-a-server">HTTP request lifecycle in a server<a aria-label="Link to section" class="anchor-link" href="#http-request-lifecycle-in-a-server"><span class="icon icon-link"></span></a></h2>
+<h3 id="request-parsing">Request parsing<a aria-label="Link to section" class="anchor-link" href="#request-parsing"><span class="icon icon-link"></span></a></h3>
 <figure data-rehype-pretty-code-figure=""><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display: grid;"><span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">// Express.js example: what the server sees</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">app.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0">post</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF">'/api/users'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">async</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">req</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70">res</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // req.method  → "POST"</span></span>
@@ -826,7 +839,7 @@ Some corporate firewalls and networks block or rate-limit UDP traffic. This can 
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 4. Database operation: create user</span></span>
 <span data-line=""><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D">  // 5. Send response</span></span>
 <span data-line=""><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre></figure>
-<h3 id="response-generation-flow"><a aria-hidden="true" tabindex="-1" href="#response-generation-flow"><span class="icon icon-link"></span></a>Response generation flow</h3>
+<h3 id="response-generation-flow">Response generation flow<a aria-label="Link to section" class="anchor-link" href="#response-generation-flow"><span class="icon icon-link"></span></a></h3>
 <pre><code>1. Parse request (method, path, headers, body)
 2. Route matching (which handler handles this request?)
 3. Middleware chain (auth, logging, caching, validation)
@@ -837,8 +850,8 @@ Some corporate firewalls and networks block or rate-limit UDP traffic. This can 
 8. Connection: keep-alive? → Wait for next request on same connection
 9. Connection: close? → Close TCP connection
 </code></pre>
-<h2 id="connection-management"><a aria-hidden="true" tabindex="-1" href="#connection-management"><span class="icon icon-link"></span></a>Connection management</h2>
-<h3 id="keep-alive-vs-connection-close"><a aria-hidden="true" tabindex="-1" href="#keep-alive-vs-connection-close"><span class="icon icon-link"></span></a>Keep-alive vs Connection close</h3>
+<h2 id="connection-management">Connection management<a aria-label="Link to section" class="anchor-link" href="#connection-management"><span class="icon icon-link"></span></a></h2>
+<h3 id="keep-alive-vs-connection-close">Keep-alive vs Connection close<a aria-label="Link to section" class="anchor-link" href="#keep-alive-vs-connection-close"><span class="icon icon-link"></span></a></h3>
 <pre><code># Keep-alive: reuse connection
 GET /a HTTP/1.1
 Connection: keep-alive
@@ -851,7 +864,7 @@ Connection: close
 → Server responds with Connection: close
 → TCP connection closed after response
 </code></pre>
-<h3 id="timeouts"><a aria-hidden="true" tabindex="-1" href="#timeouts"><span class="icon icon-link"></span></a>Timeouts</h3>
+<h3 id="timeouts">Timeouts<a aria-label="Link to section" class="anchor-link" href="#timeouts"><span class="icon icon-link"></span></a></h3>
 <table>
 <thead>
 <tr>
@@ -883,16 +896,21 @@ Connection: close
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!tip] Cloudflare timeout values
-Cloudflare uses aggressive timeouts to free resources:</p>
+<blockquote class="callout-tip" data-callout="tip" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div>
+                  <div class="callout-title-text">Cloudflare timeout values</div>
+                </div>
+                <div class="callout-content">Cloudflare uses aggressive timeouts to free resources:</div>
+              
 <ul>
 <li>Read timeout: 10 seconds</li>
 <li>Write timeout: 100 seconds</li>
 <li>Connection keep-alive: 100 seconds</li>
 </ul>
 </blockquote>
-<h2 id="connection-with-the-rest-of-the-wiki"><a aria-hidden="true" tabindex="-1" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a>Connection with the rest of the wiki</h2>
+<h2 id="connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki<a aria-label="Link to section" class="anchor-link" href="#connection-with-the-rest-of-the-wiki"><span class="icon icon-link"></span></a></h2>
 <table>
 <thead>
 <tr>
@@ -903,23 +921,23 @@ Cloudflare uses aggressive timeouts to free resources:</p>
 <tbody>
 <tr>
 <td>HTTP methods and semantics</td>
-<td>[[11-rest-api]] — REST API design</td>
+<td>[11-rest-api](/en/01-networking-internet/11-rest-api) — REST API design</td>
 </tr>
 <tr>
 <td>Status codes</td>
-<td>[[06-status-codes]]</td>
+<td>[06-status-codes](/en/01-networking-internet/06-status-codes)</td>
 </tr>
 <tr>
 <td>HTTPS and TLS</td>
-<td>[[07-https-tls]]</td>
+<td>[07-https-tls](/en/01-networking-internet/07-https-tls)</td>
 </tr>
 <tr>
 <td>Cookies and sessions</td>
-<td>[[09-cookies-sessions]]</td>
+<td>[09-cookies-sessions](/en/01-networking-internet/09-cookies-sessions)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="summary"><a aria-hidden="true" tabindex="-1" href="#summary"><span class="icon icon-link"></span></a>Summary</h2>
+<h2 id="summary">Summary<a aria-label="Link to section" class="anchor-link" href="#summary"><span class="icon icon-link"></span></a></h2>
 <ul>
 <li><strong>HTTP is a stateless request-response protocol</strong> at the application layer.</li>
 <li><strong>Methods</strong> define actions: GET (retrieve), POST (submit), PUT (replace), PATCH (update), DELETE (remove).</li>
@@ -930,7 +948,12 @@ Cloudflare uses aggressive timeouts to free resources:</p>
 <li><strong>HTTP/3</strong> replaces TCP with QUIC (UDP), enabling 0-RTT resumption, connection migration, and stream-level multiplexing without TCP HOL blocking.</li>
 <li>Each HTTP version builds on the previous one, solving real-world performance problems.</li>
 </ul>
-<blockquote>
-<p>[!quote] The key takeaway
-HTTP has evolved from a simple text-based protocol (HTTP/1.1) to a binary, multiplexed, encrypted protocol (HTTP/3). Understanding the differences helps you choose the right version, optimize your server, and diagnose performance issues.</p>
-</blockquote></div> </div>  </div> </main>  </body></html>
+<blockquote class="callout-quote" data-callout="quote" data-expandable="false" data-expanded="false">
+
+                <div class="callout-title">
+                  <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path></svg></div>
+                  <div class="callout-title-text">The key takeaway</div>
+                </div>
+                <div class="callout-content">HTTP has evolved from a simple text-based protocol (HTTP/1.1) to a binary, multiplexed, encrypted protocol (HTTP/3). Understanding the differences helps you choose the right version, optimize your server, and diagnose performance issues.</div>
+              
+</blockquote></div> </article> <aside class="page-toc" aria-label="Page index"> <h2 class="page-toc-title">Index</h2> <ol> <li class="toc-depth-2"> <a href="#what-is-http">What is HTTP?</a> </li><li class="toc-depth-3"> <a href="#http-at-the-osi-model">HTTP at the OSI model</a> </li><li class="toc-depth-3"> <a href="#http-is-request-response">HTTP is request-response</a> </li><li class="toc-depth-2"> <a href="#http-message-structure">HTTP message structure</a> </li><li class="toc-depth-3"> <a href="#1-start-line">1. Start line</a> </li><li class="toc-depth-3"> <a href="#2-headers">2. Headers</a> </li><li class="toc-depth-3"> <a href="#3-body">3. Body</a> </li><li class="toc-depth-2"> <a href="#http-methods">HTTP methods</a> </li><li class="toc-depth-3"> <a href="#get-vs-post">GET vs POST</a> </li><li class="toc-depth-3"> <a href="#put-vs-patch">PUT vs PATCH</a> </li><li class="toc-depth-3"> <a href="#safe-methods">Safe methods</a> </li><li class="toc-depth-2"> <a href="#http-headers">HTTP headers</a> </li><li class="toc-depth-3"> <a href="#request-headers">Request headers</a> </li><li class="toc-depth-3"> <a href="#response-headers">Response headers</a> </li><li class="toc-depth-3"> <a href="#conditional-requests-with-headers">Conditional requests with headers</a> </li><li class="toc-depth-2"> <a href="#request-body-formats">Request body formats</a> </li><li class="toc-depth-3"> <a href="#applicationjson">application/json</a> </li><li class="toc-depth-3"> <a href="#applicationx-www-form-urlencoded">application/x-www-form-urlencoded</a> </li><li class="toc-depth-3"> <a href="#multipartform-data">multipart/form-data</a> </li><li class="toc-depth-3"> <a href="#applicationxml">application/xml</a> </li><li class="toc-depth-2"> <a href="#http11">HTTP/1.1</a> </li><li class="toc-depth-3"> <a href="#key-features-of-http11">Key features of HTTP/1.1</a> </li><li class="toc-depth-3"> <a href="#http11-pipelining">HTTP/1.1 pipelining</a> </li><li class="toc-depth-3"> <a href="#connection-keep-alive-in-http11">Connection: keep-alive in HTTP/1.1</a> </li><li class="toc-depth-2"> <a href="#http2">HTTP/2</a> </li><li class="toc-depth-3"> <a href="#key-features-of-http2">Key features of HTTP/2</a> </li><li class="toc-depth-3"> <a href="#binary-framing-in-http2">Binary framing in HTTP/2</a> </li><li class="toc-depth-3"> <a href="#stream-multiplexing">Stream multiplexing</a> </li><li class="toc-depth-3"> <a href="#server-push">Server push</a> </li><li class="toc-depth-3"> <a href="#http2-priorities">HTTP/2 priorities</a> </li><li class="toc-depth-2"> <a href="#http3">HTTP/3</a> </li><li class="toc-depth-3"> <a href="#key-differences-http3-vs-http2">Key differences: HTTP/3 vs HTTP/2</a> </li><li class="toc-depth-3"> <a href="#how-quic-works">How QUIC works</a> </li><li class="toc-depth-3"> <a href="#connection-migration">Connection migration</a> </li><li class="toc-depth-3"> <a href="#why-http3-adoption-is-growing">Why HTTP/3 adoption is growing</a> </li><li class="toc-depth-2"> <a href="#http11-vs-http2-vs-http3-comparison-summary">HTTP/1.1 vs HTTP/2 vs HTTP/3: Comparison summary</a> </li><li class="toc-depth-2"> <a href="#http-request-lifecycle-in-a-server">HTTP request lifecycle in a server</a> </li><li class="toc-depth-3"> <a href="#request-parsing">Request parsing</a> </li><li class="toc-depth-3"> <a href="#response-generation-flow">Response generation flow</a> </li><li class="toc-depth-2"> <a href="#connection-management">Connection management</a> </li><li class="toc-depth-3"> <a href="#keep-alive-vs-connection-close">Keep-alive vs Connection close</a> </li><li class="toc-depth-3"> <a href="#timeouts">Timeouts</a> </li><li class="toc-depth-2"> <a href="#connection-with-the-rest-of-the-wiki">Connection with the rest of the wiki</a> </li><li class="toc-depth-2"> <a href="#summary">Summary</a> </li> </ol> </aside> </div>  </div> </main>  </body></html>

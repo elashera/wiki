@@ -288,6 +288,48 @@ declare module 'astro:content' {
   collection: "docs";
   data: any
 } & { render(): Render[".md"] };
+"en/03-distributed-systems/01-consensus-paxos-raft.md": {
+	id: "en/03-distributed-systems/01-consensus-paxos-raft.md";
+  slug: "en/03-distributed-systems/01-consensus-paxos-raft";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"en/03-distributed-systems/02-message-queues.md": {
+	id: "en/03-distributed-systems/02-message-queues.md";
+  slug: "en/03-distributed-systems/02-message-queues";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"en/03-distributed-systems/03-distributed-caching.md": {
+	id: "en/03-distributed-systems/03-distributed-caching.md";
+  slug: "en/03-distributed-systems/03-distributed-caching";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"en/03-distributed-systems/04-event-driven-cqrs-saga.md": {
+	id: "en/03-distributed-systems/04-event-driven-cqrs-saga.md";
+  slug: "en/03-distributed-systems/04-event-driven-cqrs-saga";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"en/03-distributed-systems/05-idempotency-retry-circuit-breakers.md": {
+	id: "en/03-distributed-systems/05-idempotency-retry-circuit-breakers.md";
+  slug: "en/03-distributed-systems/05-idempotency-retry-circuit-breakers";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"en/99-ia-curious-foundations/index.md": {
+	id: "en/99-ia-curious-foundations/index.md";
+  slug: "en/99-ia-curious-foundations";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
 "en/index.md": {
 	id: "en/index.md";
   slug: "en";
@@ -438,6 +480,174 @@ declare module 'astro:content' {
 "es/01-redes-internet/21-cloud-providers.md": {
 	id: "es/01-redes-internet/21-cloud-providers.md";
   slug: "es/01-redes-internet/21-cloud-providers";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/01-docker-intro.md": {
+	id: "es/02-infra-contenedores/01-docker-intro.md";
+  slug: "es/02-infra-contenedores/01-docker-intro";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/02-docker-images.md": {
+	id: "es/02-infra-contenedores/02-docker-images.md";
+  slug: "es/02-infra-contenedores/02-docker-images";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/03-docker-containers.md": {
+	id: "es/02-infra-contenedores/03-docker-containers.md";
+  slug: "es/02-infra-contenedores/03-docker-containers";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/04-docker-compose.md": {
+	id: "es/02-infra-contenedores/04-docker-compose.md";
+  slug: "es/02-infra-contenedores/04-docker-compose";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/05-docker-networking.md": {
+	id: "es/02-infra-contenedores/05-docker-networking.md";
+  slug: "es/02-infra-contenedores/05-docker-networking";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/02-infra-contenedores/06-docker-volumes.md": {
+	id: "es/02-infra-contenedores/06-docker-volumes.md";
+  slug: "es/02-infra-contenedores/06-docker-volumes";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/03-sistemas-distribuidos/01-consensus-paxos-raft.md": {
+	id: "es/03-sistemas-distribuidos/01-consensus-paxos-raft.md";
+  slug: "es/03-sistemas-distribuidos/01-consensus-paxos-raft";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/03-sistemas-distribuidos/02-message-queues.md": {
+	id: "es/03-sistemas-distribuidos/02-message-queues.md";
+  slug: "es/03-sistemas-distribuidos/02-message-queues";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/03-sistemas-distribuidos/03-distributed-caching.md": {
+	id: "es/03-sistemas-distribuidos/03-distributed-caching.md";
+  slug: "es/03-sistemas-distribuidos/03-distributed-caching";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/03-sistemas-distribuidos/04-event-driven-cqrs-saga.md": {
+	id: "es/03-sistemas-distribuidos/04-event-driven-cqrs-saga.md";
+  slug: "es/03-sistemas-distribuidos/04-event-driven-cqrs-saga";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers.md": {
+	id: "es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers.md";
+  slug: "es/03-sistemas-distribuidos/05-idempotency-retry-circuit-breakers";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/01-que-es-ia.md": {
+	id: "es/99-ia-para-gente-curiosa/01-que-es-ia.md";
+  slug: "es/99-ia-para-gente-curiosa/01-que-es-ia";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos.md": {
+	id: "es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos.md";
+  slug: "es/99-ia-para-gente-curiosa/02-sistemas-deterministas-probabilisticos";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/03-principios-fundamentales.md": {
+	id: "es/99-ia-para-gente-curiosa/03-principios-fundamentales.md";
+  slug: "es/99-ia-para-gente-curiosa/03-principios-fundamentales";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/04-neurona-artificial.md": {
+	id: "es/99-ia-para-gente-curiosa/04-neurona-artificial.md";
+  slug: "es/99-ia-para-gente-curiosa/04-neurona-artificial";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/05-redes-neuronales.md": {
+	id: "es/99-ia-para-gente-curiosa/05-redes-neuronales.md";
+  slug: "es/99-ia-para-gente-curiosa/05-redes-neuronales";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/06-retropropagacion.md": {
+	id: "es/99-ia-para-gente-curiosa/06-retropropagacion.md";
+  slug: "es/99-ia-para-gente-curiosa/06-retropropagacion";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/07-perdida-optimizadores.md": {
+	id: "es/99-ia-para-gente-curiosa/07-perdida-optimizadores.md";
+  slug: "es/99-ia-para-gente-curiosa/07-perdida-optimizadores";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/08-cnns-rnns.md": {
+	id: "es/99-ia-para-gente-curiosa/08-cnns-rnns.md";
+  slug: "es/99-ia-para-gente-curiosa/08-cnns-rnns";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/09-token-embedding.md": {
+	id: "es/99-ia-para-gente-curiosa/09-token-embedding.md";
+  slug: "es/99-ia-para-gente-curiosa/09-token-embedding";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia.md": {
+	id: "es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia.md";
+  slug: "es/99-ia-para-gente-curiosa/10-entrenamiento-inferencia";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/11-ml-clasico.md": {
+	id: "es/99-ia-para-gente-curiosa/11-ml-clasico.md";
+  slug: "es/99-ia-para-gente-curiosa/11-ml-clasico";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/12-recapitulacion.md": {
+	id: "es/99-ia-para-gente-curiosa/12-recapitulacion.md";
+  slug: "es/99-ia-para-gente-curiosa/12-recapitulacion";
+  body: string;
+  collection: "docs";
+  data: any
+} & { render(): Render[".md"] };
+"es/99-ia-para-gente-curiosa/index.md": {
+	id: "es/99-ia-para-gente-curiosa/index.md";
+  slug: "es/99-ia-para-gente-curiosa";
   body: string;
   collection: "docs";
   data: any
